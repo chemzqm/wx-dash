@@ -23,10 +23,8 @@ https://raw.githubusercontent.com/chemzqm/wx-dash/master/wxdash.xml
 
 需要安装 nodejs > 9.0
 
-需要安装 [dashing](https://github.com/technosophos/dashing)
-
 ``` sh
-yarn install
+npm install
 npm run build
 ```
 
