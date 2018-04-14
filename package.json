@@ -1,9 +1,10 @@
 {
   "name": "wxdash",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Create dash docset for wechat app",
   "scripts": {
-    "build": "node index.js"
+    "build": "node index.js",
+    "publish": "./publish.sh"
   },
   "author": "Qiming Zhao <chemzqm@gmail.com>",
   "license": "MIT",
