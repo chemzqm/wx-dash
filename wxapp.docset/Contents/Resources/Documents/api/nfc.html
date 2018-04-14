@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>NFC</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6682;&#x4EC5;&#x652F;&#x6301; HCE&#xFF08;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x7684;&#x5361;&#x6A21;&#x62DF;&#xFF09;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x5C06;&#x5B89;&#x5353;&#x624B;&#x673A;&#x6A21;&#x62DF;&#x6210;&#x5B9E;&#x4F53;&#x667A;&#x80FD;&#x5361;&#x3002;</p>
+<p>&#x9002;&#x7528;&#x673A;&#x578B;&#xFF1A;&#x652F;&#x6301; NFC &#x529F;&#x80FD;&#xFF0C;&#x4E14;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x4E3A;Android5.0&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x624B;&#x673A;</p>
+<p>&#x9002;&#x7528;&#x5361;&#x8303;&#x56F4;&#xFF1A;&#x7B26;&#x5408;ISO 14443-4&#x6807;&#x51C6;&#x7684;CPU&#x5361;</p>
+<h3 id="wxgethcestateobject">wx.getHCEState(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x652F;&#x6301; HCE &#x80FD;&#x529B;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>errCode</td>
+<td>Number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-javascript">wx.getHCEState({
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.errCode)
+  }
+})
+</code></pre>
+<h3 id="wxstarthceobject">wx.startHCE(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x521D;&#x59CB;&#x5316; NFC &#x6A21;&#x5757;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aid_list</td>
+<td>Array</td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x6CE8;&#x518C;&#x5230;&#x7CFB;&#x7EDF;&#x7684; AID &#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A; AID &#x4E3A; String &#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>errCode</td>
+<td>Number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.startHCE({
+  aid_list: [<span class="hljs-string">&apos;F222222222&apos;</span>]
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.errMsg)
+  }
+})
+</code></pre>
+<h3 id="wxstophceobject">wx.stopHCE(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x5173;&#x95ED; NFC &#x6A21;&#x5757;&#x3002;&#x4EC5;&#x5728;&#x5B89;&#x5353;&#x7CFB;&#x7EDF;&#x4E0B;&#x6709;&#x6548;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>errCode</td>
+<td>Number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.stopHCE({
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.errMsg)
+  }
+})
+</code></pre>
+<h3 id="wxonhcemessagecallback">wx.onHCEMessage(CALLBACK)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x76D1;&#x542C; NFC &#x8BBE;&#x5907;&#x7684;&#x6D88;&#x606F;&#x56DE;&#x8C03;&#xFF0C;&#x5E76;&#x5728;&#x56DE;&#x8C03;&#x4E2D;&#x5904;&#x7406;&#x3002;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x4E2D; <code>messageType</code> &#x8868;&#x793A;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x76EE;&#x524D;&#x6709;&#x5982;&#x4E0B;&#x503C;&#xFF1A;</p>
+<ul>
+<li>1&#xFF1A;&#x6D88;&#x606F;&#x4E3A;HCE Apdu Command&#x7C7B;&#x578B;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x9700;&#x5BF9;&#x6B64;&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5E76;&#x8C03;&#x7528; <code>sendHCEMessage</code> &#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x6307;&#x4EE4;&#xFF1B;</li>
+<li>2&#xFF1A;&#x6D88;&#x606F;&#x4E3A;&#x8BBE;&#x5907;&#x79BB;&#x573A;&#x4E8B;&#x4EF6;</li>
+</ul>
+<p><strong>CALLBACK &#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>messageType</td>
+<td>Number</td>
+<td>&#x6D88;&#x606F;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td>data</td>
+<td>ArrayBuffer</td>
+<td>&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x6536;&#x5230; NFC &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x5F53;&#x4E14;&#x4EC5;&#x5F53; <code>messageType=1</code> &#x65F6;&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>Number</td>
+<td>&#x6B64;&#x53C2;&#x6570;&#x5F53;&#x4E14;&#x4EC5;&#x5F53; <code>messageType=2</code> &#x65F6;&#x6709;&#x6548;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wxsendhcemessageobject">wx.sendHCEMessage(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x53D1;&#x9001; NFC &#x6D88;&#x606F;&#x3002;&#x4EC5;&#x5728;&#x5B89;&#x5353;&#x7CFB;&#x7EDF;&#x4E0B;&#x6709;&#x6548;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>ArrayBuffer</td>
+<td>&#x662F;</td>
+<td>&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>errCode</td>
+<td>Number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> buffer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ArrayBuffer</span>(<span class="hljs-number">1</span>)
+<span class="hljs-keyword">const</span> dataView = <span class="hljs-keyword">new</span> <span class="hljs-built_in">DataView</span>(buffer)
+dataView.setUint8(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+
+wx.startHCE({
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    wx.onHCEMessage(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-keyword">if</span> (res.messageType === <span class="hljs-number">1</span>) {
+        wx.sendHCEMessage({data: buffer})
+      }
+    })
+  }
+})
+</code></pre>
+<h4 id="errcode&#x5217;&#x8868;">errCode&#x5217;&#x8868;</h4>
+<p>&#x6BCF;&#x4E2A;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE; <code>errCode</code> &#x5B57;&#x6BB5;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Ok</td>
+</tr>
+<tr>
+<td>13000</td>
+<td>&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x4E0D;&#x652F;&#x6301; NFC</td>
+</tr>
+<tr>
+<td>13001</td>
+<td>&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x652F;&#x6301; NFC&#xFF0C;&#x4F46;&#x7CFB;&#x7EDF;NFC&#x5F00;&#x5173;&#x672A;&#x5F00;&#x542F;</td>
+</tr>
+<tr>
+<td>13002</td>
+<td>&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x652F;&#x6301; NFC&#xFF0C;&#x4F46;&#x4E0D;&#x652F;&#x6301;HCE</td>
+</tr>
+<tr>
+<td>13003</td>
+<td>AID &#x5217;&#x8868;&#x53C2;&#x6570;&#x683C;&#x5F0F;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>13004</td>
+<td>&#x672A;&#x8BBE;&#x7F6E;&#x5FAE;&#x4FE1;&#x4E3A;&#x9ED8;&#x8BA4;NFC&#x652F;&#x4ED8;&#x5E94;&#x7528;</td>
+</tr>
+<tr>
+<td>13005</td>
+<td>&#x8FD4;&#x56DE;&#x7684;&#x6307;&#x4EE4;&#x4E0D;&#x5408;&#x6CD5;</td>
+</tr>
+<tr>
+<td>13006</td>
+<td>&#x6CE8;&#x518C; AID &#x5931;&#x8D25;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

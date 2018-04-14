@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>setLineWidth</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="canvascontextsetlinewidth">canvasContext.setLineWidth</h1>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x5BBD;&#x5EA6;&#x3002;</p>
+<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
+<pre><code class="lang-javascript">canvasContext.setLineWidth(lineWidth)
+canvasContext.lineWidth = lineWidth <span class="hljs-comment">// &#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x652F;&#x6301;</span>
+</code></pre>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lineWidth</td>
+<td>Number</td>
+<td>&#x7EBF;&#x6761;&#x7684;&#x5BBD;&#x5EA6;(&#x5355;&#x4F4D;&#x662F;px)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.beginPath()
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">10</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineWidth(<span class="hljs-number">5</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">30</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">30</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">50</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineWidth(<span class="hljs-number">15</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">70</span>)
+ctx.stroke()
+
+ctx.draw()
+</code></pre>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/line-width.png?t=2018412" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

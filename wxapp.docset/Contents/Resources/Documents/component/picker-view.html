@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <title>picker-view</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../website.css">
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="picker-view">picker-view</h4>
+<p>&#x5D4C;&#x5165;&#x9875;&#x9762;&#x7684;&#x6EDA;&#x52A8;&#x9009;&#x62E9;&#x5668;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="picker-view-value">value</td>
+<td>NumberArray</td>
+<td>&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x4F9D;&#x6B21;&#x8868;&#x793A; picker-view &#x5185;&#x7684; picker-view-colume &#x9009;&#x62E9;&#x7684;&#x7B2C;&#x51E0;&#x9879;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;&#xFF0C;&#x6570;&#x5B57;&#x5927;&#x4E8E; picker-view-column &#x53EF;&#x9009;&#x9879;&#x957F;&#x5EA6;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x6700;&#x540E;&#x4E00;&#x9879;&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td id="picker-view-indicator-style">indicator-style</td>
+<td>String</td>
+<td>&#x8BBE;&#x7F6E;&#x9009;&#x62E9;&#x5668;&#x4E2D;&#x95F4;&#x9009;&#x4E2D;&#x6846;&#x7684;&#x6837;&#x5F0F;</td>
+<td></td>
+</tr>
+<tr>
+<td id="picker-view-indicator-class">indicator-class</td>
+<td>String</td>
+<td>&#x8BBE;&#x7F6E;&#x9009;&#x62E9;&#x5668;&#x4E2D;&#x95F4;&#x9009;&#x4E2D;&#x6846;&#x7684;&#x7C7B;&#x540D;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
+</tr>
+<tr>
+<td id="picker-view-mask-style">mask-style</td>
+<td>String</td>
+<td>&#x8BBE;&#x7F6E;&#x8499;&#x5C42;&#x7684;&#x6837;&#x5F0F;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
+</tr>
+<tr>
+<td id="picker-view-mask-class">mask-class</td>
+<td>String</td>
+<td>&#x8BBE;&#x7F6E;&#x8499;&#x5C42;&#x7684;&#x7C7B;&#x540D;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
+</tr>
+<tr>
+<td id="picker-view-bindchange">bindchange</td>
+<td>EventHandle</td>
+<td>&#x5F53;&#x6EDA;&#x52A8;&#x9009;&#x62E9;&#xFF0C;value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}&#xFF1B;value&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x8868;&#x793A; picker-view &#x5185;&#x7684; picker-view-column &#x5F53;&#x524D;&#x9009;&#x62E9;&#x7684;&#x662F;&#x7B2C;&#x51E0;&#x9879;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5176;&#x4E2D;&#x53EA;&#x53EF;&#x653E;&#x7F6E;<code>&lt;picker-view-column/&gt;</code>&#x7EC4;&#x4EF6;&#xFF0C;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x3002;</p>
+<h4 id="picker-view-column">picker-view-column</h4>
+<p>&#x4EC5;&#x53EF;&#x653E;&#x7F6E;&#x4E8E;<code>&lt;picker-view /&gt;</code>&#x4E2D;&#xFF0C;&#x5176;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#x4F1A;&#x81EA;&#x52A8;&#x8BBE;&#x7F6E;&#x6210;&#x4E0E;picker-view&#x7684;&#x9009;&#x4E2D;&#x6846;&#x7684;&#x9AD8;&#x5EA6;&#x4E00;&#x81F4;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/YfbJZcmG6zYM" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{year}}&#x5E74;{{month}}&#x6708;{{day}}&#x65E5;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">picker-view</span> <span class="hljs-attr">indicator-style</span>=<span class="hljs-string">&quot;height: 50px;&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{value}}&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindChange&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">picker-view-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{years}}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;line-height: 50px&quot;</span>&gt;</span>{{item}}&#x5E74;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">picker-view-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">picker-view-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{months}}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;line-height: 50px&quot;</span>&gt;</span>{{item}}&#x6708;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">picker-view-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">picker-view-column</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{days}}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;line-height: 50px&quot;</span>&gt;</span>{{item}}&#x65E5;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">picker-view-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">picker-view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+<span class="hljs-keyword">const</span> years = []
+<span class="hljs-keyword">const</span> months = []
+<span class="hljs-keyword">const</span> days = []
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1990</span>; i &lt;= date.getFullYear(); i++) {
+  years.push(i)
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span> ; i &lt;= <span class="hljs-number">12</span>; i++) {
+  months.push(i)
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span> ; i &lt;= <span class="hljs-number">31</span>; i++) {
+  days.push(i)
+}
+
+Page({
+  data: {
+    years: years,
+    year: date.getFullYear(),
+    months: months,
+    month: <span class="hljs-number">2</span>,
+    days: days,
+    day: <span class="hljs-number">2</span>,
+    value: [<span class="hljs-number">9999</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
+  },
+  bindChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">const</span> val = e.detail.value
+    <span class="hljs-keyword">this</span>.setData({
+      year: <span class="hljs-keyword">this</span>.data.years[val[<span class="hljs-number">0</span>]],
+      month: <span class="hljs-keyword">this</span>.data.months[val[<span class="hljs-number">1</span>]],
+      day: <span class="hljs-keyword">this</span>.data.days[val[<span class="hljs-number">2</span>]]
+    })
+  }
+})
+</code></pre>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/picker_view.png?t=2018412" alt="picker_view"></p>
+<h4 id="tips">Tips</h4>
+<ol>
+<li><code>tip</code>: &#x6EDA;&#x52A8;&#x65F6;&#x5728;iOS&#x81EA;&#x5E26;&#x632F;&#x52A8;&#x53CD;&#x9988;&#xFF0C;&#x53EF;&#x5728;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E; -&gt; &#x58F0;&#x97F3;&#x4E0E;&#x89E6;&#x611F; -&gt; &#x7CFB;&#x7EDF;&#x89E6;&#x611F;&#x53CD;&#x9988;&#x4E2D;&#x5173;&#x95ED;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+
+
+</body></html>

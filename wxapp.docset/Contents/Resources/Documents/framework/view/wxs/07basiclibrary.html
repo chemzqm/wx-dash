@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>基础类库</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x57FA;&#x7840;&#x7C7B;&#x5E93;">&#x57FA;&#x7840;&#x7C7B;&#x5E93;</h1>
+<h2 id="console">console</h2>
+<p><code>console.log</code> &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x5728; console &#x7A97;&#x53E3;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x7684;&#x7ED3;&#x679C;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x8F93;&#x51FA;&#x3002;</p>
+<h2 id="math">Math</h2>
+<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
+<ul>
+<li><code>E</code></li>
+<li><code>LN10</code></li>
+<li><code>LN2</code></li>
+<li><code>LOG2E</code></li>
+<li><code>LOG10E</code></li>
+<li><code>PI</code></li>
+<li><code>SQRT1_2</code></li>
+<li><code>SQRT2</code></li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x5C5E;&#x6027;&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x8003; <code>ES5</code> &#x6807;&#x51C6;&#x3002;</p>
+</blockquote>
+<h3 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h3>
+<ul>
+<li><code>abs</code></li>
+<li><code>acos</code></li>
+<li><code>asin</code></li>
+<li><code>atan</code></li>
+<li><code>atan2</code></li>
+<li><code>ceil</code></li>
+<li><code>cos</code></li>
+<li><code>exp</code></li>
+<li><code>floor</code></li>
+<li><code>log</code></li>
+<li><code>max</code></li>
+<li><code>min</code></li>
+<li><code>pow</code></li>
+<li><code>random</code></li>
+<li><code>round</code></li>
+<li><code>sin</code></li>
+<li><code>sqrt</code></li>
+<li><code>tan</code></li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x8003; <code>ES5</code> &#x6807;&#x51C6;&#x3002;</p>
+</blockquote>
+<h2 id="json">JSON</h2>
+<h3 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h3>
+<ul>
+<li><code>stringify(object)</code>: &#x5C06; <code>object</code> &#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A; <code>JSON</code> &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li><code>parse(string)</code>: &#x5C06; <code>JSON</code> &#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5316;&#x6210;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.stringify());
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">undefined</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;null&quot;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">null</span>));
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;111&quot;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-number">111</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&quot;111&quot;&apos;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&quot;111&quot;</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;true&quot;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">true</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}));
+
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify()));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">undefined</span>)));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">null</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">null</span>)));
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">111</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-number">111</span>)));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;111&quot;</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&quot;111&quot;</span>)));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">true</span>)));
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{})));
+</code></pre>
+<h2 id="number">Number</h2>
+<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
+<ul>
+<li><code>MAX_VALUE</code></li>
+<li><code>MIN_VALUE</code></li>
+<li><code>NEGATIVE_INFINITY</code></li>
+<li><code>POSITIVE_INFINITY</code></li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x5C5E;&#x6027;&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x8003; <code>ES5</code> &#x6807;&#x51C6;&#x3002;</p>
+</blockquote>
+<h2 id="date">Date</h2>
+<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
+<ul>
+<li><code>parse</code></li>
+<li><code>UTC</code> </li>
+<li><code>now</code></li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x5C5E;&#x6027;&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x8003; <code>ES5</code> &#x6807;&#x51C6;&#x3002;</p>
+</blockquote>
+<h2 id="global">Global</h2>
+<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
+<ul>
+<li><code>NaN</code></li>
+<li><code>Infinity</code> </li>
+<li><code>undefined</code></li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x5C5E;&#x6027;&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x8003; <code>ES5</code> &#x6807;&#x51C6;&#x3002;</p>
+</blockquote>
+<h3 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h3>
+<ul>
+<li><code>parseInt</code></li>
+<li><code>parseFloat</code></li>
+<li><code>isNaN</code></li>
+<li><code>isFinite</code></li>
+<li><code>decodeURI</code> </li>
+<li><code>decodeURIComponent</code> </li>
+<li><code>encodeURI</code></li>
+<li><code>encodeURIComponent</code> </li>
+</ul>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x7684;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x8BF7;&#x53C2;&#x8003; <code>ES5</code> &#x6807;&#x51C6;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

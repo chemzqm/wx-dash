@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>运算符</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8FD0;&#x7B97;&#x7B26;">&#x8FD0;&#x7B97;&#x7B26;</h1>
+<h2 id="&#x57FA;&#x672C;&#x8FD0;&#x7B97;&#x7B26;">&#x57FA;&#x672C;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
+
+<span class="hljs-comment">// &#x52A0;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">30</span> === a + b);
+<span class="hljs-comment">// &#x51CF;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">-10</span> === a - b);
+<span class="hljs-comment">// &#x4E58;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">200</span> === a * b);
+<span class="hljs-comment">// &#x9664;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">0.5</span> === a / b);
+<span class="hljs-comment">// &#x53D6;&#x4F59;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === a % b);
+</code></pre>
+<ul>
+<li>&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#xFF08;<code>+</code>&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x62FC;&#x63A5;&#x3002;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;.w&apos;</span> , b = <span class="hljs-string">&apos;xs&apos;</span>;
+
+<span class="hljs-comment">// &#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;.wxs&apos;</span> === a + b);
+</code></pre>
+<h2 id="&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;">&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
+
+<span class="hljs-comment">// &#x81EA;&#x589E;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === a++);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">12</span> === ++a);
+<span class="hljs-comment">// &#x81EA;&#x51CF;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">12</span> === a--);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === --a);
+<span class="hljs-comment">// &#x6B63;&#x503C;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === +a);
+<span class="hljs-comment">// &#x8D1F;&#x503C;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">0</span><span class="hljs-number">-10</span> === -a);
+<span class="hljs-comment">// &#x5426;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">-11</span> === ~a);
+<span class="hljs-comment">// &#x53D6;&#x53CD;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === !a);
+<span class="hljs-comment">// delete &#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === <span class="hljs-keyword">delete</span> a.fake);
+<span class="hljs-comment">// void &#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-keyword">void</span> a);
+<span class="hljs-comment">// typeof &#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;number&quot;</span> === <span class="hljs-keyword">typeof</span> a);
+</code></pre>
+<h2 id="&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;">&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
+
+<span class="hljs-comment">// &#x5DE6;&#x79FB;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">80</span> === (a &lt;&lt; <span class="hljs-number">3</span>));
+<span class="hljs-comment">// &#x65E0;&#x7B26;&#x53F7;&#x53F3;&#x79FB;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a &gt;&gt; <span class="hljs-number">2</span>));
+<span class="hljs-comment">// &#x5E26;&#x7B26;&#x53F7;&#x53F3;&#x79FB;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a &gt;&gt;&gt; <span class="hljs-number">2</span>));
+<span class="hljs-comment">// &#x4E0E;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a &amp; <span class="hljs-number">3</span>));
+<span class="hljs-comment">// &#x5F02;&#x6216;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">9</span> === (a ^ <span class="hljs-number">3</span>));
+<span class="hljs-comment">// &#x6216;&#x8FD0;&#x7B97;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">11</span> === (a | <span class="hljs-number">3</span>));
+</code></pre>
+<h2 id="&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;">&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
+
+<span class="hljs-comment">// &#x5C0F;&#x4E8E;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a &lt; b));
+<span class="hljs-comment">// &#x5927;&#x4E8E;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a &gt; b));
+<span class="hljs-comment">// &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a &lt;= b));
+<span class="hljs-comment">// &#x5927;&#x4E8E;&#x7B49;&#x4E8E;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a &gt;= b));
+</code></pre>
+<h2 id="&#x7B49;&#x503C;&#x8FD0;&#x7B97;&#x7B26;">&#x7B49;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
+
+<span class="hljs-comment">// &#x7B49;&#x53F7;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a == b));
+<span class="hljs-comment">// &#x975E;&#x7B49;&#x53F7;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a != b));
+<span class="hljs-comment">// &#x5168;&#x7B49;&#x53F7;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a === b));
+<span class="hljs-comment">// &#x975E;&#x5168;&#x7B49;&#x53F7;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a !== b));
+</code></pre>
+<h2 id="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;">&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>;
+
+a = <span class="hljs-number">10</span>; a *= <span class="hljs-number">10</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">100</span> === a);
+a = <span class="hljs-number">10</span>; a /= <span class="hljs-number">5</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === a);
+a = <span class="hljs-number">10</span>; a %= <span class="hljs-number">7</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span> === a);
+a = <span class="hljs-number">10</span>; a += <span class="hljs-number">5</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">15</span> === a);
+a = <span class="hljs-number">10</span>; a -= <span class="hljs-number">11</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">-1</span> === a);
+a = <span class="hljs-number">10</span>; a &lt;&lt;= <span class="hljs-number">10</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10240</span> === a);
+a = <span class="hljs-number">10</span>; a &gt;&gt;= <span class="hljs-number">2</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === a);
+a = <span class="hljs-number">10</span>; a &gt;&gt;&gt;= <span class="hljs-number">2</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === a);
+a = <span class="hljs-number">10</span>; a &amp;= <span class="hljs-number">3</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === a);
+a = <span class="hljs-number">10</span>; a ^= <span class="hljs-number">3</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">9</span> === a);
+a = <span class="hljs-number">10</span>; a |= <span class="hljs-number">3</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">11</span> === a);
+</code></pre>
+<h2 id="&#x4E8C;&#x5143;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;">&#x4E8C;&#x5143;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
+
+<span class="hljs-comment">// &#x903B;&#x8F91;&#x4E0E;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a &amp;&amp; b));
+<span class="hljs-comment">// &#x903B;&#x8F91;&#x6216;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === (a || b));
+</code></pre>
+<h2 id="&#x5176;&#x4ED6;&#x8FD0;&#x7B97;&#x7B26;">&#x5176;&#x4ED6;&#x8FD0;&#x7B97;&#x7B26;</h2>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
+
+<span class="hljs-comment">//&#x6761;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a &gt;= <span class="hljs-number">10</span> ? a + <span class="hljs-number">10</span> : b + <span class="hljs-number">10</span>));
+<span class="hljs-comment">//&#x9017;&#x53F7;&#x8FD0;&#x7B97;&#x7B26;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a, b));
+</code></pre>
+<h2 id="&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;">&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x4F18;&#x5148;&#x7EA7;</th>
+<th>&#x8FD0;&#x7B97;&#x7B26;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7ED3;&#x5408;&#x6027;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td><code>(</code> ... <code>)</code></td>
+<td>&#x62EC;&#x53F7;</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>19</td>
+<td>... <code>.</code> ...</td>
+<td>&#x6210;&#x5458;&#x8BBF;&#x95EE;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>[</code> ... <code>]</code></td>
+<td>&#x6210;&#x5458;&#x8BBF;&#x95EE;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>(</code> ... <code>)</code></td>
+<td>&#x51FD;&#x6570;&#x8C03;&#x7528;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>17</td>
+<td>... <code>++</code></td>
+<td>&#x540E;&#x7F6E;&#x9012;&#x589E;</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>--</code></td>
+<td>&#x540E;&#x7F6E;&#x9012;&#x51CF;</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>!</code> ...</td>
+<td>&#x903B;&#x8F91;&#x975E;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>~</code> ...</td>
+<td>&#x6309;&#x4F4D;&#x975E;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>+</code> ...</td>
+<td>&#x4E00;&#x5143;&#x52A0;&#x6CD5;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>-</code> ...</td>
+<td>&#x4E00;&#x5143;&#x51CF;&#x6CD5;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>++</code> ...</td>
+<td>&#x524D;&#x7F6E;&#x9012;&#x589E;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>--</code> ...</td>
+<td>&#x524D;&#x7F6E;&#x9012;&#x51CF;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>typeof</code> ...</td>
+<td>typeof</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>void</code> ...</td>
+<td>void</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>delete</code> ...</td>
+<td>delete</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td>14</td>
+<td>... <code>*</code> ...</td>
+<td>&#x4E58;&#x6CD5;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>/</code> ...</td>
+<td>&#x9664;&#x6CD5;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>%</code> ...</td>
+<td>&#x53D6;&#x6A21;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>13</td>
+<td>... <code>+</code> ...</td>
+<td>&#x52A0;&#x6CD5;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>-</code> ...</td>
+<td>&#x51CF;&#x6CD5;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>12</td>
+<td>... <code>&lt;&lt;</code> ...</td>
+<td>&#x6309;&#x4F4D;&#x5DE6;&#x79FB;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&gt;&gt;</code> ...</td>
+<td>&#x6309;&#x4F4D;&#x53F3;&#x79FB;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&gt;&gt;&gt;</code> ...</td>
+<td>&#x65E0;&#x7B26;&#x53F7;&#x53F3;&#x79FB;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>11</td>
+<td>... <code>&lt;</code> ...</td>
+<td>&#x5C0F;&#x4E8E;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&lt;=</code> ...</td>
+<td>&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&gt;</code> ...</td>
+<td>&#x5927;&#x4E8E;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&gt;=</code> ...</td>
+<td>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>10</td>
+<td>... <code>==</code> ...</td>
+<td>&#x7B49;&#x53F7;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>!=</code> ...</td>
+<td>&#x975E;&#x7B49;&#x53F7;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>===</code> ...</td>
+<td>&#x5168;&#x7B49;&#x53F7;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>!==</code> ...</td>
+<td>&#x975E;&#x5168;&#x7B49;&#x53F7;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>9</td>
+<td>... <code>&amp;</code> ...</td>
+<td>&#x6309;&#x4F4D;&#x4E0E;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>8</td>
+<td>... <code>^</code> ...</td>
+<td>&#x6309;&#x4F4D;&#x5F02;&#x6216;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>7</td>
+<td>... <code>&#xFF5C;</code> ...</td>
+<td>&#x6309;&#x4F4D;&#x6216;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>... <code>&amp;&amp;</code> ...</td>
+<td>&#x903B;&#x8F91;&#x4E0E;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>... <code>&#xFF5C;&#xFF5C;</code> ...</td>
+<td>&#x903B;&#x8F91;&#x6216;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>... <code>?</code> ... <code>:</code> ...</td>
+<td>&#x6761;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>... <code>=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>+=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>-=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>*=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>/=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>%=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&lt;&lt;=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&gt;&gt;=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&gt;&gt;&gt;=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&amp;=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>^=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td></td>
+<td>... <code>&#xFF5C;=</code> ...</td>
+<td>&#x8D4B;&#x503C;</td>
+<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+</tr>
+<tr>
+<td>0</td>
+<td>... <code>,</code> ...</td>
+<td>&#x9017;&#x53F7;</td>
+<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

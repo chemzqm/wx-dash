@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.checkIsSoterEnrolledInDevice</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxcheckissoterenrolledindeviceobject">wx.checkIsSoterEnrolledInDevice(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x5185;&#x662F;&#x5426;&#x5F55;&#x5165;&#x5982;&#x6307;&#x7EB9;&#x7B49;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x7684;&#x63A5;&#x53E3;</p>
+<p><strong>Object&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checkAuthMode</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isEnrolled</td>
+<td>Boolean</td>
+<td>&#x662F;&#x5426;&#x5DF2;&#x5F55;&#x5165;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>checkAuthMode &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fingerPrint</td>
+<td>&#x6307;&#x7EB9;&#x8BC6;&#x522B;</td>
+</tr>
+<tr>
+<td>facial</td>
+<td>&#x4EBA;&#x8138;&#x8BC6;&#x522B;&#xFF08;&#x6682;&#x672A;&#x652F;&#x6301;&#xFF09;</td>
+</tr>
+<tr>
+<td>speech</td>
+<td>&#x58F0;&#x7EB9;&#x8BC6;&#x522B;&#xFF08;&#x6682;&#x672A;&#x652F;&#x6301;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.checkIsSoterEnrolledInDevice({
+    checkAuthMode: <span class="hljs-string">&apos;fingerPrint&apos;</span>,
+    success(res) {
+        <span class="hljs-built_in">console</span>.log(res.isEnrolled)
+    }
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

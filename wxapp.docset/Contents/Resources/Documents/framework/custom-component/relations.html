@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>组件间关系</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EC4;&#x4EF6;&#x95F4;&#x5173;&#x7CFB;">&#x7EC4;&#x4EF6;&#x95F4;&#x5173;&#x7CFB;</h1>
+<h2 id="&#x5B9A;&#x4E49;&#x548C;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x95F4;&#x5173;&#x7CFB;">&#x5B9A;&#x4E49;&#x548C;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x95F4;&#x5173;&#x7CFB;</h2>
+<p>&#x6709;&#x65F6;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">custom-ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">custom-li</span>&gt;</span> item 1 <span class="hljs-tag">&lt;/<span class="hljs-name">custom-li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">custom-li</span>&gt;</span> item 2 <span class="hljs-tag">&lt;/<span class="hljs-name">custom-li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">custom-ul</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C; <code>custom-ul</code> &#x548C; <code>custom-li</code> &#x90FD;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x4EEC;&#x6709;&#x76F8;&#x4E92;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x76F8;&#x4E92;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x5F80;&#x5F80;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x3002;&#x6B64;&#x65F6;&#x5728;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x65F6;&#x52A0;&#x5165; <code>relations</code> &#x5B9A;&#x4E49;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x6837;&#x7684;&#x95EE;&#x9898;&#x3002;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// path/to/custom-ul.js</span>
+Component({
+  relations: {
+    <span class="hljs-string">&apos;./custom-li&apos;</span>: {
+      type: <span class="hljs-string">&apos;child&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x5B50;&#x8282;&#x70B9;</span>
+      linked: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+        <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x6709;custom-li&#x88AB;&#x63D2;&#x5165;&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;&#x8BE5;&#x8282;&#x70B9;attached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
+      },
+      linkChanged: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+        <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x6709;custom-li&#x88AB;&#x79FB;&#x52A8;&#x540E;&#x6267;&#x884C;&#xFF0C;target&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;&#x8BE5;&#x8282;&#x70B9;moved&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
+      },
+      unlinked: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+        <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x6709;custom-li&#x88AB;&#x79FB;&#x9664;&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;&#x8BE5;&#x8282;&#x70B9;detached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
+      }
+    }
+  },
+  methods: {
+    _getAllLi: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-comment">// &#x4F7F;&#x7528;getRelationNodes&#x53EF;&#x4EE5;&#x83B7;&#x5F97;nodes&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x5DF2;&#x5173;&#x8054;&#x7684;custom-li&#xFF0C;&#x4E14;&#x662F;&#x6709;&#x5E8F;&#x7684;</span>
+      <span class="hljs-keyword">var</span> nodes = <span class="hljs-keyword">this</span>.getRelationNodes(<span class="hljs-string">&apos;path/to/custom-li&apos;</span>)
+    }
+  },
+  ready: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">this</span>._getAllLi()
+  }
+})
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// path/to/custom-li.js</span>
+Component({
+  relations: {
+    <span class="hljs-string">&apos;./custom-ul&apos;</span>: {
+      type: <span class="hljs-string">&apos;parent&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x7236;&#x8282;&#x70B9;</span>
+      linked: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+        <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x88AB;&#x63D2;&#x5165;&#x5230;custom-ul&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;custom-ul&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;attached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
+      },
+      linkChanged: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+        <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x88AB;&#x79FB;&#x52A8;&#x540E;&#x6267;&#x884C;&#xFF0C;target&#x662F;custom-ul&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;moved&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
+      },
+      unlinked: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+        <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x88AB;&#x79FB;&#x9664;&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;custom-ul&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;detached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
+      }
+    }
+  }
+})
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x5728;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x4E2D;&#x90FD;&#x52A0;&#x5165;relations&#x5B9A;&#x4E49;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x751F;&#x6548;&#x3002;</strong></p>
+<h2 id="&#x5173;&#x8054;&#x4E00;&#x7C7B;&#x7EC4;&#x4EF6;">&#x5173;&#x8054;&#x4E00;&#x7C7B;&#x7EC4;&#x4EF6;</h2>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x8054;&#x7684;&#x662F;&#x4E00;&#x7C7B;&#x7EC4;&#x4EF6;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">custom-form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+    input
+    <span class="hljs-tag">&lt;<span class="hljs-name">custom-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">custom-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">custom-submit</span>&gt;</span> submit <span class="hljs-tag">&lt;/<span class="hljs-name">custom-submit</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">custom-form</span>&gt;</span>
+</code></pre>
+<p><code>custom-form</code> &#x7EC4;&#x4EF6;&#x60F3;&#x8981;&#x5173;&#x8054; <code>custom-input</code> &#x548C; <code>custom-submit</code> &#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x90FD;&#x6709;&#x540C;&#x4E00;&#x4E2A;behavior&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// path/to/custom-form-controls.js</span>
+<span class="hljs-built_in">module</span>.exports = Behavior({
+  <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// path/to/custom-input.js</span>
+<span class="hljs-keyword">var</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+Component({
+  behaviors: [customFormControls],
+  relations: {
+    <span class="hljs-string">&apos;./custom-form&apos;</span>: {
+      type: <span class="hljs-string">&apos;ancestor&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x7956;&#x5148;&#x8282;&#x70B9;</span>
+    }
+  }
+})
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// path/to/custom-submit.js</span>
+<span class="hljs-keyword">var</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+Component({
+  behaviors: [customFormControls],
+  relations: {
+    <span class="hljs-string">&apos;./custom-form&apos;</span>: {
+      type: <span class="hljs-string">&apos;ancestor&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x7956;&#x5148;&#x8282;&#x70B9;</span>
+    }
+  }
+})
+</code></pre>
+<p>&#x5219;&#x5728; <code>relations</code> &#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;behavior&#x6765;&#x4EE3;&#x66FF;&#x7EC4;&#x4EF6;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// path/to/custom-form.js</span>
+<span class="hljs-keyword">var</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+Component({
+  relations: {
+    <span class="hljs-string">&apos;customFormControls&apos;</span>: {
+      type: <span class="hljs-string">&apos;descendant&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x5B50;&#x5B59;&#x8282;&#x70B9;</span>
+      target: customFormControls
+    }
+  }
+})
+</code></pre>
+<h2 id="relations-&#x5B9A;&#x4E49;&#x6BB5;">relations &#x5B9A;&#x4E49;&#x6BB5;</h2>
+<p><code>relations</code> &#x5B9A;&#x4E49;&#x6BB5;&#x5305;&#x542B;&#x76EE;&#x6807;&#x7EC4;&#x4EF6;&#x8DEF;&#x5F84;&#x53CA;&#x5176;&#x5BF9;&#x5E94;&#x9009;&#x9879;&#xFF0C;&#x53EF;&#x5305;&#x542B;&#x7684;&#x9009;&#x9879;&#x89C1;&#x4E0B;&#x8868;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x76EE;&#x6807;&#x7EC4;&#x4EF6;&#x7684;&#x76F8;&#x5BF9;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x9009;&#x7684;&#x503C;&#x4E3A; <code>parent</code> &#x3001; <code>child</code> &#x3001; <code>ancestor</code> &#x3001; <code>descendant</code></td>
+</tr>
+<tr>
+<td>linked</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x5173;&#x7CFB;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x5173;&#x7CFB;&#x88AB;&#x5EFA;&#x7ACB;&#x5728;&#x9875;&#x9762;&#x8282;&#x70B9;&#x6811;&#x4E2D;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x89E6;&#x53D1;&#x65F6;&#x673A;&#x5728;&#x7EC4;&#x4EF6;attached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</td>
+</tr>
+<tr>
+<td>linkChanged</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x5173;&#x7CFB;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x5173;&#x7CFB;&#x5728;&#x9875;&#x9762;&#x8282;&#x70B9;&#x6811;&#x4E2D;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x89E6;&#x53D1;&#x65F6;&#x673A;&#x5728;&#x7EC4;&#x4EF6;moved&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</td>
+</tr>
+<tr>
+<td>unlinked</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x5173;&#x7CFB;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x5173;&#x7CFB;&#x8131;&#x79BB;&#x9875;&#x9762;&#x8282;&#x70B9;&#x6811;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x89E6;&#x53D1;&#x65F6;&#x673A;&#x5728;&#x7EC4;&#x4EF6;detached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</td>
+</tr>
+<tr>
+<td>target</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>&#x5982;&#x679C;&#x8FD9;&#x4E00;&#x9879;&#x88AB;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x5B83;&#x8868;&#x793A;&#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x6240;&#x5E94;&#x5177;&#x6709;&#x7684;behavior&#xFF0C;&#x6240;&#x6709;&#x62E5;&#x6709;&#x8FD9;&#x4E00;behavior&#x7684;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x90FD;&#x4F1A;&#x88AB;&#x5173;&#x8054;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

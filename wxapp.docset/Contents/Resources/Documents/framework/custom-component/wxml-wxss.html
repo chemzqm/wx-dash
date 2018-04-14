@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>组件模版和样式</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EC4;&#x4EF6;&#x6A21;&#x7248;&#x548C;&#x6837;&#x5F0F;">&#x7EC4;&#x4EF6;&#x6A21;&#x7248;&#x548C;&#x6837;&#x5F0F;</h1>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;&#x9875;&#x9762;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x62E5;&#x6709;&#x81EA;&#x5DF1;&#x7684; <code>wxml</code> &#x6A21;&#x7248;&#x548C; <code>wxss</code> &#x6837;&#x5F0F;&#x3002;</p>
+<h3 id="&#x7EC4;&#x4EF6;&#x6A21;&#x7248;">&#x7EC4;&#x4EF6;&#x6A21;&#x7248;</h3>
+<p>&#x7EC4;&#x4EF6;&#x6A21;&#x7248;&#x7684;&#x5199;&#x6CD5;&#x4E0E;&#x9875;&#x9762;&#x6A21;&#x677F;&#x76F8;&#x540C;&#x3002;&#x7EC4;&#x4EF6;&#x6A21;&#x7248;&#x4E0E;&#x7EC4;&#x4EF6;&#x6570;&#x636E;&#x7ED3;&#x5408;&#x540E;&#x751F;&#x6210;&#x7684;&#x8282;&#x70B9;&#x6811;&#xFF0C;&#x5C06;&#x88AB;&#x63D2;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x7684;&#x5F15;&#x7528;&#x4F4D;&#x7F6E;&#x4E0A;&#x3002;</p>
+<p>&#x5728;&#x7EC4;&#x4EF6;&#x6A21;&#x677F;&#x4E2D;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; <code>&lt;slot&gt;</code> &#x8282;&#x70B9;&#xFF0C;&#x7528;&#x4E8E;&#x627F;&#x8F7D;&#x7EC4;&#x4EF6;&#x5F15;&#x7528;&#x65F6;&#x63D0;&#x4F9B;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x7EC4;&#x4EF6;&#x6A21;&#x677F; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x8282;&#x70B9;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x5F15;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x6A21;&#x7248; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">component-tag-name</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x5C06;&#x88AB;&#x653E;&#x7F6E;&#x5728;&#x7EC4;&#x4EF6; &lt;slot&gt; &#x7684;&#x4F4D;&#x7F6E;&#x4E0A; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x63D2;&#x5165;&#x5230;&#x7EC4;&#x4EF6;slot&#x4E2D;&#x7684;&#x5185;&#x5BB9;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">component-tag-name</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x6A21;&#x7248;&#x4E2D;&#x5F15;&#x7528;&#x5230;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x53CA;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#x540D;&#x9700;&#x8981;&#x5728; <code>json</code> &#x6587;&#x4EF6;&#x4E2D;&#x663E;&#x5F0F;&#x5B9A;&#x4E49;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x88AB;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x8282;&#x70B9;&#x3002;&#x9664;&#x6B64;&#x4EE5;&#x5916;&#xFF0C;&#x8282;&#x70B9;&#x540D;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x58F0;&#x660E;&#x4E3A;<a href="../plugin/generics.md">&#x62BD;&#x8C61;&#x8282;&#x70B9;</a>&#x3002;</p>
+<h3 id="&#x7EC4;&#x4EF6;wxml&#x7684;slot">&#x7EC4;&#x4EF6;wxml&#x7684;slot</h3>
+<p>&#x5728;&#x7EC4;&#x4EF6;&#x7684;wxml&#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B; <code>slot</code> &#x8282;&#x70B9;&#xFF0C;&#x7528;&#x4E8E;&#x627F;&#x8F7D;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x8005;&#x63D0;&#x4F9B;&#x7684;wxml&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;wxml&#x4E2D;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;slot&#x3002;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x591A;slot&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;js&#x4E2D;&#x58F0;&#x660E;&#x542F;&#x7528;&#x3002;</p>
+<pre><code class="lang-js">Component({
+  options: {
+    multipleSlots: <span class="hljs-literal">true</span> <span class="hljs-comment">// &#x5728;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x65F6;&#x7684;&#x9009;&#x9879;&#x4E2D;&#x542F;&#x7528;&#x591A;slot&#x652F;&#x6301;</span>
+  },
+  properties: { <span class="hljs-comment">/* ... */</span> },
+  methods: { <span class="hljs-comment">/* ... */</span> }
+})
+</code></pre>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;wxml&#x4E2D;&#x4F7F;&#x7528;&#x591A;&#x4E2A;slot&#xFF0C;&#x4EE5;&#x4E0D;&#x540C;&#x7684; <code>name</code> &#x6765;&#x533A;&#x5206;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x7EC4;&#x4EF6;&#x6A21;&#x677F; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;before&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x7EC6;&#x8282;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;after&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x7528; <code>slot</code> &#x5C5E;&#x6027;&#x6765;&#x5C06;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;&#x4E0D;&#x540C;&#x7684;slot&#x4E0A;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x5F15;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x6A21;&#x7248; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">component-tag-name</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x5C06;&#x88AB;&#x653E;&#x7F6E;&#x5728;&#x7EC4;&#x4EF6; &lt;slot name=&quot;before&quot;&gt; &#x7684;&#x4F4D;&#x7F6E;&#x4E0A; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;before&quot;</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x63D2;&#x5165;&#x5230;&#x7EC4;&#x4EF6;slot name=&quot;before&quot;&#x4E2D;&#x7684;&#x5185;&#x5BB9;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x5C06;&#x88AB;&#x653E;&#x7F6E;&#x5728;&#x7EC4;&#x4EF6; &lt;slot name=&quot;after&quot;&gt; &#x7684;&#x4F4D;&#x7F6E;&#x4E0A; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;after&quot;</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x63D2;&#x5165;&#x5230;&#x7EC4;&#x4EF6;slot name=&quot;after&quot;&#x4E2D;&#x7684;&#x5185;&#x5BB9;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">component-tag-name</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<h3 id="&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;">&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;</h3>
+<p>&#x7EC4;&#x4EF6;&#x5BF9;&#x5E94; <code>wxss</code> &#x6587;&#x4EF6;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x53EA;&#x5BF9;&#x7EC4;&#x4EF6;wxml&#x5185;&#x7684;&#x8282;&#x70B9;&#x751F;&#x6548;&#x3002;&#x7F16;&#x5199;&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x7EC4;&#x4EF6;&#x548C;&#x5F15;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;id&#x9009;&#x62E9;&#x5668;&#xFF08;<code>#a</code>&#xFF09;&#x3001;&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;&#xFF08;<code>[a]</code>&#xFF09;&#x548C;&#x6807;&#x7B7E;&#x540D;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x8BF7;&#x6539;&#x7528;class&#x9009;&#x62E9;&#x5668;&#x3002;</li>
+<li>&#x7EC4;&#x4EF6;&#x548C;&#x5F15;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x4F7F;&#x7528;&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;&#xFF08;<code>.a .b</code>&#xFF09;&#x5728;&#x4E00;&#x4E9B;&#x6781;&#x7AEF;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x6709;&#x975E;&#x9884;&#x671F;&#x7684;&#x8868;&#x73B0;&#xFF0C;&#x5982;&#x9047;&#xFF0C;&#x8BF7;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x5B50;&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;&#xFF08;<code>.a&gt;.b</code>&#xFF09;&#x53EA;&#x80FD;&#x7528;&#x4E8E; <code>view</code> &#x7EC4;&#x4EF6;&#x4E0E;&#x5176;&#x5B50;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#xFF0C;&#x7528;&#x4E8E;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x975E;&#x9884;&#x671F;&#x7684;&#x60C5;&#x51B5;&#x3002;</li>
+<li>&#x7EE7;&#x627F;&#x6837;&#x5F0F;&#xFF0C;&#x5982; <code>font</code> &#x3001; <code>color</code> &#xFF0C;&#x4F1A;&#x4ECE;&#x7EC4;&#x4EF6;&#x5916;&#x7EE7;&#x627F;&#x5230;&#x7EC4;&#x4EF6;&#x5185;&#x3002;</li>
+<li>&#x9664;&#x7EE7;&#x627F;&#x6837;&#x5F0F;&#x5916;&#xFF0C; <code>app.wxss</code> &#x4E2D;&#x7684;&#x6837;&#x5F0F;&#x3001;&#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;&#x7684;&#x6837;&#x5F0F;&#x5BF9;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x65E0;&#x6548;&#x3002;</li>
+</ul>
+<pre><code class="lang-css"><span class="hljs-selector-id">#a</span> { } <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
+<span class="hljs-selector-attr">[a]</span> { } <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
+<span class="hljs-selector-tag">button</span> { } <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
+<span class="hljs-selector-class">.a</span> &gt; <span class="hljs-selector-class">.b</span> { } <span class="hljs-comment">/* &#x9664;&#x975E; .a &#x662F; view &#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4E00;&#x5B9A;&#x4F1A;&#x751F;&#x6548; */</span>
+</code></pre>
+<p>&#x9664;&#x6B64;&#x4EE5;&#x5916;&#xFF0C;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5B83;&#x6240;&#x5728;&#x8282;&#x70B9;&#x7684;&#x9ED8;&#x8BA4;&#x6837;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528; <code>:host</code> &#x9009;&#x62E9;&#x5668;&#xFF08;&#x9700;&#x8981;&#x5305;&#x542B;&#x57FA;&#x7840;&#x5E93; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.2 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.2</a> &#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x652F;&#x6301;&#xFF09;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-css"><span class="hljs-comment">/* &#x7EC4;&#x4EF6; custom-component.wxss */</span>
+<span class="hljs-selector-pseudo">:host</span> {
+  <span class="hljs-attribute">color</span>: yellow;
+}
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x9875;&#x9762;&#x7684; WXML --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">custom-component</span>&gt;</span>&#x8FD9;&#x6BB5;&#x6587;&#x672C;&#x662F;&#x9EC4;&#x8272;&#x7684;<span class="hljs-tag">&lt;/<span class="hljs-name">custom-component</span>&gt;</span>
+</code></pre>
+<h3 id="&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x7C7B;">&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x7C7B;</h3>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x7EC4;&#x4EF6;&#x5E0C;&#x671B;&#x63A5;&#x53D7;&#x5916;&#x90E8;&#x4F20;&#x5165;&#x7684;&#x6837;&#x5F0F;&#x7C7B;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E; <code>view</code> &#x7EC4;&#x4EF6;&#x7684; <code>hover-class</code> &#x5C5E;&#x6027;&#xFF09;&#x3002;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x5728; <code>Component</code> &#x4E2D;&#x7528; <code>externalClasses</code> &#x5B9A;&#x4E49;&#x6BB5;&#x5B9A;&#x4E49;&#x82E5;&#x5E72;&#x4E2A;&#x5916;&#x90E8;&#x6837;&#x5F0F;&#x7C7B;&#x3002;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x4ECE;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a> &#x5F00;&#x59CB;&#x652F;&#x6301;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-js"><span class="hljs-comment">/* &#x7EC4;&#x4EF6; custom-component.js */</span>
+Component({
+  externalClasses: [<span class="hljs-string">&apos;my-class&apos;</span>]
+})
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x7EC4;&#x4EF6; custom-component.wxml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">custom-component</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;my-class&quot;</span>&gt;</span>&#x8FD9;&#x6BB5;&#x6587;&#x672C;&#x7684;&#x989C;&#x8272;&#x7531;&#x7EC4;&#x4EF6;&#x5916;&#x7684; class &#x51B3;&#x5B9A;<span class="hljs-tag">&lt;/<span class="hljs-name">custom-component</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x7EC4;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x6837;&#x5F0F;&#x7C7B;&#x5BF9;&#x5E94;&#x7684; class &#xFF0C;&#x5C31;&#x50CF;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x5C5E;&#x6027;&#x4E00;&#x6837;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x9875;&#x9762;&#x7684; WXML --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">custom-component</span> <span class="hljs-attr">my-class</span>=<span class="hljs-string">&quot;red-text&quot;</span> /&gt;</span>
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.red-text</span> {
+  <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

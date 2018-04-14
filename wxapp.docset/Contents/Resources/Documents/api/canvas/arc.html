@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>arc</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="canvascontextarc">canvasContext.arc</h1>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x753B;&#x4E00;&#x6761;&#x5F27;&#x7EBF;&#x3002;</p>
+<p><strong>Tip</strong>: &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5706;&#x53EF;&#x4EE5;&#x7528; <code>arc()</code> &#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x5176;&#x5B9E;&#x5F27;&#x5EA6;&#x4E3A;0&#xFF0C;&#x7EC8;&#x6B62;&#x5F27;&#x5EA6;&#x4E3A; <code>2 * Math.PI</code>&#x3002;</p>
+<p><strong>Tip</strong>: &#x7528; <code>stroke()</code> &#x6216;&#x8005; <code>fill()</code> &#x65B9;&#x6CD5;&#x6765;&#x5728; canvas &#x4E2D;&#x753B;&#x5F27;&#x7EBF;&#x3002;</p>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>Number</td>
+<td>&#x5706;&#x7684;x&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td>y</td>
+<td>Number</td>
+<td>&#x5706;&#x7684;y&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td>r</td>
+<td>Number</td>
+<td>&#x5706;&#x7684;&#x534A;&#x5F84;</td>
+</tr>
+<tr>
+<td>sAngle</td>
+<td>Number</td>
+<td>&#x8D77;&#x59CB;&#x5F27;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x5F27;&#x5EA6;&#xFF08;&#x5728;3&#x70B9;&#x949F;&#x65B9;&#x5411;&#xFF09;</td>
+</tr>
+<tr>
+<td>eAngle</td>
+<td>Number</td>
+<td>&#x7EC8;&#x6B62;&#x5F27;&#x5EA6;</td>
+</tr>
+<tr>
+<td>counterclockwise</td>
+<td>Boolean</td>
+<td>&#x53EF;&#x9009;&#x3002;&#x6307;&#x5B9A;&#x5F27;&#x5EA6;&#x7684;&#x65B9;&#x5411;&#x662F;&#x9006;&#x65F6;&#x9488;&#x8FD8;&#x662F;&#x987A;&#x65F6;&#x9488;&#x3002;&#x9ED8;&#x8BA4;&#x662F;false&#xFF0C;&#x5373;&#x987A;&#x65F6;&#x9488;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+<span class="hljs-comment">// Draw coordinates</span>
+ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
+ctx.setFillStyle(<span class="hljs-string">&apos;#EEEEEE&apos;</span>)
+ctx.fill()
+
+ctx.beginPath()
+ctx.moveTo(<span class="hljs-number">40</span>, <span class="hljs-number">75</span>)
+ctx.lineTo(<span class="hljs-number">160</span>, <span class="hljs-number">75</span>)
+ctx.moveTo(<span class="hljs-number">100</span>, <span class="hljs-number">15</span>)
+ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">135</span>)
+ctx.setStrokeStyle(<span class="hljs-string">&apos;#AAAAAA&apos;</span>)
+ctx.stroke()
+
+ctx.setFontSize(<span class="hljs-number">12</span>)
+ctx.setFillStyle(<span class="hljs-string">&apos;black&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;0&apos;</span>, <span class="hljs-number">165</span>, <span class="hljs-number">78</span>)
+ctx.fillText(<span class="hljs-string">&apos;0.5*PI&apos;</span>, <span class="hljs-number">83</span>, <span class="hljs-number">145</span>)
+ctx.fillText(<span class="hljs-string">&apos;1*PI&apos;</span>, <span class="hljs-number">15</span>, <span class="hljs-number">78</span>)
+ctx.fillText(<span class="hljs-string">&apos;1.5*PI&apos;</span>, <span class="hljs-number">83</span>, <span class="hljs-number">10</span>)
+
+<span class="hljs-comment">// Draw points</span>
+ctx.beginPath()
+ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
+ctx.setFillStyle(<span class="hljs-string">&apos;lightgreen&apos;</span>)
+ctx.fill()
+
+ctx.beginPath()
+ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">25</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
+ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
+ctx.fill()
+
+ctx.beginPath()
+ctx.arc(<span class="hljs-number">150</span>, <span class="hljs-number">75</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.fill()
+
+<span class="hljs-comment">// Draw arc</span>
+ctx.beginPath()
+ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1.5</span> * <span class="hljs-built_in">Math</span>.PI)
+ctx.setStrokeStyle(<span class="hljs-string">&apos;#333333&apos;</span>)
+ctx.stroke()
+
+ctx.draw()
+</code></pre>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/arc.png?t=2018412" alt=""></p>
+<p>&#x9488;&#x5BF9; <code>arc(100, 75, 50, 0, 1.5 * Math.PI)</code>&#x7684;&#x4E09;&#x4E2A;&#x5173;&#x952E;&#x5750;&#x6807;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x7EFF;&#x8272;: &#x5706;&#x5FC3; (100, 75)</li>
+<li>&#x7EA2;&#x8272;: &#x8D77;&#x59CB;&#x5F27;&#x5EA6; (0)</li>
+<li>&#x84DD;&#x8272;: &#x7EC8;&#x6B62;&#x5F27;&#x5EA6; (1.5 * Math.PI)</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

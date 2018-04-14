@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>调试接口</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxsetenabledebugobject">wx.setEnableDebug(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x6253;&#x5F00;&#x8C03;&#x8BD5;&#x5F00;&#x5173;&#xFF0C;&#x6B64;&#x5F00;&#x5173;&#x5BF9;&#x6B63;&#x5F0F;&#x7248;&#x4E5F;&#x80FD;&#x751F;&#x6548;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enableDebug</td>
+<td>Boolean</td>
+<td>&#x662F;</td>
+<td>&#x662F;&#x5426;&#x6253;&#x5F00;&#x8C03;&#x8BD5;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x6253;&#x5F00;&#x8C03;&#x8BD5;</span>
+wx.setEnableDebug({
+    enableDebug: <span class="hljs-literal">true</span>
+})
+
+<span class="hljs-comment">// &#x5173;&#x95ED;&#x8C03;&#x8BD5;</span>
+wx.setEnableDebug({
+    enableDebug: <span class="hljs-literal">false</span>
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

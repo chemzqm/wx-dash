@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>iBeacon</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="ibeacon">iBeacon</h2>
+<h3 id="wxstartbeacondiscoveryobject">wx.startBeaconDiscovery(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x5F00;&#x59CB;&#x641C;&#x7D22;&#x9644;&#x8FD1;&#x7684;<code>iBeacon</code>&#x8BBE;&#x5907;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uuids</td>
+<td>StringArray</td>
+<td>&#x662F;</td>
+<td>iBeacon&#x8BBE;&#x5907;&#x5E7F;&#x64AD;&#x7684; uuids</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.startBeaconDiscovery({
+    success(res) {
+    }
+})
+</code></pre>
+<h3 id="wxstopbeacondiscoveryobject">wx.stopBeaconDiscovery(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x505C;&#x6B62;&#x641C;&#x7D22;&#x9644;&#x8FD1;&#x7684;<code>iBeacon</code>&#x8BBE;&#x5907;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wxgetbeaconsobject">wx.getBeacons(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x5DF2;&#x641C;&#x7D22;&#x5230;&#x7684;<code>iBeacon</code>&#x8BBE;&#x5907;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>beacons</td>
+<td>ObjectArray</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>iBeacon &#x7ED3;&#x6784;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uuid</td>
+<td>String</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x5E7F;&#x64AD;&#x7684; uuid</td>
+</tr>
+<tr>
+<td>major</td>
+<td>String</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x7684;&#x4E3B; id</td>
+</tr>
+<tr>
+<td>minor</td>
+<td>String</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x7684;&#x6B21; id</td>
+</tr>
+<tr>
+<td>proximity</td>
+<td>Number</td>
+<td>&#x8868;&#x793A;&#x8BBE;&#x5907;&#x8DDD;&#x79BB;&#x7684;&#x679A;&#x4E3E;&#x503C;</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td>Number</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x7684;&#x8DDD;&#x79BB;</td>
+</tr>
+<tr>
+<td>rssi</td>
+<td>Number</td>
+<td>&#x8868;&#x793A;&#x8BBE;&#x5907;&#x7684;&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wxonbeaconupdatecallback">wx.onBeaconUpdate(CALLBACK)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x76D1;&#x542C; <code>iBeacon</code> &#x8BBE;&#x5907;&#x7684;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</p>
+<p><strong>CALLBACK&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>beacons</td>
+<td>array object</td>
+<td>&#x5F53;&#x524D;&#x641C;&#x5BFB;&#x5230;&#x7684;&#x6240;&#x6709; iBeacon &#x8BBE;&#x5907;&#x5217;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>iBeacon &#x7ED3;&#x6784;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uuid</td>
+<td>String</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x5E7F;&#x64AD;&#x7684; uuid</td>
+</tr>
+<tr>
+<td>major</td>
+<td>String</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x7684;&#x4E3B; id</td>
+</tr>
+<tr>
+<td>minor</td>
+<td>String</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x7684;&#x6B21; id</td>
+</tr>
+<tr>
+<td>proximity</td>
+<td>Number</td>
+<td>&#x8868;&#x793A;&#x8BBE;&#x5907;&#x8DDD;&#x79BB;&#x7684;&#x679A;&#x4E3E;&#x503C;</td>
+</tr>
+<tr>
+<td>accuracy</td>
+<td>Number</td>
+<td>iBeacon &#x8BBE;&#x5907;&#x7684;&#x8DDD;&#x79BB;</td>
+</tr>
+<tr>
+<td>rssi</td>
+<td>Number</td>
+<td>&#x8868;&#x793A;&#x8BBE;&#x5907;&#x7684;&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wxonbeaconservicechangecallback">wx.onBeaconServiceChange(CALLBACK)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x76D1;&#x542C; <code>iBeacon</code> &#x670D;&#x52A1;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x5316;</p>
+<p><strong>CALLBACK&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>available</td>
+<td>Boolean</td>
+<td>&#x670D;&#x52A1;&#x76EE;&#x524D;&#x662F;&#x5426;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>discovering</td>
+<td>Boolean</td>
+<td>&#x76EE;&#x524D;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x641C;&#x7D22;&#x72B6;&#x6001;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x9519;&#x8BEF;&#x7801;&#x5217;&#x8868;">&#x9519;&#x8BEF;&#x7801;&#x5217;&#x8868;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>ok</td>
+<td>&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td>11000</td>
+<td>unsupport</td>
+<td>&#x7CFB;&#x7EDF;&#x6216;&#x8BBE;&#x5907;&#x4E0D;&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>11001</td>
+<td>bluetooth service unavailable</td>
+<td>&#x84DD;&#x7259;&#x670D;&#x52A1;&#x4E0D;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>11002</td>
+<td>location service unavailable</td>
+<td>&#x4F4D;&#x7F6E;&#x670D;&#x52A1;&#x4E0D;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>11003</td>
+<td>already start</td>
+<td>&#x5DF2;&#x7ECF;&#x5F00;&#x59CB;&#x641C;&#x7D22;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

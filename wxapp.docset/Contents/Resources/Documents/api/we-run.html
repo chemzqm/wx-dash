@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>微信运动</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxgetwerundataobject">wx.getWeRunData(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x8C03;&#x7528; <a href="api-login.html#wxloginobject">wx.login</a> &#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.werun</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>timeout</td>
+<td>Number</td>
+<td>&#x5426;</td>
+<td>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D; ms</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td>encryptedData</td>
+<td>String</td>
+<td>&#x5305;&#x62EC;&#x654F;&#x611F;&#x6570;&#x636E;&#x5728;&#x5185;&#x7684;&#x5B8C;&#x6574;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+</tr>
+<tr>
+<td>iv</td>
+<td>String</td>
+<td>&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x521D;&#x59CB;&#x5411;&#x91CF;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.getWeRunData({
+    success(res) {
+        <span class="hljs-keyword">const</span> encryptedData = res.encryptedData
+    }
+})
+</code></pre>
+<p>encryptedData &#x89E3;&#x5BC6;&#x540E;&#x4E3A;&#x4EE5;&#x4E0B; json &#x7ED3;&#x6784;&#xFF0C;&#x8BE6;&#x89C1;<a href="signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stepInfoList</td>
+<td>ObjectArray</td>
+<td>&#x7528;&#x6237;&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;&#x7684;&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>stepInfo &#x7ED3;&#x6784;&#x5982;&#x4E0B;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>timestamp</td>
+<td>Number</td>
+<td>&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x8868;&#x793A;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>step</td>
+<td>Number</td>
+<td>&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;stepInfoList&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-number">1445866601</span>,
+            <span class="hljs-string">&quot;step&quot;</span>: <span class="hljs-number">100</span>
+        },
+        {
+            <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-number">1445866602</span>,
+            <span class="hljs-string">&quot;step&quot;</span>: <span class="hljs-number">100</span>
+        }
+    ]
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

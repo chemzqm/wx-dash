@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>addColorStop</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="canvascontextaddcolorstop">canvasContext.addColorStop</h1>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x7684;&#x6E10;&#x53D8;&#x70B9;&#x3002;</p>
+<p><strong>Tip</strong>: &#x5C0F;&#x4E8E;&#x6700;&#x5C0F; stop &#x7684;&#x90E8;&#x5206;&#x4F1A;&#x6309;&#x6700;&#x5C0F; stop &#x7684; color &#x6765;&#x6E32;&#x67D3;&#xFF0C;&#x5927;&#x4E8E;&#x6700;&#x5927; stop &#x7684;&#x90E8;&#x5206;&#x4F1A;&#x6309;&#x6700;&#x5927; stop &#x7684; color &#x6765;&#x6E32;&#x67D3;&#x3002;</p>
+<p><strong>Tip</strong>: &#x9700;&#x8981;&#x4F7F;&#x7528; <code>addColorStop()</code> &#x6765;&#x6307;&#x5B9A;&#x6E10;&#x53D8;&#x70B9;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x4E24;&#x4E2A;&#x3002;</p>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5B9A;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stop</td>
+<td>Number(0-1)</td>
+<td>&#x8868;&#x793A;&#x6E10;&#x53D8;&#x70B9;&#x5728;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="color.html">Color</a></td>
+<td>&#x6E10;&#x53D8;&#x70B9;&#x7684;&#x989C;&#x8272;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+<span class="hljs-comment">// Create circular gradient</span>
+<span class="hljs-keyword">const</span> grd = ctx.createLinearGradient(<span class="hljs-number">30</span>, <span class="hljs-number">10</span>, <span class="hljs-number">120</span>, <span class="hljs-number">10</span>)
+grd.addColorStop(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;red&apos;</span>)
+grd.addColorStop(<span class="hljs-number">0.16</span>, <span class="hljs-string">&apos;orange&apos;</span>)
+grd.addColorStop(<span class="hljs-number">0.33</span>, <span class="hljs-string">&apos;yellow&apos;</span>)
+grd.addColorStop(<span class="hljs-number">0.5</span>, <span class="hljs-string">&apos;green&apos;</span>)
+grd.addColorStop(<span class="hljs-number">0.66</span>, <span class="hljs-string">&apos;cyan&apos;</span>)
+grd.addColorStop(<span class="hljs-number">0.83</span>, <span class="hljs-string">&apos;blue&apos;</span>)
+grd.addColorStop(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;purple&apos;</span>)
+
+<span class="hljs-comment">// Fill with gradient</span>
+ctx.setFillStyle(grd)
+ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">80</span>)
+ctx.draw()
+</code></pre>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/color-stop.png?t=2018412" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

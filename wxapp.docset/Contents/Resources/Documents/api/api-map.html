@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>地图组件控制</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxcreatemapcontextmapid-this">wx.createMapContext(mapId, this)</h3>
+<p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE; map &#x4E0A;&#x4E0B;&#x6587; <code>mapContext</code> &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;map/&gt;</code> &#x7EC4;&#x4EF6;</p>
+<h4 id="mapcontext">mapContext</h4>
+<p><code>mapContext</code> &#x901A;&#x8FC7; mapId &#x8DDF;&#x4E00;&#x4E2A; <code>&lt;map/&gt;</code> &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <code>&lt;map/&gt;</code> &#x7EC4;&#x4EF6;&#x3002;</p>
+<p><strong>mapContext &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getCenterLocation</td>
+<td>OBJECT</td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F; gcj02 &#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E; <a href="location.html#wxopenlocationobject"><code>wx.openLocation</code></a></td>
+<td></td>
+</tr>
+<tr>
+<td>moveToLocation</td>
+<td>&#x65E0;</td>
+<td>&#x5C06;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x5B9A;&#x4F4D;&#x70B9;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x5408;map&#x7EC4;&#x4EF6;&#x7684;show-location&#x4F7F;&#x7528;</td>
+<td></td>
+</tr>
+<tr>
+<td>translateMarker</td>
+<td>OBJECT</td>
+<td>&#x5E73;&#x79FB;marker&#xFF0C;&#x5E26;&#x52A8;&#x753B;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+</tr>
+<tr>
+<td>includePoints</td>
+<td>OBJECT</td>
+<td>&#x7F29;&#x653E;&#x89C6;&#x91CE;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7ECF;&#x7EAC;&#x5EA6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+</tr>
+<tr>
+<td>getRegion</td>
+<td>OBJECT</td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x7684;&#x89C6;&#x91CE;&#x8303;&#x56F4;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+</tr>
+<tr>
+<td>getScale</td>
+<td>OBJECT</td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x7684;&#x7F29;&#x653E;&#x7EA7;&#x522B;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>getCenterLocation &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570; &#xFF0C;res = { longitude: &quot;&#x7ECF;&#x5EA6;&quot;, latitude: &quot;&#x7EAC;&#x5EA6;&quot;}</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>translateMarker &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>markerId</td>
+<td>Number</td>
+<td>&#x662F;</td>
+<td>&#x6307;&#x5B9A;marker</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>Object</td>
+<td>&#x662F;</td>
+<td>&#x6307;&#x5B9A;marker&#x79FB;&#x52A8;&#x5230;&#x7684;&#x76EE;&#x6807;&#x70B9;</td>
+</tr>
+<tr>
+<td>autoRotate</td>
+<td>Boolean</td>
+<td>&#x662F;</td>
+<td>&#x79FB;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x65CB;&#x8F6C;marker</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>Number</td>
+<td>&#x662F;</td>
+<td>marker&#x7684;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Number</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x957F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;1000ms&#xFF0C;&#x5E73;&#x79FB;&#x4E0E;&#x65CB;&#x8F6C;&#x5206;&#x522B;&#x8BA1;&#x7B97;</td>
+</tr>
+<tr>
+<td>animationEnd</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x7ED3;&#x675F;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>includePoints &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points</td>
+<td>Array</td>
+<td>&#x662F;</td>
+<td>&#x8981;&#x663E;&#x793A;&#x5728;&#x53EF;&#x89C6;&#x533A;&#x57DF;&#x5185;&#x7684;&#x5750;&#x6807;&#x70B9;&#x5217;&#x8868;&#xFF0C;[{latitude, longitude}]</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>Array</td>
+<td>&#x5426;</td>
+<td>&#x5750;&#x6807;&#x70B9;&#x5F62;&#x6210;&#x7684;&#x77E9;&#x5F62;&#x8FB9;&#x7F18;&#x5230;&#x5730;&#x56FE;&#x8FB9;&#x7F18;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D;&#x50CF;&#x7D20;&#x3002;&#x683C;&#x5F0F;&#x4E3A;[&#x4E0A;,&#x53F3;,&#x4E0B;,&#x5DE6;]&#xFF0C;&#x5B89;&#x5353;&#x4E0A;&#x53EA;&#x80FD;&#x8BC6;&#x522B;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x9879;&#xFF0C;&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x7684;padding&#x4E00;&#x81F4;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x6682;&#x4E0D;&#x652F;&#x6301;padding&#x53C2;&#x6570;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getRegion &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;res = {southwest, northeast}&#xFF0C;&#x897F;&#x5357;&#x89D2;&#x4E0E;&#x4E1C;&#x5317;&#x89D2;&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>getScale &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;res = {scale}</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/3uVxpmmT6wY9" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- map.wxml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">map</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myMap&quot;</span> <span class="hljs-attr">show-location</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;getCenterLocation&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x4F4D;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;moveToLocation&quot;</span>&gt;</span>&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;translateMarker&quot;</span>&gt;</span>&#x79FB;&#x52A8;&#x6807;&#x6CE8;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;includePoints&quot;</span>&gt;</span>&#x7F29;&#x653E;&#x89C6;&#x91CE;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7ECF;&#x7EAC;&#x5EA6;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// map.js</span>
+Page({
+  onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createMapContext &#x83B7;&#x53D6; map &#x4E0A;&#x4E0B;&#x6587;</span>
+    <span class="hljs-keyword">this</span>.mapCtx = wx.createMapContext(<span class="hljs-string">&apos;myMap&apos;</span>)
+  },
+  getCenterLocation: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.getCenterLocation({
+      success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(res.longitude)
+        <span class="hljs-built_in">console</span>.log(res.latitude)
+      }
+    })
+  },
+  moveToLocation: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.moveToLocation()
+  },
+  translateMarker: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.translateMarker({
+      markerId: <span class="hljs-number">0</span>,
+      autoRotate: <span class="hljs-literal">true</span>,
+      duration: <span class="hljs-number">1000</span>,
+      destination: {
+        latitude:<span class="hljs-number">23.10229</span>,
+        longitude:<span class="hljs-number">113.3345211</span>,
+      },
+      animationEnd() {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;animation end&apos;</span>)
+      }
+    })
+  },
+  includePoints: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.includePoints({
+      padding: [<span class="hljs-number">10</span>],
+      points: [{
+        latitude:<span class="hljs-number">23.10229</span>,
+        longitude:<span class="hljs-number">113.3345211</span>,
+      }, {
+        latitude:<span class="hljs-number">23.00229</span>,
+        longitude:<span class="hljs-number">113.3345211</span>,
+      }]
+    })
+  }
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

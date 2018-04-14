@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>收货地址</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxchooseaddressobject">wx.chooseAddress(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x8C03;&#x8D77;&#x7528;&#x6237;&#x7F16;&#x8F91;&#x6536;&#x8D27;&#x5730;&#x5740;&#x539F;&#x751F;&#x754C;&#x9762;&#xFF0C;&#x5E76;&#x5728;&#x7F16;&#x8F91;&#x5B8C;&#x6210;&#x540E;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x9009;&#x62E9;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.address</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x9009;&#x62E9;&#x7684;&#x6536;&#x8D27;&#x5730;&#x5740;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td>userName</td>
+<td>String</td>
+<td>&#x6536;&#x8D27;&#x4EBA;&#x59D3;&#x540D;</td>
+</tr>
+<tr>
+<td>postalCode</td>
+<td>String</td>
+<td>&#x90AE;&#x7F16;</td>
+</tr>
+<tr>
+<td>provinceName</td>
+<td>String</td>
+<td>&#x56FD;&#x6807;&#x6536;&#x8D27;&#x5730;&#x5740;&#x7B2C;&#x4E00;&#x7EA7;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>cityName</td>
+<td>String</td>
+<td>&#x56FD;&#x6807;&#x6536;&#x8D27;&#x5730;&#x5740;&#x7B2C;&#x4E8C;&#x7EA7;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>countyName</td>
+<td>String</td>
+<td>&#x56FD;&#x6807;&#x6536;&#x8D27;&#x5730;&#x5740;&#x7B2C;&#x4E09;&#x7EA7;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>detailInfo</td>
+<td>String</td>
+<td>&#x8BE6;&#x7EC6;&#x6536;&#x8D27;&#x5730;&#x5740;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>nationalCode</td>
+<td>String</td>
+<td>&#x6536;&#x8D27;&#x5730;&#x5740;&#x56FD;&#x5BB6;&#x7801;</td>
+</tr>
+<tr>
+<td>telNumber</td>
+<td>String</td>
+<td>&#x6536;&#x8D27;&#x4EBA;&#x624B;&#x673A;&#x53F7;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.chooseAddress({
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.userName)
+    <span class="hljs-built_in">console</span>.log(res.postalCode)
+    <span class="hljs-built_in">console</span>.log(res.provinceName)
+    <span class="hljs-built_in">console</span>.log(res.cityName)
+    <span class="hljs-built_in">console</span>.log(res.countyName)
+    <span class="hljs-built_in">console</span>.log(res.detailInfo)
+    <span class="hljs-built_in">console</span>.log(res.nationalCode)
+    <span class="hljs-built_in">console</span>.log(res.telNumber)
+  }
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

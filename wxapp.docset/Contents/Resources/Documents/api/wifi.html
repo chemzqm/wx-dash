@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Wi-Fi</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x652F;&#x6301;&#x641C;&#x7D22;&#x5468;&#x8FB9;&#x7684; Wi-Fi&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x6307;&#x5B9A; Wi-Fi&#xFF0C;&#x4F20;&#x5165;&#x5BC6;&#x7801;&#x53D1;&#x8D77;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>&#x8BE5;&#x7CFB;&#x5217;&#x63A5;&#x53E3;&#x4E3A;&#x7CFB;&#x7EDF;&#x539F;&#x751F;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x9700;&#x67E5;&#x770B;&#x201C;&#x5FAE;&#x4FE1;&#x8FDE;Wi-Fi&#x201D;&#x80FD;&#x529B;&#x53CA;&#x914D;&#x7F6E;&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=215135855720FBA0" target="_blank">&#x6587;&#x6863;</a>&#x3002;</p>
+<p>&#x8FDE;&#x63A5;&#x6307;&#x5B9A; Wi-Fi &#x63A5;&#x53E3;&#x8C03;&#x7528;&#x65F6;&#x5E8F;&#xFF1A;  </p>
+<ul>
+<li>Android&#xFF1A;
+startWifi &#x2014;&gt; connectWifi &#x2014;&gt; onWifiConnected</li>
+<li>iOS&#xFF08;&#x4EC5;iOS 11&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x652F;&#x6301;&#xFF09;&#xFF1A;<br>startWifi &#x2014;&gt; connectWifi &#x2014;&gt; onWifiConnected  </li>
+</ul>
+<p>&#x8FDE;&#x5468;&#x8FB9; Wi-Fi &#x63A5;&#x53E3;&#x8C03;&#x7528;&#x65F6;&#x5E8F;&#xFF1A;  </p>
+<ul>
+<li>Android
+startWifi &#x2014;&gt; getWifiList &#x2014;&gt; onGetWifiList &#x2014;&gt; connectWifi &#x2014;&gt; onWifiConnected  </li>
+<li>iOS&#xFF08;iOS 11.0&#x53CA;11.1&#x7248;&#x672C;&#x56E0;&#x7CFB;&#x7EDF;&#x539F;&#x56E0;&#x6682;&#x4E0D;&#x652F;&#x6301;&#xFF09;&#xFF1A;<br>startWifi &#x2014;&gt; getWifiList &#x2014;&gt; onGetWifiList &#x2014;&gt; setWifiList &#x2014;&gt; onWifiConnected</li>
+</ul>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<ul>
+<li>Wi-Fi &#x76F8;&#x5173;&#x63A5;&#x53E3;&#x6682;&#x4E0D;&#x53EF;&#x7528; <code>wx.canIUse</code> &#x63A5;&#x53E3;&#x5224;&#x65AD;&#x3002;</li>
+<li>Android 6.0 &#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x6253;&#x5F00;&#x5B9A;&#x4F4D;&#x5F00;&#x5173;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5BFC;&#x81F4;&#x8BBE;&#x5907;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x83B7;&#x53D6;&#x5468;&#x8FB9;&#x7684; Wi-Fi &#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<h3 id="wxstartwifiobject">wx.startWifi(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x521D;&#x59CB;&#x5316; Wi-Fi &#x6A21;&#x5757;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.startWifi({
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.errMsg)
+  }
+})
+</code></pre>
+<h3 id="wxstopwifiobject">wx.stopWifi(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x5173;&#x95ED; Wi-Fi &#x6A21;&#x5757;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.stopWifi({
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.errMsg)
+  }
+})
+</code></pre>
+<h3 id="wxconnectwifiobject">wx.connectWifi(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x8FDE;&#x63A5; Wi-Fi&#x3002;&#x82E5;&#x5DF2;&#x77E5; Wi-Fi &#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#x8FDE;&#x63A5;&#x3002;&#x4EC5; Android &#x4E0E; iOS 11 &#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x652F;&#x6301;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>Wi-Fi &#x8BBE;&#x5907;ssid</td>
+</tr>
+<tr>
+<td>BSSID</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>Wi-Fi &#x8BBE;&#x5907;bssid</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>Wi-Fi &#x8BBE;&#x5907;&#x5BC6;&#x7801;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.connectWifi({
+  SSID: <span class="hljs-string">&apos;&apos;</span>,
+  BSSID: <span class="hljs-string">&apos;&apos;</span>,
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.errMsg)
+  }
+})
+</code></pre>
+<h3 id="wxgetwifilistobject">wx.getWifiList(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x8BF7;&#x6C42;&#x83B7;&#x53D6; Wi-Fi &#x5217;&#x8868;&#xFF0C;&#x5728; <code>onGetWifiList</code> &#x6CE8;&#x518C;&#x7684;&#x56DE;&#x8C03;&#x4E2D;&#x8FD4;&#x56DE; wifiList &#x6570;&#x636E;&#x3002;iOS &#x5C06;&#x8DF3;&#x8F6C;&#x5230;&#x7CFB;&#x7EDF;&#x7684; Wi-Fi &#x754C;&#x9762;&#xFF0C;Android &#x4E0D;&#x4F1A;&#x8DF3;&#x8F6C;&#x3002;
+<strong>iOS 11.0 &#x53CA; iOS 11.1 &#x4E24;&#x4E2A;&#x7248;&#x672C;&#x56E0;&#x7CFB;&#x7EDF;&#x95EE;&#x9898;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5931;&#x6548;&#x3002;&#x4F46;&#x5728; iOS 11.2 &#x4E2D;&#x5DF2;&#x4FEE;&#x590D;&#x3002;</strong></p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wxongetwifilistcallback">wx.onGetWifiList(CALLBACK)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x76D1;&#x542C;&#x5728;&#x83B7;&#x53D6;&#x5230; Wi-Fi &#x5217;&#x8868;&#x6570;&#x636E;&#x65F6;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728;&#x56DE;&#x8C03;&#x4E2D;&#x5C06;&#x8FD4;&#x56DE; wifiList&#x3002;</p>
+<p><strong>CALLBACK &#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wifiList</td>
+<td>Array</td>
+<td>Wi-Fi &#x5217;&#x8868;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wi-Fi &#x5217;&#x8868;&#x9879;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td>String</td>
+<td>Wi-Fi &#x7684;SSID</td>
+</tr>
+<tr>
+<td>BSSID</td>
+<td>String</td>
+<td>Wi-Fi &#x7684;BSSID</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>Boolean</td>
+<td>Wi-Fi &#x662F;&#x5426;&#x5B89;&#x5168;</td>
+</tr>
+<tr>
+<td>signalStrength</td>
+<td>Number</td>
+<td>Wi-Fi &#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wxsetwifilistobject">wx.setWifiList(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p><strong>iOS&#x7279;&#x6709;&#x63A5;&#x53E3;</strong>
+&#x5728; <code>onGetWifiList</code> &#x56DE;&#x8C03;&#x540E;&#xFF0C;&#x5229;&#x7528;&#x63A5;&#x53E3;&#x8BBE;&#x7F6E; wifiList &#x4E2D; AP &#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li>&#x8BE5;&#x63A5;&#x53E3;&#x53EA;&#x80FD;&#x5728; <code>onGetWifiList</code> &#x56DE;&#x8C03;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x8C03;&#x7528;&#x3002;</li>
+<li>&#x6B64;&#x65F6;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x6302;&#x8D77;&#xFF0C;&#x7B49;&#x5F85;&#x5C0F;&#x7A0B;&#x5E8F;&#x8BBE;&#x7F6E; Wi-Fi &#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x52A1;&#x5FC5;&#x5C3D;&#x5FEB;&#x8C03;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#xFF0C;&#x82E5;&#x65E0;&#x6570;&#x636E;&#x8BF7;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;&#x3002;</li>
+<li>&#x6709;&#x53EF;&#x80FD;&#x968F;&#x7740;&#x5468;&#x8FB9; Wi-Fi &#x5217;&#x8868;&#x7684;&#x5237;&#x65B0;&#xFF0C;&#x5355;&#x4E2A;&#x6D41;&#x7A0B;&#x5185;&#x6536;&#x5230;&#x591A;&#x6B21;&#x5E26;&#x6709;&#x5B58;&#x5728;&#x91CD;&#x590D;&#x7684; Wi-Fi &#x5217;&#x8868;&#x7684;&#x56DE;&#x8C03;&#x3002;</li>
+</ol>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wifiList</td>
+<td>Array</td>
+<td>&#x662F;</td>
+<td>&#x63D0;&#x4F9B;&#x9884;&#x8BBE;&#x7684; Wi-Fi &#x4FE1;&#x606F;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wi-Fi &#x4FE1;&#x606F;&#x5217;&#x8868;&#x9879;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td>String</td>
+<td>Wi-Fi &#x8BBE;&#x5907;ssid</td>
+</tr>
+<tr>
+<td>BSSID</td>
+<td>String</td>
+<td>Wi-Fi &#x8BBE;&#x5907;bssid</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>Wi-Fi &#x8BBE;&#x5907;&#x5BC6;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.onGetWifiList(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-keyword">if</span> (res.wifiList.length) {
+    wx.setWifiList({
+      wifiList: [{
+        SSID: res.wifiList[<span class="hljs-number">0</span>].SSID,
+        BSSID: res.wifiList[<span class="hljs-number">0</span>].BSSID,
+        password: <span class="hljs-string">&apos;123456&apos;</span>
+      }]
+    })
+  } <span class="hljs-keyword">else</span> {
+    wx.setWifiList({
+      wifiList: []
+    })
+  }
+})
+wx.getWifiList()
+</code></pre>
+<h3 id="wxonwificonnectedcallback">wx.onWifiConnected(CALLBACK)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x76D1;&#x542C;&#x8FDE;&#x63A5;&#x4E0A; Wi-Fi &#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p><strong>CALLBACK &#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wifi</td>
+<td>Object</td>
+<td>Wi-Fi &#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>wifi&#x5BF9;&#x8C61;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td>String</td>
+<td>Wi-Fi &#x7684;SSID</td>
+</tr>
+<tr>
+<td>BSSID</td>
+<td>String</td>
+<td>Wi-Fi &#x7684;BSSID</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>Boolean</td>
+<td>Wi-Fi &#x662F;&#x5426;&#x5B89;&#x5168;</td>
+</tr>
+<tr>
+<td>signalStrength</td>
+<td>Number</td>
+<td>Wi-Fi &#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<!--
+### wx.onEvaluateWifi(CALLBACK)
+> 基础库 1.7.0 开始支持，低版本需做[兼容处理](/framework/compatibility.md)
+
+
+监听需要评估连上的 Wi-Fi 的请求，在回调里必须返回 `confidence` 字段
+
+**CALLBACK 返回参数说明：**
+
+| 参数            | 类型        | 说明                            |
+|-----------------|-------------|---------------------------------|
+| wifi            | Object      | Wi-Fi 信息                       |
+
+**wifi对象说明：**
+
+| 参数            | 类型        | 说明                            |
+|-----------------|-------------|---------------------------------|
+| SSID            | String      | Wi-Fi 的SSID                     |
+| BSSID           | String      | Wi-Fi 的BSSID                    |
+| secure          | Boolean     | Wi-Fi 是否安全                   |
+| signalStrength  | Number      | Wi-Fi 信号强度                   |
+
+**confidence 说明：**
+| 值   | 说明                   |
+| ---- | ---------------------- |
+| none | 无需打开网页登录       |
+| low  | 一次性需要打开网页登录 |
+| high | 每次都需要打开网页登录 |
+-->
+<h3 id="wxgetconnectedwifiobject">wx.getConnectedWifi(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x5DF2;&#x8FDE;&#x63A5;&#x4E2D;&#x7684; Wi-Fi &#x4FE1;&#x606F;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wifi</td>
+<td>Object</td>
+<td>Wi-Fi &#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>wifi&#x5BF9;&#x8C61;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td>String</td>
+<td>Wi-Fi &#x7684;SSID</td>
+</tr>
+<tr>
+<td>BSSID</td>
+<td>String</td>
+<td>Wi-Fi &#x7684;BSSID</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>Boolean</td>
+<td>Wi-Fi &#x662F;&#x5426;&#x5B89;&#x5168;</td>
+</tr>
+<tr>
+<td>signalStrength</td>
+<td>Number</td>
+<td>Wi-Fi &#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="errcode&#x5217;&#x8868;">errCode&#x5217;&#x8868;</h4>
+<p>&#x6BCF;&#x4E2A;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE; <code>errCode</code> &#x5B57;&#x6BB5;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>ok</td>
+<td>&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td>12000</td>
+<td>not init</td>
+<td>&#x672A;&#x5148;&#x8C03;&#x7528;startWifi&#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td>12001</td>
+<td>system not support</td>
+<td>&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E0D;&#x652F;&#x6301;&#x76F8;&#x5173;&#x80FD;&#x529B;</td>
+</tr>
+<tr>
+<td>12002</td>
+<td>password error</td>
+<td>Wi-Fi &#x5BC6;&#x7801;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>12003</td>
+<td>connection timeout</td>
+<td>&#x8FDE;&#x63A5;&#x8D85;&#x65F6;</td>
+</tr>
+<tr>
+<td>12004</td>
+<td>duplicate request</td>
+<td>&#x91CD;&#x590D;&#x8FDE;&#x63A5; Wi-Fi</td>
+</tr>
+<tr>
+<td>12005</td>
+<td>wifi not turned on</td>
+<td>Android&#x7279;&#x6709;&#xFF0C;&#x672A;&#x6253;&#x5F00; Wi-Fi &#x5F00;&#x5173;</td>
+</tr>
+<tr>
+<td>12006</td>
+<td>gps not turned on</td>
+<td>Android&#x7279;&#x6709;&#xFF0C;&#x672A;&#x6253;&#x5F00; GPS &#x5B9A;&#x4F4D;&#x5F00;&#x5173;</td>
+</tr>
+<tr>
+<td>12007</td>
+<td>user denied</td>
+<td>&#x7528;&#x6237;&#x62D2;&#x7EDD;&#x6388;&#x6743;&#x94FE;&#x63A5; Wi-Fi</td>
+</tr>
+<tr>
+<td>12008</td>
+<td>invalid SSID</td>
+<td>&#x65E0;&#x6548;SSID</td>
+</tr>
+<tr>
+<td>12009</td>
+<td>system config err</td>
+<td>&#x7CFB;&#x7EDF;&#x8FD0;&#x8425;&#x5546;&#x914D;&#x7F6E;&#x62D2;&#x7EDD;&#x8FDE;&#x63A5; Wi-Fi</td>
+</tr>
+<tr>
+<td>12010</td>
+<td>system internal error</td>
+<td>&#x7CFB;&#x7EDF;&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#xFF0C;&#x9700;&#x8981;&#x5728;errmsg&#x6253;&#x5370;&#x5177;&#x4F53;&#x7684;&#x9519;&#x8BEF;&#x539F;&#x56E0;</td>
+</tr>
+<tr>
+<td>12011</td>
+<td>weapp in background</td>
+<td>&#x5E94;&#x7528;&#x5728;&#x540E;&#x53F0;&#x65E0;&#x6CD5;&#x914D;&#x7F6E; Wi-Fi</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

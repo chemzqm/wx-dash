@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>createLinearGradient</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="canvascontextcreatelineargradient">canvasContext.createLinearGradient</h1>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x7684;&#x6E10;&#x53D8;&#x989C;&#x8272;&#x3002;</p>
+<p><strong>Tip</strong>: &#x9700;&#x8981;&#x4F7F;&#x7528; <code>addColorStop()</code> &#x6765;&#x6307;&#x5B9A;&#x6E10;&#x53D8;&#x70B9;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x4E24;&#x4E2A;&#x3002;</p>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5B9A;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x0</td>
+<td>Number</td>
+<td>&#x8D77;&#x70B9;&#x7684;x&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td>y0</td>
+<td>Number</td>
+<td>&#x8D77;&#x70B9;&#x7684;y&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td>x1</td>
+<td>Number</td>
+<td>&#x7EC8;&#x70B9;&#x7684;x&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td>y1</td>
+<td>Number</td>
+<td>&#x7EC8;&#x70B9;&#x7684;y&#x5750;&#x6807;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+<span class="hljs-comment">// Create linear gradient</span>
+<span class="hljs-keyword">const</span> grd = ctx.createLinearGradient(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">0</span>)
+grd.addColorStop(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;red&apos;</span>)
+grd.addColorStop(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;white&apos;</span>)
+
+<span class="hljs-comment">// Fill with gradient</span>
+ctx.setFillStyle(grd)
+ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">80</span>)
+ctx.draw()
+</code></pre>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/linear-gradient.png?t=2018412" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

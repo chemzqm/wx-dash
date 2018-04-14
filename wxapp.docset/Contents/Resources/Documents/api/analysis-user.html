@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>用户画像</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x7528;&#x6237;&#x753B;&#x50CF;">&#x7528;&#x6237;&#x753B;&#x50CF;</h3>
+<p>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x65B0;&#x589E;&#x6216;&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x7684;&#x753B;&#x50CF;&#x5206;&#x5E03;&#x6570;&#x636E;&#x3002;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x652F;&#x6301;&#x6628;&#x5929;&#x3001;&#x6700;&#x8FD1;7&#x5929;&#x3001;&#x6700;&#x8FD1;30&#x5929;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x65B0;&#x589E;&#x7528;&#x6237;&#x6570;&#x4E3A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x9996;&#x6B21;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x53BB;&#x91CD;&#x7528;&#x6237;&#x6570;&#xFF0C;&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6570;&#x4E3A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x8BBF;&#x95EE;&#x8FC7;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x53BB;&#x91CD;&#x7528;&#x6237;&#x6570;&#x3002;&#x753B;&#x50CF;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#x7528;&#x6237;&#x5E74;&#x9F84;&#x3001;&#x6027;&#x522B;&#x3001;&#x7701;&#x4EFD;&#x3001;&#x57CE;&#x5E02;&#x3001;&#x7EC8;&#x7AEF;&#x7C7B;&#x578B;&#x3001;&#x673A;&#x578B;&#x3002;</p>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;
+<a href="https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access_token=ACCESS_TOKEN" target="_blank">https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait?access_token=ACCESS_TOKEN</a></p>
+<p><strong> POST &#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x5F00;&#x59CB;&#x65E5;&#x671F;&#x4E0E;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#x76F8;&#x5DEE;&#x7684;&#x5929;&#x6570;&#x9650;&#x5B9A;&#x4E3A;0/6/29&#xFF0C;&#x5206;&#x522B;&#x8868;&#x793A;&#x67E5;&#x8BE2;&#x6700;&#x8FD1;1/7/30&#x5929;&#x6570;&#x636E;&#xFF0C;end_date&#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x503C;&#x4E3A;&#x6628;&#x65E5;</td>
+</tr>
+</tbody>
+</table>
+<p><strong> POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;begin_date&quot;</span> : <span class="hljs-string">&quot;2017-06-11&quot;</span>,
+    <span class="hljs-string">&quot;end_date&quot;</span> : <span class="hljs-string">&quot;2017-06-17&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x9009;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x53CA;&#x4EE5;&#x4E0B;&#x6307;&#x6807;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref_date</td>
+<td>&#x65F6;&#x95F4;&#x8303;&#x56F4;,&#x5982;&#xFF1A; &quot;20170611-20170617&quot;</td>
+</tr>
+<tr>
+<td>visit_uv_new</td>
+<td>&#x65B0;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>visit_uv</td>
+<td>&#x6D3B;&#x8DC3;&#x7528;&#x6237;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6BCF;&#x4E2A;&#x6307;&#x6807;&#x9879;&#x4E0B;&#x5305;&#x62EC;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>province</td>
+<td>&#x7701;&#x4EFD;&#xFF0C;&#x5982;&#x5317;&#x4EAC;&#x3001;&#x5E7F;&#x4E1C;&#x7B49;</td>
+</tr>
+<tr>
+<td>city</td>
+<td>&#x57CE;&#x5E02;&#xFF0C;&#x5982;&#x5317;&#x4EAC;&#x3001;&#x5E7F;&#x5DDE;&#x7B49;</td>
+</tr>
+<tr>
+<td>genders</td>
+<td>&#x6027;&#x522B;&#xFF0C;&#x5305;&#x62EC;&#x7537;&#x3001;&#x5973;&#x3001;&#x672A;&#x77E5;</td>
+</tr>
+<tr>
+<td>platforms</td>
+<td>&#x7EC8;&#x7AEF;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC;iPhone, android,&#x5176;&#x4ED6;</td>
+</tr>
+<tr>
+<td>devices</td>
+<td>&#x673A;&#x578B;&#xFF0C;&#x5982;&#x82F9;&#x679C;iPhone6, OPPO R9&#x7B49;</td>
+</tr>
+<tr>
+<td>ages</td>
+<td>&#x5E74;&#x9F84;&#xFF0C;&#x5305;&#x62EC;17&#x5C81;&#x4EE5;&#x4E0B;&#x3001;18-24&#x5C81;&#x7B49;&#x533A;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x4E0B;&#x5305;&#x62EC;&#x7684;&#x6570;&#x636E;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>&#x5C5E;&#x6027;&#x503C;id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>&#x5C5E;&#x6027;&#x503C;&#x540D;&#x79F0;&#xFF0C;&#x4E0E;id&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;&#x5982;&#x5C5E;&#x6027;&#x4E3A;province&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x540D;&#x79F0;&#x5305;&#x62EC;&#x201C;&#x5E7F;&#x4E1C;&#x201D;&#x7B49;</td>
+</tr>
+<tr>
+<td>value</td>
+<td>&#x5C5E;&#x6027;&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x6307;&#x6807;&#x503C;&#xFF0C;&#x5982;&#x6307;&#x6807;&#x4E3A;visit_uv,&#x5C5E;&#x6027;&#x4E3A;province,&#x5C5E;&#x6027;&#x503C;&#x4E3A;&quot;&#x5E7F;&#x4E1C;&#x7701;&#x201D;&#xFF0C;value&#x5BF9;&#x5E94;&#x5E7F;&#x4E1C;&#x5730;&#x533A;&#x7684;&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;20170611&quot;</span>,
+  <span class="hljs-string">&quot;visit_uv_new&quot;</span>: {
+    <span class="hljs-string">&quot;province&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">31</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x4E1C;&#x7701;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">215</span>
+      }
+    ],
+    <span class="hljs-string">&quot;city&quot;</span>: [
+     {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">3102</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x5DDE;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">78</span>
+      }
+    ],
+    <span class="hljs-string">&quot;genders&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7537;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">2146</span>
+      }
+    ],
+    <span class="hljs-string">&quot;platforms&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;iPhone&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">27642</span>
+      }
+    ],
+    <span class="hljs-string">&quot;devices&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;OPPO R9&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">61</span>
+      }
+    ],
+    <span class="hljs-string">&quot;ages&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;17&#x5C81;&#x4EE5;&#x4E0B;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">151</span>
+      }
+    ]
+  },
+  <span class="hljs-string">&quot;visit_uv&quot;</span>: {
+    <span class="hljs-string">&quot;province&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">31</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x4E1C;&#x7701;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">1341</span>
+      }
+    ],
+    <span class="hljs-string">&quot;city&quot;</span>: [
+     {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">3102</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x5DDE;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">234</span>
+      }
+    ],
+    <span class="hljs-string">&quot;genders&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7537;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">14534</span>
+      }
+    ],
+    <span class="hljs-string">&quot;platforms&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;iPhone&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">21750</span>
+      }
+    ],
+    <span class="hljs-string">&quot;devices&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;OPPO R9&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">617</span>
+      }
+    ],
+    <span class="hljs-string">&quot;ages&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;17&#x5C81;&#x4EE5;&#x4E0B;&quot;</span>,
+        <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">3156</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<p>&#x6CE8;&#xFF1A;</p>
+<ol>
+<li>&#x7531;&#x4E8E;&#x90E8;&#x5206;&#x7528;&#x6237;&#x5C5E;&#x6027;&#x6570;&#x636E;&#x7F3A;&#x5931;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x53EF;&#x80FD;&#x51FA;&#x73B0; &#x201C;&#x672A;&#x77E5;&#x201D;&#x3002;</li>
+<li>&#x673A;&#x578B;&#x6570;&#x636E;&#x65E0; id &#x5B57;&#x6BB5;&#xFF0C;&#x6682;&#x53EA;&#x63D0;&#x4F9B;&#x7528;&#x6237;&#x6570;&#x6700;&#x591A;&#x7684; top20&#x3002;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

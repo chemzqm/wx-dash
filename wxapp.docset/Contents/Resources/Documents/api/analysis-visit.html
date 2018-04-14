@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>访问分析</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x8BBF;&#x95EE;&#x5206;&#x6790;">&#x8BBF;&#x95EE;&#x5206;&#x6790;</h3>
+<p>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x8BBF;&#x95EE;&#x5206;&#x6790;&#x6570;&#x636E;&#xFF0C;&#x6570;&#x636E;&#x8BF4;&#x660E;&#x53C2;&#x89C1;<a href="https://mp.weixin.qq.com/debug/wxadoc/analysis/regular/?t=2018412#%E8%AE%BF%E9%97%AE%E5%88%86%E6%9E%90" target="_blank">&#x8BBF;&#x95EE;&#x5206;&#x6790;</a></p>
+<h4 id="&#x8BBF;&#x95EE;&#x8D8B;&#x52BF;">&#x8BBF;&#x95EE;&#x8D8B;&#x52BF;</h4>
+<h5 id="&#x65E5;&#x8D8B;&#x52BF;">&#x65E5;&#x8D8B;&#x52BF;</h5>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappiddailyvisittrend?access_token=ACCESS_TOKEN
+</code></pre><p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;1&#x5929;&#x6570;&#x636E;&#xFF0C;end_date&#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x503C;&#x4E3A;&#x6628;&#x65E5;</td>
+</tr>
+</tbody>
+</table>
+<p><strong> POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;begin_date&quot;</span> : <span class="hljs-string">&quot;20170313&quot;</span>,
+  <span class="hljs-string">&quot;end_date&quot;</span> : <span class="hljs-string">&quot;20170313&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref_date</td>
+<td>&#x65F6;&#x95F4;&#xFF1A; &#x5982;&#xFF1A; &quot;20170313&quot;</td>
+</tr>
+<tr>
+<td>session_cnt</td>
+<td>&#x6253;&#x5F00;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>visit_pv</td>
+<td>&#x8BBF;&#x95EE;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>visit_uv</td>
+<td>&#x8BBF;&#x95EE;&#x4EBA;&#x6570;</td>
+</tr>
+<tr>
+<td>visit_uv_new</td>
+<td>&#x65B0;&#x7528;&#x6237;&#x6570;</td>
+</tr>
+<tr>
+<td>stay_time_uv</td>
+<td>&#x4EBA;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F; (&#x6D6E;&#x70B9;&#x578B;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;)</td>
+</tr>
+<tr>
+<td>stay_time_session</td>
+<td>&#x6B21;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F; (&#x6D6E;&#x70B9;&#x578B;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;)</td>
+</tr>
+<tr>
+<td>visit_depth</td>
+<td>&#x5E73;&#x5747;&#x8BBF;&#x95EE;&#x6DF1;&#x5EA6; (&#x6D6E;&#x70B9;&#x578B;)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;list&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;20170313&quot;</span>,
+      <span class="hljs-string">&quot;session_cnt&quot;</span>: <span class="hljs-number">142549</span>,
+      <span class="hljs-string">&quot;visit_pv&quot;</span>: <span class="hljs-number">472351</span>,
+      <span class="hljs-string">&quot;visit_uv&quot;</span>: <span class="hljs-number">55500</span>,
+      <span class="hljs-string">&quot;visit_uv_new&quot;</span>: <span class="hljs-number">5464</span>,
+      <span class="hljs-string">&quot;stay_time_session&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;visit_depth&quot;</span>: <span class="hljs-number">1.9838</span>
+    }
+  ]
+}
+</code></pre>
+<h5 id="&#x5468;&#x8D8B;&#x52BF;">&#x5468;&#x8D8B;&#x52BF;</h5>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappidweeklyvisittrend?access_token=ACCESS_TOKEN
+</code></pre><p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x5468;&#x4E00;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x5468;&#x65E5;&#x65E5;&#x671F;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x5468;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8BF7;&#x6C42;json&#x548C;&#x8FD4;&#x56DE;json&#x4E0E;&#x5929;&#x7684;&#x4E00;&#x81F4;&#xFF0C;&#x8FD9;&#x91CC;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x81EA;&#x7136;&#x5468;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65F6;&#x95F4;&#x5FC5;&#x987B;&#x6309;&#x7167;&#x81EA;&#x7136;&#x5468;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x5165;&#xFF1A;
+&#x5982;&#xFF1A;20170306(&#x5468;&#x4E00;), 20170312(&#x5468;&#x65E5;)</strong></p>
+<p><strong> POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+<span class="hljs-string">&quot;begin_date&quot;</span>:<span class="hljs-string">&quot;20170306&quot;</span>,
+<span class="hljs-string">&quot;end_date&quot;</span>:<span class="hljs-string">&quot;20170312&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref_date</td>
+<td>&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#xFF1A;&quot;20170306-20170312&quot;</td>
+</tr>
+<tr>
+<td>session_cnt</td>
+<td>&#x6253;&#x5F00;&#x6B21;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x5468;&#x5185;&#x6C47;&#x603B;&#xFF09;</td>
+</tr>
+<tr>
+<td>visit_pv</td>
+<td>&#x8BBF;&#x95EE;&#x6B21;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x5468;&#x5185;&#x6C47;&#x603B;&#xFF09;</td>
+</tr>
+<tr>
+<td>visit_uv</td>
+<td>&#x8BBF;&#x95EE;&#x4EBA;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x5468;&#x5185;&#x53BB;&#x91CD;&#xFF09;</td>
+</tr>
+<tr>
+<td>visit_uv_new</td>
+<td>&#x65B0;&#x7528;&#x6237;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x5468;&#x5185;&#x53BB;&#x91CD;&#xFF09;</td>
+</tr>
+<tr>
+<td>stay_time_uv</td>
+<td>&#x4EBA;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F; (&#x6D6E;&#x70B9;&#x578B;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;)</td>
+</tr>
+<tr>
+<td>stay_time_session</td>
+<td>&#x6B21;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F; (&#x6D6E;&#x70B9;&#x578B;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;)</td>
+</tr>
+<tr>
+<td>visit_depth</td>
+<td>&#x5E73;&#x5747;&#x8BBF;&#x95EE;&#x6DF1;&#x5EA6; (&#x6D6E;&#x70B9;&#x578B;)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;list&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;20170306-20170312&quot;</span>,
+      <span class="hljs-string">&quot;session_cnt&quot;</span>: <span class="hljs-number">986780</span>,
+      <span class="hljs-string">&quot;visit_pv&quot;</span>: <span class="hljs-number">3251840</span>,
+      <span class="hljs-string">&quot;visit_uv&quot;</span>: <span class="hljs-number">189405</span>,
+      <span class="hljs-string">&quot;visit_uv_new&quot;</span>: <span class="hljs-number">45592</span>,
+      <span class="hljs-string">&quot;stay_time_session&quot;</span>: <span class="hljs-number">54.5346</span>,
+      <span class="hljs-string">&quot;visit_depth&quot;</span>: <span class="hljs-number">1.9735</span>
+    }
+  ]
+}
+</code></pre>
+<h5 id="&#x6708;&#x8D8B;&#x52BF;">&#x6708;&#x8D8B;&#x52BF;</h5>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappidmonthlyvisittrend?access_token=ACCESS_TOKEN
+</code></pre><p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x81EA;&#x7136;&#x6708;&#x7B2C;&#x4E00;&#x5929;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x81EA;&#x7136;&#x6708;&#x6700;&#x540E;&#x4E00;&#x5929;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x6708;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8BF7;&#x6C42;json&#x548C;&#x8FD4;&#x56DE;json&#x4E0E;&#x5929;&#x7684;&#x4E00;&#x81F4;&#xFF0C;&#x8FD9;&#x91CC;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x81EA;&#x7136;&#x6708;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65F6;&#x95F4;&#x5FC5;&#x987B;&#x6309;&#x7167;&#x81EA;&#x7136;&#x6708;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x5165;&#xFF1A;
+&#x5982;&#xFF1A;20170201(&#x6708;&#x521D;), 20170228(&#x6708;&#x672B;)</strong></p>
+<p><strong> POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+<span class="hljs-string">&quot;begin_date&quot;</span>:<span class="hljs-string">&quot;20170201&quot;</span>,
+<span class="hljs-string">&quot;end_date&quot;</span>:<span class="hljs-string">&quot;20170228&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref_date</td>
+<td>&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#xFF1A;&quot;201702&quot;</td>
+</tr>
+<tr>
+<td>session_cnt</td>
+<td>&#x6253;&#x5F00;&#x6B21;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x6708;&#x5185;&#x6C47;&#x603B;&#xFF09;</td>
+</tr>
+<tr>
+<td>visit_pv</td>
+<td>&#x8BBF;&#x95EE;&#x6B21;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x6708;&#x5185;&#x6C47;&#x603B;&#xFF09;</td>
+</tr>
+<tr>
+<td>visit_uv</td>
+<td>&#x8BBF;&#x95EE;&#x4EBA;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x6708;&#x5185;&#x53BB;&#x91CD;&#xFF09;</td>
+</tr>
+<tr>
+<td>visit_uv_new</td>
+<td>&#x65B0;&#x7528;&#x6237;&#x6570;&#xFF08;&#x81EA;&#x7136;&#x6708;&#x5185;&#x53BB;&#x91CD;&#xFF09;</td>
+</tr>
+<tr>
+<td>stay_time_uv</td>
+<td>&#x4EBA;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F; (&#x6D6E;&#x70B9;&#x578B;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;)</td>
+</tr>
+<tr>
+<td>stay_time_session</td>
+<td>&#x6B21;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F; (&#x6D6E;&#x70B9;&#x578B;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;)</td>
+</tr>
+<tr>
+<td>visit_depth</td>
+<td>&#x5E73;&#x5747;&#x8BBF;&#x95EE;&#x6DF1;&#x5EA6; (&#x6D6E;&#x70B9;&#x578B;)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;list&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;201702&quot;</span>,
+      <span class="hljs-string">&quot;session_cnt&quot;</span>: <span class="hljs-number">126513</span>,
+      <span class="hljs-string">&quot;visit_pv&quot;</span>: <span class="hljs-number">426113</span>,
+      <span class="hljs-string">&quot;visit_uv&quot;</span>: <span class="hljs-number">48659</span>,
+      <span class="hljs-string">&quot;visit_uv_new&quot;</span>: <span class="hljs-number">6726</span>,
+      <span class="hljs-string">&quot;stay_time_session&quot;</span>: <span class="hljs-number">56.4112</span>,
+      <span class="hljs-string">&quot;visit_depth&quot;</span>: <span class="hljs-number">2.0189</span>
+    }
+  ]
+}
+</code></pre>
+<h4 id="&#x8BBF;&#x95EE;&#x5206;&#x5E03;">&#x8BBF;&#x95EE;&#x5206;&#x5E03;</h4>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappidvisitdistribution?access_token=ACCESS_TOKEN
+</code></pre><p><strong>POST &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;1&#x5929;&#x6570;&#x636E;&#xFF0C;end_date&#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x503C;&#x4E3A;&#x6628;&#x65E5;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+<span class="hljs-string">&quot;begin_date&quot;</span>:<span class="hljs-string">&quot;20170313&quot;</span>,
+<span class="hljs-string">&quot;end_date&quot;</span>:<span class="hljs-string">&quot;20170313&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref_date</td>
+<td>&#x65F6;&#x95F4;&#xFF1A; &#x5982;&#xFF1A; &quot;20170313&quot;</td>
+</tr>
+<tr>
+<td>list</td>
+<td>&#x5B58;&#x5165;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x6307;&#x6807;&#x60C5;&#x51B5;</td>
+</tr>
+</tbody>
+</table>
+<p><strong> list &#x7684;&#x6BCF;&#x4E00;&#x9879;&#x5305;&#x62EC;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>&#x5206;&#x5E03;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td>item_list</td>
+<td>&#x5206;&#x5E03;&#x6570;&#x636E;&#x5217;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x5206;&#x5E03;&#x7C7B;&#x578B;&#xFF08;index&#xFF09;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_source_session_cnt</td>
+<td>&#x8BBF;&#x95EE;&#x6765;&#x6E90;&#x5206;&#x5E03;</td>
+</tr>
+<tr>
+<td>access_staytime_info</td>
+<td>&#x8BBF;&#x95EE;&#x65F6;&#x957F;&#x5206;&#x5E03;</td>
+</tr>
+<tr>
+<td>access_depth_info</td>
+<td>&#x8BBF;&#x95EE;&#x6DF1;&#x5EA6;&#x7684;&#x5206;&#x5E03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x9879;&#x5305;&#x62EC;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>&#x573A;&#x666F; id</td>
+</tr>
+<tr>
+<td>value   &#x573A;&#x666F;&#x4E0B;&#x7684;&#x503C;&#xFF08;&#x5747;&#x4E3A;&#x6574;&#x6570;&#x578B;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong> key&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<p>&#x8BBF;&#x95EE;&#x6765;&#x6E90;&#xFF1A;(index=&quot;access_source_session_cnt&quot;)</p>
+<blockquote>
+<p>1&#xFF1A;&#x5C0F;&#x7A0B;&#x5E8F;&#x5386;&#x53F2;&#x5217;&#x8868;</p>
+<p>2&#xFF1A;&#x641C;&#x7D22;</p>
+<p>3&#xFF1A;&#x4F1A;&#x8BDD;</p>
+<p>4&#xFF1A;&#x4E8C;&#x7EF4;&#x7801;</p>
+<p>5&#xFF1A;&#x516C;&#x4F17;&#x53F7;&#x4E3B;&#x9875;</p>
+<p>6&#xFF1A;&#x804A;&#x5929;&#x9876;&#x90E8;</p>
+<p>7&#xFF1A;&#x7CFB;&#x7EDF;&#x684C;&#x9762;</p>
+<p>8&#xFF1A;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E3B;&#x9875;</p>
+<p>9&#xFF1A;&#x9644;&#x8FD1;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;</p>
+<p>10&#xFF1A;&#x5176;&#x4ED6;</p>
+<p>11&#xFF1A;&#x6A21;&#x677F;&#x6D88;&#x606F;</p>
+<p>12&#xFF1A;&#x5BA2;&#x670D;&#x6D88;&#x606F;</p>
+<p>13: &#x516C;&#x4F17;&#x53F7;&#x83DC;&#x5355;</p>
+<p>14: APP&#x5206;&#x4EAB;</p>
+<p>15: &#x652F;&#x4ED8;&#x5B8C;&#x6210;&#x9875;</p>
+<p>16: &#x957F;&#x6309;&#x8BC6;&#x522B;&#x4E8C;&#x7EF4;&#x7801;</p>
+<p>17: &#x76F8;&#x518C;&#x9009;&#x53D6;&#x4E8C;&#x7EF4;&#x7801;</p>
+<p>18: &#x516C;&#x4F17;&#x53F7;&#x6587;&#x7AE0;</p>
+<p>19&#xFF1A;&#x94B1;&#x5305;</p>
+<p>20&#xFF1A;&#x5361;&#x5305;</p>
+<p>21&#xFF1A;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x5361;&#x5238;</p>
+<p>22&#xFF1A;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;</p>
+<p>23&#xFF1A;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE;</p>
+<p>24&#xFF1A;&#x5361;&#x5238;&#x9002;&#x7528;&#x95E8;&#x5E97;&#x5217;&#x8868;</p>
+<p>25&#xFF1A;&#x641C;&#x7D22;&#x6846;&#x5FEB;&#x6377;&#x5165;&#x53E3;</p>
+<p>26&#xFF1A;&#x5C0F;&#x7A0B;&#x5E8F;&#x5BA2;&#x670D;&#x6D88;&#x606F;</p>
+<p>27&#xFF1A;&#x516C;&#x4F17;&#x53F7;&#x4E0B;&#x53D1;</p>
+<p>28: &#x4F1A;&#x8BDD;&#x5DE6;&#x4E0B;&#x89D2;&#x83DC;&#x5355;</p>
+<p>29: &#x5C0F;&#x7A0B;&#x5E8F;&#x4EFB;&#x52A1;&#x680F;</p>
+<p>30: &#x957F;&#x6309;&#x5C0F;&#x7A0B;&#x5E8F;&#x83DC;&#x5355;&#x5706;&#x70B9;</p>
+<p>31: &#x8FDE;wifi&#x6210;&#x529F;&#x9875;</p>
+<p>32: &#x57CE;&#x5E02;&#x670D;&#x52A1;</p>
+</blockquote>
+<p>&#x8BBF;&#x95EE;&#x65F6;&#x957F;&#xFF1A;(index=&quot;access_staytime_info&quot;)</p>
+<blockquote>
+<p>1: 0-2s</p>
+<p>2: 3-5s</p>
+<p>3: 6-10s</p>
+<p>4: 11-20s</p>
+<p>5: 20-30s</p>
+<p>6: 30-50s</p>
+<p>7: 50-100s</p>
+<p>8: &gt; 100s</p>
+</blockquote>
+<p>&#x5E73;&#x5747;&#x8BBF;&#x95EE;&#x6DF1;&#x5EA6;&#xFF1A;(index=&quot;access_depth_info&quot;)</p>
+<blockquote>
+<p>1: 1&#x9875;</p>
+<p>2: 2&#x9875;</p>
+<p>3: 3&#x9875;</p>
+<p>4: 4&#x9875;</p>
+<p>5: 5&#x9875;</p>
+<p>6: 6-10&#x9875;</p>
+<p>7: &gt;10&#x9875;</p>
+</blockquote>
+<p><strong>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;20170313&quot;</span>,
+  <span class="hljs-string">&quot;list&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;access_source_session_cnt&quot;</span>,
+      <span class="hljs-string">&quot;item_list&quot;</span>: [
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">10</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">5</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">8</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">687</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">7</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">10740</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">6</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">1961</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">5</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">677</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">4</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">653</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">3</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">1120</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">10243</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">116578</span>
+        }
+      ]
+    },
+    {
+      <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;access_staytime_info&quot;</span>,
+      <span class="hljs-string">&quot;item_list&quot;</span>: [
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">8</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">16329</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">7</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">19322</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">6</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">21832</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">5</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">19539</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">4</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">29670</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">3</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">19667</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">11794</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">4511</span>
+        }
+      ]
+    },
+    {
+      <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;access_depth_info&quot;</span>,
+      <span class="hljs-string">&quot;item_list&quot;</span>: [
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">5</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">217</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">4</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">3259</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">3</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">32445</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">63542</span>
+        },
+        {
+          <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">43201</span>
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<h4 id="&#x8BBF;&#x95EE;&#x7559;&#x5B58;">&#x8BBF;&#x95EE;&#x7559;&#x5B58;</h4>
+<h5 id="&#x65E5;&#x7559;&#x5B58;">&#x65E5;&#x7559;&#x5B58;</h5>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappiddailyretaininfo?access_token=ACCESS_TOKEN
+</code></pre><p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;1&#x5929;&#x6570;&#x636E;&#xFF0C;end_date&#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x503C;&#x4E3A;&#x6628;&#x65E5;</td>
+</tr>
+</tbody>
+</table>
+<p><strong> POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;begin_date&quot;</span> : <span class="hljs-string">&quot;20170313&quot;</span>,
+  <span class="hljs-string">&quot;end_date&quot;</span> : <span class="hljs-string">&quot;20170313&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>visit_uv_new</td>
+<td>&#x65B0;&#x589E;&#x7528;&#x6237;&#x7559;&#x5B58;</td>
+</tr>
+<tr>
+<td>visit_uv</td>
+<td>&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x7559;&#x5B58;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>visit_uv&#x3001;visit_uv_new &#x7684;&#x6BCF;&#x4E00;&#x9879;&#x5305;&#x62EC;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>&#x6807;&#x8BC6;&#xFF0C;0&#x5F00;&#x59CB;&#xFF0C;0&#x8868;&#x793A;&#x5F53;&#x5929;&#xFF0C;1&#x8868;&#x793A;1&#x5929;&#x540E;&#xFF0C;&#x4F9D;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;key&#x53D6;&#x503C;&#x5206;&#x522B;&#x662F;&#xFF1A;0,1,2,3,4,5,6,7,14,30</td>
+</tr>
+<tr>
+<td>value</td>
+<td>key&#x5BF9;&#x5E94;&#x65E5;&#x671F;&#x7684;&#x65B0;&#x589E;&#x7528;&#x6237;&#x6570;/&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6570;&#xFF08;key=0&#x65F6;&#xFF09;&#x6216;&#x7559;&#x5B58;&#x7528;&#x6237;&#x6570;&#xFF08;k&gt;0&#x65F6;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;20170313&quot;</span>,
+  <span class="hljs-string">&quot;visit_uv_new&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">5464</span>
+    }
+  ],
+  <span class="hljs-string">&quot;visit_uv&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">55500</span>
+    }
+  ]
+}
+</code></pre>
+<h5 id="&#x5468;&#x7559;&#x5B58;">&#x5468;&#x7559;&#x5B58;</h5>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappidweeklyretaininfo?access_token=ACCESS_TOKEN
+</code></pre><p><strong>POST &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x5468;&#x4E00;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x5468;&#x65E5;&#x65E5;&#x671F;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x5468;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8BF7;&#x6C42;json&#x548C;&#x8FD4;&#x56DE;json&#x4E0E;&#x5929;&#x7684;&#x4E00;&#x81F4;&#xFF0C;&#x8FD9;&#x91CC;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x81EA;&#x7136;&#x5468;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65F6;&#x95F4;&#x5FC5;&#x987B;&#x6309;&#x7167;&#x81EA;&#x7136;&#x5468;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x5165;&#xFF1A;
+&#x5982;&#xFF1A;20170306(&#x5468;&#x4E00;), 20170312(&#x5468;&#x65E5;)</strong></p>
+<p><strong> POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;begin_date&quot;</span> : <span class="hljs-string">&quot;20170306&quot;</span>,
+  <span class="hljs-string">&quot;end_date&quot;</span> : <span class="hljs-string">&quot;20170312&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref_date</td>
+<td>&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#xFF1A;&quot;20170306-20170312&quot;</td>
+</tr>
+<tr>
+<td>visit_uv_new</td>
+<td>&#x65B0;&#x589E;&#x7528;&#x6237;&#x7559;&#x5B58;</td>
+</tr>
+<tr>
+<td>visit_uv</td>
+<td>&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x7559;&#x5B58;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>visit_uv&#x3001;visit_uv_new &#x7684;&#x6BCF;&#x4E00;&#x9879;&#x5305;&#x62EC;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>&#x6807;&#x8BC6;&#xFF0C;0&#x5F00;&#x59CB;&#xFF0C;0&#x8868;&#x793A;&#x5F53;&#x5468;&#xFF0C;1&#x8868;&#x793A;1&#x5468;&#x540E;&#xFF0C;&#x4F9D;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;key&#x53D6;&#x503C;&#x5206;&#x522B;&#x662F;&#xFF1A;0,1,2,3,4</td>
+</tr>
+<tr>
+<td>value</td>
+<td>key&#x5BF9;&#x5E94;&#x65E5;&#x671F;&#x7684;&#x65B0;&#x589E;&#x7528;&#x6237;&#x6570;/&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6570;&#xFF08;key=0&#x65F6;&#xFF09;&#x6216;&#x7559;&#x5B58;&#x7528;&#x6237;&#x6570;&#xFF08;k&gt;0&#x65F6;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong> &#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;20170306-20170312&quot;</span>,
+  <span class="hljs-string">&quot;visit_uv_new&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">0</span>
+    },
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">16853</span>
+    }
+  ],
+  <span class="hljs-string">&quot;visit_uv&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">0</span>
+    },
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">99310</span>
+    }
+  ]
+}
+</code></pre>
+<h5 id="&#x6708;&#x7559;&#x5B58;">&#x6708;&#x7559;&#x5B58;</h5>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappidmonthlyretaininfo?access_token=ACCESS_TOKEN
+</code></pre><p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x81EA;&#x7136;&#x6708;&#x7B2C;&#x4E00;&#x5929;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x4E3A;&#x81EA;&#x7136;&#x6708;&#x6700;&#x540E;&#x4E00;&#x5929;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x6708;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x8BF7;&#x6C42;json&#x548C;&#x8FD4;&#x56DE;json&#x4E0E;&#x5929;&#x7684;&#x4E00;&#x81F4;&#xFF0C;&#x8FD9;&#x91CC;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x81EA;&#x7136;&#x6708;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65F6;&#x95F4;&#x5FC5;&#x987B;&#x6309;&#x7167;&#x81EA;&#x7136;&#x6708;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x5165;&#xFF1A;
+&#x5982;&#xFF1A;20170201(&#x6708;&#x521D;), 20170228(&#x6708;&#x672B;)</strong></p>
+<p><strong>POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;begin_date&quot;</span>:<span class="hljs-string">&quot;20170201&quot;</span>,
+  <span class="hljs-string">&quot;end_date&quot;</span>:<span class="hljs-string">&quot;20170228&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref_date</td>
+<td>&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#xFF1A;&quot;201702&quot;</td>
+</tr>
+<tr>
+<td>visit_uv_new</td>
+<td>&#x65B0;&#x589E;&#x7528;&#x6237;&#x7559;&#x5B58;</td>
+</tr>
+<tr>
+<td>visit_uv</td>
+<td>&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x7559;&#x5B58;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>visit_uv&#x3001;visit_uv_new &#x7684;&#x6BCF;&#x4E00;&#x9879;&#x5305;&#x62EC;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>&#x6807;&#x8BC6;&#xFF0C;0&#x5F00;&#x59CB;&#xFF0C;0&#x8868;&#x793A;&#x5F53;&#x6708;&#xFF0C;1&#x8868;&#x793A;1&#x6708;&#x540E;&#xFF0C;key&#x53D6;&#x503C;&#x5206;&#x522B;&#x662F;&#xFF1A;0,1</td>
+</tr>
+<tr>
+<td>value</td>
+<td>key&#x5BF9;&#x5E94;&#x65E5;&#x671F;&#x7684;&#x65B0;&#x589E;&#x7528;&#x6237;&#x6570;/&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6570;&#xFF08;key=0&#x65F6;&#xFF09;&#x6216;&#x7559;&#x5B58;&#x7528;&#x6237;&#x6570;&#xFF08;k&gt;0&#x65F6;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;201702&quot;</span>,
+  <span class="hljs-string">&quot;visit_uv_new&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">346249</span>
+    }
+  ],
+  <span class="hljs-string">&quot;visit_uv&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-number">346249</span>
+    }
+  ]
+}
+</code></pre>
+<h4 id="&#x8BBF;&#x95EE;&#x9875;&#x9762;">&#x8BBF;&#x95EE;&#x9875;&#x9762;</h4>
+<h5 id="&#x8BBF;&#x95EE;&#x9875;&#x9762;">&#x8BBF;&#x95EE;&#x9875;&#x9762;</h5>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;</p>
+<pre><code>https://api.weixin.qq.com/datacube/getweanalysisappidvisitpage?access_token=ACCESS_TOKEN
+</code></pre><p><strong>POST &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin_date</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x59CB;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>&#x662F;</td>
+<td>&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x9650;&#x5B9A;&#x67E5;&#x8BE2;1&#x5929;&#x6570;&#x636E;&#xFF0C;end_date&#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x503C;&#x4E3A;&#x6628;&#x65E5;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>POST &#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;begin_date&quot;</span>:<span class="hljs-string">&quot;20170313&quot;</span>,
+  <span class="hljs-string">&quot;end_date&quot;</span>:<span class="hljs-string">&quot;20170313&quot;</span>
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page_path</td>
+<td>&#x9875;&#x9762;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>page_visit_pv</td>
+<td>&#x8BBF;&#x95EE;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>page_visit_uv</td>
+<td>&#x8BBF;&#x95EE;&#x4EBA;&#x6570;</td>
+</tr>
+<tr>
+<td>page_staytime_pv</td>
+<td>&#x6B21;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F;</td>
+</tr>
+<tr>
+<td>entrypage_pv</td>
+<td>&#x8FDB;&#x5165;&#x9875;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>exitpage_pv</td>
+<td>&#x9000;&#x51FA;&#x9875;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>page_share_pv</td>
+<td>&#x8F6C;&#x53D1;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>page_share_uv</td>
+<td>&#x8F6C;&#x53D1;&#x4EBA;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;ref_date&quot;</span>: <span class="hljs-string">&quot;20170313&quot;</span>,
+  <span class="hljs-string">&quot;list&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;page_path&quot;</span>: <span class="hljs-string">&quot;pages/main/main.html&quot;</span>,
+      <span class="hljs-string">&quot;page_visit_pv&quot;</span>: <span class="hljs-number">213429</span>,
+      <span class="hljs-string">&quot;page_visit_uv&quot;</span>: <span class="hljs-number">55423</span>,
+      <span class="hljs-string">&quot;page_staytime_pv&quot;</span>: <span class="hljs-number">8.139198</span>,
+      <span class="hljs-string">&quot;entrypage_pv&quot;</span>: <span class="hljs-number">117922</span>,
+      <span class="hljs-string">&quot;exitpage_pv&quot;</span>: <span class="hljs-number">61304</span>,
+      <span class="hljs-string">&quot;page_share_pv&quot;</span>: <span class="hljs-number">180</span>,
+      <span class="hljs-string">&quot;page_share_uv&quot;</span>: <span class="hljs-number">166</span>
+    },
+    {
+      <span class="hljs-string">&quot;page_path&quot;</span>: <span class="hljs-string">&quot;pages/linedetail/linedetail.html&quot;</span>,
+      <span class="hljs-string">&quot;page_visit_pv&quot;</span>: <span class="hljs-number">155030</span>,
+      <span class="hljs-string">&quot;page_visit_uv&quot;</span>: <span class="hljs-number">42195</span>,
+      <span class="hljs-string">&quot;page_staytime_pv&quot;</span>: <span class="hljs-number">35.462395</span>,
+      <span class="hljs-string">&quot;entrypage_pv&quot;</span>: <span class="hljs-number">21101</span>,
+      <span class="hljs-string">&quot;exitpage_pv&quot;</span>: <span class="hljs-number">47051</span>,
+      <span class="hljs-string">&quot;page_share_pv&quot;</span>: <span class="hljs-number">47</span>,
+      <span class="hljs-string">&quot;page_share_uv&quot;</span>: <span class="hljs-number">42</span>
+    },
+    {
+      <span class="hljs-string">&quot;page_path&quot;</span>: <span class="hljs-string">&quot;pages/search/search.html&quot;</span>,
+      <span class="hljs-string">&quot;page_visit_pv&quot;</span>: <span class="hljs-number">65011</span>,
+      <span class="hljs-string">&quot;page_visit_uv&quot;</span>: <span class="hljs-number">24716</span>,
+      <span class="hljs-string">&quot;page_staytime_pv&quot;</span>: <span class="hljs-number">6.889634</span>,
+      <span class="hljs-string">&quot;entrypage_pv&quot;</span>: <span class="hljs-number">1811</span>,
+      <span class="hljs-string">&quot;exitpage_pv&quot;</span>: <span class="hljs-number">3198</span>,
+      <span class="hljs-string">&quot;page_share_pv&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;page_share_uv&quot;</span>: <span class="hljs-number">0</span>
+    },
+    {
+      <span class="hljs-string">&quot;page_path&quot;</span>: <span class="hljs-string">&quot;pages/stationdetail/stationdetail.html&quot;</span>,
+      <span class="hljs-string">&quot;page_visit_pv&quot;</span>: <span class="hljs-number">29953</span>,
+      <span class="hljs-string">&quot;page_visit_uv&quot;</span>: <span class="hljs-number">9695</span>,
+      <span class="hljs-string">&quot;page_staytime_pv&quot;</span>: <span class="hljs-number">7.558508</span>,
+      <span class="hljs-string">&quot;entrypage_pv&quot;</span>: <span class="hljs-number">1386</span>,
+      <span class="hljs-string">&quot;exitpage_pv&quot;</span>: <span class="hljs-number">2285</span>,
+      <span class="hljs-string">&quot;page_share_pv&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;page_share_uv&quot;</span>: <span class="hljs-number">0</span>
+    },
+    {
+      <span class="hljs-string">&quot;page_path&quot;</span>: <span class="hljs-string">&quot;pages/switch-city/switch-city.html&quot;</span>,
+      <span class="hljs-string">&quot;page_visit_pv&quot;</span>: <span class="hljs-number">8928</span>,
+      <span class="hljs-string">&quot;page_visit_uv&quot;</span>: <span class="hljs-number">4017</span>,
+      <span class="hljs-string">&quot;page_staytime_pv&quot;</span>: <span class="hljs-number">9.22659</span>,
+      <span class="hljs-string">&quot;entrypage_pv&quot;</span>: <span class="hljs-number">748</span>,
+      <span class="hljs-string">&quot;exitpage_pv&quot;</span>: <span class="hljs-number">1613</span>,
+      <span class="hljs-string">&quot;page_share_pv&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;page_share_uv&quot;</span>: <span class="hljs-number">0</span>
+    }
+  ]
+}
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page_path</td>
+<td>&#x9875;&#x9762;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>page_visit_pv</td>
+<td>&#x8BBF;&#x95EE;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>page_visit_uv</td>
+<td>&#x8BBF;&#x95EE;&#x4EBA;&#x6570;</td>
+</tr>
+<tr>
+<td>page_staytime_pv</td>
+<td>&#x6B21;&#x5747;&#x505C;&#x7559;&#x65F6;&#x957F;</td>
+</tr>
+<tr>
+<td>entrypage_pv</td>
+<td>&#x8FDB;&#x5165;&#x9875;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>exitpage_pv</td>
+<td>&#x9000;&#x51FA;&#x9875;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>page_share_pv</td>
+<td>&#x8F6C;&#x53D1;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>page_share_uv</td>
+<td>&#x8F6C;&#x53D1;&#x4EBA;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x76EE;&#x524D;&#x53EA;&#x63D0;&#x4F9B;&#x6309; page_visit_pv &#x6392;&#x5E8F;&#x7684; top200 </strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

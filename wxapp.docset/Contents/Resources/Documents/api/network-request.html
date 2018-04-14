@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>发起请求</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxrequestobject">wx.request(OBJECT)</h3>
+<p>&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3002;<strong>&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x5148;&#x9605;&#x8BFB;<a href="api-network.html">&#x8BF4;&#x660E;</a></strong>&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td></td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x53E3;&#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Object/String/ArrayBuffer</td>
+<td>&#x5426;</td>
+<td></td>
+<td>&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>header</td>
+<td>Object</td>
+<td>&#x5426;</td>
+<td></td>
+<td>&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x7684; header&#xFF0C;header &#x4E2D;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E; Referer&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>method</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>GET</td>
+<td>&#xFF08;&#x9700;&#x5927;&#x5199;&#xFF09;&#x6709;&#x6548;&#x503C;&#xFF1A;OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT</td>
+<td></td>
+</tr>
+<tr>
+<td>dataType</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>json</td>
+<td>&#x5982;&#x679C;&#x8BBE;&#x4E3A;json&#xFF0C;&#x4F1A;&#x5C1D;&#x8BD5;&#x5BF9;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x505A;&#x4E00;&#x6B21; JSON.parse</td>
+<td></td>
+</tr>
+<tr>
+<td>responseType</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>text</td>
+<td>&#x8BBE;&#x7F6E;&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x5408;&#x6CD5;&#x503C;&#xFF1A;text&#x3001;arraybuffer</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.0</a></td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td></td>
+<td>&#x6536;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x6210;&#x529F;&#x8FD4;&#x56DE;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td></td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td></td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Object/String/ArrayBuffer</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;</td>
+<td></td>
+</tr>
+<tr>
+<td>statusCode</td>
+<td>Number</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684; HTTP &#x72B6;&#x6001;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>header</td>
+<td>Object</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684; HTTP Response Header</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>data &#x6570;&#x636E;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>&#x6700;&#x7EC8;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6570;&#x636E;&#x662F; String &#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165;&#x7684; data &#x4E0D;&#x662F; String &#x7C7B;&#x578B;&#xFF0C;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6210; String &#x3002;&#x8F6C;&#x6362;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x4E8E; <code>GET</code> &#x65B9;&#x6CD5;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210; query string&#xFF08;encodeURIComponent(k)=encodeURIComponent(v)&amp;encodeURIComponent(k)=encodeURIComponent(v)...&#xFF09;</li>
+<li>&#x5BF9;&#x4E8E; <code>POST</code> &#x65B9;&#x6CD5;&#x4E14; <code>header[&apos;content-type&apos;]</code> &#x4E3A; <code>application/json</code> &#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C; JSON &#x5E8F;&#x5217;&#x5316;</li>
+<li>&#x5BF9;&#x4E8E; <code>POST</code> &#x65B9;&#x6CD5;&#x4E14; <code>header[&apos;content-type&apos;]</code> &#x4E3A; <code>application/x-www-form-urlencoded</code> &#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210; query string &#xFF08;encodeURIComponent(k)=encodeURIComponent(v)&amp;encodeURIComponent(k)=encodeURIComponent(v)...&#xFF09;</li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.request({
+  url: <span class="hljs-string">&apos;test.php&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
+  data: {
+     x: <span class="hljs-string">&apos;&apos;</span> ,
+     y: <span class="hljs-string">&apos;&apos;</span>
+  },
+  header: {
+      <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span> <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x503C;</span>
+  },
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.data)
+  }
+})
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>requestTask</code> &#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7; <code>requestTask</code>&#xFF0C;&#x53EF;&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;&#x3002;</p>
+<p><strong>requestTask &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abort</td>
+<td></td>
+<td>&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> requestTask = wx.request({
+  url: <span class="hljs-string">&apos;test.php&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
+  data: {
+     x: <span class="hljs-string">&apos;&apos;</span> ,
+     y: <span class="hljs-string">&apos;&apos;</span>
+  },
+  header: {
+      <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>
+  },
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.data)
+  }
+})
+
+requestTask.abort() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;</span>
+</code></pre>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
+<ol>
+<li><code>tip</code>: content-type &#x9ED8;&#x8BA4;&#x4E3A; &apos;application/json&apos;;</li>
+<li><code>tip</code>: url &#x4E2D;&#x4E0D;&#x80FD;&#x6709;&#x7AEF;&#x53E3;&#xFF1B;</li>
+<li><code>bug</code>: &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177; <code>0.10.102800</code> &#x7248;&#x672C;&#xFF0C;<code>header</code> &#x7684; <code>content-type</code> &#x8BBE;&#x7F6E;&#x5F02;&#x5E38;&#xFF1B;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

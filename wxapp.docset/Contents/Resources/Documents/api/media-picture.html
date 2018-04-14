@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>媒体</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxchooseimageobject">wx.chooseImage(OBJECT)</h3>
+<p>&#x4ECE;&#x672C;&#x5730;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x56FE;&#x7247;&#x6216;&#x4F7F;&#x7528;&#x76F8;&#x673A;&#x62CD;&#x7167;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>Number</td>
+<td>&#x5426;</td>
+<td>&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x56FE;&#x7247;&#x5F20;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;9</td>
+</tr>
+<tr>
+<td>sizeType</td>
+<td>StringArray</td>
+<td>&#x5426;</td>
+<td>original &#x539F;&#x56FE;&#xFF0C;compressed &#x538B;&#x7F29;&#x56FE;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E8C;&#x8005;&#x90FD;&#x6709;</td>
+</tr>
+<tr>
+<td>sourceType</td>
+<td>StringArray</td>
+<td>&#x5426;</td>
+<td>album &#x4ECE;&#x76F8;&#x518C;&#x9009;&#x56FE;&#xFF0C;camera &#x4F7F;&#x7528;&#x76F8;&#x673A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E8C;&#x8005;&#x90FD;&#x6709;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x7684;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5217;&#x8868; tempFilePaths</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x672C;&#x6B21;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x9700;&#x6301;&#x4E45;&#x4FDD;&#x5B58;&#xFF0C;&#x9700;&#x5728;&#x4E3B;&#x52A8;&#x8C03;&#x7528; <a href="file.html">wx.saveFile</a>&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5F97;&#x5230;&#x3002;</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tempFilePaths</td>
+<td>StringArray</td>
+<td>&#x56FE;&#x7247;&#x7684;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5217;&#x8868;</td>
+<td></td>
+</tr>
+<tr>
+<td>tempFiles</td>
+<td>ObjectArray</td>
+<td>&#x56FE;&#x7247;&#x7684;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x662F;&#x4E00;&#x4E2A; File &#x5BF9;&#x8C61;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>File &#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x5982;&#x4E0B;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>String</td>
+<td>&#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>size</td>
+<td>Number</td>
+<td>&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;B</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.chooseImage({
+  count: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x9ED8;&#x8BA4;9</span>
+  sizeType: [<span class="hljs-string">&apos;original&apos;</span>, <span class="hljs-string">&apos;compressed&apos;</span>], <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x662F;&#x539F;&#x56FE;&#x8FD8;&#x662F;&#x538B;&#x7F29;&#x56FE;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E8C;&#x8005;&#x90FD;&#x6709;</span>
+  sourceType: [<span class="hljs-string">&apos;album&apos;</span>, <span class="hljs-string">&apos;camera&apos;</span>], <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x6765;&#x6E90;&#x662F;&#x76F8;&#x518C;&#x8FD8;&#x662F;&#x76F8;&#x673A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E8C;&#x8005;&#x90FD;&#x6709;</span>
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x9009;&#x5B9A;&#x7167;&#x7247;&#x7684;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5217;&#x8868;&#xFF0C;tempFilePath&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;img&#x6807;&#x7B7E;&#x7684;src&#x5C5E;&#x6027;&#x663E;&#x793A;&#x56FE;&#x7247;</span>
+    <span class="hljs-keyword">var</span> tempFilePaths = res.tempFilePaths
+  }
+})
+</code></pre>
+<h3 id="wxpreviewimageobject">wx.previewImage(OBJECT)</h3>
+<p>&#x9884;&#x89C8;&#x56FE;&#x7247;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>&#x5F53;&#x524D;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x4E0D;&#x586B;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A; urls &#x7684;&#x7B2C;&#x4E00;&#x5F20;</td>
+</tr>
+<tr>
+<td>urls</td>
+<td>StringArray</td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x9884;&#x89C8;&#x7684;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.previewImage({
+  current: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-comment">// &#x5F53;&#x524D;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;http&#x94FE;&#x63A5;</span>
+  urls: [] <span class="hljs-comment">// &#x9700;&#x8981;&#x9884;&#x89C8;&#x7684;&#x56FE;&#x7247;http&#x94FE;&#x63A5;&#x5217;&#x8868;</span>
+})
+</code></pre>
+<h3 id="wxgetimageinfoobject">wx.getImageInfo(OBJECT)</h3>
+<p>&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x4FE1;&#x606F;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x56FE;&#x7247;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>Number</td>
+<td>&#x56FE;&#x7247;&#x5BBD;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;px</td>
+<td></td>
+</tr>
+<tr>
+<td>height</td>
+<td>Number</td>
+<td>&#x56FE;&#x7247;&#x9AD8;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;px</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>String</td>
+<td>&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x7684;&#x672C;&#x5730;&#x8DEF;&#x5F84;</td>
+<td></td>
+</tr>
+<tr>
+<td>orientation</td>
+<td>String</td>
+<td>&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x6709;&#x6548;&#x503C;&#x89C1;&#x4E0B;&#x8868;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x7684;&#x683C;&#x5F0F;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>orientation&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x679A;&#x4E3E;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>up</td>
+<td>&#x9ED8;&#x8BA4;</td>
+</tr>
+<tr>
+<td>down</td>
+<td>180&#x5EA6;&#x65CB;&#x8F6C;</td>
+</tr>
+<tr>
+<td>left</td>
+<td>&#x9006;&#x65F6;&#x9488;&#x65CB;&#x8F6C;90&#x5EA6;</td>
+</tr>
+<tr>
+<td>right</td>
+<td>&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;90&#x5EA6;</td>
+</tr>
+<tr>
+<td>up-mirrored</td>
+<td>&#x540C;up&#xFF0C;&#x4F46;&#x6C34;&#x5E73;&#x7FFB;&#x8F6C;</td>
+</tr>
+<tr>
+<td>down-mirrored</td>
+<td>&#x540C;down&#xFF0C;&#x4F46;&#x6C34;&#x5E73;&#x7FFB;&#x8F6C;</td>
+</tr>
+<tr>
+<td>left-mirrored</td>
+<td>&#x540C;left&#xFF0C;&#x4F46;&#x5782;&#x76F4;&#x7FFB;&#x8F6C;</td>
+</tr>
+<tr>
+<td>right-mirrored</td>
+<td>&#x540C;right&#xFF0C;&#x4F46;&#x5782;&#x76F4;&#x7FFB;&#x8F6C;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/Kd47Sbmr6yYu" target="_blank">&#x4EE3;&#x7801;&#x7247;&#x6BB5;</a></p>
+<pre><code class="lang-javascript">wx.getImageInfo({
+  src: <span class="hljs-string">&apos;images/a.jpg&apos;</span>,
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.width)
+    <span class="hljs-built_in">console</span>.log(res.height)
+  }
+})
+
+wx.chooseImage({
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+    wx.getImageInfo({
+      src: res.tempFilePaths[<span class="hljs-number">0</span>],
+      success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(res.width)
+        <span class="hljs-built_in">console</span>.log(res.height)
+      }
+    })
+  }
+})
+</code></pre>
+<h3 id="wxsaveimagetophotosalbumobject">wx.saveImageToPhotosAlbum(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x5230;&#x7CFB;&#x7EDF;&#x76F8;&#x518C;&#x3002;&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.writePhotosAlbum</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filePath</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6C38;&#x4E45;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.saveImageToPhotosAlbum({
+    success(res) {
+    }
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "wxdash",
+  "version": "0.0.1",
+  "description": "Create dash docset for wechat app",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "Qiming Zhao <chemzqm@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cp-file": "^5.0.0",
+    "del": "^3.0.0",
+    "et-improve": "^1.0.0",
+    "glob": "^7.1.2",
+    "got": "^8.3.0",
+    "mkdirp": "^0.5.1",
+    "parse5": "^4.0.0",
+    "pify": "^3.0.0",
+    "sequelize": "^4.37.6",
+    "sqlite3": "^4.0.0"
+  }
+}

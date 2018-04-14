@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>setLineDash</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="canvascontextsetlinedash">canvasContext.setLineDash</h1>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x5BBD;&#x5EA6;&#x3002;</p>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pattern</td>
+<td>Array</td>
+<td>&#x4E00;&#x7EC4;&#x63CF;&#x8FF0;&#x4EA4;&#x66FF;&#x7ED8;&#x5236;&#x7EBF;&#x6BB5;&#x548C;&#x95F4;&#x8DDD;&#xFF08;&#x5750;&#x6807;&#x7A7A;&#x95F4;&#x5355;&#x4F4D;&#xFF09;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x5B57;</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>Number</td>
+<td>&#x865A;&#x7EBF;&#x504F;&#x79FB;&#x91CF;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.setLineDash([<span class="hljs-number">10</span>, <span class="hljs-number">20</span>], <span class="hljs-number">5</span>);
+
+ctx.beginPath();
+ctx.moveTo(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>);
+ctx.lineTo(<span class="hljs-number">400</span>, <span class="hljs-number">100</span>);
+ctx.stroke();
+
+ctx.draw()
+</code></pre>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/set-line-dash.png?t=2018412" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

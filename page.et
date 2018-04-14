@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{{= _.title}}</title>
+  <link rel="stylesheet" href="{{= _.path}}/style.css" />
+  <link rel="stylesheet" href="{{= _.path}}/website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  {{! _.html}}
+</body>
+</html>

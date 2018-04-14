@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <title>rich-text</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../website.css">
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="rich-text">rich-text</h4>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x5BCC;&#x6587;&#x672C;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodes</td>
+<td>Array / String</td>
+<td>[]</td>
+<td>&#x8282;&#x70B9;&#x5217;&#x8868; / HTML String</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+</tr>
+</tbody>
+</table>
+<p>&#x652F;&#x6301;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;<code>tap</code>&#x3001;<code>touchstart</code>&#x3001;<code>touchmove</code>&#x3001;<code>touchcancel</code>&#x3001;<code>touchend</code>&#x548C;<code>longtap</code></p>
+<p><strong> nodes &#x5C5E;&#x6027;&#x63A8;&#x8350;&#x4F7F;&#x7528; Array &#x7C7B;&#x578B;&#xFF0C;&#x7531;&#x4E8E;&#x7EC4;&#x4EF6;&#x4F1A;&#x5C06; String &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A; Array &#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x800C;&#x6027;&#x80FD;&#x4F1A;&#x6709;&#x6240;&#x4E0B;&#x964D; </strong></p>
+<h5 id="nodes">nodes</h5>
+<p>&#x73B0;&#x652F;&#x6301;&#x4E24;&#x79CD;&#x8282;&#x70B9;&#xFF0C;&#x901A;&#x8FC7;type&#x6765;&#x533A;&#x5206;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x548C;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF0C;&#x5728;&#x5BCC;&#x6587;&#x672C;&#x533A;&#x57DF;&#x91CC;&#x663E;&#x793A;&#x7684;HTML&#x8282;&#x70B9;</p>
+<p><strong>&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF1A;type = node</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>&#x6807;&#x7B7E;&#x540D;</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x652F;&#x6301;&#x90E8;&#x5206;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;HTML&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td>attrs</td>
+<td>&#x5C5E;&#x6027;</td>
+<td>Object</td>
+<td>&#x5426;</td>
+<td>&#x652F;&#x6301;&#x90E8;&#x5206;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x9075;&#x5FAA;Pascal&#x547D;&#x540D;&#x6CD5;</td>
+</tr>
+<tr>
+<td>children</td>
+<td>&#x5B50;&#x8282;&#x70B9;&#x5217;&#x8868;</td>
+<td>Array</td>
+<td>&#x5426;</td>
+<td>&#x7ED3;&#x6784;&#x548C;nodes&#x4E00;&#x81F4;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF1A;type = text</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>&#x6587;&#x672C;</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x652F;&#x6301;entities</td>
+</tr>
+</tbody>
+</table>
+<h5 id="&#x53D7;&#x4FE1;&#x4EFB;&#x7684;html&#x8282;&#x70B9;&#x53CA;&#x5C5E;&#x6027;">&#x53D7;&#x4FE1;&#x4EFB;&#x7684;HTML&#x8282;&#x70B9;&#x53CA;&#x5C5E;&#x6027;</h5>
+<p>&#x5168;&#x5C40;&#x652F;&#x6301;class&#x548C;style&#x5C5E;&#x6027;&#xFF0C;<strong>&#x4E0D;&#x652F;&#x6301;id&#x5C5E;&#x6027;</strong>&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x8282;&#x70B9;</th>
+<th>&#x5C5E;&#x6027;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td></td>
+</tr>
+<tr>
+<td>abbr</td>
+<td></td>
+</tr>
+<tr>
+<td>b</td>
+<td></td>
+</tr>
+<tr>
+<td>blockquote</td>
+<td></td>
+</tr>
+<tr>
+<td>br</td>
+<td></td>
+</tr>
+<tr>
+<td>code</td>
+<td></td>
+</tr>
+<tr>
+<td>col</td>
+<td>span&#xFF0C;width</td>
+</tr>
+<tr>
+<td>colgroup</td>
+<td>span&#xFF0C;width</td>
+</tr>
+<tr>
+<td>dd</td>
+<td></td>
+</tr>
+<tr>
+<td>del</td>
+<td></td>
+</tr>
+<tr>
+<td>div</td>
+<td></td>
+</tr>
+<tr>
+<td>dl</td>
+<td></td>
+</tr>
+<tr>
+<td>dt</td>
+<td></td>
+</tr>
+<tr>
+<td>em</td>
+<td></td>
+</tr>
+<tr>
+<td>fieldset</td>
+<td></td>
+</tr>
+<tr>
+<td>h1</td>
+<td></td>
+</tr>
+<tr>
+<td>h2</td>
+<td></td>
+</tr>
+<tr>
+<td>h3</td>
+<td></td>
+</tr>
+<tr>
+<td>h4</td>
+<td></td>
+</tr>
+<tr>
+<td>h5</td>
+<td></td>
+</tr>
+<tr>
+<td>h6</td>
+<td></td>
+</tr>
+<tr>
+<td>hr</td>
+<td></td>
+</tr>
+<tr>
+<td>i</td>
+<td></td>
+</tr>
+<tr>
+<td>img</td>
+<td>alt&#xFF0C;src&#xFF0C;height&#xFF0C;width</td>
+</tr>
+<tr>
+<td>ins</td>
+<td></td>
+</tr>
+<tr>
+<td>label</td>
+<td></td>
+</tr>
+<tr>
+<td>legend</td>
+<td></td>
+</tr>
+<tr>
+<td>li</td>
+<td></td>
+</tr>
+<tr>
+<td>ol</td>
+<td>start&#xFF0C;type</td>
+</tr>
+<tr>
+<td>p</td>
+<td></td>
+</tr>
+<tr>
+<td>q</td>
+<td></td>
+</tr>
+<tr>
+<td>span</td>
+<td></td>
+</tr>
+<tr>
+<td>strong</td>
+<td></td>
+</tr>
+<tr>
+<td>sub</td>
+<td></td>
+</tr>
+<tr>
+<td>sup</td>
+<td></td>
+</tr>
+<tr>
+<td>table</td>
+<td>width</td>
+</tr>
+<tr>
+<td>tbody</td>
+<td></td>
+</tr>
+<tr>
+<td>td</td>
+<td>colspan&#xFF0C;height&#xFF0C;rowspan&#xFF0C;width</td>
+</tr>
+<tr>
+<td>tfoot</td>
+<td></td>
+</tr>
+<tr>
+<td>th</td>
+<td>colspan&#xFF0C;height&#xFF0C;rowspan&#xFF0C;width</td>
+</tr>
+<tr>
+<td>thead</td>
+<td></td>
+</tr>
+<tr>
+<td>tr</td>
+<td></td>
+</tr>
+<tr>
+<td>ul</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/zPVmpim46wYQ" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- rich-text.wxml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">rich-text</span> <span class="hljs-attr">nodes</span>=<span class="hljs-string">&quot;{{nodes}}&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;tap&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">rich-text</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript">// rich-text.js
+Page({
+  data: {
+    nodes: [{
+      name: &apos;div&apos;,
+      attrs: {
+        class: &apos;div_class&apos;,
+        style: &apos;line-height: 60px; color: red;&apos;
+      },
+      children: [{
+        type: &apos;text&apos;,
+        text: &apos;Hello&amp;nbsp;World!&apos;
+      }]
+    }]
+  },
+  tap() {
+    console.log(&apos;tap&apos;)
+  }
+})
+</code></pre>
+<h5 id="bug--tip">Bug &amp; Tip</h5>
+<ol>
+<li><code>tip</code>: nodes &#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528; String &#x7C7B;&#x578B;&#xFF0C;&#x6027;&#x80FD;&#x4F1A;&#x6709;&#x6240;&#x4E0B;&#x964D;&#x3002;</li>
+<li><code>tip</code>: <code>rich-text</code> &#x7EC4;&#x4EF6;&#x5185;&#x5C4F;&#x853D;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li><code>tip</code>: attrs &#x5C5E;&#x6027;&#x4E0D;&#x652F;&#x6301; id &#xFF0C;&#x652F;&#x6301; class &#x3002;</li>
+<li><code>tip</code>: name &#x5C5E;&#x6027;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;&#x3002;</li>
+<li><code>tip</code>: &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;HTML&#x8282;&#x70B9;&#xFF0C;&#x8BE5;&#x8282;&#x70B9;&#x53CA;&#x5176;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x5C06;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;</li>
+<li><code>tip</code>: img &#x6807;&#x7B7E;&#x4EC5;&#x652F;&#x6301;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x3002;</li>
+<li><code>tip</code>: &#x5982;&#x679C;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; <code>rich-text</code> &#x7EC4;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x4EC5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; wxss &#x6837;&#x5F0F;&#x5BF9; <code>rich-text</code> &#x4E2D;&#x7684; class &#x751F;&#x6548;&#x3002;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+
+
+</body></html>

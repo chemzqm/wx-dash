@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>注册页面</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="page">Page</h1>
+<p><code>Page()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;&#x63A5;&#x53D7;&#x4E00;&#x4E2A; object &#x53C2;&#x6570;&#xFF0C;&#x5176;&#x6307;&#x5B9A;&#x9875;&#x9762;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;&#x3001;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x3001;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x7B49;&#x3002;</p>
+<p><strong>object &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;">data</a></td>
+<td>Object</td>
+<td>&#x9875;&#x9762;&#x7684;&#x521D;&#x59CB;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>onLoad</td>
+<td>Function</td>
+<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x9875;&#x9762;&#x52A0;&#x8F7D;</td>
+</tr>
+<tr>
+<td>onReady</td>
+<td>Function</td>
+<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x9875;&#x9762;&#x521D;&#x6B21;&#x6E32;&#x67D3;&#x5B8C;&#x6210;</td>
+</tr>
+<tr>
+<td>onShow</td>
+<td>Function</td>
+<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x9875;&#x9762;&#x663E;&#x793A;</td>
+</tr>
+<tr>
+<td>onHide</td>
+<td>Function</td>
+<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x9875;&#x9762;&#x9690;&#x85CF;</td>
+</tr>
+<tr>
+<td>onUnload</td>
+<td>Function</td>
+<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x9875;&#x9762;&#x5378;&#x8F7D;</td>
+</tr>
+<tr>
+<td>onPullDownRefresh</td>
+<td>Function</td>
+<td>&#x9875;&#x9762;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x7528;&#x6237;&#x4E0B;&#x62C9;&#x52A8;&#x4F5C;</td>
+</tr>
+<tr>
+<td>onReachBottom</td>
+<td>Function</td>
+<td>&#x9875;&#x9762;&#x4E0A;&#x62C9;&#x89E6;&#x5E95;&#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>onShareAppMessage</td>
+<td>Function</td>
+<td>&#x7528;&#x6237;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;&#x8F6C;&#x53D1;</td>
+</tr>
+<tr>
+<td>onPageScroll</td>
+<td>Function</td>
+<td>&#x9875;&#x9762;&#x6EDA;&#x52A8;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>onTabItemTap</td>
+<td>Function</td>
+<td>&#x5F53;&#x524D;&#x662F; tab &#x9875;&#x65F6;&#xFF0C;&#x70B9;&#x51FB; tab &#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td>&#x5176;&#x4ED6;</td>
+<td>Any</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x51FD;&#x6570;&#x6216;&#x6570;&#x636E;&#x5230; object &#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x5728;&#x9875;&#x9762;&#x7684;&#x51FD;&#x6570;&#x4E2D;&#x7528; <code>this</code> &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>object &#x5185;&#x5BB9;&#x5728;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x65F6;&#x4F1A;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x6DF1;&#x62F7;&#x8D1D;&#xFF0C;&#x9700;&#x8003;&#x8651;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x5BF9;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x7684;&#x5F00;&#x9500;</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//index.js</span>
+Page({
+  data: {
+    text: <span class="hljs-string">&quot;This is page data.&quot;</span>
+  },
+  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+    <span class="hljs-comment">// Do some initialize when page load.</span>
+  },
+  onReady: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Do something when page ready.</span>
+  },
+  onShow: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Do something when page show.</span>
+  },
+  onHide: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Do something when page hide.</span>
+  },
+  onUnload: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Do something when page close.</span>
+  },
+  onPullDownRefresh: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Do something when pull down.</span>
+  },
+  onReachBottom: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Do something when page reach bottom.</span>
+  },
+  onShareAppMessage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+   <span class="hljs-comment">// return custom share data when user share.</span>
+  },
+  onPageScroll: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Do something when page scroll</span>
+  },
+  onTabItemTap(item) {
+    <span class="hljs-built_in">console</span>.log(item.index)
+    <span class="hljs-built_in">console</span>.log(item.pagePath)
+    <span class="hljs-built_in">console</span>.log(item.text)
+  },
+  <span class="hljs-comment">// Event handler.</span>
+  viewTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.setData({
+      text: <span class="hljs-string">&apos;Set some data for updating view.&apos;</span>
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-comment">// this is setData callback</span>
+    })
+  },
+  customData: {
+    hi: <span class="hljs-string">&apos;MINA&apos;</span>
+  }
+})
+</code></pre>
+<h3 id="&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;">&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;</h3>
+<p>&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x5C06;&#x4F5C;&#x4E3A;&#x9875;&#x9762;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x3002;data &#x5C06;&#x4F1A;&#x4EE5; JSON &#x7684;&#x5F62;&#x5F0F;&#x7531;&#x903B;&#x8F91;&#x5C42;&#x4F20;&#x81F3;&#x6E32;&#x67D3;&#x5C42;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x4EE5;&#x8F6C;&#x6210; JSON &#x7684;&#x683C;&#x5F0F;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6570;&#x5B57;&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5BF9;&#x8C61;&#xFF0C;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x6E32;&#x67D3;&#x5C42;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="../view/wxml/">WXML</a> &#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript">Page({
+  data: {
+    text: <span class="hljs-string">&apos;init data&apos;</span>,
+    array: [{msg: <span class="hljs-string">&apos;1&apos;</span>}, {msg: <span class="hljs-string">&apos;2&apos;</span>}]
+  }
+})
+</code></pre>
+<h3 id="&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;">&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</h3>
+<ul>
+<li><p><code>onLoad</code>: &#x9875;&#x9762;&#x52A0;&#x8F7D;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x53EA;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; onLoad &#x4E2D;&#x83B7;&#x53D6;&#x6253;&#x5F00;&#x5F53;&#x524D;&#x9875;&#x9762;&#x6240;&#x8C03;&#x7528;&#x7684; query &#x53C2;&#x6570;&#x3002;</li>
+</ul>
+</li>
+<li><p><code>onShow</code>: &#x9875;&#x9762;&#x663E;&#x793A;</p>
+<ul>
+<li>&#x6BCF;&#x6B21;&#x6253;&#x5F00;&#x9875;&#x9762;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#x3002;</li>
+</ul>
+</li>
+<li><p><code>onReady</code>: &#x9875;&#x9762;&#x521D;&#x6B21;&#x6E32;&#x67D3;&#x5B8C;&#x6210;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x53EA;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x4EE3;&#x8868;&#x9875;&#x9762;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x59A5;&#x5F53;&#xFF0C;&#x53EF;&#x4EE5;&#x548C;&#x89C6;&#x56FE;&#x5C42;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</li>
+<li>&#x5BF9;&#x754C;&#x9762;&#x7684;&#x8BBE;&#x7F6E;&#x5982;<code>wx.setNavigationBarTitle</code>&#x8BF7;&#x5728;<code>onReady</code>&#x4E4B;&#x540E;&#x8BBE;&#x7F6E;&#x3002;&#x8BE6;&#x89C1;<a href="#&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</a></li>
+</ul>
+</li>
+<li><p><code>onHide</code>: &#x9875;&#x9762;&#x9690;&#x85CF;</p>
+<ul>
+<li>&#x5F53;<code>navigateTo</code>&#x6216;&#x5E95;&#x90E8;<code>tab</code>&#x5207;&#x6362;&#x65F6;&#x8C03;&#x7528;&#x3002;</li>
+</ul>
+</li>
+<li><p><code>onUnload</code>: &#x9875;&#x9762;&#x5378;&#x8F7D;</p>
+<ul>
+<li>&#x5F53;<code>redirectTo</code>&#x6216;<code>navigateBack</code>&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x8C03;&#x7528;&#x4EE5;&#x53CA;&#x9875;&#x9762;&#x7684;&#x8DEF;&#x7531;&#x65B9;&#x5F0F;<a href="route.html">&#x8BE6;&#x89C1;</a></p>
+<p><strong>onLoad&#x53C2;&#x6570;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td>&#x5176;&#x4ED6;&#x9875;&#x9762;&#x6253;&#x5F00;&#x5F53;&#x524D;&#x9875;&#x9762;&#x6240;&#x8C03;&#x7528;&#x7684; query &#x53C2;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x9875;&#x9762;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;">&#x9875;&#x9762;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;</h3>
+<ul>
+<li><p><code>onPullDownRefresh</code>: &#x4E0B;&#x62C9;&#x5237;&#x65B0;</p>
+<ul>
+<li>&#x76D1;&#x542C;&#x7528;&#x6237;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>&#x9700;&#x8981;&#x5728;<code>app.json</code>&#x7684;<a href="../config.html#window"><code>window</code></a>&#x9009;&#x9879;&#x4E2D;&#x6216;<a href="../config.html#pagejson">&#x9875;&#x9762;&#x914D;&#x7F6E;</a>&#x4E2D;&#x5F00;&#x542F;<code>enablePullDownRefresh</code>&#x3002;</li>
+<li>&#x5F53;&#x5904;&#x7406;&#x5B8C;&#x6570;&#x636E;&#x5237;&#x65B0;&#x540E;&#xFF0C;<a href="../../api/pulldown.html#wxstoppulldownrefresh"><code>wx.stopPullDownRefresh</code></a>&#x53EF;&#x4EE5;&#x505C;&#x6B62;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x3002;</li>
+</ul>
+</li>
+<li><p><code>onReachBottom</code>: &#x4E0A;&#x62C9;&#x89E6;&#x5E95;</p>
+<ul>
+<li>&#x76D1;&#x542C;&#x7528;&#x6237;&#x4E0A;&#x62C9;&#x89E6;&#x5E95;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;<code>app.json</code>&#x7684;<a href="../config.html#window"><code>window</code></a>&#x9009;&#x9879;&#x4E2D;&#x6216;<a href="../config.html#pagejson">&#x9875;&#x9762;&#x914D;&#x7F6E;</a>&#x4E2D;&#x8BBE;&#x7F6E;&#x89E6;&#x53D1;&#x8DDD;&#x79BB;<code>onReachBottomDistance</code>&#x3002;</li>
+<li>&#x5728;&#x89E6;&#x53D1;&#x8DDD;&#x79BB;&#x5185;&#x6ED1;&#x52A8;&#x671F;&#x95F4;&#xFF0C;&#x672C;&#x4E8B;&#x4EF6;&#x53EA;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x3002;</li>
+</ul>
+</li>
+<li><p><code>onPageScroll</code>: &#x9875;&#x9762;&#x6EDA;&#x52A8;</p>
+<ul>
+<li>&#x76D1;&#x542C;&#x7528;&#x6237;&#x6ED1;&#x52A8;&#x9875;&#x9762;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>&#x53C2;&#x6570;&#x4E3A; Object&#xFF0C;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#xFF1A;</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scrollTop</td>
+<td>Number</td>
+<td>&#x9875;&#x9762;&#x5728;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x5DF2;&#x6EDA;&#x52A8;&#x7684;&#x8DDD;&#x79BB;&#xFF08;&#x5355;&#x4F4D;px&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>onShareAppMessage</code>: &#x7528;&#x6237;&#x8F6C;&#x53D1;<ul>
+<li>&#x53EA;&#x6709;&#x5B9A;&#x4E49;&#x4E86;&#x6B64;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x53F3;&#x4E0A;&#x89D2;&#x83DC;&#x5355;&#x624D;&#x4F1A;&#x663E;&#x793A;&#x201C;&#x8F6C;&#x53D1;&#x201D;&#x6309;&#x94AE;</li>
+<li>&#x7528;&#x6237;&#x70B9;&#x51FB;&#x8F6C;&#x53D1;&#x6309;&#x94AE;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8C03;&#x7528;</li>
+<li>&#x6B64;&#x4E8B;&#x4EF6;&#x9700;&#x8981; return &#x4E00;&#x4E2A; Object&#xFF0C;&#x7528;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x8F6C;&#x53D1;&#x5185;&#x5BB9;</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#x81EA;&#x5B9A;&#x4E49;&#x8F6C;&#x53D1;&#x5B57;&#x6BB5;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>&#x8F6C;&#x53D1;&#x6807;&#x9898;</td>
+<td>&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>path</td>
+<td>&#x8F6C;&#x53D1;&#x8DEF;&#x5F84;</td>
+<td>&#x5F53;&#x524D;&#x9875;&#x9762; path &#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4EE5; / &#x5F00;&#x5934;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre><code class="lang-javascript">Page({
+  onShareAppMessage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+      title: <span class="hljs-string">&apos;&#x81EA;&#x5B9A;&#x4E49;&#x8F6C;&#x53D1;&#x6807;&#x9898;&apos;</span>,
+      path: <span class="hljs-string">&apos;/page/user?id=123&apos;</span>
+    }
+  }
+})
+</code></pre>
+<h3 id="&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;">&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;</h3>
+<p>&#x9664;&#x4E86;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x548C;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;Page &#x4E2D;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x51FD;&#x6570;&#xFF1A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;&#x5728;&#x6E32;&#x67D3;&#x5C42;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;<a href="../view/wxml/event.html">&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</a>&#xFF0C;&#x5F53;&#x8FBE;&#x5230;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C; Page &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;viewTap&quot;</span>&gt;</span> click me <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript">Page({
+  viewTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;view tap&apos;</span>)
+  }
+})
+</code></pre>
+<h3 id="pageprototyperoute">Page.prototype.route</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p><code>route</code> &#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<h3 id="pageprototypesetdata">Page.prototype.setData()</h3>
+<p><code>setData</code> &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x903B;&#x8F91;&#x5C42;&#x53D1;&#x9001;&#x5230;&#x89C6;&#x56FE;&#x5C42;&#xFF08;&#x5F02;&#x6B65;&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x6539;&#x53D8;&#x5BF9;&#x5E94;&#x7684; <code>this.data</code> &#x7684;&#x503C;&#xFF08;&#x540C;&#x6B65;&#xFF09;&#x3002;</p>
+<h3 id="setdata-&#x53C2;&#x6570;&#x683C;&#x5F0F;">setData() &#x53C2;&#x6570;&#x683C;&#x5F0F;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Object</td>
+<td>&#x662F;</td>
+<td>&#x8FD9;&#x6B21;&#x8981;&#x6539;&#x53D8;&#x7684;&#x6570;&#x636E;</td>
+<td></td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td><a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
+</tr>
+</tbody>
+</table>
+<p>object &#x4EE5; key&#xFF0C;value &#x7684;&#x5F62;&#x5F0F;&#x8868;&#x793A;&#x5C06; this.data &#x4E2D;&#x7684; key &#x5BF9;&#x5E94;&#x7684;&#x503C;&#x6539;&#x53D8;&#x6210; value&#x3002;
+callback &#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x8FD9;&#x6B21;setData&#x5BF9;&#x754C;&#x9762;&#x6E32;&#x67D3;&#x5B8C;&#x6BD5;&#x540E;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x5176;&#x4E2D; key &#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF0C;&#x4EE5;&#x6570;&#x636E;&#x8DEF;&#x5F84;&#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;&#xFF0C;&#x5982; <code>array[2].message</code>&#xFF0C;<code>a.b.c.d</code>&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x9700;&#x8981;&#x5728; this.data &#x4E2D;&#x9884;&#x5148;&#x5B9A;&#x4E49;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<ol>
+<li><strong>&#x76F4;&#x63A5;&#x4FEE;&#x6539; this.data &#x800C;&#x4E0D;&#x8C03;&#x7528; this.setData &#x662F;&#x65E0;&#x6CD5;&#x6539;&#x53D8;&#x9875;&#x9762;&#x7684;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x8FD8;&#x4F1A;&#x9020;&#x6210;&#x6570;&#x636E;&#x4E0D;&#x4E00;&#x81F4;</strong>&#x3002;</li>
+<li><strong>&#x5355;&#x6B21;&#x8BBE;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;1024kB&#xFF0C;&#x8BF7;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4E00;&#x6B21;&#x8BBE;&#x7F6E;&#x8FC7;&#x591A;&#x7684;&#x6570;&#x636E;</strong>&#x3002;</li>
+<li>&#x8BF7;&#x4E0D;&#x8981;&#x628A; data &#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x9879;&#x7684; value &#x8BBE;&#x4E3A; <code>undefined</code> &#xFF0C;&#x5426;&#x5219;&#x8FD9;&#x4E00;&#x9879;&#x5C06;&#x4E0D;&#x88AB;&#x8BBE;&#x7F6E;&#x5E76;&#x53EF;&#x80FD;&#x9057;&#x7559;&#x4E00;&#x4E9B;&#x6F5C;&#x5728;&#x95EE;&#x9898;&#x3002;</li>
+</ol>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!--index.wxml--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeText&quot;</span>&gt;</span> Change normal data <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{num}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeNum&quot;</span>&gt;</span> Change normal num <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeItemInArray&quot;</span>&gt;</span> Change Array data <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{object.text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeItemInObject&quot;</span>&gt;</span> Change Object data <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{newField.text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;addNewField&quot;</span>&gt;</span> Add new data <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">//index.js</span>
+Page({
+  data: {
+    text: <span class="hljs-string">&apos;init data&apos;</span>,
+    num: <span class="hljs-number">0</span>,
+    array: [{text: <span class="hljs-string">&apos;init data&apos;</span>}],
+    object: {
+      text: <span class="hljs-string">&apos;init data&apos;</span>
+    }
+  },
+  changeText: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// this.data.text = &apos;changed data&apos;  // bad, it can not work</span>
+    <span class="hljs-keyword">this</span>.setData({
+      text: <span class="hljs-string">&apos;changed data&apos;</span>
+    })
+  },
+  changeNum: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.data.num = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">this</span>.setData({
+      num: <span class="hljs-keyword">this</span>.data.num
+    })
+  },
+  changeItemInArray: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// you can use this way to modify a danamic data path</span>
+    <span class="hljs-keyword">this</span>.setData({
+      <span class="hljs-string">&apos;array[0].text&apos;</span>:<span class="hljs-string">&apos;changed data&apos;</span>
+    })
+  },
+  changeItemInObject: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">this</span>.setData({
+      <span class="hljs-string">&apos;object.text&apos;</span>: <span class="hljs-string">&apos;changed data&apos;</span>
+    });
+  },
+  addNewField: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.setData({
+      <span class="hljs-string">&apos;newField.text&apos;</span>: <span class="hljs-string">&apos;new data&apos;</span>
+    })
+  }
+})
+</code></pre>
+<p><strong>&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x7ACB;&#x9A6C;&#x5B8C;&#x5168;&#x5F04;&#x660E;&#x767D;&#xFF0C;&#x4E0D;&#x8FC7;&#x4EE5;&#x540E;&#x5B83;&#x4F1A;&#x6709;&#x5E2E;&#x52A9;&#x3002;</strong></p>
+<h3 id="&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<p>&#x4E0B;&#x56FE;&#x8BF4;&#x660E;&#x4E86; Page &#x5B9E;&#x4F8B;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;</p>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/mina-lifecycle.png?t=2018412" style="max-height:1000px;height:1000px"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

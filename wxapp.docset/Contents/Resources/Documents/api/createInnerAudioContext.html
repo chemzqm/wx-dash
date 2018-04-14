@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.createInnerAudioContext</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxcreateinneraudiocontext">wx.createInnerAudioContext()</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE;&#x5185;&#x90E8; audio &#x4E0A;&#x4E0B;&#x6587; <code>innerAudioContext</code> &#x5BF9;&#x8C61;&#x3002;<em>&#x672C;&#x63A5;&#x53E3;&#x662F; <code>wx.createAudioContext</code> &#x5347;&#x7EA7;&#x7248;&#x3002;</em></p>
+<h4 id="inneraudiocontext">innerAudioContext</h4>
+<p><strong>innerAudioContext &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x53EA;&#x8BFB;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>String</td>
+<td>&#x97F3;&#x9891;&#x7684;&#x6570;&#x636E;&#x94FE;&#x63A5;&#xFF0C;&#x7528;&#x4E8E;&#x76F4;&#x63A5;&#x64AD;&#x653E;&#x3002;</td>
+<td>&#x5426;</td>
+<td></td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>Number</td>
+<td>&#x5F00;&#x59CB;&#x64AD;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4; 0</td>
+<td>&#x5426;</td>
+<td></td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>&#x662F;&#x5426;&#x81EA;&#x52A8;&#x5F00;&#x59CB;&#x64AD;&#x653E;&#xFF0C;&#x9ED8;&#x8BA4; false</td>
+<td>&#x5426;</td>
+<td></td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>&#x662F;&#x5426;&#x5FAA;&#x73AF;&#x64AD;&#x653E;&#xFF0C;&#x9ED8;&#x8BA4; false</td>
+<td>&#x5426;</td>
+<td></td>
+</tr>
+<tr>
+<td>obeyMuteSwitch</td>
+<td>Boolean</td>
+<td>&#x662F;&#x5426;&#x9075;&#x5FAA;&#x7CFB;&#x7EDF;&#x9759;&#x97F3;&#x5F00;&#x5173;&#xFF0C;&#x5F53;&#x6B64;&#x53C2;&#x6570;&#x4E3A; false &#x65F6;&#xFF0C;&#x5373;&#x4F7F;&#x7528;&#x6237;&#x6253;&#x5F00;&#x4E86;&#x9759;&#x97F3;&#x5F00;&#x5173;&#xFF0C;&#x4E5F;&#x80FD;&#x7EE7;&#x7EED;&#x53D1;&#x51FA;&#x58F0;&#x97F3;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C; true</td>
+<td>&#x5426;</td>
+<td></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Number</td>
+<td>&#x5F53;&#x524D;&#x97F3;&#x9891;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5F53;&#x524D;&#x6709;&#x5408;&#x6CD5;&#x7684; src &#x65F6;&#x8FD4;&#x56DE;</td>
+<td>&#x662F;</td>
+<td></td>
+</tr>
+<tr>
+<td>currentTime</td>
+<td>Number</td>
+<td>&#x5F53;&#x524D;&#x97F3;&#x9891;&#x7684;&#x64AD;&#x653E;&#x4F4D;&#x7F6E;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5F53;&#x524D;&#x6709;&#x5408;&#x6CD5;&#x7684; src &#x65F6;&#x8FD4;&#x56DE;&#xFF0C;&#x65F6;&#x95F4;&#x4E0D;&#x53D6;&#x6574;&#xFF0C;&#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x70B9;&#x540E; 6 &#x4F4D;</td>
+<td>&#x662F;</td>
+<td></td>
+</tr>
+<tr>
+<td>paused</td>
+<td>Boolean</td>
+<td>&#x5F53;&#x524D;&#x662F;&#x662F;&#x5426;&#x6682;&#x505C;&#x6216;&#x505C;&#x6B62;&#x72B6;&#x6001;&#xFF0C;true &#x8868;&#x793A;&#x6682;&#x505C;&#x6216;&#x505C;&#x6B62;&#xFF0C;false &#x8868;&#x793A;&#x6B63;&#x5728;&#x64AD;&#x653E;</td>
+<td>&#x662F;</td>
+<td></td>
+</tr>
+<tr>
+<td>buffered</td>
+<td>Number</td>
+<td>&#x97F3;&#x9891;&#x7F13;&#x51B2;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x4EC5;&#x4FDD;&#x8BC1;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x65F6;&#x95F4;&#x70B9;&#x5230;&#x6B64;&#x65F6;&#x95F4;&#x70B9;&#x5185;&#x5BB9;&#x5DF2;&#x7F13;&#x51B2;&#x3002;</td>
+<td>&#x662F;</td>
+<td></td>
+</tr>
+<tr>
+<td>volume</td>
+<td>Number</td>
+<td>&#x97F3;&#x91CF;&#x3002;&#x8303;&#x56F4; 0~1&#x3002;</td>
+<td>&#x5426;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>innerAudioContext &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>play</td>
+<td>&#x65E0;</td>
+<td>&#x64AD;&#x653E;</td>
+<td></td>
+</tr>
+<tr>
+<td>pause</td>
+<td>&#x65E0;</td>
+<td>&#x6682;&#x505C;</td>
+<td></td>
+</tr>
+<tr>
+<td>stop</td>
+<td>&#x65E0;</td>
+<td>&#x505C;&#x6B62;</td>
+<td></td>
+</tr>
+<tr>
+<td>seek</td>
+<td>position</td>
+<td>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5355;&#x4F4D; s</td>
+<td></td>
+</tr>
+<tr>
+<td>destroy</td>
+<td>&#x65E0;</td>
+<td>&#x9500;&#x6BC1;&#x5F53;&#x524D;&#x5B9E;&#x4F8B;</td>
+<td></td>
+</tr>
+<tr>
+<td>onCanplay</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x8FDB;&#x5165;&#x53EF;&#x4EE5;&#x64AD;&#x653E;&#x72B6;&#x6001;&#xFF0C;&#x4F46;&#x4E0D;&#x4FDD;&#x8BC1;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x6D41;&#x7545;&#x64AD;&#x653E;</td>
+<td></td>
+</tr>
+<tr>
+<td>onPlay</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x64AD;&#x653E;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>onPause</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>onStop</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>onEnded</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x81EA;&#x7136;&#x64AD;&#x653E;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>onTimeUpdate</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>onError</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x64AD;&#x653E;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>onWaiting</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x52A0;&#x8F7D;&#x4E2D;&#x4E8B;&#x4EF6;&#xFF0C;&#x5F53;&#x97F3;&#x9891;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x4E0D;&#x8DB3;&#xFF0C;&#x9700;&#x8981;&#x505C;&#x4E0B;&#x6765;&#x52A0;&#x8F7D;&#x65F6;&#x4F1A;&#x89E6;&#x53D1;</td>
+<td></td>
+</tr>
+<tr>
+<td>onSeeking</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x8FDB;&#x884C; seek &#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>onSeeked</td>
+<td>callback</td>
+<td>&#x97F3;&#x9891;&#x5B8C;&#x6210; seek &#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;</td>
+<td></td>
+</tr>
+<tr>
+<td>offCanplay</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onCanplay &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offPlay</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onPlay &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offPause</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onPause &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offStop</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onStop &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offEnded</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onEnded &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offTimeUpdate</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onTimeUpdate &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offError</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onError &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offWaiting</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onWaiting &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offSeeking</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onSeeking &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+<tr>
+<td>offSeeked</td>
+<td>callback</td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C; onSeeked &#x4E8B;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="errcode-&#x8BF4;&#x660E;">errCode &#x8BF4;&#x660E;</h4>
+<table>
+<thead>
+<tr>
+<th>errCode</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10001</td>
+<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>&#x7F51;&#x7EDC;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>&#x6587;&#x4EF6;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>&#x683C;&#x5F0F;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>&#x672A;&#x77E5;&#x9519;&#x8BEF;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> innerAudioContext = wx.createInnerAudioContext()
+innerAudioContext.autoplay = <span class="hljs-literal">true</span>
+innerAudioContext.src = <span class="hljs-string">&apos;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46&apos;</span>
+innerAudioContext.onPlay(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F00;&#x59CB;&#x64AD;&#x653E;&apos;</span>)
+})
+innerAudioContext.onError((res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(res.errMsg)
+    <span class="hljs-built_in">console</span>.log(res.errCode)
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

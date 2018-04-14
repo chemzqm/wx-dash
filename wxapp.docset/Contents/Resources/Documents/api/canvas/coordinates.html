@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>coordinates</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="canvas-&#x5750;&#x6807;&#x7CFB;">Canvas &#x5750;&#x6807;&#x7CFB;</h1>
+<p>canvas &#x662F;&#x5728;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x7684;&#x7F51;&#x683C;&#x5F53;&#x4E2D;&#x3002;</p>
+<p>&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x5750;&#x6807;&#x4E3A;<code>(0, 0)</code>&#x3002;</p>
+<p>&#x5728;&#x4E4B;&#x524D;&#x7684;<a href="intro.html">&#x7AE0;&#x8282;</a>&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x4E86;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5; <code>fillRect(0, 0, 150, 75)</code>&#x3002;</p>
+<p>&#x5B83;&#x7684;&#x542B;&#x4E49;&#x4E3A;&#xFF1A;&#x4ECE;&#x5DE6;&#x4E0A;&#x89D2;<code>(0, 0)</code>&#x5F00;&#x59CB;&#xFF0C;&#x753B;&#x4E00;&#x4E2A;<code>150 x 75</code>px &#x7684;&#x77E9;&#x5F62;&#x3002;</p>
+<h3 id="&#x5750;&#x6807;&#x7CFB;&#x4F8B;&#x5B50;&#xFF1A;">&#x5750;&#x6807;&#x7CFB;&#x4F8B;&#x5B50;&#xFF1A;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; <code>&lt;canvas/&gt;</code> &#x4E2D;&#x52A0;&#x4E0A;&#x4E00;&#x4E9B;&#x4E8B;&#x4EF6;&#xFF0C;&#x6765;&#x89C2;&#x6D4B;&#x5B83;&#x7684;&#x5750;&#x6807;&#x7CFB;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;myCanvas&quot;</span>
+  <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;margin: 5px; border:1px solid #d3d3d3;&quot;</span>
+  <span class="hljs-attr">bindtouchstart</span>=<span class="hljs-string">&quot;start&quot;</span>
+  <span class="hljs-attr">bindtouchmove</span>=<span class="hljs-string">&quot;move&quot;</span>
+  <span class="hljs-attr">bindtouchend</span>=<span class="hljs-string">&quot;end&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">hidden</span>=<span class="hljs-string">&quot;{{hidden}}&quot;</span>&gt;</span>
+  Coordinates: ({{x}}, {{y}})
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js">Page({
+  data: {
+    x: <span class="hljs-number">0</span>,
+    y: <span class="hljs-number">0</span>,
+    hidden: <span class="hljs-literal">true</span>
+  },
+  start: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">this</span>.setData({
+      hidden: <span class="hljs-literal">false</span>,
+      x: e.touches[<span class="hljs-number">0</span>].x,
+      y: e.touches[<span class="hljs-number">0</span>].y
+    })
+  },
+  move: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">this</span>.setData({
+      x: e.touches[<span class="hljs-number">0</span>].x,
+      y: e.touches[<span class="hljs-number">0</span>].y
+    })
+  },
+  end: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">this</span>.setData({
+      hidden: <span class="hljs-literal">true</span>
+    })
+  }
+})
+</code></pre>
+<p>&#x5F53;&#x4F60;&#x628A;&#x624B;&#x6307;&#x653E;&#x5230; canvas &#x4E2D;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;&#x4E0B;&#x8FB9;&#x663E;&#x793A;&#x51FA;&#x89E6;&#x78B0;&#x70B9;&#x7684;&#x5750;&#x6807;&#xFF1A;</p>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/coordinates.gif?t=2018412" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>
