@@ -4,9 +4,9 @@ json -e 'var v = this.version; var n = parseInt(v.match(/\.(\d+)$/)[1]); n++ ; t
 version=`cat package.json | json version`
 echo $version
 
-cat << EOF | sed "s+version+$version+" > wxdash.xml
+cat << EOF > wxdash.xml
 <entry>
-    <version>version</version>
+    <version>$version</version>
     <url>https://raw.githubusercontent.com/chemzqm/wx-dash/master/wxapp.tgz</url>
 </entry>
 EOF
