@@ -20,73 +20,73 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextdrawimage">canvasContext.drawImage</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x5230;&#x753B;&#x5E03;&#x3002;</p>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="定义">定义</h3>
+<p>绘制图像到画布。</p>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>imageResource</td>
 <td>String</td>
-<td>&#x6240;&#x8981;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x7247;&#x8D44;&#x6E90;</td>
+<td>所要绘制的图片资源</td>
 </tr>
 <tr>
 <td>dx</td>
 <td>Number</td>
-<td>&#x56FE;&#x50CF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x5728;&#x76EE;&#x6807;canvas&#x4E0A; X &#x8F74;&#x7684;&#x4F4D;&#x7F6E;</td>
+<td>图像的左上角在目标canvas上 X 轴的位置</td>
 </tr>
 <tr>
 <td>dy</td>
 <td>Number</td>
-<td>&#x56FE;&#x50CF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x5728;&#x76EE;&#x6807;canvas&#x4E0A; Y &#x8F74;&#x7684;&#x4F4D;&#x7F6E;</td>
+<td>图像的左上角在目标canvas上 Y 轴的位置</td>
 </tr>
 <tr>
 <td>dWidth</td>
 <td>Number</td>
-<td>&#x5728;&#x76EE;&#x6807;&#x753B;&#x5E03;&#x4E0A;&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x5141;&#x8BB8;&#x5BF9;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x7F29;&#x653E;</td>
+<td>在目标画布上绘制图像的宽度，允许对绘制的图像进行缩放</td>
 </tr>
 <tr>
 <td>dHeigt</td>
 <td>Number</td>
-<td>&#x5728;&#x76EE;&#x6807;&#x753B;&#x5E03;&#x4E0A;&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x5141;&#x8BB8;&#x5BF9;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x7F29;&#x653E;</td>
+<td>在目标画布上绘制图像的高度，允许对绘制的图像进行缩放</td>
 </tr>
 <tr>
 <td>sx</td>
 <td>Number</td>
-<td>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; X &#x5750;&#x6807;</td>
+<td>源图像的矩形选择框的左上角 X 坐标</td>
 </tr>
 <tr>
 <td>sy</td>
 <td>Number</td>
-<td>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; Y &#x5750;&#x6807;</td>
+<td>源图像的矩形选择框的左上角 Y 坐标</td>
 </tr>
 <tr>
 <td>sWidth</td>
 <td>Number</td>
-<td>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x9AD8;&#x5EA6;</td>
+<td>源图像的矩形选择框的高度</td>
 </tr>
 <tr>
 <td>sHeight</td>
 <td>Number</td>
-<td>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x9AD8;&#x5EA6;</td>
+<td>源图像的矩形选择框的高度</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x6709;&#x4E09;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</strong></p>
+<p><strong>有三个版本的写法：</strong></p>
 <ul>
 <li>drawImage(dx, dy)</li>
 <li>drawImage(dx, dy, dWidth, dHeight)</li>
-<li>drawImage(sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) <strong>&#x4ECE; 1.9.0 &#x8D77;&#x652F;&#x6301;</strong></li>
+<li>drawImage(sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) <strong>从 1.9.0 起支持</strong></li>
 </ul>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 
 wx.chooseImage({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{

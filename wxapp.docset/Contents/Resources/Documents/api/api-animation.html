@@ -20,315 +20,315 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxcreateanimationobject">wx.createAnimation(OBJECT)</h3>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x5B9E;&#x4F8B;<a href="#animation">animation</a>&#x3002;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x63CF;&#x8FF0;&#x52A8;&#x753B;&#x3002;&#x6700;&#x540E;&#x901A;&#x8FC7;&#x52A8;&#x753B;&#x5B9E;&#x4F8B;&#x7684;<code>export</code>&#x65B9;&#x6CD5;&#x5BFC;&#x51FA;&#x52A8;&#x753B;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;&#x7684;<code>animation</code>&#x5C5E;&#x6027;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;: <code>export</code> &#x65B9;&#x6CD5;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x540E;&#x4F1A;&#x6E05;&#x6389;&#x4E4B;&#x524D;&#x7684;&#x52A8;&#x753B;&#x64CD;&#x4F5C; </strong></p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>创建一个动画实例<a href="#animation">animation</a>。调用实例的方法来描述动画。最后通过动画实例的<code>export</code>方法导出动画数据传递给组件的<code>animation</code>属性。</p>
+<p><strong>注意: <code>export</code> 方法每次调用后会清掉之前的动画操作 </strong></p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>默认值</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>duration</td>
 <td>Integer</td>
-<td>&#x5426;</td>
+<td>否</td>
 <td>400</td>
-<td>&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;ms</td>
+<td>动画持续时间，单位ms</td>
 </tr>
 <tr>
 <td>timingFunction</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&quot;linear&quot;</td>
-<td>&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x7684;&#x6548;&#x679C;</td>
+<td>否</td>
+<td>"linear"</td>
+<td>定义动画的效果</td>
 </tr>
 <tr>
 <td>delay</td>
 <td>Integer</td>
-<td>&#x5426;</td>
+<td>否</td>
 <td>0</td>
-<td>&#x52A8;&#x753B;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D; ms</td>
+<td>动画延迟时间，单位 ms</td>
 </tr>
 <tr>
 <td>transformOrigin</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&quot;50% 50% 0&quot;</td>
-<td>&#x8BBE;&#x7F6E;transform-origin</td>
+<td>否</td>
+<td>"50% 50% 0"</td>
+<td>设置transform-origin</td>
 </tr>
 </tbody>
 </table>
-<p><strong> timingFunction &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
+<p><strong> timingFunction 有效值：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>值</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>linear</td>
-<td>&#x52A8;&#x753B;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x7684;&#x901F;&#x5EA6;&#x662F;&#x76F8;&#x540C;&#x7684;</td>
+<td>动画从头到尾的速度是相同的</td>
 </tr>
 <tr>
 <td>ease</td>
-<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x5FEB;&#xFF0C;&#x5728;&#x7ED3;&#x675F;&#x524D;&#x53D8;&#x6162;</td>
+<td>动画以低速开始，然后加快，在结束前变慢</td>
 </tr>
 <tr>
 <td>ease-in</td>
-<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;</td>
+<td>动画以低速开始</td>
 </tr>
 <tr>
 <td>ease-in-out</td>
-<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;</td>
+<td>动画以低速开始和结束</td>
 </tr>
 <tr>
 <td>ease-out</td>
-<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x7ED3;&#x675F;</td>
+<td>动画以低速结束</td>
 </tr>
 <tr>
 <td>step-start</td>
-<td>&#x52A8;&#x753B;&#x7B2C;&#x4E00;&#x5E27;&#x5C31;&#x8DF3;&#x81F3;&#x7ED3;&#x675F;&#x72B6;&#x6001;&#x76F4;&#x5230;&#x7ED3;&#x675F;</td>
+<td>动画第一帧就跳至结束状态直到结束</td>
 </tr>
 <tr>
 <td>step-end</td>
-<td>&#x52A8;&#x753B;&#x4E00;&#x76F4;&#x4FDD;&#x6301;&#x5F00;&#x59CB;&#x72B6;&#x6001;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x5E27;&#x8DF3;&#x5230;&#x7ED3;&#x675F;&#x72B6;&#x6001;</td>
+<td>动画一直保持开始状态，最后一帧跳到结束状态</td>
 </tr>
 </tbody>
 </table>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> animation = wx.createAnimation({
-  transformOrigin: <span class="hljs-string">&quot;50% 50%&quot;</span>,
+  transformOrigin: <span class="hljs-string">"50% 50%"</span>,
   duration: <span class="hljs-number">1000</span>,
-  timingFunction: <span class="hljs-string">&quot;ease&quot;</span>,
+  timingFunction: <span class="hljs-string">"ease"</span>,
   delay: <span class="hljs-number">0</span>
 })
 </code></pre>
 <h3 id="animation">animation</h3>
-<p>&#x52A8;&#x753B;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x6765;&#x63CF;&#x8FF0;&#x52A8;&#x753B;&#xFF0C;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x540E;&#x4F1A;&#x8FD4;&#x56DE;&#x81EA;&#x8EAB;&#xFF0C;&#x652F;&#x6301;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x7684;&#x5199;&#x6CD5;&#x3002;</p>
-<p><strong> animation &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
-<p>&#x6837;&#x5F0F;&#xFF1A;</p>
+<p>动画实例可以调用以下方法来描述动画，调用结束后会返回自身，支持链式调用的写法。</p>
+<p><strong> animation 对象的方法列表：</strong></p>
+<p>样式：</p>
 <table>
 <thead>
 <tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>opacity</td>
 <td>value</td>
-<td>&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x53C2;&#x6570;&#x8303;&#x56F4; 0~1</td>
+<td>透明度，参数范围 0~1</td>
 </tr>
 <tr>
 <td>backgroundColor</td>
 <td>color</td>
-<td>&#x989C;&#x8272;&#x503C;</td>
+<td>颜色值</td>
 </tr>
 <tr>
 <td>width</td>
 <td>length</td>
-<td>&#x957F;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165; Number &#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; px&#xFF0C;&#x53EF;&#x4F20;&#x5165;&#x5176;&#x4ED6;&#x81EA;&#x5B9A;&#x4E49;&#x5355;&#x4F4D;&#x7684;&#x957F;&#x5EA6;&#x503C;</td>
+<td>长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值</td>
 </tr>
 <tr>
 <td>height</td>
 <td>length</td>
-<td>&#x957F;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165; Number &#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; px&#xFF0C;&#x53EF;&#x4F20;&#x5165;&#x5176;&#x4ED6;&#x81EA;&#x5B9A;&#x4E49;&#x5355;&#x4F4D;&#x7684;&#x957F;&#x5EA6;&#x503C;</td>
+<td>长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值</td>
 </tr>
 <tr>
 <td>top</td>
 <td>length</td>
-<td>&#x957F;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165; Number &#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; px&#xFF0C;&#x53EF;&#x4F20;&#x5165;&#x5176;&#x4ED6;&#x81EA;&#x5B9A;&#x4E49;&#x5355;&#x4F4D;&#x7684;&#x957F;&#x5EA6;&#x503C;</td>
+<td>长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值</td>
 </tr>
 <tr>
 <td>left</td>
 <td>length</td>
-<td>&#x957F;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165; Number &#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; px&#xFF0C;&#x53EF;&#x4F20;&#x5165;&#x5176;&#x4ED6;&#x81EA;&#x5B9A;&#x4E49;&#x5355;&#x4F4D;&#x7684;&#x957F;&#x5EA6;&#x503C;</td>
+<td>长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值</td>
 </tr>
 <tr>
 <td>bottom</td>
 <td>length</td>
-<td>&#x957F;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165; Number &#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; px&#xFF0C;&#x53EF;&#x4F20;&#x5165;&#x5176;&#x4ED6;&#x81EA;&#x5B9A;&#x4E49;&#x5355;&#x4F4D;&#x7684;&#x957F;&#x5EA6;&#x503C;</td>
+<td>长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值</td>
 </tr>
 <tr>
 <td>right</td>
 <td>length</td>
-<td>&#x957F;&#x5EA6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165; Number &#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; px&#xFF0C;&#x53EF;&#x4F20;&#x5165;&#x5176;&#x4ED6;&#x81EA;&#x5B9A;&#x4E49;&#x5355;&#x4F4D;&#x7684;&#x957F;&#x5EA6;&#x503C;</td>
+<td>长度值，如果传入 Number 则默认使用 px，可传入其他自定义单位的长度值</td>
 </tr>
 </tbody>
 </table>
-<p>&#x65CB;&#x8F6C;&#xFF1A;</p>
+<p>旋转：</p>
 <table>
 <thead>
 <tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>rotate</td>
 <td>deg</td>
-<td>deg&#x7684;&#x8303;&#x56F4;-180~180&#xFF0C;&#x4ECE;&#x539F;&#x70B9;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;deg&#x89D2;&#x5EA6;</td>
+<td>deg的范围-180~180，从原点顺时针旋转一个deg角度</td>
 </tr>
 <tr>
 <td>rotateX</td>
 <td>deg</td>
-<td>deg&#x7684;&#x8303;&#x56F4;-180~180&#xFF0C;&#x5728;X&#x8F74;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;deg&#x89D2;&#x5EA6;</td>
+<td>deg的范围-180~180，在X轴旋转一个deg角度</td>
 </tr>
 <tr>
 <td>rotateY</td>
 <td>deg</td>
-<td>deg&#x7684;&#x8303;&#x56F4;-180~180&#xFF0C;&#x5728;Y&#x8F74;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;deg&#x89D2;&#x5EA6;</td>
+<td>deg的范围-180~180，在Y轴旋转一个deg角度</td>
 </tr>
 <tr>
 <td>rotateZ</td>
 <td>deg</td>
-<td>deg&#x7684;&#x8303;&#x56F4;-180~180&#xFF0C;&#x5728;Z&#x8F74;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;deg&#x89D2;&#x5EA6;</td>
+<td>deg的范围-180~180，在Z轴旋转一个deg角度</td>
 </tr>
 <tr>
 <td>rotate3d</td>
 <td>(x,y,z,deg)</td>
-<td>&#x540C;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d" target="_blank">transform-function rotate3d</a></td>
+<td>同<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d" target="_blank">transform-function rotate3d</a></td>
 </tr>
 </tbody>
 </table>
-<p>&#x7F29;&#x653E;&#xFF1A;</p>
+<p>缩放：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th style="text-align:left">方法</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">scale</td>
 <td>sx,[sy]</td>
-<td>&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x5728;X&#x8F74;&#x3001;Y&#x8F74;&#x540C;&#x65F6;&#x7F29;&#x653E;sx&#x500D;&#x6570;&#xFF1B;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#x8868;&#x793A;&#x5728;X&#x8F74;&#x7F29;&#x653E;sx&#x500D;&#x6570;&#xFF0C;&#x5728;Y&#x8F74;&#x7F29;&#x653E;sy&#x500D;&#x6570;</td>
+<td>一个参数时，表示在X轴、Y轴同时缩放sx倍数；两个参数时表示在X轴缩放sx倍数，在Y轴缩放sy倍数</td>
 </tr>
 <tr>
 <td style="text-align:left">scaleX</td>
 <td>sx</td>
-<td>&#x5728;X&#x8F74;&#x7F29;&#x653E;sx&#x500D;&#x6570;</td>
+<td>在X轴缩放sx倍数</td>
 </tr>
 <tr>
 <td style="text-align:left">scaleY</td>
 <td>sy</td>
-<td>&#x5728;Y&#x8F74;&#x7F29;&#x653E;sy&#x500D;&#x6570;</td>
+<td>在Y轴缩放sy倍数</td>
 </tr>
 <tr>
 <td style="text-align:left">scaleZ</td>
 <td>sz</td>
-<td>&#x5728;Z&#x8F74;&#x7F29;&#x653E;sy&#x500D;&#x6570;</td>
+<td>在Z轴缩放sy倍数</td>
 </tr>
 <tr>
 <td style="text-align:left">scale3d</td>
 <td>(sx,sy,sz)</td>
-<td>&#x5728;X&#x8F74;&#x7F29;&#x653E;sx&#x500D;&#x6570;&#xFF0C;&#x5728;Y&#x8F74;&#x7F29;&#x653E;sy&#x500D;&#x6570;&#xFF0C;&#x5728;Z&#x8F74;&#x7F29;&#x653E;sz&#x500D;&#x6570;</td>
+<td>在X轴缩放sx倍数，在Y轴缩放sy倍数，在Z轴缩放sz倍数</td>
 </tr>
 </tbody>
 </table>
-<p>&#x504F;&#x79FB;&#xFF1A;</p>
+<p>偏移：</p>
 <table>
 <thead>
 <tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>translate</td>
 <td>tx,[ty]</td>
-<td>&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x5728;X&#x8F74;&#x504F;&#x79FB;tx&#xFF0C;&#x5355;&#x4F4D;px&#xFF1B;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x5728;X&#x8F74;&#x504F;&#x79FB;tx&#xFF0C;&#x5728;Y&#x8F74;&#x504F;&#x79FB;ty&#xFF0C;&#x5355;&#x4F4D;px&#x3002;</td>
+<td>一个参数时，表示在X轴偏移tx，单位px；两个参数时，表示在X轴偏移tx，在Y轴偏移ty，单位px。</td>
 </tr>
 <tr>
 <td>translateX</td>
 <td>tx</td>
-<td>&#x5728;X&#x8F74;&#x504F;&#x79FB;tx&#xFF0C;&#x5355;&#x4F4D;px</td>
+<td>在X轴偏移tx，单位px</td>
 </tr>
 <tr>
 <td>translateY</td>
 <td>ty</td>
-<td>&#x5728;Y&#x8F74;&#x504F;&#x79FB;tx&#xFF0C;&#x5355;&#x4F4D;px</td>
+<td>在Y轴偏移tx，单位px</td>
 </tr>
 <tr>
 <td>translateZ</td>
 <td>tz</td>
-<td>&#x5728;Z&#x8F74;&#x504F;&#x79FB;tx&#xFF0C;&#x5355;&#x4F4D;px</td>
+<td>在Z轴偏移tx，单位px</td>
 </tr>
 <tr>
 <td>translate3d</td>
 <td>(tx,ty,tz)</td>
-<td>&#x5728;X&#x8F74;&#x504F;&#x79FB;tx&#xFF0C;&#x5728;Y&#x8F74;&#x504F;&#x79FB;ty&#xFF0C;&#x5728;Z&#x8F74;&#x504F;&#x79FB;tz&#xFF0C;&#x5355;&#x4F4D;px</td>
+<td>在X轴偏移tx，在Y轴偏移ty，在Z轴偏移tz，单位px</td>
 </tr>
 </tbody>
 </table>
-<p>&#x503E;&#x659C;&#xFF1A;</p>
+<p>倾斜：</p>
 <table>
 <thead>
 <tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>skew</td>
 <td>ax,[ay]</td>
-<td>&#x53C2;&#x6570;&#x8303;&#x56F4;-180~180&#xFF1B;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;Y&#x8F74;&#x5750;&#x6807;&#x4E0D;&#x53D8;&#xFF0C;X&#x8F74;&#x5750;&#x6807;&#x5EF6;&#x987A;&#x65F6;&#x9488;&#x503E;&#x659C;ax&#x5EA6;&#xFF1B;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5206;&#x522B;&#x5728;X&#x8F74;&#x503E;&#x659C;ax&#x5EA6;&#xFF0C;&#x5728;Y&#x8F74;&#x503E;&#x659C;ay&#x5EA6;</td>
+<td>参数范围-180~180；一个参数时，Y轴坐标不变，X轴坐标延顺时针倾斜ax度；两个参数时，分别在X轴倾斜ax度，在Y轴倾斜ay度</td>
 </tr>
 <tr>
 <td>skewX</td>
 <td>ax</td>
-<td>&#x53C2;&#x6570;&#x8303;&#x56F4;-180~180&#xFF1B;Y&#x8F74;&#x5750;&#x6807;&#x4E0D;&#x53D8;&#xFF0C;X&#x8F74;&#x5750;&#x6807;&#x5EF6;&#x987A;&#x65F6;&#x9488;&#x503E;&#x659C;ax&#x5EA6;</td>
+<td>参数范围-180~180；Y轴坐标不变，X轴坐标延顺时针倾斜ax度</td>
 </tr>
 <tr>
 <td>skewY</td>
 <td>ay</td>
-<td>&#x53C2;&#x6570;&#x8303;&#x56F4;-180~180&#xFF1B;X&#x8F74;&#x5750;&#x6807;&#x4E0D;&#x53D8;&#xFF0C;Y&#x8F74;&#x5750;&#x6807;&#x5EF6;&#x987A;&#x65F6;&#x9488;&#x503E;&#x659C;ay&#x5EA6;</td>
+<td>参数范围-180~180；X轴坐标不变，Y轴坐标延顺时针倾斜ay度</td>
 </tr>
 </tbody>
 </table>
-<p>&#x77E9;&#x9635;&#x53D8;&#x5F62;&#xFF1A;</p>
+<p>矩阵变形：</p>
 <table>
 <thead>
 <tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>matrix</td>
 <td>(a,b,c,d,tx,ty)</td>
-<td>&#x540C;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix" target="_blank">transform-function matrix</a></td>
+<td>同<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix" target="_blank">transform-function matrix</a></td>
 </tr>
 <tr>
 <td>matrix3d</td>
 <td></td>
-<td>&#x540C;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d" target="_blank">transform-function matrix3d</a></td>
+<td>同<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d" target="_blank">transform-function matrix3d</a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x52A8;&#x753B;&#x961F;&#x5217;">&#x52A8;&#x753B;&#x961F;&#x5217;</h3>
-<p>&#x8C03;&#x7528;&#x52A8;&#x753B;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x540E;&#x8981;&#x8C03;&#x7528; <code>step()</code> &#x6765;&#x8868;&#x793A;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x5B8C;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x4E2D;&#x8C03;&#x7528;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x52A8;&#x753B;&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x52A8;&#x753B;&#x4F1A;&#x540C;&#x65F6;&#x5F00;&#x59CB;&#xFF0C;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x540E;&#x624D;&#x4F1A;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x3002;step &#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x8DDF; <code>wx.createAnimation()</code> &#x4E00;&#x6837;&#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5F53;&#x524D;&#x7EC4;&#x52A8;&#x753B;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
-<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">animation</span>=<span class="hljs-string">&quot;{{animationData}}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background:red;height:100rpx;width:100rpx&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<h3 id="动画队列">动画队列</h3>
+<p>调用动画操作方法后要调用 <code>step()</code> 来表示一组动画完成，可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。step 可以传入一个跟 <code>wx.createAnimation()</code> 一样的配置参数用于指定当前组动画的配置。</p>
+<p><strong>示例：</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">animation</span>=<span class="hljs-string">"{{animationData}}"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background:red;height:100rpx;width:100rpx"</span>></span><span class="hljs-tag"></<span class="hljs-name">view</span>></span>
 </code></pre>
 <pre><code class="lang-javascript">Page({
   data: {
@@ -337,7 +337,7 @@
   onShow: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">var</span> animation = wx.createAnimation({
       duration: <span class="hljs-number">1000</span>,
-        timingFunction: <span class="hljs-string">&apos;ease&apos;</span>,
+        timingFunction: <span class="hljs-string">'ease'</span>,
     })
 
     <span class="hljs-keyword">this</span>.animation = animation
@@ -356,14 +356,14 @@
     }.bind(<span class="hljs-keyword">this</span>), <span class="hljs-number">1000</span>)
   },
   rotateAndScale: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// &#x65CB;&#x8F6C;&#x540C;&#x65F6;&#x653E;&#x5927;</span>
+    <span class="hljs-comment">// 旋转同时放大</span>
     <span class="hljs-keyword">this</span>.animation.rotate(<span class="hljs-number">45</span>).scale(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>).step()
     <span class="hljs-keyword">this</span>.setData({
       animationData: <span class="hljs-keyword">this</span>.animation.export()
     })
   },
   rotateThenScale: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// &#x5148;&#x65CB;&#x8F6C;&#x540E;&#x653E;&#x5927;</span>
+    <span class="hljs-comment">// 先旋转后放大</span>
     <span class="hljs-keyword">this</span>.animation.rotate(<span class="hljs-number">45</span>).step()
     <span class="hljs-keyword">this</span>.animation.scale(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>).step()
     <span class="hljs-keyword">this</span>.setData({
@@ -371,7 +371,7 @@
     })
   },
   rotateAndScaleThenTranslate: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// &#x5148;&#x65CB;&#x8F6C;&#x540C;&#x65F6;&#x653E;&#x5927;&#xFF0C;&#x7136;&#x540E;&#x5E73;&#x79FB;</span>
+    <span class="hljs-comment">// 先旋转同时放大，然后平移</span>
     <span class="hljs-keyword">this</span>.animation.rotate(<span class="hljs-number">45</span>).scale(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>).step()
     <span class="hljs-keyword">this</span>.animation.translate(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).step({ duration: <span class="hljs-number">1000</span> })
     <span class="hljs-keyword">this</span>.setData({
@@ -380,9 +380,9 @@
   }
 })
 </code></pre>
-<h4 id="bug--tip">bug &amp; tip</h4>
+<h4 id="bug--tip">bug & tip</h4>
 <ol>
-<li><code>bug</code>: <code>iOS/Android</code> <code>6.3.30</code> &#x901A;&#x8FC7; step() &#x5206;&#x9694;&#x52A8;&#x753B;&#xFF0C;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x6B65;&#x52A8;&#x753B;&#x80FD;&#x751F;&#x6548;</li>
+<li><code>bug</code>: <code>iOS/Android</code> <code>6.3.30</code> 通过 step() 分隔动画，只有第一步动画能生效</li>
 </ol>
 
                                 

@@ -20,60 +20,60 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxsavefileobject">wx.saveFile(OBJECT)</h3>
-<p>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;saveFile &#x4F1A;&#x628A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#xFF0C;&#x56E0;&#x6B64;&#x8C03;&#x7528;&#x6210;&#x529F;&#x540E;&#x4F20;&#x5165;&#x7684; tempFilePath &#x5C06;&#x4E0D;&#x53EF;&#x7528;</strong></p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>保存文件到本地。<strong>注意：saveFile 会把临时文件移动，因此调用成功后传入的 tempFilePath 将不可用</strong></p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>tempFilePath</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;</td>
+<td>是</td>
+<td>需要保存的文件的临时路径</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF0C;res = {savedFilePath: &apos;&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&apos;}</td>
+<td>否</td>
+<td>返回文件的保存路径，res = {savedFilePath: '文件的保存路径'}</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>savedFilePath</td>
-<td>&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;</td>
+<td>文件的保存路径</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.chooseImage({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> tempFilePaths = res.tempFilePaths
@@ -86,93 +86,93 @@
   }
 })
 </code></pre>
-<h4 id="bug--tip">bug &amp; tip</h4>
+<h4 id="bug--tip">bug & tip</h4>
 <ol>
-<li><code>tip</code>: &#x672C;&#x5730;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x7684;&#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A; 10M</li>
+<li><code>tip</code>: 本地文件存储的大小限制为 10M</li>
 </ol>
 <h3 id="wxgetsavedfilelistobject">wx.getSavedFileList(OBJECT)</h3>
-<p>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>获取本地已保存的文件列表</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x89C1;<code>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</code></td>
+<td>否</td>
+<td>接口调用成功的回调函数，返回结果见<code>success返回参数说明</code></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+<td>接口调用结果</td>
 </tr>
 <tr>
 <td>fileList</td>
 <td>Object Array</td>
-<td>&#x6587;&#x4EF6;&#x5217;&#x8868;</td>
+<td>文件列表</td>
 </tr>
 </tbody>
 </table>
-<p><strong>fileList&#x4E2D;&#x7684;&#x9879;&#x76EE;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>fileList中的项目说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x952E;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>键</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>filePath</td>
 <td>String</td>
-<td>&#x6587;&#x4EF6;&#x7684;&#x672C;&#x5730;&#x8DEF;&#x5F84;</td>
+<td>文件的本地路径</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>Number</td>
-<td>&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x65F6;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x4ECE;1970/01/01 08:00:00 &#x5230;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x79D2;&#x6570;</td>
+<td>文件的保存时的时间戳，从1970/01/01 08:00:00 到当前时间的秒数</td>
 </tr>
 <tr>
 <td>size</td>
 <td>Number</td>
-<td>&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;B</td>
+<td>文件大小，单位B</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getSavedFileList({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.fileList)
@@ -180,74 +180,74 @@
 })
 </code></pre>
 <h3 id="wxgetsavedfileinfoobject">wx.getSavedFileInfo(OBJECT)</h3>
-<p>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#x3002;&#x6B64;&#x63A5;&#x53E3;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5DF2;&#x4FDD;&#x5B58;&#x5230;&#x672C;&#x5730;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x82E5;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <a href="getFileInfo.html">wx.getFileInfo</a> &#x63A5;&#x53E3;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 <a href="getFileInfo.html">wx.getFileInfo</a> 接口。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>filePath</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td>是</td>
+<td>文件路径</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x89C1;<code>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</code></td>
+<td>否</td>
+<td>接口调用成功的回调函数，返回结果见<code>success返回参数说明</code></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+<td>接口调用结果</td>
 </tr>
 <tr>
 <td>size</td>
 <td>Number</td>
-<td>&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;B</td>
+<td>文件大小，单位B</td>
 </tr>
 <tr>
 <td>createTime</td>
 <td>Number</td>
-<td>&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x65F6;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x4ECE;1970/01/01 08:00:00 &#x5230;&#x8BE5;&#x65F6;&#x523B;&#x7684;&#x79D2;&#x6570;</td>
+<td>文件保存时的时间戳，从1970/01/01 08:00:00 到该时刻的秒数</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getSavedFileInfo({
-  filePath: <span class="hljs-string">&apos;wxfile://somefile&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x505A;&#x793A;&#x4F8B;&#x7528;&#xFF0C;&#x975E;&#x771F;&#x6B63;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+  filePath: <span class="hljs-string">'wxfile://somefile'</span>, <span class="hljs-comment">//仅做示例用，非真正的文件路径</span>
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.size)
     <span class="hljs-built_in">console</span>.log(res.createTime)
@@ -255,48 +255,48 @@
 })
 </code></pre>
 <h3 id="wxremovesavedfileobject">wx.removeSavedFile(OBJECT)</h3>
-<p>&#x5220;&#x9664;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x6587;&#x4EF6;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>删除本地存储的文件</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>filePath</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x5220;&#x9664;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td>是</td>
+<td>需要删除的文件路径</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getSavedFileList({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">if</span> (res.fileList.length &gt; <span class="hljs-number">0</span>){
+    <span class="hljs-keyword">if</span> (res.fileList.length > <span class="hljs-number">0</span>){
       wx.removeSavedFile({
         filePath: res.fileList[<span class="hljs-number">0</span>].filePath,
         complete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
@@ -308,64 +308,64 @@
 })
 </code></pre>
 <h3 id="wxopendocumentobject">wx.openDocument(OBJECT)</h3>
-<p>&#x65B0;&#x5F00;&#x9875;&#x9762;&#x6253;&#x5F00;&#x6587;&#x6863;&#xFF0C;&#x652F;&#x6301;&#x683C;&#x5F0F;&#xFF1A;doc, xls, ppt, pdf, docx, xlsx, pptx</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>新开页面打开文档，支持格式：doc, xls, ppt, pdf, docx, xlsx, pptx</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数</th>
+<th>说明</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>filePath</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; downFile &#x83B7;&#x5F97;</td>
+<td>是</td>
+<td>文件路径，可通过 downFile 获得</td>
 <td></td>
 </tr>
 <tr>
 <td>fileType</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x6709;&#x6548;&#x503C; doc, xls, ppt, pdf, docx, xlsx, pptx</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+<td>否</td>
+<td>文件类型，指定文件类型打开文件，有效值 doc, xls, ppt, pdf, docx, xlsx, pptx</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<h4 id="示例代码">示例代码</h4>
 <pre><code class="lang-javascript">wx.downloadFile({
-  url: <span class="hljs-string">&apos;http://example.com/somefile.pdf&apos;</span>,
+  url: <span class="hljs-string">'http://example.com/somefile.pdf'</span>,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> filePath = res.tempFilePath
     wx.openDocument({
       filePath: filePath,
       success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6253;&#x5F00;&#x6587;&#x6863;&#x6210;&#x529F;&apos;</span>)
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'打开文档成功'</span>)
       }
     })
   }

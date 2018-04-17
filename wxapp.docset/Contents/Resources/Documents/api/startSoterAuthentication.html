@@ -21,250 +21,250 @@
                                 
                                 <h3 id="wxstartsoterauthenticationobject">wx.startSoterAuthentication(OBJECT)</h3>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.5.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
 </blockquote>
-<p>&#x5F00;&#x59CB; SOTER &#x751F;&#x7269;&#x8BA4;&#x8BC1;</p>
-<p><strong>Object&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>开始 SOTER 生物认证</p>
+<p><strong>Object参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>requestAuthModes</td>
 <td>StringArray</td>
-<td>&#x662F;</td>
-<td>&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#x7684;&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x751F;&#x7269;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;</td>
+<td>是</td>
+<td>请求使用的可接受的生物认证方式</td>
 </tr>
 <tr>
 <td>challenge</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x6311;&#x6218;&#x56E0;&#x5B50;&#x3002;&#x6311;&#x6218;&#x56E0;&#x5B50;&#x4E3A;&#x8C03;&#x7528;&#x8005;&#x4E3A;&#x6B64;&#x6B21;&#x751F;&#x7269;&#x9274;&#x6743;&#x51C6;&#x5907;&#x7684;&#x7528;&#x4E8E;&#x7B7E;&#x540D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5173;&#x952E;&#x8BC6;&#x522B;&#x4FE1;&#x606F;&#xFF0C;&#x5C06;&#x4F5C;&#x4E3A;result_json&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4F9B;&#x8C03;&#x7528;&#x8005;&#x8BC6;&#x522B;&#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x5982;&#x679C;&#x573A;&#x666F;&#x4E3A;&#x8BF7;&#x6C42;&#x7528;&#x6237;&#x5BF9;&#x67D0;&#x8BA2;&#x5355;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x786E;&#x8BA4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C06;&#x8BA2;&#x5355;&#x53F7;&#x586B;&#x5165;&#x6B64;&#x53C2;&#x6570;&#x3002;</td>
+<td>是</td>
+<td>挑战因子。挑战因子为调用者为此次生物鉴权准备的用于签名的字符串关键识别信息，将作为result_json的一部分，供调用者识别本次请求。例如：如果场景为请求用户对某订单进行授权确认，则可以将订单号填入此参数。</td>
 </tr>
 <tr>
 <td>authContent</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x9A8C;&#x8BC1;&#x63CF;&#x8FF0;&#xFF0C;&#x5373;&#x8BC6;&#x522B;&#x8FC7;&#x7A0B;&#x4E2D;&#x663E;&#x793A;&#x5728;&#x754C;&#x9762;&#x4E0A;&#x7684;&#x5BF9;&#x8BDD;&#x6846;&#x63D0;&#x793A;&#x5185;&#x5BB9;</td>
+<td>否</td>
+<td>验证描述，即识别过程中显示在界面上的对话框提示内容</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数名</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errCode</td>
 <td>Number</td>
-<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td>错误码</td>
 </tr>
 <tr>
 <td>authMode</td>
 <td>String</td>
-<td>&#x751F;&#x7269;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;</td>
+<td>生物认证方式</td>
 </tr>
 <tr>
 <td>resultJSON</td>
 <td>String</td>
-<td>&#x5728;&#x8BBE;&#x5907;&#x5B89;&#x5168;&#x533A;&#x57DF;&#xFF08;TEE&#xFF09;&#x5185;&#x83B7;&#x5F97;&#x7684;&#x672C;&#x673A;&#x5B89;&#x5168;&#x4FE1;&#x606F;&#xFF08;&#x5982;TEE&#x540D;&#x79F0;&#x7248;&#x672C;&#x53F7;&#x7B49;&#x4EE5;&#x53CA;&#x9632;&#x91CD;&#x653E;&#x53C2;&#x6570;&#xFF09;&#x4EE5;&#x53CA;&#x672C;&#x6B21;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF08;&#x4EC5;Android&#x652F;&#x6301;&#xFF0C;&#x672C;&#x6B21;&#x8BA4;&#x8BC1;&#x7684;&#x6307;&#x7EB9;ID&#xFF09;&#xFF08;&#x4EC5;Android&#x652F;&#x6301;&#xFF0C;&#x672C;&#x6B21;&#x8BA4;&#x8BC1;&#x7684;&#x6307;&#x7EB9;ID&#xFF09;</td>
+<td>在设备安全区域（TEE）内获得的本机安全信息（如TEE名称版本号等以及防重放参数）以及本次认证信息（仅Android支持，本次认证的指纹ID）（仅Android支持，本次认证的指纹ID）</td>
 </tr>
 <tr>
 <td>resultJSONSignature</td>
 <td>String</td>
-<td>&#x7528;SOTER&#x5B89;&#x5168;&#x5BC6;&#x94A5;&#x5BF9;result_json&#x7684;&#x7B7E;&#x540D;(SHA256withRSA/PSS, saltlen=20)</td>
+<td>用SOTER安全密钥对result_json的签名(SHA256withRSA/PSS, saltlen=20)</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+<td>接口调用结果</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x751F;&#x7269;&#x8BC6;&#x522B;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;&#xFF1A;</strong></p>
+<p><strong>生物识别方式定义：</strong></p>
 <table>
 <thead>
 <tr>
 <th>mode</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>fingerPrint</td>
-<td>&#x6307;&#x7EB9;&#x8BC6;&#x522B;</td>
+<td>指纹识别</td>
 </tr>
 <tr>
 <td>facial</td>
-<td>&#x4EBA;&#x8138;&#x8BC6;&#x522B;&#xFF08;&#x6682;&#x672A;&#x652F;&#x6301;&#xFF09;</td>
+<td>人脸识别（暂未支持）</td>
 </tr>
 <tr>
 <td>speech</td>
-<td>&#x58F0;&#x7EB9;&#x8BC6;&#x522B;&#xFF08;&#x6682;&#x672A;&#x652F;&#x6301;&#xFF09;</td>
+<td>声纹识别（暂未支持）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>resultJSON &#x8BF4;&#x660E;&#xFF1A;</strong></p>
-<p>&#x6B64;&#x6570;&#x636E;&#x4E3A;&#x8BBE;&#x5907;TEE&#x4E2D;&#xFF0C;&#x5C06;&#x4F20;&#x5165;&#x7684;challenge&#x548C;TEE&#x5185;&#x5176;&#x4ED6;&#x5B89;&#x5168;&#x4FE1;&#x606F;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7EC4;&#x88C5;&#x800C;&#x6765;&#x7684;JSON&#xFF0C;&#x5BF9;&#x4E0B;&#x8FF0;&#x5B57;&#x6BB5;&#x7684;&#x89E3;&#x91CA;&#x5982;&#x8868;2&#x3002;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>resultJSON 说明：</strong></p>
+<p>此数据为设备TEE中，将传入的challenge和TEE内其他安全信息组成的数据进行组装而来的JSON，对下述字段的解释如表2。例子如下：</p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;raw&quot;</span>:<span class="hljs-string">&quot;msg&quot;</span>,
-    <span class="hljs-string">&quot;fid&quot;</span>:<span class="hljs-string">&quot;2&quot;</span>,
-    <span class="hljs-string">&quot;counter&quot;</span>:<span class="hljs-number">123</span>,
-    <span class="hljs-string">&quot;tee_n&quot;</span>:<span class="hljs-string">&quot;TEE Name&quot;</span>,
-    <span class="hljs-string">&quot;tee_v&quot;</span>:<span class="hljs-string">&quot;TEE Version&quot;</span>,
-    <span class="hljs-string">&quot;fp_n&quot;</span>:<span class="hljs-string">&quot;Fingerprint Sensor Name&quot;</span>,
-    <span class="hljs-string">&quot;fp_v&quot;</span>:<span class="hljs-string">&quot;Fingerprint Sensor Version&quot;</span>,
-    <span class="hljs-string">&quot;cpu_id&quot;</span>:<span class="hljs-string">&quot;CPU Id&quot;</span>,
-    <span class="hljs-string">&quot;uid&quot;</span>:<span class="hljs-string">&quot;21&quot;</span>
+    <span class="hljs-string">"raw"</span>:<span class="hljs-string">"msg"</span>,
+    <span class="hljs-string">"fid"</span>:<span class="hljs-string">"2"</span>,
+    <span class="hljs-string">"counter"</span>:<span class="hljs-number">123</span>,
+    <span class="hljs-string">"tee_n"</span>:<span class="hljs-string">"TEE Name"</span>,
+    <span class="hljs-string">"tee_v"</span>:<span class="hljs-string">"TEE Version"</span>,
+    <span class="hljs-string">"fp_n"</span>:<span class="hljs-string">"Fingerprint Sensor Name"</span>,
+    <span class="hljs-string">"fp_v"</span>:<span class="hljs-string">"Fingerprint Sensor Version"</span>,
+    <span class="hljs-string">"cpu_id"</span>:<span class="hljs-string">"CPU Id"</span>,
+    <span class="hljs-string">"uid"</span>:<span class="hljs-string">"21"</span>
 }
 </code></pre>
 <table>
 <thead>
 <tr>
-<th>&#x5B57;&#x6BB5;&#x540D;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>字段名</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>raw</td>
-<td>&#x8C03;&#x7528;&#x8005;&#x4F20;&#x5165;&#x7684;challenge</td>
+<td>调用者传入的challenge</td>
 </tr>
 <tr>
 <td>fid</td>
-<td>&#xFF08;&#x4EC5;Android&#x652F;&#x6301;&#xFF09;&#x672C;&#x6B21;&#x751F;&#x7269;&#x8BC6;&#x522B;&#x8BA4;&#x8BC1;&#x7684;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x7F16;&#x53F7;&#xFF08;&#x5982;&#x6307;&#x7EB9;&#x8BC6;&#x522B;&#x5219;&#x662F;&#x6307;&#x7EB9;&#x4FE1;&#x606F;&#x5728;&#x672C;&#x8BBE;&#x5907;&#x5185;&#x90E8;&#x7F16;&#x53F7;&#xFF09;</td>
+<td>（仅Android支持）本次生物识别认证的生物信息编号（如指纹识别则是指纹信息在本设备内部编号）</td>
 </tr>
 <tr>
 <td>counter</td>
-<td>&#x9632;&#x91CD;&#x653E;&#x7279;&#x5F81;&#x53C2;&#x6570;</td>
+<td>防重放特征参数</td>
 </tr>
 <tr>
 <td>tee_n</td>
-<td>TEE&#x540D;&#x79F0;&#xFF08;&#x5982;&#x9AD8;&#x901A;&#x6216;&#x8005;trustonic&#x7B49;&#xFF09;</td>
+<td>TEE名称（如高通或者trustonic等）</td>
 </tr>
 <tr>
 <td>tee_v</td>
-<td>TEE&#x7248;&#x672C;&#x53F7;</td>
+<td>TEE版本号</td>
 </tr>
 <tr>
 <td>fp_n</td>
-<td>&#x6307;&#x7EB9;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x903B;&#x8F91;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x5546;&#xFF08;&#x5982;FPC&#x7B49;&#xFF09;</td>
+<td>指纹以及相关逻辑模块提供商（如FPC等）</td>
 </tr>
 <tr>
 <td>fp_v</td>
-<td>&#x6307;&#x7EB9;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x6A21;&#x5757;&#x7248;&#x672C;&#x53F7;</td>
+<td>指纹以及相关模块版本号</td>
 </tr>
 <tr>
 <td>cpu_id</td>
-<td>&#x673A;&#x5668;&#x552F;&#x4E00;&#x8BC6;&#x522B;ID</td>
+<td>机器唯一识别ID</td>
 </tr>
 <tr>
 <td>uid</td>
-<td>&#x6982;&#x5FF5;&#x540C;Android&#x7CFB;&#x7EDF;&#x5B9A;&#x4E49;uid&#xFF0C;&#x5373;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7F16;&#x53F7;</td>
+<td>概念同Android系统定义uid，即应用程序编号</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.startSoterAuthentication({
-  requestAuthModes: [<span class="hljs-string">&apos;fingerPrint&apos;</span>],
-  challenge: <span class="hljs-string">&apos;123456&apos;</span>,
-  authContent: <span class="hljs-string">&apos;&#x8BF7;&#x7528;&#x6307;&#x7EB9;&#x89E3;&#x9501;&apos;</span>,
+  requestAuthModes: [<span class="hljs-string">'fingerPrint'</span>],
+  challenge: <span class="hljs-string">'123456'</span>,
+  authContent: <span class="hljs-string">'请用指纹解锁'</span>,
   success(res) {
   }
 })
 </code></pre>
-<h3 id="&#x8C03;&#x7528;&#x6D41;&#x7A0B;">&#x8C03;&#x7528;&#x6D41;&#x7A0B;</h3>
+<h3 id="调用流程">调用流程</h3>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/soter.png?t=2018413" alt=""></p>
-<h4 id="&#x6D41;&#x7A0B;&#x6B65;&#x9AA4;&#x8BF4;&#x660E;">&#x6D41;&#x7A0B;&#x6B65;&#x9AA4;&#x8BF4;&#x660E;</h4>
-<p>1. &#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#x7684;&#x751F;&#x7269;&#x8BC6;&#x522B;&#x65B9;&#x5F0F;&#x3002;&#x4F8B;&#x5982;:&#x5982;&#x679C;&#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#x6307;&#x7EB9;&#x8BC6;&#x522B;&#xFF0C;&#x5219;&#x586B;&#x5165; [&quot;fingerPrint&quot;] &#xFF1B;<br>
-2. &#x6311;&#x6218;&#x56E0;&#x5B50;&#x4E3A;&#x8C03;&#x7528;&#x8005;&#x4E3A;&#x6B64;&#x6B21;&#x751F;&#x7269;&#x9274;&#x6743;&#x51C6;&#x5907;&#x7684;&#x7528;&#x4E8E;&#x7B7E;&#x540D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5173;&#x952E;&#x8BC6;&#x522B;&#x4FE1;&#x606F;&#xFF0C;&#x5C06;&#x4F5C;&#x4E3A; resultJSON &#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4F9B;&#x8C03;&#x7528;&#x8005;&#x8BC6;&#x522B;&#x672C;&#x6B21;&#x8BF7;&#x6C42;&#x3002;&#x4F8B;&#x5982;:&#x5982;&#x679C;&#x573A;&#x666F;&#x4E3A;&#x652F;&#x4ED8;&#x5219;&#x53EF;&#x4EE5;&#x5C06;&#x8BA2;&#x5355;&#x53F7;&#x586B;&#x5165;&#x6B64;&#x53C2;&#x6570;&#xFF1B;<br>
-3. &#x6B64;&#x6570;&#x636E;&#x4E3A;&#x8BBE;&#x5907; TEE &#x4E2D;&#xFF0C;&#x5C06;&#x4F20;&#x5165;&#x7684; challenge &#x548C; TEE &#x5185;&#x5176;&#x4ED6;&#x5B89;&#x5168;&#x4FE1;&#x606F;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7EC4;&#x88C5;&#x800C;&#x6765;&#x7684;JSON&#xFF0C;&#x4F8B;&#x5B50;&#x53CA;&#x5BF9;&#x4F8B;&#x5B50;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x89E3;&#x91CA;&#x5982;&#x4E0B;:</p>
-<pre><code class="lang-json">{ <span class="hljs-string">&quot;raw&quot;</span>:<span class="hljs-string">&quot;msg&quot;</span>, <span class="hljs-string">&quot;fid&quot;</span>:<span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;counter&quot;</span>:<span class="hljs-number">123</span>, <span class="hljs-string">&quot;tee_n&quot;</span>:<span class="hljs-string">&quot;TEE Name&quot;</span>, <span class="hljs-string">&quot;tee_v&quot;</span>:<span class="hljs-string">&quot;TEE Version&quot;</span>, <span class="hljs-string">&quot;fp_n&quot;</span>:<span class="hljs-string">&quot;Fingerprint Sensor Name&quot;</span>, <span class="hljs-string">&quot;fp_v&quot;</span>:<span class="hljs-string">&quot;Fingerprint Sensor Version&quot;</span>,<span class="hljs-string">&quot;uid&quot;</span>:<span class="hljs-string">&quot;21&quot;</span>}
+<h4 id="流程步骤说明">流程步骤说明</h4>
+<p>1. 本次请求使用的生物识别方式。例如:如果本次请求使用指纹识别，则填入 ["fingerPrint"] ；<br>
+2. 挑战因子为调用者为此次生物鉴权准备的用于签名的字符串关键识别信息，将作为 resultJSON 的一部分，供调用者识别本次请求。例如:如果场景为支付则可以将订单号填入此参数；<br>
+3. 此数据为设备 TEE 中，将传入的 challenge 和 TEE 内其他安全信息组成的数据进行组装而来的JSON，例子及对例子中字段的解释如下:</p>
+<pre><code class="lang-json">{ <span class="hljs-string">"raw"</span>:<span class="hljs-string">"msg"</span>, <span class="hljs-string">"fid"</span>:<span class="hljs-string">"2"</span>, <span class="hljs-string">"counter"</span>:<span class="hljs-number">123</span>, <span class="hljs-string">"tee_n"</span>:<span class="hljs-string">"TEE Name"</span>, <span class="hljs-string">"tee_v"</span>:<span class="hljs-string">"TEE Version"</span>, <span class="hljs-string">"fp_n"</span>:<span class="hljs-string">"Fingerprint Sensor Name"</span>, <span class="hljs-string">"fp_v"</span>:<span class="hljs-string">"Fingerprint Sensor Version"</span>,<span class="hljs-string">"uid"</span>:<span class="hljs-string">"21"</span>}
 </code></pre>
 <table>
 <thead>
 <tr>
-<th>&#x5B57;&#x6BB5;&#x540D;</th>
-<th>&#x542B;&#x4E49;</th>
+<th>字段名</th>
+<th>含义</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>raw</td>
-<td>&#x8C03;&#x7528;&#x8005;&#x4F20;&#x5165;&#x7684;challenge</td>
+<td>调用者传入的challenge</td>
 </tr>
 <tr>
 <td>fid</td>
-<td>(&#x4EC5;Android&#x652F;&#x6301;)&#x672C;&#x6B21;&#x751F;&#x7269;&#x8BC6;&#x522B;&#x8BA4;&#x8BC1;&#x7684;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x7F16;&#x53F7;(&#x5982;&#x6307;&#x7EB9;&#x8BC6;&#x522B;&#x5219;&#x662F;&#x6307;&#x7EB9;&#x4FE1;&#x606F;&#x5728;&#x672C;&#x8BBE;&#x5907;&#x5185;&#x90E8;&#x7F16;&#x53F7;)</td>
+<td>(仅Android支持)本次生物识别认证的生物信息编号(如指纹识别则是指纹信息在本设备内部编号)</td>
 </tr>
 <tr>
 <td>counter</td>
-<td>&#x9632;&#x91CD;&#x653E;&#x7279;&#x5F81;&#x53C2;&#x6570;</td>
+<td>防重放特征参数</td>
 </tr>
 <tr>
 <td>tee_n</td>
-<td>TEE&#x540D;&#x79F0;(&#x5982;&#x9AD8;&#x901A;&#x6216;&#x8005;trustonic&#x7B49;)</td>
+<td>TEE名称(如高通或者trustonic等)</td>
 </tr>
 <tr>
 <td>tee_v</td>
-<td>TEE&#x7248;&#x672C;&#x53F7;</td>
+<td>TEE版本号</td>
 </tr>
 <tr>
 <td>fp_n</td>
-<td>&#x6307;&#x7EB9;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x903B;&#x8F91;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x5546;(&#x5982;FPC&#x7B49;)</td>
+<td>指纹以及相关逻辑模块提供商(如FPC等)</td>
 </tr>
 <tr>
 <td>fp_v</td>
-<td>&#x6307;&#x7EB9;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x6A21;&#x5757;&#x7248;&#x672C;&#x53F7;</td>
+<td>指纹以及相关模块版本号</td>
 </tr>
 <tr>
 <td>cpu_id</td>
-<td>&#x673A;&#x5668;&#x552F;&#x4E00;&#x8BC6;&#x522B;ID</td>
+<td>机器唯一识别ID</td>
 </tr>
 <tr>
 <td>uid</td>
-<td>&#x6982;&#x5FF5;&#x540C;Android&#x7CFB;&#x7EDF;&#x5B9A;&#x4E49;uid&#xFF0C;&#x5373;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7F16;&#x53F7;</td>
+<td>概念同Android系统定义uid，即应用程序编号</td>
 </tr>
 </tbody>
 </table>
-<p>4. &#x6B64;&#x5904;&#x4F7F;&#x7528; SHA256withRSA/PSS &#x4F5C;&#x4E3A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x9A8C;&#x7B7E;&#x3002;&#x6B64;&#x516C;&#x5F0F;&#x6570;&#x5B66;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;: bool &#x9A8C;&#x7B7E;&#x7ED3;&#x679C;=verify(&#x7528;&#x4E8E;&#x7B7E;&#x540D;&#x7684;&#x539F;&#x4E32;&#xFF0C;&#x7B7E;&#x540D;&#x4E32;&#xFF0C;&#x9A8C;&#x8BC1;&#x7B7E;&#x540D;&#x7684;&#x516C;&#x94A5;)<br>
-5. &#x6B64;&#x6B65;&#x9AA4;&#x4E3A;&#x5EFA;&#x8BAE;&#x6D41;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x4E1A;&#x52A1;&#x4E0D;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x53EF;&#x4EE5;&#x4E0D;&#x6267;&#x884C;<br>
-6. &#x5FAE;&#x4FE1;&#x5DF2;&#x7ECF;&#x63D0;&#x4F9B;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#xFF0C;&#x7528;&#x4E8E;&#x53EF;&#x4FE1;&#x7684;&#x5BC6;&#x94A5;&#x9A8C;&#x7B7E;&#x670D;&#x52A1;&#xFF0C;&#x5FAE;&#x4FE1;&#x5C06;&#x4FDD;&#x8BC1;&#x8BE5;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x9A8C;&#x7B7E;&#x7ED3;&#x679C;&#x7684;&#x6B63;&#x786E;&#x6027;&#x4E0E;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x4E8E; Android root &#x60C5;&#x51B5;&#x4E0B;&#x8BE5;&#x63A5;&#x53E3;&#x5177;&#x6709;&#x4E0A;&#x8FF0;&#x7279;&#x5F81;(&#x5C06;&#x8FD4;&#x56DE;&#x662F;&#x5426;&#x4FDD;&#x8BC1;root&#x60C5;&#x51B5;&#x5B89;&#x5168;&#x6027;)&#x3002; <br></p>
-<p>&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;</p>
+<p>4. 此处使用 SHA256withRSA/PSS 作为签名算法进行验签。此公式数学定义如下: bool 验签结果=verify(用于签名的原串，签名串，验证签名的公钥)<br>
+5. 此步骤为建议流程，如果业务不需要等待可以不执行<br>
+6. 微信已经提供后台接口，用于可信的密钥验签服务，微信将保证该接口返回的验签结果的正确性与可靠性，并且对于 Android root 情况下该接口具有上述特征(将返回是否保证root情况安全性)。 <br></p>
+<p>接口地址：</p>
 <blockquote>
 <p><a href="http://api.weixin.qq.com/cgi-bin/soter/verify_signature?access_token=%access_token" target="_blank">http://api.weixin.qq.com/cgi-bin/soter/verify_signature?access_token=%access_token</a></p>
 </blockquote>
-<p>post &#x6570;&#x636E;&#x5185;&#x5BB9;&#xFF08;JSON &#x7F16;&#x7801;&#xFF09;:</p>
-<pre><code class="lang-json">{<span class="hljs-string">&quot;openid&quot;</span>:<span class="hljs-string">&quot;$openid&quot;</span>, <span class="hljs-string">&quot;json_string&quot;</span> : <span class="hljs-string">&quot;$json&quot;</span>, <span class="hljs-string">&quot;json_signature&quot;</span> : <span class="hljs-string">&quot;$sign&quot;</span> }
+<p>post 数据内容（JSON 编码）:</p>
+<pre><code class="lang-json">{<span class="hljs-string">"openid"</span>:<span class="hljs-string">"$openid"</span>, <span class="hljs-string">"json_string"</span> : <span class="hljs-string">"$json"</span>, <span class="hljs-string">"json_signature"</span> : <span class="hljs-string">"$sign"</span> }
 </code></pre>
 
                                 

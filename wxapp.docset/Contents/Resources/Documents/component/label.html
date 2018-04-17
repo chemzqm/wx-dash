@@ -18,83 +18,83 @@
                                 <section class="normal markdown-section">
                                 
                                 <h4 id="label">label</h4>
-<p>&#x7528;&#x6765;&#x6539;&#x8FDB;&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x7684;&#x53EF;&#x7528;&#x6027;&#xFF0C;&#x4F7F;&#x7528;<code>for</code>&#x5C5E;&#x6027;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;<code>id</code>&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x63A7;&#x4EF6;&#x653E;&#x5728;&#x8BE5;&#x6807;&#x7B7E;&#x4E0B;&#xFF0C;&#x5F53;&#x70B9;&#x51FB;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x5BF9;&#x5E94;&#x7684;&#x63A7;&#x4EF6;&#x3002;</p>
-<p><code>for</code>&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x5185;&#x90E8;&#x63A7;&#x4EF6;&#xFF0C;&#x5185;&#x90E8;&#x6709;&#x591A;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x9ED8;&#x8BA4;&#x89E6;&#x53D1;&#x7B2C;&#x4E00;&#x4E2A;&#x63A7;&#x4EF6;&#x3002;</p>
-<p>&#x76EE;&#x524D;&#x53EF;&#x4EE5;&#x7ED1;&#x5B9A;&#x7684;&#x63A7;&#x4EF6;&#x6709;&#xFF1A;<code>&lt;button/&gt;</code>, <code>&lt;checkbox/&gt;</code>, <code>&lt;radio/&gt;</code>, <code>&lt;switch/&gt;</code>&#x3002;</p>
+<p>用来改进表单组件的可用性，使用<code>for</code>属性找到对应的<code>id</code>，或者将控件放在该标签下，当点击时，就会触发对应的控件。</p>
+<p><code>for</code>优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。</p>
+<p>目前可以绑定的控件有：<code></code><button><code></code>, <code><checkbox></checkbox></code>, <code><radio></radio></code>, <code><switch></switch></code>。<p></p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>属性名</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td id="label-for">for</td>
 <td>String</td>
-<td>&#x7ED1;&#x5B9A;&#x63A7;&#x4EF6;&#x7684; id</td>
+<td>绑定控件的 id</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/alak1cmR6JYU" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x5728;label&#x5185;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;checkboxChange&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{checkboxItems}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">checkbox</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__icon&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__icon-checked&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__text&quot;</span>&gt;</span>{{item.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">checkbox-group</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<p><strong>示例代码：</strong></p>
+<p><a href="wechatide://minicode/alak1cmR6JYU" target="_blank">在开发者工具中预览效果</a></p>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section_gap"</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section__title"</span>></span>表单组件在label内<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<span class="hljs-tag"><<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">"checkboxChange"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-1"</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">"{{checkboxItems}}"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">label</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">checkbox</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"{{item.name}}"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"{{item.checked}}"</span>></span><span class="hljs-tag"><!--<span class="hljs-name"-->checkbox</span>>
+      <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-1__icon"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-1__icon-checked"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"opacity:{{item.checked ? 1: 0}}"</span>></span><span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+      <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+      <span class="hljs-tag"><<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-1__text"</span>></span>{{item.value}}<span class="hljs-tag"><!--<span class="hljs-name"-->text</span>>
+    <span class="hljs-tag"><!--<span class="hljs-name"-->label</span>>
+  <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<span class="hljs-tag"><!--<span class="hljs-name"-->checkbox-group</span>>
+<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>label&#x7528;for&#x6807;&#x8BC6;&#x8868;&#x5355;&#x7EC4;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;radioChange&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{radioItems}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">radio</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">radio</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__icon&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__icon-checked&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__text&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{item.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">radio-group</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section_gap"</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section__title"</span>></span>label用for标识表单组件<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<span class="hljs-tag"><<span class="hljs-name">radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">"radioChange"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-2"</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">"{{radioItems}}"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">radio</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"{{item.name}}"</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"{{item.name}}"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"{{item.checked}}"</span>></span><span class="hljs-tag"><!--<span class="hljs-name"-->radio</span>>
+    <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-2__icon"</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-2__icon-checked"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"opacity:{{item.checked ? 1: 0}}"</span>></span><span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+    <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+    <span class="hljs-tag"><<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"label-2__text"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"{{item.name}}"</span>></span><span class="hljs-tag"><<span class="hljs-name">text</span>></span>{{item.name}}<span class="hljs-tag"><!--<span class="hljs-name"-->text</span>><span class="hljs-tag"><!--<span class="hljs-name"-->label</span>>
+  <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<span class="hljs-tag"><!--<span class="hljs-name"-->radio-group</span>>
+<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
 </code></pre>
 <pre><code class="lang-js">Page({
   data: {
     checkboxItems: [
-      {name: <span class="hljs-string">&apos;USA&apos;</span>, value: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;CHN&apos;</span>, value: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;BRA&apos;</span>, value: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
-      {name: <span class="hljs-string">&apos;JPN&apos;</span>, value: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;ENG&apos;</span>, value: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;TUR&apos;</span>, value: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
+      {name: <span class="hljs-string">'USA'</span>, value: <span class="hljs-string">'美国'</span>},
+      {name: <span class="hljs-string">'CHN'</span>, value: <span class="hljs-string">'中国'</span>, checked: <span class="hljs-string">'true'</span>},
+      {name: <span class="hljs-string">'BRA'</span>, value: <span class="hljs-string">'巴西'</span>},
+      {name: <span class="hljs-string">'JPN'</span>, value: <span class="hljs-string">'日本'</span>, checked: <span class="hljs-string">'true'</span>},
+      {name: <span class="hljs-string">'ENG'</span>, value: <span class="hljs-string">'英国'</span>},
+      {name: <span class="hljs-string">'TUR'</span>, value: <span class="hljs-string">'法国'</span>},
     ],
     radioItems: [
-      {name: <span class="hljs-string">&apos;USA&apos;</span>, value: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;CHN&apos;</span>, value: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;BRA&apos;</span>, value: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
-      {name: <span class="hljs-string">&apos;JPN&apos;</span>, value: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>},
-      {name: <span class="hljs-string">&apos;ENG&apos;</span>, value: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;TUR&apos;</span>, value: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
+      {name: <span class="hljs-string">'USA'</span>, value: <span class="hljs-string">'美国'</span>},
+      {name: <span class="hljs-string">'CHN'</span>, value: <span class="hljs-string">'中国'</span>, checked: <span class="hljs-string">'true'</span>},
+      {name: <span class="hljs-string">'BRA'</span>, value: <span class="hljs-string">'巴西'</span>},
+      {name: <span class="hljs-string">'JPN'</span>, value: <span class="hljs-string">'日本'</span>},
+      {name: <span class="hljs-string">'ENG'</span>, value: <span class="hljs-string">'英国'</span>},
+      {name: <span class="hljs-string">'TUR'</span>, value: <span class="hljs-string">'法国'</span>},
     ],
     hidden: <span class="hljs-literal">false</span>
   },
   checkboxChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">var</span> checked = e.detail.value
     <span class="hljs-keyword">var</span> changed = {}
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.checkboxItems.length; i ++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-keyword">this</span>.data.checkboxItems.length; i ++) {
       <span class="hljs-keyword">if</span> (checked.indexOf(<span class="hljs-keyword">this</span>.data.checkboxItems[i].name) !== <span class="hljs-number">-1</span>) {
-        changed[<span class="hljs-string">&apos;checkboxItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">true</span>
+        changed[<span class="hljs-string">'checkboxItems['</span>+i+<span class="hljs-string">'].checked'</span>] = <span class="hljs-literal">true</span>
       } <span class="hljs-keyword">else</span> {
-        changed[<span class="hljs-string">&apos;checkboxItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">false</span>
+        changed[<span class="hljs-string">'checkboxItems['</span>+i+<span class="hljs-string">'].checked'</span>] = <span class="hljs-literal">false</span>
       }
     }
     <span class="hljs-keyword">this</span>.setData(changed)
@@ -102,11 +102,11 @@
   radioChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">var</span> checked = e.detail.value
     <span class="hljs-keyword">var</span> changed = {}
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.radioItems.length; i ++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-keyword">this</span>.data.radioItems.length; i ++) {
       <span class="hljs-keyword">if</span> (checked.indexOf(<span class="hljs-keyword">this</span>.data.radioItems[i].name) !== <span class="hljs-number">-1</span>) {
-        changed[<span class="hljs-string">&apos;radioItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">true</span>
+        changed[<span class="hljs-string">'radioItems['</span>+i+<span class="hljs-string">'].checked'</span>] = <span class="hljs-literal">true</span>
       } <span class="hljs-keyword">else</span> {
-        changed[<span class="hljs-string">&apos;radioItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">false</span>
+        changed[<span class="hljs-string">'radioItems['</span>+i+<span class="hljs-string">'].checked'</span>] = <span class="hljs-literal">false</span>
       }
     }
     <span class="hljs-keyword">this</span>.setData(changed)
@@ -170,7 +170,7 @@
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/label.png?t=2018413" alt="label"></p>
 
                                 
-                                </section>
+                                </button></p></section>
                             
     </div>
     

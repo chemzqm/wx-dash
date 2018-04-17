@@ -19,100 +19,100 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8FD0;&#x7B97;&#x7B26;">&#x8FD0;&#x7B97;&#x7B26;</h1>
-<h2 id="&#x57FA;&#x672C;&#x8FD0;&#x7B97;&#x7B26;">&#x57FA;&#x672C;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+                                <h1 id="运算符">运算符</h1>
+<h2 id="基本运算符">基本运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
 
-<span class="hljs-comment">// &#x52A0;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 加法运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">30</span> === a + b);
-<span class="hljs-comment">// &#x51CF;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 减法运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">-10</span> === a - b);
-<span class="hljs-comment">// &#x4E58;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 乘法运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">200</span> === a * b);
-<span class="hljs-comment">// &#x9664;&#x6CD5;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 除法运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">0.5</span> === a / b);
-<span class="hljs-comment">// &#x53D6;&#x4F59;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 取余运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === a % b);
 </code></pre>
 <ul>
-<li>&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#xFF08;<code>+</code>&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x62FC;&#x63A5;&#x3002;</li>
+<li>加法运算（<code>+</code>）也可以用作字符串的拼接。</li>
 </ul>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">&apos;.w&apos;</span> , b = <span class="hljs-string">&apos;xs&apos;</span>;
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">'.w'</span> , b = <span class="hljs-string">'xs'</span>;
 
-<span class="hljs-comment">// &#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;.wxs&apos;</span> === a + b);
+<span class="hljs-comment">// 字符串拼接</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'.wxs'</span> === a + b);
 </code></pre>
-<h2 id="&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;">&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<h2 id="一元运算符">一元运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
 
-<span class="hljs-comment">// &#x81EA;&#x589E;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 自增运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === a++);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">12</span> === ++a);
-<span class="hljs-comment">// &#x81EA;&#x51CF;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 自减运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">12</span> === a--);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === --a);
-<span class="hljs-comment">// &#x6B63;&#x503C;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 正值运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === +a);
-<span class="hljs-comment">// &#x8D1F;&#x503C;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 负值运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">0</span><span class="hljs-number">-10</span> === -a);
-<span class="hljs-comment">// &#x5426;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 否运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">-11</span> === ~a);
-<span class="hljs-comment">// &#x53D6;&#x53CD;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 取反运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === !a);
-<span class="hljs-comment">// delete &#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// delete 运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === <span class="hljs-keyword">delete</span> a.fake);
-<span class="hljs-comment">// void &#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// void 运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-keyword">void</span> a);
-<span class="hljs-comment">// typeof &#x8FD0;&#x7B97;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;number&quot;</span> === <span class="hljs-keyword">typeof</span> a);
+<span class="hljs-comment">// typeof 运算</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"number"</span> === <span class="hljs-keyword">typeof</span> a);
 </code></pre>
-<h2 id="&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;">&#x4F4D;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<h2 id="位运算符">位运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
 
-<span class="hljs-comment">// &#x5DE6;&#x79FB;&#x8FD0;&#x7B97;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">80</span> === (a &lt;&lt; <span class="hljs-number">3</span>));
-<span class="hljs-comment">// &#x65E0;&#x7B26;&#x53F7;&#x53F3;&#x79FB;&#x8FD0;&#x7B97;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a &gt;&gt; <span class="hljs-number">2</span>));
-<span class="hljs-comment">// &#x5E26;&#x7B26;&#x53F7;&#x53F3;&#x79FB;&#x8FD0;&#x7B97;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a &gt;&gt;&gt; <span class="hljs-number">2</span>));
-<span class="hljs-comment">// &#x4E0E;&#x8FD0;&#x7B97;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a &amp; <span class="hljs-number">3</span>));
-<span class="hljs-comment">// &#x5F02;&#x6216;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 左移运算</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">80</span> === (a << <span class="hljs-number">3</span>));
+<span class="hljs-comment">// 无符号右移运算</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a >> <span class="hljs-number">2</span>));
+<span class="hljs-comment">// 带符号右移运算</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a >>> <span class="hljs-number">2</span>));
+<span class="hljs-comment">// 与运算</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === (a & <span class="hljs-number">3</span>));
+<span class="hljs-comment">// 异或运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">9</span> === (a ^ <span class="hljs-number">3</span>));
-<span class="hljs-comment">// &#x6216;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment">// 或运算</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">11</span> === (a | <span class="hljs-number">3</span>));
 </code></pre>
-<h2 id="&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;">&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<h2 id="比较运算符">比较运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
 
-<span class="hljs-comment">// &#x5C0F;&#x4E8E;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a &lt; b));
-<span class="hljs-comment">// &#x5927;&#x4E8E;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a &gt; b));
-<span class="hljs-comment">// &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a &lt;= b));
-<span class="hljs-comment">// &#x5927;&#x4E8E;&#x7B49;&#x4E8E;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a &gt;= b));
+<span class="hljs-comment">// 小于</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a < b));
+<span class="hljs-comment">// 大于</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a > b));
+<span class="hljs-comment">// 小于等于</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a <= b));
+<span class="hljs-comment">// 大于等于</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a >= b));
 </code></pre>
-<h2 id="&#x7B49;&#x503C;&#x8FD0;&#x7B97;&#x7B26;">&#x7B49;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<h2 id="等值运算符">等值运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
 
-<span class="hljs-comment">// &#x7B49;&#x53F7;</span>
+<span class="hljs-comment">// 等号</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a == b));
-<span class="hljs-comment">// &#x975E;&#x7B49;&#x53F7;</span>
+<span class="hljs-comment">// 非等号</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a != b));
-<span class="hljs-comment">// &#x5168;&#x7B49;&#x53F7;</span>
+<span class="hljs-comment">// 全等号</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-literal">false</span> === (a === b));
-<span class="hljs-comment">// &#x975E;&#x5168;&#x7B49;&#x53F7;</span>
+<span class="hljs-comment">// 非全等号</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> === (a !== b));
 </code></pre>
-<h2 id="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;">&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<h2 id="赋值运算符">赋值运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>;
 
 a = <span class="hljs-number">10</span>; a *= <span class="hljs-number">10</span>;
@@ -125,347 +125,347 @@ a = <span class="hljs-number">10</span>; a += <span class="hljs-number">5</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">15</span> === a);
 a = <span class="hljs-number">10</span>; a -= <span class="hljs-number">11</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">-1</span> === a);
-a = <span class="hljs-number">10</span>; a &lt;&lt;= <span class="hljs-number">10</span>;
+a = <span class="hljs-number">10</span>; a <<= <span class="hljs-number">10</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">10240</span> === a);
-a = <span class="hljs-number">10</span>; a &gt;&gt;= <span class="hljs-number">2</span>;
+a = <span class="hljs-number">10</span>; a >>= <span class="hljs-number">2</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === a);
-a = <span class="hljs-number">10</span>; a &gt;&gt;&gt;= <span class="hljs-number">2</span>;
+a = <span class="hljs-number">10</span>; a >>>= <span class="hljs-number">2</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === a);
-a = <span class="hljs-number">10</span>; a &amp;= <span class="hljs-number">3</span>;
+a = <span class="hljs-number">10</span>; a &= <span class="hljs-number">3</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span> === a);
 a = <span class="hljs-number">10</span>; a ^= <span class="hljs-number">3</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">9</span> === a);
 a = <span class="hljs-number">10</span>; a |= <span class="hljs-number">3</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">11</span> === a);
 </code></pre>
-<h2 id="&#x4E8C;&#x5143;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;">&#x4E8C;&#x5143;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<h2 id="二元逻辑运算符">二元逻辑运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
 
-<span class="hljs-comment">// &#x903B;&#x8F91;&#x4E0E;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a &amp;&amp; b));
-<span class="hljs-comment">// &#x903B;&#x8F91;&#x6216;</span>
+<span class="hljs-comment">// 逻辑与</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a && b));
+<span class="hljs-comment">// 逻辑或</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">10</span> === (a || b));
 </code></pre>
-<h2 id="&#x5176;&#x4ED6;&#x8FD0;&#x7B97;&#x7B26;">&#x5176;&#x4ED6;&#x8FD0;&#x7B97;&#x7B26;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<h2 id="其他运算符">其他运算符</h2>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span>;
 
-<span class="hljs-comment">//&#x6761;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a &gt;= <span class="hljs-number">10</span> ? a + <span class="hljs-number">10</span> : b + <span class="hljs-number">10</span>));
-<span class="hljs-comment">//&#x9017;&#x53F7;&#x8FD0;&#x7B97;&#x7B26;</span>
+<span class="hljs-comment">//条件运算符</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a >= <span class="hljs-number">10</span> ? a + <span class="hljs-number">10</span> : b + <span class="hljs-number">10</span>));
+<span class="hljs-comment">//逗号运算符</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-number">20</span> === (a, b));
 </code></pre>
-<h2 id="&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;">&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;</h2>
+<h2 id="运算符优先级">运算符优先级</h2>
 <table>
 <thead>
 <tr>
-<th>&#x4F18;&#x5148;&#x7EA7;</th>
-<th>&#x8FD0;&#x7B97;&#x7B26;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x7ED3;&#x5408;&#x6027;</th>
+<th>优先级</th>
+<th>运算符</th>
+<th>说明</th>
+<th>结合性</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>20</td>
 <td><code>(</code> ... <code>)</code></td>
-<td>&#x62EC;&#x53F7;</td>
+<td>括号</td>
 <td>n/a</td>
 </tr>
 <tr>
 <td>19</td>
 <td>... <code>.</code> ...</td>
-<td>&#x6210;&#x5458;&#x8BBF;&#x95EE;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>成员访问</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>[</code> ... <code>]</code></td>
-<td>&#x6210;&#x5458;&#x8BBF;&#x95EE;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>成员访问</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>(</code> ... <code>)</code></td>
-<td>&#x51FD;&#x6570;&#x8C03;&#x7528;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>函数调用</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>17</td>
 <td>... <code>++</code></td>
-<td>&#x540E;&#x7F6E;&#x9012;&#x589E;</td>
+<td>后置递增</td>
 <td>n/a</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>--</code></td>
-<td>&#x540E;&#x7F6E;&#x9012;&#x51CF;</td>
+<td>后置递减</td>
 <td>n/a</td>
 </tr>
 <tr>
 <td>16</td>
 <td><code>!</code> ...</td>
-<td>&#x903B;&#x8F91;&#x975E;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>逻辑非</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>~</code> ...</td>
-<td>&#x6309;&#x4F4D;&#x975E;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>按位非</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>+</code> ...</td>
-<td>&#x4E00;&#x5143;&#x52A0;&#x6CD5;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>一元加法</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>-</code> ...</td>
-<td>&#x4E00;&#x5143;&#x51CF;&#x6CD5;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>一元减法</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>++</code> ...</td>
-<td>&#x524D;&#x7F6E;&#x9012;&#x589E;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>前置递增</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>--</code> ...</td>
-<td>&#x524D;&#x7F6E;&#x9012;&#x51CF;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>前置递减</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>typeof</code> ...</td>
 <td>typeof</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>void</code> ...</td>
 <td>void</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td><code>delete</code> ...</td>
 <td>delete</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td>14</td>
 <td>... <code>*</code> ...</td>
-<td>&#x4E58;&#x6CD5;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>乘法</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>/</code> ...</td>
-<td>&#x9664;&#x6CD5;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>除法</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>%</code> ...</td>
-<td>&#x53D6;&#x6A21;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>取模</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>13</td>
 <td>... <code>+</code> ...</td>
-<td>&#x52A0;&#x6CD5;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>加法</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>-</code> ...</td>
-<td>&#x51CF;&#x6CD5;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>减法</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>12</td>
-<td>... <code>&lt;&lt;</code> ...</td>
-<td>&#x6309;&#x4F4D;&#x5DE6;&#x79FB;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code><<</code> ...</td>
+<td>按位左移</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&gt;&gt;</code> ...</td>
-<td>&#x6309;&#x4F4D;&#x53F3;&#x79FB;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>>></code> ...</td>
+<td>按位右移</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&gt;&gt;&gt;</code> ...</td>
-<td>&#x65E0;&#x7B26;&#x53F7;&#x53F3;&#x79FB;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>>>></code> ...</td>
+<td>无符号右移</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>11</td>
-<td>... <code>&lt;</code> ...</td>
-<td>&#x5C0F;&#x4E8E;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code><</code> ...</td>
+<td>小于</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&lt;=</code> ...</td>
-<td>&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code><=</code> ...</td>
+<td>小于等于</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&gt;</code> ...</td>
-<td>&#x5927;&#x4E8E;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>></code> ...</td>
+<td>大于</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&gt;=</code> ...</td>
-<td>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>>=</code> ...</td>
+<td>大于等于</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>10</td>
 <td>... <code>==</code> ...</td>
-<td>&#x7B49;&#x53F7;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>等号</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>!=</code> ...</td>
-<td>&#x975E;&#x7B49;&#x53F7;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>非等号</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>===</code> ...</td>
-<td>&#x5168;&#x7B49;&#x53F7;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>全等号</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>!==</code> ...</td>
-<td>&#x975E;&#x5168;&#x7B49;&#x53F7;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>非全等号</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>9</td>
-<td>... <code>&amp;</code> ...</td>
-<td>&#x6309;&#x4F4D;&#x4E0E;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>&</code> ...</td>
+<td>按位与</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>8</td>
 <td>... <code>^</code> ...</td>
-<td>&#x6309;&#x4F4D;&#x5F02;&#x6216;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>按位异或</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>7</td>
-<td>... <code>&#xFF5C;</code> ...</td>
-<td>&#x6309;&#x4F4D;&#x6216;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>｜</code> ...</td>
+<td>按位或</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>6</td>
-<td>... <code>&amp;&amp;</code> ...</td>
-<td>&#x903B;&#x8F91;&#x4E0E;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>&&</code> ...</td>
+<td>逻辑与</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>5</td>
-<td>... <code>&#xFF5C;&#xFF5C;</code> ...</td>
-<td>&#x903B;&#x8F91;&#x6216;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>... <code>｜｜</code> ...</td>
+<td>逻辑或</td>
+<td>从左到右</td>
 </tr>
 <tr>
 <td>4</td>
 <td>... <code>?</code> ... <code>:</code> ...</td>
-<td>&#x6761;&#x4EF6;&#x8FD0;&#x7B97;&#x7B26;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>条件运算符</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td>3</td>
 <td>... <code>=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>+=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>-=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>*=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>/=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>%=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&lt;&lt;=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>... <code><<=</code> ...</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&gt;&gt;=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>... <code>>>=</code> ...</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&gt;&gt;&gt;=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>... <code>>>>=</code> ...</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&amp;=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>... <code>&=</code> ...</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
 <td>... <code>^=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td></td>
-<td>... <code>&#xFF5C;=</code> ...</td>
-<td>&#x8D4B;&#x503C;</td>
-<td>&#x4ECE;&#x53F3;&#x5230;&#x5DE6;</td>
+<td>... <code>｜=</code> ...</td>
+<td>赋值</td>
+<td>从右到左</td>
 </tr>
 <tr>
 <td>0</td>
 <td>... <code>,</code> ...</td>
-<td>&#x9017;&#x53F7;</td>
-<td>&#x4ECE;&#x5DE6;&#x5230;&#x53F3;</td>
+<td>逗号</td>
+<td>从左到右</td>
 </tr>
 </tbody>
 </table>

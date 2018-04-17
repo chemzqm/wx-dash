@@ -18,15 +18,15 @@
                                 <section class="normal markdown-section">
                                 
                                 <h4 id="text">text</h4>
-<p>&#x6587;&#x672C;&#x3002;</p>
+<p>文本。</p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
@@ -34,82 +34,82 @@
 <td id="text-selectable">selectable</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x6587;&#x672C;&#x662F;&#x5426;&#x53EF;&#x9009;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
+<td>文本是否可选</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.1.0 开始支持，低版本需做兼容处理。">1.1.0</a></td>
 </tr>
 <tr>
 <td id="text-space">space</td>
 <td>String</td>
 <td>false</td>
-<td>&#x663E;&#x793A;&#x8FDE;&#x7EED;&#x7A7A;&#x683C;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+<td>显示连续空格</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
 </tr>
 <tr>
 <td id="text-decode">decode</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x662F;&#x5426;&#x89E3;&#x7801;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+<td>是否解码</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>space &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
+<p><strong>space 有效值：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>值</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ensp</td>
-<td>&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x7A7A;&#x683C;&#x4E00;&#x534A;&#x5927;&#x5C0F;</td>
+<td>中文字符空格一半大小</td>
 </tr>
 <tr>
 <td>emsp</td>
-<td>&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x7A7A;&#x683C;&#x5927;&#x5C0F;</td>
+<td>中文字符空格大小</td>
 </tr>
 <tr>
 <td>nbsp</td>
-<td>&#x6839;&#x636E;&#x5B57;&#x4F53;&#x8BBE;&#x7F6E;&#x7684;&#x7A7A;&#x683C;&#x5927;&#x5C0F;</td>
+<td>根据字体设置的空格大小</td>
 </tr>
 </tbody>
 </table>
 <h5 id="tips">Tips</h5>
 <ul>
-<li>decode&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x7684;&#x6709; <code>&amp;nbsp;</code> <code>&amp;lt;</code> <code>&amp;gt;</code> <code>&amp;amp;</code> <code>&amp;apos;</code> <code>&amp;ensp;</code> <code>&amp;emsp;</code></li>
-<li>&#x5404;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x7A7A;&#x683C;&#x6807;&#x51C6;&#x5E76;&#x4E0D;&#x4E00;&#x81F4;&#x3002;</li>
-<li><code>&lt;text/&gt;</code> &#x7EC4;&#x4EF6;&#x5185;&#x53EA;&#x652F;&#x6301; <code>&lt;text/&gt;</code> &#x5D4C;&#x5957;&#x3002;</li>
-<li>&#x9664;&#x4E86;&#x6587;&#x672C;&#x8282;&#x70B9;&#x4EE5;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x90FD;&#x65E0;&#x6CD5;&#x957F;&#x6309;&#x9009;&#x4E2D;&#x3002;</li>
+<li>decode可以解析的有 <code> </code> <code><</code> <code>></code> <code>&</code> <code>'</code> <code> </code> <code> </code></li>
+<li>各个操作系统的空格标准并不一致。</li>
+<li><code><text></text></code> 组件内只支持 <code><text></text></code> 嵌套。</li>
+<li>除了文本节点以外的其他节点都无法长按选中。</li>
 </ul>
-<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/Egao9cm46gY6" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-view&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;add&quot;</span>&gt;</span>add line<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>remove line<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<p><strong>示例：</strong></p>
+<p><a href="wechatide://minicode/Egao9cm46gY6" target="_blank">在开发者工具中预览效果</a></p>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-area"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"body-view"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">text</span>></span>{{text}}<span class="hljs-tag"><!--<span class="hljs-name"-->text</span>>
+    <span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"add"</span>></span>add line<span class="hljs-tag"><!--<span class="hljs-name"-->button</span>>
+    <span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"remove"</span>></span>remove line<span class="hljs-tag"><!--<span class="hljs-name"-->button</span>>
+  <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
 </code></pre>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> initData = <span class="hljs-string">&apos;this is first line\nthis is second line&apos;</span>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> initData = <span class="hljs-string">'this is first line\nthis is second line'</span>
 <span class="hljs-keyword">var</span> extraLine = [];
 Page({
   data: {
     text: initData
   },
   add: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-    extraLine.push(<span class="hljs-string">&apos;other line&apos;</span>)
+    extraLine.push(<span class="hljs-string">'other line'</span>)
     <span class="hljs-keyword">this</span>.setData({
-      text: initData + <span class="hljs-string">&apos;\n&apos;</span> + extraLine.join(<span class="hljs-string">&apos;\n&apos;</span>)
+      text: initData + <span class="hljs-string">'\n'</span> + extraLine.join(<span class="hljs-string">'\n'</span>)
     })
   },
   remove: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-keyword">if</span> (extraLine.length &gt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">if</span> (extraLine.length > <span class="hljs-number">0</span>) {
       extraLine.pop()
       <span class="hljs-keyword">this</span>.setData({
-        text: initData + <span class="hljs-string">&apos;\n&apos;</span> + extraLine.join(<span class="hljs-string">&apos;\n&apos;</span>)
+        text: initData + <span class="hljs-string">'\n'</span> + extraLine.join(<span class="hljs-string">'\n'</span>)
       })
     }
   }

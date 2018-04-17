@@ -20,54 +20,54 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextsetlinecap">canvasContext.setLineCap</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x7AEF;&#x70B9;&#x6837;&#x5F0F;&#x3002;</p>
-<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
+<h3 id="定义">定义</h3>
+<p>设置线条的端点样式。</p>
+<h3 id="语法">语法</h3>
 <pre><code class="lang-javascript">canvasContext.setLineCap(lineCap)
-canvasContext.lineCap = lineCap <span class="hljs-comment">// &#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x652F;&#x6301;</span>
+canvasContext.lineCap = lineCap <span class="hljs-comment">// 基础库 1.9.90 起支持</span>
 </code></pre>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8303;&#x56F4;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>范围</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>lineCap</td>
 <td>String</td>
-<td>&apos;butt&apos;&#x3001;&apos;round&apos;&#x3001;&apos;square&apos;</td>
-<td>&#x7EBF;&#x6761;&#x7684;&#x7ED3;&#x675F;&#x7AEF;&#x70B9;&#x6837;&#x5F0F;</td>
+<td>'butt'、'round'、'square'</td>
+<td>线条的结束端点样式</td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="示例代码：">示例代码：</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 ctx.beginPath()
 ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
 ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">10</span>)
 ctx.stroke()
 
 ctx.beginPath()
-ctx.setLineCap(<span class="hljs-string">&apos;butt&apos;</span>)
+ctx.setLineCap(<span class="hljs-string">'butt'</span>)
 ctx.setLineWidth(<span class="hljs-number">10</span>)
 ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">30</span>)
 ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">30</span>)
 ctx.stroke()
 
 ctx.beginPath()
-ctx.setLineCap(<span class="hljs-string">&apos;round&apos;</span>)
+ctx.setLineCap(<span class="hljs-string">'round'</span>)
 ctx.setLineWidth(<span class="hljs-number">10</span>)
 ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
 ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">50</span>)
 ctx.stroke()
 
 ctx.beginPath()
-ctx.setLineCap(<span class="hljs-string">&apos;square&apos;</span>)
+ctx.setLineCap(<span class="hljs-string">'square'</span>)
 ctx.setLineWidth(<span class="hljs-number">10</span>)
 ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>)
 ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">70</span>)

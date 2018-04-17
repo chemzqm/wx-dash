@@ -21,67 +21,67 @@
                                 
                                 <h3 id="wxgetextconfigobject">wx.getExtConfig(OBJECT)</h3>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
 </blockquote>
-<p>&#x83B7;&#x53D6;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/ext.html?t=2018413" target="_blank">&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;</a>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>获取<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/ext.html?t=2018413" target="_blank">第三方平台</a>自定义的数据字段。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8FD4;&#x56DE;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>返回</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x8FD4;&#x56DE;&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;</td>
+<td>否</td>
+<td>返回第三方平台自定义的数据</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+<td>调用结果</td>
 </tr>
 <tr>
 <td>extConfig</td>
 <td>Object</td>
-<td>&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;</td>
+<td>第三方平台自定义的数据</td>
 </tr>
 </tbody>
 </table>
-<h4 id="bug--tip">Bug &amp; Tip</h4>
+<h4 id="bug--tip">Bug & Tip</h4>
 <ol>
-<li><code>wx.getExtConfig</code>  &#x6682;&#x65F6;&#x65E0;&#x6CD5;&#x901A;&#x8FC7; <code>wx.canIUse</code> &#x5224;&#x65AD;&#x662F;&#x5426;&#x517C;&#x5BB9;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x81EA;&#x884C;&#x5224;&#x65AD; <code>wx.getExtConfig</code> &#x662F;&#x5426;&#x5B58;&#x5728;&#x6765;&#x517C;&#x5BB9;</li>
+<li><code>wx.getExtConfig</code>  暂时无法通过 <code>wx.canIUse</code> 判断是否兼容，开发者需要自行判断 <code>wx.getExtConfig</code> 是否存在来兼容</li>
 </ol>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">if</span>(wx.getExtConfig) {
   wx.getExtConfig({
     success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
@@ -92,31 +92,31 @@
 </code></pre>
 <h3 id="wxgetextconfigsync">wx.getExtConfigSync()</h3>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
 </blockquote>
-<p>&#x83B7;&#x53D6;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/ext.html?t=2018413" target="_blank">&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;</a>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x7684;&#x540C;&#x6B65;&#x63A5;&#x53E3;&#x3002;</p>
-<p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>获取<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/ext.html?t=2018413" target="_blank">第三方平台</a>自定义的数据字段的同步接口。</p>
+<p><strong>返回说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>extConfig</td>
 <td>Object</td>
-<td>&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;</td>
+<td>第三方平台自定义的数据</td>
 </tr>
 </tbody>
 </table>
-<h4 id="bug--tip">Bug &amp; Tip</h4>
+<h4 id="bug--tip">Bug & Tip</h4>
 <ol>
-<li><code>wx.getExtConfigSync</code> &#x6682;&#x65F6;&#x65E0;&#x6CD5;&#x901A;&#x8FC7; <code>wx.canIUse</code> &#x5224;&#x65AD;&#x662F;&#x5426;&#x517C;&#x5BB9;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x81EA;&#x884C;&#x5224;&#x65AD; <code>wx.getExtConfigSync</code> &#x662F;&#x5426;&#x5B58;&#x5728;&#x6765;&#x517C;&#x5BB9;</li>
+<li><code>wx.getExtConfigSync</code> 暂时无法通过 <code>wx.canIUse</code> 判断是否兼容，开发者需要自行判断 <code>wx.getExtConfigSync</code> 是否存在来兼容</li>
 </ol>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> extConfig = wx.getExtConfigSync? wx.getExtConfigSync(): {}
 <span class="hljs-built_in">console</span>.log(extConfig)
 </code></pre>

@@ -19,137 +19,137 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8BED;&#x53E5;">&#x8BED;&#x53E5;</h1>
-<h2 id="if-&#x8BED;&#x53E5;">if &#x8BED;&#x53E5;</h2>
-<p>&#x5728; WXS &#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#x7684; <code>if</code> &#x8BED;&#x53E5; &#xFF1A;</p>
+                                <h1 id="语句">语句</h1>
+<h2 id="if-语句">if 语句</h2>
+<p>在 WXS 中，可以使用以下格式的 <code>if</code> 语句 ：</p>
 <ul>
-<li><p><code>if (expression) statement</code> &#xFF1A; 
-  &#x5F53; <code>expression</code> &#x4E3A; truthy &#x65F6;&#xFF0C;&#x6267;&#x884C; <code>statement</code>&#x3002;</p>
+<li><p><code>if (expression) statement</code> ： 
+  当 <code>expression</code> 为 truthy 时，执行 <code>statement</code>。</p>
 </li>
 <li><p><code>if (expression) statement1 else statement2</code> :
-  &#x5F53; <code>expression</code> &#x4E3A; truthy &#x65F6;&#xFF0C;&#x6267;&#x884C; <code>statement1</code>&#x3002;
-  &#x5426;&#x5219;&#xFF0C;&#x6267;&#x884C; <code>statement2</code></p>
+  当 <code>expression</code> 为 truthy 时，执行 <code>statement1</code>。
+  否则，执行 <code>statement2</code></p>
 </li>
 <li><p><code>if ... else if ... else statementN</code>
-  &#x901A;&#x8FC7;&#x8BE5;&#x53E5;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>statement1</code> ~ <code>statementN</code> &#x4E4B;&#x95F4;&#x9009;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x3002; </p>
+  通过该句型，可以在 <code>statement1</code> ~ <code>statementN</code> 之间选其中一个执行。 </p>
 </li>
 </ul>
-<p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
+<p><strong>示例语法：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// if ...</span>
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) &#x8BED;&#x53E5;;
+<span class="hljs-keyword">if</span> (表达式) 语句;
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) 
-  &#x8BED;&#x53E5;;
+<span class="hljs-keyword">if</span> (表达式) 
+  语句;
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;;
+<span class="hljs-keyword">if</span> (表达式) {
+  代码块;
 }
 
 
 <span class="hljs-comment">// if ... else </span>
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) &#x8BED;&#x53E5;;
-<span class="hljs-keyword">else</span> &#x8BED;&#x53E5;;
+<span class="hljs-keyword">if</span> (表达式) 语句;
+<span class="hljs-keyword">else</span> 语句;
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) 
-  &#x8BED;&#x53E5;;
+<span class="hljs-keyword">if</span> (表达式) 
+  语句;
 <span class="hljs-keyword">else</span> 
-  &#x8BED;&#x53E5;;
+  语句;
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;;
+<span class="hljs-keyword">if</span> (表达式) {
+  代码块;
 } <span class="hljs-keyword">else</span> {
-  &#x4EE3;&#x7801;&#x5757;;
+  代码块;
 }
 
 <span class="hljs-comment">// if ... else if ... else ...</span>
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;;
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;;
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;;
+<span class="hljs-keyword">if</span> (表达式) {
+  代码块;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (表达式) {
+  代码块;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (表达式) {
+  代码块;
 } <span class="hljs-keyword">else</span> {
-  &#x4EE3;&#x7801;&#x5757;;
+  代码块;
 }
 </code></pre>
-<h2 id="switch-&#x8BED;&#x53E5;">switch &#x8BED;&#x53E5;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">switch</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  <span class="hljs-keyword">case</span> &#x53D8;&#x91CF;:
-    &#x8BED;&#x53E5;;
-  <span class="hljs-keyword">case</span> &#x6570;&#x5B57;:
-    &#x8BED;&#x53E5;;
+<h2 id="switch-语句">switch 语句</h2>
+<p><strong>示例语法：</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">switch</span> (表达式) {
+  <span class="hljs-keyword">case</span> 变量:
+    语句;
+  <span class="hljs-keyword">case</span> 数字:
+    语句;
     <span class="hljs-keyword">break</span>;
-  <span class="hljs-keyword">case</span> &#x5B57;&#x7B26;&#x4E32;:
-    &#x8BED;&#x53E5;;
+  <span class="hljs-keyword">case</span> 字符串:
+    语句;
   <span class="hljs-keyword">default</span>:
-    &#x8BED;&#x53E5;;
+    语句;
 }
 </code></pre>
 <ul>
-<li><code>default</code> &#x5206;&#x652F;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x4E0D;&#x5199;&#x3002;</li>
-<li><code>case</code> &#x5173;&#x952E;&#x8BCD;&#x540E;&#x9762;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#xFF1A;<code>&#x53D8;&#x91CF;</code>&#xFF0C;<code>&#x6570;&#x5B57;</code>&#xFF0C;<code>&#x5B57;&#x7B26;&#x4E32;</code>&#x3002;</li>
+<li><code>default</code> 分支可以省略不写。</li>
+<li><code>case</code> 关键词后面只能使用：<code>变量</code>，<code>数字</code>，<code>字符串</code>。</li>
 </ul>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> exp = <span class="hljs-number">10</span>;
 
 <span class="hljs-keyword">switch</span> ( exp ) {
-<span class="hljs-keyword">case</span> <span class="hljs-string">&quot;10&quot;</span>:
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;string 10&quot;</span>);
+<span class="hljs-keyword">case</span> <span class="hljs-string">"10"</span>:
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"string 10"</span>);
   <span class="hljs-keyword">break</span>;
 <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;number 10&quot;</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"number 10"</span>);
   <span class="hljs-keyword">break</span>;
 <span class="hljs-keyword">case</span> exp:
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;var exp&quot;</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"var exp"</span>);
   <span class="hljs-keyword">break</span>;
 <span class="hljs-keyword">default</span>:
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;default&quot;</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"default"</span>);
 }
 </code></pre>
-<p><strong>&#x8F93;&#x51FA;&#xFF1A;</strong></p>
+<p><strong>输出：</strong></p>
 <pre><code>number 10
-</code></pre><h2 id="for-&#x8BED;&#x53E5;">for &#x8BED;&#x53E5;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (&#x8BED;&#x53E5;; &#x8BED;&#x53E5;; &#x8BED;&#x53E5;)
-  &#x8BED;&#x53E5;;
+</code></pre><h2 id="for-语句">for 语句</h2>
+<p><strong>示例语法：</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (语句; 语句; 语句)
+  语句;
 
-<span class="hljs-keyword">for</span> (&#x8BED;&#x53E5;; &#x8BED;&#x53E5;; &#x8BED;&#x53E5;) {
-  &#x4EE3;&#x7801;&#x5757;;
+<span class="hljs-keyword">for</span> (语句; 语句; 语句) {
+  代码块;
 }
 </code></pre>
 <ul>
-<li>&#x652F;&#x6301;&#x4F7F;&#x7528; <code>break</code>&#xFF0C;<code>continue</code> &#x5173;&#x952E;&#x8BCD;&#x3002;</li>
+<li>支持使用 <code>break</code>，<code>continue</code> 关键词。</li>
 </ul>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; ++i) {
+<p><strong>示例代码：</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i < <span class="hljs-number">3</span>; ++i) {
   <span class="hljs-built_in">console</span>.log(i);
-  <span class="hljs-keyword">if</span>( i &gt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">if</span>( i >= <span class="hljs-number">1</span>) <span class="hljs-keyword">break</span>;
 }
 </code></pre>
-<p><strong>&#x8F93;&#x51FA;&#xFF1A;</strong></p>
+<p><strong>输出：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-number">0</span>
 <span class="hljs-number">1</span>
 </code></pre>
-<h2 id="while-&#x8BED;&#x53E5;">while &#x8BED;&#x53E5;</h2>
-<p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;)
-  &#x8BED;&#x53E5;;
+<h2 id="while-语句">while 语句</h2>
+<p><strong>示例语法：</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">while</span> (表达式)
+  语句;
 
-<span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;){
-  &#x4EE3;&#x7801;&#x5757;;
+<span class="hljs-keyword">while</span> (表达式){
+  代码块;
 }
 
 <span class="hljs-keyword">do</span> {
-  &#x4EE3;&#x7801;&#x5757;;
-} <span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;)
+  代码块;
+} <span class="hljs-keyword">while</span> (表达式)
 </code></pre>
 <ul>
-<li>&#x5F53;<code>&#x8868;&#x8FBE;&#x5F0F;</code>&#x4E3A; true &#x65F6;&#xFF0C;&#x5FAA;&#x73AF;&#x6267;&#x884C;<code>&#x8BED;&#x53E5;</code>&#x6216;<code>&#x4EE3;&#x7801;&#x5757;</code>&#x3002;</li>
-<li>&#x652F;&#x6301;&#x4F7F;&#x7528; <code>break</code>&#xFF0C;<code>continue</code> &#x5173;&#x952E;&#x8BCD;&#x3002;</li>
+<li>当<code>表达式</code>为 true 时，循环执行<code>语句</code>或<code>代码块</code>。</li>
+<li>支持使用 <code>break</code>，<code>continue</code> 关键词。</li>
 </ul>
 
                                 

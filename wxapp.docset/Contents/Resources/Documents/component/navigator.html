@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
-  <title>&#x5BFC;&#x822A;</title>
+  <title>导航</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../website.css">
   <style type="text/css">
@@ -18,132 +18,132 @@
                                 <section class="normal markdown-section">
                                 
                                 <h4 id="navigator">navigator</h4>
-<p>&#x9875;&#x9762;&#x94FE;&#x63A5;&#x3002;</p>
+<p>页面链接。</p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td id="&#x5BFC;&#x822A;-url">url</td>
+<td id="导航-url">url</td>
 <td>String</td>
 <td></td>
-<td>&#x5E94;&#x7528;&#x5185;&#x7684;&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;</td>
+<td>应用内的跳转链接</td>
 <td></td>
 </tr>
 <tr>
-<td id="&#x5BFC;&#x822A;-open-type">open-type</td>
+<td id="导航-open-type">open-type</td>
 <td>String</td>
 <td>navigate</td>
-<td>&#x8DF3;&#x8F6C;&#x65B9;&#x5F0F;</td>
+<td>跳转方式</td>
 <td></td>
 </tr>
 <tr>
-<td id="&#x5BFC;&#x822A;-delta">delta</td>
+<td id="导航-delta">delta</td>
 <td>Number</td>
 <td></td>
-<td>&#x5F53; open-type &#x4E3A; &apos;navigateBack&apos; &#x65F6;&#x6709;&#x6548;&#xFF0C;&#x8868;&#x793A;&#x56DE;&#x9000;&#x7684;&#x5C42;&#x6570;</td>
+<td>当 open-type 为 'navigateBack' 时有效，表示回退的层数</td>
 <td></td>
 </tr>
 <tr>
-<td id="&#x5BFC;&#x822A;-hover-class">hover-class</td>
+<td id="导航-hover-class">hover-class</td>
 <td>String</td>
 <td>navigator-hover</td>
-<td>&#x6307;&#x5B9A;&#x70B9;&#x51FB;&#x65F6;&#x7684;&#x6837;&#x5F0F;&#x7C7B;&#xFF0C;&#x5F53;<code>hover-class=&quot;none&quot;</code>&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x70B9;&#x51FB;&#x6001;&#x6548;&#x679C;</td>
+<td>指定点击时的样式类，当<code>hover-class="none"</code>时，没有点击态效果</td>
 <td></td>
 </tr>
 <tr>
-<td id="&#x5BFC;&#x822A;-hover-stop-propagation">hover-stop-propagation</td>
+<td id="导航-hover-stop-propagation">hover-stop-propagation</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x6307;&#x5B9A;&#x662F;&#x5426;&#x963B;&#x6B62;&#x672C;&#x8282;&#x70B9;&#x7684;&#x7956;&#x5148;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x70B9;&#x51FB;&#x6001;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
+<td>指定是否阻止本节点的祖先节点出现点击态</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.5.0 开始支持，低版本需做兼容处理。">1.5.0</a></td>
 </tr>
 <tr>
-<td id="&#x5BFC;&#x822A;-hover-start-time">hover-start-time</td>
+<td id="导航-hover-start-time">hover-start-time</td>
 <td>Number</td>
 <td>50</td>
-<td>&#x6309;&#x4F4F;&#x540E;&#x591A;&#x4E45;&#x51FA;&#x73B0;&#x70B9;&#x51FB;&#x6001;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;</td>
+<td>按住后多久出现点击态，单位毫秒</td>
 <td></td>
 </tr>
 <tr>
-<td id="&#x5BFC;&#x822A;-hover-stay-time">hover-stay-time</td>
+<td id="导航-hover-stay-time">hover-stay-time</td>
 <td>Number</td>
 <td>600</td>
-<td>&#x624B;&#x6307;&#x677E;&#x5F00;&#x540E;&#x70B9;&#x51FB;&#x6001;&#x4FDD;&#x7559;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;</td>
+<td>手指松开后点击态保留时间，单位毫秒</td>
 </tr>
 </tbody>
 </table>
-<p><strong>open-type &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
+<p><strong>open-type 有效值：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>值</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>navigate</td>
-<td>&#x5BF9;&#x5E94; <code>wx.navigateTo</code> &#x7684;&#x529F;&#x80FD;</td>
+<td>对应 <code>wx.navigateTo</code> 的功能</td>
 <td></td>
 </tr>
 <tr>
 <td>redirect</td>
-<td>&#x5BF9;&#x5E94; <code>wx.redirectTo</code> &#x7684;&#x529F;&#x80FD;</td>
+<td>对应 <code>wx.redirectTo</code> 的功能</td>
 <td></td>
 </tr>
 <tr>
 <td>switchTab</td>
-<td>&#x5BF9;&#x5E94; <code>wx.switchTab</code> &#x7684;&#x529F;&#x80FD;</td>
+<td>对应 <code>wx.switchTab</code> 的功能</td>
 <td></td>
 </tr>
 <tr>
 <td>reLaunch</td>
-<td>&#x5BF9;&#x5E94; <code>wx.reLaunch</code> &#x7684;&#x529F;&#x80FD;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
+<td>对应 <code>wx.reLaunch</code> 的功能</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.1.0 开始支持，低版本需做兼容处理。">1.1.0</a></td>
 </tr>
 <tr>
 <td>navigateBack</td>
-<td>&#x5BF9;&#x5E94; <code>wx.navigateBack</code> &#x7684;&#x529F;&#x80FD;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
+<td>对应 <code>wx.navigateBack</code> 的功能</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.1.0 开始支持，低版本需做兼容处理。">1.1.0</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x6CE8;&#xFF1A;<code>navigator-hover</code> &#x9ED8;&#x8BA4;&#x4E3A; <code>{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}</code>, <code>&lt;navigator/&gt;</code> &#x7684;&#x5B50;&#x8282;&#x70B9;&#x80CC;&#x666F;&#x8272;&#x5E94;&#x4E3A;&#x900F;&#x660E;&#x8272;</strong></p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/2Ec11cmI6BY1" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<p><strong>注：<code>navigator-hover</code> 默认为 <code>{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}</code>, <code><navigator></navigator></code> 的子节点背景色应为透明色</strong></p>
+<p><strong>示例代码：</strong></p>
+<p><a href="wechatide://minicode/2Ec11cmI6BY1" target="_blank">在开发者工具中预览效果</a></p>
 <pre><code class="lang-css"><span class="hljs-comment">/** wxss **/</span>
-<span class="hljs-comment">/** &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7684;navigator&#x70B9;&#x51FB;&#x6001; **/</span>
+<span class="hljs-comment">/** 修改默认的navigator点击态 **/</span>
 <span class="hljs-selector-class">.navigator-hover</span> {
     <span class="hljs-attribute">color</span>:blue;
 }
-<span class="hljs-comment">/** &#x81EA;&#x5B9A;&#x4E49;&#x5176;&#x4ED6;&#x70B9;&#x51FB;&#x6001;&#x6837;&#x5F0F;&#x7C7B; **/</span>
+<span class="hljs-comment">/** 自定义其他点击态样式类 **/</span>
 <span class="hljs-selector-class">.other-navigator-hover</span> {
     <span class="hljs-attribute">color</span>:red;
 }
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/navigate/navigate?title=navigate&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;navigator-hover&quot;</span>&gt;</span>&#x8DF3;&#x8F6C;&#x5230;&#x65B0;&#x9875;&#x9762;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;../../redirect/redirect/redirect?title=redirect&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;redirect&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>&gt;</span>&#x5728;&#x5F53;&#x524D;&#x9875;&#x6253;&#x5F00;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/index/index&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;switchTab&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>&gt;</span>&#x5207;&#x6362; Tab<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-comment"><!-- sample.wxml --></span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-area"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">"/page/navigate/navigate?title=navigate"</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">"navigator-hover"</span>></span>跳转到新页面<span class="hljs-tag"><!--<span class="hljs-name"-->navigator</span>>
+  <span class="hljs-tag"><<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">"../../redirect/redirect/redirect?title=redirect"</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">"redirect"</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">"other-navigator-hover"</span>></span>在当前页打开<span class="hljs-tag"><!--<span class="hljs-name"-->navigator</span>>
+  <span class="hljs-tag"><<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">"/page/index/index"</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">"switchTab"</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">"other-navigator-hover"</span>></span>切换 Tab<span class="hljs-tag"><!--<span class="hljs-name"-->navigator</span>>
+<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- navigator.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span>&gt;</span> {{title}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> &#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x8FD4;&#x56DE;&#x56DE;&#x5230;&#x4E4B;&#x524D;&#x9875;&#x9762; <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-comment"><!-- navigator.wxml --></span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"text-align:center"</span>></span> {{title}} <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<span class="hljs-tag"><<span class="hljs-name">view</span>></span> 点击左上角返回回到之前页面 <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- redirect.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span>&gt;</span> {{title}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> &#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x8FD4;&#x56DE;&#x56DE;&#x5230;&#x4E0A;&#x7EA7;&#x9875;&#x9762; <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-comment"><!-- redirect.wxml --></span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"text-align:center"</span>></span> {{title}} <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<span class="hljs-tag"><<span class="hljs-name">view</span>></span> 点击左上角返回回到上级页面 <span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
 </code></pre>
 <pre><code class="lang-js"><span class="hljs-comment">// redirect.js navigator.js</span>
 Page({

@@ -20,58 +20,58 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextarc">canvasContext.arc</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x753B;&#x4E00;&#x6761;&#x5F27;&#x7EBF;&#x3002;</p>
-<p><strong>Tip</strong>: &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5706;&#x53EF;&#x4EE5;&#x7528; <code>arc()</code> &#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x5176;&#x5B9E;&#x5F27;&#x5EA6;&#x4E3A;0&#xFF0C;&#x7EC8;&#x6B62;&#x5F27;&#x5EA6;&#x4E3A; <code>2 * Math.PI</code>&#x3002;</p>
-<p><strong>Tip</strong>: &#x7528; <code>stroke()</code> &#x6216;&#x8005; <code>fill()</code> &#x65B9;&#x6CD5;&#x6765;&#x5728; canvas &#x4E2D;&#x753B;&#x5F27;&#x7EBF;&#x3002;</p>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="定义">定义</h3>
+<p>画一条弧线。</p>
+<p><strong>Tip</strong>: 创建一个圆可以用 <code>arc()</code> 方法指定其实弧度为0，终止弧度为 <code>2 * Math.PI</code>。</p>
+<p><strong>Tip</strong>: 用 <code>stroke()</code> 或者 <code>fill()</code> 方法来在 canvas 中画弧线。</p>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>x</td>
 <td>Number</td>
-<td>&#x5706;&#x7684;x&#x5750;&#x6807;</td>
+<td>圆的x坐标</td>
 </tr>
 <tr>
 <td>y</td>
 <td>Number</td>
-<td>&#x5706;&#x7684;y&#x5750;&#x6807;</td>
+<td>圆的y坐标</td>
 </tr>
 <tr>
 <td>r</td>
 <td>Number</td>
-<td>&#x5706;&#x7684;&#x534A;&#x5F84;</td>
+<td>圆的半径</td>
 </tr>
 <tr>
 <td>sAngle</td>
 <td>Number</td>
-<td>&#x8D77;&#x59CB;&#x5F27;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x5F27;&#x5EA6;&#xFF08;&#x5728;3&#x70B9;&#x949F;&#x65B9;&#x5411;&#xFF09;</td>
+<td>起始弧度，单位弧度（在3点钟方向）</td>
 </tr>
 <tr>
 <td>eAngle</td>
 <td>Number</td>
-<td>&#x7EC8;&#x6B62;&#x5F27;&#x5EA6;</td>
+<td>终止弧度</td>
 </tr>
 <tr>
 <td>counterclockwise</td>
 <td>Boolean</td>
-<td>&#x53EF;&#x9009;&#x3002;&#x6307;&#x5B9A;&#x5F27;&#x5EA6;&#x7684;&#x65B9;&#x5411;&#x662F;&#x9006;&#x65F6;&#x9488;&#x8FD8;&#x662F;&#x987A;&#x65F6;&#x9488;&#x3002;&#x9ED8;&#x8BA4;&#x662F;false&#xFF0C;&#x5373;&#x987A;&#x65F6;&#x9488;&#x3002;</td>
+<td>可选。指定弧度的方向是逆时针还是顺时针。默认是false，即顺时针。</td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 
 <span class="hljs-comment">// Draw coordinates</span>
 ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;#EEEEEE&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'#EEEEEE'</span>)
 ctx.fill()
 
 ctx.beginPath()
@@ -79,46 +79,46 @@ ctx.moveTo(<span class="hljs-number">40</span>, <span class="hljs-number">75</sp
 ctx.lineTo(<span class="hljs-number">160</span>, <span class="hljs-number">75</span>)
 ctx.moveTo(<span class="hljs-number">100</span>, <span class="hljs-number">15</span>)
 ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">135</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;#AAAAAA&apos;</span>)
+ctx.setStrokeStyle(<span class="hljs-string">'#AAAAAA'</span>)
 ctx.stroke()
 
 ctx.setFontSize(<span class="hljs-number">12</span>)
-ctx.setFillStyle(<span class="hljs-string">&apos;black&apos;</span>)
-ctx.fillText(<span class="hljs-string">&apos;0&apos;</span>, <span class="hljs-number">165</span>, <span class="hljs-number">78</span>)
-ctx.fillText(<span class="hljs-string">&apos;0.5*PI&apos;</span>, <span class="hljs-number">83</span>, <span class="hljs-number">145</span>)
-ctx.fillText(<span class="hljs-string">&apos;1*PI&apos;</span>, <span class="hljs-number">15</span>, <span class="hljs-number">78</span>)
-ctx.fillText(<span class="hljs-string">&apos;1.5*PI&apos;</span>, <span class="hljs-number">83</span>, <span class="hljs-number">10</span>)
+ctx.setFillStyle(<span class="hljs-string">'black'</span>)
+ctx.fillText(<span class="hljs-string">'0'</span>, <span class="hljs-number">165</span>, <span class="hljs-number">78</span>)
+ctx.fillText(<span class="hljs-string">'0.5*PI'</span>, <span class="hljs-number">83</span>, <span class="hljs-number">145</span>)
+ctx.fillText(<span class="hljs-string">'1*PI'</span>, <span class="hljs-number">15</span>, <span class="hljs-number">78</span>)
+ctx.fillText(<span class="hljs-string">'1.5*PI'</span>, <span class="hljs-number">83</span>, <span class="hljs-number">10</span>)
 
 <span class="hljs-comment">// Draw points</span>
 ctx.beginPath()
 ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;lightgreen&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'lightgreen'</span>)
 ctx.fill()
 
 ctx.beginPath()
 ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">25</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'blue'</span>)
 ctx.fill()
 
 ctx.beginPath()
 ctx.arc(<span class="hljs-number">150</span>, <span class="hljs-number">75</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'red'</span>)
 ctx.fill()
 
 <span class="hljs-comment">// Draw arc</span>
 ctx.beginPath()
 ctx.arc(<span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1.5</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;#333333&apos;</span>)
+ctx.setStrokeStyle(<span class="hljs-string">'#333333'</span>)
 ctx.stroke()
 
 ctx.draw()
 </code></pre>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/arc.png?t=2018413" alt=""></p>
-<p>&#x9488;&#x5BF9; <code>arc(100, 75, 50, 0, 1.5 * Math.PI)</code>&#x7684;&#x4E09;&#x4E2A;&#x5173;&#x952E;&#x5750;&#x6807;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>针对 <code>arc(100, 75, 50, 0, 1.5 * Math.PI)</code>的三个关键坐标如下：</p>
 <ul>
-<li>&#x7EFF;&#x8272;: &#x5706;&#x5FC3; (100, 75)</li>
-<li>&#x7EA2;&#x8272;: &#x8D77;&#x59CB;&#x5F27;&#x5EA6; (0)</li>
-<li>&#x84DD;&#x8272;: &#x7EC8;&#x6B62;&#x5F27;&#x5EA6; (1.5 * Math.PI)</li>
+<li>绿色: 圆心 (100, 75)</li>
+<li>红色: 起始弧度 (0)</li>
+<li>蓝色: 终止弧度 (1.5 * Math.PI)</li>
 </ul>
 
                                 

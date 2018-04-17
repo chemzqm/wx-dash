@@ -20,535 +20,535 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="api">API</h1>
-<p>&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x4E30;&#x5BCC;&#x7684;&#x5FAE;&#x4FE1;&#x539F;&#x751F;API&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8C03;&#x8D77;&#x5FAE;&#x4FE1;&#x63D0;&#x4F9B;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x7B49;&#x3002;</p>
-<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>框架提供丰富的微信原生API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。</p>
+<p><strong>说明：</strong></p>
 <ul>
-<li>wx.on &#x5F00;&#x5934;&#x7684; API &#x662F;&#x76D1;&#x542C;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x7684;API&#x63A5;&#x53E3;&#xFF0C;&#x63A5;&#x53D7;&#x4E00;&#x4E2A; CALLBACK &#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x5F53;&#x8BE5;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; CALLBACK &#x51FD;&#x6570;&#x3002;</li>
-<li>&#x5982;&#x672A;&#x7279;&#x6B8A;&#x7EA6;&#x5B9A;&#xFF0C;&#x5176;&#x4ED6; API &#x63A5;&#x53E3;&#x90FD;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;OBJECT&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;</li>
-<li>OBJECT&#x4E2D;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;<code>success</code>, <code>fail</code>, <code>complete</code>&#x6765;&#x63A5;&#x6536;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x3002;</li>
+<li>wx.on 开头的 API 是监听某个事件发生的API接口，接受一个 CALLBACK 函数作为参数。当该事件触发时，会调用 CALLBACK 函数。</li>
+<li>如未特殊约定，其他 API 接口都接受一个OBJECT作为参数。</li>
+<li>OBJECT中可以指定<code>success</code>, <code>fail</code>, <code>complete</code>来接收接口调用结果。</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数名</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>API&#x5217;&#x8868;&#xFF1A;</strong></p>
-<p><strong>&#x7F51;&#x7EDC; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>API列表：</strong></p>
+<p><strong>网络 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="network-request.html">wx.request</a></td>
-<td>&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</td>
+<td>发起网络请求</td>
 </tr>
 <tr>
 <td><a href="network-file.html#wxuploadfileobject">wx.uploadFile</a></td>
-<td>&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</td>
+<td>上传文件</td>
 </tr>
 <tr>
 <td><a href="network-file.html#wxdownloadfileobject">wx.downloadFile</a></td>
-<td>&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</td>
+<td>下载文件</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxconnectsocketobject">wx.connectSocket</a></td>
-<td>&#x521B;&#x5EFA; WebSocket &#x8FDE;&#x63A5;</td>
+<td>创建 WebSocket 连接</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketopencallback">wx.onSocketOpen</a></td>
-<td>&#x76D1;&#x542C; WebSocket &#x6253;&#x5F00;</td>
+<td>监听 WebSocket 打开</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketerrorcallback">wx.onSocketError</a></td>
-<td>&#x76D1;&#x542C; WebSocket &#x9519;&#x8BEF;</td>
+<td>监听 WebSocket 错误</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxsendsocketmessageobject">wx.sendSocketMessage</a></td>
-<td>&#x53D1;&#x9001; WebSocket &#x6D88;&#x606F;</td>
+<td>发送 WebSocket 消息</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketmessagecallback">wx.onSocketMessage</a></td>
-<td>&#x63A5;&#x53D7; WebSocket &#x6D88;&#x606F;</td>
+<td>接受 WebSocket 消息</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxclosesocket">wx.closeSocket</a></td>
-<td>&#x5173;&#x95ED; WebSocket &#x8FDE;&#x63A5;</td>
+<td>关闭 WebSocket 连接</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketclosecallback">wx.onSocketClose</a></td>
-<td>&#x76D1;&#x542C; WebSocket &#x5173;&#x95ED;</td>
+<td>监听 WebSocket 关闭</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x5A92;&#x4F53; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>媒体 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="media-picture.html#wxchooseimageobject">wx.chooseImage</a></td>
-<td>&#x4ECE;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x56FE;&#x7247;&#xFF0C;&#x6216;&#x8005;&#x62CD;&#x7167;</td>
+<td>从相册选择图片，或者拍照</td>
 </tr>
 <tr>
 <td><a href="media-picture.html#wxpreviewimageobject">wx.previewImage</a></td>
-<td>&#x9884;&#x89C8;&#x56FE;&#x7247;</td>
+<td>预览图片</td>
 </tr>
 <tr>
 <td><a href="media-record.html#wxstartrecordobject">wx.startRecord</a></td>
-<td>&#x5F00;&#x59CB;&#x5F55;&#x97F3;</td>
+<td>开始录音</td>
 </tr>
 <tr>
 <td><a href="media-record.html#wxstoprecord">wx.stopRecord</a></td>
-<td>&#x7ED3;&#x675F;&#x5F55;&#x97F3;</td>
+<td>结束录音</td>
 </tr>
 <tr>
 <td><a href="media-voice.html#wxplayvoice">wx.playVoice</a></td>
-<td>&#x64AD;&#x653E;&#x8BED;&#x97F3;</td>
+<td>播放语音</td>
 </tr>
 <tr>
 <td><a href="media-voice.html#wxpausevoice">wx.pauseVoice</a></td>
-<td>&#x6682;&#x505C;&#x64AD;&#x653E;&#x8BED;&#x97F3;</td>
+<td>暂停播放语音</td>
 </tr>
 <tr>
 <td><a href="media-voice.html#wxstopvoice">wx.stopVoice</a></td>
-<td>&#x7ED3;&#x675F;&#x64AD;&#x653E;&#x8BED;&#x97F3;</td>
+<td>结束播放语音</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxgetbackgroundaudioplayerstateobject">wx.getBackgroundAudioPlayerState</a></td>
-<td>&#x83B7;&#x53D6;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x72B6;&#x6001;</td>
+<td>获取音乐播放状态</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxplaybackgroundaudioobject">wx.playBackgroundAudio</a></td>
-<td>&#x64AD;&#x653E;&#x97F3;&#x4E50;</td>
+<td>播放音乐</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxpausebackgroundaudio">wx.pauseBackgroundAudio</a></td>
-<td>&#x6682;&#x505C;&#x64AD;&#x653E;&#x97F3;&#x4E50;</td>
+<td>暂停播放音乐</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxstopbackgroundaudio">wx.seekBackgroundAudio</a></td>
-<td>&#x63A7;&#x5236;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;</td>
+<td>控制音乐播放进度</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxstopbackgroundaudio">wx.stopBackgroundAudio</a></td>
-<td>&#x505C;&#x6B62;&#x64AD;&#x653E;&#x97F3;&#x4E50;</td>
+<td>停止播放音乐</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxonbackgroundaudioplaycallback">wx.onBackgroundAudioPlay</a></td>
-<td>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x5F00;&#x59CB;&#x64AD;&#x653E;</td>
+<td>监听音乐开始播放</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxonbackgroundaudiopausecallback">wx.onBackgroundAudioPause</a></td>
-<td>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x6682;&#x505C;</td>
+<td>监听音乐暂停</td>
 </tr>
 <tr>
 <td><a href="media-background-audio.html#wxonbackgroundaudiostopcallback">wx.onBackgroundAudioStop</a></td>
-<td>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x7ED3;&#x675F;</td>
+<td>监听音乐结束</td>
 </tr>
 <tr>
 <td><a href="media-video.html">wx.chooseVideo</a></td>
-<td>&#x4ECE;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x89C6;&#x9891;&#xFF0C;&#x6216;&#x8005;&#x62CD;&#x6444;</td>
+<td>从相册选择视频，或者拍摄</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x6587;&#x4EF6; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>文件 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="file.html">wx.saveFile</a></td>
-<td>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;</td>
+<td>保存文件</td>
 </tr>
 <tr>
 <td><a href="file.html#wxgetsavedfilelistobject">wx.getSavedFileList</a></td>
-<td>&#x83B7;&#x53D6;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;</td>
+<td>获取已保存的文件列表</td>
 </tr>
 <tr>
 <td><a href="file.html#wxgetsavedfileinfoobject">wx.getSavedFileInfo</a></td>
-<td>&#x83B7;&#x53D6;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x4FE1;&#x606F;</td>
+<td>获取已保存的文件信息</td>
 </tr>
 <tr>
 <td><a href="file.html#wxremovesavedfileobject">wx.removeSavedFile</a></td>
-<td>&#x5220;&#x9664;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x6587;&#x4EF6;&#x4FE1;&#x606F;</td>
+<td>删除已保存的文件信息</td>
 </tr>
 <tr>
 <td><a href="file.html#wxopendocumentobject">wx.openDocument</a></td>
-<td>&#x6253;&#x5F00;&#x6587;&#x4EF6;</td>
+<td>打开文件</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x6570;&#x636E; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>数据 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="data.html#wxgetstorageobject">wx.getStorage</a></td>
-<td>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</td>
+<td>获取本地数据缓存</td>
 </tr>
 <tr>
 <td><a href="data.html#wxgetstoragesynckey">wx.getStorageSync</a></td>
-<td>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</td>
+<td>获取本地数据缓存</td>
 </tr>
 <tr>
 <td><a href="data.html#wxsetstorageobject">wx.setStorage</a></td>
-<td>&#x8BBE;&#x7F6E;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</td>
+<td>设置本地数据缓存</td>
 </tr>
 <tr>
 <td><a href="data.html#wxsetstoragesynckeydata">wx.setStorageSync</a></td>
-<td>&#x8BBE;&#x7F6E;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</td>
+<td>设置本地数据缓存</td>
 </tr>
 <tr>
 <td><a href="data.html#wxgetstorageinfoobject">wx.getStorageInfo</a></td>
-<td>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</td>
+<td>获取本地缓存的相关信息</td>
 </tr>
 <tr>
 <td><a href="data.html#wxgetstorageinfosync">wx.getStorageInfoSync</a></td>
-<td>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</td>
+<td>获取本地缓存的相关信息</td>
 </tr>
 <tr>
 <td><a href="data.html#wxremovestorageobject">wx.removeStorage</a></td>
-<td>&#x5220;&#x9664;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x5185;&#x5BB9;</td>
+<td>删除本地缓存内容</td>
 </tr>
 <tr>
 <td><a href="data.html#wxremovestoragesynckey">wx.removeStorageSync</a></td>
-<td>&#x5220;&#x9664;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x5185;&#x5BB9;</td>
+<td>删除本地缓存内容</td>
 </tr>
 <tr>
 <td><a href="data.html#wxclearstorageobject">wx.clearStorage</a></td>
-<td>&#x6E05;&#x7406;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</td>
+<td>清理本地数据缓存</td>
 </tr>
 <tr>
 <td><a href="data.html#wxclearstoragesync">wx.clearStorageSync</a></td>
-<td>&#x6E05;&#x7406;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</td>
+<td>清理本地数据缓存</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x4F4D;&#x7F6E; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>位置 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="location.html#wxgetlocationobject">wx.getLocation</a></td>
-<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</td>
+<td>获取当前位置</td>
 </tr>
 <tr>
 <td><a href="location.html#wxchooselocationobject">wx.chooseLocation</a></td>
-<td>&#x6253;&#x5F00;&#x5730;&#x56FE;&#x9009;&#x62E9;&#x4F4D;&#x7F6E;</td>
+<td>打开地图选择位置</td>
 </tr>
 <tr>
 <td><a href="location.html#wxopenlocationobject">wx.openLocation</a></td>
-<td>&#x6253;&#x5F00;&#x5185;&#x7F6E;&#x5730;&#x56FE;</td>
+<td>打开内置地图</td>
 </tr>
 <tr>
 <td><a href="api-map.html#wxcreatemapcontextmapid">wx.createMapContext</a></td>
-<td>&#x5730;&#x56FE;&#x7EC4;&#x4EF6;&#x63A7;&#x5236;</td>
+<td>地图组件控制</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x8BBE;&#x5907; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>设备 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="device.html#wxgetnetworktypeobject">wx.getNetworkType</a></td>
-<td>&#x83B7;&#x53D6;&#x7F51;&#x7EDC;&#x7C7B;&#x578B;</td>
+<td>获取网络类型</td>
 </tr>
 <tr>
 <td><a href="device.html#wxonnetworkstatuschangecallback">wx.onNetworkStatusChange</a></td>
-<td>&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x53D8;&#x5316;</td>
+<td>监听网络状态变化</td>
 </tr>
 <tr>
 <td><a href="systeminfo.html#wxgetsysteminfoobject">wx.getSystemInfo</a></td>
-<td>&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</td>
+<td>获取系统信息</td>
 </tr>
 <tr>
 <td><a href="systeminfo.html#wxgetsysteminfosync">wx.getSystemInfoSync</a></td>
-<td>&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</td>
+<td>获取系统信息</td>
 </tr>
 <tr>
 <td><a href="accelerometer.html#wxonaccelerometerchangecallback">wx.onAccelerometerChange</a></td>
-<td>&#x76D1;&#x542C;&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;</td>
+<td>监听加速度数据</td>
 </tr>
 <tr>
 <td><a href="accelerometer.html#wxstartaccelerometerobject">wx.startAccelerometer</a></td>
-<td>&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;</td>
+<td>开始监听加速度数据</td>
 </tr>
 <tr>
 <td><a href="accelerometer.html#wxstopaccelerometerobject">wx.stopAccelerometer</a></td>
-<td>&#x505C;&#x6B62;&#x76D1;&#x542C;&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;</td>
+<td>停止监听加速度数据</td>
 </tr>
 <tr>
 <td><a href="compass.html#wxoncompasschangecallback">wx.onCompassChange</a></td>
-<td>&#x76D1;&#x542C;&#x7F57;&#x76D8;&#x6570;&#x636E;</td>
+<td>监听罗盘数据</td>
 </tr>
 <tr>
 <td><a href="compass.html#wxstartcompassobject">wx.startCompass</a></td>
-<td>&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x7F57;&#x76D8;&#x6570;&#x636E;</td>
+<td>开始监听罗盘数据</td>
 </tr>
 <tr>
 <td><a href="compass.html#wxstopcompassobject">wx.stopCompass</a></td>
-<td>&#x505C;&#x6B62;&#x76D1;&#x542C;&#x7F57;&#x76D8;&#x6570;&#x636E;</td>
+<td>停止监听罗盘数据</td>
 </tr>
 <tr>
 <td><a href="clipboard.html#wxsetclipboarddataobject">wx.setClipboardData</a></td>
-<td>&#x8BBE;&#x7F6E;&#x526A;&#x8D34;&#x677F;&#x5185;&#x5BB9;</td>
+<td>设置剪贴板内容</td>
 </tr>
 <tr>
 <td><a href="clipboard.html#wxgetclipboarddataobject">wx.getClipboardData</a></td>
-<td>&#x83B7;&#x53D6;&#x526A;&#x8D34;&#x677F;&#x5185;&#x5BB9;</td>
+<td>获取剪贴板内容</td>
 </tr>
 <tr>
 <td><a href="phonecall.html#wxmakephonecallobject">wx.makePhoneCall</a></td>
-<td>&#x62E8;&#x6253;&#x7535;&#x8BDD;</td>
+<td>拨打电话</td>
 </tr>
 <tr>
 <td><a href="scancode.html#wxscancodeobject">wx.scanCode</a></td>
-<td>&#x626B;&#x7801;</td>
+<td>扫码</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x754C;&#x9762; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>界面 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="api-react.html#wxshowtoastobject">wx.showToast</a></td>
-<td>&#x663E;&#x793A;&#x63D0;&#x793A;&#x6846;</td>
+<td>显示提示框</td>
 </tr>
 <tr>
 <td><a href="api-react.html#wxshowloadingobject">wx.showLoading</a></td>
-<td>&#x663E;&#x793A;&#x52A0;&#x8F7D;&#x63D0;&#x793A;&#x6846;</td>
+<td>显示加载提示框</td>
 </tr>
 <tr>
 <td><a href="api-react.html#wxhidetoast">wx.hideToast</a></td>
-<td>&#x9690;&#x85CF;&#x63D0;&#x793A;&#x6846;</td>
+<td>隐藏提示框</td>
 </tr>
 <tr>
 <td><a href="api-react.html#wxhideloading">wx.hideLoading</a></td>
-<td>&#x9690;&#x85CF;&#x63D0;&#x793A;&#x6846;</td>
+<td>隐藏提示框</td>
 </tr>
 <tr>
 <td><a href="api-react.html#wxshowmodalobject">wx.showModal</a></td>
-<td>&#x663E;&#x793A;&#x6A21;&#x6001;&#x5F39;&#x7A97;</td>
+<td>显示模态弹窗</td>
 </tr>
 <tr>
 <td><a href="api-react.html#wxshowactionsheetobject">wx.showActionSheet</a></td>
-<td>&#x663E;&#x793A;&#x83DC;&#x5355;&#x5217;&#x8868;</td>
+<td>显示菜单列表</td>
 </tr>
 <tr>
 <td><a href="ui.html#wxsetnavigationbartitleobject">wx.setNavigationBarTitle</a></td>
-<td>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x9875;&#x9762;&#x6807;&#x9898;</td>
+<td>设置当前页面标题</td>
 </tr>
 <tr>
 <td><a href="ui.html#wxshownavigationbarloading">wx.showNavigationBarLoading</a></td>
-<td>&#x663E;&#x793A;&#x5BFC;&#x822A;&#x6761;&#x52A0;&#x8F7D;&#x52A8;&#x753B;</td>
+<td>显示导航条加载动画</td>
 </tr>
 <tr>
 <td><a href="ui.html#wxhidenavigationbarloading">wx.hideNavigationBarLoading</a></td>
-<td>&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x6761;&#x52A0;&#x8F7D;&#x52A8;&#x753B;</td>
+<td>隐藏导航条加载动画</td>
 </tr>
 <tr>
 <td><a href="ui-navigate.html#wxnavigatetoobject">wx.navigateTo</a></td>
-<td>&#x65B0;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#x9875;&#x9762;</td>
+<td>新窗口打开页面</td>
 </tr>
 <tr>
 <td><a href="ui-navigate.html#wxredirecttoobject">wx.redirectTo</a></td>
-<td>&#x539F;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#x9875;&#x9762;</td>
+<td>原窗口打开页面</td>
 </tr>
 <tr>
 <td><a href="ui-navigate.html#wxswitchtabobject">wx.switchTab</a></td>
-<td>&#x5207;&#x6362;&#x5230; tabbar &#x9875;&#x9762;</td>
+<td>切换到 tabbar 页面</td>
 </tr>
 <tr>
 <td><a href="ui-navigate.html#wxnavigateback">wx.navigateBack</a></td>
-<td>&#x9000;&#x56DE;&#x4E0A;&#x4E00;&#x4E2A;&#x9875;&#x9762;</td>
+<td>退回上一个页面</td>
 </tr>
 <tr>
 <td><a href="api-animation.html">wx.createAnimation</a></td>
-<td>&#x52A8;&#x753B;</td>
+<td>动画</td>
 </tr>
 <tr>
 <td><a href="canvas/create-canvas-context.html">wx.createContext</a></td>
-<td>&#x521B;&#x5EFA;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;</td>
+<td>创建绘图上下文</td>
 </tr>
 <tr>
 <td><a href="canvas/draw-canvas.html">wx.drawCanvas</a></td>
-<td>&#x7ED8;&#x56FE;</td>
+<td>绘图</td>
 </tr>
 <tr>
 <td><a href="pulldown.html#wxstoppulldownrefresh">wx.stopPullDownRefresh</a></td>
-<td>&#x505C;&#x6B62;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x52A8;&#x753B;</td>
+<td>停止下拉刷新动画</td>
 </tr>
 </tbody>
 </table>
-<p><strong>WXML&#x8282;&#x70B9;&#x4FE1;&#x606F; API &#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>WXML节点信息 API 列表：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="wxml-nodes-info.html#wxcreateselectorquery">wx.createSelectorQuery</a></td>
-<td>&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;</td>
+<td>创建查询请求</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#selectorqueryincomponent">selectorQuery.in</a></td>
-<td>&#x6307;&#x5B9A;&#x5728;&#x54EA;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x9009;&#x53D6;&#x8282;&#x70B9;</td>
+<td>指定在哪个自定义组件中选取节点</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#selectorqueryselectselector">selectorQuery.select</a></td>
-<td>&#x6839;&#x636E;&#x9009;&#x62E9;&#x5668;&#x9009;&#x62E9;&#x5355;&#x4E2A;&#x8282;&#x70B9;</td>
+<td>根据选择器选择单个节点</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#selectorqueryselectallselector">selectorQuery.selectAll</a></td>
-<td>&#x6839;&#x636E;&#x9009;&#x62E9;&#x5668;&#x9009;&#x62E9;&#x5168;&#x90E8;&#x8282;&#x70B9;</td>
+<td>根据选择器选择全部节点</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#selectorqueryselectviewport">selectorQuery.selectViewport</a></td>
-<td>&#x9009;&#x62E9;&#x663E;&#x793A;&#x533A;&#x57DF;</td>
+<td>选择显示区域</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#nodesrefboundingclientrectcallback">nodesRef.boundingClientRect</a></td>
-<td>&#x83B7;&#x53D6;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#x548C;&#x5C3A;&#x5BF8;</td>
+<td>获取布局位置和尺寸</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#nodesrefscrolloffsetcallback">nodesRef.scrollOffset</a></td>
-<td>&#x83B7;&#x53D6;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</td>
+<td>获取滚动位置</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#nodesreffieldsfieldscallback">nodesRef.fields</a></td>
-<td>&#x83B7;&#x53D6;&#x4EFB;&#x610F;&#x5B57;&#x6BB5;</td>
+<td>获取任意字段</td>
 </tr>
 <tr>
 <td><a href="wxml-nodes-info.html#selectorqueryexeccallback">selectorQuery.exec</a></td>
-<td>&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;</td>
+<td>执行查询请求</td>
 </tr>
 </tbody>
 </table>
-<p><strong>WXML&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x76F8;&#x4EA4;&#x72B6;&#x6001;&#xFF1A;</strong></p>
+<p><strong>WXML节点布局相交状态：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="intersection-observer.html#wxcreateintersectionobserverthisoptions">wx.createIntersectionObserver</a></td>
-<td>&#x521B;&#x5EFA; IntersectionObserver &#x5BF9;&#x8C61;</td>
+<td>创建 IntersectionObserver 对象</td>
 </tr>
 <tr>
 <td><a href="intersection-observer.html#intersectionobserverrelativetoselectormargins">intersectionObserver.relativeTo</a></td>
-<td>&#x6307;&#x5B9A;&#x53C2;&#x7167;&#x8282;&#x70B9;</td>
+<td>指定参照节点</td>
 </tr>
 <tr>
 <td><a href="intersection-observer.html#intersectionobserverrelativetoviewportmargins">intersectionObserver.relativeToViewport</a></td>
-<td>&#x6307;&#x5B9A;&#x9875;&#x9762;&#x663E;&#x793A;&#x533A;&#x57DF;&#x4F5C;&#x4E3A;&#x53C2;&#x7167;&#x533A;&#x57DF;</td>
+<td>指定页面显示区域作为参照区域</td>
 </tr>
 <tr>
 <td><a href="intersection-observer.html#intersectionobserverobservetargetselectorcallback">intersectionObserver.observe</a></td>
-<td>&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E76;&#x5F00;&#x59CB;&#x76D1;&#x542C;</td>
+<td>指定目标节点并开始监听</td>
 </tr>
 <tr>
 <td><a href="intersection-observer.html#intersectionobserverdisconnect">intersectionObserver.disconnect</a></td>
-<td>&#x505C;&#x6B62;&#x76D1;&#x542C;</td>
+<td>停止监听</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x5F00;&#x653E;&#x63A5;&#x53E3;&#xFF1A;</strong></p>
+<p><strong>开放接口：</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="api-login.html">wx.login</a></td>
-<td>&#x767B;&#x5F55;</td>
+<td>登录</td>
 </tr>
 <tr>
 <td><a href="open.html#wxgetuserinfoobject">wx.getUserInfo</a></td>
-<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</td>
+<td>获取用户信息</td>
 </tr>
 <tr>
 <td><a href="address.html#wxchooseaddressobject">wx.chooseAddress</a></td>
-<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x6536;&#x8D27;&#x5730;&#x5740;</td>
+<td>获取用户收货地址</td>
 </tr>
 <tr>
 <td><a href="api-pay.html#wxrequestpaymentobject">wx.requestPayment</a></td>
-<td>&#x53D1;&#x8D77;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;</td>
+<td>发起微信支付</td>
 </tr>
 <tr>
 <td><a href="card.html#wxaddcardobject">wx.addCard</a></td>
-<td>&#x6DFB;&#x52A0;&#x5361;&#x5238;</td>
+<td>添加卡券</td>
 </tr>
 <tr>
 <td><a href="card.html#wxopencardobject">wx.openCard</a></td>
-<td>&#x6253;&#x5F00;&#x5361;&#x5238;</td>
+<td>打开卡券</td>
 </tr>
 </tbody>
 </table>

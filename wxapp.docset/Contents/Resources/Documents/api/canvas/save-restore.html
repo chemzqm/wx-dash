@@ -20,17 +20,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextsave">canvasContext.save</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x7684;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
+<h3 id="定义">定义</h3>
+<p>保存当前的绘图上下文。</p>
 <h1 id="restore">restore</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x6062;&#x590D;&#x4E4B;&#x524D;&#x4FDD;&#x5B58;&#x7684;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="定义">定义</h3>
+<p>恢复之前保存的绘图上下文。</p>
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 
 <span class="hljs-comment">// save the default fill style</span>
 ctx.save() 
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'red'</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
 
 <span class="hljs-comment">// restore to the previous saved state</span>

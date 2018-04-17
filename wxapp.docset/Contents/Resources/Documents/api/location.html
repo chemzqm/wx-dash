@@ -20,105 +20,105 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxgetlocationobject">wx.getLocation(OBJECT)</h3>
-<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x3001;&#x901F;&#x5EA6;&#x3002;&#x5F53;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x6B64;&#x63A5;&#x53E3;&#x65E0;&#x6CD5;&#x8C03;&#x7528;&#xFF1B;&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x201C;&#x663E;&#x793A;&#x5728;&#x804A;&#x5929;&#x9876;&#x90E8;&#x201D;&#x65F6;&#xFF0C;&#x6B64;&#x63A5;&#x53E3;&#x53EF;&#x7EE7;&#x7EED;&#x8C03;&#x7528;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用；当用户点击“显示在聊天顶部”时，此接口可继续调用。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>type</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x9ED8;&#x8BA4;&#x4E3A; wgs84 &#x8FD4;&#x56DE; gps &#x5750;&#x6807;&#xFF0C;gcj02 &#x8FD4;&#x56DE;&#x53EF;&#x7528;&#x4E8E;<code>wx.openLocation</code>&#x7684;&#x5750;&#x6807;</td>
+<td>否</td>
+<td>默认为 wgs84 返回 gps 坐标，gcj02 返回可用于<code>wx.openLocation</code>的坐标</td>
 <td></td>
 </tr>
 <tr>
 <td>altitude</td>
 <td>Boolean</td>
-<td>&#x5426;</td>
-<td>&#x4F20;&#x5165; true &#x4F1A;&#x8FD4;&#x56DE;&#x9AD8;&#x5EA6;&#x4FE1;&#x606F;&#xFF0C;&#x7531;&#x4E8E;&#x83B7;&#x53D6;&#x9AD8;&#x5EA6;&#x9700;&#x8981;&#x8F83;&#x9AD8;&#x7CBE;&#x786E;&#x5EA6;&#xFF0C;&#x4F1A;&#x51CF;&#x6162;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x901F;&#x5EA6;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.0</a></td>
+<td>否</td>
+<td>传入 true 会返回高度信息，由于获取高度需要较高精确度，会减慢接口返回速度</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.6.0 开始支持，低版本需做兼容处理。">1.6.0</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x662F;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x8BE6;&#x89C1;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#x3002;</td>
+<td>是</td>
+<td>接口调用成功的回调函数，返回内容详见返回参数说明。</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>latitude</td>
-<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;</td>
+<td>纬度，浮点数，范围为-90~90，负数表示南纬</td>
 <td></td>
 </tr>
 <tr>
 <td>longitude</td>
-<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;</td>
+<td>经度，浮点数，范围为-180~180，负数表示西经</td>
 <td></td>
 </tr>
 <tr>
 <td>speed</td>
-<td>&#x901F;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x5355;&#x4F4D;m/s</td>
+<td>速度，浮点数，单位m/s</td>
 <td></td>
 </tr>
 <tr>
 <td>accuracy</td>
-<td>&#x4F4D;&#x7F6E;&#x7684;&#x7CBE;&#x786E;&#x5EA6;</td>
+<td>位置的精确度</td>
 <td></td>
 </tr>
 <tr>
 <td>altitude</td>
-<td>&#x9AD8;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D; m</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>高度，单位 m</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>verticalAccuracy</td>
-<td>&#x5782;&#x76F4;&#x7CBE;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D; m&#xFF08;Android &#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#xFF0C;&#x8FD4;&#x56DE; 0&#xFF09;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>垂直精度，单位 m（Android 无法获取，返回 0）</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>horizontalAccuracy</td>
-<td>&#x6C34;&#x5E73;&#x7CBE;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D; m</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>水平精度，单位 m</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getLocation({
-  type: <span class="hljs-string">&apos;wgs84&apos;</span>,
+  type: <span class="hljs-string">'wgs84'</span>,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> latitude = res.latitude
     <span class="hljs-keyword">var</span> longitude = res.longitude
@@ -128,133 +128,133 @@
 })
 </code></pre>
 <h3 id="wxchooselocationobject">wx.chooseLocation(OBJECT)</h3>
-<p>&#x6253;&#x5F00;&#x5730;&#x56FE;&#x9009;&#x62E9;&#x4F4D;&#x7F6E;&#x3002;</p>
-<p>&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.userLocation</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>打开地图选择位置。</p>
+<p>需要<a href="authorize-index.html">用户授权</a> scope.userLocation</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x662F;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x8BE6;&#x89C1;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#x3002;</td>
+<td>是</td>
+<td>接口调用成功的回调函数，返回内容详见返回参数说明。</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>name</td>
-<td>&#x4F4D;&#x7F6E;&#x540D;&#x79F0;</td>
+<td>位置名称</td>
 </tr>
 <tr>
 <td>address</td>
-<td>&#x8BE6;&#x7EC6;&#x5730;&#x5740;</td>
+<td>详细地址</td>
 </tr>
 <tr>
 <td>latitude</td>
-<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;</td>
+<td>纬度，浮点数，范围为-90~90，负数表示南纬</td>
 </tr>
 <tr>
 <td>longitude</td>
-<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;</td>
+<td>经度，浮点数，范围为-180~180，负数表示西经</td>
 </tr>
 </tbody>
 </table>
 <h3 id="wxopenlocationobject">wx.openLocation(OBJECT)</h3>
-<p>&#x200B;&#x4F7F;&#x7528;&#x5FAE;&#x4FE1;&#x5185;&#x7F6E;&#x5730;&#x56FE;&#x67E5;&#x770B;&#x4F4D;&#x7F6E;&#x3002;</p>
-<p>&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.userLocation</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>​使用微信内置地图查看位置。</p>
+<p>需要<a href="authorize-index.html">用户授权</a> scope.userLocation</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>latitude</td>
 <td>Float</td>
-<td>&#x662F;</td>
-<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;</td>
+<td>是</td>
+<td>纬度，范围为-90~90，负数表示南纬</td>
 </tr>
 <tr>
 <td>longitude</td>
 <td>Float</td>
-<td>&#x662F;</td>
-<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;</td>
+<td>是</td>
+<td>经度，范围为-180~180，负数表示西经</td>
 </tr>
 <tr>
 <td>scale</td>
 <td>INT</td>
-<td>&#x5426;</td>
-<td>&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#xFF0C;&#x8303;&#x56F4;5~18&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;18</td>
+<td>否</td>
+<td>缩放比例，范围5~18，默认为18</td>
 </tr>
 <tr>
 <td>name</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x4F4D;&#x7F6E;&#x540D;</td>
+<td>否</td>
+<td>位置名</td>
 </tr>
 <tr>
 <td>address</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x5730;&#x5740;&#x7684;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</td>
+<td>否</td>
+<td>地址的详细说明</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getLocation({
-  type: <span class="hljs-string">&apos;gcj02&apos;</span>, <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;wx.openLocation&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</span>
+  type: <span class="hljs-string">'gcj02'</span>, <span class="hljs-comment">//返回可以用于wx.openLocation的经纬度</span>
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> latitude = res.latitude
     <span class="hljs-keyword">var</span> longitude = res.longitude
@@ -266,9 +266,9 @@
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug &amp; Tip</h4>
+<h4 id="bug--tip">Bug & Tip</h4>
 <ol>
-<li><code>bug</code>: <code>iOS</code> <code>6.3.30</code> type &#x53C2;&#x6570;&#x4E0D;&#x751F;&#x6548;&#xFF0C;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE; wgs84 &#x7C7B;&#x578B;&#x7684;&#x5750;&#x6807;&#x4FE1;&#x606F;</li>
+<li><code>bug</code>: <code>iOS</code> <code>6.3.30</code> type 参数不生效，只会返回 wgs84 类型的坐标信息</li>
 </ol>
 
                                 

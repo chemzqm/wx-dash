@@ -20,12 +20,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextclosepath">canvasContext.closePath</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;</p>
-<p><strong>Tip</strong>: &#x5173;&#x95ED;&#x8DEF;&#x5F84;&#x4F1A;&#x8FDE;&#x63A5;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#x3002;</p>
-<p><strong>Tip</strong>: &#x5982;&#x679C;&#x5173;&#x95ED;&#x8DEF;&#x5F84;&#x540E;&#x6CA1;&#x6709;&#x8C03;&#x7528; <code>fill()</code> &#x6216;&#x8005; <code>stroke()</code> &#x5E76;&#x5F00;&#x542F;&#x4E86;&#x65B0;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x90A3;&#x4E4B;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x6E32;&#x67D3;&#x3002;</p>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="定义">定义</h3>
+<p>关闭一个路径</p>
+<p><strong>Tip</strong>: 关闭路径会连接起点和终点。</p>
+<p><strong>Tip</strong>: 如果关闭路径后没有调用 <code>fill()</code> 或者 <code>stroke()</code> 并开启了新的路径，那之前的路径将不会被渲染。</p>
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
 ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>)
 ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
@@ -34,7 +34,7 @@ ctx.stroke()
 ctx.draw()
 </code></pre>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/close-line.png?t=2018413" alt=""></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 <span class="hljs-comment">// begin path</span>
 ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
 ctx.closePath()
@@ -44,13 +44,13 @@ ctx.beginPath()
 ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
 
 <span class="hljs-comment">// only fill this rect, not in current path</span>
-ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'blue'</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
 
 ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
 
 <span class="hljs-comment">// it will fill current path</span>
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'red'</span>)
 ctx.fill()
 ctx.draw()
 </code></pre>
