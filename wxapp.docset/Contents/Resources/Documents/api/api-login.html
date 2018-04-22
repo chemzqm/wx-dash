@@ -19,214 +19,214 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;">&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;</h2>
-<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5FAE;&#x4FE1;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x767B;&#x5F55;&#x80FD;&#x529B;&#x65B9;&#x4FBF;&#x5730;&#x83B7;&#x53D6;&#x5FAE;&#x4FE1;&#x63D0;&#x4F9B;&#x7684;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#xFF0C;&#x5FEB;&#x901F;&#x5EFA;&#x7ACB;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x7684;&#x7528;&#x6237;&#x4F53;&#x7CFB;&#x3002;</p>
-<h3 id="&#x767B;&#x5F55;&#x6D41;&#x7A0B;&#x65F6;&#x5E8F;">&#x767B;&#x5F55;&#x6D41;&#x7A0B;&#x65F6;&#x5E8F;</h3>
+                                <h2 id="小程序登录">小程序登录</h2>
+<p>小程序可以通过微信官方提供的登录能力方便地获取微信提供的用户身份标识，快速建立小程序内的用户体系。</p>
+<h3 id="登录流程时序">登录流程时序</h3>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/api-login.jpg?t=2018413" alt=""></p>
-<h4 id="&#x8BF4;&#x660E;&#xFF1A;">&#x8BF4;&#x660E;&#xFF1A;</h4>
+<h4 id="说明：">说明：</h4>
 <ol>
-<li><p>&#x5C0F;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;wx.login() &#x83B7;&#x53D6; <strong>&#x4E34;&#x65F6;&#x767B;&#x5F55;&#x51ED;&#x8BC1;code</strong> &#xFF0C;&#x5E76;&#x56DE;&#x4F20;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<li><p>小程序调用wx.login() 获取 <strong>临时登录凭证code</strong> ，并回传到开发者服务器。</p>
 </li>
-<li><p>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x4EE5;code&#x6362;&#x53D6; <strong>&#x7528;&#x6237;&#x552F;&#x4E00;&#x6807;&#x8BC6;openid</strong> &#x548C; <strong>&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;session_key</strong>&#x3002;</p>
+<li><p>开发者服务器以code换取 <strong>用户唯一标识openid</strong> 和 <strong>会话密钥session_key</strong>。</p>
 </li>
 </ol>
-<p>&#x4E4B;&#x540E;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7528;&#x6237;&#x6807;&#x8BC6;&#x6765;&#x751F;&#x6210;&#x81EA;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x6001;&#xFF0C;&#x7528;&#x4E8E;&#x540E;&#x7EED;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E2D;&#x524D;&#x540E;&#x7AEF;&#x4EA4;&#x4E92;&#x65F6;&#x8BC6;&#x522B;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x3002;</p>
+<p>之后开发者服务器可以根据用户标识来生成自定义登录态，用于后续业务逻辑中前后端交互时识别用户身份。</p>
 <h3 id="wxloginobject">wx.login(OBJECT)</h3>
-<p>&#x8C03;&#x7528;&#x63A5;&#x53E3;wx.login() &#x83B7;&#x53D6;<strong>&#x4E34;&#x65F6;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#xFF08;code&#xFF09;</strong> </p>
-<h4 id="object&#x53C2;&#x6570;&#x8BF4;&#x660E;">OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
+<p>调用接口wx.login() 获取<strong>临时登录凭证（code）</strong> </p>
+<h4 id="object参数说明">OBJECT参数说明</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数名</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>timeout</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D; ms</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+<td>否</td>
+<td>超时时间，单位 ms</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.9.90 开始支持，低版本需做兼容处理。">1.9.90</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<h4 id="success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
+<h4 id="success返回参数说明">success返回参数说明</h4>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数名</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+<td>调用结果</td>
 </tr>
 <tr>
 <td>code</td>
 <td>String</td>
-<td>&#x7528;&#x6237;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#xFF08;&#x6709;&#x6548;&#x671F;&#x4E94;&#x5206;&#x949F;&#xFF09;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x540E;&#x53F0;&#x8C03;&#x7528; api&#xFF0C;&#x4F7F;&#x7528; code &#x6362;&#x53D6; openid &#x548C; session_key &#x7B49;&#x4FE1;&#x606F;</td>
+<td>用户登录凭证（有效期五分钟）。开发者需要在开发者服务器后台调用 api，使用 code 换取 openid 和 session_key 等信息</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<h4 id="示例代码">示例代码</h4>
 <pre><code class="lang-javascript"><span class="hljs-comment">//app.js</span>
 App({
   onLaunch: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     wx.login({
       success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
         <span class="hljs-keyword">if</span> (res.code) {
-          <span class="hljs-comment">//&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</span>
+          <span class="hljs-comment">//发起网络请求</span>
           wx.request({
-            url: <span class="hljs-string">&apos;https://test.com/onLogin&apos;</span>,
+            url: <span class="hljs-string">'https://test.com/onLogin'</span>,
             data: {
               code: res.code
             }
           })
         } <span class="hljs-keyword">else</span> {
-          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x767B;&#x5F55;&#x5931;&#x8D25;&#xFF01;&apos;</span> + res.errMsg)
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'登录失败！'</span> + res.errMsg)
         }
       }
     });
   }
 })
 </code></pre>
-<h3 id="&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x6821;&#x9A8C;">&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x6821;&#x9A8C;</h3>
-<p>&#x4E34;&#x65F6;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x6821;&#x9A8C;&#x63A5;&#x53E3;&#x662F;&#x4E00;&#x4E2A; HTTPS &#x63A5;&#x53E3;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x4F7F;&#x7528; <strong>&#x4E34;&#x65F6;&#x767B;&#x5F55;&#x51ED;&#x8BC1;code</strong> &#x83B7;&#x53D6; session_key &#x548C; openid &#x7B49;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<h3 id="登录凭证校验">登录凭证校验</h3>
+<p>临时登录凭证校验接口是一个 HTTPS 接口，开发者服务器使用 <strong>临时登录凭证code</strong> 获取 session_key 和 openid 等。</p>
+<p><strong>注意：</strong></p>
 <ol>
-<li><p>&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;session_key &#x662F;&#x5BF9;&#x7528;&#x6237;&#x6570;&#x636E;&#x8FDB;&#x884C;<a href="signature.html#&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x548C;&#x52A0;&#x89E3;&#x5BC6;">&#x52A0;&#x5BC6;&#x7B7E;&#x540D;</a>&#x7684;&#x5BC6;&#x94A5;&#x3002;&#x4E3A;&#x4E86;&#x5E94;&#x7528;&#x81EA;&#x8EAB;&#x7684;&#x6570;&#x636E;&#x5B89;&#x5168;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;<strong>&#x4E0D;&#x5E94;&#x8BE5;&#x628A;&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;&#x4E0B;&#x53D1;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E5F;&#x4E0D;&#x5E94;&#x8BE5;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x8FD9;&#x4E2A;&#x5BC6;&#x94A5;</strong>&#x3002;</p>
+<li><p>会话密钥session_key 是对用户数据进行<a href="signature.html#用户数据的签名验证和加解密">加密签名</a>的密钥。为了应用自身的数据安全，开发者服务器<strong>不应该把会话密钥下发到小程序，也不应该对外提供这个密钥</strong>。</p>
 </li>
-<li><p>UnionID &#x53EA;&#x5728;&#x6EE1;&#x8DB3;&#x4E00;&#x5B9A;&#x6761;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8FD4;&#x56DE;&#x3002;&#x5177;&#x4F53;&#x53C2;&#x770B;<a href="uinionID.html">UnionID&#x673A;&#x5236;&#x8BF4;&#x660E;</a></p>
+<li><p>UnionID 只在满足一定条件的情况下返回。具体参看<a href="uinionID.html">UnionID机制说明</a></p>
 </li>
-<li><p>&#x4E34;&#x65F6;&#x767B;&#x5F55;&#x51ED;&#x8BC1;code&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x4E00;&#x6B21;</p>
+<li><p>临时登录凭证code只能使用一次</p>
 </li>
 </ol>
-<p><strong>&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;</strong></p>
-<pre><code>https://api.weixin.qq.com/sns/jscode2session?appid=APPID&amp;secret=SECRET&amp;js_code=JSCODE&amp;grant_type=authorization_code
-</code></pre><h4 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h4>
+<p><strong>接口地址：</strong></p>
+<pre><code>https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code
+</code></pre><h4 id="请求参数">请求参数</h4>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">&#x53C2;&#x6570;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th style="text-align:left">参数</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">appid</td>
-<td>&#x662F;</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x552F;&#x4E00;&#x6807;&#x8BC6;</td>
+<td>是</td>
+<td>小程序唯一标识</td>
 </tr>
 <tr>
 <td style="text-align:left">secret</td>
-<td>&#x662F;</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x7684; app secret</td>
+<td>是</td>
+<td>小程序的 app secret</td>
 </tr>
 <tr>
 <td style="text-align:left">js_code</td>
-<td>&#x662F;</td>
-<td>&#x767B;&#x5F55;&#x65F6;&#x83B7;&#x53D6;&#x7684; code</td>
+<td>是</td>
+<td>登录时获取的 code</td>
 </tr>
 <tr>
 <td style="text-align:left">grant_type</td>
-<td>&#x662F;</td>
-<td>&#x586B;&#x5199;&#x4E3A; authorization_code</td>
+<td>是</td>
+<td>填写为 authorization_code</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x5728;&#x4E0D;&#x6EE1;&#x8DB3;unionid&#x4E0B;&#x53D1;&#x6761;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD4;&#x56DE;&#x53C2;&#x6570;">&#x5728;&#x4E0D;&#x6EE1;&#x8DB3;UnionID&#x4E0B;&#x53D1;&#x6761;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD4;&#x56DE;&#x53C2;&#x6570;</h4>
+<h4 id="在不满足unionid下发条件的情况下，返回参数">在不满足UnionID下发条件的情况下，返回参数</h4>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th style="text-align:left">参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">openid</td>
-<td>&#x7528;&#x6237;&#x552F;&#x4E00;&#x6807;&#x8BC6;</td>
+<td>用户唯一标识</td>
 </tr>
 <tr>
 <td style="text-align:left">session_key</td>
-<td>&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;</td>
+<td>会话密钥</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x5728;&#x6EE1;&#x8DB3;unionid&#x4E0B;&#x53D1;&#x6761;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD4;&#x56DE;&#x53C2;&#x6570;">&#x5728;&#x6EE1;&#x8DB3;UnionID&#x4E0B;&#x53D1;&#x6761;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD4;&#x56DE;&#x53C2;&#x6570;</h4>
+<h4 id="在满足unionid下发条件的情况下，返回参数">在满足UnionID下发条件的情况下，返回参数</h4>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th style="text-align:left">参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">openid</td>
-<td>&#x7528;&#x6237;&#x552F;&#x4E00;&#x6807;&#x8BC6;</td>
+<td>用户唯一标识</td>
 </tr>
 <tr>
 <td style="text-align:left">session_key</td>
-<td>&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;</td>
+<td>会话密钥</td>
 </tr>
 <tr>
 <td style="text-align:left">unionid</td>
-<td>&#x7528;&#x6237;&#x5728;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;</td>
+<td>用户在开放平台的唯一标识符</td>
 </tr>
 </tbody>
 </table>
-<h4 id="&#x8FD4;&#x56DE;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x8BF4;&#x660E;</h4>
-<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6B63;&#x5E38;&#x8FD4;&#x56DE;&#x7684;JSON&#x6570;&#x636E;&#x5305;</span>
+<h4 id="返回说明">返回说明</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">//正常返回的JSON数据包</span>
 {
-      <span class="hljs-string">&quot;openid&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
-      <span class="hljs-string">&quot;session_key&quot;</span>: <span class="hljs-string">&quot;SESSIONKEY&quot;</span>,
+      <span class="hljs-string">"openid"</span>: <span class="hljs-string">"OPENID"</span>,
+      <span class="hljs-string">"session_key"</span>: <span class="hljs-string">"SESSIONKEY"</span>,
 }
 
-<span class="hljs-comment">//&#x6EE1;&#x8DB3;UnionID&#x8FD4;&#x56DE;&#x6761;&#x4EF6;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;JSON&#x6570;&#x636E;&#x5305;</span>
+<span class="hljs-comment">//满足UnionID返回条件时，返回的JSON数据包</span>
 {
-    <span class="hljs-string">&quot;openid&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;session_key&quot;</span>: <span class="hljs-string">&quot;SESSIONKEY&quot;</span>,
-    <span class="hljs-string">&quot;unionid&quot;</span>: <span class="hljs-string">&quot;UNIONID&quot;</span>
+    <span class="hljs-string">"openid"</span>: <span class="hljs-string">"OPENID"</span>,
+    <span class="hljs-string">"session_key"</span>: <span class="hljs-string">"SESSIONKEY"</span>,
+    <span class="hljs-string">"unionid"</span>: <span class="hljs-string">"UNIONID"</span>
 }
-<span class="hljs-comment">//&#x9519;&#x8BEF;&#x65F6;&#x8FD4;&#x56DE;JSON&#x6570;&#x636E;&#x5305;(&#x793A;&#x4F8B;&#x4E3A;Code&#x65E0;&#x6548;)</span>
+<span class="hljs-comment">//错误时返回JSON数据包(示例为Code无效)</span>
 {
-    <span class="hljs-string">&quot;errcode&quot;</span>: <span class="hljs-number">40029</span>,
-    <span class="hljs-string">&quot;errmsg&quot;</span>: <span class="hljs-string">&quot;invalid code&quot;</span>
+    <span class="hljs-string">"errcode"</span>: <span class="hljs-number">40029</span>,
+    <span class="hljs-string">"errmsg"</span>: <span class="hljs-string">"invalid code"</span>
 }
 </code></pre>
-<h4 id="bug--tip">Bug &amp; Tip</h4>
+<h4 id="bug--tip">Bug & Tip</h4>
 <ol>
-<li><code>bug</code>: <code>iOS/Android</code> <code>6.3.30</code>&#xFF0C;&#x5728; App.onLaunch &#x8C03;&#x7528; wx.login &#x4F1A;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#xFF1B;</li>
+<li><code>bug</code>: <code>iOS/Android</code> <code>6.3.30</code>，在 App.onLaunch 调用 wx.login 会出现异常；</li>
 </ol>
 
                                 

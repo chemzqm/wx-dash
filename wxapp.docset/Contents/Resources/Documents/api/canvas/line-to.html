@@ -20,33 +20,33 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextlineto">canvasContext.lineTo</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p><code>lineTo</code> &#x65B9;&#x6CD5;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x6761;&#x4ECE;&#x4E0A;&#x6B21;&#x6307;&#x5B9A;&#x70B9;&#x5230;&#x76EE;&#x6807;&#x70B9;&#x7684;&#x7EBF;&#x3002;</p>
-<p><strong>Tip</strong>: &#x7528; <code>stroke()</code> &#x65B9;&#x6CD5;&#x6765;&#x753B;&#x7EBF;&#x6761;</p>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="定义">定义</h3>
+<p><code>lineTo</code> 方法增加一个新点，然后创建一条从上次指定点到目标点的线。</p>
+<p><strong>Tip</strong>: 用 <code>stroke()</code> 方法来画线条</p>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>x</td>
 <td>Number</td>
-<td>&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x7684;x&#x5750;&#x6807;</td>
+<td>目标位置的x坐标</td>
 </tr>
 <tr>
 <td>y</td>
 <td>Number</td>
-<td>&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x7684;y&#x5750;&#x6807;</td>
+<td>目标位置的y坐标</td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
 ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>)
 ctx.lineTo(<span class="hljs-number">110</span>, <span class="hljs-number">60</span>)

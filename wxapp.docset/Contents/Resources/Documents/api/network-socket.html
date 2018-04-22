@@ -20,156 +20,156 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxconnectsocketobject">wx.connectSocket(OBJECT)</h3>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket" target="_blank">WebSocket</a> &#x8FDE;&#x63A5;&#x3002;<strong>&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x5148;&#x9605;&#x8BFB;<a href="api-network.html">&#x8BF4;&#x660E;</a></strong>&#x3002;</p>
-<p><strong>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x4E4B;&#x524D;&#xFF0C;&#x4E00;&#x4E2A;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x540C;&#x65F6;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5DF2;&#x5B58;&#x5728;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x8BE5;&#x8FDE;&#x63A5;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;&#x3002;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; 1.7.0 &#x53CA;&#x4EE5;&#x540E;&#xFF0C;&#x652F;&#x6301;&#x5B58;&#x5728;&#x591A;&#x4E2A; WebSokcet &#x8FDE;&#x63A5;&#xFF0C;&#x6BCF;&#x6B21;&#x6210;&#x529F;&#x8C03;&#x7528; wx.connectSocket &#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <a href="socket-task.html">SocketTask</a>&#x3002;</strong></p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>创建一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket" target="_blank">WebSocket</a> 连接。<strong>使用前请先阅读<a href="api-network.html">说明</a></strong>。</p>
+<p><strong>基础库 1.7.0 之前，一个微信小程序同时只能有一个 WebSocket 连接，如果当前已存在一个 WebSocket 连接，会自动关闭该连接，并重新创建一个 WebSocket 连接。基础库版本 1.7.0 及以后，支持存在多个 WebSokcet 连接，每次成功调用 wx.connectSocket 会返回一个新的 <a href="socket-task.html">SocketTask</a>。</strong></p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>url</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF0C;&#x5FC5;&#x987B;&#x662F; wss &#x534F;&#x8BAE;&#xFF0C;&#x4E14;&#x57DF;&#x540D;&#x5FC5;&#x987B;&#x662F;&#x540E;&#x53F0;&#x914D;&#x7F6E;&#x7684;&#x5408;&#x6CD5;&#x57DF;&#x540D;</td>
+<td>是</td>
+<td>开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名</td>
 <td></td>
 </tr>
 <tr>
 <td>header</td>
 <td>Object</td>
-<td>&#x5426;</td>
-<td>HTTP Header , header &#x4E2D;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E; Referer</td>
+<td>否</td>
+<td>HTTP Header , header 中不能设置 Referer</td>
 <td></td>
 </tr>
 <tr>
 <td>method</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x9ED8;&#x8BA4;&#x662F;GET&#xFF0C;&#x6709;&#x6548;&#x503C;&#xFF1A;OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT</td>
+<td>否</td>
+<td>默认是GET，有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT</td>
 <td></td>
 </tr>
 <tr>
 <td>protocols</td>
 <td>StringArray</td>
-<td>&#x5426;</td>
-<td>&#x5B50;&#x534F;&#x8BAE;&#x6570;&#x7EC4;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+<td>否</td>
+<td>子协议数组</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.connectSocket({
-  url: <span class="hljs-string">&apos;wss://example.qq.com&apos;</span>,
+  url: <span class="hljs-string">'wss://example.qq.com'</span>,
   data:{
-    x: <span class="hljs-string">&apos;&apos;</span>,
-    y: <span class="hljs-string">&apos;&apos;</span>
+    x: <span class="hljs-string">''</span>,
+    y: <span class="hljs-string">''</span>
   },
   header:{ 
-    <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>
+    <span class="hljs-string">'content-type'</span>: <span class="hljs-string">'application/json'</span>
   },
-  protocols: [<span class="hljs-string">&apos;protocol1&apos;</span>],
-  method:<span class="hljs-string">&quot;GET&quot;</span>
+  protocols: [<span class="hljs-string">'protocol1'</span>],
+  method:<span class="hljs-string">"GET"</span>
 })
 </code></pre>
 <h3 id="wxonsocketopencallback">wx.onSocketOpen(CALLBACK)</h3>
-<p>&#x76D1;&#x542C;WebSocket&#x8FDE;&#x63A5;&#x6253;&#x5F00;&#x4E8B;&#x4EF6;&#x3002;</p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>监听WebSocket连接打开事件。</p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.connectSocket({
-  url: <span class="hljs-string">&apos;test.php&apos;</span>
+  url: <span class="hljs-string">'test.php'</span>
 })
 wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;WebSocket&#x8FDE;&#x63A5;&#x5DF2;&#x6253;&#x5F00;&#xFF01;&apos;</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'WebSocket连接已打开！'</span>)
 })
 </code></pre>
 <h3 id="wxonsocketerrorcallback">wx.onSocketError(CALLBACK)</h3>
-<p>&#x76D1;&#x542C;WebSocket&#x9519;&#x8BEF;&#x3002;</p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>监听WebSocket错误。</p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.connectSocket({
-  url: <span class="hljs-string">&apos;test.php&apos;</span>
+  url: <span class="hljs-string">'test.php'</span>
 })
 wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;WebSocket&#x8FDE;&#x63A5;&#x5DF2;&#x6253;&#x5F00;&#xFF01;&apos;</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'WebSocket连接已打开！'</span>)
 })
 wx.onSocketError(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;WebSocket&#x8FDE;&#x63A5;&#x6253;&#x5F00;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#xFF01;&apos;</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'WebSocket连接打开失败，请检查！'</span>)
 })
 </code></pre>
 <h3 id="wxsendsocketmessageobject">wx.sendSocketMessage(OBJECT)</h3>
-<p>&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x5148; <a href="#wxconnectsocketobject">wx.connectSocket</a>&#xFF0C;&#x5E76;&#x5728; <a href="#wxonsocketopencallback">wx.onSocketOpen</a> &#x56DE;&#x8C03;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x53D1;&#x9001;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>通过 WebSocket 连接发送数据，需要先 <a href="#wxconnectsocketobject">wx.connectSocket</a>，并在 <a href="#wxonsocketopencallback">wx.onSocketOpen</a> 回调之后才能发送。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>data</td>
 <td>String/ArrayBuffer</td>
-<td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x5185;&#x5BB9;</td>
+<td>是</td>
+<td>需要发送的内容</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> socketOpen = <span class="hljs-literal">false</span>
 <span class="hljs-keyword">var</span> socketMsgQueue = []
 wx.connectSocket({
-  url: <span class="hljs-string">&apos;test.php&apos;</span>
+  url: <span class="hljs-string">'test.php'</span>
 })
 
 wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
   socketOpen = <span class="hljs-literal">true</span>
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; socketMsgQueue.length; i++){
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i < socketMsgQueue.length; i++){
      sendSocketMessage(socketMsgQueue[i])
   }
   socketMsgQueue = []
@@ -186,108 +186,108 @@ wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function<
 }
 </code></pre>
 <h3 id="wxonsocketmessagecallback">wx.onSocketMessage(CALLBACK)</h3>
-<p>&#x76D1;&#x542C;WebSocket&#x63A5;&#x53D7;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6D88;&#x606F;&#x4E8B;&#x4EF6;&#x3002;</p>
-<p><strong>CALLBACK&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<p>监听WebSocket接受到服务器的消息事件。</p>
+<p><strong>CALLBACK返回参数：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>data</td>
 <td>String/ArrayBuffer</td>
-<td>&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6D88;&#x606F;</td>
+<td>服务器返回的消息</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.connectSocket({
-  url: <span class="hljs-string">&apos;test.php&apos;</span>
+  url: <span class="hljs-string">'test.php'</span>
 })
 
 wx.onSocketMessage(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6536;&#x5230;&#x670D;&#x52A1;&#x5668;&#x5185;&#x5BB9;&#xFF1A;&apos;</span> + res.data)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'收到服务器内容：'</span> + res.data)
 })
 </code></pre>
 <h3 id="wxclosesocketobject">wx.closeSocket(OBJECT)</h3>
-<p>&#x5173;&#x95ED; WebSocket &#x8FDE;&#x63A5;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>关闭 WebSocket 连接。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>code</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x503C;&#x8868;&#x793A;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x7684;&#x72B6;&#x6001;&#x53F7;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x88AB;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x53D6;&#x503C;&#x662F;1000 &#xFF08;&#x8868;&#x793A;&#x6B63;&#x5E38;&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#xFF09;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+<td>否</td>
+<td>一个数字值表示关闭连接的状态号，表示连接被关闭的原因。如果这个参数没有被指定，默认的取值是1000 （表示正常连接关闭）</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
 </tr>
 <tr>
 <td>reason</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x4E00;&#x4E2A;&#x53EF;&#x8BFB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5FC5;&#x987B;&#x662F;&#x4E0D;&#x957F;&#x4E8E;123&#x5B57;&#x8282;&#x7684;UTF-8 &#x6587;&#x672C;&#xFF08;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#xFF09;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+<td>否</td>
+<td>一个可读的字符串，表示连接被关闭的原因。这个字符串必须是不长于123字节的UTF-8 文本（不是字符）</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
 <h3 id="wxonsocketclosecallback">wx.onSocketClose(CALLBACK)</h3>
-<p>&#x76D1;&#x542C;WebSocket&#x5173;&#x95ED;&#x3002;</p>
+<p>监听WebSocket关闭。</p>
 <pre><code class="lang-javascript">wx.connectSocket({
-  url: <span class="hljs-string">&apos;test.php&apos;</span>
+  url: <span class="hljs-string">'test.php'</span>
 })
 
-<span class="hljs-comment">//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6709;&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#xFF0C;</span>
-<span class="hljs-comment">//&#x5982;&#x679C; wx.connectSocket &#x8FD8;&#x6CA1;&#x56DE;&#x8C03; wx.onSocketOpen&#xFF0C;&#x800C;&#x5148;&#x8C03;&#x7528; wx.closeSocket&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x505A;&#x4E0D;&#x5230;&#x5173;&#x95ED; WebSocket &#x7684;&#x76EE;&#x7684;&#x3002;</span>
-<span class="hljs-comment">//&#x5FC5;&#x987B;&#x5728; WebSocket &#x6253;&#x5F00;&#x671F;&#x95F4;&#x8C03;&#x7528; wx.closeSocket &#x624D;&#x80FD;&#x5173;&#x95ED;&#x3002;</span>
+<span class="hljs-comment">//注意这里有时序问题，</span>
+<span class="hljs-comment">//如果 wx.connectSocket 还没回调 wx.onSocketOpen，而先调用 wx.closeSocket，那么就做不到关闭 WebSocket 的目的。</span>
+<span class="hljs-comment">//必须在 WebSocket 打开期间调用 wx.closeSocket 才能关闭。</span>
 wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   wx.closeSocket()
 })
 
 wx.onSocketClose(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;WebSocket &#x5DF2;&#x5173;&#x95ED;&#xFF01;&apos;</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'WebSocket 已关闭！'</span>)
 })
 </code></pre>
-<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<p><strong>返回值：</strong></p>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.7.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
 </blockquote>
-<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <a href="socket-task.html">SocketTask</a>&#x3002;</p>
-<h4 id="bug--tip">Bug &amp; Tip</h4>
+<p>返回一个 <a href="socket-task.html">SocketTask</a>。</p>
+<h4 id="bug--tip">Bug & Tip</h4>
 <ol>
-<li><code>tip</code>: &#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#xFF0C;&#x652F;&#x6301;&#x540C;&#x65F6;&#x5B58;&#x5728; 2 &#x6761; WebSocket &#x8FDE;&#x63A5;</li>
+<li><code>tip</code>: 基础库 1.7.0 开始，支持同时存在 2 条 WebSocket 连接</li>
 </ol>
 
                                 

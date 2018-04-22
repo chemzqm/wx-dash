@@ -20,36 +20,36 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxreportanalyticseventname-data">wx.reportAnalytics(eventName, data)</h3>
-<p>&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x6790;&#x6570;&#x636E;&#x4E0A;&#x62A5;&#x63A5;&#x53E3;&#x3002;&#x4F7F;&#x7528;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x540E;&#x53F0;&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x6790;&#x4E2D;&#x65B0;&#x5EFA;&#x4E8B;&#x4EF6;&#xFF0C;&#x914D;&#x7F6E;&#x597D;&#x4E8B;&#x4EF6;&#x540D;&#x4E0E;&#x5B57;&#x6BB5;&#x3002;</p>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>自定义分析数据上报接口。使用前，需要在小程序管理后台自定义分析中新建事件，配置好事件名与字段。</p>
+<p><strong>参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>eventName</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x4E8B;&#x4EF6;&#x540D;&#x3002;</td>
+<td>是</td>
+<td>事件名。</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object</td>
-<td>&#x662F;</td>
-<td>&#x4E0A;&#x62A5;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x3002;key&#x4E3A;&#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#xFF0C;value&#x4E3A;&#x4E0A;&#x62A5;&#x7684;&#x6570;&#x636E;</td>
+<td>是</td>
+<td>上报的自定义数据。key为配置中的字段名，value为上报的数据</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.reportAnalytics(<span class="hljs-string">&apos;purchase&apos;</span>, {
+<p><strong>示例代码：</strong></p>
+<pre><code class="lang-javascript">wx.reportAnalytics(<span class="hljs-string">'purchase'</span>, {
   price: <span class="hljs-number">120</span>,
-  color: <span class="hljs-string">&apos;red&apos;</span>
+  color: <span class="hljs-string">'red'</span>
 })
 </code></pre>
 

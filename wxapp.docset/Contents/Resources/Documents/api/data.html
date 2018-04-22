@@ -19,180 +19,180 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x6BCF;&#x4E2A;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; wx.setStorage&#xFF08;wx.setStorageSync&#xFF09;&#x3001;wx.getStorage&#xFF08;wx.getStorageSync&#xFF09;&#x3001;wx.clearStorage&#xFF08;wx.clearStorageSync&#xFF09;&#x53EF;&#x4EE5;&#x5BF9;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3001;&#x83B7;&#x53D6;&#x548C;&#x6E05;&#x7406;&#x3002;&#x540C;&#x4E00;&#x4E2A;&#x5FAE;&#x4FE1;&#x7528;&#x6237;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F; storage &#x4E0A;&#x9650;&#x4E3A; 10MB&#x3002;localStorage &#x4EE5;&#x7528;&#x6237;&#x7EF4;&#x5EA6;&#x9694;&#x79BB;&#xFF0C;&#x540C;&#x4E00;&#x53F0;&#x8BBE;&#x5907;&#x4E0A;&#xFF0C;A &#x7528;&#x6237;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;&#x5230; B &#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x5982;&#x679C;&#x7528;&#x6237;&#x50A8;&#x5B58;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x6E05;&#x7A7A;&#x6700;&#x8FD1;&#x6700;&#x4E45;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x3002;&#x6211;&#x4EEC;&#x4E0D;&#x5EFA;&#x8BAE;&#x5C06;&#x5173;&#x952E;&#x4FE1;&#x606F;&#x5168;&#x90E8;&#x5B58;&#x5728; localStorage&#xFF0C;&#x4EE5;&#x9632;&#x50A8;&#x5B58;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x6216;&#x7528;&#x6237;&#x6362;&#x8BBE;&#x5907;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+                                <p>每个微信小程序都可以有自己的本地缓存，可以通过 wx.setStorage（wx.setStorageSync）、wx.getStorage（wx.getStorageSync）、wx.clearStorage（wx.clearStorageSync）可以对本地缓存进行设置、获取和清理。同一个微信用户，同一个小程序 storage 上限为 10MB。localStorage 以用户维度隔离，同一台设备上，A 用户无法读取到 B 用户的数据。</p>
+<p><strong>注意：</strong> 如果用户储存空间不足，我们会清空最近最久未使用的小程序的本地缓存。我们不建议将关键信息全部存在 localStorage，以防储存空间不足或用户换设备的情况。</p>
 <h3 id="wxsetstorageobject">wx.setStorage(OBJECT)</h3>
-<p>&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x6307;&#x5B9A;&#x7684; key &#x4E2D;&#xFF0C;&#x4F1A;&#x8986;&#x76D6;&#x6389;&#x539F;&#x6765;&#x8BE5; key &#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x63A5;&#x53E3;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个异步接口。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>key</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x7684; key</td>
+<td>是</td>
+<td>本地缓存中的指定的 key</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object/String</td>
-<td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;</td>
+<td>是</td>
+<td>需要存储的内容</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.setStorage({
-  key:<span class="hljs-string">&quot;key&quot;</span>,
-  data:<span class="hljs-string">&quot;value&quot;</span>
+  key:<span class="hljs-string">"key"</span>,
+  data:<span class="hljs-string">"value"</span>
 })
 </code></pre>
 <h3 id="wxsetstoragesynckeydata">wx.setStorageSync(KEY,DATA)</h3>
-<p>&#x5C06; data &#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x6307;&#x5B9A;&#x7684; key &#x4E2D;&#xFF0C;&#x4F1A;&#x8986;&#x76D6;&#x6389;&#x539F;&#x6765;&#x8BE5; key &#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x63A5;&#x53E3;&#x3002;</p>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>将 data 存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个同步接口。</p>
+<p><strong>参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>key</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x7684; key</td>
+<td>是</td>
+<td>本地缓存中的指定的 key</td>
 </tr>
 <tr>
 <td>data</td>
 <td>Object/String</td>
-<td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;</td>
+<td>是</td>
+<td>需要存储的内容</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<p><strong>示例代码</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
-    wx.setStorageSync(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-string">&apos;value&apos;</span>)
+    wx.setStorageSync(<span class="hljs-string">'key'</span>, <span class="hljs-string">'value'</span>)
 } <span class="hljs-keyword">catch</span> (e) {    
 }
 </code></pre>
 <h3 id="wxgetstorageobject">wx.getStorage(OBJECT)</h3>
-<p>&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x6307;&#x5B9A; key &#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>从本地缓存中异步获取指定 key 对应的内容。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>key</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x7684; key</td>
+<td>是</td>
+<td>本地缓存中的指定的 key</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x662F;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;,res = {data: key&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;}</td>
+<td>是</td>
+<td>接口调用的回调函数,res = {data: key对应的内容}</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>data</td>
 <td>String</td>
-<td>key&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;</td>
+<td>key对应的内容</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getStorage({
-  key: <span class="hljs-string">&apos;key&apos;</span>,
+  key: <span class="hljs-string">'key'</span>,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
       <span class="hljs-built_in">console</span>.log(res.data)
   } 
 })
 </code></pre>
 <h3 id="wxgetstoragesynckey">wx.getStorageSync(KEY)</h3>
-<p>&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x540C;&#x6B65;&#x83B7;&#x53D6;&#x6307;&#x5B9A; key &#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>从本地缓存中同步获取指定 key 对应的内容。</p>
+<p><strong>参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>key</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x7684; key</td>
+<td>是</td>
+<td>本地缓存中的指定的 key</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
-  <span class="hljs-keyword">var</span> value = wx.getStorageSync(<span class="hljs-string">&apos;key&apos;</span>)
+  <span class="hljs-keyword">var</span> value = wx.getStorageSync(<span class="hljs-string">'key'</span>)
   <span class="hljs-keyword">if</span> (value) {
       <span class="hljs-comment">// Do something with return value</span>
   }
@@ -201,66 +201,66 @@
 }
 </code></pre>
 <h3 id="wxgetstorageinfoobject">wx.getStorageInfo(OBJECT)</h3>
-<p>&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x5F53;&#x524D;storage&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>异步获取当前storage的相关信息</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x662F;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8BE6;&#x89C1;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</td>
+<td>是</td>
+<td>接口调用的回调函数，详见返回参数说明</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>keys</td>
 <td>String Array</td>
-<td>&#x5F53;&#x524D;storage&#x4E2D;&#x6240;&#x6709;&#x7684;key</td>
+<td>当前storage中所有的key</td>
 </tr>
 <tr>
 <td>currentSize</td>
 <td>Number</td>
-<td>&#x5F53;&#x524D;&#x5360;&#x7528;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;, &#x5355;&#x4F4D;kb</td>
+<td>当前占用的空间大小, 单位kb</td>
 </tr>
 <tr>
 <td>limitSize</td>
 <td>Number</td>
-<td>&#x9650;&#x5236;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;kb</td>
+<td>限制的空间大小，单位kb</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getStorageInfo({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.keys)
@@ -270,8 +270,8 @@
 })
 </code></pre>
 <h3 id="wxgetstorageinfosync">wx.getStorageInfoSync</h3>
-<p>&#x540C;&#x6B65;&#x83B7;&#x53D6;&#x5F53;&#x524D;storage&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>同步获取当前storage的相关信息</p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
   <span class="hljs-keyword">var</span> res = wx.getStorageInfoSync()
   <span class="hljs-built_in">console</span>.log(res.keys)
@@ -282,97 +282,97 @@
 }
 </code></pre>
 <h3 id="wxremovestorageobject">wx.removeStorage(OBJECT)</h3>
-<p>&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x5F02;&#x6B65;&#x79FB;&#x9664;&#x6307;&#x5B9A; key &#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>从本地缓存中异步移除指定 key 。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>key</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x7684; key</td>
+<td>是</td>
+<td>本地缓存中的指定的 key</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x662F;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>是</td>
+<td>接口调用的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.removeStorage({
-  key: <span class="hljs-string">&apos;key&apos;</span>,
+  key: <span class="hljs-string">'key'</span>,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.data)
   } 
 })
 </code></pre>
 <h3 id="wxremovestoragesynckey">wx.removeStorageSync(KEY)</h3>
-<p>&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x540C;&#x6B65;&#x79FB;&#x9664;&#x6307;&#x5B9A; key &#x3002;</p>
-<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>从本地缓存中同步移除指定 key 。</p>
+<p><strong>参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>key</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x7684; key</td>
+<td>是</td>
+<td>本地缓存中的指定的 key</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
-  wx.removeStorageSync(<span class="hljs-string">&apos;key&apos;</span>)
+  wx.removeStorageSync(<span class="hljs-string">'key'</span>)
 } <span class="hljs-keyword">catch</span> (e) {
   <span class="hljs-comment">// Do something when catch error</span>
 }
 </code></pre>
 <h3 id="wxclearstorage">wx.clearStorage()</h3>
-<p>&#x6E05;&#x7406;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x3002;</p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>清理本地数据缓存。</p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.clearStorage()
 </code></pre>
 <h3 id="wxclearstoragesync">wx.clearStorageSync()</h3>
-<p>&#x540C;&#x6B65;&#x6E05;&#x7406;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>同步清理本地数据缓存</p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
     wx.clearStorageSync()
 } <span class="hljs-keyword">catch</span>(e) {
   <span class="hljs-comment">// Do something when catch error</span>
 }
 </code></pre>
-<h4 id="bug--tip">Bug &amp; Tip</h4>
+<h4 id="bug--tip">Bug & Tip</h4>
 <ol>
-<li><code>tip</code>: &#x672C;&#x5730;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A; 10MB</li>
+<li><code>tip</code>: 本地数据存储的大小限制为 10MB</li>
 </ol>
 
                                 

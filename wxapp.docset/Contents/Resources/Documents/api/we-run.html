@@ -21,133 +21,133 @@
                                 
                                 <h3 id="wxgetwerundataobject">wx.getWeRunData(OBJECT)</h3>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.2.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
 </blockquote>
-<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x8C03;&#x7528; <a href="api-login.html#wxloginobject">wx.login</a> &#x63A5;&#x53E3;&#x3002;</p>
-<p>&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.werun</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>获取用户过去三十天微信运动步数，需要先调用 <a href="api-login.html#wxloginobject">wx.login</a> 接口。</p>
+<p>需要<a href="authorize-index.html">用户授权</a> scope.werun</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数名</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>timeout</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D; ms</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+<td>否</td>
+<td>超时时间，单位 ms</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.9.90 开始支持，低版本需做兼容处理。">1.9.90</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><strong>success返回参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数名</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+<td>调用结果</td>
 </tr>
 <tr>
 <td>encryptedData</td>
 <td>String</td>
-<td>&#x5305;&#x62EC;&#x654F;&#x611F;&#x6570;&#x636E;&#x5728;&#x5185;&#x7684;&#x5B8C;&#x6574;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+<td>包括敏感数据在内的完整用户信息的加密数据，详细见<a href="signature.html#加密数据解密算法">加密数据解密算法</a></td>
 </tr>
 <tr>
 <td>iv</td>
 <td>String</td>
-<td>&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x521D;&#x59CB;&#x5411;&#x91CF;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+<td>加密算法的初始向量，详细见<a href="signature.html#加密数据解密算法">加密数据解密算法</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">wx.getWeRunData({
     success(res) {
         <span class="hljs-keyword">const</span> encryptedData = res.encryptedData
     }
 })
 </code></pre>
-<p>encryptedData &#x89E3;&#x5BC6;&#x540E;&#x4E3A;&#x4EE5;&#x4E0B; json &#x7ED3;&#x6784;&#xFF0C;&#x8BE6;&#x89C1;<a href="signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></p>
+<p>encryptedData 解密后为以下 json 结构，详见<a href="signature.html#加密数据解密算法">加密数据解密算法</a></p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>stepInfoList</td>
 <td>ObjectArray</td>
-<td>&#x7528;&#x6237;&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;&#x7684;&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;</td>
+<td>用户过去三十天的微信运动步数</td>
 </tr>
 </tbody>
 </table>
-<p><strong>stepInfo &#x7ED3;&#x6784;&#x5982;&#x4E0B;</strong></p>
+<p><strong>stepInfo 结构如下</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>timestamp</td>
 <td>Number</td>
-<td>&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x8868;&#x793A;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x7684;&#x65F6;&#x95F4;</td>
+<td>时间戳，表示数据对应的时间</td>
 </tr>
 <tr>
 <td>step</td>
 <td>Number</td>
-<td>&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;</td>
+<td>微信运动步数</td>
 </tr>
 </tbody>
 </table>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;stepInfoList&quot;</span>: [
+    <span class="hljs-string">"stepInfoList"</span>: [
         {
-            <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-number">1445866601</span>,
-            <span class="hljs-string">&quot;step&quot;</span>: <span class="hljs-number">100</span>
+            <span class="hljs-string">"timestamp"</span>: <span class="hljs-number">1445866601</span>,
+            <span class="hljs-string">"step"</span>: <span class="hljs-number">100</span>
         },
         {
-            <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-number">1445866602</span>,
-            <span class="hljs-string">&quot;step&quot;</span>: <span class="hljs-number">100</span>
+            <span class="hljs-string">"timestamp"</span>: <span class="hljs-number">1445866602</span>,
+            <span class="hljs-string">"step"</span>: <span class="hljs-number">100</span>
         }
     ]
 }

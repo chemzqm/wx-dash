@@ -20,61 +20,61 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxcreateaudiocontextaudioid-this">wx.createAudioContext(audioId, this)</h3>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;1.6.0 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x63A5;&#x53E3;&#x4E0D;&#x518D;&#x7EF4;&#x62A4;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x80FD;&#x529B;&#x66F4;&#x5F3A;&#x7684; <a href="createInnerAudioContext.html">wx.createInnerAudioContext</a> &#x63A5;&#x53E3;</strong></p>
-<p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE; audio &#x4E0A;&#x4E0B;&#x6587; <code>audioContext</code> &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;audio/&gt;</code> &#x7EC4;&#x4EF6;</p>
+<p><strong>注意：1.6.0 版本开始，本接口不再维护。建议使用能力更强的 <a href="createInnerAudioContext.html">wx.createInnerAudioContext</a> 接口</strong></p>
+<p>创建并返回 audio 上下文 <code>audioContext</code> 对象。在自定义组件下，第二个参数传入组件实例this，以操作组件内 <code><audio/></code> 组件</p>
 <h4 id="audiocontext">audioContext</h4>
-<p><code>audioContext</code> &#x901A;&#x8FC7; audioId &#x8DDF;&#x4E00;&#x4E2A; <code>&lt;audio/&gt;</code> &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <code>&lt;audio/&gt;</code> &#x7EC4;&#x4EF6;&#x3002;</p>
-<p><strong>audioContext &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><code>audioContext</code> 通过 audioId 跟一个 <code><audio/></code> 组件绑定，通过它可以操作对应的 <code><audio/></code> 组件。</p>
+<p><strong>audioContext 对象的方法列表：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>setSrc</td>
 <td>src</td>
-<td>&#x97F3;&#x9891;&#x7684;&#x5730;&#x5740;</td>
+<td>音频的地址</td>
 </tr>
 <tr>
 <td>play</td>
-<td>&#x65E0;</td>
-<td>&#x64AD;&#x653E;</td>
+<td>无</td>
+<td>播放</td>
 </tr>
 <tr>
 <td>pause</td>
-<td>&#x65E0;</td>
-<td>&#x6682;&#x505C;</td>
+<td>无</td>
+<td>暂停</td>
 </tr>
 <tr>
 <td>seek</td>
 <td>position</td>
-<td>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5355;&#x4F4D; s</td>
+<td>跳转到指定位置，单位 s</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- audio.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">audio</span>  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myAudio&quot;</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
+<p><strong>示例代码：</strong></p>
+<pre><code class="lang-html"><span class="hljs-comment"><!-- audio.wxml --></span>
+<span class="hljs-tag"><<span class="hljs-name">audio</span>  <span class="hljs-attr">src</span>=<span class="hljs-string">"{{src}}"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myAudio"</span> ></span><span class="hljs-tag"></<span class="hljs-name">audio</span>></span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPlay&quot;</span>&gt;</span>&#x64AD;&#x653E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPause&quot;</span>&gt;</span>&#x6682;&#x505C;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audio14&quot;</span>&gt;</span>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x65F6;&#x95F4;&#x4E3A;14&#x79D2;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioStart&quot;</span>&gt;</span>&#x56DE;&#x5230;&#x5F00;&#x5934;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audioPlay"</span>></span>播放<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audioPause"</span>></span>暂停<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audio14"</span>></span>设置当前播放时间为14秒<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audioStart"</span>></span>回到开头<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
 </code></pre>
 <pre><code class="lang-javascript"><span class="hljs-comment">// audio.js</span>
 Page({
   onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createAudioContext &#x83B7;&#x53D6; audio &#x4E0A;&#x4E0B;&#x6587; context</span>
-    <span class="hljs-keyword">this</span>.audioCtx = wx.createAudioContext(<span class="hljs-string">&apos;myAudio&apos;</span>)
-    <span class="hljs-keyword">this</span>.audioCtx.setSrc(<span class="hljs-string">&apos;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&amp;fromtag=46&apos;</span>)
+    <span class="hljs-comment">// 使用 wx.createAudioContext 获取 audio 上下文 context</span>
+    <span class="hljs-keyword">this</span>.audioCtx = wx.createAudioContext(<span class="hljs-string">'myAudio'</span>)
+    <span class="hljs-keyword">this</span>.audioCtx.setSrc(<span class="hljs-string">'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46'</span>)
     <span class="hljs-keyword">this</span>.audioCtx.play()
   },
   data: {
-    src: <span class="hljs-string">&apos;&apos;</span>
+    src: <span class="hljs-string">''</span>
   },
   audioPlay: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.audioCtx.play()

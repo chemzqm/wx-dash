@@ -21,135 +21,135 @@
                                 
                                 <h3 id="wxcreateliveplayercontextdomid-this">wx.createLivePlayerContext(domId, this)</h3>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.7.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
 </blockquote>
-<p>&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <code>&lt;live-player/&gt;</code> &#x7EC4;&#x4EF6;&#x3002;
-&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE; <code>live-player</code> &#x4E0A;&#x4E0B;&#x6587; <code>LivePlayerContext</code> &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;live-player/&gt;</code> &#x7EC4;&#x4EF6;</p>
+<p>操作对应的 <code><live-player/></code> 组件。
+创建并返回 <code>live-player</code> 上下文 <code>LivePlayerContext</code> 对象。在自定义组件下，第二个参数传入组件实例this，以操作组件内 <code><live-player/></code> 组件</p>
 <h4 id="liveplayercontext">livePlayerContext</h4>
-<p><strong>livePlayerContext &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>livePlayerContext 对象的方法列表：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x65B9;&#x6CD5;</th>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>play</td>
 <td>OBJECT</td>
-<td>&#x64AD;&#x653E;</td>
+<td>播放</td>
 <td></td>
 </tr>
 <tr>
 <td>stop</td>
 <td>OBJECT</td>
-<td>&#x505C;&#x6B62;</td>
+<td>停止</td>
 <td></td>
 </tr>
 <tr>
 <td>mute</td>
 <td>OBJECT</td>
-<td>&#x9759;&#x97F3;</td>
+<td>静音</td>
 <td></td>
 </tr>
 <tr>
 <td>pause</td>
 <td>OBJECT</td>
-<td>&#x6682;&#x505C;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+<td>暂停</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.9.90 开始支持，低版本需做兼容处理。">1.9.90</a></td>
 </tr>
 <tr>
 <td>resume</td>
 <td>OBJECT</td>
-<td>&#x6062;&#x590D;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
+<td>恢复</td>
+<td><a href="../framework/compatibility.html" title="基础库 1.9.90 开始支持，低版本需做兼容处理。">1.9.90</a></td>
 </tr>
 <tr>
 <td>requestFullScreen</td>
 <td>OBJECT</td>
-<td>&#x8FDB;&#x5165;&#x5168;&#x5C4F;</td>
+<td>进入全屏</td>
 <td></td>
 </tr>
 <tr>
 <td>exitFullScreen</td>
 <td>OBJECT</td>
-<td>&#x9000;&#x51FA;&#x5168;&#x5C4F;</td>
+<td>退出全屏</td>
 </tr>
 </tbody>
 </table>
-<p><strong>requestFullScreen &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>requestFullScreen 的 OBJECT 参数列表：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>direction</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x6709;&#x6548;&#x503C;&#x4E3A; 0&#xFF08;&#x6B63;&#x5E38;&#x7AD6;&#x5411;&#xFF09;, 90&#xFF08;&#x5C4F;&#x5E55;&#x9006;&#x65F6;&#x9488;90&#x5EA6;&#xFF09;, -90&#xFF08;&#x5C4F;&#x5E55;&#x987A;&#x65F6;&#x9488;90&#x5EA6;&#xFF09;</td>
+<td>否</td>
+<td>有效值为 0（正常竖向）, 90（屏幕逆时针90度）, -90（屏幕顺时针90度）</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<p><strong>其他方法的 OBJECT 参数列表：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/UzWEzmm763Y4" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<p><strong>示例代码：</strong></p>
+<p><a href="wechatide://minicode/UzWEzmm763Y4" target="_blank">在开发者工具中预览效果</a></p>
 
                                 
                                 </section>

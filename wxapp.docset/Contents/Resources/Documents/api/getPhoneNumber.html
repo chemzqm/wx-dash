@@ -20,16 +20,16 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="getphonenumberobject">getPhoneNumber(OBJECT)</h1>
-<h2 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h2>
-<p>&#x83B7;&#x53D6;&#x5FAE;&#x4FE1;&#x7528;&#x6237;&#x7ED1;&#x5B9A;&#x7684;&#x624B;&#x673A;&#x53F7;&#xFF0C;&#x9700;&#x5148;&#x8C03;&#x7528;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html?t=2018413#wxloginobject" target="_blank">login</a>&#x63A5;&#x53E3;&#x3002;</p>
-<p>&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x89E6;&#x53D1;&#x624D;&#x80FD;&#x53D1;&#x8D77;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x53F7;&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#x8BE5;&#x529F;&#x80FD;&#x4E0D;&#x7531; API &#x6765;&#x8C03;&#x7528;&#xFF0C;&#x9700;&#x7528; <code>&lt;button&gt;</code> &#x7EC4;&#x4EF6;&#x7684;&#x70B9;&#x51FB;&#x6765;&#x89E6;&#x53D1;&#x3002; </p>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x76EE;&#x524D;&#x8BE5;&#x63A5;&#x53E3;&#x9488;&#x5BF9;&#x975E;&#x4E2A;&#x4EBA;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x4E14;&#x5B8C;&#x6210;&#x4E86;&#x8BA4;&#x8BC1;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x653E;&#x3002;&#x9700;&#x8C28;&#x614E;&#x4F7F;&#x7528;&#xFF0C;&#x82E5;&#x7528;&#x6237;&#x4E3E;&#x62A5;&#x8F83;&#x591A;&#x6216;&#x88AB;&#x53D1;&#x73B0;&#x5728;&#x4E0D;&#x5FC5;&#x8981;&#x573A;&#x666F;&#x4E0B;&#x4F7F;&#x7528;&#xFF0C;&#x5FAE;&#x4FE1;&#x6709;&#x6743;&#x6C38;&#x4E45;&#x56DE;&#x6536;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x8BE5;&#x63A5;&#x53E3;&#x6743;&#x9650;&#x3002;</strong></p>
-<h2 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h2>
-<p>&#x9700;&#x8981;&#x5C06; <code>&lt;button&gt;</code> &#x7EC4;&#x4EF6; <code>open-type</code> &#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; <code>getPhoneNumber</code>&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x5E76;&#x540C;&#x610F;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>bindgetphonenumber</code> &#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x83B7;&#x53D6;&#x5230;&#x5FAE;&#x4FE1;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#xFF0C; &#x7136;&#x540E;&#x5728;&#x7B2C;&#x4E09;&#x65B9;&#x670D;&#x52A1;&#x7AEF;&#x7ED3;&#x5408; <code>session_key</code> &#x4EE5;&#x53CA; <code>app_id</code> &#x8FDB;&#x884C;&#x89E3;&#x5BC6;&#x83B7;&#x53D6;&#x624B;&#x673A;&#x53F7;&#x3002; </p>
-<h2 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h2>
-<p>&#x5728;&#x56DE;&#x8C03;&#x4E2D;&#x8C03;&#x7528; <code>wx.login</code> &#x767B;&#x5F55;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5237;&#x65B0;&#x767B;&#x5F55;&#x6001;&#x3002;&#x6B64;&#x65F6;&#x670D;&#x52A1;&#x5668;&#x4F7F;&#x7528; code &#x6362;&#x53D6;&#x7684; sessionKey &#x4E0D;&#x662F;&#x52A0;&#x5BC6;&#x65F6;&#x4F7F;&#x7528;&#x7684; sessionKey&#xFF0C;&#x5BFC;&#x81F4;&#x89E3;&#x5BC6;&#x5931;&#x8D25;&#x3002;&#x5EFA;&#x8BAE;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x524D;&#x8FDB;&#x884C; <code>login</code>&#xFF1B;&#x6216;&#x8005;&#x5728;&#x56DE;&#x8C03;&#x4E2D;&#x5148;&#x4F7F;&#x7528; <code>checkSession</code> &#x8FDB;&#x884C;&#x767B;&#x5F55;&#x6001;&#x68C0;&#x67E5;&#xFF0C;&#x907F;&#x514D; <code>login</code> &#x5237;&#x65B0;&#x767B;&#x5F55;&#x6001;&#x3002;</p>
-<h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;getPhoneNumber&quot;</span> <span class="hljs-attr">bindgetphonenumber</span>=<span class="hljs-string">&quot;getPhoneNumber&quot;</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<h2 id="说明">说明</h2>
+<p>获取微信用户绑定的手机号，需先调用<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html?t=2018413#wxloginobject" target="_blank">login</a>接口。</p>
+<p>因为需要用户主动触发才能发起获取手机号接口，所以该功能不由 API 来调用，需用 <code><button></code> 组件的点击来触发。 </p>
+<p><strong>注意：目前该接口针对非个人开发者，且完成了认证的小程序开放。需谨慎使用，若用户举报较多或被发现在不必要场景下使用，微信有权永久回收该小程序的该接口权限。</strong></p>
+<h2 id="使用方法">使用方法</h2>
+<p>需要将 <code><button></code> 组件 <code>open-type</code> 的值设置为 <code>getPhoneNumber</code>，当用户点击并同意之后，可以通过 <code>bindgetphonenumber</code> 事件回调获取到微信服务器返回的加密数据， 然后在第三方服务端结合 <code>session_key</code> 以及 <code>app_id</code> 进行解密获取手机号。 </p>
+<h2 id="注意">注意</h2>
+<p>在回调中调用 <code>wx.login</code> 登录，可能会刷新登录态。此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，导致解密失败。建议开发者提前进行 <code>login</code>；或者在回调中先使用 <code>checkSession</code> 进行登录态检查，避免 <code>login</code> 刷新登录态。</p>
+<h2 id="例子">例子</h2>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">"getPhoneNumber"</span> <span class="hljs-attr">bindgetphonenumber</span>=<span class="hljs-string">"getPhoneNumber"</span>></span> <span class="hljs-tag"></<span class="hljs-name">button</span>></span>
 </code></pre>
 <pre><code class="lang-javascript">Page({ 
     getPhoneNumber: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{ 
@@ -39,63 +39,63 @@
     } 
 })
 </code></pre>
-<h2 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h2>
+<h2 id="返回参数说明">返回参数说明</h2>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>encryptedData</td>
 <td>String</td>
-<td>&#x5305;&#x62EC;&#x654F;&#x611F;&#x6570;&#x636E;&#x5728;&#x5185;&#x7684;&#x5B8C;&#x6574;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/signature.html?t=2018413#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+<td>包括敏感数据在内的完整用户信息的加密数据，详细见<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/signature.html?t=2018413#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank">加密数据解密算法</a></td>
 </tr>
 <tr>
 <td>iv</td>
 <td>String</td>
-<td>&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x521D;&#x59CB;&#x5411;&#x91CF;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/signature.html?t=2018413#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+<td>加密算法的初始向量，详细见<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/signature.html?t=2018413#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank">加密数据解密算法</a></td>
 </tr>
 </tbody>
 </table>
-<p>encryptedData &#x89E3;&#x5BC6;&#x540E;&#x4E3A;&#x4EE5;&#x4E0B; json &#x7ED3;&#x6784;&#xFF0C;&#x8BE6;&#x89C1;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/signature.html?t=2018413#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></p>
+<p>encryptedData 解密后为以下 json 结构，详见<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/signature.html?t=2018413#%E5%8A%A0%E5%AF%86%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank">加密数据解密算法</a></p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;phoneNumber&quot;</span>: <span class="hljs-string">&quot;13580006666&quot;</span>,  
-    <span class="hljs-string">&quot;purePhoneNumber&quot;</span>: <span class="hljs-string">&quot;13580006666&quot;</span>, 
-    <span class="hljs-string">&quot;countryCode&quot;</span>: <span class="hljs-string">&quot;86&quot;</span>,
-    <span class="hljs-string">&quot;watermark&quot;</span>:
+    <span class="hljs-string">"phoneNumber"</span>: <span class="hljs-string">"13580006666"</span>,  
+    <span class="hljs-string">"purePhoneNumber"</span>: <span class="hljs-string">"13580006666"</span>, 
+    <span class="hljs-string">"countryCode"</span>: <span class="hljs-string">"86"</span>,
+    <span class="hljs-string">"watermark"</span>:
     {
-        <span class="hljs-string">&quot;appid&quot;</span>:<span class="hljs-string">&quot;APPID&quot;</span>,
-        <span class="hljs-string">&quot;timestamp&quot;</span>:TIMESTAMP
+        <span class="hljs-string">"appid"</span>:<span class="hljs-string">"APPID"</span>,
+        <span class="hljs-string">"timestamp"</span>:TIMESTAMP
     }
 }
 </code></pre>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>phoneNumber</td>
 <td>String</td>
-<td>&#x7528;&#x6237;&#x7ED1;&#x5B9A;&#x7684;&#x624B;&#x673A;&#x53F7;&#xFF08;&#x56FD;&#x5916;&#x624B;&#x673A;&#x53F7;&#x4F1A;&#x6709;&#x533A;&#x53F7;&#xFF09;</td>
+<td>用户绑定的手机号（国外手机号会有区号）</td>
 </tr>
 <tr>
 <td>purePhoneNumber</td>
 <td>String</td>
-<td>&#x6CA1;&#x6709;&#x533A;&#x53F7;&#x7684;&#x624B;&#x673A;&#x53F7;</td>
+<td>没有区号的手机号</td>
 </tr>
 <tr>
 <td>countryCode</td>
 <td>String</td>
-<td>&#x533A;&#x53F7;</td>
+<td>区号</td>
 </tr>
 </tbody>
 </table>

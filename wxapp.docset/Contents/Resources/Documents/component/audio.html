@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
-  <title>&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;</title>
+  <title>媒体组件</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../website.css">
   <style type="text/css">
@@ -18,89 +18,89 @@
                                 <section class="normal markdown-section">
                                 
                                 <h4 id="audio">audio</h4>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;1.6.0 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x4E0D;&#x518D;&#x7EF4;&#x62A4;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x80FD;&#x529B;&#x66F4;&#x5F3A;&#x7684; <a href="../api/createInnerAudioContext.html">wx.createInnerAudioContext</a> &#x63A5;&#x53E3;</strong></p>
-<p>&#x97F3;&#x9891;&#x3002;</p>
+<p><strong>注意：1.6.0 版本开始，该组件不再维护。建议使用能力更强的 <a href="../api/createInnerAudioContext.html">wx.createInnerAudioContext</a> 接口</strong></p>
+<p>音频。</p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-id">id</td>
+<td id="媒体组件-id">id</td>
 <td>String</td>
 <td></td>
-<td>audio &#x7EC4;&#x4EF6;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;</td>
+<td>audio 组件的唯一标识符</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-src">src</td>
+<td id="媒体组件-src">src</td>
 <td>String</td>
 <td></td>
-<td>&#x8981;&#x64AD;&#x653E;&#x97F3;&#x9891;&#x7684;&#x8D44;&#x6E90;&#x5730;&#x5740;</td>
+<td>要播放音频的资源地址</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-loop">loop</td>
+<td id="媒体组件-loop">loop</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x662F;&#x5426;&#x5FAA;&#x73AF;&#x64AD;&#x653E;</td>
+<td>是否循环播放</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-controls">controls</td>
+<td id="媒体组件-controls">controls</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x662F;&#x5426;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;</td>
+<td>是否显示默认控件</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-poster">poster</td>
+<td id="媒体组件-poster">poster</td>
 <td>String</td>
 <td></td>
-<td>&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;&#x4E0A;&#x7684;&#x97F3;&#x9891;&#x5C01;&#x9762;&#x7684;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; poster &#x65E0;&#x6548;</td>
+<td>默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-name">name</td>
+<td id="媒体组件-name">name</td>
 <td>String</td>
-<td>&#x672A;&#x77E5;&#x97F3;&#x9891;</td>
-<td>&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;&#x4E0A;&#x7684;&#x97F3;&#x9891;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x679C; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; name &#x65E0;&#x6548;</td>
+<td>未知音频</td>
+<td>默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-author">author</td>
+<td id="媒体组件-author">author</td>
 <td>String</td>
-<td>&#x672A;&#x77E5;&#x4F5C;&#x8005;</td>
-<td>&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;&#x4E0A;&#x7684;&#x4F5C;&#x8005;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x679C; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; author &#x65E0;&#x6548;</td>
+<td>未知作者</td>
+<td>默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-binderror">binderror</td>
+<td id="媒体组件-binderror">binderror</td>
 <td>EventHandle</td>
 <td></td>
-<td>&#x5F53;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#x89E6;&#x53D1; error &#x4E8B;&#x4EF6;&#xFF0C;detail = {errMsg: MediaError.code}</td>
+<td>当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindplay">bindplay</td>
+<td id="媒体组件-bindplay">bindplay</td>
 <td>EventHandle</td>
 <td></td>
-<td>&#x5F53;&#x5F00;&#x59CB;/&#x7EE7;&#x7EED;&#x64AD;&#x653E;&#x65F6;&#x89E6;&#x53D1;play&#x4E8B;&#x4EF6;</td>
+<td>当开始/继续播放时触发play事件</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindpause">bindpause</td>
+<td id="媒体组件-bindpause">bindpause</td>
 <td>EventHandle</td>
 <td></td>
-<td>&#x5F53;&#x6682;&#x505C;&#x64AD;&#x653E;&#x65F6;&#x89E6;&#x53D1; pause &#x4E8B;&#x4EF6;</td>
+<td>当暂停播放时触发 pause 事件</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindtimeupdate">bindtimeupdate</td>
+<td id="媒体组件-bindtimeupdate">bindtimeupdate</td>
 <td>EventHandle</td>
 <td></td>
-<td>&#x5F53;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; timeupdate &#x4E8B;&#x4EF6;&#xFF0C;detail = {currentTime, duration}</td>
+<td>当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindended">bindended</td>
+<td id="媒体组件-bindended">bindended</td>
 <td>EventHandle</td>
 <td></td>
-<td>&#x5F53;&#x64AD;&#x653E;&#x5230;&#x672B;&#x5C3E;&#x65F6;&#x89E6;&#x53D1; ended &#x4E8B;&#x4EF6;</td>
+<td>当播放到末尾时触发 ended 事件</td>
 </tr>
 </tbody>
 </table>
@@ -108,50 +108,50 @@
 <table>
 <thead>
 <tr>
-<th>&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x7801;</th>
-<th>&#x63CF;&#x8FF0;</th>
+<th>返回错误码</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x88AB;&#x7528;&#x6237;&#x7981;&#x6B62;</td>
+<td>获取资源被用户禁止</td>
 </tr>
 <tr>
 <td>2</td>
-<td>&#x7F51;&#x7EDC;&#x9519;&#x8BEF;</td>
+<td>网络错误</td>
 </tr>
 <tr>
 <td>3</td>
-<td>&#x89E3;&#x7801;&#x9519;&#x8BEF;</td>
+<td>解码错误</td>
 </tr>
 <tr>
 <td>4</td>
-<td>&#x4E0D;&#x5408;&#x9002;&#x8D44;&#x6E90;</td>
+<td>不合适资源</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/NycgqcmS6KYY" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- audio.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">&quot;{{poster}}&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;{{name}}&quot;</span> <span class="hljs-attr">author</span>=<span class="hljs-string">&quot;{{author}}&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myAudio&quot;</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">loop</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
+<p><strong>示例代码：</strong></p>
+<p><a href="wechatide://minicode/NycgqcmS6KYY" target="_blank">在开发者工具中预览效果</a></p>
+<pre><code class="lang-html"><span class="hljs-comment"><!-- audio.wxml --></span>
+<span class="hljs-tag"><<span class="hljs-name">audio</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"{{poster}}"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"{{name}}"</span> <span class="hljs-attr">author</span>=<span class="hljs-string">"{{author}}"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{src}}"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myAudio"</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">loop</span>></span><span class="hljs-tag"><!--<span class="hljs-name"-->audio</span>>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPlay&quot;</span>&gt;</span>&#x64AD;&#x653E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPause&quot;</span>&gt;</span>&#x6682;&#x505C;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audio14&quot;</span>&gt;</span>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x65F6;&#x95F4;&#x4E3A;14&#x79D2;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioStart&quot;</span>&gt;</span>&#x56DE;&#x5230;&#x5F00;&#x5934;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audioPlay"</span>></span>播放<span class="hljs-tag"><!--<span class="hljs-name"-->button</span>>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audioPause"</span>></span>暂停<span class="hljs-tag"><!--<span class="hljs-name"-->button</span>>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audio14"</span>></span>设置当前播放时间为14秒<span class="hljs-tag"><!--<span class="hljs-name"-->button</span>>
+<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"audioStart"</span>></span>回到开头<span class="hljs-tag"><!--<span class="hljs-name"-->button</span>>
 </code></pre>
 <pre><code class="lang-javascript"><span class="hljs-comment">// audio.js</span>
 Page({
   onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createAudioContext &#x83B7;&#x53D6; audio &#x4E0A;&#x4E0B;&#x6587; context</span>
-    <span class="hljs-keyword">this</span>.audioCtx = wx.createAudioContext(<span class="hljs-string">&apos;myAudio&apos;</span>)
+    <span class="hljs-comment">// 使用 wx.createAudioContext 获取 audio 上下文 context</span>
+    <span class="hljs-keyword">this</span>.audioCtx = wx.createAudioContext(<span class="hljs-string">'myAudio'</span>)
   },
   data: {
-    poster: <span class="hljs-string">&apos;http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000&apos;</span>,
-    name: <span class="hljs-string">&apos;&#x6B64;&#x65F6;&#x6B64;&#x523B;&apos;</span>,
-    author: <span class="hljs-string">&apos;&#x8BB8;&#x5DCD;&apos;</span>,
-    src: <span class="hljs-string">&apos;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&amp;fromtag=46&apos;</span>,
+    poster: <span class="hljs-string">'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'</span>,
+    name: <span class="hljs-string">'此时此刻'</span>,
+    author: <span class="hljs-string">'许巍'</span>,
+    src: <span class="hljs-string">'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46'</span>,
   },
   audioPlay: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.audioCtx.play()
@@ -168,7 +168,7 @@ Page({
 })
 </code></pre>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/audio.png?t=2018413" alt="audio"></p>
-<p>&#x76F8;&#x5173;api&#xFF1A;<a href="../api/api-audio.html">wx.createAudioContext</a></p>
+<p>相关api：<a href="../api/api-audio.html">wx.createAudioContext</a></p>
 
                                 
                                 </section>

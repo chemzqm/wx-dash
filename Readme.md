@@ -8,13 +8,7 @@ feedurl 方式订阅。
 
 ## 使用方法
 
-Dash -> Preferences -> Downloads -> 点击加号然后填入 url，对于 Dash > 3:
-
-```
-dash-feed://https%3A%2F%2Fraw.githubusercontent.com%2Fchemzqm%2Fwx-dash%2Fmaster%2Fwxdash.xml
-```
-
-Dash < 3:
+Dash -> Preferences -> Downloads -> 点击加号然后填入 url
 
 ```
 https://raw.githubusercontent.com/chemzqm/wx-dash/master/wxdash.xml

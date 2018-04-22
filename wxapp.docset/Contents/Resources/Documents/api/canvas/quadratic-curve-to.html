@@ -20,61 +20,61 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextquadraticcurveto">canvasContext.quadraticCurveTo</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x521B;&#x5EFA;&#x4E8C;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x8DEF;&#x5F84;&#x3002;</p>
-<p><strong>Tip</strong>: &#x66F2;&#x7EBF;&#x7684;&#x8D77;&#x59CB;&#x70B9;&#x4E3A;&#x8DEF;&#x5F84;&#x4E2D;&#x524D;&#x4E00;&#x4E2A;&#x70B9;&#x3002;</p>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="定义">定义</h3>
+<p>创建二次贝塞尔曲线路径。</p>
+<p><strong>Tip</strong>: 曲线的起始点为路径中前一个点。</p>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>cpx</td>
 <td>Number</td>
-<td>&#x8D1D;&#x585E;&#x5C14;&#x63A7;&#x5236;&#x70B9;&#x7684;x&#x5750;&#x6807;</td>
+<td>贝塞尔控制点的x坐标</td>
 </tr>
 <tr>
 <td>cpy</td>
 <td>Number</td>
-<td>&#x8D1D;&#x585E;&#x5C14;&#x63A7;&#x5236;&#x70B9;&#x7684;y&#x5750;&#x6807;</td>
+<td>贝塞尔控制点的y坐标</td>
 </tr>
 <tr>
 <td>x</td>
 <td>Number</td>
-<td>&#x7ED3;&#x675F;&#x70B9;&#x7684;x&#x5750;&#x6807;</td>
+<td>结束点的x坐标</td>
 </tr>
 <tr>
 <td>y</td>
 <td>Number</td>
-<td>&#x7ED3;&#x675F;&#x70B9;&#x7684;y&#x5750;&#x6807;</td>
+<td>结束点的y坐标</td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 
 <span class="hljs-comment">// Draw points</span>
 ctx.beginPath()
 ctx.arc(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'red'</span>)
 ctx.fill()
 
 ctx.beginPath()
 ctx.arc(<span class="hljs-number">200</span>, <span class="hljs-number">20</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;lightgreen&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'lightgreen'</span>)
 ctx.fill()
 
 ctx.beginPath()
 ctx.arc(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
-ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'blue'</span>)
 ctx.fill()
 
-ctx.setFillStyle(<span class="hljs-string">&apos;black&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'black'</span>)
 ctx.setFontSize(<span class="hljs-number">12</span>)
 
 <span class="hljs-comment">// Draw guides</span>
@@ -82,24 +82,24 @@ ctx.beginPath()
 ctx.moveTo(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
 ctx.lineTo(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>)
 ctx.lineTo(<span class="hljs-number">200</span>, <span class="hljs-number">20</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;#AAAAAA&apos;</span>)
+ctx.setStrokeStyle(<span class="hljs-string">'#AAAAAA'</span>)
 ctx.stroke()
 
 <span class="hljs-comment">// Draw quadratic curve</span>
 ctx.beginPath()
 ctx.moveTo(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
 ctx.quadraticCurveTo(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">20</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;black&apos;</span>)
+ctx.setStrokeStyle(<span class="hljs-string">'black'</span>)
 ctx.stroke()
 
 ctx.draw()
 </code></pre>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/quadratic-curve-to.png?t=2018413" alt=""></p>
-<p>&#x9488;&#x5BF9; <code>moveTo(20, 20)</code> <code>quadraticCurveTo(20, 100, 200, 20)</code> &#x7684;&#x4E09;&#x4E2A;&#x5173;&#x952E;&#x5750;&#x6807;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>针对 <code>moveTo(20, 20)</code> <code>quadraticCurveTo(20, 100, 200, 20)</code> 的三个关键坐标如下：</p>
 <ul>
-<li>&#x7EA2;&#x8272;&#xFF1A;&#x8D77;&#x59CB;&#x70B9;(20, 20)</li>
-<li>&#x84DD;&#x8272;&#xFF1A;&#x63A7;&#x5236;&#x70B9;(20, 100)</li>
-<li>&#x7EFF;&#x8272;&#xFF1A;&#x7EC8;&#x6B62;&#x70B9;(200, 20)</li>
+<li>红色：起始点(20, 20)</li>
+<li>蓝色：控制点(20, 100)</li>
+<li>绿色：终止点(200, 20)</li>
 </ul>
 
                                 

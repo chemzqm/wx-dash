@@ -21,60 +21,60 @@
                                 
                                 <h1 id="app">App</h1>
 <h3 id="app">App()</h3>
-<p><code>App()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x3002;&#x63A5;&#x53D7;&#x4E00;&#x4E2A; object &#x53C2;&#x6570;&#xFF0C;&#x5176;&#x6307;&#x5B9A;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x7B49;&#x3002;</p>
-<p><strong>object&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p><code>App()</code> 函数用来注册一个小程序。接受一个 object 参数，其指定小程序的生命周期函数等。</p>
+<p><strong>object参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x63CF;&#x8FF0;</th>
-<th>&#x89E6;&#x53D1;&#x65F6;&#x673A;</th>
+<th>属性</th>
+<th>类型</th>
+<th>描述</th>
+<th>触发时机</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>onLaunch</td>
 <td>Function</td>
-<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x5C0F;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;</td>
-<td>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; onLaunch&#xFF08;&#x5168;&#x5C40;&#x53EA;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#xFF09;</td>
+<td>生命周期函数--监听小程序初始化</td>
+<td>当小程序初始化完成时，会触发 onLaunch（全局只触发一次）</td>
 </tr>
 <tr>
 <td>onShow</td>
 <td>Function</td>
-<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x5C0F;&#x7A0B;&#x5E8F;&#x663E;&#x793A;</td>
-<td>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#xFF0C;&#x6216;&#x4ECE;&#x540E;&#x53F0;&#x8FDB;&#x5165;&#x524D;&#x53F0;&#x663E;&#x793A;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; onShow</td>
+<td>生命周期函数--监听小程序显示</td>
+<td>当小程序启动，或从后台进入前台显示，会触发 onShow</td>
 </tr>
 <tr>
 <td>onHide</td>
 <td>Function</td>
-<td>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;--&#x76D1;&#x542C;&#x5C0F;&#x7A0B;&#x5E8F;&#x9690;&#x85CF;</td>
-<td>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x4ECE;&#x524D;&#x53F0;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; onHide</td>
+<td>生命周期函数--监听小程序隐藏</td>
+<td>当小程序从前台进入后台，会触发 onHide</td>
 </tr>
 <tr>
 <td>onError</td>
 <td>Function</td>
-<td>&#x9519;&#x8BEF;&#x76D1;&#x542C;&#x51FD;&#x6570;</td>
-<td>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x53D1;&#x751F;&#x811A;&#x672C;&#x9519;&#x8BEF;&#xFF0C;&#x6216;&#x8005; api &#x8C03;&#x7528;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; onError &#x5E76;&#x5E26;&#x4E0A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td>错误监听函数</td>
+<td>当小程序发生脚本错误，或者 api 调用失败时，会触发 onError 并带上错误信息</td>
 </tr>
 <tr>
 <td>onPageNotFound</td>
 <td>Function</td>
-<td>&#x9875;&#x9762;&#x4E0D;&#x5B58;&#x5728;&#x76D1;&#x542C;&#x51FD;&#x6570;</td>
-<td>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x51FA;&#x73B0;&#x8981;&#x6253;&#x5F00;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4F1A;&#x5E26;&#x4E0A;&#x9875;&#x9762;&#x4FE1;&#x606F;&#x56DE;&#x8C03;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x8BE6;&#x89C1;&#x4E0B;&#x6587;</td>
+<td>页面不存在监听函数</td>
+<td>当小程序出现要打开的页面不存在的情况，会带上页面信息回调该函数，详见下文</td>
 </tr>
 <tr>
-<td>&#x5176;&#x4ED6;</td>
+<td>其他</td>
 <td>Any</td>
 <td></td>
-<td>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x7684;&#x51FD;&#x6570;&#x6216;&#x6570;&#x636E;&#x5230; Object &#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x7528; <code>this</code> &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;</td>
+<td>开发者可以添加任意的函数或数据到 Object 参数中，用 <code>this</code> 可以访问</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x524D;&#x53F0;&#x3001;&#x540E;&#x53F0;&#x5B9A;&#x4E49;&#xFF1A;</strong> &#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x5173;&#x95ED;&#xFF0C;&#x6216;&#x8005;&#x6309;&#x4E86;&#x8BBE;&#x5907; Home &#x952E;&#x79BB;&#x5F00;&#x5FAE;&#x4FE1;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5E76;&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x9500;&#x6BC1;&#xFF0C;&#x800C;&#x662F;&#x8FDB;&#x5165;&#x4E86;&#x540E;&#x53F0;&#xFF1B;&#x5F53;&#x518D;&#x6B21;&#x8FDB;&#x5165;&#x5FAE;&#x4FE1;&#x6216;&#x518D;&#x6B21;&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x53C8;&#x4F1A;&#x4ECE;&#x540E;&#x53F0;&#x8FDB;&#x5165;&#x524D;&#x53F0;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x53EA;&#x6709;&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#xFF0C;&#x6216;&#x8005;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x8FC7;&#x9AD8;&#xFF0C;&#x624D;&#x4F1A;&#x88AB;&#x771F;&#x6B63;&#x7684;&#x9500;&#x6BC1;&#x3002;</p>
-<p>&#x5173;&#x95ED;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF08;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;1.1.0&#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF09;&#xFF1A; &#x5F53;&#x7528;&#x6237;&#x4ECE;&#x626B;&#x4E00;&#x626B;&#x3001;&#x8F6C;&#x53D1;&#x7B49;&#x5165;&#x53E3;(<a href="scene.html">&#x573A;&#x666F;&#x503C;</a>&#x4E3A;1007, 1008, 1011, 1025)&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x7F6E;&#x9876;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9000;&#x51FA;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F1A;&#x88AB;&#x9500;&#x6BC1;&#x3002; </p>
-<p><strong>&#x5C0F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x673A;&#x5236;&#x5728;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; 1.4.0 &#x6709;&#x6240;&#x6539;&#x53D8;&#xFF1A;</strong> &#x4E0A;&#x4E00;&#x6761;&#x5173;&#x95ED;&#x903B;&#x8F91;&#x5728;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x4E0D;&#x9002;&#x7528;&#x3002;<a href="../operating-mechanism.html">&#x8BE6;&#x60C5;</a></p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><strong>前台、后台定义：</strong> 当用户点击左上角关闭，或者按了设备 Home 键离开微信，小程序并没有直接销毁，而是进入了后台；当再次进入微信或再次打开小程序，又会从后台进入前台。需要注意的是：只有当小程序进入后台一定时间，或者系统资源占用过高，才会被真正的销毁。</p>
+<p>关闭小程序（基础库版本1.1.0开始支持）： 当用户从扫一扫、转发等入口(<a href="scene.html">场景值</a>为1007, 1008, 1011, 1025)进入小程序，且没有置顶小程序的情况下退出，小程序会被销毁。 </p>
+<p><strong>小程序运行机制在基础库版本 1.4.0 有所改变：</strong> 上一条关闭逻辑在新版本已不适用。<a href="../operating-mechanism.html">详情</a></p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-js">App({
   onLaunch: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
     <span class="hljs-comment">// Do something initial when launch.</span>
@@ -88,158 +88,158 @@
   onError: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
     <span class="hljs-built_in">console</span>.log(msg)
   },
-  globalData: <span class="hljs-string">&apos;I am global data&apos;</span>
+  globalData: <span class="hljs-string">'I am global data'</span>
 })
 </code></pre>
-<h3 id="onlaunch-onshow-&#x53C2;&#x6570;">onLaunch, onShow &#x53C2;&#x6570;</h3>
+<h3 id="onlaunch-onshow-参数">onLaunch, onShow 参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x5B57;&#x6BB5;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>字段</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>path</td>
 <td>String</td>
-<td>&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84;</td>
+<td>打开小程序的路径</td>
 </tr>
 <tr>
 <td>query</td>
 <td>Object</td>
-<td>&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;query</td>
+<td>打开小程序的query</td>
 </tr>
 <tr>
 <td>scene</td>
 <td>Number</td>
-<td>&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x573A;&#x666F;&#x503C;</td>
+<td>打开小程序的场景值</td>
 </tr>
 <tr>
 <td>shareTicket</td>
 <td>String</td>
-<td>shareTicket&#xFF0C;&#x8BE6;&#x89C1; <a href="../../api/share.html#&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x8F6C;&#x53D1;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x8F6C;&#x53D1;&#x4FE1;&#x606F;</a></td>
+<td>shareTicket，详见 <a href="../../api/share.html#获取更多转发信息">获取更多转发信息</a></td>
 </tr>
 <tr>
 <td>referrerInfo</td>
 <td>Object</td>
-<td>&#x5F53;&#x573A;&#x666F;&#x4E3A;&#x7531;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x6216;&#x516C;&#x4F17;&#x53F7;&#x6216;App&#x6253;&#x5F00;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x6B64;&#x5B57;&#x6BB5;</td>
+<td>当场景为由从另一个小程序或公众号或App打开时，返回此字段</td>
 </tr>
 <tr>
 <td>referrerInfo.appId</td>
 <td>String</td>
-<td>&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F;&#x6216;&#x516C;&#x4F17;&#x53F7;&#x6216;App&#x7684; appId&#xFF0C;&#x8BE6;&#x89C1;&#x4E0B;&#x65B9;&#x8BF4;&#x660E;</td>
+<td>来源小程序或公众号或App的 appId，详见下方说明</td>
 </tr>
 <tr>
 <td>referrerInfo.extraData</td>
 <td>Object</td>
-<td>&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#xFF0C;scene=1037&#x6216;1038&#x65F6;&#x652F;&#x6301;</td>
+<td>来源小程序传过来的数据，scene=1037或1038时支持</td>
 </tr>
 </tbody>
 </table>
-<p>&#x573A;&#x666F;&#x503C; <a href="scene.html">&#x8BE6;&#x89C1;</a>&#x3002;</p>
-<p>&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#x652F;&#x6301;&#x8FD4;&#x56DE; referrerInfo.appId&#xFF1A;</p>
+<p>场景值 <a href="scene.html">详见</a>。</p>
+<p>以下场景支持返回 referrerInfo.appId：</p>
 <table>
 <thead>
 <tr>
-<th>&#x573A;&#x666F;&#x503C;</th>
-<th>&#x573A;&#x666F;</th>
-<th>appId &#x4FE1;&#x606F;&#x542B;&#x4E49;</th>
+<th>场景值</th>
+<th>场景</th>
+<th>appId 信息含义</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1020</td>
-<td>&#x516C;&#x4F17;&#x53F7; profile &#x9875;&#x76F8;&#x5173;&#x5C0F;&#x7A0B;&#x5E8F;&#x5217;&#x8868;</td>
-<td>&#x8FD4;&#x56DE;&#x6765;&#x6E90;&#x516C;&#x4F17;&#x53F7; appId</td>
+<td>公众号 profile 页相关小程序列表</td>
+<td>返回来源公众号 appId</td>
 </tr>
 <tr>
 <td>1035</td>
-<td>&#x516C;&#x4F17;&#x53F7;&#x81EA;&#x5B9A;&#x4E49;&#x83DC;&#x5355;</td>
-<td>&#x8FD4;&#x56DE;&#x6765;&#x6E90;&#x516C;&#x4F17;&#x53F7; appId</td>
+<td>公众号自定义菜单</td>
+<td>返回来源公众号 appId</td>
 </tr>
 <tr>
 <td>1036</td>
-<td>App &#x5206;&#x4EAB;&#x6D88;&#x606F;&#x5361;&#x7247;</td>
-<td>&#x8FD4;&#x56DE;&#x6765;&#x6E90;&#x5E94;&#x7528; appId</td>
+<td>App 分享消息卡片</td>
+<td>返回来源应用 appId</td>
 </tr>
 <tr>
 <td>1037</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;</td>
-<td>&#x8FD4;&#x56DE;&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F; appId</td>
+<td>小程序打开小程序</td>
+<td>返回来源小程序 appId</td>
 </tr>
 <tr>
 <td>1038</td>
-<td>&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE;</td>
-<td>&#x8FD4;&#x56DE;&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F; appId</td>
+<td>从另一个小程序返回</td>
+<td>返回来源小程序 appId</td>
 </tr>
 <tr>
 <td>1043</td>
-<td>&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;</td>
-<td>&#x8FD4;&#x56DE;&#x6765;&#x6E90;&#x516C;&#x4F17;&#x53F7; appId</td>
+<td>公众号模板消息</td>
+<td>返回来源公众号 appId</td>
 </tr>
 </tbody>
 </table>
 <h3 id="onpagenotfound">onPageNotFound</h3>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.9.90 开始支持，低版本需做<a href="../compatibility.html">兼容处理</a></p>
 </blockquote>
-<p>&#x5F53;&#x8981;&#x6253;&#x5F00;&#x7684;&#x9875;&#x9762;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x8FD9;&#x4E2A;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x5E76;&#x5E26;&#x4E0A;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p>当要打开的页面并不存在时，会回调这个监听器，并带上以下信息：</p>
 <table>
 <thead>
 <tr>
-<th>&#x5B57;&#x6BB5;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>字段</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>path</td>
 <td>String</td>
-<td>&#x4E0D;&#x5B58;&#x5728;&#x9875;&#x9762;&#x7684;&#x8DEF;&#x5F84;</td>
+<td>不存在页面的路径</td>
 </tr>
 <tr>
 <td>query</td>
 <td>Object</td>
-<td>&#x6253;&#x5F00;&#x4E0D;&#x5B58;&#x5728;&#x9875;&#x9762;&#x7684; query</td>
+<td>打开不存在页面的 query</td>
 </tr>
 <tr>
 <td>isEntryPage</td>
 <td>Boolean</td>
-<td>&#x662F;&#x5426;&#x672C;&#x6B21;&#x542F;&#x52A8;&#x7684;&#x9996;&#x4E2A;&#x9875;&#x9762;&#xFF08;&#x4F8B;&#x5982;&#x4ECE;&#x5206;&#x4EAB;&#x7B49;&#x5165;&#x53E3;&#x8FDB;&#x6765;&#xFF0C;&#x9996;&#x4E2A;&#x9875;&#x9762;&#x662F;&#x5F00;&#x53D1;&#x8005;&#x914D;&#x7F6E;&#x7684;&#x5206;&#x4EAB;&#x9875;&#x9762;&#xFF09;</td>
+<td>是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x5728; <code>onPageNotFound</code> &#x56DE;&#x8C03;&#x4E2D;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#x5904;&#x7406;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x5728;&#x56DE;&#x8C03;&#x4E2D;<strong>&#x540C;&#x6B65;</strong>&#x5904;&#x7406;&#xFF0C;&#x5F02;&#x6B65;&#x5904;&#x7406;&#xFF08;&#x4F8B;&#x5982; setTimeout &#x5F02;&#x6B65;&#x6267;&#x884C;&#xFF09;&#x65E0;&#x6548;&#x3002;</p>
-<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>开发者可以在 <code>onPageNotFound</code> 回调中进行重定向处理，但必须在回调中<strong>同步</strong>处理，异步处理（例如 setTimeout 异步执行）无效。</p>
+<p><strong>示例代码：</strong></p>
 <pre><code class="lang-javascript">App({
   onPageNotFound(res) {
     wx.redirectTo({
-      url: <span class="hljs-string">&apos;pages/...&apos;</span>
+      url: <span class="hljs-string">'pages/...'</span>
     })
   }
 })
 </code></pre>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<p><strong>注意：</strong></p>
 <ol>
-<li>&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x6682;&#x4E0D;&#x652F;&#x6301; <code>onPageNotFound</code> &#x8C03;&#x8BD5;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x771F;&#x673A;&#x8C03;&#x8BD5;</li>
-<li>&#x5982;&#x679C;&#x5F00;&#x53D1;&#x8005;&#x6CA1;&#x6709;&#x6DFB;&#x52A0; <code>onPageNotFound</code> &#x76D1;&#x542C;&#xFF0C;&#x5F53;&#x8DF3;&#x8F6C;&#x9875;&#x9762;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x5C06;&#x63A8;&#x5165;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x539F;&#x751F;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x5B58;&#x5728;&#x63D0;&#x793A;&#x9875;&#x9762;</li>
-<li>&#x5982;&#x679C; <code>onPageNotFound</code> &#x56DE;&#x8C03;&#x4E2D;&#x53C8;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x5C06;&#x63A8;&#x5165;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x539F;&#x751F;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x5B58;&#x5728;&#x63D0;&#x793A;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x5728;&#x56DE;&#x8C03; <code>onPageNotFound</code></li>
+<li>微信开发者工具暂不支持 <code>onPageNotFound</code> 调试，请使用真机调试</li>
+<li>如果开发者没有添加 <code>onPageNotFound</code> 监听，当跳转页面不存在时，将推入微信客户端原生的页面不存在提示页面</li>
+<li>如果 <code>onPageNotFound</code> 回调中又重定向到另一个不存在的页面，将推入微信客户端原生的页面不存在提示页面，并且不在回调 <code>onPageNotFound</code></li>
 </ol>
 <h3 id="getapp">getApp()</h3>
-<p>&#x5168;&#x5C40;&#x7684; <code>getApp()</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p>全局的 <code>getApp()</code> 函数可以用来获取到小程序实例。</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// other.js</span>
 <span class="hljs-keyword">var</span> appInstance = getApp()
 <span class="hljs-built_in">console</span>.log(appInstance.globalData) <span class="hljs-comment">// I am global data</span>
 </code></pre>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<p><strong>注意：</strong></p>
 <ul>
-<li><code>App()</code> &#x5FC5;&#x987B;&#x5728; <code>app.js</code> &#x4E2D;&#x6CE8;&#x518C;&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x6CE8;&#x518C;&#x591A;&#x4E2A;&#x3002;</li>
-<li>&#x4E0D;&#x8981;&#x5728;&#x5B9A;&#x4E49;&#x4E8E; <code>App()</code> &#x5185;&#x7684;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528; <code>getApp()</code> &#xFF0C;&#x4F7F;&#x7528; <code>this</code> &#x5C31;&#x53EF;&#x4EE5;&#x62FF;&#x5230; app &#x5B9E;&#x4F8B;&#x3002;</li>
-<li>&#x4E0D;&#x8981;&#x5728; onLaunch &#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528; <code>getCurrentPages()</code>&#xFF0C;&#x6B64;&#x65F6; page &#x8FD8;&#x6CA1;&#x6709;&#x751F;&#x6210;&#x3002;</li>
-<li>&#x901A;&#x8FC7; <code>getApp()</code> &#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x4E4B;&#x540E;&#xFF0C;&#x4E0D;&#x8981;&#x79C1;&#x81EA;&#x8C03;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x3002;</li>
+<li><code>App()</code> 必须在 <code>app.js</code> 中注册，且不能注册多个。</li>
+<li>不要在定义于 <code>App()</code> 内的函数中调用 <code>getApp()</code> ，使用 <code>this</code> 就可以拿到 app 实例。</li>
+<li>不要在 onLaunch 的时候调用 <code>getCurrentPages()</code>，此时 page 还没有生成。</li>
+<li>通过 <code>getApp()</code> 获取实例之后，不要私自调用生命周期函数。</li>
 </ul>
 
                                 

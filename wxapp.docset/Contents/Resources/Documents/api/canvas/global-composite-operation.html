@@ -21,41 +21,41 @@
                                 
                                 <h1 id="canvascontextglobalcompositeoperation">canvasContext.globalCompositeOperation</h1>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p>基础库 1.9.90 开始支持，低版本需做<a href="../../framework/compatibility.html">兼容处理</a></p>
 </blockquote>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x8BE5;&#x5C5E;&#x6027;&#x662F;&#x8BBE;&#x7F6E;&#x8981;&#x5728;&#x7ED8;&#x5236;&#x65B0;&#x5F62;&#x72B6;&#x65F6;&#x5E94;&#x7528;&#x7684;&#x5408;&#x6210;&#x64CD;&#x4F5C;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
-<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
+<h3 id="定义">定义</h3>
+<p>该属性是设置要在绘制新形状时应用的合成操作的类型。</p>
+<h3 id="语法">语法</h3>
 <pre><code class="lang-javascript">canvasContext.globalCompositeOperation = type
 </code></pre>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;&#x503C;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>属性值</th>
+<th>类型</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>type</td>
 <td>String</td>
-<td>&#x6807;&#x8BC6;&#x8981;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x5408;&#x6210;&#x6216;&#x6DF7;&#x5408;&#x6A21;&#x5F0F;&#x64CD;&#x4F5C;</td>
+<td>标识要使用哪种合成或混合模式操作</td>
 </tr>
 </tbody>
 </table>
-<p><strong><code>type</code> &#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#x6709;&#xFF1A;</strong></p>
+<p><strong><code>type</code> 支持的操作有：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x5E73;&#x53F0;</th>
-<th>&#x64CD;&#x4F5C;</th>
+<th>平台</th>
+<th>操作</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>&#x5B89;&#x5353;</td>
+<td>安卓</td>
 <td>xor, source-over, source-atop, destination-out, lighter, overlay, darken, lighten, hard-light</td>
 </tr>
 <tr>

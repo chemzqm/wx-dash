@@ -18,14 +18,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h4 id="checkbox-group">checkbox-group</h4>
-<p>&#x591A;&#x9879;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x5185;&#x90E8;&#x7531;&#x591A;&#x4E2A;<code>checkbox</code>&#x7EC4;&#x6210;&#x3002;</p>
+<p>多项选择器，内部由多个<code>checkbox</code>组成。</p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -33,19 +33,19 @@
 <td id="checkbox-bindchange">bindchange</td>
 <td>EventHandle</td>
 <td></td>
-<td><code>&lt;checkbox-group/&gt;</code>&#x4E2D;&#x9009;&#x4E2D;&#x9879;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x662F;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;detail = {value:[&#x9009;&#x4E2D;&#x7684;checkbox&#x7684;value&#x7684;&#x6570;&#x7EC4;]}</td>
+<td><code><checkbox-group></checkbox-group></code>中选中项发生改变是触发 change 事件，detail = {value:[选中的checkbox的value的数组]}</td>
 </tr>
 </tbody>
 </table>
 <h4 id="checkbox">checkbox</h4>
-<p>&#x591A;&#x9009;&#x9879;&#x76EE;&#x3002;</p>
+<p>多选项目。</p>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -53,49 +53,49 @@
 <td id="checkbox-value">value</td>
 <td>String</td>
 <td></td>
-<td><code>&lt;checkbox/&gt;</code>&#x6807;&#x8BC6;&#xFF0C;&#x9009;&#x4E2D;&#x65F6;&#x89E6;&#x53D1;<code>&lt;checkbox-group/&gt;</code>&#x7684; change &#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x643A;&#x5E26; <code>&lt;checkbox/&gt;</code> &#x7684; value</td>
+<td><code><checkbox></checkbox></code>标识，选中时触发<code><checkbox-group></checkbox-group></code>的 change 事件，并携带 <code><checkbox></checkbox></code> 的 value</td>
 </tr>
 <tr>
 <td id="checkbox-disabled">disabled</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
+<td>是否禁用</td>
 </tr>
 <tr>
 <td id="checkbox-checked">checked</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x5F53;&#x524D;&#x662F;&#x5426;&#x9009;&#x4E2D;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x9009;&#x4E2D;</td>
+<td>当前是否选中，可用来设置默认选中</td>
 </tr>
 <tr>
 <td id="checkbox-color">color</td>
 <td>Color</td>
 <td></td>
-<td>checkbox&#x7684;&#x989C;&#x8272;&#xFF0C;&#x540C;css&#x7684;color</td>
+<td>checkbox的颜色，同css的color</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/hGa3DcmW6qYw" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;checkboxChange&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{items}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>/&gt;</span>{{item.value}}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">checkbox-group</span>&gt;</span>
+<p><strong>示例：</strong></p>
+<p><a href="wechatide://minicode/hGa3DcmW6qYw" target="_blank">在开发者工具中预览效果</a></p>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">"checkboxChange"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">"{{items}}"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"{{item.name}}"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"{{item.checked}}"</span>/></span>{{item.value}}
+  <span class="hljs-tag"><!--<span class="hljs-name"-->label</span>>
+<span class="hljs-tag"><!--<span class="hljs-name"-->checkbox-group</span>>
 </code></pre>
 <pre><code class="lang-js">Page({
   data: {
     items: [
-      {name: <span class="hljs-string">&apos;USA&apos;</span>, value: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;CHN&apos;</span>, value: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;BRA&apos;</span>, value: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
-      {name: <span class="hljs-string">&apos;JPN&apos;</span>, value: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>},
-      {name: <span class="hljs-string">&apos;ENG&apos;</span>, value: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;TUR&apos;</span>, value: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
+      {name: <span class="hljs-string">'USA'</span>, value: <span class="hljs-string">'美国'</span>},
+      {name: <span class="hljs-string">'CHN'</span>, value: <span class="hljs-string">'中国'</span>, checked: <span class="hljs-string">'true'</span>},
+      {name: <span class="hljs-string">'BRA'</span>, value: <span class="hljs-string">'巴西'</span>},
+      {name: <span class="hljs-string">'JPN'</span>, value: <span class="hljs-string">'日本'</span>},
+      {name: <span class="hljs-string">'ENG'</span>, value: <span class="hljs-string">'英国'</span>},
+      {name: <span class="hljs-string">'TUR'</span>, value: <span class="hljs-string">'法国'</span>},
     ]
   },
   checkboxChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkbox&#x53D1;&#x751F;change&#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;value&#x503C;&#x4E3A;&#xFF1A;&apos;</span>, e.detail.value)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'checkbox发生change事件，携带value值为：'</span>, e.detail.value)
   }
 })
 </code></pre>

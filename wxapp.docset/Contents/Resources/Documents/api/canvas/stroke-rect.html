@@ -20,17 +20,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextstrokerect">canvasContext.strokeRect</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x753B;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;(&#x975E;&#x586B;&#x5145;)&#x3002;</p>
-<p><strong>Tip</strong>: &#x7528; <code>setFillStroke()</code> &#x8BBE;&#x7F6E;&#x77E9;&#x5F62;&#x7EBF;&#x6761;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x662F;&#x9ED1;&#x8272;&#x3002;</p>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="定义">定义</h3>
+<p>画一个矩形(非填充)。</p>
+<p><strong>Tip</strong>: 用 <code>setFillStroke()</code> 设置矩形线条的颜色，如果没设置默认是黑色。</p>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8303;&#x56F4;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>范围</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -38,31 +38,31 @@
 <td>x</td>
 <td>Number</td>
 <td></td>
-<td>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;x&#x5750;&#x6807;</td>
+<td>矩形路径左上角的x坐标</td>
 </tr>
 <tr>
 <td>y</td>
 <td>Number</td>
 <td></td>
-<td>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;y&#x5750;&#x6807;</td>
+<td>矩形路径左上角的y坐标</td>
 </tr>
 <tr>
 <td>width</td>
 <td>Number</td>
 <td></td>
-<td>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x7684;&#x5BBD;&#x5EA6;</td>
+<td>矩形路径的宽度</td>
 </tr>
 <tr>
 <td>height</td>
 <td>Number</td>
 <td></td>
-<td>&#x77E9;&#x5F62;&#x8DEF;&#x5F84;&#x7684;&#x9AD8;&#x5EA6;</td>
+<td>矩形路径的高度</td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
-ctx.setStrokeStyle(<span class="hljs-string">&apos;red&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
+ctx.setStrokeStyle(<span class="hljs-string">'red'</span>)
 ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
 ctx.draw()
 </code></pre>

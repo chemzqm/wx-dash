@@ -20,20 +20,20 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextsetglobalalpha">canvasContext.setGlobalAlpha</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x753B;&#x7B14;&#x900F;&#x660E;&#x5EA6;&#x3002;</p>
-<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
+<h3 id="定义">定义</h3>
+<p>设置全局画笔透明度。</p>
+<h3 id="语法">语法</h3>
 <pre><code class="lang-javascript">canvasContext.setGlobalAlpha(alpha)
-canvasContext.globalAlpha = alpha <span class="hljs-comment">// &#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x652F;&#x6301;</span>
+canvasContext.globalAlpha = alpha <span class="hljs-comment">// 基础库 1.9.90 起支持</span>
 </code></pre>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8303;&#x56F4;</th>
-<th>&#x8BF4;&#x660E;</th>
+<th>参数</th>
+<th>类型</th>
+<th>范围</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -41,19 +41,19 @@ canvasContext.globalAlpha = alpha <span class="hljs-comment">// &#x57FA;&#x7840;
 <td>alpha</td>
 <td>Number</td>
 <td>0~1</td>
-<td>&#x900F;&#x660E;&#x5EA6;&#xFF0C;0 &#x8868;&#x793A;&#x5B8C;&#x5168;&#x900F;&#x660E;&#xFF0C;1 &#x8868;&#x793A;&#x5B8C;&#x5168;&#x4E0D;&#x900F;&#x660E;</td>
+<td>透明度，0 表示完全透明，1 表示完全不透明</td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'red'</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
 ctx.setGlobalAlpha(<span class="hljs-number">0.2</span>)
-ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'blue'</span>)
 ctx.fillRect(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
-ctx.setFillStyle(<span class="hljs-string">&apos;yellow&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'yellow'</span>)
 ctx.fillRect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
 
 ctx.draw()

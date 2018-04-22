@@ -19,29 +19,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6761;&#x4EF6;&#x6E32;&#x67D3;">&#x6761;&#x4EF6;&#x6E32;&#x67D3;</h1>
+                                <h1 id="条件渲染">条件渲染</h1>
 <h3 id="wxif">wx:if</h3>
-<p>&#x5728;&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; <code>wx:if=&quot;{{condition}}&quot;</code> &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x8BE5;&#x4EE3;&#x7801;&#x5757;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{condition}}&quot;</span>&gt;</span> True <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<p>在框架中，使用 <code>wx:if="{{condition}}"</code> 来判断是否需要渲染该代码块：</p>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">"{{condition}}"</span>></span> True <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
 </code></pre>
-<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528; <code>wx:elif</code> &#x548C; <code>wx:else</code> &#x6765;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; else &#x5757;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{length &gt; 5}}&quot;</span>&gt;</span> 1 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:elif</span>=<span class="hljs-string">&quot;{{length &gt; 2}}&quot;</span>&gt;</span> 2 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>&gt;</span> 3 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<p>也可以用 <code>wx:elif</code> 和 <code>wx:else</code> 来添加一个 else 块：</p>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">"{{length > 5}}"</span>></span> 1 <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">wx:elif</span>=<span class="hljs-string">"{{length > 2}}"</span>></span> 2 <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>></span> 3 <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
 </code></pre>
 <h3 id="block-wxif">block wx:if</h3>
-<p>&#x56E0;&#x4E3A; <code>wx:if</code> &#x662F;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5C5E;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5B83;&#x6DFB;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x8981;&#x4E00;&#x6B21;&#x6027;&#x5224;&#x65AD;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x6807;&#x7B7E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; <code>&lt;block/&gt;</code> &#x6807;&#x7B7E;&#x5C06;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x5305;&#x88C5;&#x8D77;&#x6765;&#xFF0C;&#x5E76;&#x5728;&#x4E0A;&#x8FB9;&#x4F7F;&#x7528; <code>wx:if</code> &#x63A7;&#x5236;&#x5C5E;&#x6027;&#x3002;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{true}}&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> view1 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> view2 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span>
+<p>因为 <code>wx:if</code> 是一个控制属性，需要将它添加到一个标签上。如果要一次性判断多个组件标签，可以使用一个 <code><block/></code> 标签将多个组件包装起来，并在上边使用 <code>wx:if</code> 控制属性。</p>
+<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">block</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">"{{true}}"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">view</span>></span> view1 <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">view</span>></span> view2 <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">block</span>></span>
 </code></pre>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> <code>&lt;block/&gt;</code> &#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x4EC5;&#x4EC5;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x88C5;&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x4F1A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x505A;&#x4EFB;&#x4F55;&#x6E32;&#x67D3;&#xFF0C;&#x53EA;&#x63A5;&#x53D7;&#x63A7;&#x5236;&#x5C5E;&#x6027;&#x3002;</p>
+<p><strong>注意：</strong> <code><block/></code> 并不是一个组件，它仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性。</p>
 <h3 id="wxif-vs-hidden"><code>wx:if</code> vs <code>hidden</code></h3>
-<p>&#x56E0;&#x4E3A; <code>wx:if</code> &#x4E4B;&#x4E2D;&#x7684;&#x6A21;&#x677F;&#x4E5F;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;&#x6240;&#x6709;&#x5F53; <code>wx:if</code> &#x7684;&#x6761;&#x4EF6;&#x503C;&#x5207;&#x6362;&#x65F6;&#xFF0C;&#x6846;&#x67B6;&#x6709;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x6E32;&#x67D3;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x786E;&#x4FDD;&#x6761;&#x4EF6;&#x5757;&#x5728;&#x5207;&#x6362;&#x65F6;&#x9500;&#x6BC1;&#x6216;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</p>
-<p>&#x540C;&#x65F6; <code>wx:if</code> &#x4E5F;&#x662F;<strong>&#x60F0;&#x6027;&#x7684;</strong>&#xFF0C;&#x5982;&#x679C;&#x5728;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x6761;&#x4EF6;&#x4E3A; <code>false</code>&#xFF0C;&#x6846;&#x67B6;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x505A;&#xFF0C;&#x5728;&#x6761;&#x4EF6;&#x7B2C;&#x4E00;&#x6B21;&#x53D8;&#x6210;&#x771F;&#x7684;&#x65F6;&#x5019;&#x624D;&#x5F00;&#x59CB;&#x5C40;&#x90E8;&#x6E32;&#x67D3;&#x3002;</p>
-<p>&#x76F8;&#x6BD4;&#x4E4B;&#x4E0B;&#xFF0C;<code>hidden</code> &#x5C31;&#x7B80;&#x5355;&#x7684;&#x591A;&#xFF0C;&#x7EC4;&#x4EF6;&#x59CB;&#x7EC8;&#x4F1A;&#x88AB;&#x6E32;&#x67D3;&#xFF0C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x63A7;&#x5236;&#x663E;&#x793A;&#x4E0E;&#x9690;&#x85CF;&#x3002;</p>
-<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;<code>wx:if</code> &#x6709;&#x66F4;&#x9AD8;&#x7684;&#x5207;&#x6362;&#x6D88;&#x8017;&#x800C; <code>hidden</code> &#x6709;&#x66F4;&#x9AD8;&#x7684;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x6D88;&#x8017;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x9891;&#x7E41;&#x5207;&#x6362;&#x7684;&#x60C5;&#x666F;&#x4E0B;&#xFF0C;&#x7528; <code>hidden</code> &#x66F4;&#x597D;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x6761;&#x4EF6;&#x4E0D;&#x5927;&#x53EF;&#x80FD;&#x6539;&#x53D8;&#x5219; <code>wx:if</code> &#x8F83;&#x597D;&#x3002;</p>
+<p>因为 <code>wx:if</code> 之中的模板也可能包含数据绑定，所有当 <code>wx:if</code> 的条件值切换时，框架有一个局部渲染的过程，因为它会确保条件块在切换时销毁或重新渲染。</p>
+<p>同时 <code>wx:if</code> 也是<strong>惰性的</strong>，如果在初始渲染条件为 <code>false</code>，框架什么也不做，在条件第一次变成真的时候才开始局部渲染。</p>
+<p>相比之下，<code>hidden</code> 就简单的多，组件始终会被渲染，只是简单的控制显示与隐藏。</p>
+<p>一般来说，<code>wx:if</code> 有更高的切换消耗而 <code>hidden</code> 有更高的初始渲染消耗。因此，如果需要频繁切换的情景下，用 <code>hidden</code> 更好，如果在运行时条件不大可能改变则 <code>wx:if</code> 较好。</p>
 
                                 
                                 </section>

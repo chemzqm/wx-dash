@@ -20,48 +20,48 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextdraw">canvasContext.draw</h1>
-<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
-<p>&#x5C06;&#x4E4B;&#x524D;&#x5728;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x63CF;&#x8FF0;&#xFF08;&#x8DEF;&#x5F84;&#x3001;&#x53D8;&#x5F62;&#x3001;&#x6837;&#x5F0F;&#xFF09;&#x753B;&#x5230; canvas &#x4E2D;&#x3002;</p>
-<p><strong>Tip</strong>: &#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x9700;&#x8981;&#x7531; <code>wx.createCanvasContext(canvasId)</code> &#x6765;&#x521B;&#x5EFA;&#x3002;</p>
-<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
+<h3 id="定义">定义</h3>
+<p>将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。</p>
+<p><strong>Tip</strong>: 绘图上下文需要由 <code>wx.createCanvasContext(canvasId)</code> 来创建。</p>
+<h3 id="参数">参数</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>reserve</td>
 <td>Boolean</td>
-<td>&#x975E;&#x5FC5;&#x586B;&#x3002;&#x672C;&#x6B21;&#x7ED8;&#x5236;&#x662F;&#x5426;&#x63A5;&#x7740;&#x4E0A;&#x4E00;&#x6B21;&#x7ED8;&#x5236;&#xFF0C;&#x5373;reserve&#x53C2;&#x6570;&#x4E3A;false&#xFF0C;&#x5219;&#x5728;&#x672C;&#x6B21;&#x8C03;&#x7528;drawCanvas&#x7ED8;&#x5236;&#x4E4B;&#x524D;native&#x5C42;&#x5E94;&#x5148;&#x6E05;&#x7A7A;&#x753B;&#x5E03;&#x518D;&#x7EE7;&#x7EED;&#x7ED8;&#x5236;&#xFF1B;&#x82E5;reserver&#x53C2;&#x6570;&#x4E3A;true&#xFF0C;&#x5219;&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x753B;&#x5E03;&#x4E0A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x672C;&#x6B21;&#x8C03;&#x7528;drawCanvas&#x7ED8;&#x5236;&#x7684;&#x5185;&#x5BB9;&#x8986;&#x76D6;&#x5728;&#x4E0A;&#x9762;&#xFF0C;&#x9ED8;&#x8BA4; false</td>
+<td>非必填。本次绘制是否接着上一次绘制，即reserve参数为false，则在本次调用drawCanvas绘制之前native层应先清空画布再继续绘制；若reserver参数为true，则保留当前画布上的内容，本次调用drawCanvas绘制的内容覆盖在上面，默认 false</td>
 <td></td>
 </tr>
 <tr>
 <td>callback</td>
 <td>Function</td>
-<td>&#x7ED8;&#x5236;&#x5B8C;&#x6210;&#x540E;&#x56DE;&#x8C03;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.0</a></td>
+<td>绘制完成后回调</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.7.0 开始支持，低版本需做兼容处理。">1.7.0</a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'red'</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
 ctx.draw()
 ctx.fillRect(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
 ctx.draw()
 </code></pre>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/un-reserve.png?t=2018413" alt=""></p>
-<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<h3 id="例子">例子</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
 
-ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">'red'</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
 ctx.draw()
 ctx.fillRect(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)

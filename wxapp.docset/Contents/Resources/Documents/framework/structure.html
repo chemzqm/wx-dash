@@ -19,68 +19,68 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6587;&#x4EF6;&#x7ED3;&#x6784;">&#x6587;&#x4EF6;&#x7ED3;&#x6784;</h1>
-<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x6574;&#x4F53;&#x7A0B;&#x5E8F;&#x7684; app &#x548C;&#x591A;&#x4E2A;&#x63CF;&#x8FF0;&#x5404;&#x81EA;&#x9875;&#x9762;&#x7684; page&#x3002;</p>
-<p>&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E3B;&#x4F53;&#x90E8;&#x5206;&#x7531;&#x4E09;&#x4E2A;&#x6587;&#x4EF6;&#x7EC4;&#x6210;&#xFF0C;&#x5FC5;&#x987B;&#x653E;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+                                <h1 id="文件结构">文件结构</h1>
+<p>小程序包含一个描述整体程序的 app 和多个描述各自页面的 page。</p>
+<p>一个小程序主体部分由三个文件组成，必须放在项目的根目录，如下：</p>
 <table>
 <thead>
 <tr>
-<th>&#x6587;&#x4EF6;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x4F5C;&#x7528;</th>
+<th>文件</th>
+<th>必填</th>
+<th>作用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="app-service/app.html">app.js</a></td>
-<td>&#x662F;</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x903B;&#x8F91;</td>
+<td>是</td>
+<td>小程序逻辑</td>
 </tr>
 <tr>
 <td><a href="config.html">app.json</a></td>
-<td>&#x662F;</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x516C;&#x5171;&#x8BBE;&#x7F6E;</td>
+<td>是</td>
+<td>小程序公共设置</td>
 </tr>
 <tr>
 <td><a href="view/wxss.html">app.wxss</a></td>
-<td>&#x5426;</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x516C;&#x5171;&#x6837;&#x5F0F;&#x8868;</td>
+<td>否</td>
+<td>小程序公共样式表</td>
 </tr>
 </tbody>
 </table>
-<p>&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x7531;&#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x7EC4;&#x6210;&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
+<p>一个小程序页面由四个文件组成，分别是：</p>
 <table>
 <thead>
 <tr>
-<th>&#x6587;&#x4EF6;&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x4F5C;&#x7528;</th>
+<th>文件类型</th>
+<th>必填</th>
+<th>作用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="app-service/page.html">js</a></td>
-<td>&#x662F;</td>
-<td>&#x9875;&#x9762;&#x903B;&#x8F91;</td>
+<td>是</td>
+<td>页面逻辑</td>
 </tr>
 <tr>
 <td><a href="view/wxml/">wxml</a></td>
-<td>&#x662F;</td>
-<td>&#x9875;&#x9762;&#x7ED3;&#x6784;</td>
+<td>是</td>
+<td>页面结构</td>
 </tr>
 <tr>
 <td><a href="view/wxss.html">wxss</a></td>
-<td>&#x5426;</td>
-<td>&#x9875;&#x9762;&#x6837;&#x5F0F;&#x8868;</td>
+<td>否</td>
+<td>页面样式表</td>
 </tr>
 <tr>
 <td><a href="config.html#pagejson">json</a></td>
-<td>&#x5426;</td>
-<td>&#x9875;&#x9762;&#x914D;&#x7F6E;</td>
+<td>否</td>
+<td>页面配置</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x51CF;&#x5C11;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x63CF;&#x8FF0;&#x9875;&#x9762;&#x7684;&#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#x4E0E;&#x6587;&#x4EF6;&#x540D;&#x3002;</strong></p>
+<p><strong>注意：为了方便开发者减少配置项，描述页面的四个文件必须具有相同的路径与文件名。</strong></p>
 
                                 
                                 </section>

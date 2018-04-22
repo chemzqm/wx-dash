@@ -20,109 +20,109 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="wxcanvastotempfilepathobject-this">wx.canvasToTempFilePath(OBJECT, this)</h1>
-<p>&#x628A;&#x5F53;&#x524D;&#x753B;&#x5E03;&#x6307;&#x5B9A;&#x533A;&#x57DF;&#x7684;&#x5185;&#x5BB9;&#x5BFC;&#x51FA;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</p>
-<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。</p>
+<p><strong>OBJECT参数说明：</strong></p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>x</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x753B;&#x5E03;x&#x8F74;&#x8D77;&#x70B9;&#xFF08;&#x9ED8;&#x8BA4;0&#xFF09;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>否</td>
+<td>画布x轴起点（默认0）</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>y</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x753B;&#x5E03;y&#x8F74;&#x8D77;&#x70B9;&#xFF08;&#x9ED8;&#x8BA4;0&#xFF09;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>否</td>
+<td>画布y轴起点（默认0）</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>width</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x753B;&#x5E03;&#x5BBD;&#x5EA6;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;canvas&#x5BBD;&#x5EA6;-x&#xFF09;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>否</td>
+<td>画布宽度（默认为canvas宽度-x）</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>height</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x753B;&#x5E03;&#x9AD8;&#x5EA6;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;canvas&#x9AD8;&#x5EA6;-y&#xFF09;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>否</td>
+<td>画布高度（默认为canvas高度-y）</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>destWidth</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x8F93;&#x51FA;&#x56FE;&#x7247;&#x5BBD;&#x5EA6;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;width&#xFF09;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>否</td>
+<td>输出图片宽度（默认为width）</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>destHeight</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x8F93;&#x51FA;&#x56FE;&#x7247;&#x9AD8;&#x5EA6;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;height&#xFF09;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+<td>否</td>
+<td>输出图片高度（默认为height）</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
 </tr>
 <tr>
 <td>canvasId</td>
 <td>String</td>
-<td>&#x662F;</td>
-<td>&#x753B;&#x5E03;&#x6807;&#x8BC6;&#xFF0C;&#x4F20;&#x5165; <a href="../../component/canvas.html"><code>&lt;canvas/&gt;</code></a> &#x7684; canvas-id</td>
+<td>是</td>
+<td>画布标识，传入 <a href="../../component/canvas.html"><code><canvas/></code></a> 的 canvas-id</td>
 <td></td>
 </tr>
 <tr>
 <td>fileType</td>
 <td>String</td>
-<td>&#x5426;</td>
-<td>&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x652F;&#x6301; &apos;jpg&apos; &#x6216; &apos;png&apos;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; &apos;png&apos;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.0</a></td>
+<td>否</td>
+<td>目标文件的类型，只支持 'jpg' 或 'png'。默认为 'png'</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.7.0 开始支持，低版本需做兼容处理。">1.7.0</a></td>
 </tr>
 <tr>
 <td>quality</td>
 <td>Number</td>
-<td>&#x5426;</td>
-<td>&#x56FE;&#x7247;&#x7684;&#x8D28;&#x91CF;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; (0, 1]&#xFF0C;&#x4E0D;&#x5728;&#x8303;&#x56F4;&#x5185;&#x65F6;&#x5F53;&#x4F5C;1.0&#x5904;&#x7406;</td>
-<td><a href="../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.0</a></td>
+<td>否</td>
+<td>图片的质量，取值范围为 (0, 1]，不在范围内时当作1.0处理</td>
+<td><a href="../../framework/compatibility.html" title="基础库 1.7.0 开始支持，低版本需做兼容处理。">1.7.0</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
 </tr>
 </tbody>
 </table>
-<h3 id="bug--tip">Bug &amp; Tip</h3>
+<h3 id="bug--tip">Bug & Tip</h3>
 <ol>
-<li><code>tip</code>: &#x5728; <code>draw</code> &#x56DE;&#x8C03;&#x91CC;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x624D;&#x80FD;&#x4FDD;&#x8BC1;&#x56FE;&#x7247;&#x5BFC;&#x51FA;&#x6210;&#x529F;&#x3002;</li>
+<li><code>tip</code>: 在 <code>draw</code> 回调里调用该方法才能保证图片导出成功。</li>
 </ol>
-<h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h3>
+<h3 id="示例代码">示例代码</h3>
 <pre><code class="lang-javascript">wx.canvasToTempFilePath({
   x: <span class="hljs-number">100</span>,
   y: <span class="hljs-number">200</span>,
@@ -130,7 +130,7 @@
   height: <span class="hljs-number">50</span>,
   destWidth: <span class="hljs-number">100</span>,
   destHeight: <span class="hljs-number">100</span>,
-  canvasId: <span class="hljs-string">&apos;myCanvas&apos;</span>,
+  canvasId: <span class="hljs-string">'myCanvas'</span>,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.tempFilePath)
   } 
