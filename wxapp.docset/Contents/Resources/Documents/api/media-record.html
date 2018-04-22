@@ -20,69 +20,69 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxstartrecordobject">wx.startRecord(OBJECT)</h3>
-<p><strong>注意：1.6.0 版本开始，本接口不再维护。建议使用能力更强的 <a href="getRecorderManager.html">wx.getRecorderManager</a> 接口</strong></p>
-<p>开始录音。当主动调用<code>wx.stopRecord</code>，或者录音超过1分钟时自动结束录音，返回录音文件的临时文件路径。当用户离开小程序时，此接口无法调用。</p>
-<p>需要<a href="authorize-index.html">用户授权</a> scope.record</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;1.6.0 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x63A5;&#x53E3;&#x4E0D;&#x518D;&#x7EF4;&#x62A4;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x80FD;&#x529B;&#x66F4;&#x5F3A;&#x7684; <a href="getRecorderManager.html">wx.getRecorderManager</a> &#x63A5;&#x53E3;</strong></p>
+<p>&#x5F00;&#x59CB;&#x5F55;&#x97F3;&#x3002;&#x5F53;&#x4E3B;&#x52A8;&#x8C03;&#x7528;<code>wx.stopRecord</code>&#xFF0C;&#x6216;&#x8005;&#x5F55;&#x97F3;&#x8D85;&#x8FC7;1&#x5206;&#x949F;&#x65F6;&#x81EA;&#x52A8;&#x7ED3;&#x675F;&#x5F55;&#x97F3;&#xFF0C;&#x8FD4;&#x56DE;&#x5F55;&#x97F3;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;&#x5F53;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x6B64;&#x63A5;&#x53E3;&#x65E0;&#x6CD5;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.record</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>录音成功后调用，返回录音文件的临时文件路径，res = {tempFilePath: '录音文件的临时路径'}</td>
+<td>&#x5426;</td>
+<td>&#x5F55;&#x97F3;&#x6210;&#x529F;&#x540E;&#x8C03;&#x7528;&#xFF0C;&#x8FD4;&#x56DE;&#x5F55;&#x97F3;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;res = {tempFilePath: &apos;&#x5F55;&#x97F3;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&apos;}</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用<a href="file.html">wx.saveFile</a>，在小程序下次启动时才能访问得到。</strong></p>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>&#x6CE8;&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x672C;&#x6B21;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x9700;&#x6301;&#x4E45;&#x4FDD;&#x5B58;&#xFF0C;&#x9700;&#x5728;&#x4E3B;&#x52A8;&#x8C03;&#x7528;<a href="file.html">wx.saveFile</a>&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5F97;&#x5230;&#x3002;</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>tempFilePath</td>
-<td>录音文件的临时路径</td>
+<td>&#x5F55;&#x97F3;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;</td>
 </tr>
 </tbody>
 </table>
 <h3 id="wxstoprecord">wx.stopRecord()</h3>
-<p>​主动调用停止录音。</p>
-<p><strong>示例代码：</strong></p>
+<p>&#x200B;&#x4E3B;&#x52A8;&#x8C03;&#x7528;&#x505C;&#x6B62;&#x5F55;&#x97F3;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.startRecord({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> tempFilePath = res.tempFilePath 
   },
   fail: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-     <span class="hljs-comment">//录音失败</span>
+     <span class="hljs-comment">//&#x5F55;&#x97F3;&#x5931;&#x8D25;</span>
   }
 })
 setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">//结束录音  </span>
+  <span class="hljs-comment">//&#x7ED3;&#x675F;&#x5F55;&#x97F3;  </span>
   wx.stopRecord()
 }, <span class="hljs-number">10000</span>)
 </code></pre>

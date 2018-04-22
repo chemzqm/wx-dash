@@ -19,73 +19,73 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="自定义组件">自定义组件</h1>
-<p>从小程序基础库版本 <a href="../compatibility.html" title="基础库 1.6.3 开始支持，低版本需做兼容处理。">1.6.3</a> 开始，小程序支持简洁的组件化编程。所有自定义组件相关特性都需要基础库版本 <a href="../compatibility.html" title="基础库 1.6.3 开始支持，低版本需做兼容处理。">1.6.3</a> 或更高。</p>
-<p>开发者可以将页面内的功能模块抽象成自定义组件，以便在不同的页面中重复使用；也可以将复杂的页面拆分成多个低耦合的模块，有助于代码维护。自定义组件在使用时与基础组件非常相似。</p>
-<h3 id="创建自定义组件">创建自定义组件</h3>
-<p>类似于页面，一个自定义组件由 <code>json</code> <code>wxml</code> <code>wxss</code> <code>js</code> 4个文件组成。要编写一个自定义组件，首先需要在 <code>json</code> 文件中进行自定义组件声明（将 <code>component</code> 字段设为 <code>true</code> 可这一组文件设为自定义组件）：</p>
+                                <h1 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h1>
+<p>&#x4ECE;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.3</a> &#x5F00;&#x59CB;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x652F;&#x6301;&#x7B80;&#x6D01;&#x7684;&#x7EC4;&#x4EF6;&#x5316;&#x7F16;&#x7A0B;&#x3002;&#x6240;&#x6709;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x76F8;&#x5173;&#x7279;&#x6027;&#x90FD;&#x9700;&#x8981;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.3</a> &#x6216;&#x66F4;&#x9AD8;&#x3002;</p>
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x5C06;&#x9875;&#x9762;&#x5185;&#x7684;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x62BD;&#x8C61;&#x6210;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x590D;&#x6742;&#x7684;&#x9875;&#x9762;&#x62C6;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x4F4E;&#x8026;&#x5408;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x4EE3;&#x7801;&#x7EF4;&#x62A4;&#x3002;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x4E0E;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x3002;</p>
+<h3 id="&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h3>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;&#x9875;&#x9762;&#xFF0C;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7531; <code>json</code> <code>wxml</code> <code>wxss</code> <code>js</code> 4&#x4E2A;&#x6587;&#x4EF6;&#x7EC4;&#x6210;&#x3002;&#x8981;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x5728; <code>json</code> &#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x58F0;&#x660E;&#xFF08;&#x5C06; <code>component</code> &#x5B57;&#x6BB5;&#x8BBE;&#x4E3A; <code>true</code> &#x53EF;&#x8FD9;&#x4E00;&#x7EC4;&#x6587;&#x4EF6;&#x8BBE;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF09;&#xFF1A;</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"component"</span>: <span class="hljs-literal">true</span>
+  <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
-<p>同时，还要在 <code>wxml</code> 文件中编写组件模版，在 <code>wxss</code> 文件中加入组件样式，它们的写法与页面的写法类似。具体细节和注意事项参见 <a href="wxml-wxss.html">组件模版和样式</a> 。</p>
-<p><strong>代码示例：</strong></p>
-<pre><code class="lang-html"><span class="hljs-comment"><!-- 这是自定义组件的内部WXML结构 --></span>
-<span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inner"</span>></span>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x8981;&#x5728; <code>wxml</code> &#x6587;&#x4EF6;&#x4E2D;&#x7F16;&#x5199;&#x7EC4;&#x4EF6;&#x6A21;&#x7248;&#xFF0C;&#x5728; <code>wxss</code> &#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5199;&#x6CD5;&#x4E0E;&#x9875;&#x9762;&#x7684;&#x5199;&#x6CD5;&#x7C7B;&#x4F3C;&#x3002;&#x5177;&#x4F53;&#x7EC6;&#x8282;&#x548C;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x53C2;&#x89C1; <a href="wxml-wxss.html">&#x7EC4;&#x4EF6;&#x6A21;&#x7248;&#x548C;&#x6837;&#x5F0F;</a> &#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- &#x8FD9;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;WXML&#x7ED3;&#x6784; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>
   {{innerText}}
-<span class="hljs-tag"></<span class="hljs-name">view</span>></span>
-<span class="hljs-tag"><<span class="hljs-name">slot</span>></span><span class="hljs-tag"></<span class="hljs-name">slot</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-css"><span class="hljs-comment">/* 这里的样式只应用于这个自定义组件 */</span>
+<pre><code class="lang-css"><span class="hljs-comment">/* &#x8FD9;&#x91CC;&#x7684;&#x6837;&#x5F0F;&#x53EA;&#x5E94;&#x7528;&#x4E8E;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6; */</span>
 <span class="hljs-selector-class">.inner</span> {
   <span class="hljs-attribute">color</span>: red;
 }
 </code></pre>
-<p><strong>注意：在组件wxss中不应使用ID选择器、属性选择器和标签名选择器。</strong></p>
-<p>在自定义组件的 <code>js</code> 文件中，需要使用 <code>Component()</code> 来注册组件，并提供组件的属性定义、内部数据和自定义方法。</p>
-<p>组件的属性值和内部数据将被用于组件 <code>wxml</code> 的渲染，其中，属性值是可由组件外部传入的。更多细节参见 <a href="component.html">Component构造器</a> 。</p>
-<p><strong>代码示例：</strong></p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x5728;&#x7EC4;&#x4EF6;wxss&#x4E2D;&#x4E0D;&#x5E94;&#x4F7F;&#x7528;ID&#x9009;&#x62E9;&#x5668;&#x3001;&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;&#x548C;&#x6807;&#x7B7E;&#x540D;&#x9009;&#x62E9;&#x5668;&#x3002;</strong></p>
+<p>&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; <code>js</code> &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>Component()</code> &#x6765;&#x6CE8;&#x518C;&#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x3001;&#x5185;&#x90E8;&#x6570;&#x636E;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x548C;&#x5185;&#x90E8;&#x6570;&#x636E;&#x5C06;&#x88AB;&#x7528;&#x4E8E;&#x7EC4;&#x4EF6; <code>wxml</code> &#x7684;&#x6E32;&#x67D3;&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x53EF;&#x7531;&#x7EC4;&#x4EF6;&#x5916;&#x90E8;&#x4F20;&#x5165;&#x7684;&#x3002;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x53C2;&#x89C1; <a href="component.html">Component&#x6784;&#x9020;&#x5668;</a> &#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <pre><code class="lang-js">Component({
   properties: {
-    <span class="hljs-comment">// 这里定义了innerText属性，属性值可以在组件使用时指定</span>
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x4E86;innerText&#x5C5E;&#x6027;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x65F6;&#x6307;&#x5B9A;</span>
     innerText: {
       type: <span class="hljs-built_in">String</span>,
-      value: <span class="hljs-string">'default value'</span>,
+      value: <span class="hljs-string">&apos;default value&apos;</span>,
     }
   },
   data: {
-    <span class="hljs-comment">// 这里是一些组件内部数据</span>
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x6570;&#x636E;</span>
     someData: {}
   },
   methods: {
-    <span class="hljs-comment">// 这里是一个自定义方法</span>
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;</span>
     customMethod: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
   }
 })
 </code></pre>
-<h3 id="使用自定义组件">使用自定义组件</h3>
-<p>使用已注册的自定义组件前，首先要在页面的 <code>json</code> 文件中进行引用声明。此时需要提供每个自定义组件的标签名和对应的自定义组件文件路径：</p>
+<h3 id="&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h3>
+<p>&#x4F7F;&#x7528;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x524D;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x5728;&#x9875;&#x9762;&#x7684; <code>json</code> &#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x5F15;&#x7528;&#x58F0;&#x660E;&#x3002;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x6BCF;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x6807;&#x7B7E;&#x540D;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF1A;</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"usingComponents"</span>: {
-    <span class="hljs-string">"component-tag-name"</span>: <span class="hljs-string">"path/to/the/custom/component"</span>
+  <span class="hljs-string">&quot;usingComponents&quot;</span>: {
+    <span class="hljs-string">&quot;component-tag-name&quot;</span>: <span class="hljs-string">&quot;path/to/the/custom/component&quot;</span>
   }
 }
 </code></pre>
-<p>这样，在页面的 <code>wxml</code> 中就可以像使用基础组件一样使用自定义组件。节点名即自定义组件的标签名，节点属性即传递给组件的属性值。</p>
-<p><strong>代码示例：</strong></p>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span>></span>
-  <span class="hljs-comment"><!-- 以下是对一个自定义组件的引用 --></span>
-  <span class="hljs-tag"><<span class="hljs-name">component-tag-name</span> <span class="hljs-attr">inner-text</span>=<span class="hljs-string">"Some text"</span>></span><span class="hljs-tag"></<span class="hljs-name">component-tag-name</span>></span>
-<span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x9875;&#x9762;&#x7684; <code>wxml</code> &#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x50CF;&#x4F7F;&#x7528;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x4E00;&#x6837;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x3002;&#x8282;&#x70B9;&#x540D;&#x5373;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x6807;&#x7B7E;&#x540D;&#xFF0C;&#x8282;&#x70B9;&#x5C5E;&#x6027;&#x5373;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x4EE5;&#x4E0B;&#x662F;&#x5BF9;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x5F15;&#x7528; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">component-tag-name</span> <span class="hljs-attr">inner-text</span>=<span class="hljs-string">&quot;Some text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">component-tag-name</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<p>自定义组件的 <code>wxml</code> 节点结构在与数据结合之后，将被插入到引用位置内。</p>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; <code>wxml</code> &#x8282;&#x70B9;&#x7ED3;&#x6784;&#x5728;&#x4E0E;&#x6570;&#x636E;&#x7ED3;&#x5408;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x88AB;&#x63D2;&#x5165;&#x5230;&#x5F15;&#x7528;&#x4F4D;&#x7F6E;&#x5185;&#x3002;</p>
 <p><strong>Tips</strong>:</p>
 <ul>
-<li>对于基础库的1.5.x版本， <a href="../compatibility.html" title="基础库 1.5.7 开始支持，低版本需做兼容处理。">1.5.7</a> 也有部分自定义组件支持。</li>
-<li>因为WXML节点标签名只能是小写字母、中划线和下划线的组合，所以自定义组件的标签名也只能包含这些字符。</li>
-<li>自定义组件也是可以引用自定义组件的，引用方法类似于页面引用自定义组件的方式（使用 <code>usingComponents</code> 字段）。</li>
-<li>自定义组件和使用自定义组件的页面所在项目根目录名不能以“wx-”为前缀，否则会报错。</li>
-<li>旧版本的基础库不支持自定义组件，此时，引用自定义组件的节点会变为默认的空节点。</li>
+<li>&#x5BF9;&#x4E8E;&#x57FA;&#x7840;&#x5E93;&#x7684;1.5.x&#x7248;&#x672C;&#xFF0C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.7</a> &#x4E5F;&#x6709;&#x90E8;&#x5206;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x652F;&#x6301;&#x3002;</li>
+<li>&#x56E0;&#x4E3A;WXML&#x8282;&#x70B9;&#x6807;&#x7B7E;&#x540D;&#x53EA;&#x80FD;&#x662F;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3001;&#x4E2D;&#x5212;&#x7EBF;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x6240;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x6807;&#x7B7E;&#x540D;&#x4E5F;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x3002;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#xFF0C;&#x5F15;&#x7528;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#x4E8E;&#x9875;&#x9762;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#xFF08;&#x4F7F;&#x7528; <code>usingComponents</code> &#x5B57;&#x6BB5;&#xFF09;&#x3002;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x548C;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x6240;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x540D;&#x4E0D;&#x80FD;&#x4EE5;&#x201C;wx-&#x201D;&#x4E3A;&#x524D;&#x7F00;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#x3002;</li>
+<li>&#x65E7;&#x7248;&#x672C;&#x7684;&#x57FA;&#x7840;&#x5E93;&#x4E0D;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x8282;&#x70B9;&#x4F1A;&#x53D8;&#x4E3A;&#x9ED8;&#x8BA4;&#x7684;&#x7A7A;&#x8282;&#x70B9;&#x3002;</li>
 </ul>
 
                                 

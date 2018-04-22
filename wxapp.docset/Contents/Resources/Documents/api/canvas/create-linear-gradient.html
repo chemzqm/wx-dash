@@ -20,48 +20,48 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextcreatelineargradient">canvasContext.createLinearGradient</h1>
-<h3 id="定义">定义</h3>
-<p>创建一个线性的渐变颜色。</p>
-<p><strong>Tip</strong>: 需要使用 <code>addColorStop()</code> 来指定渐变点，至少要两个。</p>
-<h3 id="参数">参数</h3>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x7684;&#x6E10;&#x53D8;&#x989C;&#x8272;&#x3002;</p>
+<p><strong>Tip</strong>: &#x9700;&#x8981;&#x4F7F;&#x7528; <code>addColorStop()</code> &#x6765;&#x6307;&#x5B9A;&#x6E10;&#x53D8;&#x70B9;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x4E24;&#x4E2A;&#x3002;</p>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>定义</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5B9A;&#x4E49;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>x0</td>
 <td>Number</td>
-<td>起点的x坐标</td>
+<td>&#x8D77;&#x70B9;&#x7684;x&#x5750;&#x6807;</td>
 </tr>
 <tr>
 <td>y0</td>
 <td>Number</td>
-<td>起点的y坐标</td>
+<td>&#x8D77;&#x70B9;&#x7684;y&#x5750;&#x6807;</td>
 </tr>
 <tr>
 <td>x1</td>
 <td>Number</td>
-<td>终点的x坐标</td>
+<td>&#x7EC8;&#x70B9;&#x7684;x&#x5750;&#x6807;</td>
 </tr>
 <tr>
 <td>y1</td>
 <td>Number</td>
-<td>终点的y坐标</td>
+<td>&#x7EC8;&#x70B9;&#x7684;y&#x5750;&#x6807;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="例子">例子</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 
 <span class="hljs-comment">// Create linear gradient</span>
 <span class="hljs-keyword">const</span> grd = ctx.createLinearGradient(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">0</span>)
-grd.addColorStop(<span class="hljs-number">0</span>, <span class="hljs-string">'red'</span>)
-grd.addColorStop(<span class="hljs-number">1</span>, <span class="hljs-string">'white'</span>)
+grd.addColorStop(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;red&apos;</span>)
+grd.addColorStop(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;white&apos;</span>)
 
 <span class="hljs-comment">// Fill with gradient</span>
 ctx.setFillStyle(grd)

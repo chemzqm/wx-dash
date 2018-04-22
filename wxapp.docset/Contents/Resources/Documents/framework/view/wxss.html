@@ -20,24 +20,24 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="wxss">WXSS</h1>
-<p>WXSS(WeiXin Style Sheets)是一套样式语言，用于描述 WXML 的组件样式。</p>
-<p>WXSS 用来决定 WXML 的组件应该怎么显示。</p>
-<p>为了适应广大的前端开发者，WXSS 具有 CSS 大部分特性。同时为了更适合开发微信小程序，WXSS 对 CSS 进行了扩充以及修改。</p>
-<p>与 CSS 相比，WXSS 扩展的特性有：</p>
+<p>WXSS(WeiXin Style Sheets)&#x662F;&#x4E00;&#x5957;&#x6837;&#x5F0F;&#x8BED;&#x8A00;&#xFF0C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0; WXML &#x7684;&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;&#x3002;</p>
+<p>WXSS &#x7528;&#x6765;&#x51B3;&#x5B9A; WXML &#x7684;&#x7EC4;&#x4EF6;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x663E;&#x793A;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x9002;&#x5E94;&#x5E7F;&#x5927;&#x7684;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#xFF0C;WXSS &#x5177;&#x6709; CSS &#x5927;&#x90E8;&#x5206;&#x7279;&#x6027;&#x3002;&#x540C;&#x65F6;&#x4E3A;&#x4E86;&#x66F4;&#x9002;&#x5408;&#x5F00;&#x53D1;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;WXSS &#x5BF9; CSS &#x8FDB;&#x884C;&#x4E86;&#x6269;&#x5145;&#x4EE5;&#x53CA;&#x4FEE;&#x6539;&#x3002;</p>
+<p>&#x4E0E; CSS &#x76F8;&#x6BD4;&#xFF0C;WXSS &#x6269;&#x5C55;&#x7684;&#x7279;&#x6027;&#x6709;&#xFF1A;</p>
 <ul>
-<li>尺寸单位</li>
-<li>样式导入</li>
+<li>&#x5C3A;&#x5BF8;&#x5355;&#x4F4D;</li>
+<li>&#x6837;&#x5F0F;&#x5BFC;&#x5165;</li>
 </ul>
-<h3 id="尺寸单位">尺寸单位</h3>
+<h3 id="&#x5C3A;&#x5BF8;&#x5355;&#x4F4D;">&#x5C3A;&#x5BF8;&#x5355;&#x4F4D;</h3>
 <ul>
-<li>rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。</li>
+<li>rpx&#xFF08;responsive pixel&#xFF09;: &#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;&#x8FDB;&#x884C;&#x81EA;&#x9002;&#x5E94;&#x3002;&#x89C4;&#x5B9A;&#x5C4F;&#x5E55;&#x5BBD;&#x4E3A;750rpx&#x3002;&#x5982;&#x5728; iPhone6 &#x4E0A;&#xFF0C;&#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;&#x4E3A;375px&#xFF0C;&#x5171;&#x6709;750&#x4E2A;&#x7269;&#x7406;&#x50CF;&#x7D20;&#xFF0C;&#x5219;750rpx = 375px = 750&#x7269;&#x7406;&#x50CF;&#x7D20;&#xFF0C;1rpx = 0.5px = 1&#x7269;&#x7406;&#x50CF;&#x7D20;&#x3002;</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>设备</th>
-<th>rpx换算px (屏幕宽度/750)</th>
-<th>px换算rpx (750/屏幕宽度)</th>
+<th>&#x8BBE;&#x5907;</th>
+<th>rpx&#x6362;&#x7B97;px (&#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;/750)</th>
+<th>px&#x6362;&#x7B97;rpx (750/&#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;)</th>
 </tr>
 </thead>
 <tbody>
@@ -58,79 +58,79 @@
 </tr>
 </tbody>
 </table>
-<p><strong>建议：</strong> 开发微信小程序时设计师可以用 iPhone6 作为视觉稿的标准。</p>
-<p><strong>注意：</strong> 在较小的屏幕上不可避免的会有一些毛刺，请在开发时尽量避免这种情况。</p>
-<h3 id="样式导入">样式导入</h3>
-<p>使用<code>@import</code>语句可以导入外联样式表，<code>@import</code>后跟需要导入的外联样式表的相对路径，用<code>;</code>表示语句结束。</p>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x5EFA;&#x8BAE;&#xFF1A;</strong> &#x5F00;&#x53D1;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x65F6;&#x8BBE;&#x8BA1;&#x5E08;&#x53EF;&#x4EE5;&#x7528; iPhone6 &#x4F5C;&#x4E3A;&#x89C6;&#x89C9;&#x7A3F;&#x7684;&#x6807;&#x51C6;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x5728;&#x8F83;&#x5C0F;&#x7684;&#x5C4F;&#x5E55;&#x4E0A;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x6BDB;&#x523A;&#xFF0C;&#x8BF7;&#x5728;&#x5F00;&#x53D1;&#x65F6;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x3002;</p>
+<h3 id="&#x6837;&#x5F0F;&#x5BFC;&#x5165;">&#x6837;&#x5F0F;&#x5BFC;&#x5165;</h3>
+<p>&#x4F7F;&#x7528;<code>@import</code>&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x5BFC;&#x5165;&#x5916;&#x8054;&#x6837;&#x5F0F;&#x8868;&#xFF0C;<code>@import</code>&#x540E;&#x8DDF;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x5916;&#x8054;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x7528;<code>;</code>&#x8868;&#x793A;&#x8BED;&#x53E5;&#x7ED3;&#x675F;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-less"><span class="hljs-comment">/** common.wxss **/</span>
 <span class="hljs-selector-class">.small-p</span> {
   <span class="hljs-attribute">padding</span>:<span class="hljs-number">5px</span>;
 }
 </code></pre>
 <pre><code class="lang-less"><span class="hljs-comment">/** app.wxss **/</span>
-<span class="hljs-keyword">@import</span> <span class="hljs-string">"common.wxss"</span>;
+<span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;common.wxss&quot;</span>;
 <span class="hljs-selector-class">.middle-p</span> {
   <span class="hljs-attribute">padding</span>:<span class="hljs-number">15px</span>;
 }
 </code></pre>
-<h3 id="内联样式">内联样式</h3>
-<p>框架组件上支持使用 style、class 属性来控制组件的样式。</p>
+<h3 id="&#x5185;&#x8054;&#x6837;&#x5F0F;">&#x5185;&#x8054;&#x6837;&#x5F0F;</h3>
+<p>&#x6846;&#x67B6;&#x7EC4;&#x4EF6;&#x4E0A;&#x652F;&#x6301;&#x4F7F;&#x7528; style&#x3001;class &#x5C5E;&#x6027;&#x6765;&#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#x7684;&#x6837;&#x5F0F;&#x3002;</p>
 <ul>
-<li>style：静态的样式统一写到 class 中。style 接收动态的样式，在运行时会进行解析，请尽量避免将静态的样式写进 style 中，以免影响渲染速度。</li>
+<li>style&#xFF1A;&#x9759;&#x6001;&#x7684;&#x6837;&#x5F0F;&#x7EDF;&#x4E00;&#x5199;&#x5230; class &#x4E2D;&#x3002;style &#x63A5;&#x6536;&#x52A8;&#x6001;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x4F1A;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x8BF7;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5C06;&#x9759;&#x6001;&#x7684;&#x6837;&#x5F0F;&#x5199;&#x8FDB; style &#x4E2D;&#xFF0C;&#x4EE5;&#x514D;&#x5F71;&#x54CD;&#x6E32;&#x67D3;&#x901F;&#x5EA6;&#x3002;</li>
 </ul>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color:{{color}};"</span> /></span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:{{color}};&quot;</span> /&gt;</span>
 </code></pre>
 <ul>
-<li>class：用于指定样式规则，其属性值是样式规则中类选择器名(样式类名)的集合，样式类名不需要带上<code>.</code>，样式类名之间用空格分隔。</li>
+<li>class&#xFF1A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#x4E2D;&#x7C7B;&#x9009;&#x62E9;&#x5668;&#x540D;(&#x6837;&#x5F0F;&#x7C7B;&#x540D;)&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x6837;&#x5F0F;&#x7C7B;&#x540D;&#x4E0D;&#x9700;&#x8981;&#x5E26;&#x4E0A;<code>.</code>&#xFF0C;&#x6837;&#x5F0F;&#x7C7B;&#x540D;&#x4E4B;&#x95F4;&#x7528;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x3002;</li>
 </ul>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"normal_view"</span> /></span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;normal_view&quot;</span> /&gt;</span>
 </code></pre>
-<h3 id="选择器">选择器</h3>
-<p>目前支持的选择器有：</p>
+<h3 id="&#x9009;&#x62E9;&#x5668;">&#x9009;&#x62E9;&#x5668;</h3>
+<p>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x9009;&#x62E9;&#x5668;&#x6709;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
-<th>选择器</th>
-<th>样例</th>
-<th>样例描述</th>
+<th>&#x9009;&#x62E9;&#x5668;</th>
+<th>&#x6837;&#x4F8B;</th>
+<th>&#x6837;&#x4F8B;&#x63CF;&#x8FF0;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>.class</td>
 <td><code>.intro</code></td>
-<td>选择所有拥有 class="intro" 的组件</td>
+<td>&#x9009;&#x62E9;&#x6240;&#x6709;&#x62E5;&#x6709; class=&quot;intro&quot; &#x7684;&#x7EC4;&#x4EF6;</td>
 </tr>
 <tr>
 <td>#id</td>
 <td><code>#firstname</code></td>
-<td>选择拥有 id="firstname" 的组件</td>
+<td>&#x9009;&#x62E9;&#x62E5;&#x6709; id=&quot;firstname&quot; &#x7684;&#x7EC4;&#x4EF6;</td>
 </tr>
 <tr>
 <td>element</td>
 <td><code>view</code></td>
-<td>选择所有 view 组件</td>
+<td>&#x9009;&#x62E9;&#x6240;&#x6709; view &#x7EC4;&#x4EF6;</td>
 </tr>
 <tr>
 <td>element, element</td>
 <td><code>view, checkbox</code></td>
-<td>选择所有文档的 view 组件和所有的 checkbox 组件</td>
+<td>&#x9009;&#x62E9;&#x6240;&#x6709;&#x6587;&#x6863;&#x7684; view &#x7EC4;&#x4EF6;&#x548C;&#x6240;&#x6709;&#x7684; checkbox &#x7EC4;&#x4EF6;</td>
 </tr>
 <tr>
 <td>::after</td>
 <td><code>view::after</code></td>
-<td>在 view 组件后边插入内容</td>
+<td>&#x5728; view &#x7EC4;&#x4EF6;&#x540E;&#x8FB9;&#x63D2;&#x5165;&#x5185;&#x5BB9;</td>
 </tr>
 <tr>
 <td>::before</td>
 <td><code>view::before</code></td>
-<td>在 view 组件前边插入内容</td>
+<td>&#x5728; view &#x7EC4;&#x4EF6;&#x524D;&#x8FB9;&#x63D2;&#x5165;&#x5185;&#x5BB9;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="全局样式与局部样式">全局样式与局部样式</h3>
-<p>定义在 app.wxss 中的样式为全局样式，作用于每一个页面。在 page 的 wxss 文件中定义的样式为局部样式，只作用在对应的页面，并会覆盖 app.wxss 中相同的选择器。</p>
+<h3 id="&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x4E0E;&#x5C40;&#x90E8;&#x6837;&#x5F0F;">&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x4E0E;&#x5C40;&#x90E8;&#x6837;&#x5F0F;</h3>
+<p>&#x5B9A;&#x4E49;&#x5728; app.wxss &#x4E2D;&#x7684;&#x6837;&#x5F0F;&#x4E3A;&#x5168;&#x5C40;&#x6837;&#x5F0F;&#xFF0C;&#x4F5C;&#x7528;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;&#x5728; page &#x7684; wxss &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6837;&#x5F0F;&#x4E3A;&#x5C40;&#x90E8;&#x6837;&#x5F0F;&#xFF0C;&#x53EA;&#x4F5C;&#x7528;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x4F1A;&#x8986;&#x76D6; app.wxss &#x4E2D;&#x76F8;&#x540C;&#x7684;&#x9009;&#x62E9;&#x5668;&#x3002;</p>
 
                                 
                                 </section>

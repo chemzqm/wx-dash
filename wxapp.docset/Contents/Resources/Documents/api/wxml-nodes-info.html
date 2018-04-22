@@ -19,207 +19,207 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="wxml节点信息api">WXML节点信息API</h1>
+                                <h1 id="wxml&#x8282;&#x70B9;&#x4FE1;&#x606F;api">WXML&#x8282;&#x70B9;&#x4FE1;&#x606F;API</h1>
 <h2 id="wxcreateselectorquery">wx.createSelectorQuery()</h2>
 <blockquote>
-<p>基础库 1.4.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>返回一个SelectorQuery对象实例。可以在这个实例上使用<code>select</code>等方法选择节点，并使用<code>boundingClientRect</code>等方法选择需要查询的信息。</p>
-<p><strong>示例代码：</strong></p>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;SelectorQuery&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E0A;&#x4F7F;&#x7528;<code>select</code>&#x7B49;&#x65B9;&#x6CD5;&#x9009;&#x62E9;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;<code>boundingClientRect</code>&#x7B49;&#x65B9;&#x6CD5;&#x9009;&#x62E9;&#x9700;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">Page({
   queryMultipleNodes: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">var</span> query = wx.createSelectorQuery()
-    query.select(<span class="hljs-string">'#the-id'</span>).boundingClientRect()
+    query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect()
     query.selectViewport().scrollOffset()
     query.exec(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-      res[<span class="hljs-number">0</span>].top       <span class="hljs-comment">// #the-id节点的上边界坐标</span>
-      res[<span class="hljs-number">1</span>].scrollTop <span class="hljs-comment">// 显示区域的竖直滚动位置</span>
+      res[<span class="hljs-number">0</span>].top       <span class="hljs-comment">// #the-id&#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      res[<span class="hljs-number">1</span>].scrollTop <span class="hljs-comment">// &#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
     })
   }
 })
 </code></pre>
 <h3 id="selectorquery">selectorQuery</h3>
-<p><strong>selectorQuery 对象的方法列表：</strong></p>
+<p><strong>selectorQuery &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>方法</th>
-<th>参数</th>
-<th>说明</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>in</td>
 <td>object Component</td>
-<td>参考下面详细介绍</td>
+<td>&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</td>
 </tr>
 <tr>
 <td>select</td>
 <td>selector</td>
-<td>参考下面详细介绍</td>
+<td>&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</td>
 </tr>
 <tr>
 <td>selectAll</td>
 <td>selector</td>
-<td>参考下面详细介绍</td>
+<td>&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</td>
 </tr>
 <tr>
 <td>selectViewport</td>
 <td></td>
-<td>参考下面详细介绍</td>
+<td>&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</td>
 </tr>
 <tr>
 <td>exec</td>
 <td>[callback]</td>
-<td>参考下面详细介绍</td>
+<td>&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</td>
 </tr>
 </tbody>
 </table>
 <h3 id="selectorqueryincomponent">selectorQuery.in(component)</h3>
 <blockquote>
-<p>基础库 1.6.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>将选择器的选取范围更改为自定义组件<code>component</code>内。（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点。）</p>
-<p><strong>示例代码：</strong></p>
+<p>&#x5C06;&#x9009;&#x62E9;&#x5668;&#x7684;&#x9009;&#x53D6;&#x8303;&#x56F4;&#x66F4;&#x6539;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;<code>component</code>&#x5185;&#x3002;&#xFF08;&#x521D;&#x59CB;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x4EC5;&#x9009;&#x53D6;&#x9875;&#x9762;&#x8303;&#x56F4;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x4E0D;&#x4F1A;&#x9009;&#x53D6;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x3002;&#xFF09;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">Component({
   queryMultipleNodes: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">var</span> query = wx.createSelectorQuery().in(<span class="hljs-keyword">this</span>)
-    query.select(<span class="hljs-string">'#the-id'</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-      res.top <span class="hljs-comment">// 这个组件内 #the-id 节点的上边界坐标</span>
+    query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+      res.top <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5185; #the-id &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
     }).exec()
   }
 })
 </code></pre>
 <h3 id="selectorqueryselectselector">selectorQuery.select(selector)</h3>
-<p>在当前页面下选择第一个匹配选择器<code>selector</code>的节点，返回一个<code>NodesRef</code>对象实例，可以用于获取节点信息。</p>
-<p><code>selector</code>类似于CSS的选择器，但仅支持下列语法。</p>
+<p>&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0B;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x9009;&#x62E9;&#x5668;<code>selector</code>&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>NodesRef</code>&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x3002;</p>
+<p><code>selector</code>&#x7C7B;&#x4F3C;&#x4E8E;CSS&#x7684;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x4F46;&#x4EC5;&#x652F;&#x6301;&#x4E0B;&#x5217;&#x8BED;&#x6CD5;&#x3002;</p>
 <ul>
-<li>ID选择器：<code>#the-id</code></li>
-<li>class选择器（可以连续指定多个）：<code>.a-class.another-class</code></li>
-<li>子元素选择器：<code>.the-parent > .the-child</code></li>
-<li>后代选择器：<code>.the-ancestor .the-descendant</code></li>
-<li>跨自定义组件的后代选择器：<code>.the-ancestor >>> .the-descendant</code></li>
-<li>多选择器的并集：<code>#a-node, .some-other-nodes</code></li>
+<li>ID&#x9009;&#x62E9;&#x5668;&#xFF1A;<code>#the-id</code></li>
+<li>class&#x9009;&#x62E9;&#x5668;&#xFF08;&#x53EF;&#x4EE5;&#x8FDE;&#x7EED;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#xFF09;&#xFF1A;<code>.a-class.another-class</code></li>
+<li>&#x5B50;&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;&#xFF1A;<code>.the-parent &gt; .the-child</code></li>
+<li>&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;&#xFF1A;<code>.the-ancestor .the-descendant</code></li>
+<li>&#x8DE8;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;&#xFF1A;<code>.the-ancestor &gt;&gt;&gt; .the-descendant</code></li>
+<li>&#x591A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5E76;&#x96C6;&#xFF1A;<code>#a-node, .some-other-nodes</code></li>
 </ul>
 <h3 id="selectorqueryselectallselector">selectorQuery.selectAll(selector)</h3>
-<p>在当前页面下选择匹配选择器<code>selector</code>的节点，返回一个<code>NodesRef</code>对象实例。
-与<code>selectorQuery.selectNode(selector)</code>不同的是，它选择所有匹配选择器的节点。</p>
+<p>&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0B;&#x9009;&#x62E9;&#x5339;&#x914D;&#x9009;&#x62E9;&#x5668;<code>selector</code>&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>NodesRef</code>&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;
+&#x4E0E;<code>selectorQuery.selectNode(selector)</code>&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5B83;&#x9009;&#x62E9;&#x6240;&#x6709;&#x5339;&#x914D;&#x9009;&#x62E9;&#x5668;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
 <h3 id="selectorqueryselectviewport">selectorQuery.selectViewport()</h3>
-<p>选择显示区域，可用于获取显示区域的尺寸、滚动位置等信息，返回一个<code>NodesRef</code>对象实例。</p>
+<p>&#x9009;&#x62E9;&#x663E;&#x793A;&#x533A;&#x57DF;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x5C3A;&#x5BF8;&#x3001;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>NodesRef</code>&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;</p>
 <h3 id="nodesrefboundingclientrectcallback">nodesRef.boundingClientRect([callback])</h3>
-<p>添加节点的布局位置的查询请求，相对于显示区域，以像素为单位。其功能类似于DOM的getBoundingClientRect。返回值是nodesRef对应的selectorQuery。</p>
-<p>返回的节点信息中，每个节点的位置用<code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code>、<code>width</code>、<code>height</code>字段描述。如果提供了callback回调函数，在执行selectQuery的exec方法后，节点信息会在callback中返回。</p>
-<p><strong>示例代码：</strong></p>
+<p>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#x7684;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x663E;&#x793A;&#x533A;&#x57DF;&#xFF0C;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x5176;&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#x4E8E;DOM&#x7684;getBoundingClientRect&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;nodesRef&#x5BF9;&#x5E94;&#x7684;selectorQuery&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x7528;<code>left</code>&#x3001;<code>right</code>&#x3001;<code>top</code>&#x3001;<code>bottom</code>&#x3001;<code>width</code>&#x3001;<code>height</code>&#x5B57;&#x6BB5;&#x63CF;&#x8FF0;&#x3002;&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86;callback&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x6267;&#x884C;selectQuery&#x7684;exec&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4F1A;&#x5728;callback&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">Page({
   getRect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-    wx.createSelectorQuery().select(<span class="hljs-string">'#the-id'</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rect</span>)</span>{
-      rect.id      <span class="hljs-comment">// 节点的ID</span>
-      rect.dataset <span class="hljs-comment">// 节点的dataset</span>
-      rect.left    <span class="hljs-comment">// 节点的左边界坐标</span>
-      rect.right   <span class="hljs-comment">// 节点的右边界坐标</span>
-      rect.top     <span class="hljs-comment">// 节点的上边界坐标</span>
-      rect.bottom  <span class="hljs-comment">// 节点的下边界坐标</span>
-      rect.width   <span class="hljs-comment">// 节点的宽度</span>
-      rect.height  <span class="hljs-comment">// 节点的高度</span>
+    wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rect</span>)</span>{
+      rect.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
+      rect.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
+      rect.left    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.right   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.top     <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.bottom  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0B;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.width   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
+      rect.height  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
     }).exec()
   },
   getAllRects: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-    wx.createSelectorQuery().selectAll(<span class="hljs-string">'.a-class'</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rects</span>)</span>{
+    wx.createSelectorQuery().selectAll(<span class="hljs-string">&apos;.a-class&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rects</span>)</span>{
       rects.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rect</span>)</span>{
-        rect.id      <span class="hljs-comment">// 节点的ID</span>
-        rect.dataset <span class="hljs-comment">// 节点的dataset</span>
-        rect.left    <span class="hljs-comment">// 节点的左边界坐标</span>
-        rect.right   <span class="hljs-comment">// 节点的右边界坐标</span>
-        rect.top     <span class="hljs-comment">// 节点的上边界坐标</span>
-        rect.bottom  <span class="hljs-comment">// 节点的下边界坐标</span>
-        rect.width   <span class="hljs-comment">// 节点的宽度</span>
-        rect.height  <span class="hljs-comment">// 节点的高度</span>
+        rect.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
+        rect.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
+        rect.left    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.right   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.top     <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.bottom  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0B;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.width   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
+        rect.height  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
       })
     }).exec()
   }
 })
 </code></pre>
 <h3 id="nodesrefscrolloffsetcallback">nodesRef.scrollOffset([callback])</h3>
-<p>添加节点的滚动位置查询请求，以像素为单位。节点必须是<code>scroll-view</code>或者viewport。返回值是nodesRef对应的selectorQuery。</p>
-<p>返回的节点信息中，每个节点的滚动位置用<code>scrollLeft</code>、<code>scrollTop</code>字段描述。如果提供了callback回调函数，在执行selectQuery的exec方法后，节点信息会在callback中返回。</p>
-<p><strong>示例代码：</strong></p>
+<p>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#xFF0C;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F;<code>scroll-view</code>&#x6216;&#x8005;viewport&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;nodesRef&#x5BF9;&#x5E94;&#x7684;selectorQuery&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x7528;<code>scrollLeft</code>&#x3001;<code>scrollTop</code>&#x5B57;&#x6BB5;&#x63CF;&#x8FF0;&#x3002;&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86;callback&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x6267;&#x884C;selectQuery&#x7684;exec&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4F1A;&#x5728;callback&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">Page({
   getScrollOffset: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     wx.createSelectorQuery().selectViewport().scrollOffset(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-      res.id      <span class="hljs-comment">// 节点的ID</span>
-      res.dataset <span class="hljs-comment">// 节点的dataset</span>
-      res.scrollLeft <span class="hljs-comment">// 节点的水平滚动位置</span>
-      res.scrollTop  <span class="hljs-comment">// 节点的竖直滚动位置</span>
+      res.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
+      res.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
+      res.scrollLeft <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
+      res.scrollTop  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
     }).exec()
   }
 })
 </code></pre>
 <h3 id="nodesreffieldsfields-callback">nodesRef.fields(fields, [callback])</h3>
-<p>获取节点的相关信息，需要获取的字段在<code>fields</code>中指定。返回值是nodesRef对应的selectorQuery。可指定获取的字段包括：</p>
+<p>&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#x5728;<code>fields</code>&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;nodesRef&#x5BF9;&#x5E94;&#x7684;selectorQuery&#x3002;&#x53EF;&#x6307;&#x5B9A;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#x5305;&#x62EC;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
-<th>字段名</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>id</td>
-<td>否</td>
-<td>是否返回节点<code>id</code></td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>id</code></td>
 </tr>
 <tr>
 <td>dataset</td>
-<td>否</td>
-<td>是否返回节点<code>dataset</code></td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>dataset</code></td>
 </tr>
 <tr>
 <td>rect</td>
-<td>否</td>
-<td>是否返回节点布局位置（<code>left</code> <code>right</code> <code>top</code> <code>bottom</code>）</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#xFF08;<code>left</code> <code>right</code> <code>top</code> <code>bottom</code>&#xFF09;</td>
 </tr>
 <tr>
 <td>size</td>
-<td>否</td>
-<td>是否返回节点尺寸（<code>width</code> <code>height</code>）</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5C3A;&#x5BF8;&#xFF08;<code>width</code> <code>height</code>&#xFF09;</td>
 </tr>
 <tr>
 <td>scrollOffset</td>
-<td>否</td>
-<td>是否返回节点的 <code>scrollLeft</code> <code>scrollTop</code> ，节点必须是<code>scroll-view</code>或者viewport</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x7684; <code>scrollLeft</code> <code>scrollTop</code> &#xFF0C;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F;<code>scroll-view</code>&#x6216;&#x8005;viewport</td>
 </tr>
 <tr>
 <td>properties</td>
 <td><code>[]</code></td>
-<td>指定属性名列表，返回节点对应属性名的当前属性值（只能获得组件文档中标注的常规属性值， <code>id</code> <code>class</code> <code>style</code> 和事件绑定的属性值不可获取）</td>
+<td>&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x53EA;&#x80FD;&#x83B7;&#x5F97;&#x7EC4;&#x4EF6;&#x6587;&#x6863;&#x4E2D;&#x6807;&#x6CE8;&#x7684;&#x5E38;&#x89C4;&#x5C5E;&#x6027;&#x503C;&#xFF0C; <code>id</code> <code>class</code> <code>style</code> &#x548C;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">Page({
   getFields: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-    wx.createSelectorQuery().select(<span class="hljs-string">'#the-id'</span>).fields({
+    wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).fields({
       dataset: <span class="hljs-literal">true</span>,
       size: <span class="hljs-literal">true</span>,
       scrollOffset: <span class="hljs-literal">true</span>,
-      properties: [<span class="hljs-string">'scrollX'</span>, <span class="hljs-string">'scrollY'</span>]
+      properties: [<span class="hljs-string">&apos;scrollX&apos;</span>, <span class="hljs-string">&apos;scrollY&apos;</span>]
     }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-      res.dataset    <span class="hljs-comment">// 节点的dataset</span>
-      res.width      <span class="hljs-comment">// 节点的宽度</span>
-      res.height     <span class="hljs-comment">// 节点的高度</span>
-      res.scrollLeft <span class="hljs-comment">// 节点的水平滚动位置</span>
-      res.scrollTop  <span class="hljs-comment">// 节点的竖直滚动位置</span>
-      res.scrollX    <span class="hljs-comment">// 节点 scroll-x 属性的当前值</span>
-      res.scrollY    <span class="hljs-comment">// 节点 scroll-x 属性的当前值</span>
+      res.dataset    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
+      res.width      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
+      res.height     <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
+      res.scrollLeft <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
+      res.scrollTop  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
+      res.scrollX    <span class="hljs-comment">// &#x8282;&#x70B9; scroll-x &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
+      res.scrollY    <span class="hljs-comment">// &#x8282;&#x70B9; scroll-x &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
     }).exec()
   }
 })
 </code></pre>
 <h3 id="selectorqueryexeccallback">selectorQuery.exec([callback])</h3>
-<p>执行所有的请求，请求结果按请求次序构成数组，在callback的第一个参数中返回。</p>
+<p>&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x6309;&#x8BF7;&#x6C42;&#x6B21;&#x5E8F;&#x6784;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x5728;callback&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
 
                                 
                                 </section>

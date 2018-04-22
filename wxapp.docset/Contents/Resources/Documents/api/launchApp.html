@@ -20,26 +20,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="launchappobject">launchApp(OBJECT)</h1>
-<h2 id="说明">说明</h2>
-<p>因为需要用户主动触发才能打开 APP，所以该功能不由 API 来调用，需要用 <code>open-type</code> 的值设置为 <code>launchApp</code> 的  <code><button></code> 组件的点击来触发。 </p>
-<p>当小程序从 APP 分享消息卡片的场景打开时（场景值 1036，APP 分享小程序文档 iOS <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317332&token=&lang=zh_CN" target="_blank">参见</a>，Android <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419317340&token=&lang=zh_CN" target="_blank">参见</a>），小程序会获得打开 APP 的能力，此时用户点击按钮可以打开分享该卡片的 APP。即小程序不能打开任意 APP，只能 <code>跳回</code> 分享该小程序卡片的 APP。  </p>
-<p>在一个小程序的生命周期内，只有在特定条件下，才具有打开 APP 的能力。
-<code>打开 APP 的能力</code> 可以理解为由小程序框架在内部管理的一个状态，为 true 则可以打开 APP，为 false 则不可以打开 APP。  </p>
-<p>在小程序的生命周期内，这个状态的初始值为 false，之后会随着小程序的每次打开（无论是启动还是切到前台）而改变：</p>
+<h2 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h2>
+<p>&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x89E6;&#x53D1;&#x624D;&#x80FD;&#x6253;&#x5F00; APP&#xFF0C;&#x6240;&#x4EE5;&#x8BE5;&#x529F;&#x80FD;&#x4E0D;&#x7531; API &#x6765;&#x8C03;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x7528; <code>open-type</code> &#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; <code>launchApp</code> &#x7684;  <code>&lt;button&gt;</code> &#x7EC4;&#x4EF6;&#x7684;&#x70B9;&#x51FB;&#x6765;&#x89E6;&#x53D1;&#x3002; </p>
+<p>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x4ECE; APP &#x5206;&#x4EAB;&#x6D88;&#x606F;&#x5361;&#x7247;&#x7684;&#x573A;&#x666F;&#x6253;&#x5F00;&#x65F6;&#xFF08;&#x573A;&#x666F;&#x503C; 1036&#xFF0C;APP &#x5206;&#x4EAB;&#x5C0F;&#x7A0B;&#x5E8F;&#x6587;&#x6863; iOS <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419317332&amp;token=&amp;lang=zh_CN" target="_blank">&#x53C2;&#x89C1;</a>&#xFF0C;Android <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419317340&amp;token=&amp;lang=zh_CN" target="_blank">&#x53C2;&#x89C1;</a>&#xFF09;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F1A;&#x83B7;&#x5F97;&#x6253;&#x5F00; APP &#x7684;&#x80FD;&#x529B;&#xFF0C;&#x6B64;&#x65F6;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x5206;&#x4EAB;&#x8BE5;&#x5361;&#x7247;&#x7684; APP&#x3002;&#x5373;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0D;&#x80FD;&#x6253;&#x5F00;&#x4EFB;&#x610F; APP&#xFF0C;&#x53EA;&#x80FD; <code>&#x8DF3;&#x56DE;</code> &#x5206;&#x4EAB;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x5361;&#x7247;&#x7684; APP&#x3002;  </p>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#xFF0C;&#x624D;&#x5177;&#x6709;&#x6253;&#x5F00; APP &#x7684;&#x80FD;&#x529B;&#x3002;
+<code>&#x6253;&#x5F00; APP &#x7684;&#x80FD;&#x529B;</code> &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x7531;&#x5C0F;&#x7A0B;&#x5E8F;&#x6846;&#x67B6;&#x5728;&#x5185;&#x90E8;&#x7BA1;&#x7406;&#x7684;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#xFF0C;&#x4E3A; true &#x5219;&#x53EF;&#x4EE5;&#x6253;&#x5F00; APP&#xFF0C;&#x4E3A; false &#x5219;&#x4E0D;&#x53EF;&#x4EE5;&#x6253;&#x5F00; APP&#x3002;  </p>
+<p>&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#xFF0C;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x7684;&#x521D;&#x59CB;&#x503C;&#x4E3A; false&#xFF0C;&#x4E4B;&#x540E;&#x4F1A;&#x968F;&#x7740;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6BCF;&#x6B21;&#x6253;&#x5F00;&#xFF08;&#x65E0;&#x8BBA;&#x662F;&#x542F;&#x52A8;&#x8FD8;&#x662F;&#x5207;&#x5230;&#x524D;&#x53F0;&#xFF09;&#x800C;&#x6539;&#x53D8;&#xFF1A;</p>
 <ul>
-<li>当小程序从 1036（App 分享消息卡片） 打开时，该状态置为 true。</li>
-<li>当小程序从 1089（微信聊天主界面下拉）或 1090（长按小程序右上角菜单唤出最近使用历史）的场景打开时，该状态不变，即保持上一次打开小程序时该状态的值。</li>
-<li>当小程序从非 1036/1089/1090 的场景打开，该状态置为 false。</li>
+<li>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x4ECE; 1036&#xFF08;App &#x5206;&#x4EAB;&#x6D88;&#x606F;&#x5361;&#x7247;&#xFF09; &#x6253;&#x5F00;&#x65F6;&#xFF0C;&#x8BE5;&#x72B6;&#x6001;&#x7F6E;&#x4E3A; true&#x3002;</li>
+<li>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x4ECE; 1089&#xFF08;&#x5FAE;&#x4FE1;&#x804A;&#x5929;&#x4E3B;&#x754C;&#x9762;&#x4E0B;&#x62C9;&#xFF09;&#x6216; 1090&#xFF08;&#x957F;&#x6309;&#x5C0F;&#x7A0B;&#x5E8F;&#x53F3;&#x4E0A;&#x89D2;&#x83DC;&#x5355;&#x5524;&#x51FA;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x5386;&#x53F2;&#xFF09;&#x7684;&#x573A;&#x666F;&#x6253;&#x5F00;&#x65F6;&#xFF0C;&#x8BE5;&#x72B6;&#x6001;&#x4E0D;&#x53D8;&#xFF0C;&#x5373;&#x4FDD;&#x6301;&#x4E0A;&#x4E00;&#x6B21;&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x65F6;&#x8BE5;&#x72B6;&#x6001;&#x7684;&#x503C;&#x3002;</li>
+<li>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x4ECE;&#x975E; 1036/1089/1090 &#x7684;&#x573A;&#x666F;&#x6253;&#x5F00;&#xFF0C;&#x8BE5;&#x72B6;&#x6001;&#x7F6E;&#x4E3A; false&#x3002;</li>
 </ul>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/launch-app.png?t=2018413" alt=""></p>
-<h2 id="使用方法">使用方法</h2>
-<h3 id="小程序端">小程序端</h3>
-<p>需要将 <code><button></code> 组件 <code>open-type</code> 的值设置为 <code>launchApp</code>。如果需要在打开 APP 时向 APP 传递参数，可以设置 <code>app-parameter</code> 为要传递的参数。通过 <code>binderror</code> 可以监听打开 APP 的错误事件。</p>
-<h3 id="app-端">app 端</h3>
-<p>Android 第三方 app 需要处理 <code>ShowMessageFromWX.req</code> 的微信回调，iOS 则需要将 appId 添加到第三方 app 工程所属的 plist 文件 URL types 字段。 
-<code>app-parameter</code> 的获取方法，请参考 <a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_Android.zip" target="_blank">Android SDKSample</a> 中 WXEntryActivity 中的 onReq 方法以及 <a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_iOS_1.4.2.1.zip" target="_blank">iOS SDKSample</a> 中 WXApiDelegate 中的 onReq 方法。 </p>
-<h2 id="例子">例子</h2>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">"launchApp"</span> <span class="hljs-attr">app-parameter</span>=<span class="hljs-string">"wechat"</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">"launchAppError"</span>></span>打开APP<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
+<h2 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h2>
+<h3 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;">&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;</h3>
+<p>&#x9700;&#x8981;&#x5C06; <code>&lt;button&gt;</code> &#x7EC4;&#x4EF6; <code>open-type</code> &#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; <code>launchApp</code>&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x6253;&#x5F00; APP &#x65F6;&#x5411; APP &#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; <code>app-parameter</code> &#x4E3A;&#x8981;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x3002;&#x901A;&#x8FC7; <code>binderror</code> &#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x6253;&#x5F00; APP &#x7684;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;&#x3002;</p>
+<h3 id="app-&#x7AEF;">app &#x7AEF;</h3>
+<p>Android &#x7B2C;&#x4E09;&#x65B9; app &#x9700;&#x8981;&#x5904;&#x7406; <code>ShowMessageFromWX.req</code> &#x7684;&#x5FAE;&#x4FE1;&#x56DE;&#x8C03;&#xFF0C;iOS &#x5219;&#x9700;&#x8981;&#x5C06; appId &#x6DFB;&#x52A0;&#x5230;&#x7B2C;&#x4E09;&#x65B9; app &#x5DE5;&#x7A0B;&#x6240;&#x5C5E;&#x7684; plist &#x6587;&#x4EF6; URL types &#x5B57;&#x6BB5;&#x3002; 
+<code>app-parameter</code> &#x7684;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; <a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_Android.zip" target="_blank">Android SDKSample</a> &#x4E2D; WXEntryActivity &#x4E2D;&#x7684; onReq &#x65B9;&#x6CD5;&#x4EE5;&#x53CA; <a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_iOS_1.4.2.1.zip" target="_blank">iOS SDKSample</a> &#x4E2D; WXApiDelegate &#x4E2D;&#x7684; onReq &#x65B9;&#x6CD5;&#x3002; </p>
+<h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;launchApp&quot;</span> <span class="hljs-attr">app-parameter</span>=<span class="hljs-string">&quot;wechat&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;launchAppError&quot;</span>&gt;</span>&#x6253;&#x5F00;APP<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-javascript">Page({ 
     launchAppError: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{ 
@@ -47,18 +47,18 @@
     } 
 })
 </code></pre>
-<h2 id="error-事件参数说明">error 事件参数说明</h2>
+<h2 id="error-&#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x8BF4;&#x660E;">error &#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h2>
 <table>
 <thead>
 <tr>
-<th>值</th>
-<th>说明</th>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>invalid scene</td>
-<td>调用场景不正确，即此时的小程序不具备打开 APP 的能力。</td>
+<td>&#x8C03;&#x7528;&#x573A;&#x666F;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x5373;&#x6B64;&#x65F6;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0D;&#x5177;&#x5907;&#x6253;&#x5F00; APP &#x7684;&#x80FD;&#x529B;&#x3002;</td>
 </tr>
 </tbody>
 </table>

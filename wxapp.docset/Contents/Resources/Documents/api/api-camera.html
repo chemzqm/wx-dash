@@ -21,145 +21,145 @@
                                 
                                 <h3 id="wxcreatecameracontextthis">wx.createCameraContext(this)</h3>
 <blockquote>
-<p>基础库 1.6.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>创建并返回 camera 上下文 <code>cameraContext</code> 对象，<code>cameraContext</code> 与页面的 <code>camera</code> 组件绑定，一个页面只能有一个camera，通过它可以操作对应的 <code><camera/></code> 组件。
-在自定义组件下，第一个参数传入组件实例this，以操作组件内 <code><camera/></code> 组件</p>
+<p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE; camera &#x4E0A;&#x4E0B;&#x6587; <code>cameraContext</code> &#x5BF9;&#x8C61;&#xFF0C;<code>cameraContext</code> &#x4E0E;&#x9875;&#x9762;&#x7684; <code>camera</code> &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;camera&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <code>&lt;camera/&gt;</code> &#x7EC4;&#x4EF6;&#x3002;
+&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;camera/&gt;</code> &#x7EC4;&#x4EF6;</p>
 <h4 id="cameracontext">cameraContext</h4>
-<p><strong>cameraContext 对象的方法列表：</strong></p>
+<p><strong>cameraContext &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>方法</th>
-<th>参数</th>
-<th>说明</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>takePhoto</td>
 <td>OBJECT</td>
-<td>拍照，可指定质量，成功则返回图片</td>
+<td>&#x62CD;&#x7167;&#xFF0C;&#x53EF;&#x6307;&#x5B9A;&#x8D28;&#x91CF;&#xFF0C;&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x56FE;&#x7247;</td>
 </tr>
 <tr>
 <td>startRecord</td>
 <td>OBJECT</td>
-<td>开始录像</td>
+<td>&#x5F00;&#x59CB;&#x5F55;&#x50CF;</td>
 </tr>
 <tr>
 <td>stopRecord</td>
 <td>OBJECT</td>
-<td>结束录像，成功则返回封面与视频</td>
+<td>&#x7ED3;&#x675F;&#x5F55;&#x50CF;&#xFF0C;&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x5C01;&#x9762;&#x4E0E;&#x89C6;&#x9891;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>takePhoto 的 OBJECT 参数列表：</strong></p>
+<p><strong>takePhoto &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>quality</td>
 <td>String</td>
-<td>否</td>
-<td>成像质量，值为high, normal, low，默认normal</td>
+<td>&#x5426;</td>
+<td>&#x6210;&#x50CF;&#x8D28;&#x91CF;&#xFF0C;&#x503C;&#x4E3A;high, normal, low&#xFF0C;&#x9ED8;&#x8BA4;normal</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数 ，res = { tempImagePath }</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570; &#xFF0C;res = { tempImagePath }</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>startRecord 的 OBJECT 参数列表：</strong></p>
+<p><strong>startRecord &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 <tr>
 <td>timeoutCallback</td>
 <td>Function</td>
-<td>否</td>
-<td>超过30s或页面onHide时会结束录像，res = { tempThumbPath, tempVideoPath }</td>
+<td>&#x5426;</td>
+<td>&#x8D85;&#x8FC7;30s&#x6216;&#x9875;&#x9762;onHide&#x65F6;&#x4F1A;&#x7ED3;&#x675F;&#x5F55;&#x50CF;&#xFF0C;res = { tempThumbPath, tempVideoPath }</td>
 </tr>
 </tbody>
 </table>
-<p><strong>stopRecord 的 OBJECT 参数列表：</strong></p>
+<p><strong>stopRecord &#x7684; OBJECT &#x53C2;&#x6570;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数 ，res = { tempThumbPath, tempVideoPath }</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570; &#xFF0C;res = { tempThumbPath, tempVideoPath }</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<p><a href="wechatide://minicode/VBZ3Jim26zYu" target="_blank">在开发者工具中预览效果</a></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/VBZ3Jim26zYu" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 
                                 
                                 </section>

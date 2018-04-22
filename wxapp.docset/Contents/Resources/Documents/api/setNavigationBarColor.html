@@ -21,120 +21,120 @@
                                 
                                 <h3 id="wxsetnavigationbarcolorobject">wx.setNavigationBarColor(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.4.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p><strong>OBJECT参数说明：</strong></p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数名</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>frontColor</td>
 <td>String</td>
-<td>是</td>
-<td>前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000</td>
+<td>&#x662F;</td>
+<td>&#x524D;&#x666F;&#x989C;&#x8272;&#x503C;&#xFF0C;&#x5305;&#x62EC;&#x6309;&#x94AE;&#x3001;&#x6807;&#x9898;&#x3001;&#x72B6;&#x6001;&#x680F;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301; #ffffff &#x548C; #000000</td>
 </tr>
 <tr>
 <td>backgroundColor</td>
 <td>String</td>
-<td>是</td>
-<td>背景颜色值，有效值为十六进制颜色</td>
+<td>&#x662F;</td>
+<td>&#x80CC;&#x666F;&#x989C;&#x8272;&#x503C;&#xFF0C;&#x6709;&#x6548;&#x503C;&#x4E3A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;</td>
 </tr>
 <tr>
 <td>animation</td>
 <td>Object</td>
-<td>否</td>
-<td>动画效果</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x6548;&#x679C;</td>
 </tr>
 <tr>
 <td>animation.duration</td>
 <td>Number</td>
-<td>否</td>
-<td>动画变化时间，默认0，单位：毫秒</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x53D8;&#x5316;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;0&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x6BEB;&#x79D2;</td>
 </tr>
 <tr>
 <td>animation.timingFunc</td>
 <td>String</td>
-<td>否</td>
-<td>动画变化方式，默认 linear</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x53D8;&#x5316;&#x65B9;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4; linear</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>animation.timingFunc 有效值：</strong></p>
+<p><strong>animation.timingFunc &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>值</th>
-<th>说明</th>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>linear</td>
-<td>动画从头到尾的速度是相同的。</td>
+<td>&#x52A8;&#x753B;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x7684;&#x901F;&#x5EA6;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</td>
 </tr>
 <tr>
 <td>easeIn</td>
-<td>动画以低速开始</td>
+<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;</td>
 </tr>
 <tr>
 <td>easeOut</td>
-<td>动画以低速结束。</td>
+<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x7ED3;&#x675F;&#x3002;</td>
 </tr>
 <tr>
 <td>easeInOut</td>
-<td>动画以低速开始和结束。</td>
+<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x3002;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数名</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>调用结果</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.setNavigationBarColor({
-    frontColor: <span class="hljs-string">'#ffffff'</span>,
-    backgroundColor: <span class="hljs-string">'#ff0000'</span>,
+    frontColor: <span class="hljs-string">&apos;#ffffff&apos;</span>,
+    backgroundColor: <span class="hljs-string">&apos;#ff0000&apos;</span>,
     animation: {
         duration: <span class="hljs-number">400</span>,
-        timingFunc: <span class="hljs-string">'easeIn'</span>
+        timingFunc: <span class="hljs-string">&apos;easeIn&apos;</span>
     }
 })
 </code></pre>

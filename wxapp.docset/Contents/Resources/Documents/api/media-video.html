@@ -20,108 +20,108 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxchoosevideoobject">wx.chooseVideo(OBJECT)</h3>
-<p>拍摄视频或从手机相册中选视频，返回视频的临时文件路径。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x62CD;&#x6444;&#x89C6;&#x9891;&#x6216;&#x4ECE;&#x624B;&#x673A;&#x76F8;&#x518C;&#x4E2D;&#x9009;&#x89C6;&#x9891;&#xFF0C;&#x8FD4;&#x56DE;&#x89C6;&#x9891;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
-<th>最低版本</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>sourceType</td>
 <td>StringArray</td>
-<td>否</td>
-<td>album 从相册选视频，camera 使用相机拍摄，默认为：['album', 'camera']</td>
+<td>&#x5426;</td>
+<td>album &#x4ECE;&#x76F8;&#x518C;&#x9009;&#x89C6;&#x9891;&#xFF0C;camera &#x4F7F;&#x7528;&#x76F8;&#x673A;&#x62CD;&#x6444;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#xFF1A;[&apos;album&apos;, &apos;camera&apos;]</td>
 <td></td>
 </tr>
 <tr>
 <td>compressed</td>
 <td>Boolead</td>
-<td>否</td>
-<td>是否压缩所选的视频源文件，默认值为true，需要压缩</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.6.0 开始支持，低版本需做兼容处理。">1.6.0</a></td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x538B;&#x7F29;&#x6240;&#x9009;&#x7684;&#x89C6;&#x9891;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true&#xFF0C;&#x9700;&#x8981;&#x538B;&#x7F29;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.0</a></td>
 </tr>
 <tr>
 <td>maxDuration</td>
 <td>Number</td>
-<td>否</td>
-<td>拍摄视频最长拍摄时间，单位秒。最长支持 60 秒</td>
+<td>&#x5426;</td>
+<td>&#x62CD;&#x6444;&#x89C6;&#x9891;&#x6700;&#x957F;&#x62CD;&#x6444;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;&#x3002;&#x6700;&#x957F;&#x652F;&#x6301; 60 &#x79D2;</td>
 <td></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功，返回视频文件的临时文件路径，详见返回参数说明</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x89C6;&#x9891;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x8BE6;&#x89C1;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>tempFilePath</td>
-<td>选定视频的临时文件路径</td>
+<td>&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
 </tr>
 <tr>
 <td>duration</td>
-<td>选定视频的时间长度</td>
+<td>&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x65F6;&#x95F4;&#x957F;&#x5EA6;</td>
 </tr>
 <tr>
 <td>size</td>
-<td>选定视频的数据量大小</td>
+<td>&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x6570;&#x636E;&#x91CF;&#x5927;&#x5C0F;</td>
 </tr>
 <tr>
 <td>height</td>
-<td>返回选定视频的长</td>
+<td>&#x8FD4;&#x56DE;&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x957F;</td>
 </tr>
 <tr>
 <td>width</td>
-<td>返回选定视频的宽</td>
+<td>&#x8FD4;&#x56DE;&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x5BBD;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 <a href="file.html">wx.saveFile</a>，在小程序下次启动时才能访问得到。</strong></p>
-<p><strong>示例代码：</strong></p>
-<p><a href="wechatide://minicode/Qu4htbmu6RYo" target="_blank">代码片段</a></p>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>></span>
-    <span class="hljs-tag"><<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{src}}"</span>></span><span class="hljs-tag"></<span class="hljs-name">video</span>></span>
-    <span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"bindButtonTap"</span>></span>获取视频<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
-<span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<p><strong>&#x6CE8;&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x672C;&#x6B21;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x9700;&#x6301;&#x4E45;&#x4FDD;&#x5B58;&#xFF0C;&#x9700;&#x5728;&#x4E3B;&#x52A8;&#x8C03;&#x7528; <a href="file.html">wx.saveFile</a>&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5F97;&#x5230;&#x3002;</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/Qu4htbmu6RYo" target="_blank">&#x4EE3;&#x7801;&#x7247;&#x6BB5;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindButtonTap&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x89C6;&#x9891;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-javascript">Page({
     bindButtonTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>
         wx.chooseVideo({
-            sourceType: [<span class="hljs-string">'album'</span>,<span class="hljs-string">'camera'</span>],
+            sourceType: [<span class="hljs-string">&apos;album&apos;</span>,<span class="hljs-string">&apos;camera&apos;</span>],
             maxDuration: <span class="hljs-number">60</span>,
-      camera: <span class="hljs-string">'back'</span>,
+      camera: <span class="hljs-string">&apos;back&apos;</span>,
             success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
                 that.setData({
                     src: res.tempFilePath
@@ -133,74 +133,74 @@
 </code></pre>
 <h3 id="wxsavevideotophotosalbumobject">wx.saveVideoToPhotosAlbum(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.2.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>保存视频到系统相册。需要<a href="authorize-index.html">用户授权</a> scope.writePhotosAlbum</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x4FDD;&#x5B58;&#x89C6;&#x9891;&#x5230;&#x7CFB;&#x7EDF;&#x76F8;&#x518C;&#x3002;&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.writePhotosAlbum</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数名</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>filePath</td>
 <td>String</td>
-<td>是</td>
-<td>视频文件路径，可以是临时文件路径也可以是永久文件路径</td>
+<td>&#x662F;</td>
+<td>&#x89C6;&#x9891;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6C38;&#x4E45;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数名</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>调用结果</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.saveVideoToPhotosAlbum({
-  filePath: <span class="hljs-string">'wxfile://xxx'</span>
+  filePath: <span class="hljs-string">&apos;wxfile://xxx&apos;</span>
   success(res) {
     <span class="hljs-built_in">console</span>.log(res.errMsg)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: camera 参数在部分 Android 手机下由于系统 ROM 不支持无法生效</li>
+<li><code>tip</code>: camera &#x53C2;&#x6570;&#x5728;&#x90E8;&#x5206; Android &#x624B;&#x673A;&#x4E0B;&#x7531;&#x4E8E;&#x7CFB;&#x7EDF; ROM &#x4E0D;&#x652F;&#x6301;&#x65E0;&#x6CD5;&#x751F;&#x6548;</li>
 </ol>
 
                                 

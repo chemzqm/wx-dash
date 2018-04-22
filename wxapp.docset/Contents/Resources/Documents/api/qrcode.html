@@ -19,29 +19,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="获取二维码">获取二维码</h2>
-<p>通过后台接口可以获取小程序任意页面的二维码，扫描该二维码可以直接进入小程序对应的页面。目前微信支持两种二维码，小程序码（左），小程序二维码（右），如下所示：</p>
+                                <h2 id="&#x83B7;&#x53D6;&#x4E8C;&#x7EF4;&#x7801;">&#x83B7;&#x53D6;&#x4E8C;&#x7EF4;&#x7801;</h2>
+<p>&#x901A;&#x8FC7;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EFB;&#x610F;&#x9875;&#x9762;&#x7684;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x626B;&#x63CF;&#x8BE5;&#x4E8C;&#x7EF4;&#x7801;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#x5BF9;&#x5E94;&#x7684;&#x9875;&#x9762;&#x3002;&#x76EE;&#x524D;&#x5FAE;&#x4FE1;&#x652F;&#x6301;&#x4E24;&#x79CD;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF08;&#x5DE6;&#xFF09;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E8C;&#x7EF4;&#x7801;&#xFF08;&#x53F3;&#xFF09;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/qrcode/qrcode.png?t=2018413" alt=""></p>
-<p>可以使用开发工具 1.02.1803130 及以后版本通过二维码编译功能调试所获得的二维码</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5F00;&#x53D1;&#x5DE5;&#x5177; 1.02.1803130 &#x53CA;&#x4EE5;&#x540E;&#x7248;&#x672C;&#x901A;&#x8FC7;&#x4E8C;&#x7EF4;&#x7801;&#x7F16;&#x8BD1;&#x529F;&#x80FD;&#x8C03;&#x8BD5;&#x6240;&#x83B7;&#x5F97;&#x7684;&#x4E8C;&#x7EF4;&#x7801;</p>
 <h2 id=""><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/devtools2/qrcodecompile.png?t=2018413" alt=""></h2>
-<p>为满足不同需求和场景，这里提供了三个接口，开发者可挑选适合自己的接口。
-    A接口，生成小程序码，可接受path参数较长，生成个数受限。
-    B接口，生成小程序码，可接受页面参数较短，生成个数不受限。
-    C接口，生成二维码，可接受path参数较长，生成个数受限。</p>
-<h3 id="获取小程序码">获取小程序码</h3>
-<p>我们推荐生成并使用小程序码，它具有更好的辨识度。目前有两个接口可以生成小程序码，开发者可以根据自己的需要选择合适的接口。</p>
-<p>接口A: 适用于需要的码数量较少的业务场景
-接口地址：</p>
+<p>&#x4E3A;&#x6EE1;&#x8DB3;&#x4E0D;&#x540C;&#x9700;&#x6C42;&#x548C;&#x573A;&#x666F;&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x4E86;&#x4E09;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x6311;&#x9009;&#x9002;&#x5408;&#x81EA;&#x5DF1;&#x7684;&#x63A5;&#x53E3;&#x3002;
+    A&#x63A5;&#x53E3;&#xFF0C;&#x751F;&#x6210;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x53EF;&#x63A5;&#x53D7;path&#x53C2;&#x6570;&#x8F83;&#x957F;&#xFF0C;&#x751F;&#x6210;&#x4E2A;&#x6570;&#x53D7;&#x9650;&#x3002;
+    B&#x63A5;&#x53E3;&#xFF0C;&#x751F;&#x6210;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x53EF;&#x63A5;&#x53D7;&#x9875;&#x9762;&#x53C2;&#x6570;&#x8F83;&#x77ED;&#xFF0C;&#x751F;&#x6210;&#x4E2A;&#x6570;&#x4E0D;&#x53D7;&#x9650;&#x3002;
+    C&#x63A5;&#x53E3;&#xFF0C;&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x53EF;&#x63A5;&#x53D7;path&#x53C2;&#x6570;&#x8F83;&#x957F;&#xFF0C;&#x751F;&#x6210;&#x4E2A;&#x6570;&#x53D7;&#x9650;&#x3002;</p>
+<h3 id="&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;">&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;</h3>
+<p>&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x751F;&#x6210;&#x5E76;&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x66F4;&#x597D;&#x7684;&#x8FA8;&#x8BC6;&#x5EA6;&#x3002;&#x76EE;&#x524D;&#x6709;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x8981;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x63A5;&#x53E3;A: &#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x7684;&#x7801;&#x6570;&#x91CF;&#x8F83;&#x5C11;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;
+&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;</p>
 <pre><code>https://api.weixin.qq.com/wxa/getwxacode?access_token=ACCESS_TOKEN
-</code></pre><p>获取 access_token 详见<a href="https://mp.weixin.qq.com/wiki?id=mp1421140183" target="_blank">文档</a></p>
-<p><strong> POST 参数说明 </strong></p>
+</code></pre><p>&#x83B7;&#x53D6; access_token &#x8BE6;&#x89C1;<a href="https://mp.weixin.qq.com/wiki?id=mp1421140183" target="_blank">&#x6587;&#x6863;</a></p>
+<p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E; </strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -49,41 +49,41 @@
 <td>path</td>
 <td>String</td>
 <td></td>
-<td>不能为空，最大长度 128 字节</td>
+<td>&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#xFF0C;&#x6700;&#x5927;&#x957F;&#x5EA6; 128 &#x5B57;&#x8282;</td>
 </tr>
 <tr>
 <td>width</td>
 <td>Int</td>
 <td>430</td>
-<td>二维码的宽度</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;&#x7684;&#x5BBD;&#x5EA6;</td>
 </tr>
 <tr>
 <td>auto_color</td>
 <td>Bool</td>
 <td>false</td>
-<td>自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调</td>
+<td>&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x7EBF;&#x6761;&#x989C;&#x8272;&#xFF0C;&#x5982;&#x679C;&#x989C;&#x8272;&#x4F9D;&#x7136;&#x662F;&#x9ED1;&#x8272;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x4E0D;&#x5EFA;&#x8BAE;&#x914D;&#x7F6E;&#x4E3B;&#x8272;&#x8C03;</td>
 </tr>
 <tr>
 <td>line_color</td>
 <td>Object</td>
-<td>{"r":"0","g":"0","b":"0"}</td>
-<td>auth_color 为 false 时生效，使用 rgb 设置颜色 例如 {"r":"xxx","g":"xxx","b":"xxx"},十进制表示</td>
+<td>{&quot;r&quot;:&quot;0&quot;,&quot;g&quot;:&quot;0&quot;,&quot;b&quot;:&quot;0&quot;}</td>
+<td>auth_color &#x4E3A; false &#x65F6;&#x751F;&#x6548;&#xFF0C;&#x4F7F;&#x7528; rgb &#x8BBE;&#x7F6E;&#x989C;&#x8272; &#x4F8B;&#x5982; {&quot;r&quot;:&quot;xxx&quot;,&quot;g&quot;:&quot;xxx&quot;,&quot;b&quot;:&quot;xxx&quot;},&#x5341;&#x8FDB;&#x5236;&#x8868;&#x793A;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>注意：通过该接口生成的小程序码，永久有效，数量限制见文末说明，请谨慎使用。用户扫描该码进入小程序后，将直接进入 path 对应的页面。</strong></p>
-<p>接口B：适用于需要的码数量极多的业务场景</p>
-<p>接口地址：</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x901A;&#x8FC7;&#x8BE5;&#x63A5;&#x53E3;&#x751F;&#x6210;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;&#x6570;&#x91CF;&#x9650;&#x5236;&#x89C1;&#x6587;&#x672B;&#x8BF4;&#x660E;&#xFF0C;&#x8BF7;&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x3002;&#x7528;&#x6237;&#x626B;&#x63CF;&#x8BE5;&#x7801;&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x5C06;&#x76F4;&#x63A5;&#x8FDB;&#x5165; path &#x5BF9;&#x5E94;&#x7684;&#x9875;&#x9762;&#x3002;</strong></p>
+<p>&#x63A5;&#x53E3;B&#xFF1A;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x7684;&#x7801;&#x6570;&#x91CF;&#x6781;&#x591A;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;</p>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;</p>
 <pre><code>https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=ACCESS_TOKEN
-</code></pre><p>获取 access_token 详见<a href="https://mp.weixin.qq.com/wiki?id=mp1421140183" target="_blank">文档</a></p>
-<p><strong> POST 参数说明 </strong></p>
+</code></pre><p>&#x83B7;&#x53D6; access_token &#x8BE6;&#x89C1;<a href="https://mp.weixin.qq.com/wiki?id=mp1421140183" target="_blank">&#x6587;&#x6863;</a></p>
+<p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E; </strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -91,56 +91,56 @@
 <td>scene</td>
 <td>String</td>
 <td></td>
-<td>最大32个可见字符，只支持数字，大小写英文以及部分特殊字符：!#$&'()*+,/:;=?@-._~，其它字符请自行编码为合法字符（因不支持%，中文无法使用 urlencode 处理，请使用其他编码方式）</td>
+<td>&#x6700;&#x5927;32&#x4E2A;&#x53EF;&#x89C1;&#x5B57;&#x7B26;&#xFF0C;&#x53EA;&#x652F;&#x6301;&#x6570;&#x5B57;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x4EE5;&#x53CA;&#x90E8;&#x5206;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF1A;!#$&amp;&apos;()*+,/:;=?@-._~&#xFF0C;&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x8BF7;&#x81EA;&#x884C;&#x7F16;&#x7801;&#x4E3A;&#x5408;&#x6CD5;&#x5B57;&#x7B26;&#xFF08;&#x56E0;&#x4E0D;&#x652F;&#x6301;%&#xFF0C;&#x4E2D;&#x6587;&#x65E0;&#x6CD5;&#x4F7F;&#x7528; urlencode &#x5904;&#x7406;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#xFF09;</td>
 </tr>
 <tr>
 <td>page</td>
 <td>String</td>
 <td></td>
-<td>必须是已经发布的小程序存在的页面（否则报错），例如 "pages/index/index" ,根路径前不要填加'/',不能携带参数（参数请放在scene字段里），如果不填写这个字段，默认跳主页面</td>
+<td>&#x5FC5;&#x987B;&#x662F;&#x5DF2;&#x7ECF;&#x53D1;&#x5E03;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x5B58;&#x5728;&#x7684;&#x9875;&#x9762;&#xFF08;&#x5426;&#x5219;&#x62A5;&#x9519;&#xFF09;&#xFF0C;&#x4F8B;&#x5982; &quot;pages/index/index&quot; ,&#x6839;&#x8DEF;&#x5F84;&#x524D;&#x4E0D;&#x8981;&#x586B;&#x52A0;&apos;/&apos;,&#x4E0D;&#x80FD;&#x643A;&#x5E26;&#x53C2;&#x6570;&#xFF08;&#x53C2;&#x6570;&#x8BF7;&#x653E;&#x5728;scene&#x5B57;&#x6BB5;&#x91CC;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x586B;&#x5199;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x9ED8;&#x8BA4;&#x8DF3;&#x4E3B;&#x9875;&#x9762;</td>
 </tr>
 <tr>
 <td>width</td>
 <td>Int</td>
 <td>430</td>
-<td>二维码的宽度</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;&#x7684;&#x5BBD;&#x5EA6;</td>
 </tr>
 <tr>
 <td>auto_color</td>
 <td>Bool</td>
 <td>false</td>
-<td>自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调</td>
+<td>&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x7EBF;&#x6761;&#x989C;&#x8272;&#xFF0C;&#x5982;&#x679C;&#x989C;&#x8272;&#x4F9D;&#x7136;&#x662F;&#x9ED1;&#x8272;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x4E0D;&#x5EFA;&#x8BAE;&#x914D;&#x7F6E;&#x4E3B;&#x8272;&#x8C03;</td>
 </tr>
 <tr>
 <td>line_color</td>
 <td>Object</td>
-<td>{"r":"0","g":"0","b":"0"}</td>
-<td>auto_color 为 false 时生效，使用 rgb 设置颜色 例如 {"r":"xxx","g":"xxx","b":"xxx"} 十进制表示</td>
+<td>{&quot;r&quot;:&quot;0&quot;,&quot;g&quot;:&quot;0&quot;,&quot;b&quot;:&quot;0&quot;}</td>
+<td>auto_color &#x4E3A; false &#x65F6;&#x751F;&#x6548;&#xFF0C;&#x4F7F;&#x7528; rgb &#x8BBE;&#x7F6E;&#x989C;&#x8272; &#x4F8B;&#x5982; {&quot;r&quot;:&quot;xxx&quot;,&quot;g&quot;:&quot;xxx&quot;,&quot;b&quot;:&quot;xxx&quot;} &#x5341;&#x8FDB;&#x5236;&#x8868;&#x793A;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>注意：通过该接口生成的小程序码，永久有效，数量暂无限制。用户扫描该码进入小程序后，开发者需在对应页面获取的码中 scene 字段的值，再做处理逻辑。使用如下代码可以获取到二维码中的 scene 字段的值。调试阶段可以使用开发工具的条件编译自定义参数 scene=xxxx 进行模拟，开发工具模拟时的 scene 的参数值需要进行 urlencode</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// 这是首页的 js</span>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x901A;&#x8FC7;&#x8BE5;&#x63A5;&#x53E3;&#x751F;&#x6210;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;&#x6570;&#x91CF;&#x6682;&#x65E0;&#x9650;&#x5236;&#x3002;&#x7528;&#x6237;&#x626B;&#x63CF;&#x8BE5;&#x7801;&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x5728;&#x5BF9;&#x5E94;&#x9875;&#x9762;&#x83B7;&#x53D6;&#x7684;&#x7801;&#x4E2D; scene &#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x518D;&#x505A;&#x5904;&#x7406;&#x903B;&#x8F91;&#x3002;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x4E8C;&#x7EF4;&#x7801;&#x4E2D;&#x7684; scene &#x5B57;&#x6BB5;&#x7684;&#x503C;&#x3002;&#x8C03;&#x8BD5;&#x9636;&#x6BB5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x7684;&#x6761;&#x4EF6;&#x7F16;&#x8BD1;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570; scene=xxxx &#x8FDB;&#x884C;&#x6A21;&#x62DF;&#xFF0C;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x6A21;&#x62DF;&#x65F6;&#x7684; scene &#x7684;&#x53C2;&#x6570;&#x503C;&#x9700;&#x8981;&#x8FDB;&#x884C; urlencode</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x8FD9;&#x662F;&#x9996;&#x9875;&#x7684; js</span>
 Page({
   onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
-    <span class="hljs-comment">// options 中的 scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene</span>
+    <span class="hljs-comment">// options &#x4E2D;&#x7684; scene &#x9700;&#x8981;&#x4F7F;&#x7528; decodeURIComponent &#x624D;&#x80FD;&#x83B7;&#x53D6;&#x5230;&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#x65F6;&#x4F20;&#x5165;&#x7684; scene</span>
     <span class="hljs-keyword">var</span> scene = <span class="hljs-built_in">decodeURIComponent</span>(options.scene)
   }
 })
 </code></pre>
-<h3 id="获取小程序二维码">获取小程序二维码</h3>
-<p>接口C：适用于需要的码数量较少的业务场景</p>
-<p>接口地址：</p>
+<h3 id="&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E8C;&#x7EF4;&#x7801;">&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E8C;&#x7EF4;&#x7801;</h3>
+<p>&#x63A5;&#x53E3;C&#xFF1A;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x7684;&#x7801;&#x6570;&#x91CF;&#x8F83;&#x5C11;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;</p>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;</p>
 <pre><code>https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=ACCESS_TOKEN
-</code></pre><p>获取 access_token 详见<a href="https://mp.weixin.qq.com/wiki?id=mp1421140183" target="_blank">文档</a></p>
-<p><strong> POST 参数说明 </strong></p>
+</code></pre><p>&#x83B7;&#x53D6; access_token &#x8BE6;&#x89C1;<a href="https://mp.weixin.qq.com/wiki?id=mp1421140183" target="_blank">&#x6587;&#x6863;</a></p>
+<p><strong> POST &#x53C2;&#x6570;&#x8BF4;&#x660E; </strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -148,33 +148,33 @@ Page({
 <td>path</td>
 <td>String</td>
 <td></td>
-<td>不能为空，最大长度 128 字节</td>
+<td>&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#xFF0C;&#x6700;&#x5927;&#x957F;&#x5EA6; 128 &#x5B57;&#x8282;</td>
 </tr>
 <tr>
 <td>width</td>
 <td>Int</td>
 <td>430</td>
-<td>二维码的宽度</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;&#x7684;&#x5BBD;&#x5EA6;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>注意：通过该接口生成的小程序二维码，永久有效，数量限制见文末说明，请谨慎使用。用户扫描该码进入小程序后，将直接进入 path 对应的页面。</strong></p>
-<p><strong>示例：</strong></p>
-<pre><code class="lang-json">{<span class="hljs-string">"path"</span>: <span class="hljs-string">"pages/index?query=1"</span>, <span class="hljs-string">"width"</span>: <span class="hljs-number">430</span>}
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x901A;&#x8FC7;&#x8BE5;&#x63A5;&#x53E3;&#x751F;&#x6210;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;&#x6570;&#x91CF;&#x9650;&#x5236;&#x89C1;&#x6587;&#x672B;&#x8BF4;&#x660E;&#xFF0C;&#x8BF7;&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x3002;&#x7528;&#x6237;&#x626B;&#x63CF;&#x8BE5;&#x7801;&#x8FDB;&#x5165;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x5C06;&#x76F4;&#x63A5;&#x8FDB;&#x5165; path &#x5BF9;&#x5E94;&#x7684;&#x9875;&#x9762;&#x3002;</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;pages/index?query=1&quot;</span>, <span class="hljs-string">&quot;width&quot;</span>: <span class="hljs-number">430</span>}
 </code></pre>
-<p><strong>注：pages/index 需要在 <code>app.json</code> 的 <a href="../framework/config.html#pages"><code>pages</code></a> 中定义 </strong></p>
-<h3 id="bug--tip">Bug & Tip</h3>
+<p><strong>&#x6CE8;&#xFF1A;pages/index &#x9700;&#x8981;&#x5728; <code>app.json</code> &#x7684; <a href="../framework/config.html#pages"><code>pages</code></a> &#x4E2D;&#x5B9A;&#x4E49; </strong></p>
+<h3 id="bug--tip">Bug &amp; Tip</h3>
 <ol>
-<li><code>tip</code>：通过该接口，仅能生成已发布的小程序的二维码。</li>
-<li><code>tip</code>：可以在开发者工具预览时生成开发版的带参二维码。</li>
-<li><code>tip</code>：接口A加上接口C，总共生成的码数量限制为100,000，请谨慎调用。</li>
-<li><code>tip</code>: POST 参数需要转成 json 字符串，不支持 form 表单提交。</li>
-<li><code>tip</code>: auto_color line_color 参数仅对小程序码生效。</li>
+<li><code>tip</code>&#xFF1A;&#x901A;&#x8FC7;&#x8BE5;&#x63A5;&#x53E3;&#xFF0C;&#x4EC5;&#x80FD;&#x751F;&#x6210;&#x5DF2;&#x53D1;&#x5E03;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E8C;&#x7EF4;&#x7801;&#x3002;</li>
+<li><code>tip</code>&#xFF1A;&#x53EF;&#x4EE5;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x9884;&#x89C8;&#x65F6;&#x751F;&#x6210;&#x5F00;&#x53D1;&#x7248;&#x7684;&#x5E26;&#x53C2;&#x4E8C;&#x7EF4;&#x7801;&#x3002;</li>
+<li><code>tip</code>&#xFF1A;&#x63A5;&#x53E3;A&#x52A0;&#x4E0A;&#x63A5;&#x53E3;C&#xFF0C;&#x603B;&#x5171;&#x751F;&#x6210;&#x7684;&#x7801;&#x6570;&#x91CF;&#x9650;&#x5236;&#x4E3A;100,000&#xFF0C;&#x8BF7;&#x8C28;&#x614E;&#x8C03;&#x7528;&#x3002;</li>
+<li><code>tip</code>: POST &#x53C2;&#x6570;&#x9700;&#x8981;&#x8F6C;&#x6210; json &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E0D;&#x652F;&#x6301; form &#x8868;&#x5355;&#x63D0;&#x4EA4;&#x3002;</li>
+<li><code>tip</code>: auto_color line_color &#x53C2;&#x6570;&#x4EC5;&#x5BF9;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#x751F;&#x6548;&#x3002;</li>
 </ol>
-<h3 id="错误码">错误码</h3>
-<p>45009：B接口调用分钟频率受限(目前5000次/分钟，会调整)，如需大量小程序码，建议预生成。
-45029：A接口和C接口生成码个数总和到达最大个数限制。
-41030：B接口所传page页面不存在，或者小程序没有发布，请注意B接口没有path参数，传path参数虽然可以生成小程序码，但是只能跳主页面。</p>
+<h3 id="&#x9519;&#x8BEF;&#x7801;">&#x9519;&#x8BEF;&#x7801;</h3>
+<p>45009&#xFF1A;B&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5206;&#x949F;&#x9891;&#x7387;&#x53D7;&#x9650;(&#x76EE;&#x524D;5000&#x6B21;/&#x5206;&#x949F;&#xFF0C;&#x4F1A;&#x8C03;&#x6574;)&#xFF0C;&#x5982;&#x9700;&#x5927;&#x91CF;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x5EFA;&#x8BAE;&#x9884;&#x751F;&#x6210;&#x3002;
+45029&#xFF1A;A&#x63A5;&#x53E3;&#x548C;C&#x63A5;&#x53E3;&#x751F;&#x6210;&#x7801;&#x4E2A;&#x6570;&#x603B;&#x548C;&#x5230;&#x8FBE;&#x6700;&#x5927;&#x4E2A;&#x6570;&#x9650;&#x5236;&#x3002;
+41030&#xFF1A;B&#x63A5;&#x53E3;&#x6240;&#x4F20;page&#x9875;&#x9762;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6216;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#x6CA1;&#x6709;&#x53D1;&#x5E03;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;B&#x63A5;&#x53E3;&#x6CA1;&#x6709;path&#x53C2;&#x6570;&#xFF0C;&#x4F20;path&#x53C2;&#x6570;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x8DF3;&#x4E3B;&#x9875;&#x9762;&#x3002;</p>
 
                                 
                                 </section>

@@ -18,14 +18,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h4 id="switch">switch</h4>
-<p>开关选择器。</p>
+<p>&#x5F00;&#x5173;&#x9009;&#x62E9;&#x5668;&#x3002;</p>
 <table>
 <thead>
 <tr>
-<th>属性名</th>
-<th>类型</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -33,48 +33,48 @@
 <td id="switch-checked">checked</td>
 <td>Boolean</td>
 <td>false</td>
-<td>是否选中</td>
+<td>&#x662F;&#x5426;&#x9009;&#x4E2D;</td>
 </tr>
 <tr>
 <td id="switch-type">type</td>
 <td>String</td>
 <td>switch</td>
-<td>样式，有效值：switch, checkbox</td>
+<td>&#x6837;&#x5F0F;&#xFF0C;&#x6709;&#x6548;&#x503C;&#xFF1A;switch, checkbox</td>
 </tr>
 <tr>
 <td id="switch-bindchange">bindchange</td>
 <td>EventHandle</td>
 <td></td>
-<td>checked 改变时触发 change 事件，event.detail={ value:checked}</td>
+<td>checked &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail={ value:checked}</td>
 </tr>
 <tr>
 <td id="switch-color">color</td>
 <td>Color</td>
 <td></td>
-<td>switch 的颜色，同 css 的 color</td>
+<td>switch &#x7684;&#x989C;&#x8272;&#xFF0C;&#x540C; css &#x7684; color</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例：</strong></p>
-<p><a href="wechatide://minicode/6db9lcmu6VYt" target="_blank">在开发者工具中预览效果</a></p>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"body-view"</span>></span>
-    <span class="hljs-tag"><<span class="hljs-name">switch</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">"switch1Change"</span>/></span>
-    <span class="hljs-tag"><<span class="hljs-name">switch</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">"switch2Change"</span>/></span>
-<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/6db9lcmu6VYt" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-view&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;switch1Change&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;switch2Change&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-js">Page({
   switch1Change: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>)</span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'switch1 发生 change 事件，携带值为'</span>, e.detail.value)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;switch1 &#x53D1;&#x751F; change &#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
   },
   switch2Change: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>)</span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'switch2 发生 change 事件，携带值为'</span>, e.detail.value)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;switch2 &#x53D1;&#x751F; change &#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
   }
 })
 </code></pre>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/switch.png?t=2018413" alt="switch"></p>
 <h5 id="tips">Tips</h5>
 <ol>
-<li><code>tip</code>: switch类型切换时在iOS自带振动反馈，可在系统设置 -> 声音与触感 -> 系统触感反馈中关闭</li>
+<li><code>tip</code>: switch&#x7C7B;&#x578B;&#x5207;&#x6362;&#x65F6;&#x5728;iOS&#x81EA;&#x5E26;&#x632F;&#x52A8;&#x53CD;&#x9988;&#xFF0C;&#x53EF;&#x5728;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E; -&gt; &#x58F0;&#x97F3;&#x4E0E;&#x89E6;&#x611F; -&gt; &#x7CFB;&#x7EDF;&#x89E6;&#x611F;&#x53CD;&#x9988;&#x4E2D;&#x5173;&#x95ED;</li>
 </ol>
 
                                 

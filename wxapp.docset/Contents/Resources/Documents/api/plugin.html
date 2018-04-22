@@ -19,403 +19,403 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="插件管理">插件管理</h1>
-<p>小程序开发者可通过以下接口管理插件，包括：添加、删除、查询已添加的插件。插件开发者也可调用接口管理插件使用申请。</p>
-<h2 id="1申请使用插件">1.申请使用插件</h2>
-<p>此接口用于小程序向插件开发者发起使用插件的申请。</p>
-<p><strong>请求方式: POST（请使用https协议）</strong> </p>
+                                <h1 id="&#x63D2;&#x4EF6;&#x7BA1;&#x7406;">&#x63D2;&#x4EF6;&#x7BA1;&#x7406;</h1>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x63A5;&#x53E3;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;&#x6DFB;&#x52A0;&#x3001;&#x5220;&#x9664;&#x3001;&#x67E5;&#x8BE2;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;&#x3002;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x4E5F;&#x53EF;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x7533;&#x8BF7;&#x3002;</p>
+<h2 id="1&#x7533;&#x8BF7;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;">1.&#x7533;&#x8BF7;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;</h2>
+<p>&#x6B64;&#x63A5;&#x53E3;&#x7528;&#x4E8E;&#x5C0F;&#x7A0B;&#x5E8F;&#x5411;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x53D1;&#x8D77;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684;&#x7533;&#x8BF7;&#x3002;</p>
+<p><strong>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: POST&#xFF08;&#x8BF7;&#x4F7F;&#x7528;https&#x534F;&#x8BAE;&#xFF09;</strong> </p>
 <p><a href="https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN" target="_blank">https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN</a></p>
-<p>POST数据示例</p>
+<p>POST&#x6570;&#x636E;&#x793A;&#x4F8B;</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"action"</span>:<span class="hljs-string">"apply"</span>,
-  <span class="hljs-string">"plugin_appid"</span>:<span class="hljs-string">"aaaa"</span>,
+  <span class="hljs-string">&quot;action&quot;</span>:<span class="hljs-string">&quot;apply&quot;</span>,
+  <span class="hljs-string">&quot;plugin_appid&quot;</span>:<span class="hljs-string">&quot;aaaa&quot;</span>,
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>action</td>
-<td>填写apply</td>
+<td>&#x586B;&#x5199;apply</td>
 </tr>
 <tr>
 <td>plugin_appid</td>
-<td>插件appid</td>
+<td>&#x63D2;&#x4EF6;appid</td>
 </tr>
 </tbody>
 </table>
-<p><strong>返回说明</strong></p>
+<p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"errcode"</span>:<span class="hljs-number">0</span>,
-  <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"ok"</span>,
+  <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>,
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errcode</td>
-<td>错误码</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
 </tr>
 <tr>
 <td>errmsg</td>
-<td>错误信息</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>错误码说明</strong></p>
+<p><strong>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>错误码</th>
-<th>说明</th>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td>成功</td>
+<td>&#x6210;&#x529F;</td>
 </tr>
 <tr>
 <td>-1</td>
-<td>系统错误</td>
+<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
 </tr>
 <tr>
 <td>89236</td>
-<td>该插件不能申请</td>
+<td>&#x8BE5;&#x63D2;&#x4EF6;&#x4E0D;&#x80FD;&#x7533;&#x8BF7;</td>
 </tr>
 <tr>
 <td>89237</td>
-<td>已经添加该插件</td>
+<td>&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x8BE5;&#x63D2;&#x4EF6;</td>
 </tr>
 <tr>
 <td>89238</td>
-<td>申请或使用的插件已经达到上限</td>
+<td>&#x7533;&#x8BF7;&#x6216;&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x8FBE;&#x5230;&#x4E0A;&#x9650;</td>
 </tr>
 <tr>
 <td>89239</td>
-<td>该插件不存在</td>
+<td>&#x8BE5;&#x63D2;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</td>
 </tr>
 </tbody>
 </table>
-<h2 id="2查询已添加的插件">2.查询已添加的插件</h2>
-<p><strong>请求方式: POST（请使用https协议）</strong></p>
+<h2 id="2&#x67E5;&#x8BE2;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;">2.&#x67E5;&#x8BE2;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;</h2>
+<p><strong>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: POST&#xFF08;&#x8BF7;&#x4F7F;&#x7528;https&#x534F;&#x8BAE;&#xFF09;</strong></p>
 <p><a href="https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN" target="_blank">https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN</a></p>
-<p>POST数据示例：</p>
+<p>POST&#x6570;&#x636E;&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"action"</span>:<span class="hljs-string">"list"</span>,
+  <span class="hljs-string">&quot;action&quot;</span>:<span class="hljs-string">&quot;list&quot;</span>,
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>action</td>
-<td>填写list</td>
+<td>&#x586B;&#x5199;list</td>
 </tr>
 </tbody>
 </table>
-<p><strong>返回说明（正常时返回的json示例）</strong></p>
+<p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;&#xFF08;&#x6B63;&#x5E38;&#x65F6;&#x8FD4;&#x56DE;&#x7684;json&#x793A;&#x4F8B;&#xFF09;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"errcode"</span>:<span class="hljs-number">0</span>,
-  <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"ok"</span>,
-  <span class="hljs-string">"plugin_list"</span>:[
-  <span class="hljs-string">"appid"</span>:<span class="hljs-string">"aaaa"</span>,
-  <span class="hljs-string">"status"</span>:<span class="hljs-number">1</span>,
-  <span class="hljs-string">"nickname"</span>:<span class="hljs-string">"插件昵称"</span>,
-  <span class="hljs-string">"headimgurl"</span>:<span class="hljs-string">"http://plugin.qq.com"</span>,
+  <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>,
+  <span class="hljs-string">&quot;plugin_list&quot;</span>:[
+  <span class="hljs-string">&quot;appid&quot;</span>:<span class="hljs-string">&quot;aaaa&quot;</span>,
+  <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;nickname&quot;</span>:<span class="hljs-string">&quot;&#x63D2;&#x4EF6;&#x6635;&#x79F0;&quot;</span>,
+  <span class="hljs-string">&quot;headimgurl&quot;</span>:<span class="hljs-string">&quot;http://plugin.qq.com&quot;</span>,
   ],
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errcode</td>
-<td>错误码</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
 </tr>
 <tr>
 <td>errmsg</td>
-<td>错误信息</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
 </tr>
 <tr>
 <td>plugin_list</td>
-<td>申请或使用中的插件列表</td>
+<td>&#x7533;&#x8BF7;&#x6216;&#x4F7F;&#x7528;&#x4E2D;&#x7684;&#x63D2;&#x4EF6;&#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>appid</td>
-<td>插件appid</td>
+<td>&#x63D2;&#x4EF6;appid</td>
 </tr>
 <tr>
 <td>status</td>
-<td>插件状态（1：申请中，2：申请通过，3：已拒绝，4：已超时）</td>
+<td>&#x63D2;&#x4EF6;&#x72B6;&#x6001;&#xFF08;1&#xFF1A;&#x7533;&#x8BF7;&#x4E2D;&#xFF0C;2&#xFF1A;&#x7533;&#x8BF7;&#x901A;&#x8FC7;&#xFF0C;3&#xFF1A;&#x5DF2;&#x62D2;&#x7EDD;&#xFF0C;4&#xFF1A;&#x5DF2;&#x8D85;&#x65F6;&#xFF09;</td>
 </tr>
 <tr>
 <td>nickname</td>
-<td>插件昵称</td>
+<td>&#x63D2;&#x4EF6;&#x6635;&#x79F0;</td>
 </tr>
 <tr>
 <td>headimgurl</td>
-<td>插件头像</td>
+<td>&#x63D2;&#x4EF6;&#x5934;&#x50CF;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>错误码说明</strong></p>
+<p><strong>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>错误码</th>
-<th>说明</th>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td>成功</td>
+<td>&#x6210;&#x529F;</td>
 </tr>
 <tr>
 <td>-1</td>
-<td>系统错误</td>
+<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
 </tr>
 <tr>
 <td>89243</td>
-<td>“待确认”的申请不可删除</td>
+<td>&#x201C;&#x5F85;&#x786E;&#x8BA4;&#x201D;&#x7684;&#x7533;&#x8BF7;&#x4E0D;&#x53EF;&#x5220;&#x9664;</td>
 </tr>
 <tr>
 <td>89044</td>
-<td>不存在该插件appid</td>
+<td>&#x4E0D;&#x5B58;&#x5728;&#x8BE5;&#x63D2;&#x4EF6;appid</td>
 </tr>
 </tbody>
 </table>
-<h2 id="3删除已添加的插件">3.删除已添加的插件</h2>
-<p><strong>请求方式: POST（请使用https协议）</strong></p>
+<h2 id="3&#x5220;&#x9664;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;">3.&#x5220;&#x9664;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;</h2>
+<p><strong>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: POST&#xFF08;&#x8BF7;&#x4F7F;&#x7528;https&#x534F;&#x8BAE;&#xFF09;</strong></p>
 <p><a href="https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN" target="_blank">https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN</a></p>
-<p><strong>POST数据示例</strong></p>
+<p><strong>POST&#x6570;&#x636E;&#x793A;&#x4F8B;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"action"</span>:<span class="hljs-string">"unbind"</span>
-  <span class="hljs-string">"plugin_appid"</span>:<span class="hljs-string">"aaaa"</span>
+  <span class="hljs-string">&quot;action&quot;</span>:<span class="hljs-string">&quot;unbind&quot;</span>
+  <span class="hljs-string">&quot;plugin_appid&quot;</span>:<span class="hljs-string">&quot;aaaa&quot;</span>
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>action</td>
-<td>填写list</td>
+<td>&#x586B;&#x5199;list</td>
 </tr>
 <tr>
 <td>plugin_appid</td>
-<td>插件appid</td>
+<td>&#x63D2;&#x4EF6;appid</td>
 </tr>
 </tbody>
 </table>
-<p><strong>返回说明（正常时返回的json示例）</strong></p>
+<p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;&#xFF08;&#x6B63;&#x5E38;&#x65F6;&#x8FD4;&#x56DE;&#x7684;json&#x793A;&#x4F8B;&#xFF09;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"errcode"</span>:<span class="hljs-number">0</span>,
-  <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"ok"</span>,
+  <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>,
 }
 </code></pre>
-<p><strong>错误码说明</strong></p>
+<p><strong>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>错误码</th>
-<th>说明</th>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td>成功</td>
+<td>&#x6210;&#x529F;</td>
 </tr>
 <tr>
 <td>-1</td>
-<td>系统错误</td>
+<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
 </tr>
 </tbody>
 </table>
-<h2 id="4获取当前所有插件使用方（供插件开发者调用）">4.获取当前所有插件使用方（供插件开发者调用）</h2>
-<p><strong>请求方式: POST（请使用https协议）</strong></p>
+<h2 id="4&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6240;&#x6709;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x65B9;&#xFF08;&#x4F9B;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#xFF09;">4.&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6240;&#x6709;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x65B9;&#xFF08;&#x4F9B;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#xFF09;</h2>
+<p><strong>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: POST&#xFF08;&#x8BF7;&#x4F7F;&#x7528;https&#x534F;&#x8BAE;&#xFF09;</strong></p>
 <p><a href="https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN" target="_blank">https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN</a></p>
-<p><strong>POST数据示例</strong></p>
+<p><strong>POST&#x6570;&#x636E;&#x793A;&#x4F8B;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"action"</span>:<span class="hljs-string">"dev_apply_list"</span>
-  <span class="hljs-string">"page"</span>:<span class="hljs-number">1</span>
-  <span class="hljs-string">"num"</span>:<span class="hljs-number">10</span>
+  <span class="hljs-string">&quot;action&quot;</span>:<span class="hljs-string">&quot;dev_apply_list&quot;</span>
+  <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>
+  <span class="hljs-string">&quot;num&quot;</span>:<span class="hljs-number">10</span>
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>action</td>
-<td>填写dev_apply_list</td>
+<td>&#x586B;&#x5199;dev_apply_list</td>
 </tr>
 <tr>
 <td>page, num</td>
-<td>page  page和num用于分页，表示每页num条记录，拉取第page页的数据。</td>
+<td>page  page&#x548C;num&#x7528;&#x4E8E;&#x5206;&#x9875;&#xFF0C;&#x8868;&#x793A;&#x6BCF;&#x9875;num&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x62C9;&#x53D6;&#x7B2C;page&#x9875;&#x7684;&#x6570;&#x636E;&#x3002;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>返回说明（正常时返回的json示例）</strong></p>
+<p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;&#xFF08;&#x6B63;&#x5E38;&#x65F6;&#x8FD4;&#x56DE;&#x7684;json&#x793A;&#x4F8B;&#xFF09;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"errcode"</span>:<span class="hljs-number">0</span>,
-  <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"ok"</span>,
-  <span class="hljs-string">"apply_list"</span>:[
-  <span class="hljs-string">"appid"</span>:<span class="hljs-string">"aaaa"</span>,
-  <span class="hljs-string">"status"</span>:<span class="hljs-number">1</span>,
-  <span class="hljs-string">"nickname"</span>:<span class="hljs-string">"小程序昵称"</span>,
-  <span class="hljs-string">"headimgurl"</span>:<span class="hljs-string">"http://weixin.qq.com"</span>,
+  <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>,
+  <span class="hljs-string">&quot;apply_list&quot;</span>:[
+  <span class="hljs-string">&quot;appid&quot;</span>:<span class="hljs-string">&quot;aaaa&quot;</span>,
+  <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;nickname&quot;</span>:<span class="hljs-string">&quot;&#x5C0F;&#x7A0B;&#x5E8F;&#x6635;&#x79F0;&quot;</span>,
+  <span class="hljs-string">&quot;headimgurl&quot;</span>:<span class="hljs-string">&quot;http://weixin.qq.com&quot;</span>,
   ],
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>apply_list</td>
-<td>申请或使用中的插件列表</td>
+<td>&#x7533;&#x8BF7;&#x6216;&#x4F7F;&#x7528;&#x4E2D;&#x7684;&#x63D2;&#x4EF6;&#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>appid</td>
-<td>使用者的appid</td>
+<td>&#x4F7F;&#x7528;&#x8005;&#x7684;appid</td>
 </tr>
 <tr>
 <td>status</td>
-<td>插件状态（1：申请中，2：申请通过，3：拒绝；4.已超时）</td>
+<td>&#x63D2;&#x4EF6;&#x72B6;&#x6001;&#xFF08;1&#xFF1A;&#x7533;&#x8BF7;&#x4E2D;&#xFF0C;2&#xFF1A;&#x7533;&#x8BF7;&#x901A;&#x8FC7;&#xFF0C;3&#xFF1A;&#x62D2;&#x7EDD;&#xFF1B;4.&#x5DF2;&#x8D85;&#x65F6;&#xFF09;</td>
 </tr>
 <tr>
 <td>nickname</td>
-<td>使用者的昵称</td>
+<td>&#x4F7F;&#x7528;&#x8005;&#x7684;&#x6635;&#x79F0;</td>
 </tr>
 <tr>
 <td>headimgurl</td>
-<td>使用者的昵称</td>
+<td>&#x4F7F;&#x7528;&#x8005;&#x7684;&#x6635;&#x79F0;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>错误码说明</strong></p>
+<p><strong>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>错误码</th>
-<th>说明</th>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td>成功</td>
+<td>&#x6210;&#x529F;</td>
 </tr>
 <tr>
 <td>-1</td>
-<td>系统错误</td>
+<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
 </tr>
 </tbody>
 </table>
-<h2 id="5修改插件使用申请的状态（供插件开发者调用）">5.修改插件使用申请的状态（供插件开发者调用）</h2>
-<p><strong>请求方式: POST（请使用https协议）</strong></p>
+<h2 id="5&#x4FEE;&#x6539;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x7533;&#x8BF7;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x4F9B;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#xFF09;">5.&#x4FEE;&#x6539;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x7533;&#x8BF7;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x4F9B;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#xFF09;</h2>
+<p><strong>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: POST&#xFF08;&#x8BF7;&#x4F7F;&#x7528;https&#x534F;&#x8BAE;&#xFF09;</strong></p>
 <p><a href="https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN" target="_blank">https://api.weixin.qq.com/wxa/devplugin?access_token=TOKEN</a></p>
-<p><strong>POST数据示例</strong></p>
+<p><strong>POST&#x6570;&#x636E;&#x793A;&#x4F8B;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"action"</span>:<span class="hljs-string">"dev_agree"</span>  （或dev_refuse、dev_delete）
+  <span class="hljs-string">&quot;action&quot;</span>:<span class="hljs-string">&quot;dev_agree&quot;</span>  &#xFF08;&#x6216;dev_refuse&#x3001;dev_delete&#xFF09;
 }
 </code></pre>
-<p><strong>参数说明</strong></p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>action</td>
-<td>dev_agree：同意申请；dev_refuse：拒绝申请；dev_delete：删除已拒绝的申请者</td>
+<td>dev_agree&#xFF1A;&#x540C;&#x610F;&#x7533;&#x8BF7;&#xFF1B;dev_refuse&#xFF1A;&#x62D2;&#x7EDD;&#x7533;&#x8BF7;&#xFF1B;dev_delete&#xFF1A;&#x5220;&#x9664;&#x5DF2;&#x62D2;&#x7EDD;&#x7684;&#x7533;&#x8BF7;&#x8005;</td>
 </tr>
 <tr>
 <td>appid</td>
-<td>使用者的appid</td>
+<td>&#x4F7F;&#x7528;&#x8005;&#x7684;appid</td>
 </tr>
 </tbody>
 </table>
-<p><strong>返回说明（正常时返回的json示例）</strong></p>
+<p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;&#xFF08;&#x6B63;&#x5E38;&#x65F6;&#x8FD4;&#x56DE;&#x7684;json&#x793A;&#x4F8B;&#xFF09;</strong></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"errcode"</span>:<span class="hljs-number">0</span>,
-  <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"ok"</span>,
+  <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>,
 }
 </code></pre>
-<p><strong>错误码说明</strong></p>
+<p><strong>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>错误码</th>
-<th>说明</th>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td>成功</td>
+<td>&#x6210;&#x529F;</td>
 </tr>
 <tr>
 <td>-1</td>
-<td>系统错误</td>
+<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
 </tr>
 <tr>
 <td>89240</td>
-<td>无法进行此操作，只有“待确认”的申请可操作通过/拒绝</td>
+<td>&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x6709;&#x201C;&#x5F85;&#x786E;&#x8BA4;&#x201D;&#x7684;&#x7533;&#x8BF7;&#x53EF;&#x64CD;&#x4F5C;&#x901A;&#x8FC7;/&#x62D2;&#x7EDD;</td>
 </tr>
 <tr>
 <td>89241</td>
-<td>无法进行此操作，只有“已拒绝/已超时”的申请可操作删除</td>
+<td>&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x6709;&#x201C;&#x5DF2;&#x62D2;&#x7EDD;/&#x5DF2;&#x8D85;&#x65F6;&#x201D;&#x7684;&#x7533;&#x8BF7;&#x53EF;&#x64CD;&#x4F5C;&#x5220;&#x9664;</td>
 </tr>
 <tr>
 <td>89242</td>
-<td>该appid不在申请列表内</td>
+<td>&#x8BE5;appid&#x4E0D;&#x5728;&#x7533;&#x8BF7;&#x5217;&#x8868;&#x5185;</td>
 </tr>
 </tbody>
 </table>

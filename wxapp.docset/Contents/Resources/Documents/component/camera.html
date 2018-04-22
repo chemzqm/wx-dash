@@ -19,17 +19,17 @@
                                 
                                 <h4 id="camera">camera</h4>
 <blockquote>
-<p>基础库 1.6.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>系统相机。</p>
-<p>需要<a href="../api/authorize-index.html">用户授权</a> scope.camera</p>
+<p>&#x7CFB;&#x7EDF;&#x76F8;&#x673A;&#x3002;</p>
+<p>&#x9700;&#x8981;<a href="../api/authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.camera</p>
 <table>
 <thead>
 <tr>
-<th>属性名</th>
-<th>类型</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -37,50 +37,50 @@
 <td id="camera-device-position">device-position</td>
 <td>String</td>
 <td>back</td>
-<td>前置或后置，值为front, back</td>
+<td>&#x524D;&#x7F6E;&#x6216;&#x540E;&#x7F6E;&#xFF0C;&#x503C;&#x4E3A;front, back</td>
 </tr>
 <tr>
 <td id="camera-flash">flash</td>
 <td>String</td>
 <td>auto</td>
-<td>闪光灯，值为auto, on, off</td>
+<td>&#x95EA;&#x5149;&#x706F;&#xFF0C;&#x503C;&#x4E3A;auto, on, off</td>
 </tr>
 <tr>
 <td id="camera-bindstop">bindstop</td>
 <td>EventHandle</td>
 <td></td>
-<td>摄像头在非正常终止时触发，如退出后台等情况</td>
+<td>&#x6444;&#x50CF;&#x5934;&#x5728;&#x975E;&#x6B63;&#x5E38;&#x7EC8;&#x6B62;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5982;&#x9000;&#x51FA;&#x540E;&#x53F0;&#x7B49;&#x60C5;&#x51B5;</td>
 </tr>
 <tr>
 <td id="camera-binderror">binderror</td>
 <td>EventHandle</td>
 <td></td>
-<td>用户不允许使用摄像头时触发</td>
+<td>&#x7528;&#x6237;&#x4E0D;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x6444;&#x50CF;&#x5934;&#x65F6;&#x89E6;&#x53D1;</td>
 </tr>
 </tbody>
 </table>
-<p>相关api：<a href="../api/api-camera.html">wx.createCameraContext</a></p>
-<h5 id="bug--tip">Bug & Tip</h5>
+<p>&#x76F8;&#x5173;api&#xFF1A;<a href="../api/api-camera.html">wx.createCameraContext</a></p>
+<h5 id="bug--tip">Bug &amp; Tip</h5>
 <ol>
-<li><code>tip</code>: <code>camera</code> 组件是由客户端创建的原生组件，它的层级是最高的，不能通过 z-index 控制层级。可使用 <code>cover-view</code> <code>cover-image</code>覆盖在上面。</li>
-<li><code>tip</code>: 同一页面只能插入一个 <code>camera</code> 组件。</li>
-<li><code>tip</code>: 请勿在 <code>scroll-view</code>、<code>swiper</code>、<code>picker-view</code>、<code>movable-view</code> 中使用 <code>camera</code> 组件。</li>
+<li><code>tip</code>: <code>camera</code> &#x7EC4;&#x4EF6;&#x662F;&#x7531;&#x5BA2;&#x6237;&#x7AEF;&#x521B;&#x5EFA;&#x7684;&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x7684;&#x5C42;&#x7EA7;&#x662F;&#x6700;&#x9AD8;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x901A;&#x8FC7; z-index &#x63A7;&#x5236;&#x5C42;&#x7EA7;&#x3002;&#x53EF;&#x4F7F;&#x7528; <code>cover-view</code> <code>cover-image</code>&#x8986;&#x76D6;&#x5728;&#x4E0A;&#x9762;&#x3002;</li>
+<li><code>tip</code>: &#x540C;&#x4E00;&#x9875;&#x9762;&#x53EA;&#x80FD;&#x63D2;&#x5165;&#x4E00;&#x4E2A; <code>camera</code> &#x7EC4;&#x4EF6;&#x3002;</li>
+<li><code>tip</code>: &#x8BF7;&#x52FF;&#x5728; <code>scroll-view</code>&#x3001;<code>swiper</code>&#x3001;<code>picker-view</code>&#x3001;<code>movable-view</code> &#x4E2D;&#x4F7F;&#x7528; <code>camera</code> &#x7EC4;&#x4EF6;&#x3002;</li>
 </ol>
-<p><strong>示例：</strong></p>
-<p><a href="wechatide://minicode/VBZ3Jim26zYu" target="_blank">在开发者工具中预览效果</a></p>
-<pre><code class="lang-html"><span class="hljs-comment"><!-- camera.wxml --></span>
-<span class="hljs-tag"><<span class="hljs-name">camera</span> <span class="hljs-attr">device-position</span>=<span class="hljs-string">"back"</span> <span class="hljs-attr">flash</span>=<span class="hljs-string">"off"</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">"error"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%; height: 300px;"</span>></span><span class="hljs-tag"><!--<span class="hljs-name"-->camera</span>>
-<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"takePhoto"</span>></span>拍照<span class="hljs-tag"><!--<span class="hljs-name"-->button</span>>
-<span class="hljs-tag"><<span class="hljs-name">view</span>></span>预览<span class="hljs-tag"><!--<span class="hljs-name"-->view</span>>
-<span class="hljs-tag"><<span class="hljs-name">image</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">"widthFix"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{src}}"</span>></span><span class="hljs-tag"><!--<span class="hljs-name"-->image</span>>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/VBZ3Jim26zYu" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- camera.wxml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">camera</span> <span class="hljs-attr">device-position</span>=<span class="hljs-string">&quot;back&quot;</span> <span class="hljs-attr">flash</span>=<span class="hljs-string">&quot;off&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;error&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">camera</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;takePhoto&quot;</span>&gt;</span>&#x62CD;&#x7167;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x9884;&#x89C8;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;widthFix&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-javascript"><span class="hljs-comment">// camera.js</span>
 Page({
     takePhoto() {
         <span class="hljs-keyword">const</span> ctx = wx.createCameraContext()
         ctx.takePhoto({
-            quality: <span class="hljs-string">'high'</span>,
-            success: (res) => {
+            quality: <span class="hljs-string">&apos;high&apos;</span>,
+            success: (res) =&gt; {
                 <span class="hljs-keyword">this</span>.setData({
                     src: res.tempImagePath
                 })

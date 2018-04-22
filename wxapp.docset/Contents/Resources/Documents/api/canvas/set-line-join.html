@@ -20,33 +20,33 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextsetlinejoin">canvasContext.setLineJoin</h1>
-<h3 id="定义">定义</h3>
-<p>设置线条的交点样式。</p>
-<h3 id="语法">语法</h3>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x4EA4;&#x70B9;&#x6837;&#x5F0F;&#x3002;</p>
+<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
 <pre><code class="lang-javascript">canvasContext.setLineJoin(lineJoin)
-canvasContext.lineJoin = lineJoin <span class="hljs-comment">// 基础库 1.9.90 起支持</span>
+canvasContext.lineJoin = lineJoin <span class="hljs-comment">// &#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x652F;&#x6301;</span>
 </code></pre>
-<h3 id="参数">参数</h3>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>范围</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8303;&#x56F4;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>lineJoin</td>
 <td>String</td>
-<td>'bevel'、'round'、'miter'</td>
-<td>线条的结束交点样式</td>
+<td>&apos;bevel&apos;&#x3001;&apos;round&apos;&#x3001;&apos;miter&apos;</td>
+<td>&#x7EBF;&#x6761;&#x7684;&#x7ED3;&#x675F;&#x4EA4;&#x70B9;&#x6837;&#x5F0F;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="例子">例子</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 ctx.beginPath()
 ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
 ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">50</span>)
@@ -54,7 +54,7 @@ ctx.lineTo(<span class="hljs-number">10</span>, <span class="hljs-number">90</sp
 ctx.stroke()
 
 ctx.beginPath()
-ctx.setLineJoin(<span class="hljs-string">'bevel'</span>)
+ctx.setLineJoin(<span class="hljs-string">&apos;bevel&apos;</span>)
 ctx.setLineWidth(<span class="hljs-number">10</span>)
 ctx.moveTo(<span class="hljs-number">50</span>, <span class="hljs-number">10</span>)
 ctx.lineTo(<span class="hljs-number">140</span>, <span class="hljs-number">50</span>)
@@ -62,7 +62,7 @@ ctx.lineTo(<span class="hljs-number">50</span>, <span class="hljs-number">90</sp
 ctx.stroke()
 
 ctx.beginPath()
-ctx.setLineJoin(<span class="hljs-string">'round'</span>)
+ctx.setLineJoin(<span class="hljs-string">&apos;round&apos;</span>)
 ctx.setLineWidth(<span class="hljs-number">10</span>)
 ctx.moveTo(<span class="hljs-number">90</span>, <span class="hljs-number">10</span>)
 ctx.lineTo(<span class="hljs-number">180</span>, <span class="hljs-number">50</span>)
@@ -70,7 +70,7 @@ ctx.lineTo(<span class="hljs-number">90</span>, <span class="hljs-number">90</sp
 ctx.stroke()
 
 ctx.beginPath()
-ctx.setLineJoin(<span class="hljs-string">'miter'</span>)
+ctx.setLineJoin(<span class="hljs-string">&apos;miter&apos;</span>)
 ctx.setLineWidth(<span class="hljs-number">10</span>)
 ctx.moveTo(<span class="hljs-number">130</span>, <span class="hljs-number">10</span>)
 ctx.lineTo(<span class="hljs-number">220</span>, <span class="hljs-number">50</span>)

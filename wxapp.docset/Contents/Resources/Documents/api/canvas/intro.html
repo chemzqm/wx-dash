@@ -19,35 +19,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="在canvas上画图">在Canvas上画图</h1>
-<p>所有在 <code><canvas/></code> 中的画图必须用 JavaScript 完成：</p>
-<p>WXML：（我们在接下来的例子中如无特殊声明都会用这个 WXML 为模板，不再重复）</p>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">canvas</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">"myCanvas"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border: 1px solid;"</span>/></span>
+                                <h1 id="&#x5728;canvas&#x4E0A;&#x753B;&#x56FE;">&#x5728;Canvas&#x4E0A;&#x753B;&#x56FE;</h1>
+<p>&#x6240;&#x6709;&#x5728; <code>&lt;canvas/&gt;</code> &#x4E2D;&#x7684;&#x753B;&#x56FE;&#x5FC5;&#x987B;&#x7528; JavaScript &#x5B8C;&#x6210;&#xFF1A;</p>
+<p>WXML&#xFF1A;&#xFF08;&#x6211;&#x4EEC;&#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x5982;&#x65E0;&#x7279;&#x6B8A;&#x58F0;&#x660E;&#x90FD;&#x4F1A;&#x7528;&#x8FD9;&#x4E2A; WXML &#x4E3A;&#x6A21;&#x677F;&#xFF0C;&#x4E0D;&#x518D;&#x91CD;&#x590D;&#xFF09;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;myCanvas&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border: 1px solid;&quot;</span>/&gt;</span>
 </code></pre>
-<p>JS：（我们在接下来的例子中会将 JS 放在 onLoad 中）</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
-ctx.setFillStyle(<span class="hljs-string">'red'</span>)
+<p>JS&#xFF1A;&#xFF08;&#x6211;&#x4EEC;&#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x4F1A;&#x5C06; JS &#x653E;&#x5728; onLoad &#x4E2D;&#xFF09;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
 ctx.draw()
 </code></pre>
-<h3 id="第一步：创建一个-canvas-绘图上下文">第一步：创建一个 Canvas 绘图上下文</h3>
-<p>首先，我们需要创建一个 Canvas 绘图上下文 CanvasContext。</p>
-<p>CanvasContext 是小程序内建的一个对象，有一些绘图的方法：</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
+<h3 id="&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-canvas-&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;">&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Canvas &#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;</h3>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Canvas &#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587; CanvasContext&#x3002;</p>
+<p>CanvasContext &#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x5EFA;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x7ED8;&#x56FE;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 </code></pre>
-<h3 id="第二步：使用-canvas-绘图上下文进行绘图描述">第二步：使用 Canvas 绘图上下文进行绘图描述</h3>
-<p>接着，我们来描述要在 Canvas 中绘制什么内容。</p>
-<p>设置绘图上下文的填充色为红色：</p>
-<pre><code class="lang-js">ctx.setFillStyle(<span class="hljs-string">'red'</span>)
+<h3 id="&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x4F7F;&#x7528;-canvas-&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x8FDB;&#x884C;&#x7ED8;&#x56FE;&#x63CF;&#x8FF0;">&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x4F7F;&#x7528; Canvas &#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x8FDB;&#x884C;&#x7ED8;&#x56FE;&#x63CF;&#x8FF0;</h3>
+<p>&#x63A5;&#x7740;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x63CF;&#x8FF0;&#x8981;&#x5728; Canvas &#x4E2D;&#x7ED8;&#x5236;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x8BBE;&#x7F6E;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x586B;&#x5145;&#x8272;&#x4E3A;&#x7EA2;&#x8272;&#xFF1A;</p>
+<pre><code class="lang-js">ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
 </code></pre>
-<p>用 <code>fillRect(x, y, width, height)</code> 方法画一个矩形，填充为刚刚设置的红色：</p>
+<p>&#x7528; <code>fillRect(x, y, width, height)</code> &#x65B9;&#x6CD5;&#x753B;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#xFF0C;&#x586B;&#x5145;&#x4E3A;&#x521A;&#x521A;&#x8BBE;&#x7F6E;&#x7684;&#x7EA2;&#x8272;&#xFF1A;</p>
 <pre><code class="lang-js">ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
 </code></pre>
-<h3 id="第三步：画图">第三步：画图</h3>
-<p>告诉 <code><canvas/></code> 组件你要将刚刚的描述绘制上去：</p>
+<h3 id="&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x753B;&#x56FE;">&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x753B;&#x56FE;</h3>
+<p>&#x544A;&#x8BC9; <code>&lt;canvas/&gt;</code> &#x7EC4;&#x4EF6;&#x4F60;&#x8981;&#x5C06;&#x521A;&#x521A;&#x7684;&#x63CF;&#x8FF0;&#x7ED8;&#x5236;&#x4E0A;&#x53BB;&#xFF1A;</p>
 <pre><code class="lang-js">ctx.draw()
 </code></pre>
-<h3 id="结果：">结果：</h3>
+<h3 id="&#x7ED3;&#x679C;&#xFF1A;">&#x7ED3;&#x679C;&#xFF1A;</h3>
 <p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/canvas/fill-rect.png?t=2018413" alt=""></p>
 
                                 

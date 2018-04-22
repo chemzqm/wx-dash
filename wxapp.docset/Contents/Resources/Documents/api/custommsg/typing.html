@@ -19,77 +19,77 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="客服输入状态">客服输入状态</h3>
-<p>开发者可通过调用“客服输入状态接口”，返回客服当前输入状态给用户。</p>
+                                <h3 id="&#x5BA2;&#x670D;&#x8F93;&#x5165;&#x72B6;&#x6001;">&#x5BA2;&#x670D;&#x8F93;&#x5165;&#x72B6;&#x6001;</h3>
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x201C;&#x5BA2;&#x670D;&#x8F93;&#x5165;&#x72B6;&#x6001;&#x63A5;&#x53E3;&#x201D;&#xFF0C;&#x8FD4;&#x56DE;&#x5BA2;&#x670D;&#x5F53;&#x524D;&#x8F93;&#x5165;&#x72B6;&#x6001;&#x7ED9;&#x7528;&#x6237;&#x3002;</p>
 <ol>
-<li>此接口需要客服消息接口权限。</li>
-<li>如果不满足发送客服消息的触发条件，则无法下发输入状态。</li>
-<li>下发输入状态，需要客服之前30秒内跟用户有过消息交互。</li>
-<li>在输入状态中（持续15s），不可重复下发输入态。</li>
-<li>在输入状态中，如果向用户下发消息，会同时取消输入状态。</li>
+<li>&#x6B64;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x63A5;&#x53E3;&#x6743;&#x9650;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4E0D;&#x6EE1;&#x8DB3;&#x53D1;&#x9001;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x7684;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x65E0;&#x6CD5;&#x4E0B;&#x53D1;&#x8F93;&#x5165;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x4E0B;&#x53D1;&#x8F93;&#x5165;&#x72B6;&#x6001;&#xFF0C;&#x9700;&#x8981;&#x5BA2;&#x670D;&#x4E4B;&#x524D;30&#x79D2;&#x5185;&#x8DDF;&#x7528;&#x6237;&#x6709;&#x8FC7;&#x6D88;&#x606F;&#x4EA4;&#x4E92;&#x3002;</li>
+<li>&#x5728;&#x8F93;&#x5165;&#x72B6;&#x6001;&#x4E2D;&#xFF08;&#x6301;&#x7EED;15s&#xFF09;&#xFF0C;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x4E0B;&#x53D1;&#x8F93;&#x5165;&#x6001;&#x3002;</li>
+<li>&#x5728;&#x8F93;&#x5165;&#x72B6;&#x6001;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5411;&#x7528;&#x6237;&#x4E0B;&#x53D1;&#x6D88;&#x606F;&#xFF0C;&#x4F1A;&#x540C;&#x65F6;&#x53D6;&#x6D88;&#x8F93;&#x5165;&#x72B6;&#x6001;&#x3002;</li>
 </ol>
-<p>接口调用请求说明</p>
-<pre><code>http请求方式: POST
+<p>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x8BF4;&#x660E;</p>
+<pre><code>http&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: POST
 https://api.weixin.qq.com/cgi-bin/message/custom/typing?access_token=ACCESS_TOKEN
-</code></pre><p>JSON数据包如下：</p>
+</code></pre><p>JSON&#x6570;&#x636E;&#x5305;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">"touser"</span>:<span class="hljs-string">"OPENID"</span>,
-    <span class="hljs-string">"command"</span>:<span class="hljs-string">"Typing"</span>
+    <span class="hljs-string">&quot;touser&quot;</span>:<span class="hljs-string">&quot;OPENID&quot;</span>,
+    <span class="hljs-string">&quot;command&quot;</span>:<span class="hljs-string">&quot;Typing&quot;</span>
 }
 </code></pre>
-<p>预期返回：</p>
+<p>&#x9884;&#x671F;&#x8FD4;&#x56DE;&#xFF1A;</p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">"errcode"</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"ok"</span>
+    <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>
 }
 </code></pre>
-<h5 id="参数说明">参数说明</h5>
+<h5 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h5>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>是否必须</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>access_token</td>
-<td>是</td>
-<td>调用接口凭证</td>
+<td>&#x662F;</td>
+<td>&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x51ED;&#x8BC1;</td>
 </tr>
 <tr>
 <td>touser</td>
-<td>是</td>
-<td>普通用户(openid)</td>
+<td>&#x662F;</td>
+<td>&#x666E;&#x901A;&#x7528;&#x6237;(openid)</td>
 </tr>
 <tr>
 <td>command</td>
-<td>是</td>
-<td>"Typing"：对用户下发“正在输入"状态；"CancelTyping"：取消对用户的”正在输入"状态</td>
+<td>&#x662F;</td>
+<td>&quot;Typing&quot;&#xFF1A;&#x5BF9;&#x7528;&#x6237;&#x4E0B;&#x53D1;&#x201C;&#x6B63;&#x5728;&#x8F93;&#x5165;&quot;&#x72B6;&#x6001;&#xFF1B;&quot;CancelTyping&quot;&#xFF1A;&#x53D6;&#x6D88;&#x5BF9;&#x7528;&#x6237;&#x7684;&#x201D;&#x6B63;&#x5728;&#x8F93;&#x5165;&quot;&#x72B6;&#x6001;</td>
 </tr>
 </tbody>
 </table>
-<h5 id="返回码说明">返回码说明</h5>
+<h5 id="&#x8FD4;&#x56DE;&#x7801;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x7801;&#x8BF4;&#x660E;</h5>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th>说明</th>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">45072</td>
-<td>command字段取值不对</td>
+<td>command&#x5B57;&#x6BB5;&#x53D6;&#x503C;&#x4E0D;&#x5BF9;</td>
 </tr>
 <tr>
 <td style="text-align:left">45080</td>
-<td>下发输入状态，需要之前30秒内跟用户有过消息交互</td>
+<td>&#x4E0B;&#x53D1;&#x8F93;&#x5165;&#x72B6;&#x6001;&#xFF0C;&#x9700;&#x8981;&#x4E4B;&#x524D;30&#x79D2;&#x5185;&#x8DDF;&#x7528;&#x6237;&#x6709;&#x8FC7;&#x6D88;&#x606F;&#x4EA4;&#x4E92;</td>
 </tr>
 <tr>
 <td style="text-align:left">45081</td>
-<td>已经在输入状态，不可重复下发</td>
+<td>&#x5DF2;&#x7ECF;&#x5728;&#x8F93;&#x5165;&#x72B6;&#x6001;&#xFF0C;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x4E0B;&#x53D1;</td>
 </tr>
 </tbody>
 </table>

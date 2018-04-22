@@ -19,104 +19,104 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="临时素材接口">临时素材接口</h2>
-<h3 id="获取临时素材">获取临时素材</h3>
-<p>小程序可以使用本接口获取客服消息内的临时素材（即下载临时的多媒体文件）。目前小程序仅支持下载图片文件。</p>
-<h4 id="接口调用请求说明">接口调用请求说明</h4>
-<p>HTTP 请求方式: GET，HTTPS 调用</p>
-<pre><code>https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID
-</code></pre><p>请求示例（示例为通过curl命令获取多媒体文件）</p>
-<pre><code>curl -I -G "https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID"
-</code></pre><h4 id="参数说明">参数说明</h4>
+                                <h2 id="&#x4E34;&#x65F6;&#x7D20;&#x6750;&#x63A5;&#x53E3;">&#x4E34;&#x65F6;&#x7D20;&#x6750;&#x63A5;&#x53E3;</h2>
+<h3 id="&#x83B7;&#x53D6;&#x4E34;&#x65F6;&#x7D20;&#x6750;">&#x83B7;&#x53D6;&#x4E34;&#x65F6;&#x7D20;&#x6750;</h3>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x672C;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x5185;&#x7684;&#x4E34;&#x65F6;&#x7D20;&#x6750;&#xFF08;&#x5373;&#x4E0B;&#x8F7D;&#x4E34;&#x65F6;&#x7684;&#x591A;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#xFF09;&#x3002;&#x76EE;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EC5;&#x652F;&#x6301;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x3002;</p>
+<h4 id="&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x8BF4;&#x660E;</h4>
+<p>HTTP &#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: GET&#xFF0C;HTTPS &#x8C03;&#x7528;</p>
+<pre><code>https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID
+</code></pre><p>&#x8BF7;&#x6C42;&#x793A;&#x4F8B;&#xFF08;&#x793A;&#x4F8B;&#x4E3A;&#x901A;&#x8FC7;curl&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x591A;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#xFF09;</p>
+<pre><code>curl -I -G &quot;https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID&quot;
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th>是否必须</th>
-<th>说明</th>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">access_token</td>
-<td>是</td>
-<td>调用接口凭证</td>
+<td>&#x662F;</td>
+<td>&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x51ED;&#x8BC1;</td>
 </tr>
 <tr>
 <td style="text-align:left">media_id</td>
-<td>是</td>
-<td>媒体文件ID</td>
+<td>&#x662F;</td>
+<td>&#x5A92;&#x4F53;&#x6587;&#x4EF6;ID</td>
 </tr>
 </tbody>
 </table>
-<h4 id="返回说明">返回说明</h4>
-<p>正确情况下的返回 HTTP 头如下：</p>
+<h4 id="&#x8FD4;&#x56DE;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x8BF4;&#x660E;</h4>
+<p>&#x6B63;&#x786E;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x8FD4;&#x56DE; HTTP &#x5934;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>HTTP/1.1 200 OK
 Connection: close
 Content-Type: image/jpeg 
-Content-disposition: attachment; filename="MEDIA_ID.jpg"
+Content-disposition: attachment; filename=&quot;MEDIA_ID.jpg&quot;
 Date: Sun, 06 Jan 2013 10:20:18 GMT
 Cache-Control: no-cache, must-revalidate
 Content-Length: 339721
-curl -G "https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID"
-</code></pre><p>如果返回的是视频消息素材，则内容如下：</p>
+curl -G &quot;https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID&quot;
+</code></pre><p>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x89C6;&#x9891;&#x6D88;&#x606F;&#x7D20;&#x6750;&#xFF0C;&#x5219;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-json">{
- <span class="hljs-string">"video_url"</span>:DOWN_URL
+ <span class="hljs-string">&quot;video_url&quot;</span>:DOWN_URL
 }
 </code></pre>
-<p>错误情况下的返回JSON数据包示例如下（示例为无效媒体ID错误）：</p>
+<p>&#x9519;&#x8BEF;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x8FD4;&#x56DE;JSON&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF08;&#x793A;&#x4F8B;&#x4E3A;&#x65E0;&#x6548;&#x5A92;&#x4F53;ID&#x9519;&#x8BEF;&#xFF09;&#xFF1A;</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"errcode"</span>:<span class="hljs-number">40007</span>,
-  <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"invalid media_id"</span>
+  <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">40007</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;invalid media_id&quot;</span>
 }
 </code></pre>
-<h3 id="新增临时素材">新增临时素材</h3>
-<p>小程序可以使用本接口把媒体文件（目前仅支持图片）上传到微信服务器，用户发送客服消息或被动回复用户消息。</p>
-<h4 id="接口调用请求说明">接口调用请求说明</h4>
-<p>HTTP 请求方式：POST/FORM，HTTPS 调用</p>
-<pre><code>https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE
-</code></pre><p>调用示例（使用curl命令，用FORM表单方式上传一个多媒体文件）：</p>
-<pre><code>curl -F media=@test.jpg "https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE"
-</code></pre><h4 id="参数说明">参数说明</h4>
+<h3 id="&#x65B0;&#x589E;&#x4E34;&#x65F6;&#x7D20;&#x6750;">&#x65B0;&#x589E;&#x4E34;&#x65F6;&#x7D20;&#x6750;</h3>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x672C;&#x63A5;&#x53E3;&#x628A;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#xFF08;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x56FE;&#x7247;&#xFF09;&#x4E0A;&#x4F20;&#x5230;&#x5FAE;&#x4FE1;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7528;&#x6237;&#x53D1;&#x9001;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x6216;&#x88AB;&#x52A8;&#x56DE;&#x590D;&#x7528;&#x6237;&#x6D88;&#x606F;&#x3002;</p>
+<h4 id="&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x8BF4;&#x660E;</h4>
+<p>HTTP &#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#xFF1A;POST/FORM&#xFF0C;HTTPS &#x8C03;&#x7528;</p>
+<pre><code>https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE
+</code></pre><p>&#x8C03;&#x7528;&#x793A;&#x4F8B;&#xFF08;&#x4F7F;&#x7528;curl&#x547D;&#x4EE4;&#xFF0C;&#x7528;FORM&#x8868;&#x5355;&#x65B9;&#x5F0F;&#x4E0A;&#x4F20;&#x4E00;&#x4E2A;&#x591A;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#xFF09;&#xFF1A;</p>
+<pre><code>curl -F media=@test.jpg &quot;https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE&quot;
+</code></pre><h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th>是否必须</th>
-<th>说明</th>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">access_token</td>
-<td>是</td>
-<td>调用接口凭证</td>
+<td>&#x662F;</td>
+<td>&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x51ED;&#x8BC1;</td>
 </tr>
 <tr>
 <td style="text-align:left">type</td>
-<td>是</td>
+<td>&#x662F;</td>
 <td>image</td>
 </tr>
 <tr>
 <td style="text-align:left">media</td>
-<td>是</td>
-<td>form-data中媒体文件标识，有filename、filelength、content-type等信息</td>
+<td>&#x662F;</td>
+<td>form-data&#x4E2D;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x6807;&#x8BC6;&#xFF0C;&#x6709;filename&#x3001;filelength&#x3001;content-type&#x7B49;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<h4 id="返回说明">返回说明</h4>
-<p>正确情况下的返回 JSON 数据包结果如下：</p>
+<h4 id="&#x8FD4;&#x56DE;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x8BF4;&#x660E;</h4>
+<p>&#x6B63;&#x786E;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x8FD4;&#x56DE; JSON &#x6570;&#x636E;&#x5305;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"type"</span>:<span class="hljs-string">"TYPE"</span>,
-  <span class="hljs-string">"media_id"</span>:<span class="hljs-string">"MEDIA_ID"</span>,
-  <span class="hljs-string">"created_at"</span>:<span class="hljs-number">123456789</span>
+  <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-string">&quot;TYPE&quot;</span>,
+  <span class="hljs-string">&quot;media_id&quot;</span>:<span class="hljs-string">&quot;MEDIA_ID&quot;</span>,
+  <span class="hljs-string">&quot;created_at&quot;</span>:<span class="hljs-number">123456789</span>
 }
 </code></pre>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th>描述</th>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th>&#x63CF;&#x8FF0;</th>
 </tr>
 </thead>
 <tbody>
@@ -126,18 +126,18 @@ curl -G "https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&m
 </tr>
 <tr>
 <td style="text-align:left">media_id</td>
-<td>媒体文件上传后，获取标识</td>
+<td>&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x540E;&#xFF0C;&#x83B7;&#x53D6;&#x6807;&#x8BC6;</td>
 </tr>
 <tr>
 <td style="text-align:left">created_at</td>
-<td>媒体文件上传时间戳</td>
+<td>&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x65F6;&#x95F4;&#x6233;</td>
 </tr>
 </tbody>
 </table>
-<p>错误情况下的返回JSON数据包示例如下（示例为无效媒体类型错误）：</p>
+<p>&#x9519;&#x8BEF;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x8FD4;&#x56DE;JSON&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF08;&#x793A;&#x4F8B;&#x4E3A;&#x65E0;&#x6548;&#x5A92;&#x4F53;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#xFF09;&#xFF1A;</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">"errcode"</span>:<span class="hljs-number">40004</span>,
-  <span class="hljs-string">"errmsg"</span>:<span class="hljs-string">"invalid media type"</span>
+  <span class="hljs-string">&quot;errcode&quot;</span>:<span class="hljs-number">40004</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;invalid media type&quot;</span>
 }
 </code></pre>
 

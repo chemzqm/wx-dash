@@ -20,30 +20,30 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxcaniusestring">wx.canIUse(String)</h3>
-<p><strong>注意：此接口从基础库 1.1.1 版本开始支持。</strong></p>
-<p>判断小程序的API，回调，参数，组件等是否在当前版本可用。</p>
-<p><strong>String参数说明：</strong>
-使用<code>${API}.${method}.${param}.${options}</code>或者<code>${component}.${attribute}.${option}</code>方式来调用，例如：</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x63A5;&#x53E3;&#x4ECE;&#x57FA;&#x7840;&#x5E93; 1.1.1 &#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301;&#x3002;</strong></p>
+<p>&#x5224;&#x65AD;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;API&#xFF0C;&#x56DE;&#x8C03;&#xFF0C;&#x53C2;&#x6570;&#xFF0C;&#x7EC4;&#x4EF6;&#x7B49;&#x662F;&#x5426;&#x5728;&#x5F53;&#x524D;&#x7248;&#x672C;&#x53EF;&#x7528;&#x3002;</p>
+<p><strong>String&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong>
+&#x4F7F;&#x7528;<code>${API}.${method}.${param}.${options}</code>&#x6216;&#x8005;<code>${component}.${attribute}.${option}</code>&#x65B9;&#x5F0F;&#x6765;&#x8C03;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
 <ul>
-<li><code>${API}</code> 代表 API 名字</li>
-<li><code>${method}</code> 代表调用方式，有效值为<code>return</code>, <code>success</code>, <code>object</code>, <code>callback</code></li>
-<li><code>${param}</code> 代表参数或者返回值</li>
-<li><code>${options}</code> 代表参数的可选值</li>
-<li><code>${component}</code> 代表组件名字</li>
-<li><code>${attribute}</code> 代表组件属性</li>
-<li><code>${option}</code> 代表组件属性的可选值</li>
+<li><code>${API}</code> &#x4EE3;&#x8868; API &#x540D;&#x5B57;</li>
+<li><code>${method}</code> &#x4EE3;&#x8868;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x6709;&#x6548;&#x503C;&#x4E3A;<code>return</code>, <code>success</code>, <code>object</code>, <code>callback</code></li>
+<li><code>${param}</code> &#x4EE3;&#x8868;&#x53C2;&#x6570;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x503C;</li>
+<li><code>${options}</code> &#x4EE3;&#x8868;&#x53C2;&#x6570;&#x7684;&#x53EF;&#x9009;&#x503C;</li>
+<li><code>${component}</code> &#x4EE3;&#x8868;&#x7EC4;&#x4EF6;&#x540D;&#x5B57;</li>
+<li><code>${attribute}</code> &#x4EE3;&#x8868;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;</li>
+<li><code>${option}</code> &#x4EE3;&#x8868;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#x7684;&#x53EF;&#x9009;&#x503C;</li>
 </ul>
-<p>例子：</p>
-<pre><code class="lang-js">wx.canIUse(<span class="hljs-string">'openBluetoothAdapter'</span>)
-wx.canIUse(<span class="hljs-string">'getSystemInfoSync.return.screenWidth'</span>)
-wx.canIUse(<span class="hljs-string">'getSystemInfo.success.screenWidth'</span>)
-wx.canIUse(<span class="hljs-string">'showToast.object.image'</span>)
-wx.canIUse(<span class="hljs-string">'onCompassChange.callback.direction'</span>)
-wx.canIUse(<span class="hljs-string">'request.object.method.GET'</span>)
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-js">wx.canIUse(<span class="hljs-string">&apos;openBluetoothAdapter&apos;</span>)
+wx.canIUse(<span class="hljs-string">&apos;getSystemInfoSync.return.screenWidth&apos;</span>)
+wx.canIUse(<span class="hljs-string">&apos;getSystemInfo.success.screenWidth&apos;</span>)
+wx.canIUse(<span class="hljs-string">&apos;showToast.object.image&apos;</span>)
+wx.canIUse(<span class="hljs-string">&apos;onCompassChange.callback.direction&apos;</span>)
+wx.canIUse(<span class="hljs-string">&apos;request.object.method.GET&apos;</span>)
 
-wx.canIUse(<span class="hljs-string">'live-player'</span>)
-wx.canIUse(<span class="hljs-string">'text.selectable'</span>)
-wx.canIUse(<span class="hljs-string">'button.open-type.contact'</span>)
+wx.canIUse(<span class="hljs-string">&apos;live-player&apos;</span>)
+wx.canIUse(<span class="hljs-string">&apos;text.selectable&apos;</span>)
+wx.canIUse(<span class="hljs-string">&apos;button.open-type.contact&apos;</span>)
 </code></pre>
 
                                 

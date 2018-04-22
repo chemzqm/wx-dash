@@ -19,33 +19,33 @@
                                 
                                 <h4 id="cover-view">cover-view</h4>
 <blockquote>
-<p>基础库 1.4.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>覆盖在原生组件之上的文本视图，可覆盖的原生组件包括<code>map</code>、<code>video</code>、<code>canvas</code>、<code>camera</code>，只支持嵌套<code>cover-view</code>、<code>cover-image</code>。</p>
+<p>&#x8986;&#x76D6;&#x5728;&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E0A;&#x7684;&#x6587;&#x672C;&#x89C6;&#x56FE;&#xFF0C;&#x53EF;&#x8986;&#x76D6;&#x7684;&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x5305;&#x62EC;<code>map</code>&#x3001;<code>video</code>&#x3001;<code>canvas</code>&#x3001;<code>camera</code>&#xFF0C;&#x53EA;&#x652F;&#x6301;&#x5D4C;&#x5957;<code>cover-view</code>&#x3001;<code>cover-image</code>&#x3002;</p>
 <table>
 <thead>
 <tr>
-<th>属性名</th>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td id="cover-view-无">无</td>
+<td id="cover-view-&#x65E0;">&#x65E0;</td>
 </tr>
 </tbody>
 </table>
 <h4 id="cover-image">cover-image</h4>
 <blockquote>
-<p>基础库 1.4.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>覆盖在原生组件之上的图片视图，可覆盖的原生组件同<code>cover-view</code>，支持嵌套在cover-view里。</p>
+<p>&#x8986;&#x76D6;&#x5728;&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E0A;&#x7684;&#x56FE;&#x7247;&#x89C6;&#x56FE;&#xFF0C;&#x53EF;&#x8986;&#x76D6;&#x7684;&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x540C;<code>cover-view</code>&#xFF0C;&#x652F;&#x6301;&#x5D4C;&#x5957;&#x5728;cover-view&#x91CC;&#x3002;</p>
 <table>
 <thead>
 <tr>
-<th>属性名</th>
-<th>类型</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -53,36 +53,36 @@
 <td id="cover-view-src">src</td>
 <td>String</td>
 <td></td>
-<td>图标路径，支持临时路径、网络地址（1.6.0起支持）。暂不支持base64格式。</td>
+<td>&#x56FE;&#x6807;&#x8DEF;&#x5F84;&#xFF0C;&#x652F;&#x6301;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#x3001;&#x7F51;&#x7EDC;&#x5730;&#x5740;&#xFF08;1.6.0&#x8D77;&#x652F;&#x6301;&#xFF09;&#x3002;&#x6682;&#x4E0D;&#x652F;&#x6301;base64&#x683C;&#x5F0F;&#x3002;</td>
 </tr>
 </tbody>
 </table>
-<h5 id="bug--tips">Bug & Tips</h5>
+<h5 id="bug--tips">Bug &amp; Tips</h5>
 <ol>
-<li><code>tip</code>: 基础库 1.9.90 起 <code>cover-view</code> 支持 <code>overflow: scroll</code>，但不支持动态更新 <code>overflow</code></li>
-<li><code>tip</code>: 基础库 1.9.90 起最外层 <code>cover-view</code> 支持 <code>position: fixed</code></li>
-<li><code>tip</code>: 基础库 1.9.0 起支持插在 <code>view</code> 等标签下。在此之前只可嵌套在原生组件<code>map</code>、<code>video</code>、<code>canvas</code>、<code>camera</code>内，避免嵌套在其他组件内。</li>
-<li><code>tip</code>: 基础库 1.6.0 起支持css transition动画，<code>transition-property</code>只支持<code>transform (translateX, translateY)</code>与<code>opacity</code>。</li>
-<li><code>tip</code>: 基础库 1.6.0 起支持css opacity。</li>
-<li><code>tip</code>: 事件模型遵循冒泡模型，但不会冒泡到原生组件。</li>
-<li><code>tip</code>: 文本建议都套上cover-view标签，避免排版错误。</li>
-<li><code>tip</code>: 只支持基本的定位、布局、文本样式。不支持设置<code>单边的border</code>、<code>background-image</code>、<code>shadow</code>、<code>overflow: visible</code>等。</li>
-<li><code>tip</code>: 建议子节点不要溢出父节点</li>
-<li><code>tip</code>: 默认设置的样式有：<code>white-space: nowrap;</code> <code>line-height: 1.2;</code> <code>display: block;</code></li>
+<li><code>tip</code>: &#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77; <code>cover-view</code> &#x652F;&#x6301; <code>overflow: scroll</code>&#xFF0C;&#x4F46;&#x4E0D;&#x652F;&#x6301;&#x52A8;&#x6001;&#x66F4;&#x65B0; <code>overflow</code></li>
+<li><code>tip</code>: &#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x6700;&#x5916;&#x5C42; <code>cover-view</code> &#x652F;&#x6301; <code>position: fixed</code></li>
+<li><code>tip</code>: &#x57FA;&#x7840;&#x5E93; 1.9.0 &#x8D77;&#x652F;&#x6301;&#x63D2;&#x5728; <code>view</code> &#x7B49;&#x6807;&#x7B7E;&#x4E0B;&#x3002;&#x5728;&#x6B64;&#x4E4B;&#x524D;&#x53EA;&#x53EF;&#x5D4C;&#x5957;&#x5728;&#x539F;&#x751F;&#x7EC4;&#x4EF6;<code>map</code>&#x3001;<code>video</code>&#x3001;<code>canvas</code>&#x3001;<code>camera</code>&#x5185;&#xFF0C;&#x907F;&#x514D;&#x5D4C;&#x5957;&#x5728;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x5185;&#x3002;</li>
+<li><code>tip</code>: &#x57FA;&#x7840;&#x5E93; 1.6.0 &#x8D77;&#x652F;&#x6301;css transition&#x52A8;&#x753B;&#xFF0C;<code>transition-property</code>&#x53EA;&#x652F;&#x6301;<code>transform (translateX, translateY)</code>&#x4E0E;<code>opacity</code>&#x3002;</li>
+<li><code>tip</code>: &#x57FA;&#x7840;&#x5E93; 1.6.0 &#x8D77;&#x652F;&#x6301;css opacity&#x3002;</li>
+<li><code>tip</code>: &#x4E8B;&#x4EF6;&#x6A21;&#x578B;&#x9075;&#x5FAA;&#x5192;&#x6CE1;&#x6A21;&#x578B;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x5192;&#x6CE1;&#x5230;&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x3002;</li>
+<li><code>tip</code>: &#x6587;&#x672C;&#x5EFA;&#x8BAE;&#x90FD;&#x5957;&#x4E0A;cover-view&#x6807;&#x7B7E;&#xFF0C;&#x907F;&#x514D;&#x6392;&#x7248;&#x9519;&#x8BEF;&#x3002;</li>
+<li><code>tip</code>: &#x53EA;&#x652F;&#x6301;&#x57FA;&#x672C;&#x7684;&#x5B9A;&#x4F4D;&#x3001;&#x5E03;&#x5C40;&#x3001;&#x6587;&#x672C;&#x6837;&#x5F0F;&#x3002;&#x4E0D;&#x652F;&#x6301;&#x8BBE;&#x7F6E;<code>&#x5355;&#x8FB9;&#x7684;border</code>&#x3001;<code>background-image</code>&#x3001;<code>shadow</code>&#x3001;<code>overflow: visible</code>&#x7B49;&#x3002;</li>
+<li><code>tip</code>: &#x5EFA;&#x8BAE;&#x5B50;&#x8282;&#x70B9;&#x4E0D;&#x8981;&#x6EA2;&#x51FA;&#x7236;&#x8282;&#x70B9;</li>
+<li><code>tip</code>: &#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684;&#x6837;&#x5F0F;&#x6709;&#xFF1A;<code>white-space: nowrap;</code> <code>line-height: 1.2;</code> <code>display: block;</code></li>
 </ol>
-<p><strong>示例：</strong></p>
-<p><a href="wechatide://minicode/IBYfximo6AYL" target="_blank">在开发者工具中预览效果</a></p>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myVideo"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">"{{false}}"</span> <span class="hljs-attr">event-model</span>=<span class="hljs-string">"bubble"</span>></span>
-  <span class="hljs-tag"><<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"controls"</span>></span>
-    <span class="hljs-tag"><<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"play"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"play"</span>></span>
-      <span class="hljs-tag"><<span class="hljs-name">cover-image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/path/to/icon_play"</span> /></span>
-    <span class="hljs-tag"><!--<span class="hljs-name"-->cover-view</span>>
-    <span class="hljs-tag"><<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pause"</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"pause"</span>></span>
-      <span class="hljs-tag"><<span class="hljs-name">cover-image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/path/to/icon_pause"</span> /></span>
-    <span class="hljs-tag"><!--<span class="hljs-name"-->cover-view</span>>
-    <span class="hljs-tag"><<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"time"</span>></span>00:00<span class="hljs-tag"><!--<span class="hljs-name"-->cover-view</span>>
-  <span class="hljs-tag"><!--<span class="hljs-name"-->cover-view</span>>
-<span class="hljs-tag"><!--<span class="hljs-name"-->video</span>>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/IBYfximo6AYL" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myVideo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;{{false}}&quot;</span> <span class="hljs-attr">event-model</span>=<span class="hljs-string">&quot;bubble&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;controls&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;play&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;play&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cover-image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/path/to/icon_play&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">cover-view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pause&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;pause&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cover-image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/path/to/icon_pause&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">cover-view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;time&quot;</span>&gt;</span>00:00<span class="hljs-tag">&lt;/<span class="hljs-name">cover-view</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cover-view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-css"><span class="hljs-selector-class">.controls</span> {
   <span class="hljs-attribute">position</span>: relative;
@@ -109,7 +109,7 @@
 </code></pre>
 <pre><code class="lang-javascript">Page({
   onReady() {
-    <span class="hljs-keyword">this</span>.videoCtx = wx.createVideoContext(<span class="hljs-string">'myVideo'</span>)
+    <span class="hljs-keyword">this</span>.videoCtx = wx.createVideoContext(<span class="hljs-string">&apos;myVideo&apos;</span>)
   },
   play() {
     <span class="hljs-keyword">this</span>.videoCtx.play()

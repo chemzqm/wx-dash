@@ -20,94 +20,94 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxscancodeobject">wx.scanCode(OBJECT)</h3>
-<p>调起客户端扫码界面，扫码成功后返回对应的结果</p>
-<p><strong>Object 参数说明：</strong></p>
+<p>&#x8C03;&#x8D77;&#x5BA2;&#x6237;&#x7AEF;&#x626B;&#x7801;&#x754C;&#x9762;&#xFF0C;&#x626B;&#x7801;&#x6210;&#x529F;&#x540E;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x679C;</p>
+<p><strong>Object &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
-<th>最低版本</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>onlyFromCamera</td>
 <td>Boolean</td>
-<td>否</td>
-<td>是否只能从相机扫码，不允许从相册选择图片</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.2.0 开始支持，低版本需做兼容处理。">1.2.0</a></td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x53EA;&#x80FD;&#x4ECE;&#x76F8;&#x673A;&#x626B;&#x7801;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x56FE;&#x7247;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
 </tr>
 <tr>
 <td>scanType</td>
 <td>Array</td>
-<td>否</td>
-<td>扫码类型，参数类型是数组，二维码是'qrCode'，一维码是'barCode'，DataMatrix是‘datamatrix’，pdf417是‘pdf417’。</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.7.0 开始支持，低版本需做兼容处理。">1.7.0</a></td>
+<td>&#x5426;</td>
+<td>&#x626B;&#x7801;&#x7C7B;&#x578B;&#xFF0C;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x4E8C;&#x7EF4;&#x7801;&#x662F;&apos;qrCode&apos;&#xFF0C;&#x4E00;&#x7EF4;&#x7801;&#x662F;&apos;barCode&apos;&#xFF0C;DataMatrix&#x662F;&#x2018;datamatrix&#x2019;&#xFF0C;pdf417&#x662F;&#x2018;pdf417&#x2019;&#x3002;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.0</a></td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数，返回内容详见返回参数说明。</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x8BE6;&#x89C1;&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#x3002;</td>
 <td></td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 <td></td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>result</td>
-<td>所扫码的内容</td>
+<td>&#x6240;&#x626B;&#x7801;&#x7684;&#x5185;&#x5BB9;</td>
 </tr>
 <tr>
 <td>scanType</td>
-<td>所扫码的类型</td>
+<td>&#x6240;&#x626B;&#x7801;&#x7684;&#x7C7B;&#x578B;</td>
 </tr>
 <tr>
 <td>charSet</td>
-<td>所扫码的字符集</td>
+<td>&#x6240;&#x626B;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x96C6;</td>
 </tr>
 <tr>
 <td>path</td>
-<td>当所扫的码为当前小程序的合法二维码时，会返回此字段，内容为二维码携带的 path</td>
+<td>&#x5F53;&#x6240;&#x626B;&#x7684;&#x7801;&#x4E3A;&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x5408;&#x6CD5;&#x4E8C;&#x7EF4;&#x7801;&#x65F6;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x6B64;&#x5B57;&#x6BB5;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#x4E8C;&#x7EF4;&#x7801;&#x643A;&#x5E26;&#x7684; path</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// 允许从相机和相册扫码</span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x673A;&#x548C;&#x76F8;&#x518C;&#x626B;&#x7801;</span>
 wx.scanCode({
-  success: (res) => {
+  success: (res) =&gt; {
     <span class="hljs-built_in">console</span>.log(res)
   }
 })
 
-<span class="hljs-comment">// 只允许从相机扫码</span>
+<span class="hljs-comment">// &#x53EA;&#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x673A;&#x626B;&#x7801;</span>
 wx.scanCode({
   onlyFromCamera: <span class="hljs-literal">true</span>,
-  success: (res) => {
+  success: (res) =&gt; {
     <span class="hljs-built_in">console</span>.log(res)
   }
 })

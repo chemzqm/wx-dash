@@ -19,22 +19,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="框架">框架</h1>
-<p>小程序开发框架的目标是通过尽可能简单、高效的方式让开发者可以在微信中开发具有原生 APP 体验的服务。</p>
-<p>框架提供了自己的视图层描述语言 WXML 和 WXSS，以及基于 JavaScript 的逻辑层框架，并在视图层与逻辑层间提供了数据传输和事件系统，可以让开发者可以方便的聚焦于数据与逻辑上。</p>
-<h3 id="响应的数据绑定">响应的数据绑定</h3>
-<p>框架的核心是一个响应的数据绑定系统。</p>
-<p>整个系统分为两块视图层（View）和逻辑层（App Service）</p>
-<p>框架可以让数据与视图非常简单地保持同步。当做数据修改的时候，只需要在逻辑层修改数据，视图层就会做相应的更新。</p>
-<p>通过这个简单的例子来看：</p>
-<pre><code class="lang-html"><span class="hljs-comment"><!-- This is our View --></span>
-<span class="hljs-tag"><<span class="hljs-name">view</span>></span> Hello {{name}}! <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
-<span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"changeName"</span>></span> Click me! <span class="hljs-tag"></<span class="hljs-name">button</span>></span>
+                                <h1 id="&#x6846;&#x67B6;">&#x6846;&#x67B6;</h1>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x7684;&#x76EE;&#x6807;&#x662F;&#x901A;&#x8FC7;&#x5C3D;&#x53EF;&#x80FD;&#x7B80;&#x5355;&#x3001;&#x9AD8;&#x6548;&#x7684;&#x65B9;&#x5F0F;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x5FAE;&#x4FE1;&#x4E2D;&#x5F00;&#x53D1;&#x5177;&#x6709;&#x539F;&#x751F; APP &#x4F53;&#x9A8C;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x89C6;&#x56FE;&#x5C42;&#x63CF;&#x8FF0;&#x8BED;&#x8A00; WXML &#x548C; WXSS&#xFF0C;&#x4EE5;&#x53CA;&#x57FA;&#x4E8E; JavaScript &#x7684;&#x903B;&#x8F91;&#x5C42;&#x6846;&#x67B6;&#xFF0C;&#x5E76;&#x5728;&#x89C6;&#x56FE;&#x5C42;&#x4E0E;&#x903B;&#x8F91;&#x5C42;&#x95F4;&#x63D0;&#x4F9B;&#x4E86;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x548C;&#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x805A;&#x7126;&#x4E8E;&#x6570;&#x636E;&#x4E0E;&#x903B;&#x8F91;&#x4E0A;&#x3002;</p>
+<h3 id="&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;">&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</h3>
+<p>&#x6846;&#x67B6;&#x7684;&#x6838;&#x5FC3;&#x662F;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x5206;&#x4E3A;&#x4E24;&#x5757;&#x89C6;&#x56FE;&#x5C42;&#xFF08;View&#xFF09;&#x548C;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;</p>
+<p>&#x6846;&#x67B6;&#x53EF;&#x4EE5;&#x8BA9;&#x6570;&#x636E;&#x4E0E;&#x89C6;&#x56FE;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x5730;&#x4FDD;&#x6301;&#x540C;&#x6B65;&#x3002;&#x5F53;&#x505A;&#x6570;&#x636E;&#x4FEE;&#x6539;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x903B;&#x8F91;&#x5C42;&#x4FEE;&#x6539;&#x6570;&#x636E;&#xFF0C;&#x89C6;&#x56FE;&#x5C42;&#x5C31;&#x4F1A;&#x505A;&#x76F8;&#x5E94;&#x7684;&#x66F4;&#x65B0;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x770B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- This is our View --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> Hello {{name}}! <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeName&quot;</span>&gt;</span> Click me! <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-js"><span class="hljs-comment">// This is our App Service.</span>
 <span class="hljs-comment">// This is our data.</span>
 <span class="hljs-keyword">var</span> helloData = {
-  name: <span class="hljs-string">'WeChat'</span>
+  name: <span class="hljs-string">&apos;WeChat&apos;</span>
 }
 
 <span class="hljs-comment">// Register a Page.</span>
@@ -43,22 +43,22 @@ Page({
   changeName: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-comment">// sent data change to view</span>
     <span class="hljs-keyword">this</span>.setData({
-      name: <span class="hljs-string">'MINA'</span>
+      name: <span class="hljs-string">&apos;MINA&apos;</span>
     })
   }
 })
 </code></pre>
 <ul>
-<li>开发者通过框架将逻辑层数据中的 <code>name</code> 与视图层的 <code>name</code> 进行了绑定，所以在页面一打开的时候会显示 <code>Hello WeChat!</code></li>
-<li>当点击按钮的时候，视图层会发送 <code>changeName</code> 的事件给逻辑层，逻辑层找到对应的事件处理函数</li>
-<li>逻辑层执行了 <code>setData</code> 的操作，将 name 从 <code>WeChat</code> 变为 <code>MINA</code>，因为该数据和视图层已经绑定了，从而视图层会自动改变为 <code>Hello MINA!</code> 。</li>
+<li>&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x6846;&#x67B6;&#x5C06;&#x903B;&#x8F91;&#x5C42;&#x6570;&#x636E;&#x4E2D;&#x7684; <code>name</code> &#x4E0E;&#x89C6;&#x56FE;&#x5C42;&#x7684; <code>name</code> &#x8FDB;&#x884C;&#x4E86;&#x7ED1;&#x5B9A;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x9875;&#x9762;&#x4E00;&#x6253;&#x5F00;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x663E;&#x793A; <code>Hello WeChat!</code></li>
+<li>&#x5F53;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x89C6;&#x56FE;&#x5C42;&#x4F1A;&#x53D1;&#x9001; <code>changeName</code> &#x7684;&#x4E8B;&#x4EF6;&#x7ED9;&#x903B;&#x8F91;&#x5C42;&#xFF0C;&#x903B;&#x8F91;&#x5C42;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;</li>
+<li>&#x903B;&#x8F91;&#x5C42;&#x6267;&#x884C;&#x4E86; <code>setData</code> &#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C06; name &#x4ECE; <code>WeChat</code> &#x53D8;&#x4E3A; <code>MINA</code>&#xFF0C;&#x56E0;&#x4E3A;&#x8BE5;&#x6570;&#x636E;&#x548C;&#x89C6;&#x56FE;&#x5C42;&#x5DF2;&#x7ECF;&#x7ED1;&#x5B9A;&#x4E86;&#xFF0C;&#x4ECE;&#x800C;&#x89C6;&#x56FE;&#x5C42;&#x4F1A;&#x81EA;&#x52A8;&#x6539;&#x53D8;&#x4E3A; <code>Hello MINA!</code> &#x3002;</li>
 </ul>
-<h3 id="页面管理">页面管理</h3>
-<p>框架 管理了整个<strong>小程序</strong>的页面路由，可以做到页面间的无缝切换，并给以页面完整的生命周期。开发者需要做的只是将页面的数据，方法，生命周期函数注册进 框架 中，其他的一切复杂的操作都交由 框架 处理。</p>
-<h3 id="基础组件">基础组件</h3>
-<p>框架 提供了一套基础的组件，这些组件自带微信风格的样式以及特殊的逻辑，开发者可以通过组合基础组件，创建出强大的<strong>微信小程序</strong> 。</p>
-<h3 id="丰富的-api">丰富的 API</h3>
-<p>框架 提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。</p>
+<h3 id="&#x9875;&#x9762;&#x7BA1;&#x7406;">&#x9875;&#x9762;&#x7BA1;&#x7406;</h3>
+<p>&#x6846;&#x67B6; &#x7BA1;&#x7406;&#x4E86;&#x6574;&#x4E2A;<strong>&#x5C0F;&#x7A0B;&#x5E8F;</strong>&#x7684;&#x9875;&#x9762;&#x8DEF;&#x7531;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x9875;&#x9762;&#x95F4;&#x7684;&#x65E0;&#x7F1D;&#x5207;&#x6362;&#xFF0C;&#x5E76;&#x7ED9;&#x4EE5;&#x9875;&#x9762;&#x5B8C;&#x6574;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x505A;&#x7684;&#x53EA;&#x662F;&#x5C06;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65B9;&#x6CD5;&#xFF0C;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x6CE8;&#x518C;&#x8FDB; &#x6846;&#x67B6; &#x4E2D;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x4E00;&#x5207;&#x590D;&#x6742;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x4EA4;&#x7531; &#x6846;&#x67B6; &#x5904;&#x7406;&#x3002;</p>
+<h3 id="&#x57FA;&#x7840;&#x7EC4;&#x4EF6;">&#x57FA;&#x7840;&#x7EC4;&#x4EF6;</h3>
+<p>&#x6846;&#x67B6; &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x57FA;&#x7840;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x81EA;&#x5E26;&#x5FAE;&#x4FE1;&#x98CE;&#x683C;&#x7684;&#x6837;&#x5F0F;&#x4EE5;&#x53CA;&#x7279;&#x6B8A;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#xFF0C;&#x521B;&#x5EFA;&#x51FA;&#x5F3A;&#x5927;&#x7684;<strong>&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;</strong> &#x3002;</p>
+<h3 id="&#x4E30;&#x5BCC;&#x7684;-api">&#x4E30;&#x5BCC;&#x7684; API</h3>
+<p>&#x6846;&#x67B6; &#x63D0;&#x4F9B;&#x4E30;&#x5BCC;&#x7684;&#x5FAE;&#x4FE1;&#x539F;&#x751F; API&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8C03;&#x8D77;&#x5FAE;&#x4FE1;&#x63D0;&#x4F9B;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x7B49;&#x3002;</p>
 
                                 
                                 </section>

@@ -20,15 +20,15 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextbeginpath">canvasContext.beginPath</h1>
-<h3 id="定义">定义</h3>
-<p>开始创建一个路径，需要调用fill或者stroke才会使用路径进行填充或描边。</p>
-<p><strong>Tip</strong>: 在最开始的时候相当于调用了一次 <code>beginPath()</code>。</p>
-<p><strong>Tip</strong>: 同一个路径内的多次<code>setFillStyle()</code>、<code>setStrokeStyle()</code>、<code>setLineWidth()</code>等设置，以最后一次设置为准。</p>
-<h3 id="例子">例子</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;fill&#x6216;&#x8005;stroke&#x624D;&#x4F1A;&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x586B;&#x5145;&#x6216;&#x63CF;&#x8FB9;&#x3002;</p>
+<p><strong>Tip</strong>: &#x5728;&#x6700;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x76F8;&#x5F53;&#x4E8E;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x6B21; <code>beginPath()</code>&#x3002;</p>
+<p><strong>Tip</strong>: &#x540C;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#x5185;&#x7684;&#x591A;&#x6B21;<code>setFillStyle()</code>&#x3001;<code>setStrokeStyle()</code>&#x3001;<code>setLineWidth()</code>&#x7B49;&#x8BBE;&#x7F6E;&#xFF0C;&#x4EE5;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x8BBE;&#x7F6E;&#x4E3A;&#x51C6;&#x3002;</p>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 <span class="hljs-comment">// begin path</span>
 ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
-ctx.setFillStyle(<span class="hljs-string">'yellow'</span>)
+ctx.setFillStyle(<span class="hljs-string">&apos;yellow&apos;</span>)
 ctx.fill()
 
 <span class="hljs-comment">// begin another path</span>
@@ -36,13 +36,13 @@ ctx.beginPath()
 ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
 
 <span class="hljs-comment">// only fill this rect, not in current path</span>
-ctx.setFillStyle(<span class="hljs-string">'blue'</span>)
+ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
 
 ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
 
 <span class="hljs-comment">// it will fill current path</span>
-ctx.setFillStyle(<span class="hljs-string">'red'</span>)
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
 ctx.fill()
 ctx.draw()
 </code></pre>

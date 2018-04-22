@@ -19,99 +19,99 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="蓝牙适配器接口">蓝牙适配器接口</h2>
+                                <h2 id="&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x63A5;&#x53E3;">&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x63A5;&#x53E3;</h2>
 <blockquote>
-<p> 基础库版本 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
-<p> iOS 微信客户端 6.5.6 版本开始支持，Android 6.5.7 版本开始支持</p>
-<p>目前不支持在开发者工具上进行调试，需要使用真机才能正常调用小程序蓝牙接口 </p>
+<p> &#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+<p> iOS &#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF; 6.5.6 &#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;Android 6.5.7 &#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301;</p>
+<p>&#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0A;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x771F;&#x673A;&#x624D;&#x80FD;&#x6B63;&#x5E38;&#x8C03;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x84DD;&#x7259;&#x63A5;&#x53E3; </p>
 </blockquote>
 <h3 id="wxopenbluetoothadapterobject">wx.openBluetoothAdapter(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>初始化小程序蓝牙模块，生效周期为调用<code>wx.openBluetoothAdapter</code>至调用<code>wx.closeBluetoothAdapter</code>或小程序被销毁为止。
-在小程序蓝牙适配器模块生效期间，开发者可以正常调用下面的小程序API，并会收到蓝牙模块相关的on回调。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x521D;&#x59CB;&#x5316;&#x5C0F;&#x7A0B;&#x5E8F;&#x84DD;&#x7259;&#x6A21;&#x5757;&#xFF0C;&#x751F;&#x6548;&#x5468;&#x671F;&#x4E3A;&#x8C03;&#x7528;<code>wx.openBluetoothAdapter</code>&#x81F3;&#x8C03;&#x7528;<code>wx.closeBluetoothAdapter</code>&#x6216;&#x5C0F;&#x7A0B;&#x5E8F;&#x88AB;&#x9500;&#x6BC1;&#x4E3A;&#x6B62;&#x3002;
+&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x6A21;&#x5757;&#x751F;&#x6548;&#x671F;&#x95F4;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8C03;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;API&#xFF0C;&#x5E76;&#x4F1A;&#x6536;&#x5230;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x76F8;&#x5173;&#x7684;on&#x56DE;&#x8C03;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回成功初始化信息</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x521D;&#x59CB;&#x5316;&#x4FE1;&#x606F;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.openBluetoothAdapter({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: 基础库版本 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></li>
-<li><code>tip</code>: 在没有调用<code>wx.openBluetoothAdapter</code>的情况下调用小程序其它蓝牙模块相关API，API会返回错误，错误码为<code>10000</code></li>
-<li><code>bug</code>: 在用户蓝牙开关未开启或者手机不支持蓝牙功能的情况下，调用<code>wx.openBluetoothAdapter</code>会返回错误，错误码为<code>10001</code>，表示手机蓝牙功能不可用；此时小程序蓝牙模块已经初始化完成，可通过<code>wx.onBluetoothAdapterStateChange</code>监听手机蓝牙状态的改变，也可以调用蓝牙模块的所有API。</li>
+<li><code>tip</code>: &#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></li>
+<li><code>tip</code>: &#x5728;&#x6CA1;&#x6709;&#x8C03;&#x7528;<code>wx.openBluetoothAdapter</code>&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x5176;&#x5B83;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x76F8;&#x5173;API&#xFF0C;API&#x4F1A;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#xFF0C;&#x9519;&#x8BEF;&#x7801;&#x4E3A;<code>10000</code></li>
+<li><code>bug</code>: &#x5728;&#x7528;&#x6237;&#x84DD;&#x7259;&#x5F00;&#x5173;&#x672A;&#x5F00;&#x542F;&#x6216;&#x8005;&#x624B;&#x673A;&#x4E0D;&#x652F;&#x6301;&#x84DD;&#x7259;&#x529F;&#x80FD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8C03;&#x7528;<code>wx.openBluetoothAdapter</code>&#x4F1A;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#xFF0C;&#x9519;&#x8BEF;&#x7801;&#x4E3A;<code>10001</code>&#xFF0C;&#x8868;&#x793A;&#x624B;&#x673A;&#x84DD;&#x7259;&#x529F;&#x80FD;&#x4E0D;&#x53EF;&#x7528;&#xFF1B;&#x6B64;&#x65F6;&#x5C0F;&#x7A0B;&#x5E8F;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;<code>wx.onBluetoothAdapterStateChange</code>&#x76D1;&#x542C;&#x624B;&#x673A;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x7684;&#x6240;&#x6709;API&#x3002;</li>
 </ol>
 <h3 id="wxclosebluetoothadapterobject">wx.closeBluetoothAdapter(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>关闭蓝牙模块，使其进入未初始化状态。调用该方法将断开所有已建立的链接并释放系统资源。建议在使用小程序蓝牙流程后调用，与<code>wx.openBluetoothAdapter</code>成对调用。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x5173;&#x95ED;&#x84DD;&#x7259;&#x6A21;&#x5757;&#xFF0C;&#x4F7F;&#x5176;&#x8FDB;&#x5165;&#x672A;&#x521D;&#x59CB;&#x5316;&#x72B6;&#x6001;&#x3002;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;&#x65AD;&#x5F00;&#x6240;&#x6709;&#x5DF2;&#x5EFA;&#x7ACB;&#x7684;&#x94FE;&#x63A5;&#x5E76;&#x91CA;&#x653E;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x3002;&#x5EFA;&#x8BAE;&#x5728;&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x84DD;&#x7259;&#x6D41;&#x7A0B;&#x540E;&#x8C03;&#x7528;&#xFF0C;&#x4E0E;<code>wx.openBluetoothAdapter</code>&#x6210;&#x5BF9;&#x8C03;&#x7528;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回成功关闭模块信息</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x5173;&#x95ED;&#x6A21;&#x5757;&#x4FE1;&#x606F;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.closeBluetoothAdapter({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res)
@@ -120,68 +120,68 @@
 </code></pre>
 <h3 id="wxgetbluetoothadapterstateobject">wx.getBluetoothAdapterState(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>获取本机蓝牙适配器状态</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x83B7;&#x53D6;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>discovering</td>
 <td>Boolean</td>
-<td>是否正在搜索设备</td>
+<td>&#x662F;&#x5426;&#x6B63;&#x5728;&#x641C;&#x7D22;&#x8BBE;&#x5907;</td>
 </tr>
 <tr>
 <td>available</td>
 <td>Boolean</td>
-<td>蓝牙适配器是否可用</td>
+<td>&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x662F;&#x5426;&#x53EF;&#x7528;</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.getBluetoothAdapterState({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res)
@@ -190,112 +190,112 @@
 </code></pre>
 <h3 id="wxonbluetoothadapterstatechangecallback">wx.onBluetoothAdapterStateChange(CALLBACK)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>监听蓝牙适配器状态变化事件</p>
-<p><strong>CALLBACK参数说明：</strong></p>
+<p>&#x76D1;&#x542C;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</p>
+<p><strong>CALLBACK&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>available</td>
 <td>Boolean</td>
-<td>蓝牙适配器是否可用</td>
+<td>&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x662F;&#x5426;&#x53EF;&#x7528;</td>
 </tr>
 <tr>
 <td>discovering</td>
 <td>Boolean</td>
-<td>蓝牙适配器是否处于搜索状态</td>
+<td>&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x641C;&#x7D22;&#x72B6;&#x6001;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.onBluetoothAdapterStateChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`adapterState changed, now is`</span>, res)
 })
 </code></pre>
 <h3 id="wxstartbluetoothdevicesdiscoveryobject">wx.startBluetoothDevicesDiscovery(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>开始搜寻附近的蓝牙外围设备。注意，该操作比较耗费系统资源，请在搜索并连接到设备后调用 stop 方法停止搜索。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x5F00;&#x59CB;&#x641C;&#x5BFB;&#x9644;&#x8FD1;&#x7684;&#x84DD;&#x7259;&#x5916;&#x56F4;&#x8BBE;&#x5907;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8BE5;&#x64CD;&#x4F5C;&#x6BD4;&#x8F83;&#x8017;&#x8D39;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#xFF0C;&#x8BF7;&#x5728;&#x641C;&#x7D22;&#x5E76;&#x8FDE;&#x63A5;&#x5230;&#x8BBE;&#x5907;&#x540E;&#x8C03;&#x7528; stop &#x65B9;&#x6CD5;&#x505C;&#x6B62;&#x641C;&#x7D22;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>services</td>
 <td>Array</td>
-<td>否</td>
-<td>蓝牙设备主 service 的 uuid 列表</td>
+<td>&#x5426;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4E3B; service &#x7684; uuid &#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>allowDuplicatesKey</td>
 <td>Boolean</td>
-<td>否</td>
-<td>是否允许重复上报同一设备， 如果允许重复上报，则onDeviceFound 方法会多次上报同一设备，但是 RSSI 值会有不同</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x4E0A;&#x62A5;&#x540C;&#x4E00;&#x8BBE;&#x5907;&#xFF0C; &#x5982;&#x679C;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x4E0A;&#x62A5;&#xFF0C;&#x5219;onDeviceFound &#x65B9;&#x6CD5;&#x4F1A;&#x591A;&#x6B21;&#x4E0A;&#x62A5;&#x540C;&#x4E00;&#x8BBE;&#x5907;&#xFF0C;&#x4F46;&#x662F; RSSI &#x503C;&#x4F1A;&#x6709;&#x4E0D;&#x540C;</td>
 </tr>
 <tr>
 <td>interval</td>
 <td>Number</td>
-<td>否</td>
-<td>上报设备的间隔，默认为0，意思是找到新设备立即上报，否则根据传入的间隔上报</td>
+<td>&#x5426;</td>
+<td>&#x4E0A;&#x62A5;&#x8BBE;&#x5907;&#x7684;&#x95F4;&#x9694;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x610F;&#x601D;&#x662F;&#x627E;&#x5230;&#x65B0;&#x8BBE;&#x5907;&#x7ACB;&#x5373;&#x4E0A;&#x62A5;&#xFF0C;&#x5426;&#x5219;&#x6839;&#x636E;&#x4F20;&#x5165;&#x7684;&#x95F4;&#x9694;&#x4E0A;&#x62A5;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>services</strong>参数说明：某些蓝牙设备会广播自己的主 service 的 uuid。如果这里传入该数组，那么根据该 uuid 列表，只搜索发出广播包有这个主服务的蓝牙设备，建议主要通过该参数过滤掉周边不需要处理的其他蓝牙设备。</p>
-<p><strong>success返回参数：</strong></p>
+<p><strong>services</strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;&#x67D0;&#x4E9B;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4F1A;&#x5E7F;&#x64AD;&#x81EA;&#x5DF1;&#x7684;&#x4E3B; service &#x7684; uuid&#x3002;&#x5982;&#x679C;&#x8FD9;&#x91CC;&#x4F20;&#x5165;&#x8BE5;&#x6570;&#x7EC4;&#xFF0C;&#x90A3;&#x4E48;&#x6839;&#x636E;&#x8BE5; uuid &#x5217;&#x8868;&#xFF0C;&#x53EA;&#x641C;&#x7D22;&#x53D1;&#x51FA;&#x5E7F;&#x64AD;&#x5305;&#x6709;&#x8FD9;&#x4E2A;&#x4E3B;&#x670D;&#x52A1;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x8BE5;&#x53C2;&#x6570;&#x8FC7;&#x6EE4;&#x6389;&#x5468;&#x8FB9;&#x4E0D;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x5176;&#x4ED6;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x3002;</p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// 以微信硬件平台的蓝牙智能灯为例，主服务的 UUID 是 FEE7。传入这个参数，只搜索主服务 UUID 为 FEE7 的设备</span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4EE5;&#x5FAE;&#x4FE1;&#x786C;&#x4EF6;&#x5E73;&#x53F0;&#x7684;&#x84DD;&#x7259;&#x667A;&#x80FD;&#x706F;&#x4E3A;&#x4F8B;&#xFF0C;&#x4E3B;&#x670D;&#x52A1;&#x7684; UUID &#x662F; FEE7&#x3002;&#x4F20;&#x5165;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53EA;&#x641C;&#x7D22;&#x4E3B;&#x670D;&#x52A1; UUID &#x4E3A; FEE7 &#x7684;&#x8BBE;&#x5907;</span>
 wx.startBluetoothDevicesDiscovery({
-  services: [<span class="hljs-string">'FEE7'</span>],
+  services: [<span class="hljs-string">&apos;FEE7&apos;</span>],
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res)
   }
@@ -303,58 +303,58 @@ wx.startBluetoothDevicesDiscovery({
 </code></pre>
 <h3 id="wxstopbluetoothdevicesdiscoveryobject">wx.stopBluetoothDevicesDiscovery(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>停止搜寻附近的蓝牙外围设备。若已经找到需要的蓝牙设备并不需要继续搜索时，建议调用该接口停止蓝牙搜索。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x505C;&#x6B62;&#x641C;&#x5BFB;&#x9644;&#x8FD1;&#x7684;&#x84DD;&#x7259;&#x5916;&#x56F4;&#x8BBE;&#x5907;&#x3002;&#x82E5;&#x5DF2;&#x7ECF;&#x627E;&#x5230;&#x9700;&#x8981;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x7EE7;&#x7EED;&#x641C;&#x7D22;&#x65F6;&#xFF0C;&#x5EFA;&#x8BAE;&#x8C03;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#x505C;&#x6B62;&#x84DD;&#x7259;&#x641C;&#x7D22;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.stopBluetoothDevicesDiscovery({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res)
@@ -363,120 +363,120 @@ wx.startBluetoothDevicesDiscovery({
 </code></pre>
 <h3 id="wxgetbluetoothdevicesobject">wx.getBluetoothDevices(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>获取在小程序蓝牙模块生效期间所有已发现的蓝牙设备，包括已经和本机处于连接状态的设备。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x83B7;&#x53D6;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x751F;&#x6548;&#x671F;&#x95F4;&#x6240;&#x6709;&#x5DF2;&#x53D1;&#x73B0;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x5305;&#x62EC;&#x5DF2;&#x7ECF;&#x548C;&#x672C;&#x673A;&#x5904;&#x4E8E;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x8BBE;&#x5907;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>devices</td>
 <td>Array</td>
-<td>uuid 对应的的已连接设备列表</td>
+<td>uuid &#x5BF9;&#x5E94;&#x7684;&#x7684;&#x5DF2;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<h4 id="device-对象">device 对象</h4>
-<p>蓝牙设备信息</p>
+<h4 id="device-&#x5BF9;&#x8C61;">device &#x5BF9;&#x8C61;</h4>
+<p>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4FE1;&#x606F;</p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>name</td>
 <td>String</td>
-<td>蓝牙设备名称，某些设备可能没有</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#xFF0C;&#x67D0;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
 </tr>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>用于区分设备的 id</td>
+<td>&#x7528;&#x4E8E;&#x533A;&#x5206;&#x8BBE;&#x5907;&#x7684; id</td>
 </tr>
 <tr>
 <td>RSSI</td>
 <td>Number</td>
-<td>当前蓝牙设备的信号强度</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
 </tr>
 <tr>
 <td>advertisData</td>
 <td>ArrayBuffer</td>
-<td>当前蓝牙设备的广播数据段中的ManufacturerData数据段 <strong>（注意：vConsole 无法打印出 ArrayBuffer 类型数据）</strong></td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;ManufacturerData&#x6570;&#x636E;&#x6BB5; <strong>&#xFF08;&#x6CE8;&#x610F;&#xFF1A;vConsole &#x65E0;&#x6CD5;&#x6253;&#x5370;&#x51FA; ArrayBuffer &#x7C7B;&#x578B;&#x6570;&#x636E;&#xFF09;</strong></td>
 </tr>
 <tr>
 <td>advertisServiceUUIDs</td>
 <td>Array</td>
-<td>当前蓝牙设备的广播数据段中的ServiceUUIDs数据段</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;ServiceUUIDs&#x6570;&#x636E;&#x6BB5;</td>
 </tr>
 <tr>
 <td>localName</td>
 <td>String</td>
-<td>当前蓝牙设备的广播数据段中的LocalName数据段</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;LocalName&#x6570;&#x636E;&#x6BB5;</td>
 </tr>
 <tr>
 <td>serviceData</td>
 <td>ArrayBuffer</td>
-<td>当前蓝牙设备的广播数据段中的ServiceData数据段</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;ServiceData&#x6570;&#x636E;&#x6BB5;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// ArrayBuffer转16进度字符串示例</span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ArrayBuffer&#x8F6C;16&#x8FDB;&#x5EA6;&#x5B57;&#x7B26;&#x4E32;&#x793A;&#x4F8B;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ab2hex</span>(<span class="hljs-params">buffer</span>) </span>{
   <span class="hljs-keyword">var</span> hexArr = <span class="hljs-built_in">Array</span>.prototype.map.call(
     <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(buffer),
     <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">bit</span>) </span>{
-      <span class="hljs-keyword">return</span> (<span class="hljs-string">'00'</span> + bit.toString(<span class="hljs-number">16</span>)).slice(<span class="hljs-number">-2</span>)
+      <span class="hljs-keyword">return</span> (<span class="hljs-string">&apos;00&apos;</span> + bit.toString(<span class="hljs-number">16</span>)).slice(<span class="hljs-number">-2</span>)
     }
   )
-  <span class="hljs-keyword">return</span> hexArr.join(<span class="hljs-string">''</span>);
+  <span class="hljs-keyword">return</span> hexArr.join(<span class="hljs-string">&apos;&apos;</span>);
 }
 wx.getBluetoothDevices({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
@@ -487,342 +487,342 @@ wx.getBluetoothDevices({
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: Mac系统可能无法获取<code>advertisData</code>及<code>RSSI</code>，请使用真机调试</li>
-<li><code>tip</code>: 开发者工具和 Android 上获取到的<code>deviceId</code>为设备 MAC 地址，iOS 上则为设备 uuid。因此<code>deviceId</code>不能硬编码到代码中</li>
-<li><code>tip</code>: 注意该接口获取到的设备列表为<strong>小程序蓝牙模块生效期间所有搜索到的蓝牙设备</strong>，若在蓝牙模块使用流程结束后未及时调用 wx.closeBluetoothAdapter 释放资源，会存在调用该接口会返回之前的蓝牙使用流程中搜索到的蓝牙设备，可能设备已经不在用户身边，无法连接。</li>
-<li><code>tips</code>: 蓝牙设备在被搜索到时，系统返回的 name 字段一般为广播包中的LocalName字段中的设备名称，而如果与蓝牙设备建立连接，系统返回的 name 字段会改为从蓝牙设备上获取到的GattName。若需要动态改变设备名称并展示，建议使用localName字段。</li>
+<li><code>tip</code>: Mac&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;<code>advertisData</code>&#x53CA;<code>RSSI</code>&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x771F;&#x673A;&#x8C03;&#x8BD5;</li>
+<li><code>tip</code>: &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x548C; Android &#x4E0A;&#x83B7;&#x53D6;&#x5230;&#x7684;<code>deviceId</code>&#x4E3A;&#x8BBE;&#x5907; MAC &#x5730;&#x5740;&#xFF0C;iOS &#x4E0A;&#x5219;&#x4E3A;&#x8BBE;&#x5907; uuid&#x3002;&#x56E0;&#x6B64;<code>deviceId</code>&#x4E0D;&#x80FD;&#x786C;&#x7F16;&#x7801;&#x5230;&#x4EE3;&#x7801;&#x4E2D;</li>
+<li><code>tip</code>: &#x6CE8;&#x610F;&#x8BE5;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;&#x4E3A;<strong>&#x5C0F;&#x7A0B;&#x5E8F;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x751F;&#x6548;&#x671F;&#x95F4;&#x6240;&#x6709;&#x641C;&#x7D22;&#x5230;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;</strong>&#xFF0C;&#x82E5;&#x5728;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x6D41;&#x7A0B;&#x7ED3;&#x675F;&#x540E;&#x672A;&#x53CA;&#x65F6;&#x8C03;&#x7528; wx.closeBluetoothAdapter &#x91CA;&#x653E;&#x8D44;&#x6E90;&#xFF0C;&#x4F1A;&#x5B58;&#x5728;&#x8C03;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x8FD4;&#x56DE;&#x4E4B;&#x524D;&#x7684;&#x84DD;&#x7259;&#x4F7F;&#x7528;&#x6D41;&#x7A0B;&#x4E2D;&#x641C;&#x7D22;&#x5230;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x53EF;&#x80FD;&#x8BBE;&#x5907;&#x5DF2;&#x7ECF;&#x4E0D;&#x5728;&#x7528;&#x6237;&#x8EAB;&#x8FB9;&#xFF0C;&#x65E0;&#x6CD5;&#x8FDE;&#x63A5;&#x3002;</li>
+<li><code>tips</code>: &#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5728;&#x88AB;&#x641C;&#x7D22;&#x5230;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x7684; name &#x5B57;&#x6BB5;&#x4E00;&#x822C;&#x4E3A;&#x5E7F;&#x64AD;&#x5305;&#x4E2D;&#x7684;LocalName&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#xFF0C;&#x800C;&#x5982;&#x679C;&#x4E0E;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x7CFB;&#x7EDF;&#x8FD4;&#x56DE;&#x7684; name &#x5B57;&#x6BB5;&#x4F1A;&#x6539;&#x4E3A;&#x4ECE;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4E0A;&#x83B7;&#x53D6;&#x5230;&#x7684;GattName&#x3002;&#x82E5;&#x9700;&#x8981;&#x52A8;&#x6001;&#x6539;&#x53D8;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#x5E76;&#x5C55;&#x793A;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;localName&#x5B57;&#x6BB5;&#x3002;</li>
 </ol>
 <h3 id="wxonbluetoothdevicefoundcallback">wx.onBluetoothDeviceFound(CALLBACK)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>监听寻找到新设备的事件</p>
-<p><strong>CALLBACK参数说明：</strong></p>
+<p>&#x76D1;&#x542C;&#x5BFB;&#x627E;&#x5230;&#x65B0;&#x8BBE;&#x5907;&#x7684;&#x4E8B;&#x4EF6;</p>
+<p><strong>CALLBACK&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>devices</td>
 <td>Array</td>
-<td>新搜索到的设备列表</td>
+<td>&#x65B0;&#x641C;&#x7D22;&#x5230;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</td>
 </tr>
 </tbody>
 </table>
-<h4 id="device-对象">device 对象</h4>
-<p>蓝牙设备信息</p>
+<h4 id="device-&#x5BF9;&#x8C61;">device &#x5BF9;&#x8C61;</h4>
+<p>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4FE1;&#x606F;</p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>name</td>
 <td>String</td>
-<td>蓝牙设备名称，某些设备可能没有</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#xFF0C;&#x67D0;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
 </tr>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>用于区分设备的 id</td>
+<td>&#x7528;&#x4E8E;&#x533A;&#x5206;&#x8BBE;&#x5907;&#x7684; id</td>
 </tr>
 <tr>
 <td>RSSI</td>
 <td>Number</td>
-<td>当前蓝牙设备的信号强度</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
 </tr>
 <tr>
 <td>advertisData</td>
 <td>ArrayBuffer</td>
-<td>当前蓝牙设备的广播数据段中的ManufacturerData数据段 <strong>（注意：vConsole 无法打印出 ArrayBuffer 类型数据）</strong></td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;ManufacturerData&#x6570;&#x636E;&#x6BB5; <strong>&#xFF08;&#x6CE8;&#x610F;&#xFF1A;vConsole &#x65E0;&#x6CD5;&#x6253;&#x5370;&#x51FA; ArrayBuffer &#x7C7B;&#x578B;&#x6570;&#x636E;&#xFF09;</strong></td>
 </tr>
 <tr>
 <td>advertisServiceUUIDs</td>
 <td>Array</td>
-<td>当前蓝牙设备的广播数据段中的ServiceUUIDs数据段</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;ServiceUUIDs&#x6570;&#x636E;&#x6BB5;</td>
 </tr>
 <tr>
 <td>localName</td>
 <td>String</td>
-<td>当前蓝牙设备的广播数据段中的LocalName数据段</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;LocalName&#x6570;&#x636E;&#x6BB5;</td>
 </tr>
 <tr>
 <td>serviceData</td>
 <td>ArrayBuffer</td>
-<td>当前蓝牙设备的广播数据段中的ServiceData数据段</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684;ServiceData&#x6570;&#x636E;&#x6BB5;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// ArrayBuffer转16进度字符串示例</span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ArrayBuffer&#x8F6C;16&#x8FDB;&#x5EA6;&#x5B57;&#x7B26;&#x4E32;&#x793A;&#x4F8B;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ab2hex</span>(<span class="hljs-params">buffer</span>) </span>{
   <span class="hljs-keyword">var</span> hexArr = <span class="hljs-built_in">Array</span>.prototype.map.call(
     <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(buffer),
     <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">bit</span>) </span>{
-      <span class="hljs-keyword">return</span> (<span class="hljs-string">'00'</span> + bit.toString(<span class="hljs-number">16</span>)).slice(<span class="hljs-number">-2</span>)
+      <span class="hljs-keyword">return</span> (<span class="hljs-string">&apos;00&apos;</span> + bit.toString(<span class="hljs-number">16</span>)).slice(<span class="hljs-number">-2</span>)
     }
   )
-  <span class="hljs-keyword">return</span> hexArr.join(<span class="hljs-string">''</span>);
+  <span class="hljs-keyword">return</span> hexArr.join(<span class="hljs-string">&apos;&apos;</span>);
 }
 wx.onBluetoothDeviceFound(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">devices</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'new device list has founded'</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;new device list has founded&apos;</span>)
   <span class="hljs-built_in">console</span>.dir(devices)
   <span class="hljs-built_in">console</span>.log(ab2hex(devices[<span class="hljs-number">0</span>].advertisData))
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: Mac系统可能无法获取<code>advertisData</code>及<code>RSSI</code>，请使用真机调试</li>
-<li><code>tip</code>: 开发者工具和 Android 上获取到的<code>deviceId</code>为设备 MAC 地址，iOS 上则为设备 uuid。因此<code>deviceId</code>不能硬编码到代码中</li>
-<li><code>tip</code>: 若在onBluetoothDeviceFound回调了某个设备，则此设备会添加到 wx.getBluetoothDevices 接口获取到的数组中</li>
+<li><code>tip</code>: Mac&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;<code>advertisData</code>&#x53CA;<code>RSSI</code>&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x771F;&#x673A;&#x8C03;&#x8BD5;</li>
+<li><code>tip</code>: &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x548C; Android &#x4E0A;&#x83B7;&#x53D6;&#x5230;&#x7684;<code>deviceId</code>&#x4E3A;&#x8BBE;&#x5907; MAC &#x5730;&#x5740;&#xFF0C;iOS &#x4E0A;&#x5219;&#x4E3A;&#x8BBE;&#x5907; uuid&#x3002;&#x56E0;&#x6B64;<code>deviceId</code>&#x4E0D;&#x80FD;&#x786C;&#x7F16;&#x7801;&#x5230;&#x4EE3;&#x7801;&#x4E2D;</li>
+<li><code>tip</code>: &#x82E5;&#x5728;onBluetoothDeviceFound&#x56DE;&#x8C03;&#x4E86;&#x67D0;&#x4E2A;&#x8BBE;&#x5907;&#xFF0C;&#x5219;&#x6B64;&#x8BBE;&#x5907;&#x4F1A;&#x6DFB;&#x52A0;&#x5230; wx.getBluetoothDevices &#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x6570;&#x7EC4;&#x4E2D;</li>
 </ol>
 <h3 id="wxgetconnectedbluetoothdevicesobject">wx.getConnectedBluetoothDevices(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>根据 uuid 获取处于已连接状态的设备</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x6839;&#x636E; uuid &#x83B7;&#x53D6;&#x5904;&#x4E8E;&#x5DF2;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x8BBE;&#x5907;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>services</td>
 <td>Array</td>
-<td>是</td>
-<td>蓝牙设备主 service 的 uuid 列表</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4E3B; service &#x7684; uuid &#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>devices</td>
 <td>Array</td>
-<td>搜索到的设备列表</td>
+<td>&#x641C;&#x7D22;&#x5230;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<h4 id="device对象">device对象</h4>
-<p>蓝牙设备信息</p>
+<h4 id="device&#x5BF9;&#x8C61;">device&#x5BF9;&#x8C61;</h4>
+<p>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4FE1;&#x606F;</p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>name</td>
 <td>String</td>
-<td>蓝牙设备名称，某些设备可能没有</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#xFF0C;&#x67D0;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
 </tr>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>用于区分设备的 id</td>
+<td>&#x7528;&#x4E8E;&#x533A;&#x5206;&#x8BBE;&#x5907;&#x7684; id</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.getConnectedBluetoothDevices({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: 开发者工具和 Android 上获取到的<code>deviceId</code>为设备 MAC 地址，iOS 上则为设备 uuid。因此<code>deviceId</code>不能硬编码到代码中</li>
+<li><code>tip</code>: &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x548C; Android &#x4E0A;&#x83B7;&#x53D6;&#x5230;&#x7684;<code>deviceId</code>&#x4E3A;&#x8BBE;&#x5907; MAC &#x5730;&#x5740;&#xFF0C;iOS &#x4E0A;&#x5219;&#x4E3A;&#x8BBE;&#x5907; uuid&#x3002;&#x56E0;&#x6B64;<code>deviceId</code>&#x4E0D;&#x80FD;&#x786C;&#x7F16;&#x7801;&#x5230;&#x4EE3;&#x7801;&#x4E2D;</li>
 </ol>
-<h2 id="低功耗蓝牙接口">低功耗蓝牙接口</h2>
+<h2 id="&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x63A5;&#x53E3;">&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x63A5;&#x53E3;</h2>
 <h3 id="wxcreatebleconnectionobject">wx.createBLEConnection(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>连接低功耗蓝牙设备。</p>
+<p>&#x8FDE;&#x63A5;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x3002;</p>
 <blockquote>
-<p>若小程序在之前已有搜索过某个蓝牙设备，并成功建立链接，可直接传入之前搜索获取的deviceId直接尝试连接该设备，无需进行搜索操作。</p>
+<p>&#x82E5;&#x5C0F;&#x7A0B;&#x5E8F;&#x5728;&#x4E4B;&#x524D;&#x5DF2;&#x6709;&#x641C;&#x7D22;&#x8FC7;&#x67D0;&#x4E2A;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x5E76;&#x6210;&#x529F;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x4F20;&#x5165;&#x4E4B;&#x524D;&#x641C;&#x7D22;&#x83B7;&#x53D6;&#x7684;deviceId&#x76F4;&#x63A5;&#x5C1D;&#x8BD5;&#x8FDE;&#x63A5;&#x8BE5;&#x8BBE;&#x5907;&#xFF0C;&#x65E0;&#x9700;&#x8FDB;&#x884C;&#x641C;&#x7D22;&#x64CD;&#x4F5C;&#x3002;</p>
 </blockquote>
-<p><strong>OBJECT参数说明：</strong></p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙设备 id，参考 getDevices 接口</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; getDevices &#x63A5;&#x53E3;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.createBLEConnection({
-  <span class="hljs-comment">// 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接 </span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5; </span>
   deviceId: deviceId,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: 安卓手机上如果多次调用create创建连接，有可能导致系统持有同一设备多个连接的实例，导致调用close的时候并不能真正的断开与设备的连接。因此请保证尽量成对的调用create和close接口</li>
-<li><code>tip</code>: 蓝牙链接随时可能断开，建议监听 wx.onBLEConnectionStateChange 回调事件，当蓝牙设备断开时按需执行重连操作 </li>
-<li><code>tip</code>: 若对未连接的设备或已断开连接的设备调用数据读写操作的接口，会返回10006错误，详见错误码，建议进行重连操作</li>
+<li><code>tip</code>: &#x5B89;&#x5353;&#x624B;&#x673A;&#x4E0A;&#x5982;&#x679C;&#x591A;&#x6B21;&#x8C03;&#x7528;create&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x6301;&#x6709;&#x540C;&#x4E00;&#x8BBE;&#x5907;&#x591A;&#x4E2A;&#x8FDE;&#x63A5;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5BFC;&#x81F4;&#x8C03;&#x7528;close&#x7684;&#x65F6;&#x5019;&#x5E76;&#x4E0D;&#x80FD;&#x771F;&#x6B63;&#x7684;&#x65AD;&#x5F00;&#x4E0E;&#x8BBE;&#x5907;&#x7684;&#x8FDE;&#x63A5;&#x3002;&#x56E0;&#x6B64;&#x8BF7;&#x4FDD;&#x8BC1;&#x5C3D;&#x91CF;&#x6210;&#x5BF9;&#x7684;&#x8C03;&#x7528;create&#x548C;close&#x63A5;&#x53E3;</li>
+<li><code>tip</code>: &#x84DD;&#x7259;&#x94FE;&#x63A5;&#x968F;&#x65F6;&#x53EF;&#x80FD;&#x65AD;&#x5F00;&#xFF0C;&#x5EFA;&#x8BAE;&#x76D1;&#x542C; wx.onBLEConnectionStateChange &#x56DE;&#x8C03;&#x4E8B;&#x4EF6;&#xFF0C;&#x5F53;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x65AD;&#x5F00;&#x65F6;&#x6309;&#x9700;&#x6267;&#x884C;&#x91CD;&#x8FDE;&#x64CD;&#x4F5C; </li>
+<li><code>tip</code>: &#x82E5;&#x5BF9;&#x672A;&#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;&#x6216;&#x5DF2;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;&#x8C03;&#x7528;&#x6570;&#x636E;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;10006&#x9519;&#x8BEF;&#xFF0C;&#x8BE6;&#x89C1;&#x9519;&#x8BEF;&#x7801;&#xFF0C;&#x5EFA;&#x8BAE;&#x8FDB;&#x884C;&#x91CD;&#x8FDE;&#x64CD;&#x4F5C;</li>
 </ol>
 <h3 id="wxclosebleconnectionobject">wx.closeBLEConnection(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>断开与低功耗蓝牙设备的连接</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x65AD;&#x5F00;&#x4E0E;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x8FDE;&#x63A5;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙设备 id，参考 getDevices 接口</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; getDevices &#x63A5;&#x53E3;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.closeBLEConnection({
   deviceId:deviceId
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
@@ -832,696 +832,696 @@ wx.onBluetoothDeviceFound(<span class="hljs-function"><span class="hljs-keyword"
 </code></pre>
 <h3 id="wxonbleconnectionstatechangecallback">wx.onBLEConnectionStateChange(CALLBACK)</h3>
 <blockquote>
-<p>基础库 1.1.1 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.1 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>监听低功耗蓝牙连接状态的改变事件，包括开发者主动连接或断开连接，设备丢失，连接异常断开等等</p>
-<p><strong>CALLBACK参数说明：</strong></p>
+<p>&#x76D1;&#x542C;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x6539;&#x53D8;&#x4E8B;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#x5F00;&#x53D1;&#x8005;&#x4E3B;&#x52A8;&#x8FDE;&#x63A5;&#x6216;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x8BBE;&#x5907;&#x4E22;&#x5931;&#xFF0C;&#x8FDE;&#x63A5;&#x5F02;&#x5E38;&#x65AD;&#x5F00;&#x7B49;&#x7B49;</p>
+<p><strong>CALLBACK&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>蓝牙设备 id，参考 device 对象</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; device &#x5BF9;&#x8C61;</td>
 </tr>
 <tr>
 <td>connected</td>
 <td>Boolean</td>
-<td>连接目前的状态</td>
+<td>&#x8FDE;&#x63A5;&#x76EE;&#x524D;&#x7684;&#x72B6;&#x6001;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.onBLEConnectionStateChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-comment">// 该方法回调中可以用于处理连接意外断开等异常情况</span>
+  <span class="hljs-comment">// &#x8BE5;&#x65B9;&#x6CD5;&#x56DE;&#x8C03;&#x4E2D;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x8FDE;&#x63A5;&#x610F;&#x5916;&#x65AD;&#x5F00;&#x7B49;&#x5F02;&#x5E38;&#x60C5;&#x51B5;</span>
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`device <span class="hljs-subst">${res.deviceId}</span> state has changed, connected: <span class="hljs-subst">${res.connected}</span>`</span>)
 })
 </code></pre>
 <h3 id="wxgetbledeviceservicesobject">wx.getBLEDeviceServices(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>获取蓝牙设备所有 service（服务）</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x83B7;&#x53D6;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x6240;&#x6709; service&#xFF08;&#x670D;&#x52A1;&#xFF09;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙设备 id，参考 getDevices 接口</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; getDevices &#x63A5;&#x53E3;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>services</td>
 <td>Array</td>
-<td>设备服务列表</td>
+<td>&#x8BBE;&#x5907;&#x670D;&#x52A1;&#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<h4 id="service对象">service对象</h4>
-<p>蓝牙设备service(服务)信息</p>
+<h4 id="service&#x5BF9;&#x8C61;">service&#x5BF9;&#x8C61;</h4>
+<p>&#x84DD;&#x7259;&#x8BBE;&#x5907;service(&#x670D;&#x52A1;)&#x4FE1;&#x606F;</p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>uuid</td>
 <td>String</td>
-<td>蓝牙设备服务的 uuid</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x670D;&#x52A1;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>isPrimary</td>
 <td>Boolean</td>
-<td>该服务是否为主服务</td>
+<td>&#x8BE5;&#x670D;&#x52A1;&#x662F;&#x5426;&#x4E3A;&#x4E3B;&#x670D;&#x52A1;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.getBLEDeviceServices({
-  <span class="hljs-comment">// 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接 </span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5; </span>
   deviceId: deviceId,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'device services:'</span>, res.services)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;device services:&apos;</span>, res.services)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>:iOS平台上后续对特征值的read、write、notify，由于系统需要获取特征值实例，传入的 serviceId 与 characteristicId 必须由 getBLEDeviceServices 与 getBLEDeviceCharacteristics 中获取到后才能使用。建议双平台统一在建立链接后先执行 getBLEDeviceServices 与 getBLEDeviceCharacteristics 后再进行与蓝牙设备的数据交互</li>
+<li><code>tip</code>:iOS&#x5E73;&#x53F0;&#x4E0A;&#x540E;&#x7EED;&#x5BF9;&#x7279;&#x5F81;&#x503C;&#x7684;read&#x3001;write&#x3001;notify&#xFF0C;&#x7531;&#x4E8E;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7279;&#x5F81;&#x503C;&#x5B9E;&#x4F8B;&#xFF0C;&#x4F20;&#x5165;&#x7684; serviceId &#x4E0E; characteristicId &#x5FC5;&#x987B;&#x7531; getBLEDeviceServices &#x4E0E; getBLEDeviceCharacteristics &#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x540E;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x5EFA;&#x8BAE;&#x53CC;&#x5E73;&#x53F0;&#x7EDF;&#x4E00;&#x5728;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;&#x540E;&#x5148;&#x6267;&#x884C; getBLEDeviceServices &#x4E0E; getBLEDeviceCharacteristics &#x540E;&#x518D;&#x8FDB;&#x884C;&#x4E0E;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;</li>
 </ol>
 <h3 id="wxgetbledevicecharacteristicsobject">wx.getBLEDeviceCharacteristics(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p> 获取蓝牙设备某个服务中的所有 characteristic（特征值） </p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p> &#x83B7;&#x53D6;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x67D0;&#x4E2A;&#x670D;&#x52A1;&#x4E2D;&#x7684;&#x6240;&#x6709; characteristic&#xFF08;&#x7279;&#x5F81;&#x503C;&#xFF09; </p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙设备 id，参考 device 对象</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; device &#x5BF9;&#x8C61;</td>
 </tr>
 <tr>
 <td>serviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙服务 uuid</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x670D;&#x52A1; uuid</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>characteristics</td>
 <td>Array</td>
-<td>设备特征值列表</td>
+<td>&#x8BBE;&#x5907;&#x7279;&#x5F81;&#x503C;&#x5217;&#x8868;</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<h4 id="characteristic对象">characteristic对象</h4>
-<p>蓝牙设备characteristic(特征值)信息</p>
+<h4 id="characteristic&#x5BF9;&#x8C61;">characteristic&#x5BF9;&#x8C61;</h4>
+<p>&#x84DD;&#x7259;&#x8BBE;&#x5907;characteristic(&#x7279;&#x5F81;&#x503C;)&#x4FE1;&#x606F;</p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>uuid</td>
 <td>String</td>
-<td>蓝牙设备特征值的 uuid</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7279;&#x5F81;&#x503C;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>properties</td>
 <td>Object</td>
-<td>该特征值支持的操作类型</td>
+<td>&#x8BE5;&#x7279;&#x5F81;&#x503C;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#x7C7B;&#x578B;</td>
 </tr>
 </tbody>
 </table>
-<h5 id="properties对象">properties对象</h5>
+<h5 id="properties&#x5BF9;&#x8C61;">properties&#x5BF9;&#x8C61;</h5>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>read</td>
 <td>Boolean</td>
-<td>该特征值是否支持 read 操作</td>
+<td>&#x8BE5;&#x7279;&#x5F81;&#x503C;&#x662F;&#x5426;&#x652F;&#x6301; read &#x64CD;&#x4F5C;</td>
 </tr>
 <tr>
 <td>write</td>
 <td>Boolean</td>
-<td>该特征值是否支持 write 操作</td>
+<td>&#x8BE5;&#x7279;&#x5F81;&#x503C;&#x662F;&#x5426;&#x652F;&#x6301; write &#x64CD;&#x4F5C;</td>
 </tr>
 <tr>
 <td>notify</td>
 <td>Boolean</td>
-<td>该特征值是否支持 notify 操作</td>
+<td>&#x8BE5;&#x7279;&#x5F81;&#x503C;&#x662F;&#x5426;&#x652F;&#x6301; notify &#x64CD;&#x4F5C;</td>
 </tr>
 <tr>
 <td>indicate</td>
 <td>Boolean</td>
-<td>该特征值是否支持 indicate 操作</td>
+<td>&#x8BE5;&#x7279;&#x5F81;&#x503C;&#x662F;&#x5426;&#x652F;&#x6301; indicate &#x64CD;&#x4F5C;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.getBLEDeviceCharacteristics({
-  <span class="hljs-comment">// 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;</span>
   deviceId: deviceId,
-  <span class="hljs-comment">// 这里的 serviceId 需要在上面的 getBLEDeviceServices 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; serviceId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBLEDeviceServices &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   serviceId: serviceId,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'device getBLEDeviceCharacteristics:'</span>, res.characteristics)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;device getBLEDeviceCharacteristics:&apos;</span>, res.characteristics)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>:传入的serviceId需要在getBLEDeviceServices获取到</li>
-<li><code>tip</code>:iOS平台上后续对特征值的read、write、notify，由于系统需要获取特征值实例，传入的 serviceId 与 characteristicId 必须由 getBLEDeviceServices 与 getBLEDeviceCharacteristics 中获取到后才能使用。建议双平台统一在建立链接后先执行 getBLEDeviceServices 与 getBLEDeviceCharacteristics 后再进行与蓝牙设备的数据交互  </li>
+<li><code>tip</code>:&#x4F20;&#x5165;&#x7684;serviceId&#x9700;&#x8981;&#x5728;getBLEDeviceServices&#x83B7;&#x53D6;&#x5230;</li>
+<li><code>tip</code>:iOS&#x5E73;&#x53F0;&#x4E0A;&#x540E;&#x7EED;&#x5BF9;&#x7279;&#x5F81;&#x503C;&#x7684;read&#x3001;write&#x3001;notify&#xFF0C;&#x7531;&#x4E8E;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7279;&#x5F81;&#x503C;&#x5B9E;&#x4F8B;&#xFF0C;&#x4F20;&#x5165;&#x7684; serviceId &#x4E0E; characteristicId &#x5FC5;&#x987B;&#x7531; getBLEDeviceServices &#x4E0E; getBLEDeviceCharacteristics &#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x540E;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x5EFA;&#x8BAE;&#x53CC;&#x5E73;&#x53F0;&#x7EDF;&#x4E00;&#x5728;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;&#x540E;&#x5148;&#x6267;&#x884C; getBLEDeviceServices &#x4E0E; getBLEDeviceCharacteristics &#x540E;&#x518D;&#x8FDB;&#x884C;&#x4E0E;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;  </li>
 </ol>
 <h3 id="wxreadblecharacteristicvalueobject">wx.readBLECharacteristicValue(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>读取低功耗蓝牙设备的特征值的二进制数据值。注意：必须设备的特征值支持<code>read</code>才可以成功调用，具体参照 characteristic 的 properties 属性</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x8BFB;&#x53D6;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x503C;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x652F;&#x6301;<code>read</code>&#x624D;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x8C03;&#x7528;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x7167; characteristic &#x7684; properties &#x5C5E;&#x6027;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙设备 id，参考 device 对象</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; device &#x5BF9;&#x8C61;</td>
 </tr>
 <tr>
 <td>serviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙特征值对应服务的 uuid</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>characteristicId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙特征值的 uuid</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errCode</td>
 <td>Number</td>
-<td>错误码</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// 必须在这里的回调才能获取</span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5FC5;&#x987B;&#x5728;&#x8FD9;&#x91CC;&#x7684;&#x56DE;&#x8C03;&#x624D;&#x80FD;&#x83B7;&#x53D6;</span>
 wx.onBLECharacteristicValueChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">characteristic</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'characteristic value comed:'</span>, characteristic)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;characteristic value comed:&apos;</span>, characteristic)
 })
 
 wx.readBLECharacteristicValue({
-  <span class="hljs-comment">// 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接  [**new**]</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;  [**new**]</span>
   deviceId: deviceId,
-  <span class="hljs-comment">// 这里的 serviceId 需要在上面的 getBLEDeviceServices 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; serviceId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBLEDeviceServices &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   serviceId: serviceId,
-  <span class="hljs-comment">// 这里的 characteristicId 需要在上面的 getBLEDeviceCharacteristics 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; characteristicId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBLEDeviceCharacteristics &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   characteristicId: characteristicId,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'readBLECharacteristicValue:'</span>, res.errCode)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;readBLECharacteristicValue:&apos;</span>, res.errCode)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: 并行调用多次读写接口存在读写失败的可能性。</li>
-<li><code>tip</code>: <code>read</code>接口读取到的信息需要在<code>onBLECharacteristicValueChange</code>方法注册的回调中获取。</li>
+<li><code>tip</code>: &#x5E76;&#x884C;&#x8C03;&#x7528;&#x591A;&#x6B21;&#x8BFB;&#x5199;&#x63A5;&#x53E3;&#x5B58;&#x5728;&#x8BFB;&#x5199;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;</li>
+<li><code>tip</code>: <code>read</code>&#x63A5;&#x53E3;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x4FE1;&#x606F;&#x9700;&#x8981;&#x5728;<code>onBLECharacteristicValueChange</code>&#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#x7684;&#x56DE;&#x8C03;&#x4E2D;&#x83B7;&#x53D6;&#x3002;</li>
 </ol>
 <h3 id="wxwriteblecharacteristicvalueobject">wx.writeBLECharacteristicValue(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>向低功耗蓝牙设备特征值中写入二进制数据。注意：必须设备的特征值支持<code>write</code>才可以成功调用，具体参照 characteristic 的 properties 属性</p>
-<p><em>tips: 并行调用多次读写接口存在读写失败的可能性</em></p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x5411;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7279;&#x5F81;&#x503C;&#x4E2D;&#x5199;&#x5165;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x652F;&#x6301;<code>write</code>&#x624D;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x8C03;&#x7528;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x7167; characteristic &#x7684; properties &#x5C5E;&#x6027;</p>
+<p><em>tips: &#x5E76;&#x884C;&#x8C03;&#x7528;&#x591A;&#x6B21;&#x8BFB;&#x5199;&#x63A5;&#x53E3;&#x5B58;&#x5728;&#x8BFB;&#x5199;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x6027;</em></p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙设备 id，参考 device 对象</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; device &#x5BF9;&#x8C61;</td>
 </tr>
 <tr>
 <td>serviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙特征值对应服务的 uuid</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>characteristicId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙特征值的 uuid</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>value</td>
 <td>ArrayBuffer</td>
-<td>是</td>
-<td>蓝牙设备特征值对应的二进制值</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7279;&#x5F81;&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x503C;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// 向蓝牙设备发送一个0x00的16进制数据</span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5411;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x53D1;&#x9001;&#x4E00;&#x4E2A;0x00&#x7684;16&#x8FDB;&#x5236;&#x6570;&#x636E;</span>
 <span class="hljs-keyword">let</span> buffer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ArrayBuffer</span>(<span class="hljs-number">1</span>)
 <span class="hljs-keyword">let</span> dataView = <span class="hljs-keyword">new</span> <span class="hljs-built_in">DataView</span>(buffer)
 dataView.setUint8(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
 
 wx.writeBLECharacteristicValue({
-  <span class="hljs-comment">// 这里的 deviceId 需要在上面的 getBluetoothDevices 或 onBluetoothDeviceFound 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBluetoothDevices &#x6216; onBluetoothDeviceFound &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   deviceId: deviceId,
-  <span class="hljs-comment">// 这里的 serviceId 需要在上面的 getBLEDeviceServices 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; serviceId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBLEDeviceServices &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   serviceId: serviceId,
-  <span class="hljs-comment">// 这里的 characteristicId 需要在上面的 getBLEDeviceCharacteristics 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; characteristicId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBLEDeviceCharacteristics &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   characteristicId: characteristicId,
-  <span class="hljs-comment">// 这里的value是ArrayBuffer类型</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684;value&#x662F;ArrayBuffer&#x7C7B;&#x578B;</span>
   value: buffer,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'writeBLECharacteristicValue success'</span>, res.errMsg)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;writeBLECharacteristicValue success&apos;</span>, res.errMsg)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: 并行调用多次读写接口存在读写失败的可能性。</li>
-<li><code>tip</code>: 小程序不会对写入数据包大小做限制，但系统与蓝牙设备会确定蓝牙4.0单次传输的数据大小，超过最大字节数后会发生写入错误，建议每次写入不超过20字节。</li>
-<li><code>tip</code>: 安卓平台上，在调用notify成功后立即调用write接口，在部分机型上会发生 10008 系统错误</li>
-<li><code>bug</code>: 若单次写入数据过长，iOS平台上存在系统不会有任何回调的情况(包括错误回调)。</li>
+<li><code>tip</code>: &#x5E76;&#x884C;&#x8C03;&#x7528;&#x591A;&#x6B21;&#x8BFB;&#x5199;&#x63A5;&#x53E3;&#x5B58;&#x5728;&#x8BFB;&#x5199;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;</li>
+<li><code>tip</code>: &#x5C0F;&#x7A0B;&#x5E8F;&#x4E0D;&#x4F1A;&#x5BF9;&#x5199;&#x5165;&#x6570;&#x636E;&#x5305;&#x5927;&#x5C0F;&#x505A;&#x9650;&#x5236;&#xFF0C;&#x4F46;&#x7CFB;&#x7EDF;&#x4E0E;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4F1A;&#x786E;&#x5B9A;&#x84DD;&#x7259;4.0&#x5355;&#x6B21;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF0C;&#x8D85;&#x8FC7;&#x6700;&#x5927;&#x5B57;&#x8282;&#x6570;&#x540E;&#x4F1A;&#x53D1;&#x751F;&#x5199;&#x5165;&#x9519;&#x8BEF;&#xFF0C;&#x5EFA;&#x8BAE;&#x6BCF;&#x6B21;&#x5199;&#x5165;&#x4E0D;&#x8D85;&#x8FC7;20&#x5B57;&#x8282;&#x3002;</li>
+<li><code>tip</code>: &#x5B89;&#x5353;&#x5E73;&#x53F0;&#x4E0A;&#xFF0C;&#x5728;&#x8C03;&#x7528;notify&#x6210;&#x529F;&#x540E;&#x7ACB;&#x5373;&#x8C03;&#x7528;write&#x63A5;&#x53E3;&#xFF0C;&#x5728;&#x90E8;&#x5206;&#x673A;&#x578B;&#x4E0A;&#x4F1A;&#x53D1;&#x751F; 10008 &#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</li>
+<li><code>bug</code>: &#x82E5;&#x5355;&#x6B21;&#x5199;&#x5165;&#x6570;&#x636E;&#x8FC7;&#x957F;&#xFF0C;iOS&#x5E73;&#x53F0;&#x4E0A;&#x5B58;&#x5728;&#x7CFB;&#x7EDF;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x56DE;&#x8C03;&#x7684;&#x60C5;&#x51B5;(&#x5305;&#x62EC;&#x9519;&#x8BEF;&#x56DE;&#x8C03;)&#x3002;</li>
 </ol>
 <h3 id="wxnotifyblecharacteristicvaluechangeobject">wx.notifyBLECharacteristicValueChange(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.1.1 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.1 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>启用低功耗蓝牙设备特征值变化时的 notify 功能，订阅特征值。注意：必须设备的特征值支持<code>notify</code>或者<code>indicate</code>才可以成功调用，具体参照 characteristic 的 properties 属性 </p>
-<p>另外，必须先启用<code>notify</code>才能监听到设备 characteristicValueChange 事件</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x542F;&#x7528;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7279;&#x5F81;&#x503C;&#x53D8;&#x5316;&#x65F6;&#x7684; notify &#x529F;&#x80FD;&#xFF0C;&#x8BA2;&#x9605;&#x7279;&#x5F81;&#x503C;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x652F;&#x6301;<code>notify</code>&#x6216;&#x8005;<code>indicate</code>&#x624D;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x8C03;&#x7528;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x7167; characteristic &#x7684; properties &#x5C5E;&#x6027; </p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5FC5;&#x987B;&#x5148;&#x542F;&#x7528;<code>notify</code>&#x624D;&#x80FD;&#x76D1;&#x542C;&#x5230;&#x8BBE;&#x5907; characteristicValueChange &#x4E8B;&#x4EF6;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙设备 id，参考 device 对象</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; device &#x5BF9;&#x8C61;</td>
 </tr>
 <tr>
 <td>serviceId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙特征值对应服务的 uuid</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>characteristicId</td>
 <td>String</td>
-<td>是</td>
-<td>蓝牙特征值的 uuid</td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x7684; uuid</td>
 </tr>
 <tr>
 <td>state</td>
 <td>Boolean</td>
-<td>是</td>
-<td>true: 启用 notify; false: 停用 notify</td>
+<td>&#x662F;</td>
+<td>true: &#x542F;&#x7528; notify; false: &#x505C;&#x7528; notify</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>是</td>
-<td>成功则返回本机蓝牙适配器状态</td>
+<td>&#x662F;</td>
+<td>&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>成功：ok，错误：详细信息</td>
+<td>&#x6210;&#x529F;&#xFF1A;ok&#xFF0C;&#x9519;&#x8BEF;&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.notifyBLECharacteristicValueChange({
-  state: <span class="hljs-literal">true</span>, <span class="hljs-comment">// 启用 notify 功能</span>
-  <span class="hljs-comment">// 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接  </span>
+  state: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x542F;&#x7528; notify &#x529F;&#x80FD;</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;  </span>
   deviceId: deviceId,
-  <span class="hljs-comment">// 这里的 serviceId 需要在上面的 getBLEDeviceServices 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; serviceId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBLEDeviceServices &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   serviceId: serviceId,
-  <span class="hljs-comment">// 这里的 characteristicId 需要在上面的 getBLEDeviceCharacteristics 接口中获取</span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; characteristicId &#x9700;&#x8981;&#x5728;&#x4E0A;&#x9762;&#x7684; getBLEDeviceCharacteristics &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   characteristicId: characteristicId,
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'notifyBLECharacteristicValueChange success'</span>, res.errMsg)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;notifyBLECharacteristicValueChange success&apos;</span>, res.errMsg)
   }
 })
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: 订阅操作成功后需要设备主动更新特征值的value，才会触发 wx.onBLECharacteristicValueChange 回调。 </li>
-<li><code>tip</code>: 安卓平台上，在调用notify成功后立即调用write接口，在部分机型上会发生 10008 系统错误</li>
+<li><code>tip</code>: &#x8BA2;&#x9605;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x540E;&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4E3B;&#x52A8;&#x66F4;&#x65B0;&#x7279;&#x5F81;&#x503C;&#x7684;value&#xFF0C;&#x624D;&#x4F1A;&#x89E6;&#x53D1; wx.onBLECharacteristicValueChange &#x56DE;&#x8C03;&#x3002; </li>
+<li><code>tip</code>: &#x5B89;&#x5353;&#x5E73;&#x53F0;&#x4E0A;&#xFF0C;&#x5728;&#x8C03;&#x7528;notify&#x6210;&#x529F;&#x540E;&#x7ACB;&#x5373;&#x8C03;&#x7528;write&#x63A5;&#x53E3;&#xFF0C;&#x5728;&#x90E8;&#x5206;&#x673A;&#x578B;&#x4E0A;&#x4F1A;&#x53D1;&#x751F; 10008 &#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</li>
 </ol>
 <h3 id="wxonblecharacteristicvaluechangecallback">wx.onBLECharacteristicValueChange(CALLBACK)</h3>
 <blockquote>
-<p>基础库 1.1.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>监听低功耗蓝牙设备的特征值变化。必须先启用<code>notify</code>接口才能接收到设备推送的notification。</p>
-<p><strong>CALLBACK参数说明：</strong></p>
+<p>&#x76D1;&#x542C;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x53D8;&#x5316;&#x3002;&#x5FC5;&#x987B;&#x5148;&#x542F;&#x7528;<code>notify</code>&#x63A5;&#x53E3;&#x624D;&#x80FD;&#x63A5;&#x6536;&#x5230;&#x8BBE;&#x5907;&#x63A8;&#x9001;&#x7684;notification&#x3002;</p>
+<p><strong>CALLBACK&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>deviceId</td>
 <td>String</td>
-<td>蓝牙设备 id，参考 device 对象</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id&#xFF0C;&#x53C2;&#x8003; device &#x5BF9;&#x8C61;</td>
 </tr>
 <tr>
 <td>serviceId</td>
 <td>String</td>
-<td>特征值所属服务 uuid</td>
+<td>&#x7279;&#x5F81;&#x503C;&#x6240;&#x5C5E;&#x670D;&#x52A1; uuid</td>
 </tr>
 <tr>
 <td>characteristicId</td>
 <td>String</td>
-<td>特征值 uuid</td>
+<td>&#x7279;&#x5F81;&#x503C; uuid</td>
 </tr>
 <tr>
 <td>value</td>
 <td>ArrayBuffer</td>
-<td>特征值最新的值 <strong>（注意：vConsole 无法打印出 ArrayBuffer 类型数据）</strong></td>
+<td>&#x7279;&#x5F81;&#x503C;&#x6700;&#x65B0;&#x7684;&#x503C; <strong>&#xFF08;&#x6CE8;&#x610F;&#xFF1A;vConsole &#x65E0;&#x6CD5;&#x6253;&#x5370;&#x51FA; ArrayBuffer &#x7C7B;&#x578B;&#x6570;&#x636E;&#xFF09;</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// ArrayBuffer转16进度字符串示例</span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ArrayBuffer&#x8F6C;16&#x8FDB;&#x5EA6;&#x5B57;&#x7B26;&#x4E32;&#x793A;&#x4F8B;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ab2hex</span>(<span class="hljs-params">buffer</span>) </span>{
   <span class="hljs-keyword">var</span> hexArr = <span class="hljs-built_in">Array</span>.prototype.map.call(
     <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(buffer),
     <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">bit</span>) </span>{
-      <span class="hljs-keyword">return</span> (<span class="hljs-string">'00'</span> + bit.toString(<span class="hljs-number">16</span>)).slice(<span class="hljs-number">-2</span>)
+      <span class="hljs-keyword">return</span> (<span class="hljs-string">&apos;00&apos;</span> + bit.toString(<span class="hljs-number">16</span>)).slice(<span class="hljs-number">-2</span>)
     }
   )
-  <span class="hljs-keyword">return</span> hexArr.join(<span class="hljs-string">''</span>);
+  <span class="hljs-keyword">return</span> hexArr.join(<span class="hljs-string">&apos;&apos;</span>);
 }
 wx.onBLECharacteristicValueChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`characteristic <span class="hljs-subst">${res.characteristicId}</span> has changed, now is <span class="hljs-subst">${res.value}</span>`</span>)
   <span class="hljs-built_in">console</span>.log(ab2hext(res.value))
 })
 </code></pre>
-<h3 id="蓝牙错误码errcode列表">蓝牙错误码(errCode)列表</h3>
+<h3 id="&#x84DD;&#x7259;&#x9519;&#x8BEF;&#x7801;errcode&#x5217;&#x8868;">&#x84DD;&#x7259;&#x9519;&#x8BEF;&#x7801;(errCode)&#x5217;&#x8868;</h3>
 <table>
 <thead>
 <tr>
-<th>错误码</th>
-<th>说明</th>
-<th>备注</th>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x5907;&#x6CE8;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
 <td>ok</td>
-<td>正常</td>
+<td>&#x6B63;&#x5E38;</td>
 </tr>
 <tr>
 <td>10000</td>
 <td>not init</td>
-<td>未初始化蓝牙适配器</td>
+<td>&#x672A;&#x521D;&#x59CB;&#x5316;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;</td>
 </tr>
 <tr>
 <td>10001</td>
 <td>not available</td>
-<td>当前蓝牙适配器不可用</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x4E0D;&#x53EF;&#x7528;</td>
 </tr>
 <tr>
 <td>10002</td>
 <td>no device</td>
-<td>没有找到指定设备</td>
+<td>&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x8BBE;&#x5907;</td>
 </tr>
 <tr>
 <td>10003</td>
 <td>connection fail</td>
-<td>连接失败</td>
+<td>&#x8FDE;&#x63A5;&#x5931;&#x8D25;</td>
 </tr>
 <tr>
 <td>10004</td>
 <td>no service</td>
-<td>没有找到指定服务</td>
+<td>&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x670D;&#x52A1;</td>
 </tr>
 <tr>
 <td>10005</td>
 <td>no characteristic</td>
-<td>没有找到指定特征值</td>
+<td>&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x7279;&#x5F81;&#x503C;</td>
 </tr>
 <tr>
 <td>10006</td>
 <td>no connection</td>
-<td>当前连接已断开</td>
+<td>&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x5DF2;&#x65AD;&#x5F00;</td>
 </tr>
 <tr>
 <td>10007</td>
 <td>property not support</td>
-<td>当前特征值不支持此操作</td>
+<td>&#x5F53;&#x524D;&#x7279;&#x5F81;&#x503C;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x64CD;&#x4F5C;</td>
 </tr>
 <tr>
 <td>10008</td>
 <td>system error</td>
-<td>其余所有系统上报的异常</td>
+<td>&#x5176;&#x4F59;&#x6240;&#x6709;&#x7CFB;&#x7EDF;&#x4E0A;&#x62A5;&#x7684;&#x5F02;&#x5E38;</td>
 </tr>
 <tr>
 <td>10009</td>
 <td>system not support</td>
-<td>Android 系统特有，系统版本低于 4.3 不支持BLE</td>
+<td>Android &#x7CFB;&#x7EDF;&#x7279;&#x6709;&#xFF0C;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x4F4E;&#x4E8E; 4.3 &#x4E0D;&#x652F;&#x6301;BLE</td>
 </tr>
 </tbody>
 </table>

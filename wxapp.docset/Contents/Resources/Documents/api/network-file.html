@@ -20,101 +20,101 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxuploadfileobject">wx.uploadFile(OBJECT)</h3>
-<p>将本地资源上传到开发者服务器，客户端发起一个 HTTPS POST 请求，其中 <code>content-type</code> 为 <code>multipart/form-data</code> 。<strong>使用前请先阅读<a href="api-network.html">说明</a></strong>。</p>
-<p>如页面通过 <a href="media-picture.html#wxchooseimageobject">wx.chooseImage</a> 等接口获取到一个本地资源的临时文件路径后，可通过此接口将本地资源上传到指定服务器。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x5C06;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x4E0A;&#x4F20;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x8D77;&#x4E00;&#x4E2A; HTTPS POST &#x8BF7;&#x6C42;&#xFF0C;&#x5176;&#x4E2D; <code>content-type</code> &#x4E3A; <code>multipart/form-data</code> &#x3002;<strong>&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x5148;&#x9605;&#x8BFB;<a href="api-network.html">&#x8BF4;&#x660E;</a></strong>&#x3002;</p>
+<p>&#x5982;&#x9875;&#x9762;&#x901A;&#x8FC7; <a href="media-picture.html#wxchooseimageobject">wx.chooseImage</a> &#x7B49;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x540E;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x6B64;&#x63A5;&#x53E3;&#x5C06;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x4E0A;&#x4F20;&#x5230;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>url</td>
 <td>String</td>
-<td>是</td>
-<td>开发者服务器 url</td>
+<td>&#x662F;</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668; url</td>
 </tr>
 <tr>
 <td>filePath</td>
 <td>String</td>
-<td>是</td>
-<td>要上传文件资源的路径</td>
+<td>&#x662F;</td>
+<td>&#x8981;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x8D44;&#x6E90;&#x7684;&#x8DEF;&#x5F84;</td>
 </tr>
 <tr>
 <td>name</td>
 <td>String</td>
-<td>是</td>
-<td>文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容</td>
+<td>&#x662F;</td>
+<td>&#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684; key , &#x5F00;&#x53D1;&#x8005;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A; key &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x6587;&#x4EF6;&#x4E8C;&#x8FDB;&#x5236;&#x5185;&#x5BB9;</td>
 </tr>
 <tr>
 <td>header</td>
 <td>Object</td>
-<td>否</td>
-<td>HTTP 请求 Header, header 中不能设置 Referer</td>
+<td>&#x5426;</td>
+<td>HTTP &#x8BF7;&#x6C42; Header, header &#x4E2D;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E; Referer</td>
 </tr>
 <tr>
 <td>formData</td>
 <td>Object</td>
-<td>否</td>
-<td>HTTP 请求中其他额外的 form data</td>
+<td>&#x5426;</td>
+<td>HTTP &#x8BF7;&#x6C42;&#x4E2D;&#x5176;&#x4ED6;&#x989D;&#x5916;&#x7684; form data</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>data</td>
 <td>String</td>
-<td>开发者服务器返回的数据</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;</td>
 </tr>
 <tr>
 <td>statusCode</td>
 <td>Number</td>
-<td>开发者服务器返回的 HTTP 状态码</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684; HTTP &#x72B6;&#x6001;&#x7801;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.chooseImage({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> tempFilePaths = res.tempFilePaths
     wx.uploadFile({
-      url: <span class="hljs-string">'https://example.weixin.qq.com/upload'</span>, <span class="hljs-comment">//仅为示例，非真实的接口地址</span>
+      url: <span class="hljs-string">&apos;https://example.weixin.qq.com/upload&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
       filePath: tempFilePaths[<span class="hljs-number">0</span>],
-      name: <span class="hljs-string">'file'</span>,
+      name: <span class="hljs-string">&apos;file&apos;</span>,
       formData:{
-        <span class="hljs-string">'user'</span>: <span class="hljs-string">'test'</span>
+        <span class="hljs-string">&apos;user&apos;</span>: <span class="hljs-string">&apos;test&apos;</span>
       },
       success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
         <span class="hljs-keyword">var</span> data = res.data
@@ -124,71 +124,71 @@
   }
 })
 </code></pre>
-<p><strong>返回值：</strong></p>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
 <blockquote>
-<p>基础库 1.4.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>返回一个 <code>uploadTask</code> 对象，通过 <code>uploadTask</code>，可监听上传进度变化事件，以及取消上传任务。</p>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>uploadTask</code> &#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7; <code>uploadTask</code>&#xFF0C;&#x53EF;&#x76D1;&#x542C;&#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;&#x53D6;&#x6D88;&#x4E0A;&#x4F20;&#x4EFB;&#x52A1;&#x3002;</p>
 <h4 id="uploadtask">uploadTask</h4>
-<p><strong>uploadTask 对象的方法列表：</strong></p>
+<p><strong>uploadTask &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>方法</th>
-<th>参数</th>
-<th>说明</th>
-<th>最低版本</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>onProgressUpdate</td>
 <td>callback</td>
-<td>监听上传进度变化</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
+<td>&#x76D1;&#x542C;&#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;&#x53D8;&#x5316;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 <tr>
 <td>abort</td>
 <td></td>
-<td>中断上传任务</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
+<td>&#x4E2D;&#x65AD;&#x4E0A;&#x4F20;&#x4EFB;&#x52A1;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>onProgressUpdate 返回参数说明：</strong></p>
+<p><strong>onProgressUpdate &#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>progress</td>
 <td>Number</td>
-<td>上传进度百分比</td>
+<td>&#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;&#x767E;&#x5206;&#x6BD4;</td>
 </tr>
 <tr>
 <td>totalBytesSent</td>
 <td>Number</td>
-<td>已经上传的数据长度，单位 Bytes</td>
+<td>&#x5DF2;&#x7ECF;&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D; Bytes</td>
 </tr>
 <tr>
 <td>totalBytesExpectedToSend</td>
 <td>Number</td>
-<td>预期需要上传的数据总长度，单位 Bytes</td>
+<td>&#x9884;&#x671F;&#x9700;&#x8981;&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;&#x603B;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D; Bytes</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> uploadTask = wx.uploadFile({
-    url: <span class="hljs-string">'http://example.weixin.qq.com/upload'</span>, <span class="hljs-comment">//仅为示例，非真实的接口地址</span>
+    url: <span class="hljs-string">&apos;http://example.weixin.qq.com/upload&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
     filePath: tempFilePaths[<span class="hljs-number">0</span>],
-    name: <span class="hljs-string">'file'</span>,
+    name: <span class="hljs-string">&apos;file&apos;</span>,
     formData:{
-        <span class="hljs-string">'user'</span>: <span class="hljs-string">'test'</span>
+        <span class="hljs-string">&apos;user&apos;</span>: <span class="hljs-string">&apos;test&apos;</span>
     },
     success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
         <span class="hljs-keyword">var</span> data = res.data
@@ -196,87 +196,87 @@
     }
 })
 
-uploadTask.onProgressUpdate((res) => {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'上传进度'</span>, res.progress)
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'已经上传的数据长度'</span>, res.totalBytesSent)
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'预期需要上传的数据总长度'</span>, res.totalBytesExpectedToSend)
+uploadTask.onProgressUpdate((res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;&apos;</span>, res.progress)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5DF2;&#x7ECF;&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&apos;</span>, res.totalBytesSent)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x9884;&#x671F;&#x9700;&#x8981;&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;&#x603B;&#x957F;&#x5EA6;&apos;</span>, res.totalBytesExpectedToSend)
 })
 
-uploadTask.abort() <span class="hljs-comment">// 取消上传任务</span>
+uploadTask.abort() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x4E0A;&#x4F20;&#x4EFB;&#x52A1;</span>
 </code></pre>
 <h3 id="wxdownloadfileobject">wx.downloadFile(OBJECT)</h3>
-<p>下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。<strong>使用前请先阅读<a href="api-network.html">说明</a></strong>。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x8D44;&#x6E90;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x76F4;&#x63A5;&#x53D1;&#x8D77;&#x4E00;&#x4E2A; HTTP GET &#x8BF7;&#x6C42;&#xFF0C;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x7684;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#x3002;<strong>&#x4F7F;&#x7528;&#x524D;&#x8BF7;&#x5148;&#x9605;&#x8BFB;<a href="api-network.html">&#x8BF4;&#x660E;</a></strong>&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>必填</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x5FC5;&#x586B;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>url</td>
 <td>String</td>
-<td>是</td>
-<td>下载资源的 url</td>
+<td>&#x662F;</td>
+<td>&#x4E0B;&#x8F7D;&#x8D44;&#x6E90;&#x7684; url</td>
 </tr>
 <tr>
 <td>header</td>
 <td>Object</td>
-<td>否</td>
-<td>HTTP 请求 Header，header 中不能设置 Referer</td>
+<td>&#x5426;</td>
+<td>HTTP &#x8BF7;&#x6C42; Header&#xFF0C;header &#x4E2D;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E; Referer</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>下载成功后以 tempFilePath 的形式传给页面，res = {tempFilePath: '文件的临时路径'}</td>
+<td>&#x5426;</td>
+<td>&#x4E0B;&#x8F7D;&#x6210;&#x529F;&#x540E;&#x4EE5; tempFilePath &#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x7ED9;&#x9875;&#x9762;&#xFF0C;res = {tempFilePath: &apos;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&apos;}</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 <a href="file.html">wx.saveFile</a>，才能在小程序下次启动时访问得到。</strong></p>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>&#x6CE8;&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x672C;&#x6B21;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x9700;&#x6301;&#x4E45;&#x4FDD;&#x5B58;&#xFF0C;&#x9700;&#x5728;&#x4E3B;&#x52A8;&#x8C03;&#x7528; <a href="file.html">wx.saveFile</a>&#xFF0C;&#x624D;&#x80FD;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x8BBF;&#x95EE;&#x5F97;&#x5230;&#x3002;</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>tempFilePath</td>
 <td>String</td>
-<td>临时文件路径，下载后的文件会存储到一个临时文件</td>
+<td>&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0B;&#x8F7D;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x5B58;&#x50A8;&#x5230;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;</td>
 </tr>
 <tr>
 <td>statusCode</td>
 <td>Number</td>
-<td>开发者服务器返回的 HTTP 状态码</td>
+<td>&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684; HTTP &#x72B6;&#x6001;&#x7801;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码:</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;:</strong></p>
 <pre><code class="lang-javascript">wx.downloadFile({
-  url: <span class="hljs-string">'https://example.com/audio/123'</span>, <span class="hljs-comment">//仅为示例，并非真实的资源</span>
+  url: <span class="hljs-string">&apos;https://example.com/audio/123&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x8D44;&#x6E90;</span>
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-comment">// 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容</span>
+    <span class="hljs-comment">// &#x53EA;&#x8981;&#x670D;&#x52A1;&#x5668;&#x6709;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x4F1A;&#x628A;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x5E76;&#x8FDB;&#x5165; success &#x56DE;&#x8C03;&#xFF0C;&#x4E1A;&#x52A1;&#x9700;&#x8981;&#x81EA;&#x884C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E0B;&#x8F7D;&#x5230;&#x4E86;&#x60F3;&#x8981;&#x7684;&#x5185;&#x5BB9;</span>
     <span class="hljs-keyword">if</span> (res.statusCode === <span class="hljs-number">200</span>) {
         wx.playVoice({
           filePath: res.tempFilePath
@@ -285,67 +285,67 @@ uploadTask.abort() <span class="hljs-comment">// 取消上传任务</span>
   }
 })
 </code></pre>
-<p><strong>返回值：</strong></p>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
 <blockquote>
-<p>基础库 1.4.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>返回一个 <code>downloadTask</code> 对象，通过 <code>downloadTask</code>，可监听下载进度变化事件，以及取消下载任务。</p>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>downloadTask</code> &#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7; <code>downloadTask</code>&#xFF0C;&#x53EF;&#x76D1;&#x542C;&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;&#x53D6;&#x6D88;&#x4E0B;&#x8F7D;&#x4EFB;&#x52A1;&#x3002;</p>
 <h4 id="downloadtask">downloadTask</h4>
-<p><strong>downloadTask 对象的方法列表：</strong></p>
+<p><strong>downloadTask &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>方法</th>
-<th>参数</th>
-<th>说明</th>
-<th>最低版本</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>onProgressUpdate</td>
 <td>callback</td>
-<td>监听下载进度变化</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
+<td>&#x76D1;&#x542C;&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&#x53D8;&#x5316;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 <tr>
 <td>abort</td>
 <td></td>
-<td>中断下载任务</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
+<td>&#x4E2D;&#x65AD;&#x4E0B;&#x8F7D;&#x4EFB;&#x52A1;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>onProgressUpdate 返回参数说明：</strong></p>
+<p><strong>onProgressUpdate &#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>progress</td>
 <td>Number</td>
-<td>下载进度百分比</td>
+<td>&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&#x767E;&#x5206;&#x6BD4;</td>
 </tr>
 <tr>
 <td>totalBytesWritten</td>
 <td>Number</td>
-<td>已经下载的数据长度，单位 Bytes</td>
+<td>&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D; Bytes</td>
 </tr>
 <tr>
 <td>totalBytesExpectedToWrite</td>
 <td>Number</td>
-<td>预期需要下载的数据总长度，单位 Bytes</td>
+<td>&#x9884;&#x671F;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x7684;&#x6570;&#x636E;&#x603B;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D; Bytes</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> downloadTask = wx.downloadFile({
-    url: <span class="hljs-string">'http://example.com/audio/123'</span>, <span class="hljs-comment">//仅为示例，并非真实的资源</span>
+    url: <span class="hljs-string">&apos;http://example.com/audio/123&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x8D44;&#x6E90;</span>
     success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
         wx.playVoice({
             filePath: res.tempFilePath
@@ -353,17 +353,17 @@ uploadTask.abort() <span class="hljs-comment">// 取消上传任务</span>
     }
 })
 
-downloadTask.onProgressUpdate((res) => {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'下载进度'</span>, res.progress)
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'已经下载的数据长度'</span>, res.totalBytesWritten)
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'预期需要下载的数据总长度'</span>, res.totalBytesExpectedToWrite)
+downloadTask.onProgressUpdate((res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&apos;</span>, res.progress)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&apos;</span>, res.totalBytesWritten)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x9884;&#x671F;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x7684;&#x6570;&#x636E;&#x603B;&#x957F;&#x5EA6;&apos;</span>, res.totalBytesExpectedToWrite)
 })
 
-downloadTask.abort() <span class="hljs-comment">// 取消下载任务</span>
+downloadTask.abort() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x4E0B;&#x8F7D;&#x4EFB;&#x52A1;</span>
 </code></pre>
-<h4 id="bug--tip">Bug & Tip</h4>
+<h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
-<li><code>tip</code>: 6.5.3 以及之前版本的 iOS 微信客户端 <code>header</code> 设置无效</li>
+<li><code>tip</code>: 6.5.3 &#x4EE5;&#x53CA;&#x4E4B;&#x524D;&#x7248;&#x672C;&#x7684; iOS &#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF; <code>header</code> &#x8BBE;&#x7F6E;&#x65E0;&#x6548;</li>
 </ol>
 
                                 

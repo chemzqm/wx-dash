@@ -21,122 +21,122 @@
                                 
                                 <h3 id="wxgetrecordermanager">wx.getRecorderManager()</h3>
 <blockquote>
-<p>基础库 1.6.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>获取<strong>全局唯一</strong>的录音管理器 <code>recorderManager</code>。</p>
+<p>&#x83B7;&#x53D6;<strong>&#x5168;&#x5C40;&#x552F;&#x4E00;</strong>&#x7684;&#x5F55;&#x97F3;&#x7BA1;&#x7406;&#x5668; <code>recorderManager</code>&#x3002;</p>
 <h4 id="recordermanager">recorderManager</h4>
-<p><strong>recorderManager 对象的方法列表：</strong></p>
+<p><strong>recorderManager &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>方法</th>
-<th>参数</th>
-<th>说明</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>start</td>
 <td>options</td>
-<td>开始录音</td>
+<td>&#x5F00;&#x59CB;&#x5F55;&#x97F3;</td>
 </tr>
 <tr>
 <td>pause</td>
 <td></td>
-<td>暂停录音</td>
+<td>&#x6682;&#x505C;&#x5F55;&#x97F3;</td>
 </tr>
 <tr>
 <td>resume</td>
 <td></td>
-<td>继续录音</td>
+<td>&#x7EE7;&#x7EED;&#x5F55;&#x97F3;</td>
 </tr>
 <tr>
 <td>stop</td>
 <td></td>
-<td>停止录音</td>
+<td>&#x505C;&#x6B62;&#x5F55;&#x97F3;</td>
 </tr>
 <tr>
 <td>onStart</td>
 <td>callback</td>
-<td>录音开始事件</td>
+<td>&#x5F55;&#x97F3;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
 <td>onPause</td>
 <td>callback</td>
-<td>录音暂停事件</td>
+<td>&#x5F55;&#x97F3;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
 <td>onStop</td>
 <td>callback</td>
-<td>录音停止事件，会回调文件地址</td>
+<td>&#x5F55;&#x97F3;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x6587;&#x4EF6;&#x5730;&#x5740;</td>
 </tr>
 <tr>
 <td>onFrameRecorded</td>
 <td>callback</td>
-<td>已录制完指定帧大小的文件，会回调录音分片结果数据。如果设置了 frameSize ，则会回调此事件</td>
+<td>&#x5DF2;&#x5F55;&#x5236;&#x5B8C;&#x6307;&#x5B9A;&#x5E27;&#x5927;&#x5C0F;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x5F55;&#x97F3;&#x5206;&#x7247;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; frameSize &#xFF0C;&#x5219;&#x4F1A;&#x56DE;&#x8C03;&#x6B64;&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
 <td>onError</td>
 <td>callback</td>
-<td>录音错误事件, 会回调错误信息</td>
+<td>&#x5F55;&#x97F3;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;, &#x4F1A;&#x56DE;&#x8C03;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>start(options) 说明：</strong></p>
+<p><strong>start(options) &#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>duration</td>
 <td>Number</td>
-<td>否</td>
-<td>指定录音的时长，单位 ms ，如果传入了合法的 duration ，在到达指定的 duration 后会自动停止录音，最大值 600000（10 分钟）,默认值 60000（1 分钟）</td>
+<td>&#x5426;</td>
+<td>&#x6307;&#x5B9A;&#x5F55;&#x97F3;&#x7684;&#x65F6;&#x957F;&#xFF0C;&#x5355;&#x4F4D; ms &#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165;&#x4E86;&#x5408;&#x6CD5;&#x7684; duration &#xFF0C;&#x5728;&#x5230;&#x8FBE;&#x6307;&#x5B9A;&#x7684; duration &#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x505C;&#x6B62;&#x5F55;&#x97F3;&#xFF0C;&#x6700;&#x5927;&#x503C; 600000&#xFF08;10 &#x5206;&#x949F;&#xFF09;,&#x9ED8;&#x8BA4;&#x503C; 60000&#xFF08;1 &#x5206;&#x949F;&#xFF09;</td>
 </tr>
 <tr>
 <td>sampleRate</td>
 <td>Number</td>
-<td>否</td>
-<td>采样率，有效值 8000/16000/44100</td>
+<td>&#x5426;</td>
+<td>&#x91C7;&#x6837;&#x7387;&#xFF0C;&#x6709;&#x6548;&#x503C; 8000/16000/44100</td>
 </tr>
 <tr>
 <td>numberOfChannels</td>
 <td>Number</td>
-<td>否</td>
-<td>录音通道数，有效值 1/2</td>
+<td>&#x5426;</td>
+<td>&#x5F55;&#x97F3;&#x901A;&#x9053;&#x6570;&#xFF0C;&#x6709;&#x6548;&#x503C; 1/2</td>
 </tr>
 <tr>
 <td>encodeBitRate</td>
 <td>Number</td>
-<td>否</td>
-<td>编码码率，有效值见下表格</td>
+<td>&#x5426;</td>
+<td>&#x7F16;&#x7801;&#x7801;&#x7387;&#xFF0C;&#x6709;&#x6548;&#x503C;&#x89C1;&#x4E0B;&#x8868;&#x683C;</td>
 </tr>
 <tr>
 <td>format</td>
 <td>String</td>
-<td>否</td>
-<td>音频格式，有效值 aac/mp3</td>
+<td>&#x5426;</td>
+<td>&#x97F3;&#x9891;&#x683C;&#x5F0F;&#xFF0C;&#x6709;&#x6548;&#x503C; aac/mp3</td>
 </tr>
 <tr>
 <td>frameSize</td>
 <td>Number</td>
-<td>否</td>
-<td>指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调。暂仅支持 mp3 格式。</td>
+<td>&#x5426;</td>
+<td>&#x6307;&#x5B9A;&#x5E27;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D; KB&#x3002;&#x4F20;&#x5165; frameSize &#x540E;&#xFF0C;&#x6BCF;&#x5F55;&#x5236;&#x6307;&#x5B9A;&#x5E27;&#x5927;&#x5C0F;&#x7684;&#x5185;&#x5BB9;&#x540E;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x5F55;&#x5236;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x4E0D;&#x6307;&#x5B9A;&#x5219;&#x4E0D;&#x4F1A;&#x56DE;&#x8C03;&#x3002;&#x6682;&#x4EC5;&#x652F;&#x6301; mp3 &#x683C;&#x5F0F;&#x3002;</td>
 </tr>
 </tbody>
 </table>
-<p>其中，采样率和码率有一定要求，具体有效值如下：</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x91C7;&#x6837;&#x7387;&#x548C;&#x7801;&#x7387;&#x6709;&#x4E00;&#x5B9A;&#x8981;&#x6C42;&#xFF0C;&#x5177;&#x4F53;&#x6709;&#x6548;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
-<th>采样率</th>
-<th>编码码率</th>
+<th>&#x91C7;&#x6837;&#x7387;</th>
+<th>&#x7F16;&#x7801;&#x7801;&#x7387;</th>
 </tr>
 </thead>
 <tbody>
@@ -178,81 +178,81 @@
 </tr>
 </tbody>
 </table>
-<p><strong>onStop(callback) 回调结果说明：</strong></p>
+<p><strong>onStop(callback) &#x56DE;&#x8C03;&#x7ED3;&#x679C;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>tempFilePath</td>
 <td>String</td>
-<td>录音文件的临时路径</td>
+<td>&#x5F55;&#x97F3;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>onFrameRecorded(callback) 回调结果说明：</strong></p>
+<p><strong>onFrameRecorded(callback) &#x56DE;&#x8C03;&#x7ED3;&#x679C;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>frameBuffer</td>
 <td>ArrayBuffer</td>
-<td>录音分片结果数据</td>
+<td>&#x5F55;&#x97F3;&#x5206;&#x7247;&#x7ED3;&#x679C;&#x6570;&#x636E;</td>
 </tr>
 <tr>
 <td>isLastFrame</td>
 <td>Boolean</td>
-<td>当前帧是否正常录音结束前的最后一帧</td>
+<td>&#x5F53;&#x524D;&#x5E27;&#x662F;&#x5426;&#x6B63;&#x5E38;&#x5F55;&#x97F3;&#x7ED3;&#x675F;&#x524D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x5E27;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>onError(callback) 回调结果说明：</strong></p>
+<p><strong>onError(callback) &#x56DE;&#x8C03;&#x7ED3;&#x679C;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>错误信息</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> recorderManager = wx.getRecorderManager()
 
-recorderManager.onStart(() => {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'recorder start'</span>)
+recorderManager.onStart(() =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder start&apos;</span>)
 })
-recorderManager.onResume(() => {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'recorder resume'</span>)
+recorderManager.onResume(() =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder resume&apos;</span>)
 })
-recorderManager.onPause(() => {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'recorder pause'</span>)
+recorderManager.onPause(() =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder pause&apos;</span>)
 })
-recorderManager.onStop((res) => {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'recorder stop'</span>, res)
+recorderManager.onStop((res) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder stop&apos;</span>, res)
   <span class="hljs-keyword">const</span> { tempFilePath } = res
 })
-recorderManager.onFrameRecorded((res) => {
+recorderManager.onFrameRecorded((res) =&gt; {
   <span class="hljs-keyword">const</span> { frameBuffer } = res
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'frameBuffer.byteLength'</span>, frameBuffer.byteLength)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;frameBuffer.byteLength&apos;</span>, frameBuffer.byteLength)
 })
 
 <span class="hljs-keyword">const</span> options = {
@@ -260,7 +260,7 @@ recorderManager.onFrameRecorded((res) => {
   sampleRate: <span class="hljs-number">44100</span>,
   numberOfChannels: <span class="hljs-number">1</span>,
   encodeBitRate: <span class="hljs-number">192000</span>,
-  format: <span class="hljs-string">'aac'</span>,
+  format: <span class="hljs-string">&apos;aac&apos;</span>,
   frameSize: <span class="hljs-number">50</span>
 }
 

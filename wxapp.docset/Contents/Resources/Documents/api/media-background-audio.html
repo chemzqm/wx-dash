@@ -20,71 +20,71 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxgetbackgroundaudioplayerstateobject">wx.getBackgroundAudioPlayerState(OBJECT)</h3>
-<p><strong>注意：1.2.0 版本开始，本接口不再维护。建议使用能力更强的 <a href="getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a> 接口</strong></p>
-<p>获取后台音乐播放状态。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;1.2.0 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x63A5;&#x53E3;&#x4E0D;&#x518D;&#x7EF4;&#x62A4;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x80FD;&#x529B;&#x66F4;&#x5F3A;&#x7684; <a href="getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a> &#x63A5;&#x53E3;</strong></p>
+<p>&#x83B7;&#x53D6;&#x540E;&#x53F0;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>duration</td>
-<td>选定音频的长度（单位：s），只有在当前有音乐播放时返回</td>
+<td>&#x9009;&#x5B9A;&#x97F3;&#x9891;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5F53;&#x524D;&#x6709;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x65F6;&#x8FD4;&#x56DE;</td>
 </tr>
 <tr>
 <td>currentPosition</td>
-<td>选定音频的播放位置（单位：s），只有在当前有音乐播放时返回</td>
+<td>&#x9009;&#x5B9A;&#x97F3;&#x9891;&#x7684;&#x64AD;&#x653E;&#x4F4D;&#x7F6E;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5F53;&#x524D;&#x6709;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x65F6;&#x8FD4;&#x56DE;</td>
 </tr>
 <tr>
 <td>status</td>
-<td>播放状态（2：没有音乐在播放，1：播放中，0：暂停中）</td>
+<td>&#x64AD;&#x653E;&#x72B6;&#x6001;&#xFF08;2&#xFF1A;&#x6CA1;&#x6709;&#x97F3;&#x4E50;&#x5728;&#x64AD;&#x653E;&#xFF0C;1&#xFF1A;&#x64AD;&#x653E;&#x4E2D;&#xFF0C;0&#xFF1A;&#x6682;&#x505C;&#x4E2D;&#xFF09;</td>
 </tr>
 <tr>
 <td>downloadPercent</td>
-<td>音频的下载进度（整数，80 代表 80%），只有在当前有音乐播放时返回</td>
+<td>&#x97F3;&#x9891;&#x7684;&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&#xFF08;&#x6574;&#x6570;&#xFF0C;80 &#x4EE3;&#x8868; 80%&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5F53;&#x524D;&#x6709;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x65F6;&#x8FD4;&#x56DE;</td>
 </tr>
 <tr>
 <td>dataUrl</td>
-<td>歌曲数据链接，只有在当前有音乐播放时返回</td>
+<td>&#x6B4C;&#x66F2;&#x6570;&#x636E;&#x94FE;&#x63A5;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5F53;&#x524D;&#x6709;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x65F6;&#x8FD4;&#x56DE;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.getBackgroundAudioPlayerState({
     success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
         <span class="hljs-keyword">var</span> status = res.status
@@ -96,126 +96,126 @@
 })
 </code></pre>
 <h3 id="wxplaybackgroundaudioobject">wx.playBackgroundAudio(OBJECT)</h3>
-<p>使用后台播放器播放音乐，对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户点击“显示在聊天顶部”时，音乐不会暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。</p>
-<p><strong>OBJECT参数说明</strong></p>
+<p>&#x4F7F;&#x7528;&#x540E;&#x53F0;&#x64AD;&#x653E;&#x5668;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#xFF0C;&#x5BF9;&#x4E8E;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x80FD;&#x540C;&#x65F6;&#x6709;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x97F3;&#x4E50;&#x5728;&#x64AD;&#x653E;&#x3002;&#x5F53;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x97F3;&#x4E50;&#x5C06;&#x6682;&#x505C;&#x64AD;&#x653E;&#xFF1B;&#x5F53;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x201C;&#x663E;&#x793A;&#x5728;&#x804A;&#x5929;&#x9876;&#x90E8;&#x201D;&#x65F6;&#xFF0C;&#x97F3;&#x4E50;&#x4E0D;&#x4F1A;&#x6682;&#x505C;&#x64AD;&#x653E;&#xFF1B;&#x5F53;&#x7528;&#x6237;&#x5728;&#x5176;&#x4ED6;&#x5C0F;&#x7A0B;&#x5E8F;&#x5360;&#x7528;&#x4E86;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x5668;&#xFF0C;&#x539F;&#x6709;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x7684;&#x97F3;&#x4E50;&#x5C06;&#x505C;&#x6B62;&#x64AD;&#x653E;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>dataUrl</td>
 <td>String</td>
-<td>是</td>
-<td>音乐链接，目前支持的格式有 m4a, aac, mp3, wav</td>
+<td>&#x662F;</td>
+<td>&#x97F3;&#x4E50;&#x94FE;&#x63A5;&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;&#x6709; m4a, aac, mp3, wav</td>
 </tr>
 <tr>
 <td>title</td>
 <td>String</td>
-<td>否</td>
-<td>音乐标题</td>
+<td>&#x5426;</td>
+<td>&#x97F3;&#x4E50;&#x6807;&#x9898;</td>
 </tr>
 <tr>
 <td>coverImgUrl</td>
 <td>String</td>
-<td>否</td>
-<td>封面URL</td>
+<td>&#x5426;</td>
+<td>&#x5C01;&#x9762;URL</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <pre><code class="lang-javascript">wx.playBackgroundAudio({
-    dataUrl: <span class="hljs-string">''</span>,
-    title: <span class="hljs-string">''</span>,
-    coverImgUrl: <span class="hljs-string">''</span>
+    dataUrl: <span class="hljs-string">&apos;&apos;</span>,
+    title: <span class="hljs-string">&apos;&apos;</span>,
+    coverImgUrl: <span class="hljs-string">&apos;&apos;</span>
 })
 </code></pre>
 <h3 id="wxpausebackgroundaudio">wx.pauseBackgroundAudio()</h3>
-<p>暂停播放音乐。</p>
-<p><strong>示例代码</strong></p>
+<p>&#x6682;&#x505C;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <pre><code class="lang-javascript">wx.pauseBackgroundAudio()
 </code></pre>
 <h3 id="wxseekbackgroundaudioobject">wx.seekBackgroundAudio(OBJECT)</h3>
-<p>控制音乐播放进度。</p>
-<p><strong>OBJECT参数说明</strong></p>
+<p>&#x63A7;&#x5236;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>position</td>
 <td>Number</td>
-<td>是</td>
-<td>音乐位置，单位：秒</td>
+<td>&#x662F;</td>
+<td>&#x97F3;&#x4E50;&#x4F4D;&#x7F6E;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <pre><code class="lang-javascript">wx.seekBackgroundAudio({
     position: <span class="hljs-number">30</span>
 })
 </code></pre>
 <h3 id="wxstopbackgroundaudio">wx.stopBackgroundAudio()</h3>
-<p>停止播放音乐。</p>
-<p><strong>示例代码</strong></p>
+<p>&#x505C;&#x6B62;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <pre><code class="lang-javascript">wx.stopBackgroundAudio()
 </code></pre>
 <h3 id="wxonbackgroundaudioplaycallback">wx.onBackgroundAudioPlay(CALLBACK)</h3>
-<p>监听音乐播放。</p>
+<p>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x3002;</p>
 <h3 id="wxonbackgroundaudiopausecallback">wx.onBackgroundAudioPause(CALLBACK)</h3>
-<p>监听音乐暂停。</p>
+<p>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x6682;&#x505C;&#x3002;</p>
 <h3 id="wxonbackgroundaudiostopcallback">wx.onBackgroundAudioStop(CALLBACK)</h3>
-<p>监听音乐停止。</p>
-<h4 id="bug--tip">bug & tip</h4>
+<p>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x505C;&#x6B62;&#x3002;</p>
+<h4 id="bug--tip">bug &amp; tip</h4>
 <ol>
-<li><code>bug</code>: <code>iOS</code> <code>6.3.30</code> wx.seekBackgroundAudio 会有短暂延迟</li>
+<li><code>bug</code>: <code>iOS</code> <code>6.3.30</code> wx.seekBackgroundAudio &#x4F1A;&#x6709;&#x77ED;&#x6682;&#x5EF6;&#x8FDF;</li>
 </ol>
 
                                 

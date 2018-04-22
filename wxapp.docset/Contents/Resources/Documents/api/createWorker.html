@@ -21,70 +21,70 @@
                                 
                                 <h3 id="wxcreateworkerscriptpath">wx.createWorker(scriptPath)</h3>
 <blockquote>
-<p>基础库 1.9.90 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>在使用 createWorker 前，请查阅 <a href="../framework/workers.html">多线程</a> 文档了解基础知识和配置方法。</p>
-<p>创建一个 Worker 线程，并返回 Worker 实例，目前限制最多只能创建一个 Worker，创建下一个 Worker 前请调用 Worker.terminate。</p>
-<p><code>scriptPath</code> 为 worker 的入口文件路径，需填写绝对路径。</p>
+<p>&#x5728;&#x4F7F;&#x7528; createWorker &#x524D;&#xFF0C;&#x8BF7;&#x67E5;&#x9605; <a href="../framework/workers.html">&#x591A;&#x7EBF;&#x7A0B;</a> &#x6587;&#x6863;&#x4E86;&#x89E3;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x548C;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Worker &#x7EBF;&#x7A0B;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE; Worker &#x5B9E;&#x4F8B;&#xFF0C;&#x76EE;&#x524D;&#x9650;&#x5236;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Worker&#xFF0C;&#x521B;&#x5EFA;&#x4E0B;&#x4E00;&#x4E2A; Worker &#x524D;&#x8BF7;&#x8C03;&#x7528; Worker.terminate&#x3002;</p>
+<p><code>scriptPath</code> &#x4E3A; worker &#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x9700;&#x586B;&#x5199;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</p>
 <h4 id="worker">Worker</h4>
-<p><strong>Worker 对象的方法列表：</strong></p>
+<p><strong>Worker &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>方法</th>
-<th>参数</th>
-<th>说明</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>postMessage</td>
 <td>Object</td>
-<td>向 Worker 线程发送的消息。</td>
+<td>&#x5411; Worker &#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x3002;</td>
 </tr>
 <tr>
 <td>onMessage</td>
 <td>callback</td>
-<td>监听 Worker 线程向当前线程发送的消息</td>
+<td>&#x76D1;&#x542C; Worker &#x7EBF;&#x7A0B;&#x5411;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;</td>
 </tr>
 <tr>
 <td>terminate</td>
 <td></td>
-<td>结束当前 Worker 线程，仅限在主线程 Worker 实例上调用。</td>
+<td>&#x7ED3;&#x675F;&#x5F53;&#x524D; Worker &#x7EBF;&#x7A0B;&#xFF0C;&#x4EC5;&#x9650;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B; Worker &#x5B9E;&#x4F8B;&#x4E0A;&#x8C03;&#x7528;&#x3002;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>postMessage(message) 说明：</strong></p>
-<p>向 Worker 线程发送消息，<code>message</code> 参数为需要发送的消息，必须是一个可序列化的 JavaScript 对象。</p>
-<p><strong>onMessage(callback) 回调结果说明：</strong></p>
+<p><strong>postMessage(message) &#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>&#x5411; Worker &#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;<code>message</code> &#x53C2;&#x6570;&#x4E3A;&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684; JavaScript &#x5BF9;&#x8C61;&#x3002;</p>
+<p><strong>onMessage(callback) &#x56DE;&#x8C03;&#x7ED3;&#x679C;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>message</td>
 <td>Object</td>
-<td>Worker 线程向当前线程发送的消息</td>
+<td>Worker &#x7EBF;&#x7A0B;&#x5411;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>terminate() 说明：</strong></p>
-<p>结束当前 worker 线程，仅限在主线程 Worker 对象上调用。</p>
-<p><strong>示例代码：</strong></p>
-<p>运行以下代码需先进行基础配置，详细请查阅 <a href="../framework/workers.html">多线程</a> 文档了解基础知识和配置方法。</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> worker = wx.createWorker(<span class="hljs-string">'workers/request/index.js'</span>) <span class="hljs-comment">// 文件名指定 worker 的入口文件路径，绝对路径</span>
+<p><strong>terminate() &#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>&#x7ED3;&#x675F;&#x5F53;&#x524D; worker &#x7EBF;&#x7A0B;&#xFF0C;&#x4EC5;&#x9650;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B; Worker &#x5BF9;&#x8C61;&#x4E0A;&#x8C03;&#x7528;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p>&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x9700;&#x5148;&#x8FDB;&#x884C;&#x57FA;&#x7840;&#x914D;&#x7F6E;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF7;&#x67E5;&#x9605; <a href="../framework/workers.html">&#x591A;&#x7EBF;&#x7A0B;</a> &#x6587;&#x6863;&#x4E86;&#x89E3;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x548C;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> worker = wx.createWorker(<span class="hljs-string">&apos;workers/request/index.js&apos;</span>) <span class="hljs-comment">// &#x6587;&#x4EF6;&#x540D;&#x6307;&#x5B9A; worker &#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
 
 worker.onMessage(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
   <span class="hljs-built_in">console</span>.log(res)
 })
 
 worker.postMessage({
-  msg: <span class="hljs-string">'hello worker'</span>
+  msg: <span class="hljs-string">&apos;hello worker&apos;</span>
 })
 
 worker.terminate()

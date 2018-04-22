@@ -19,33 +19,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="兼容">兼容</h1>
-<p>小程序的功能不断的增加，但是旧版本的微信客户端并不支持新功能，所以在使用这些新能力的时候需要做兼容。</p>
-<p>文档会在组件，API等页面描述中带上各个功能所支持的版本号。</p>
-<p>可以通过 <code>wx.getSystemInfo</code> 或者 <code>wx.getSystemInfoSync</code> 获取到小程序的基础库版本号。</p>
-<p>也可以通过 <code>wx.canIUse</code> <a href="../api/api-caniuse.html">详情</a> 来判断是否可以在该基础库版本下直接使用对应的API或者组件</p>
-<h3 id="兼容方式---版本比较">兼容方式 - 版本比较</h3>
-<p>微信客户端和小程序基础库的版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订号）。
-开发者可以根据版本号去做兼容，以下为参考代码：</p>
+                                <h1 id="&#x517C;&#x5BB9;">&#x517C;&#x5BB9;</h1>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x529F;&#x80FD;&#x4E0D;&#x65AD;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x4F46;&#x662F;&#x65E7;&#x7248;&#x672C;&#x7684;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B0;&#x80FD;&#x529B;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x505A;&#x517C;&#x5BB9;&#x3002;</p>
+<p>&#x6587;&#x6863;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#xFF0C;API&#x7B49;&#x9875;&#x9762;&#x63CF;&#x8FF0;&#x4E2D;&#x5E26;&#x4E0A;&#x5404;&#x4E2A;&#x529F;&#x80FD;&#x6240;&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>wx.getSystemInfo</code> &#x6216;&#x8005; <code>wx.getSystemInfoSync</code> &#x83B7;&#x53D6;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x53F7;&#x3002;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>wx.canIUse</code> <a href="../api/api-caniuse.html">&#x8BE6;&#x60C5;</a> &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5728;&#x8BE5;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x4E0B;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5BF9;&#x5E94;&#x7684;API&#x6216;&#x8005;&#x7EC4;&#x4EF6;</p>
+<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x7248;&#x672C;&#x6BD4;&#x8F83;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x7248;&#x672C;&#x6BD4;&#x8F83;</h3>
+<p>&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7684;&#x7248;&#x672C;&#x53F7;&#x98CE;&#x683C;&#x4E3A; Major.Minor.Patch&#xFF08;&#x4E3B;&#x7248;&#x672C;&#x53F7;.&#x6B21;&#x7248;&#x672C;&#x53F7;.&#x4FEE;&#x8BA2;&#x53F7;&#xFF09;&#x3002;
+&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7248;&#x672C;&#x53F7;&#x53BB;&#x505A;&#x517C;&#x5BB9;&#xFF0C;&#x4EE5;&#x4E0B;&#x4E3A;&#x53C2;&#x8003;&#x4EE3;&#x7801;&#xFF1A;</p>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compareVersion</span>(<span class="hljs-params">v1, v2</span>) </span>{
-  v1 = v1.split(<span class="hljs-string">'.'</span>)
-  v2 = v2.split(<span class="hljs-string">'.'</span>)
+  v1 = v1.split(<span class="hljs-string">&apos;.&apos;</span>)
+  v2 = v2.split(<span class="hljs-string">&apos;.&apos;</span>)
   <span class="hljs-keyword">var</span> len = <span class="hljs-built_in">Math</span>.max(v1.length, v2.length)
 
-  <span class="hljs-keyword">while</span> (v1.length < len) {
-    v1.push(<span class="hljs-string">'0'</span>)
+  <span class="hljs-keyword">while</span> (v1.length &lt; len) {
+    v1.push(<span class="hljs-string">&apos;0&apos;</span>)
   }
-  <span class="hljs-keyword">while</span> (v2.length < len) {
-    v2.push(<span class="hljs-string">'0'</span>)
+  <span class="hljs-keyword">while</span> (v2.length &lt; len) {
+    v2.push(<span class="hljs-string">&apos;0&apos;</span>)
   }
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i < len; i++) {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) {
     <span class="hljs-keyword">var</span> num1 = <span class="hljs-built_in">parseInt</span>(v1[i])
     <span class="hljs-keyword">var</span> num2 = <span class="hljs-built_in">parseInt</span>(v2[i])
 
-    <span class="hljs-keyword">if</span> (num1 > num2) {
+    <span class="hljs-keyword">if</span> (num1 &gt; num2) {
       <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (num1 < num2) {
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (num1 &lt; num2) {
       <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
     }
   }
@@ -53,42 +53,42 @@
   <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
 }
 
-compareVersion(<span class="hljs-string">'1.11.0'</span>, <span class="hljs-string">'1.9.9'</span>)
+compareVersion(<span class="hljs-string">&apos;1.11.0&apos;</span>, <span class="hljs-string">&apos;1.9.9&apos;</span>)
 <span class="hljs-comment">// 1</span>
 </code></pre>
-<h3 id="兼容方式---接口">兼容方式 - 接口</h3>
-<p>对于新增的 API，可以用以下代码来判断是否支持用户的手机。</p>
+<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x63A5;&#x53E3;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x63A5;&#x53E3;</h3>
+<p>&#x5BF9;&#x4E8E;&#x65B0;&#x589E;&#x7684; API&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x652F;&#x6301;&#x7528;&#x6237;&#x7684;&#x624B;&#x673A;&#x3002;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">if</span> (wx.openBluetoothAdapter) {
   wx.openBluetoothAdapter()
 } <span class="hljs-keyword">else</span> {
-  <span class="hljs-comment">// 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示</span>
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x5E0C;&#x671B;&#x7528;&#x6237;&#x5728;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4E0A;&#x4F53;&#x9A8C;&#x60A8;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B50;&#x63D0;&#x793A;</span>
   wx.showModal({
-    title: <span class="hljs-string">'提示'</span>,
-    content: <span class="hljs-string">'当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'</span>
+    title: <span class="hljs-string">&apos;&#x63D0;&#x793A;&apos;</span>,
+    content: <span class="hljs-string">&apos;&#x5F53;&#x524D;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#x8FC7;&#x4F4E;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x8BE5;&#x529F;&#x80FD;&#xFF0C;&#x8BF7;&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#x540E;&#x91CD;&#x8BD5;&#x3002;&apos;</span>
   })
 }
 </code></pre>
-<h3 id="兼容方式---参数">兼容方式 - 参数</h3>
-<p>对于 API 的参数或者返回值有新增的参数，可以判断用以下代码判断。</p>
+<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x53C2;&#x6570;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x53C2;&#x6570;</h3>
+<p>&#x5BF9;&#x4E8E; API &#x7684;&#x53C2;&#x6570;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x503C;&#x6709;&#x65B0;&#x589E;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5224;&#x65AD;&#x3002;</p>
 <pre><code class="lang-js">wx.showModal({
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">if</span> (wx.canIUse(<span class="hljs-string">'showModal.cancel'</span>)) {
+    <span class="hljs-keyword">if</span> (wx.canIUse(<span class="hljs-string">&apos;showModal.cancel&apos;</span>)) {
       <span class="hljs-built_in">console</span>.log(res.cancel)
     }
   }
 })
 </code></pre>
-<h3 id="兼容方式---组件">兼容方式 - 组件</h3>
-<p>对于组件，新增的组件或属性在旧版本上不会被处理，不过也不会报错。如果特殊场景需要对旧版本做一些降级处理，可以这样子做。</p>
+<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x7EC4;&#x4EF6;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x7EC4;&#x4EF6;</h3>
+<p>&#x5BF9;&#x4E8E;&#x7EC4;&#x4EF6;&#xFF0C;&#x65B0;&#x589E;&#x7684;&#x7EC4;&#x4EF6;&#x6216;&#x5C5E;&#x6027;&#x5728;&#x65E7;&#x7248;&#x672C;&#x4E0A;&#x4E0D;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E5F;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x5982;&#x679C;&#x7279;&#x6B8A;&#x573A;&#x666F;&#x9700;&#x8981;&#x5BF9;&#x65E7;&#x7248;&#x672C;&#x505A;&#x4E00;&#x4E9B;&#x964D;&#x7EA7;&#x5904;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B50;&#x505A;&#x3002;</p>
 <pre><code class="lang-js">Page({
   data: {
-    canIUse: wx.canIUse(<span class="hljs-string">'cover-view'</span>)
+    canIUse: wx.canIUse(<span class="hljs-string">&apos;cover-view&apos;</span>)
   }
 })
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">video</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">"{{!canIUse}}"</span>></span>
-  <span class="hljs-tag"><<span class="hljs-name">cover-view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">"{{canIUse}}"</span>></span>play<span class="hljs-tag"></<span class="hljs-name">cover-view</span>></span>
-<span class="hljs-tag"></<span class="hljs-name">video</span>></span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;{{!canIUse}}&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{canIUse}}&quot;</span>&gt;</span>play<span class="hljs-tag">&lt;/<span class="hljs-name">cover-view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
 
                                 

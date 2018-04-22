@@ -20,20 +20,20 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextsetfillstyle">canvasContext.setFillStyle</h1>
-<h3 id="定义">定义</h3>
-<p>设置填充色。</p>
-<p><strong>Tip</strong>: 如果没有设置 <code>fillStyle</code>，默认颜色为 <code>black</code>。</p>
-<h3 id="语法">语法</h3>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x8BBE;&#x7F6E;&#x586B;&#x5145;&#x8272;&#x3002;</p>
+<p><strong>Tip</strong>: &#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E; <code>fillStyle</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x989C;&#x8272;&#x4E3A; <code>black</code>&#x3002;</p>
+<h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
 <pre><code class="lang-javascript">canvasContext.setFillStyle(color)
-canvasContext.fillStyle = color <span class="hljs-comment">// 基础库 1.9.90 起支持</span>
+canvasContext.fillStyle = color <span class="hljs-comment">// &#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x652F;&#x6301;</span>
 </code></pre>
-<h3 id="参数">参数</h3>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>定义</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5B9A;&#x4E49;</th>
 </tr>
 </thead>
 <tbody>
@@ -41,13 +41,13 @@ canvasContext.fillStyle = color <span class="hljs-comment">// 基础库 1.9.90 �
 <td>color</td>
 <td><a href="color.html">Color</a></td>
 <td>Gradient Object</td>
-<td>填充色</td>
+<td>&#x586B;&#x5145;&#x8272;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="例子">例子</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
-ctx.setFillStyle(<span class="hljs-string">'red'</span>)
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">75</span>)
 ctx.draw()
 </code></pre>

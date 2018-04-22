@@ -21,133 +21,133 @@
                                 
                                 <h3 id="sockettask">SocketTask</h3>
 <blockquote>
-<p>基础库 1.7.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>WebSocket 任务，可通过 <a href="network-socket.html">wx.connectSocket()</a> 接口创建返回。</p>
-<h4 id="方法">方法</h4>
+<p>WebSocket &#x4EFB;&#x52A1;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="network-socket.html">wx.connectSocket()</a> &#x63A5;&#x53E3;&#x521B;&#x5EFA;&#x8FD4;&#x56DE;&#x3002;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
 <h5 id="sockettasksendobject">SocketTask.send(OBJECT)</h5>
-<p>通过 WebSocket 连接发送数据。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x6570;&#x636E;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>data</td>
 <td>String/ArrayBuffer</td>
-<td>是</td>
-<td>需要发送的内容</td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x5185;&#x5BB9;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
 <h5 id="sockettaskcloseobject">SocketTask.close(OBJECT)</h5>
-<p>关闭 WebSocket 连接。</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x5173;&#x95ED; WebSocket &#x8FDE;&#x63A5;&#x3002;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>code</td>
 <td>Number</td>
-<td>否</td>
-<td>一个数字值表示关闭连接的状态号，表示连接被关闭的原因。如果这个参数没有被指定，默认的取值是1000 （表示正常连接关闭）</td>
+<td>&#x5426;</td>
+<td>&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x503C;&#x8868;&#x793A;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x7684;&#x72B6;&#x6001;&#x53F7;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x88AB;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x53D6;&#x503C;&#x662F;1000 &#xFF08;&#x8868;&#x793A;&#x6B63;&#x5E38;&#x8FDE;&#x63A5;&#x5173;&#x95ED;&#xFF09;</td>
 </tr>
 <tr>
 <td>reason</td>
 <td>String</td>
-<td>否</td>
-<td>一个可读的字符串，表示连接被关闭的原因。这个字符串必须是不长于123字节的UTF-8 文本（不是字符）</td>
+<td>&#x5426;</td>
+<td>&#x4E00;&#x4E2A;&#x53EF;&#x8BFB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x88AB;&#x5173;&#x95ED;&#x7684;&#x539F;&#x56E0;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5FC5;&#x987B;&#x662F;&#x4E0D;&#x957F;&#x4E8E;123&#x5B57;&#x8282;&#x7684;UTF-8 &#x6587;&#x672C;&#xFF08;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#xFF09;</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
 <h5 id="sockettaskonopencallback">SocketTask.onOpen(CALLBACK)</h5>
-<p>监听 WebSocket 连接打开事件。</p>
+<p>&#x76D1;&#x542C; WebSocket &#x8FDE;&#x63A5;&#x6253;&#x5F00;&#x4E8B;&#x4EF6;&#x3002;</p>
 <h5 id="sockettaskonclosecallback">SocketTask.onClose(CALLBACK)</h5>
-<p>监听 WebSocket 连接关闭事件。</p>
+<p>&#x76D1;&#x542C; WebSocket &#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;&#x3002;</p>
 <h5 id="sockettaskonerrorcallback">SocketTask.onError(CALLBACK)</h5>
-<p>监听 WebSocket 错误。</p>
-<p><strong>CALLBACK返回参数：</strong></p>
+<p>&#x76D1;&#x542C; WebSocket &#x9519;&#x8BEF;&#x3002;</p>
+<p><strong>CALLBACK&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>错误信息</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
 </tr>
 </tbody>
 </table>
 <h5 id="sockettaskonmessagecallback">SocketTask.onMessage(CALLBACK)</h5>
-<p>监听WebSocket接受到服务器的消息事件。</p>
-<p><strong>CALLBACK返回参数：</strong></p>
+<p>&#x76D1;&#x542C;WebSocket&#x63A5;&#x53D7;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6D88;&#x606F;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p><strong>CALLBACK&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>data</td>
 <td>String/ArrayBuffer</td>
-<td>服务器返回的消息</td>
+<td>&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6D88;&#x606F;</td>
 </tr>
 </tbody>
 </table>

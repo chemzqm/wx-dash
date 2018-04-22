@@ -19,33 +19,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="drawcanvas-不推荐使用">drawCanvas (不推荐使用)</h1>
-<h3 id="定义">定义</h3>
-<p>用所提供的 actions 在所给的 canvas-id 对应的 canvas 上进行绘图。</p>
-<h3 id="参数">参数</h3>
+                                <h1 id="drawcanvas-&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;">drawCanvas (&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;)</h1>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x7528;&#x6240;&#x63D0;&#x4F9B;&#x7684; actions &#x5728;&#x6240;&#x7ED9;&#x7684; canvas-id &#x5BF9;&#x5E94;&#x7684; canvas &#x4E0A;&#x8FDB;&#x884C;&#x7ED8;&#x56FE;&#x3002;</p>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>canvasId</td>
 <td>String</td>
-<td>画布标识，传入 <a href="../../component/canvas.html"><code><canvas/></code></a> 的 cavas-id</td>
+<td>&#x753B;&#x5E03;&#x6807;&#x8BC6;&#xFF0C;&#x4F20;&#x5165; <a href="../../component/canvas.html"><code>&lt;canvas/&gt;</code></a> &#x7684; cavas-id</td>
 </tr>
 <tr>
 <td>actions</td>
 <td>Array</td>
-<td>绘图动作数组，由 wx.createContext 创建的 context，调用 getActions 方法导出绘图动作数组。</td>
+<td>&#x7ED8;&#x56FE;&#x52A8;&#x4F5C;&#x6570;&#x7EC4;&#xFF0C;&#x7531; wx.createContext &#x521B;&#x5EFA;&#x7684; context&#xFF0C;&#x8C03;&#x7528; getActions &#x65B9;&#x6CD5;&#x5BFC;&#x51FA;&#x7ED8;&#x56FE;&#x52A8;&#x4F5C;&#x6570;&#x7EC4;&#x3002;</td>
 </tr>
 <tr>
 <td>reserve</td>
 <td>Boolean</td>
-<td>(可选)本次绘制是否接着上一次绘制，即reserve参数为false，则在本次调用drawCanvas绘制之前native层应先清空画布再继续绘制；若reserver参数为true，则保留当前画布上的内容，本次调用drawCanvas绘制的内容覆盖在上面，默认 false</td>
+<td>(&#x53EF;&#x9009;)&#x672C;&#x6B21;&#x7ED8;&#x5236;&#x662F;&#x5426;&#x63A5;&#x7740;&#x4E0A;&#x4E00;&#x6B21;&#x7ED8;&#x5236;&#xFF0C;&#x5373;reserve&#x53C2;&#x6570;&#x4E3A;false&#xFF0C;&#x5219;&#x5728;&#x672C;&#x6B21;&#x8C03;&#x7528;drawCanvas&#x7ED8;&#x5236;&#x4E4B;&#x524D;native&#x5C42;&#x5E94;&#x5148;&#x6E05;&#x7A7A;&#x753B;&#x5E03;&#x518D;&#x7EE7;&#x7EED;&#x7ED8;&#x5236;&#xFF1B;&#x82E5;reserver&#x53C2;&#x6570;&#x4E3A;true&#xFF0C;&#x5219;&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x753B;&#x5E03;&#x4E0A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x672C;&#x6B21;&#x8C03;&#x7528;drawCanvas&#x7ED8;&#x5236;&#x7684;&#x5185;&#x5BB9;&#x8986;&#x76D6;&#x5728;&#x4E0A;&#x9762;&#xFF0C;&#x9ED8;&#x8BA4; false</td>
 </tr>
 </tbody>
 </table>

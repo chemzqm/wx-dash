@@ -20,89 +20,89 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="wxcreatevideocontextvideoid-this">wx.createVideoContext(videoId, this)</h3>
-<p>创建并返回 video 上下文 <code>videoContext</code> 对象。在自定义组件下，第二个参数传入组件实例this，以操作组件内 <code><video/></code> 组件</p>
+<p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE; video &#x4E0A;&#x4E0B;&#x6587; <code>videoContext</code> &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;video/&gt;</code> &#x7EC4;&#x4EF6;</p>
 <h4 id="videocontext">videoContext</h4>
-<p><code>videoContext</code> 通过 videoId 跟一个 video 组件绑定，通过它可以操作一个 video 组件。</p>
-<p><strong>videoContext 对象的方法列表：</strong></p>
+<p><code>videoContext</code> &#x901A;&#x8FC7; videoId &#x8DDF;&#x4E00;&#x4E2A; video &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x4E00;&#x4E2A; video &#x7EC4;&#x4EF6;&#x3002;</p>
+<p><strong>videoContext &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>方法</th>
-<th>参数</th>
-<th>说明</th>
-<th>最低版本</th>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>play</td>
-<td>无</td>
-<td>播放</td>
+<td>&#x65E0;</td>
+<td>&#x64AD;&#x653E;</td>
 <td></td>
 </tr>
 <tr>
 <td>pause</td>
-<td>无</td>
-<td>暂停</td>
+<td>&#x65E0;</td>
+<td>&#x6682;&#x505C;</td>
 <td></td>
 </tr>
 <tr>
 <td>seek</td>
 <td>position</td>
-<td>跳转到指定位置，单位 s</td>
+<td>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5355;&#x4F4D; s</td>
 <td></td>
 </tr>
 <tr>
 <td>sendDanmu</td>
 <td>danmu</td>
-<td>发送弹幕，danmu 包含两个属性 text, color。</td>
+<td>&#x53D1;&#x9001;&#x5F39;&#x5E55;&#xFF0C;danmu &#x5305;&#x542B;&#x4E24;&#x4E2A;&#x5C5E;&#x6027; text, color&#x3002;</td>
 <td></td>
 </tr>
 <tr>
 <td>playbackRate</td>
 <td>rate</td>
-<td>设置倍速播放，支持的倍率有 0.5/0.8/1.0/1.25/1.5</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
+<td>&#x8BBE;&#x7F6E;&#x500D;&#x901F;&#x64AD;&#x653E;&#xFF0C;&#x652F;&#x6301;&#x7684;&#x500D;&#x7387;&#x6709; 0.5/0.8/1.0/1.25/1.5</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 <tr>
 <td>requestFullScreen</td>
-<td>无</td>
-<td>进入全屏，可传入{direction}参数（1.7.0起支持），详见video组件文档</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
+<td>&#x65E0;</td>
+<td>&#x8FDB;&#x5165;&#x5168;&#x5C4F;&#xFF0C;&#x53EF;&#x4F20;&#x5165;{direction}&#x53C2;&#x6570;&#xFF08;1.7.0&#x8D77;&#x652F;&#x6301;&#xFF09;&#xFF0C;&#x8BE6;&#x89C1;video&#x7EC4;&#x4EF6;&#x6587;&#x6863;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 <tr>
 <td>exitFullScreen</td>
-<td>无</td>
-<td>退出全屏</td>
-<td><a href="../framework/compatibility.html" title="基础库 1.4.0 开始支持，低版本需做兼容处理。">1.4.0</a></td>
+<td>&#x65E0;</td>
+<td>&#x9000;&#x51FA;&#x5168;&#x5C4F;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
-<p><a href="wechatide://minicode/X5V6Xmmk6xYB" target="_blank">在开发者工具中预览效果</a></p>
-<pre><code class="lang-html"><span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section tc"</span>></span>
-  <span class="hljs-tag"><<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myVideo"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"</span>   <span class="hljs-attr">enable-danmu</span> <span class="hljs-attr">danmu-btn</span> <span class="hljs-attr">controls</span>></span><span class="hljs-tag"></<span class="hljs-name">video</span>></span>
-  <span class="hljs-tag"><<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-area"</span>></span>
-    <span class="hljs-tag"><<span class="hljs-name">input</span> <span class="hljs-attr">bindblur</span>=<span class="hljs-string">"bindInputBlur"</span>/></span>
-    <span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">"bindSendDanmu"</span>></span>发送弹幕<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
-  <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
-<span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/X5V6Xmmk6xYB" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myVideo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span>   <span class="hljs-attr">enable-danmu</span> <span class="hljs-attr">danmu-btn</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bindblur</span>=<span class="hljs-string">&quot;bindInputBlur&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindSendDanmu&quot;</span>&gt;</span>&#x53D1;&#x9001;&#x5F39;&#x5E55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">let</span> rgb = []
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ; i < <span class="hljs-number">3</span>; ++i){
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">3</span>; ++i){
     <span class="hljs-keyword">let</span> color = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">256</span>).toString(<span class="hljs-number">16</span>)
-    color = color.length == <span class="hljs-number">1</span> ? <span class="hljs-string">'0'</span> + color : color
+    color = color.length == <span class="hljs-number">1</span> ? <span class="hljs-string">&apos;0&apos;</span> + color : color
     rgb.push(color)
   }
-  <span class="hljs-keyword">return</span> <span class="hljs-string">'#'</span> + rgb.join(<span class="hljs-string">''</span>)
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;#&apos;</span> + rgb.join(<span class="hljs-string">&apos;&apos;</span>)
 }
 
 Page({
   onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">this</span>.videoContext = wx.createVideoContext(<span class="hljs-string">'myVideo'</span>)
+    <span class="hljs-keyword">this</span>.videoContext = wx.createVideoContext(<span class="hljs-string">&apos;myVideo&apos;</span>)
   },
-  inputValue: <span class="hljs-string">''</span>,
+  inputValue: <span class="hljs-string">&apos;&apos;</span>,
   bindInputBlur: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.inputValue = e.detail.value
   },

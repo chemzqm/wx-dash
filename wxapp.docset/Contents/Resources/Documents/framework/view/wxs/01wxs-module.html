@@ -19,18 +19,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="wxs-模块">WXS 模块</h1>
-<p>WXS 代码可以编写在 wxml 文件中的 <code><wxs></code> 标签内，或以 <code>.wxs</code> 为后缀名的文件内。</p>
-<h2 id="模块">模块</h2>
-<p>每一个 <code>.wxs</code> 文件和 <code><wxs></code> 标签都是一个单独的模块。</p>
-<p>每个模块都有自己独立的作用域。即在一个模块里面定义的变量与函数，默认为私有的，对其他模块不可见。</p>
-<p>一个模块要想对外暴露其内部的私有变量与函数，只能通过 <code>module.exports</code> 实现。</p>
-<h2 id="wxs-文件">.wxs 文件</h2>
-<p>在<strong>微信开发者工具</strong>里面，右键可以直接创建 <code>.wxs</code> 文件，在其中直接编写 WXS 脚本。</p>
-<p><strong>示例代码：</strong></p>
+                                <h1 id="wxs-&#x6A21;&#x5757;">WXS &#x6A21;&#x5757;</h1>
+<p>WXS &#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x5728; wxml &#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5185;&#xFF0C;&#x6216;&#x4EE5; <code>.wxs</code> &#x4E3A;&#x540E;&#x7F00;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x3002;</p>
+<h2 id="&#x6A21;&#x5757;">&#x6A21;&#x5757;</h2>
+<p>&#x6BCF;&#x4E00;&#x4E2A; <code>.wxs</code> &#x6587;&#x4EF6;&#x548C; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x72EC;&#x7ACB;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x3002;&#x5373;&#x5728;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x51FD;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x79C1;&#x6709;&#x7684;&#xFF0C;&#x5BF9;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x4E0D;&#x53EF;&#x89C1;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x8981;&#x60F3;&#x5BF9;&#x5916;&#x66B4;&#x9732;&#x5176;&#x5185;&#x90E8;&#x7684;&#x79C1;&#x6709;&#x53D8;&#x91CF;&#x4E0E;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7; <code>module.exports</code> &#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="wxs-&#x6587;&#x4EF6;">.wxs &#x6587;&#x4EF6;</h2>
+<p>&#x5728;<strong>&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</strong>&#x91CC;&#x9762;&#xFF0C;&#x53F3;&#x952E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x521B;&#x5EFA; <code>.wxs</code> &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x76F4;&#x63A5;&#x7F16;&#x5199; WXS &#x811A;&#x672C;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// /pages/comm.wxs</span>
 
-<span class="hljs-keyword">var</span> foo = <span class="hljs-string">"'hello world' from comm.wxs"</span>;
+<span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from comm.wxs&quot;</span>;
 <span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
   <span class="hljs-keyword">return</span> d;
 }
@@ -39,17 +39,17 @@
   bar: bar
 };
 </code></pre>
-<p>上述例子在 <code>/pages/comm.wxs</code> 的文件里面编写了 WXS 代码。该 <code>.wxs</code> 文件可以被其他的 <code>.wxs</code> 文件 或 WXML 中的 <code><wxs></code> 标签引用。</p>
-<h3 id="module-对象">module 对象</h3>
-<p>每个 <code>wxs</code> 模块均有一个内置的 <code>module</code> 对象。</p>
-<h4 id="属性">属性</h4>
+<p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5728; <code>/pages/comm.wxs</code> &#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x7F16;&#x5199;&#x4E86; WXS &#x4EE3;&#x7801;&#x3002;&#x8BE5; <code>.wxs</code> &#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x7684; <code>.wxs</code> &#x6587;&#x4EF6; &#x6216; WXML &#x4E2D;&#x7684; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5F15;&#x7528;&#x3002;</p>
+<h3 id="module-&#x5BF9;&#x8C61;">module &#x5BF9;&#x8C61;</h3>
+<p>&#x6BCF;&#x4E2A; <code>wxs</code> &#x6A21;&#x5757;&#x5747;&#x6709;&#x4E00;&#x4E2A;&#x5185;&#x7F6E;&#x7684; <code>module</code> &#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h4>
 <ul>
-<li><code>exports</code>:  通过该属性，可以对外共享本模块的私有变量与函数。</li>
+<li><code>exports</code>:  &#x901A;&#x8FC7;&#x8BE5;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x5916;&#x5171;&#x4EAB;&#x672C;&#x6A21;&#x5757;&#x7684;&#x79C1;&#x6709;&#x53D8;&#x91CF;&#x4E0E;&#x51FD;&#x6570;&#x3002;</li>
 </ul>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
 
-<span class="hljs-keyword">var</span> foo = <span class="hljs-string">"'hello world' from tools.wxs"</span>;
+<span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>;
 <span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
   <span class="hljs-keyword">return</span> d;
 }
@@ -57,29 +57,29 @@
   FOO: foo,
   bar: bar,
 };
-<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">"some msg"</span>;
+<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&quot;some msg&quot;</span>;
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment"><!-- page/index/index.wxml --></span>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- page/index/index.wxml --&gt;</span>
 
-<span class="hljs-tag"><<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./../tools.wxs"</span> <span class="hljs-attr">module</span>=<span class="hljs-string">"tools"</span> /></span>
-<span class="hljs-tag"><<span class="hljs-name">view</span>></span> {{tools.msg}} <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
-<span class="hljs-tag"><<span class="hljs-name">view</span>></span> {{tools.bar(tools.FOO)}} <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../tools.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;tools&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{tools.msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{tools.bar(tools.FOO)}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<p>页面输出：</p>
+<p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>some msg
-'hello world' from tools.wxs
-</code></pre><h3 id="require函数">require函数</h3>
-<p>在<code>.wxs</code>模块中引用其他 <code>wxs</code> 文件模块，可以使用 <code>require</code> 函数。</p>
-<p>引用的时候，要注意如下几点：</p>
+&apos;hello world&apos; from tools.wxs
+</code></pre><h3 id="require&#x51FD;&#x6570;">require&#x51FD;&#x6570;</h3>
+<p>&#x5728;<code>.wxs</code>&#x6A21;&#x5757;&#x4E2D;&#x5F15;&#x7528;&#x5176;&#x4ED6; <code>wxs</code> &#x6587;&#x4EF6;&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>require</code> &#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5F15;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x5982;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
 <ul>
-<li>只能引用 <code>.wxs</code> 文件模块，且必须使用相对路径。</li>
-<li><code>wxs</code> 模块均为单例，<code>wxs</code> 模块在第一次被引用时，会自动初始化为单例对象。多个页面，多个地方，多次引用，使用的都是同一个 <code>wxs</code> 模块对象。</li>
-<li>如果一个 <code>wxs</code> 模块在定义之后，一直没有被引用，则该模块不会被解析与运行。</li>
+<li>&#x53EA;&#x80FD;&#x5F15;&#x7528; <code>.wxs</code> &#x6587;&#x4EF6;&#x6A21;&#x5757;&#xFF0C;&#x4E14;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+<li><code>wxs</code> &#x6A21;&#x5757;&#x5747;&#x4E3A;&#x5355;&#x4F8B;&#xFF0C;<code>wxs</code> &#x6A21;&#x5757;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x5F15;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;&#x591A;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x591A;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x591A;&#x6B21;&#x5F15;&#x7528;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A; <code>wxs</code> &#x6A21;&#x5757;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A; <code>wxs</code> &#x6A21;&#x5757;&#x5728;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#xFF0C;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x88AB;&#x5F15;&#x7528;&#xFF0C;&#x5219;&#x8BE5;&#x6A21;&#x5757;&#x4E0D;&#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x4E0E;&#x8FD0;&#x884C;&#x3002;</li>
 </ul>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
 
-<span class="hljs-keyword">var</span> foo = <span class="hljs-string">"'hello world' from tools.wxs"</span>;
+<span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>;
 <span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
   <span class="hljs-keyword">return</span> d;
 }
@@ -87,32 +87,32 @@
   FOO: foo,
   bar: bar,
 };
-<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">"some msg"</span>;
+<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&quot;some msg&quot;</span>;
 </code></pre>
 <pre><code class="lang-javascript"><span class="hljs-comment">// /pages/logic.wxs</span>
 
-<span class="hljs-keyword">var</span> tools = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./tools.wxs"</span>);
+<span class="hljs-keyword">var</span> tools = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./tools.wxs&quot;</span>);
 
 <span class="hljs-built_in">console</span>.log(tools.FOO);
-<span class="hljs-built_in">console</span>.log(tools.bar(<span class="hljs-string">"logic.wxs"</span>));
+<span class="hljs-built_in">console</span>.log(tools.bar(<span class="hljs-string">&quot;logic.wxs&quot;</span>));
 <span class="hljs-built_in">console</span>.log(tools.msg);
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment"><!-- /page/index/index.wxml --></span>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- /page/index/index.wxml --&gt;</span>
 
-<span class="hljs-tag"><<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./../logic.wxs"</span> <span class="hljs-attr">module</span>=<span class="hljs-string">"logic"</span> /></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../logic.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;logic&quot;</span> /&gt;</span>
 </code></pre>
-<p>控制台输出：</p>
-<pre><code>'hello world' from tools.wxs
+<p>&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code>&apos;hello world&apos; from tools.wxs
 logic.wxs
 some msg
-</code></pre><h2 id="wxs-标签"><code><wxs></code> 标签</h2>
+</code></pre><h2 id="wxs-&#x6807;&#x7B7E;"><code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;</h2>
 <table>
 <thead>
 <tr>
-<th>属性名</th>
-<th>类型</th>
-<th>默认值</th>
-<th>说明</th>
+<th>&#x5C5E;&#x6027;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
@@ -120,74 +120,74 @@ some msg
 <td>module</td>
 <td>String</td>
 <td></td>
-<td>当前 <code><wxs></code> 标签的模块名。必填字段。</td>
+<td>&#x5F53;&#x524D; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x7684;&#x6A21;&#x5757;&#x540D;&#x3002;&#x5FC5;&#x586B;&#x5B57;&#x6BB5;&#x3002;</td>
 </tr>
 <tr>
 <td>src</td>
 <td>String</td>
 <td></td>
-<td>引用 .wxs 文件的相对路径。仅当本标签为<strong>单闭合标签</strong>或<strong>标签的内容为空</strong>时有效。</td>
+<td>&#x5F15;&#x7528; .wxs &#x6587;&#x4EF6;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;&#x4EC5;&#x5F53;&#x672C;&#x6807;&#x7B7E;&#x4E3A;<strong>&#x5355;&#x95ED;&#x5408;&#x6807;&#x7B7E;</strong>&#x6216;<strong>&#x6807;&#x7B7E;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;</strong>&#x65F6;&#x6709;&#x6548;&#x3002;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="module-属性">module 属性</h3>
-<p>module 属性是当前 <code><wxs></code> 标签的模块名。在单个 wxml 文件内，建议其值唯一。有重复模块名则按照先后顺序覆盖（后者覆盖前者）。不同文件之间的 wxs 模块名不会相互覆盖。</p>
-<p>module 属性值的命名必须符合下面两个规则：</p>
+<h3 id="module-&#x5C5E;&#x6027;">module &#x5C5E;&#x6027;</h3>
+<p>module &#x5C5E;&#x6027;&#x662F;&#x5F53;&#x524D; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x7684;&#x6A21;&#x5757;&#x540D;&#x3002;&#x5728;&#x5355;&#x4E2A; wxml &#x6587;&#x4EF6;&#x5185;&#xFF0C;&#x5EFA;&#x8BAE;&#x5176;&#x503C;&#x552F;&#x4E00;&#x3002;&#x6709;&#x91CD;&#x590D;&#x6A21;&#x5757;&#x540D;&#x5219;&#x6309;&#x7167;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x8986;&#x76D6;&#xFF08;&#x540E;&#x8005;&#x8986;&#x76D6;&#x524D;&#x8005;&#xFF09;&#x3002;&#x4E0D;&#x540C;&#x6587;&#x4EF6;&#x4E4B;&#x95F4;&#x7684; wxs &#x6A21;&#x5757;&#x540D;&#x4E0D;&#x4F1A;&#x76F8;&#x4E92;&#x8986;&#x76D6;&#x3002;</p>
+<p>module &#x5C5E;&#x6027;&#x503C;&#x7684;&#x547D;&#x540D;&#x5FC5;&#x987B;&#x7B26;&#x5408;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x89C4;&#x5219;&#xFF1A;</p>
 <ul>
-<li>首字符必须是：字母（a-zA-Z），下划线（_）</li>
-<li>剩余字符可以是：字母（a-zA-Z），下划线（_）， 数字（0-9）</li>
+<li>&#x9996;&#x5B57;&#x7B26;&#x5FC5;&#x987B;&#x662F;&#xFF1A;&#x5B57;&#x6BCD;&#xFF08;a-zA-Z&#xFF09;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;&#xFF08;_&#xFF09;</li>
+<li>&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x53EF;&#x4EE5;&#x662F;&#xFF1A;&#x5B57;&#x6BCD;&#xFF08;a-zA-Z&#xFF09;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;&#xFF08;_&#xFF09;&#xFF0C; &#x6570;&#x5B57;&#xFF08;0-9&#xFF09;</li>
 </ul>
-<p><strong>示例代码：</strong></p>
-<pre><code class="lang-html"><span class="hljs-comment"><!--wxml--></span>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
 
-<span class="hljs-tag"><<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">"foo"</span>></span>
-var some_msg = "hello world";
+<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
+var some_msg = &quot;hello world&quot;;
 module.exports = {
     msg : some_msg,
 }
-<span class="hljs-tag"></<span class="hljs-name">wxs</span>></span>
-<span class="hljs-tag"><<span class="hljs-name">view</span>></span> {{foo.msg}} <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{foo.msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<p>页面输出：</p>
+<p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>hello world
-</code></pre><p>上面例子声明了一个名字为 <code>foo</code> 的模块，将 <code>some_msg</code> 变量暴露出来，供当前页面使用。</p>
-<h3 id="src-属性">src 属性</h3>
-<p>src 属性可以用来引用其他的 <code>wxs</code> 文件模块。</p>
-<p>引用的时候，要注意如下几点：</p>
+</code></pre><p>&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x4E3A; <code>foo</code> &#x7684;&#x6A21;&#x5757;&#xFF0C;&#x5C06; <code>some_msg</code> &#x53D8;&#x91CF;&#x66B4;&#x9732;&#x51FA;&#x6765;&#xFF0C;&#x4F9B;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="src-&#x5C5E;&#x6027;">src &#x5C5E;&#x6027;</h3>
+<p>src &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5F15;&#x7528;&#x5176;&#x4ED6;&#x7684; <code>wxs</code> &#x6587;&#x4EF6;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x5F15;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x5982;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
 <ul>
-<li>只能引用 <code>.wxs</code> 文件模块，且必须使用相对路径。</li>
-<li><code>wxs</code> 模块均为单例，<code>wxs</code> 模块在第一次被引用时，会自动初始化为单例对象。多个页面，多个地方，多次引用，使用的都是同一个 <code>wxs</code> 模块对象。</li>
-<li>如果一个 <code>wxs</code> 模块在定义之后，一直没有被引用，则该模块不会被解析与运行。</li>
+<li>&#x53EA;&#x80FD;&#x5F15;&#x7528; <code>.wxs</code> &#x6587;&#x4EF6;&#x6A21;&#x5757;&#xFF0C;&#x4E14;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+<li><code>wxs</code> &#x6A21;&#x5757;&#x5747;&#x4E3A;&#x5355;&#x4F8B;&#xFF0C;<code>wxs</code> &#x6A21;&#x5757;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x5F15;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;&#x591A;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x591A;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x591A;&#x6B21;&#x5F15;&#x7528;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A; <code>wxs</code> &#x6A21;&#x5757;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A; <code>wxs</code> &#x6A21;&#x5757;&#x5728;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#xFF0C;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x88AB;&#x5F15;&#x7528;&#xFF0C;&#x5219;&#x8BE5;&#x6A21;&#x5757;&#x4E0D;&#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x4E0E;&#x8FD0;&#x884C;&#x3002;</li>
 </ul>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-js"><span class="hljs-comment">// /pages/index/index.js</span>
 
 Page({
   data: {
-    msg: <span class="hljs-string">"'hello wrold' from js"</span>,
+    msg: <span class="hljs-string">&quot;&apos;hello wrold&apos; from js&quot;</span>,
   }
 })
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment"><!-- /pages/index/index.wxml --></span>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- /pages/index/index.wxml --&gt;</span>
 
-<span class="hljs-tag"><<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./../comm.wxs"</span> <span class="hljs-attr">module</span>=<span class="hljs-string">"some_comms"</span>></span><span class="hljs-tag"></<span class="hljs-name">wxs</span>></span>
-<span class="hljs-comment"><!-- 也可以直接使用单标签闭合的写法
-<wxs src="./../comm.wxs" module="some_comms" />
---></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../comm.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;some_comms&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5355;&#x6807;&#x7B7E;&#x95ED;&#x5408;&#x7684;&#x5199;&#x6CD5;
+&lt;wxs src=&quot;./../comm.wxs&quot; module=&quot;some_comms&quot; /&gt;
+--&gt;</span>
 
-<span class="hljs-comment"><!-- 调用 some_comms 模块里面的 bar 函数，且参数为 some_comms 模块里面的 foo --></span>
-<span class="hljs-tag"><<span class="hljs-name">view</span>></span> {{some_comms.bar(some_comms.foo)}} <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
-<span class="hljs-comment"><!-- 调用 some_comms 模块里面的 bar 函数，且参数为 page/index/index.js 里面的 msg --></span>
-<span class="hljs-tag"><<span class="hljs-name">view</span>></span> {{some_comms.bar(msg)}} <span class="hljs-tag"></<span class="hljs-name">view</span>></span>
+<span class="hljs-comment">&lt;!-- &#x8C03;&#x7528; some_comms &#x6A21;&#x5757;&#x91CC;&#x9762;&#x7684; bar &#x51FD;&#x6570;&#xFF0C;&#x4E14;&#x53C2;&#x6570;&#x4E3A; some_comms &#x6A21;&#x5757;&#x91CC;&#x9762;&#x7684; foo --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{some_comms.bar(some_comms.foo)}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x8C03;&#x7528; some_comms &#x6A21;&#x5757;&#x91CC;&#x9762;&#x7684; bar &#x51FD;&#x6570;&#xFF0C;&#x4E14;&#x53C2;&#x6570;&#x4E3A; page/index/index.js &#x91CC;&#x9762;&#x7684; msg --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{some_comms.bar(msg)}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<p>页面输出：</p>
-<pre><code>'hello world' from comm.wxs
-'hello wrold' from js
-</code></pre><p>上述例子在文件 <code>/page/index/index.wxml</code> 中通过 <code><wxs></code> 标签引用了  <code>/page/comm.wxs</code> 模块。</p>
-<h3 id="注意">注意</h3>
+<p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code>&apos;hello world&apos; from comm.wxs
+&apos;hello wrold&apos; from js
+</code></pre><p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5728;&#x6587;&#x4EF6; <code>/page/index/index.wxml</code> &#x4E2D;&#x901A;&#x8FC7; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5F15;&#x7528;&#x4E86;  <code>/page/comm.wxs</code> &#x6A21;&#x5757;&#x3002;</p>
+<h3 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h3>
 <ul>
-<li><code><wxs></code> 模块只能在定义模块的 WXML 文件中被访问到。使用 <code><include></code> 或 <code><import></code> 时，<code><wxs></code> 模块不会被引入到对应的 WXML 文件中。</li>
-<li><code><template></code> 标签中，只能使用定义该 <code><template></code> 的 WXML 文件中定义的 <code><wxs></code> 模块。</li>
+<li><code>&lt;wxs&gt;</code> &#x6A21;&#x5757;&#x53EA;&#x80FD;&#x5728;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684; WXML &#x6587;&#x4EF6;&#x4E2D;&#x88AB;&#x8BBF;&#x95EE;&#x5230;&#x3002;&#x4F7F;&#x7528; <code>&lt;include&gt;</code> &#x6216; <code>&lt;import&gt;</code> &#x65F6;&#xFF0C;<code>&lt;wxs&gt;</code> &#x6A21;&#x5757;&#x4E0D;&#x4F1A;&#x88AB;&#x5F15;&#x5165;&#x5230;&#x5BF9;&#x5E94;&#x7684; WXML &#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
+<li><code>&lt;template&gt;</code> &#x6807;&#x7B7E;&#x4E2D;&#xFF0C;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5B9A;&#x4E49;&#x8BE5; <code>&lt;template&gt;</code> &#x7684; WXML &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; <code>&lt;wxs&gt;</code> &#x6A21;&#x5757;&#x3002;</li>
 </ul>
 
                                 

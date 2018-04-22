@@ -21,80 +21,80 @@
                                 
                                 <h3 id="wxgetfileinfoobject">wx.getFileInfo(OBJECT)</h3>
 <blockquote>
-<p>基础库 1.4.0 开始支持，低版本需做<a href="../framework/compatibility.html">兼容处理</a></p>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>获取文件信息</p>
-<p><strong>OBJECT参数说明：</strong></p>
+<p>&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x4FE1;&#x606F;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数名</th>
-<th>类型</th>
-<th>必填</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>filePath</td>
 <td>String</td>
-<td>是</td>
-<td>本地文件路径</td>
+<td>&#x662F;</td>
+<td>&#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
 </tr>
 <tr>
 <td>digestAlgorithm</td>
 <td>String</td>
-<td>否</td>
-<td>计算文件摘要的算法，默认值 md5，有效值：md5，sha1</td>
+<td>&#x5426;</td>
+<td>&#x8BA1;&#x7B97;&#x6587;&#x4EF6;&#x6458;&#x8981;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C; md5&#xFF0C;&#x6709;&#x6548;&#x503C;&#xFF1A;md5&#xFF0C;sha1</td>
 </tr>
 <tr>
 <td>success</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用成功的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>fail</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用失败的回调函数</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
 </tr>
 <tr>
 <td>complete</td>
 <td>Function</td>
-<td>否</td>
-<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>success返回参数说明：</strong></p>
+<p><strong>success&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
-<th>参数名</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>size</td>
 <td>Number</td>
-<td>文件大小，单位：B</td>
+<td>&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;B</td>
 </tr>
 <tr>
 <td>digest</td>
 <td>String</td>
-<td>按照传入的 digestAlgorithm 计算得出的的文件摘要</td>
+<td>&#x6309;&#x7167;&#x4F20;&#x5165;&#x7684; digestAlgorithm &#x8BA1;&#x7B97;&#x5F97;&#x51FA;&#x7684;&#x7684;&#x6587;&#x4EF6;&#x6458;&#x8981;</td>
 </tr>
 <tr>
 <td>errMsg</td>
 <td>String</td>
-<td>调用结果</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>示例代码：</strong></p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="lang-javascript">wx.getFileInfo({
     success(res) {
         <span class="hljs-built_in">console</span>.log(res.size)

@@ -20,26 +20,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="canvascontextrotate">canvasContext.rotate</h1>
-<h3 id="定义">定义</h3>
-<p>以原点为中心，原点可以用 <a href="#translate">translate</a>方法修改。顺时针旋转当前坐标轴。多次调用<code>rotate</code>，旋转的角度会叠加。</p>
-<h3 id="参数">参数</h3>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p>&#x4EE5;&#x539F;&#x70B9;&#x4E3A;&#x4E2D;&#x5FC3;&#xFF0C;&#x539F;&#x70B9;&#x53EF;&#x4EE5;&#x7528; <a href="#translate">translate</a>&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x3002;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x5F53;&#x524D;&#x5750;&#x6807;&#x8F74;&#x3002;&#x591A;&#x6B21;&#x8C03;&#x7528;<code>rotate</code>&#xFF0C;&#x65CB;&#x8F6C;&#x7684;&#x89D2;&#x5EA6;&#x4F1A;&#x53E0;&#x52A0;&#x3002;</p>
+<h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>类型</th>
-<th>说明</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>rotate</td>
 <td>Number</td>
-<td>旋转角度，以弧度计(degrees * Math.PI/180；degrees范围为0~360)</td>
+<td>&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#xFF0C;&#x4EE5;&#x5F27;&#x5EA6;&#x8BA1;(degrees * Math.PI/180&#xFF1B;degrees&#x8303;&#x56F4;&#x4E3A;0~360)</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">'myCanvas'</span>)
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 
 ctx.strokeRect(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
 ctx.rotate(<span class="hljs-number">20</span> * <span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">180</span>)

@@ -19,27 +19,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="变量">变量</h1>
-<h2 id="概念">概念</h2>
+                                <h1 id="&#x53D8;&#x91CF;">&#x53D8;&#x91CF;</h1>
+<h2 id="&#x6982;&#x5FF5;">&#x6982;&#x5FF5;</h2>
 <ul>
-<li>WXS 中的变量均为值的引用。</li>
-<li>没有声明的变量直接赋值使用，会被定义为全局变量。</li>
-<li>如果只声明变量而不赋值，则默认值为 <code>undefined</code>。</li>
-<li>var表现与javascript一致，会有变量提升。</li>
+<li>WXS &#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x5747;&#x4E3A;&#x503C;&#x7684;&#x5F15;&#x7528;&#x3002;</li>
+<li>&#x6CA1;&#x6709;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#x4F7F;&#x7528;&#xFF0C;&#x4F1A;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x800C;&#x4E0D;&#x8D4B;&#x503C;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>undefined</code>&#x3002;</li>
+<li>var&#x8868;&#x73B0;&#x4E0E;javascript&#x4E00;&#x81F4;&#xFF0C;&#x4F1A;&#x6709;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x3002;</li>
 </ul>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> foo = <span class="hljs-number">1</span>;
-<span class="hljs-keyword">var</span> bar = <span class="hljs-string">"hello world"</span>;
+<span class="hljs-keyword">var</span> bar = <span class="hljs-string">&quot;hello world&quot;</span>;
 <span class="hljs-keyword">var</span> i; <span class="hljs-comment">// i === undefined</span>
 </code></pre>
-<p>上面代码，分别声明了 <code>foo</code>、 <code>bar</code>、 <code>i</code> 三个变量。然后，<code>foo</code> 赋值为数值 <code>1</code> ，<code>bar</code> 赋值为字符串 <code>"hello world"</code>。</p>
-<h2 id="变量名">变量名</h2>
-<p>变量命名必须符合下面两个规则：</p>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#xFF0C;&#x5206;&#x522B;&#x58F0;&#x660E;&#x4E86; <code>foo</code>&#x3001; <code>bar</code>&#x3001; <code>i</code> &#x4E09;&#x4E2A;&#x53D8;&#x91CF;&#x3002;&#x7136;&#x540E;&#xFF0C;<code>foo</code> &#x8D4B;&#x503C;&#x4E3A;&#x6570;&#x503C; <code>1</code> &#xFF0C;<code>bar</code> &#x8D4B;&#x503C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32; <code>&quot;hello world&quot;</code>&#x3002;</p>
+<h2 id="&#x53D8;&#x91CF;&#x540D;">&#x53D8;&#x91CF;&#x540D;</h2>
+<p>&#x53D8;&#x91CF;&#x547D;&#x540D;&#x5FC5;&#x987B;&#x7B26;&#x5408;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x89C4;&#x5219;&#xFF1A;</p>
 <ul>
-<li>首字符必须是：字母（a-zA-Z），下划线（_）</li>
-<li>剩余字符可以是：字母（a-zA-Z），下划线（_）， 数字（0-9）</li>
+<li>&#x9996;&#x5B57;&#x7B26;&#x5FC5;&#x987B;&#x662F;&#xFF1A;&#x5B57;&#x6BCD;&#xFF08;a-zA-Z&#xFF09;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;&#xFF08;_&#xFF09;</li>
+<li>&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x53EF;&#x4EE5;&#x662F;&#xFF1A;&#x5B57;&#x6BCD;&#xFF08;a-zA-Z&#xFF09;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;&#xFF08;_&#xFF09;&#xFF0C; &#x6570;&#x5B57;&#xFF08;0-9&#xFF09;</li>
 </ul>
-<h2 id="保留标识符">保留标识符</h2>
-<p>以下标识符不能作为变量名：</p>
+<h2 id="&#x4FDD;&#x7559;&#x6807;&#x8BC6;&#x7B26;">&#x4FDD;&#x7559;&#x6807;&#x8BC6;&#x7B26;</h2>
+<p>&#x4EE5;&#x4E0B;&#x6807;&#x8BC6;&#x7B26;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x540D;&#xFF1A;</p>
 <pre><code>delete 
 void 
 typeof

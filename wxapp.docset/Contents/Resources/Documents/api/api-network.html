@@ -19,105 +19,105 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="关于小程序中网络相关api的说明">关于小程序中网络相关API的说明</h1>
-<p><strong>网络API列表：</strong></p>
+                                <h1 id="&#x5173;&#x4E8E;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x7F51;&#x7EDC;&#x76F8;&#x5173;api&#x7684;&#x8BF4;&#x660E;">&#x5173;&#x4E8E;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x7F51;&#x7EDC;&#x76F8;&#x5173;API&#x7684;&#x8BF4;&#x660E;</h1>
+<p><strong>&#x7F51;&#x7EDC;API&#x5217;&#x8868;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
 <th>API</th>
-<th>说明</th>
+<th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="network-request.html">wx.request</a></td>
-<td>发起网络请求</td>
+<td>&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</td>
 </tr>
 <tr>
 <td><a href="network-file.html#wxuploadfileobject">wx.uploadFile</a></td>
-<td>上传文件</td>
+<td>&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</td>
 </tr>
 <tr>
 <td><a href="network-file.html#wxdownloadfileobject">wx.downloadFile</a></td>
-<td>下载文件</td>
+<td>&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxconnectsocketobject">wx.connectSocket</a></td>
-<td>创建 WebSocket 连接</td>
+<td>&#x521B;&#x5EFA; WebSocket &#x8FDE;&#x63A5;</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketopencallback">wx.onSocketOpen</a></td>
-<td>监听 WebSocket 打开</td>
+<td>&#x76D1;&#x542C; WebSocket &#x6253;&#x5F00;</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketerrorcallback">wx.onSocketError</a></td>
-<td>监听 WebSocket 错误</td>
+<td>&#x76D1;&#x542C; WebSocket &#x9519;&#x8BEF;</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxsendsocketmessageobject">wx.sendSocketMessage</a></td>
-<td>发送 WebSocket 消息</td>
+<td>&#x53D1;&#x9001; WebSocket &#x6D88;&#x606F;</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketmessagecallback">wx.onSocketMessage</a></td>
-<td>接受 WebSocket 消息</td>
+<td>&#x63A5;&#x53D7; WebSocket &#x6D88;&#x606F;</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxclosesocket">wx.closeSocket</a></td>
-<td>关闭 WebSocket 连接</td>
+<td>&#x5173;&#x95ED; WebSocket &#x8FDE;&#x63A5;</td>
 </tr>
 <tr>
 <td><a href="network-socket.html#wxonsocketclosecallback">wx.onSocketClose</a></td>
-<td>监听 WebSocket 关闭</td>
+<td>&#x76D1;&#x542C; WebSocket &#x5173;&#x95ED;</td>
 </tr>
 </tbody>
 </table>
-<p>在小程序中使用网络相关的 API 时，需要注意下列问题，请开发者提前了解。</p>
-<h2 id="1-服务器域名配置">1. 服务器域名配置</h2>
-<p>每个微信小程序需要事先设置一个通讯域名，小程序可以跟指定的域名与进行网络通信。包括普通 HTTPS 请求（<code>request</code>）、上传文件（<code>uploadFile</code>）、下载文件（<code>downloadFile</code>) 和 WebSocket 通信（<code>connectSocket</code>）</p>
-<h3 id="配置流程">配置流程</h3>
-<p>服务器域名请在 <code>小程序后台-设置-开发设置-服务器域名</code> 中进行配置，配置时需要注意：</p>
+<p>&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x7684; API &#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E0B;&#x5217;&#x95EE;&#x9898;&#xFF0C;&#x8BF7;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x524D;&#x4E86;&#x89E3;&#x3002;</p>
+<h2 id="1-&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x914D;&#x7F6E;">1. &#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x914D;&#x7F6E;</h2>
+<p>&#x6BCF;&#x4E2A;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x4E8B;&#x5148;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x901A;&#x8BAF;&#x57DF;&#x540D;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x8DDF;&#x6307;&#x5B9A;&#x7684;&#x57DF;&#x540D;&#x4E0E;&#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x3002;&#x5305;&#x62EC;&#x666E;&#x901A; HTTPS &#x8BF7;&#x6C42;&#xFF08;<code>request</code>&#xFF09;&#x3001;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#xFF08;<code>uploadFile</code>&#xFF09;&#x3001;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#xFF08;<code>downloadFile</code>) &#x548C; WebSocket &#x901A;&#x4FE1;&#xFF08;<code>connectSocket</code>&#xFF09;</p>
+<h3 id="&#x914D;&#x7F6E;&#x6D41;&#x7A0B;">&#x914D;&#x7F6E;&#x6D41;&#x7A0B;</h3>
+<p>&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x8BF7;&#x5728; <code>&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#x53F0;-&#x8BBE;&#x7F6E;-&#x5F00;&#x53D1;&#x8BBE;&#x7F6E;-&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;</code> &#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x914D;&#x7F6E;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;</p>
 <ul>
-<li>域名只支持 <code>https</code> (<code>request</code>、<code>uploadFile</code>、<code>downloadFile</code>) 和 <code>wss</code> (<code>connectSocket</code>) 协议；</li>
-<li>域名不能使用 IP 地址或 localhost，且不能带端口号；</li>
-<li>域名必须经过 ICP 备案；</li>
-<li><strong>出于安全考虑，<code>api.weixin.qq.com</code> 不能被配置为服务器域名，相关API也不能在小程序内调用。</strong>开发者应将 appsecret 保存到后台服务器中，通过服务器使用 appsecret 获取 accesstoken，并调用相关 API。</li>
-<li>对于每个接口，分别可以配置最多 20 个域名</li>
+<li>&#x57DF;&#x540D;&#x53EA;&#x652F;&#x6301; <code>https</code> (<code>request</code>&#x3001;<code>uploadFile</code>&#x3001;<code>downloadFile</code>) &#x548C; <code>wss</code> (<code>connectSocket</code>) &#x534F;&#x8BAE;&#xFF1B;</li>
+<li>&#x57DF;&#x540D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; IP &#x5730;&#x5740;&#x6216; localhost&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x5E26;&#x7AEF;&#x53E3;&#x53F7;&#xFF1B;</li>
+<li>&#x57DF;&#x540D;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7; ICP &#x5907;&#x6848;&#xFF1B;</li>
+<li><strong>&#x51FA;&#x4E8E;&#x5B89;&#x5168;&#x8003;&#x8651;&#xFF0C;<code>api.weixin.qq.com</code> &#x4E0D;&#x80FD;&#x88AB;&#x914D;&#x7F6E;&#x4E3A;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#xFF0C;&#x76F8;&#x5173;API&#x4E5F;&#x4E0D;&#x80FD;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x8C03;&#x7528;&#x3002;</strong>&#x5F00;&#x53D1;&#x8005;&#x5E94;&#x5C06; appsecret &#x4FDD;&#x5B58;&#x5230;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x670D;&#x52A1;&#x5668;&#x4F7F;&#x7528; appsecret &#x83B7;&#x53D6; accesstoken&#xFF0C;&#x5E76;&#x8C03;&#x7528;&#x76F8;&#x5173; API&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5206;&#x522B;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x6700;&#x591A; 20 &#x4E2A;&#x57DF;&#x540D;</li>
 </ul>
-<h3 id="https-证书">HTTPS 证书</h3>
-<p>小程序必须使用 HTTPS 请求。小程序内会对服务器域名使用的 HTTPS 证书进行校验，如果校验失败，则请求不能成功发起。由于系统限制，不同平台对于证书要求的严格程度不同。为了保证小程序的兼容性，建议开发者按照最高标准进行证书配置，并使用相关工具检查现有证书是否符合要求。</p>
-<p>对证书要求如下：</p>
+<h3 id="https-&#x8BC1;&#x4E66;">HTTPS &#x8BC1;&#x4E66;</h3>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x5FC5;&#x987B;&#x4F7F;&#x7528; HTTPS &#x8BF7;&#x6C42;&#x3002;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x4F1A;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x4F7F;&#x7528;&#x7684; HTTPS &#x8BC1;&#x4E66;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF0C;&#x5982;&#x679C;&#x6821;&#x9A8C;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x8BF7;&#x6C42;&#x4E0D;&#x80FD;&#x6210;&#x529F;&#x53D1;&#x8D77;&#x3002;&#x7531;&#x4E8E;&#x7CFB;&#x7EDF;&#x9650;&#x5236;&#xFF0C;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x5BF9;&#x4E8E;&#x8BC1;&#x4E66;&#x8981;&#x6C42;&#x7684;&#x4E25;&#x683C;&#x7A0B;&#x5EA6;&#x4E0D;&#x540C;&#x3002;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x517C;&#x5BB9;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x5F00;&#x53D1;&#x8005;&#x6309;&#x7167;&#x6700;&#x9AD8;&#x6807;&#x51C6;&#x8FDB;&#x884C;&#x8BC1;&#x4E66;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x76F8;&#x5173;&#x5DE5;&#x5177;&#x68C0;&#x67E5;&#x73B0;&#x6709;&#x8BC1;&#x4E66;&#x662F;&#x5426;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x3002;</p>
+<p>&#x5BF9;&#x8BC1;&#x4E66;&#x8981;&#x6C42;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ul>
-<li>HTTPS 证书必须有效。证书必须被系统信任，部署SSL证书的网站域名必须与证书颁发的域名一致，证书必须在有效期内;</li>
-<li><code>iOS</code> 不支持自签名证书;</li>
-<li><code>iOS</code> 下证书必须满足苹果  <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33" target="_blank">App Transport Security (ATS)</a> 的要求;</li>
-<li>TLS 必须支持 1.2 及以上版本。部分旧 <code>Android</code> 机型还未支持 TLS 1.2，请确保 HTTPS 服务器的 TLS 版本支持1.2及以下版本;</li>
-<li>部分 CA 可能不被操作系统信任，请开发者在选择证书时注意小程序和各系统的相关通告。<ul>
-<li><a href="http://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=&docid=800026caeb042e45681583652b70910a" target="_blank">Chrome 56/57 内核对 WoSign、StartCom 证书限制周知</a></li>
+<li>HTTPS &#x8BC1;&#x4E66;&#x5FC5;&#x987B;&#x6709;&#x6548;&#x3002;&#x8BC1;&#x4E66;&#x5FC5;&#x987B;&#x88AB;&#x7CFB;&#x7EDF;&#x4FE1;&#x4EFB;&#xFF0C;&#x90E8;&#x7F72;SSL&#x8BC1;&#x4E66;&#x7684;&#x7F51;&#x7AD9;&#x57DF;&#x540D;&#x5FC5;&#x987B;&#x4E0E;&#x8BC1;&#x4E66;&#x9881;&#x53D1;&#x7684;&#x57DF;&#x540D;&#x4E00;&#x81F4;&#xFF0C;&#x8BC1;&#x4E66;&#x5FC5;&#x987B;&#x5728;&#x6709;&#x6548;&#x671F;&#x5185;;</li>
+<li><code>iOS</code> &#x4E0D;&#x652F;&#x6301;&#x81EA;&#x7B7E;&#x540D;&#x8BC1;&#x4E66;;</li>
+<li><code>iOS</code> &#x4E0B;&#x8BC1;&#x4E66;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;&#x82F9;&#x679C;  <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33" target="_blank">App Transport Security (ATS)</a> &#x7684;&#x8981;&#x6C42;;</li>
+<li>TLS &#x5FC5;&#x987B;&#x652F;&#x6301; 1.2 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x3002;&#x90E8;&#x5206;&#x65E7; <code>Android</code> &#x673A;&#x578B;&#x8FD8;&#x672A;&#x652F;&#x6301; TLS 1.2&#xFF0C;&#x8BF7;&#x786E;&#x4FDD; HTTPS &#x670D;&#x52A1;&#x5668;&#x7684; TLS &#x7248;&#x672C;&#x652F;&#x6301;1.2&#x53CA;&#x4EE5;&#x4E0B;&#x7248;&#x672C;;</li>
+<li>&#x90E8;&#x5206; CA &#x53EF;&#x80FD;&#x4E0D;&#x88AB;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4FE1;&#x4EFB;&#xFF0C;&#x8BF7;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x9009;&#x62E9;&#x8BC1;&#x4E66;&#x65F6;&#x6CE8;&#x610F;&#x5C0F;&#x7A0B;&#x5E8F;&#x548C;&#x5404;&#x7CFB;&#x7EDF;&#x7684;&#x76F8;&#x5173;&#x901A;&#x544A;&#x3002;<ul>
+<li><a href="http://developers.weixin.qq.com/blogdetail?action=get_post_info&amp;lang=zh_CN&amp;token=&amp;docid=800026caeb042e45681583652b70910a" target="_blank">Chrome 56/57 &#x5185;&#x6838;&#x5BF9; WoSign&#x3001;StartCom &#x8BC1;&#x4E66;&#x9650;&#x5236;&#x5468;&#x77E5;</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="跳过域名校验">跳过域名校验</h3>
-<p>在微信开发者工具中，可以临时开启 <code>开发环境不校验请求域名、TLS版本及HTTPS证书</code> 选项，跳过服务器域名的校验。此时，在微信开发者工具中及手机开启调试模式时，不会进行服务器域名的校验。</p>
-<p><strong>在服务器域名配置成功后，建议开发者关闭此选项进行开发，并在各平台下进行测试，以确认服务器域名配置正确。</strong></p>
+<h3 id="&#x8DF3;&#x8FC7;&#x57DF;&#x540D;&#x6821;&#x9A8C;">&#x8DF3;&#x8FC7;&#x57DF;&#x540D;&#x6821;&#x9A8C;</h3>
+<p>&#x5728;&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4E34;&#x65F6;&#x5F00;&#x542F; <code>&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x4E0D;&#x6821;&#x9A8C;&#x8BF7;&#x6C42;&#x57DF;&#x540D;&#x3001;TLS&#x7248;&#x672C;&#x53CA;HTTPS&#x8BC1;&#x4E66;</code> &#x9009;&#x9879;&#xFF0C;&#x8DF3;&#x8FC7;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x7684;&#x6821;&#x9A8C;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5728;&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x53CA;&#x624B;&#x673A;&#x5F00;&#x542F;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x7684;&#x6821;&#x9A8C;&#x3002;</p>
+<p><strong>&#x5728;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5EFA;&#x8BAE;&#x5F00;&#x53D1;&#x8005;&#x5173;&#x95ED;&#x6B64;&#x9009;&#x9879;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;&#x5E76;&#x5728;&#x5404;&#x5E73;&#x53F0;&#x4E0B;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x4EE5;&#x786E;&#x8BA4;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x914D;&#x7F6E;&#x6B63;&#x786E;&#x3002;</strong></p>
 <blockquote>
-<p>如果手机上出现 “打开调试模式可以发出请求，关闭调试模式无法发出请求” 的现象，请确认是否跳过了域名校验，并确认服务器域名和证书配置是否正确。</p>
+<p>&#x5982;&#x679C;&#x624B;&#x673A;&#x4E0A;&#x51FA;&#x73B0; &#x201C;&#x6253;&#x5F00;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#xFF0C;&#x5173;&#x95ED;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x65E0;&#x6CD5;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x201D; &#x7684;&#x73B0;&#x8C61;&#xFF0C;&#x8BF7;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x8DF3;&#x8FC7;&#x4E86;&#x57DF;&#x540D;&#x6821;&#x9A8C;&#xFF0C;&#x5E76;&#x786E;&#x8BA4;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x548C;&#x8BC1;&#x4E66;&#x914D;&#x7F6E;&#x662F;&#x5426;&#x6B63;&#x786E;&#x3002;</p>
 </blockquote>
-<h2 id="2-关于请求">2. 关于请求</h2>
+<h2 id="2-&#x5173;&#x4E8E;&#x8BF7;&#x6C42;">2. &#x5173;&#x4E8E;&#x8BF7;&#x6C42;</h2>
 <ul>
-<li>默认超时时间和最大超时时间都是 <strong>60s</strong></li>
-<li><code>request</code>、<code>uploadFile</code>、<code>downloadFile</code> 的最大并发限制是 <strong>10</strong> 个</li>
-<li>网络请求的 <code>referer</code>  header 不可设置。其格式固定为 <code>https://servicewechat.com/{appid}/{version}/page-frame.html</code>，其中 <code>{appid}</code> 为小程序的 appid，<code>{version}</code> 为小程序的版本号，版本号为 <code>0</code> 表示为开发版、体验版以及审核版本，版本号为 <code>devtools</code> 表示为开发者工具，其余为正式版本。</li>
-<li>小程序进入后台运行后（非置顶聊天），如果 <strong>5s</strong> 内网络请求没有结束，会回调错误信息 <code>fail interrupted</code>；在回到前台之前，网络请求接口调用都会无法调用。</li>
+<li>&#x9ED8;&#x8BA4;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x548C;&#x6700;&#x5927;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x90FD;&#x662F; <strong>60s</strong></li>
+<li><code>request</code>&#x3001;<code>uploadFile</code>&#x3001;<code>downloadFile</code> &#x7684;&#x6700;&#x5927;&#x5E76;&#x53D1;&#x9650;&#x5236;&#x662F; <strong>10</strong> &#x4E2A;</li>
+<li>&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684; <code>referer</code>  header &#x4E0D;&#x53EF;&#x8BBE;&#x7F6E;&#x3002;&#x5176;&#x683C;&#x5F0F;&#x56FA;&#x5B9A;&#x4E3A; <code>https://servicewechat.com/{appid}/{version}/page-frame.html</code>&#xFF0C;&#x5176;&#x4E2D; <code>{appid}</code> &#x4E3A;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684; appid&#xFF0C;<code>{version}</code> &#x4E3A;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x7248;&#x672C;&#x53F7;&#x4E3A; <code>0</code> &#x8868;&#x793A;&#x4E3A;&#x5F00;&#x53D1;&#x7248;&#x3001;&#x4F53;&#x9A8C;&#x7248;&#x4EE5;&#x53CA;&#x5BA1;&#x6838;&#x7248;&#x672C;&#xFF0C;&#x7248;&#x672C;&#x53F7;&#x4E3A; <code>devtools</code> &#x8868;&#x793A;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#xFF0C;&#x5176;&#x4F59;&#x4E3A;&#x6B63;&#x5F0F;&#x7248;&#x672C;&#x3002;</li>
+<li>&#x5C0F;&#x7A0B;&#x5E8F;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x540E;&#xFF08;&#x975E;&#x7F6E;&#x9876;&#x804A;&#x5929;&#xFF09;&#xFF0C;&#x5982;&#x679C; <strong>5s</strong> &#x5185;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x9519;&#x8BEF;&#x4FE1;&#x606F; <code>fail interrupted</code>&#xFF1B;&#x5728;&#x56DE;&#x5230;&#x524D;&#x53F0;&#x4E4B;&#x524D;&#xFF0C;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x90FD;&#x4F1A;&#x65E0;&#x6CD5;&#x8C03;&#x7528;&#x3002;</li>
 </ul>
-<h2 id="3-关于服务器返回">3. 关于服务器返回</h2>
-<h3 id="返回值编码">返回值编码</h3>
+<h2 id="3-&#x5173;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;">3. &#x5173;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;</h2>
+<h3 id="&#x8FD4;&#x56DE;&#x503C;&#x7F16;&#x7801;">&#x8FD4;&#x56DE;&#x503C;&#x7F16;&#x7801;</h3>
 <ul>
-<li>建议服务器返回值使用 <strong>UTF-8</strong> 编码。对于非 UTF-8 编码，小程序会尝试进行转换，但是会有转换失败的可能。</li>
-<li>小程序会自动对 BOM 头进行过滤。</li>
+<li>&#x5EFA;&#x8BAE;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x503C;&#x4F7F;&#x7528; <strong>UTF-8</strong> &#x7F16;&#x7801;&#x3002;&#x5BF9;&#x4E8E;&#x975E; UTF-8 &#x7F16;&#x7801;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F1A;&#x5C1D;&#x8BD5;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x6709;&#x8F6C;&#x6362;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x3002;</li>
+<li>&#x5C0F;&#x7A0B;&#x5E8F;&#x4F1A;&#x81EA;&#x52A8;&#x5BF9; BOM &#x5934;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x3002;</li>
 </ul>
-<h3 id="回调">回调</h3>
+<h3 id="&#x56DE;&#x8C03;">&#x56DE;&#x8C03;</h3>
 <ul>
-<li><strong>只要成功接收到服务器返回，无论statusCode是多少，都会进入success回调。请开发者根据业务逻辑对返回值进行判断。</strong></li>
+<li><strong>&#x53EA;&#x8981;&#x6210;&#x529F;&#x63A5;&#x6536;&#x5230;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#xFF0C;&#x65E0;&#x8BBA;statusCode&#x662F;&#x591A;&#x5C11;&#xFF0C;&#x90FD;&#x4F1A;&#x8FDB;&#x5165;success&#x56DE;&#x8C03;&#x3002;&#x8BF7;&#x5F00;&#x53D1;&#x8005;&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5BF9;&#x8FD4;&#x56DE;&#x503C;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#x3002;</strong></li>
 </ul>
 
                                 
