@@ -36,7 +36,7 @@ async function downloadHtml() {
     let paths = []
     await pify(mkdirp)(fileRoot)
     let response = await got(rootUrl)
-    const $ = cheerio.load(response.body, {decodeEntities: false})
+    const $ = cheerio.load(response.body)
     $('.summary li a').each((i, link) => {
       let href = $(link).attr('href').replace(/#.*$/, '')
       if (paths.indexOf(href) == -1) {
@@ -64,7 +64,7 @@ async function downloadHtml() {
       let s = /\.html/.test(p) ? p : `${p}.html`
       let file = path.resolve(fileRoot, s)
       let response = await got(remote)
-      const $ = cheerio.load(response.body, {decodeEntities: false})
+      const $ = cheerio.load(response.body)
       let title = $('title').text().replace(' · 小程序', '')
       let len = p.split('/').length
       $('.search-results').remove()
@@ -84,7 +84,7 @@ async function generateAPI(SearchIndex) {
   let tags = ['h1', 'h2', 'h3', 'h4']
   for (let file of files) {
     let content = await pify(fs.readFile)(path.resolve(__dirname, file), 'utf8')
-    const $ = cheerio.load(content, {decodeEntities: false})
+    const $ = cheerio.load(content)
     let title = $('title').text()
     let htmlPath = path.relative(destDir, file)
     for (let tag of tags) {
@@ -158,7 +158,7 @@ async function generateComponent(SearchIndex) {
   let tags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
   for (let file of files) {
     let content = await pify(fs.readFile)(path.resolve(__dirname, file), 'utf8')
-    const $ = cheerio.load(content, {decodeEntities: false})
+    const $ = cheerio.load(content)
     let title = $('title').text()
     let htmlPath = path.relative(destDir, file)
     for (let tag of tags) {
@@ -207,7 +207,7 @@ async function generateComponent(SearchIndex) {
 
 async function loadFrameworkNavigation() {
   let response = await got('https://developers.weixin.qq.com/miniprogram/dev/framework/config.html')
-  const $ = cheerio.load(response.body, {decodeEntities: false})
+  const $ = cheerio.load(response.body)
   let root = $('ul.summary')
   let items = []
   traverseRoot($, root, '', (path, name) => {
@@ -240,7 +240,7 @@ async function generateFramework(SearchIndex) {
   })
   for (let file of files) {
     let content = await pify(fs.readFile)(path.resolve(__dirname, file), 'utf8')
-    const $ = cheerio.load(content, {decodeEntities: false})
+    const $ = cheerio.load(content)
     let htmlPath = path.relative(destDir, file)
     let title = config[htmlPath.replace(/^framework\//, '')]
     if (title) {
