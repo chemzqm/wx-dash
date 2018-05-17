@@ -207,6 +207,14 @@
 <td>open-type=&quot;launchApp&quot;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.5 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.5</a></td>
 </tr>
+<tr>
+<td id="&#x8868;&#x5355;&#x7EC4;&#x4EF6;-bindopensetting">bindopensetting</td>
+<td>Handler</td>
+<td></td>
+<td>&#x5728;&#x6253;&#x5F00;&#x6388;&#x6743;&#x8BBE;&#x7F6E;&#x9875;&#x540E;&#x56DE;&#x8C03;</td>
+<td>open-type=&quot;openSetting&quot;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
+</tr>
 </tbody>
 </table>
 <!--
@@ -311,6 +319,11 @@
 <td>&#x6253;&#x5F00;APP&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;app-parameter&#x5C5E;&#x6027;&#x8BBE;&#x5B9A;&#x5411;APP&#x4F20;&#x7684;&#x53C2;&#x6570;<a href="../api/launchApp.html">&#x5177;&#x4F53;&#x8BF4;&#x660E;</a></td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.5 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.5</a></td>
 </tr>
+<tr>
+<td>openSetting</td>
+<td>&#x6253;&#x5F00;&#x6388;&#x6743;&#x8BBE;&#x7F6E;&#x9875;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.7</a></td>
+</tr>
 </tbody>
 </table>
 <!--
@@ -339,6 +352,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;setLoading&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0A;&#x6309;&#x94AE;loading&#x5C5E;&#x6027;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;contact&quot;</span>&gt;</span>&#x8FDB;&#x5165;&#x5BA2;&#x670D;&#x4F1A;&#x8BDD;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;getUserInfo&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;zh_CN&quot;</span> <span class="hljs-attr">bindgetuserinfo</span>=<span class="hljs-string">&quot;onGotUserInfo&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;openSetting&quot;</span>&gt;</span>&#x6253;&#x5F00;&#x6388;&#x6743;&#x8BBE;&#x7F6E;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> types = [<span class="hljs-string">&apos;default&apos;</span>, <span class="hljs-string">&apos;primary&apos;</span>, <span class="hljs-string">&apos;warn&apos;</span>]
 <span class="hljs-keyword">var</span> pageObject = {
@@ -386,7 +400,7 @@
 
 Page(pageObject)
 </code></pre>
-<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/button.png?t=2018515" alt="button"></p>
+<p><img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/pic/button.png?t=2018516" alt="button"></p>
 
                                 
                                 </section>
