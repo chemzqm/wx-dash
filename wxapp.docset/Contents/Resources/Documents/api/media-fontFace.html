@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>动态加载字体</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxloadfontfaceobject">wx.loadFontFace(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x7F51;&#x7EDC;&#x5B57;&#x4F53;</p>
+<p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>family</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x4F53;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>source</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x5B57;&#x4F53;&#x8D44;&#x6E90;&#x7684;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>desc</td>
+<td>Object</td>
+<td>&#x5426;</td>
+<td>&#x53EF;&#x9009;&#x7684;&#x5B57;&#x4F53;&#x63CF;&#x8FF0;&#x7B26;</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>desc&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>style</td>
+<td>normal / italic / oblique</td>
+<td>&#x5B9A;&#x4E49;&#x5B57;&#x4F53;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&quot;normal&quot;</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>normal / bold / 100 / 200../ 900</td>
+<td>&#x5B9A;&#x4E49;&#x5B57;&#x4F53;&#x7684;&#x7C97;&#x7EC6;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&quot;normal&quot;</td>
+</tr>
+<tr>
+<td>variant</td>
+<td>normal / small-caps / inherit</td>
+<td>&#x8BBE;&#x7F6E;&#x5C0F;&#x578B;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x7684;&#x5B57;&#x4F53;&#x663E;&#x793A;&#x6587;&#x672C;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&quot;normal  &quot;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.loadFontFace({
+  family: <span class="hljs-string">&apos;Bitstream Vera Serif Bold&apos;</span>,
+  source: <span class="hljs-string">&apos;url(&quot;http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf&quot;)&apos;</span>,
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.status) <span class="hljs-comment">//  loaded</span>
+  },
+  fail: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.status) <span class="hljs-comment">//  error</span>
+  },
+  complete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.status);
+  }
+});
+</code></pre>
+<h4 id="tip">Tip</h4>
+<ol>
+<li>&#x5F15;&#x5165;&#x7684;&#x5916;&#x90E8;&#x5B57;&#x4F53;&#x8D44;&#x6E90;&#xFF0C;&#x5EFA;&#x8BAE;&#x683C;&#x5F0F;&#x4E3A;TTF&#x548C;WOFF&#xFF0C;WOFF2&#x5728;&#x4F4E;&#x7248;&#x672C;&#x7684;IOS&#x4E0A;&#x4F1A;&#x4E0D;&#x517C;&#x5BB9;&#x3002;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

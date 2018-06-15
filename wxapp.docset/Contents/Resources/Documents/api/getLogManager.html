@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>日志</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxgetlogmanager">wx.getLogManager()</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;&#x5668; <code>logManager</code> &#x5BF9;&#x8C61;&#x3002;logManager&#x63D0;&#x4F9B;log&#x3001;info&#x3001;warn&#x3001;debug&#x56DB;&#x4E2A;&#x65B9;&#x6CD5;&#x5199;&#x65E5;&#x5FD7;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x56DB;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4EFB;&#x610F;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;Object/Array/Number/String&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x53C2;&#x6570;&#x7684;&#x603B;&#x5927;&#x5C0F;&#x4E0D;&#x8D85;&#x8FC7;100Kb&#x3002;&#x6700;&#x591A;&#x4FDD;&#x5B58;5M&#x7684;&#x65E5;&#x5FD7;&#x5185;&#x5BB9;&#xFF0C;&#x8D85;&#x8FC7;5M&#x540E;&#xFF0C;&#x65E7;&#x7684;&#x65E5;&#x5FD7;&#x5185;&#x5BB9;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<a href="../component/button.html">Button&#x7EC4;&#x4EF6;</a> &#x7684;<code>open-type</code>&#x4E3A;<code>feedback</code>&#x6765;&#x4E0A;&#x4F20;&#x6253;&#x5370;&#x7684;&#x65E5;&#x5FD7;&#x3002;&#x7528;&#x6237;&#x4E0A;&#x4F20;&#x7684;&#x65E5;&#x5FD7;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x767B;&#x5F55;<a href="https://mp.weixin.qq.com/" target="_blank">&#x5C0F;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x540E;&#x53F0;</a>&#x540E;&#x8FDB;&#x5165;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x201C;&#x5BA2;&#x670D;&#x53CD;&#x9988;&#x201D;&#x9875;&#x9762;&#x83B7;&#x53D6;&#x5230;&#x3002;</p>
+<p>&#x57FA;&#x7840;&#x5E93;&#x9ED8;&#x8BA4;&#x4F1A;&#x628A;App&#x3001;Page&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x548C;wx&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0B;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x3002;</p>
+<h4 id="logmanager">logManager</h4>
+<p><strong>logManager &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log</td>
+<td>p1 [, p2, ..., pN]</td>
+<td>&#x5199;log&#x65E5;&#x5FD7;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4EFB;&#x610F;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x4E3A;Object/Array/Number/String&#xFF0C;&#x53C2;&#x6570;p1&#x5230;pN&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x5199;&#x5165;&#x65E5;&#x5FD7;</td>
+<td></td>
+</tr>
+<tr>
+<td>info</td>
+<td>p1 [, p2, ..., pN]</td>
+<td>&#x5199;info&#x65E5;&#x5FD7;&#xFF0C;&#x53C2;&#x6570;&#x540C;log&#x65B9;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>warn</td>
+<td>p1 [, p2, ..., pN]</td>
+<td>&#x5199;warn&#x65E5;&#x5FD7;&#xFF0C;&#x53C2;&#x6570;&#x540C;log&#x65B9;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>debug</td>
+<td>p1 [, p2, ..., pN]</td>
+<td>&#x5199;debug&#x65E5;&#x5FD7;&#xFF0C;&#x53C2;&#x6570;&#x540C;log&#x65B9;&#x6CD5;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> logger = wx.getLogManager()
+logger.log({str: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;basic log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+logger.info({str: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;info log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+logger.debug({str: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;debug log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+logger.warn({str: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;warn log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>

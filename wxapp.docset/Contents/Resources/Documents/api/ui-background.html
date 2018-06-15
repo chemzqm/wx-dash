@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>设置窗口背景</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="wxsetbackgroundcolorobject">wx.setBackgroundColor(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;</p>
+<p><strong>OBJECT &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td>&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;</td>
+</tr>
+<tr>
+<td>backgroundColorTop</td>
+<td>HexColor</td>
+<td>&#x9876;&#x90E8;&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;&#xFF0C;&#x4EC5; iOS &#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>backgroundColorBottom</td>
+<td>HexColor</td>
+<td>&#x5E95;&#x90E8;&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;&#xFF0C;&#x4EC5; iOS &#x652F;&#x6301;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.setBackgroundColor({
+    backgroundColor: <span class="hljs-string">&apos;#ffffff&apos;</span>, <span class="hljs-comment">// &#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;&#x4E3A;&#x767D;&#x8272;</span>
+})
+
+wx.setBackgroundColor({
+    backgroundColorTop: <span class="hljs-string">&apos;#ffffff&apos;</span>, <span class="hljs-comment">// &#x9876;&#x90E8;&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;&#x4E3A;&#x767D;&#x8272;</span>
+    backgroundColorBottom: <span class="hljs-string">&apos;#ffffff&apos;</span>, <span class="hljs-comment">// &#x5E95;&#x90E8;&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;&#x4E3A;&#x767D;&#x8272;</span>
+})
+</code></pre>
+<h3 id="wxsetbackgroundtextstyleobject">wx.setBackgroundTextStyle(OBJECT)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x4E0B;&#x62C9;&#x80CC;&#x666F;&#x5B57;&#x4F53;&#x3001;loading &#x56FE;&#x7684;&#x6837;&#x5F0F;</p>
+<p><strong>OBJECT &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>textStyle</td>
+<td>String</td>
+<td>&#x4E0B;&#x62C9;&#x80CC;&#x666F;&#x5B57;&#x4F53;&#x3001;loading &#x56FE;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x652F;&#x6301; &apos;dark&apos;, &apos;light&apos;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript">wx.setBackgroundTextStyle({
+    textStyle: <span class="hljs-string">&apos;dark&apos;</span>, <span class="hljs-comment">// &#x4E0B;&#x62C9;&#x80CC;&#x666F;&#x5B57;&#x4F53;&#x3001;loading &#x56FE;&#x7684;&#x6837;&#x5F0F;&#x4E3A;dark</span>
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>
