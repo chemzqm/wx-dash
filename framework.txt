@@ -36,6 +36,7 @@ plugin/index.html|插件
 plugin/development.html|插件 开发插件
 plugin/using.html|插件 使用插件
 plugin/api-limit.html|插件 插件的限制
+plugin/functional-pages.html|插件 插件功能页
 subpackages.html|分包加载
 workers.html|多线程
 client-lib.html|基础库
