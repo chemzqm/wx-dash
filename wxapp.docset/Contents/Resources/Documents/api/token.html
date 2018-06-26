@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>接口调用凭证</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>access_token &#x662F;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x636E;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#x5404;&#x63A5;&#x53E3;&#x65F6;&#x90FD;&#x9700;&#x4F7F;&#x7528; access_token&#xFF0C;&#x8BF7;&#x59A5;&#x5584;&#x4FDD;&#x5B58;&#x3002;access_token &#x7684;&#x5B58;&#x50A8;&#x81F3;&#x5C11;&#x8981;&#x4FDD;&#x7559;512&#x4E2A;&#x5B57;&#x7B26;&#x7A7A;&#x95F4;&#x3002;access_token &#x7684;&#x6709;&#x6548;&#x671F;&#x76EE;&#x524D;&#x4E3A;2&#x4E2A;&#x5C0F;&#x65F6;&#xFF0C;&#x9700;&#x5B9A;&#x65F6;&#x5237;&#x65B0;&#xFF0C;&#x91CD;&#x590D;&#x83B7;&#x53D6;&#x5C06;&#x5BFC;&#x81F4;&#x4E0A;&#x6B21;&#x83B7;&#x53D6;&#x7684; access_token &#x5931;&#x6548;&#x3002;</p>
+<h3 id="&#x83B7;&#x53D6;-accesstoken">&#x83B7;&#x53D6; access_token</h3>
+<p>&#x516C;&#x4F17;&#x5E73;&#x53F0;&#x7684; API &#x8C03;&#x7528;&#x6240;&#x9700;&#x7684; access_token &#x7684;&#x4F7F;&#x7528;&#x53CA;&#x751F;&#x6210;&#x65B9;&#x5F0F;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ol>
+<li>&#x4E3A;&#x4E86;&#x4FDD;&#x5BC6; appsecrect&#xFF0C;&#x7B2C;&#x4E09;&#x65B9;&#x9700;&#x8981;&#x4E00;&#x4E2A; access_token &#x83B7;&#x53D6;&#x548C;&#x5237;&#x65B0;&#x7684;&#x4E2D;&#x63A7;&#x670D;&#x52A1;&#x5668;&#x3002;&#x800C;&#x5176;&#x4ED6;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x670D;&#x52A1;&#x5668;&#x6240;&#x4F7F;&#x7528;&#x7684; access_token &#x5747;&#x6765;&#x81EA;&#x4E8E;&#x8BE5;&#x4E2D;&#x63A7;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E0D;&#x5E94;&#x8BE5;&#x5404;&#x81EA;&#x53BB;&#x5237;&#x65B0;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x9020;&#x6210; access_token &#x8986;&#x76D6;&#x800C;&#x5F71;&#x54CD;&#x4E1A;&#x52A1;&#xFF1B;</li>
+<li>&#x76EE;&#x524D; access_token &#x7684;&#x6709;&#x6548;&#x671F;&#x901A;&#x8FC7;&#x8FD4;&#x56DE;&#x7684; expires_in &#x6765;&#x4F20;&#x8FBE;&#xFF0C;&#x76EE;&#x524D;&#x662F;7200&#x79D2;&#x4E4B;&#x5185;&#x7684;&#x503C;&#x3002;&#x4E2D;&#x63A7;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x6709;&#x6548;&#x65F6;&#x95F4;&#x63D0;&#x524D;&#x53BB;&#x5237;&#x65B0;&#x65B0; access_token&#x3002;&#x5728;&#x5237;&#x65B0;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E2D;&#x63A7;&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x5916;&#x8F93;&#x51FA;&#x7684;&#x4F9D;&#x7136;&#x662F;&#x8001; access_token&#xFF0C;&#x6B64;&#x65F6;&#x516C;&#x4F17;&#x5E73;&#x53F0;&#x540E;&#x53F0;&#x4F1A;&#x4FDD;&#x8BC1;&#x5728;&#x5237;&#x65B0;&#x77ED;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x65B0;&#x8001; access_token &#x90FD;&#x53EF;&#x7528;&#xFF0C;&#x8FD9;&#x4FDD;&#x8BC1;&#x4E86;&#x7B2C;&#x4E09;&#x65B9;&#x4E1A;&#x52A1;&#x7684;&#x5E73;&#x6ED1;&#x8FC7;&#x6E21;&#xFF1B;</li>
+<li>access_token &#x7684;&#x6709;&#x6548;&#x65F6;&#x95F4;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x672A;&#x6765;&#x6709;&#x8C03;&#x6574;&#xFF0C;&#x6240;&#x4EE5;&#x4E2D;&#x63A7;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x4EC5;&#x9700;&#x8981;&#x5185;&#x90E8;&#x5B9A;&#x65F6;&#x4E3B;&#x52A8;&#x5237;&#x65B0;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x88AB;&#x52A8;&#x5237;&#x65B0; access_token &#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x6837;&#x4FBF;&#x4E8E;&#x4E1A;&#x52A1;&#x670D;&#x52A1;&#x5668;&#x5728; API &#x8C03;&#x7528;&#x83B7;&#x77E5; access_token &#x5DF2;&#x8D85;&#x65F6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x89E6;&#x53D1; access_token &#x7684;&#x5237;&#x65B0;&#x6D41;&#x7A0B;&#x3002;</li>
+</ol>
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; AppID &#x548C; AppSecret &#x8C03;&#x7528;&#x672C;&#x63A5;&#x53E3;&#x6765;&#x83B7;&#x53D6; access_token&#x3002;AppID &#x548C; AppSecret &#x53EF;&#x767B;&#x5F55;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x5E73;&#x53F0;&#x5B98;&#x7F51;-&#x8BBE;&#x7F6E;-&#x5F00;&#x53D1;&#x8BBE;&#x7F6E;&#x4E2D;&#x83B7;&#x5F97;&#xFF08;&#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x7ED1;&#x5B9A;&#x6210;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x4E14;&#x5E10;&#x53F7;&#x6CA1;&#x6709;&#x5F02;&#x5E38;&#x72B6;&#x6001;&#xFF09;&#x3002;AppSecret &#x751F;&#x6210;&#x540E;&#x8BF7;&#x81EA;&#x884C;&#x4FDD;&#x5B58;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x516C;&#x4F17;&#x5E73;&#x53F0;&#x6BCF;&#x6B21;&#x751F;&#x6210;&#x67E5;&#x770B;&#x90FD;&#x4F1A;&#x5BFC;&#x81F4; AppSecret &#x88AB;&#x91CD;&#x7F6E;&#x3002;&#x6CE8;&#x610F;&#x8C03;&#x7528;&#x6240;&#x6709;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;&#x65F6;&#x5747;&#x9700;&#x4F7F;&#x7528; https &#x534F;&#x8BAE;&#x3002;&#x5982;&#x679C;&#x7B2C;&#x4E09;&#x65B9;&#x4E0D;&#x4F7F;&#x7528;&#x4E2D;&#x63A7;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x800C;&#x662F;&#x9009;&#x62E9;&#x5404;&#x4E2A;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x70B9;&#x5404;&#x81EA;&#x53BB;&#x5237;&#x65B0; access_token&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x80FD;&#x4F1A;&#x4EA7;&#x751F;&#x51B2;&#x7A81;&#xFF0C;&#x5BFC;&#x81F4;&#x670D;&#x52A1;&#x4E0D;&#x7A33;&#x5B9A;&#x3002;</p>
+<p><strong>&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;</strong></p>
+<pre><code>https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET
+</code></pre><p><strong>HTTP&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;:</strong></p>
+<pre><code>GET
+</code></pre><p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E; :</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>grant_type</td>
+<td>&#x662F;</td>
+<td>&#x83B7;&#x53D6; access_token &#x586B;&#x5199; client_credential</td>
+</tr>
+<tr>
+<td>appid</td>
+<td>&#x662F;</td>
+<td>&#x7B2C;&#x4E09;&#x65B9;&#x7528;&#x6237;&#x552F;&#x4E00;&#x51ED;&#x8BC1;</td>
+</tr>
+<tr>
+<td>secret</td>
+<td>&#x662F;</td>
+<td>&#x7B2C;&#x4E09;&#x65B9;&#x7528;&#x6237;&#x552F;&#x4E00;&#x51ED;&#x8BC1;&#x5BC6;&#x94A5;&#xFF0C;&#x5373;appsecret</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5FAE;&#x4FE1;&#x4F1A;&#x8FD4;&#x56DE;&#x4E0B;&#x8FF0; JSON &#x6570;&#x636E;&#x5305;&#x7ED9;&#x5F00;&#x53D1;&#x8005;&#xFF1A;</p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;access_token&quot;</span>: <span class="hljs-string">&quot;ACCESS_TOKEN&quot;</span>, <span class="hljs-string">&quot;expires_in&quot;</span>: <span class="hljs-number">7200</span>}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>&#x83B7;&#x53D6;&#x5230;&#x7684;&#x51ED;&#x8BC1;</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>&#x51ED;&#x8BC1;&#x6709;&#x6548;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x9519;&#x8BEF;&#x65F6;&#x5FAE;&#x4FE1;&#x4F1A;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x7801;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;JSON &#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF08;&#x8BE5;&#x793A;&#x4F8B;&#x4E3A; AppID &#x65E0;&#x6548;&#x9519;&#x8BEF;&#xFF09;:</p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;errcode&quot;</span>: <span class="hljs-number">40013</span>, <span class="hljs-string">&quot;errmsg&quot;</span>: <span class="hljs-string">&quot;invalid appid&quot;</span>}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    
+</div>
+
+                        
+</body>
+</html>
