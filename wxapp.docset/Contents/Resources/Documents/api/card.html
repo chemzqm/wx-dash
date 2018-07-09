@@ -320,7 +320,7 @@
 </code></pre>
 <h4 id="tip">Tip</h4>
 <ol>
-<li><code>tip</code>: &#x76EE;&#x524D;&#x53EA;&#x6709;&#x8BA4;&#x8BC1;&#x5C0F;&#x7A0B;&#x5E8F;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x5361;&#x5238;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x53C2;&#x8003;<a href="https://mp.weixin.qq.com/debug/wxadoc/product/renzheng.html?t=2018626" target="_blank">&#x6307;&#x5F15;</a>&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#x3002;</li>
+<li><code>tip</code>: &#x76EE;&#x524D;&#x53EA;&#x6709;&#x8BA4;&#x8BC1;&#x5C0F;&#x7A0B;&#x5E8F;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x5361;&#x5238;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x53C2;&#x8003;<a href="https://mp.weixin.qq.com/debug/wxadoc/product/renzheng.html?t=201879" target="_blank">&#x6307;&#x5F15;</a>&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#x3002;</li>
 <li><code>tip</code>: &#x4E86;&#x89E3;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;<a href="https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&amp;key=1490190158&amp;version=1&amp;lang=zh_CN&amp;platform=2" target="_blank">&#x5FAE;&#x4FE1;&#x5361;&#x5238;&#x63A5;&#x53E3;&#x6587;&#x6863;</a></li>
 </ol>
 <h3 id="&#x4F1A;&#x5458;&#x5361;&#x7EC4;&#x4EF6;">&#x4F1A;&#x5458;&#x5361;&#x7EC4;&#x4EF6;</h3>
@@ -412,22 +412,26 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre><code>wx.navigateToMiniProgram({
-  appId: &apos;wxeb490c6f9b154ef9&apos;, //&#x56FA;&#x5B9A;&#x4E3A;&#x6B64; appid&#xFF0C;&#x4E0D;&#x53EF;&#x6539;&#x52A8;
-  extraData: data, // &#x5305;&#x62EC; encrypt_card_id, outer_str, biz&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x987B;&#x4ECE; step3 &#x4E2D;&#x83B7;&#x5F97;&#x7684;&#x94FE;&#x63A5;&#x4E2D;&#x83B7;&#x53D6;&#x53C2;&#x6570;
-  success: function() {
+<pre><code class="lang-js">wx.navigateToMiniProgram({
+  appId: <span class="hljs-string">&apos;wxeb490c6f9b154ef9&apos;</span>, <span class="hljs-comment">//&#x56FA;&#x5B9A;&#x4E3A;&#x6B64; appid&#xFF0C;&#x4E0D;&#x53EF;&#x6539;&#x52A8;</span>
+  extraData: data, <span class="hljs-comment">// &#x5305;&#x62EC; encrypt_card_id, outer_str, biz&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x987B;&#x4ECE; step3 &#x4E2D;&#x83B7;&#x5F97;&#x7684;&#x94FE;&#x63A5;&#x4E2D;&#x83B7;&#x53D6;&#x53C2;&#x6570;</span>
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   },
-  fail: function() {
+  fail: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   },
-  complete: function() {
+  complete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   }
 })
-</code></pre><p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;</strong></p>
+</code></pre>
+<p><code>navigateToMiniProgram</code>&#x63A5;&#x53E3;&#x5373;&#x5C06;&#x5E9F;&#x5F03;&#xFF0C;&#x65B0;&#x7248;&#x672C;&#x4E2D;&#x8BF7;&#x4F7F;&#x7528;<code>&lt;navigator&gt;</code>&#x7EC4;&#x4EF6;&#x6765;&#x4F7F;&#x7528;&#x6B64;&#x529F;&#x80FD;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;miniProgram&quot;</span> <span class="hljs-attr">app-id</span>=<span class="hljs-string">&quot;wxeb490c6f9b154ef9&quot;</span> <span class="hljs-attr">extra-data</span>=<span class="hljs-string">&quot;{{data}}&quot;</span>&gt;</span>&#x4F1A;&#x5458;&#x5361;&#x5F00;&#x5361;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x8BF4;&#x660E;</strong></p>
 <p>&#x5728; App.onShow &#x91CC;&#x5224;&#x65AD;&#x4ECE;&#x4F1A;&#x5458;&#x5F00;&#x5361;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;data</p>
 <ol>
 <li>&#x5224;&#x65AD; data.referrerInfo.appId &#x662F;&#x5426;&#x4E3A;&#x5F00;&#x5361;&#x5C0F;&#x7A0B;&#x5E8F; appId <code>wxeb490c6f9b154ef9</code>&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5219;&#x4E2D;&#x6B62;&#x5224;&#x65AD;</li>
 <li>&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709; data.referrerInfo.extraData &#x662F;&#x5426;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x8868;&#x793A;&#x7528;&#x6237;&#x672A;&#x6FC0;&#x6D3B;&#x76F4;&#x63A5;&#x5DE6;&#x6ED1;/&#x70B9;&#x8FD4;&#x56DE;&#x952E;&#x8FD4;&#x56DE;&#xFF0C;&#x6216;&#x8005;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x6FC0;&#x6D3B;</li>
-<li>&#x82E5;&#x7528;&#x6237;&#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE; data.referrerInfo.extraData &#x4E2D;&#x83B7;&#x53D6; activate_ticket card_id code &#x53C2;&#x6570;&#x7528;&#x4E8E;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;</li>
+<li>&#x82E5;&#x7528;&#x6237;&#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE; data.referrerInfo.extraData &#x4E2D;&#x83B7;&#x53D6; activate_ticket&#xFF0C;card_id&#xFF0C;code &#x53C2;&#x6570;&#x7528;&#x4E8E;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;</li>
 </ol>
 <h4 id="tip">Tip</h4>
 <ol>

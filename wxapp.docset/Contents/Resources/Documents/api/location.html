@@ -37,7 +37,7 @@
 <td>type</td>
 <td>String</td>
 <td>&#x5426;</td>
-<td>&#x9ED8;&#x8BA4;&#x4E3A; wgs84 &#x8FD4;&#x56DE; gps &#x5750;&#x6807;&#xFF0C;gcj02 &#x8FD4;&#x56DE;&#x53EF;&#x7528;&#x4E8E;<code>wx.openLocation</code>&#x7684;&#x5750;&#x6807;</td>
+<td>&#x9ED8;&#x8BA4;&#x4E3A; wgs84 &#x8FD4;&#x56DE; GPS &#x5750;&#x6807;&#xFF1B;gcj02 &#x8FD4;&#x56DE;&#x56FD;&#x6D4B;&#x5C40;&#x5750;&#x6807;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;<code>wx.openLocation</code>&#x7684;&#x5750;&#x6807;</td>
 <td></td>
 </tr>
 <tr>
@@ -127,6 +127,11 @@
   }
 })
 </code></pre>
+<h4 id="tips">Tips</h4>
+<ol>
+<li><strong>&#x6CE8;&#xFF1A;&#x5DE5;&#x5177;&#x4E2D;&#x5B9A;&#x4F4D;&#x6A21;&#x62DF;&#x4F7F;&#x7528;IP&#x5B9A;&#x4F4D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x8BEF;&#x5DEE;&#x3002;&#x4E14;&#x5DE5;&#x5177;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301; gcj02 &#x5750;&#x6807;&#x3002;</strong></li>
+<li>&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x9006;&#x5730;&#x5740;&#x89E3;&#x6790;&#x65F6;&#xFF0C;&#x8BF7;&#x786E;&#x8BA4;&#x7B2C;&#x4E09;&#x65B9;&#x670D;&#x52A1;&#x9ED8;&#x8BA4;&#x7684;&#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x6B63;&#x786E;&#x8FDB;&#x884C;&#x5750;&#x6807;&#x8F6C;&#x6362;&#x3002;</li>
+</ol>
 <h3 id="wxchooselocationobject">wx.chooseLocation(OBJECT)</h3>
 <p>&#x6253;&#x5F00;&#x5730;&#x56FE;&#x9009;&#x62E9;&#x4F4D;&#x7F6E;&#x3002;</p>
 <p>&#x9700;&#x8981;<a href="authorize-index.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.userLocation</p>
@@ -180,11 +185,11 @@
 </tr>
 <tr>
 <td>latitude</td>
-<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;</td>
+<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;&#x3002;&#x4F7F;&#x7528; gcj02 &#x56FD;&#x6D4B;&#x5C40;&#x5750;&#x6807;&#x7CFB;</td>
 </tr>
 <tr>
 <td>longitude</td>
-<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;</td>
+<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;&#x3002;&#x4F7F;&#x7528; gcj02 &#x56FD;&#x6D4B;&#x5C40;&#x5750;&#x6807;&#x7CFB;</td>
 </tr>
 </tbody>
 </table>
@@ -206,13 +211,13 @@
 <td>latitude</td>
 <td>Float</td>
 <td>&#x662F;</td>
-<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;</td>
+<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;&#x3002;&#x4F7F;&#x7528; gcj02 &#x56FD;&#x6D4B;&#x5C40;&#x5750;&#x6807;&#x7CFB;</td>
 </tr>
 <tr>
 <td>longitude</td>
 <td>Float</td>
 <td>&#x662F;</td>
-<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;</td>
+<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;&#x3002;&#x4F7F;&#x7528; gcj02 &#x56FD;&#x6D4B;&#x5C40;&#x5750;&#x6807;&#x7CFB;</td>
 </tr>
 <tr>
 <td>scale</td>
