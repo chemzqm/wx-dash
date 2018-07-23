@@ -39,9 +39,12 @@ plugin/api-limit.html|插件 插件的限制
 plugin/functional-pages.html|插件 插件功能页
 subpackages.html|分包加载
 workers.html|多线程
-client-lib.html|基础库
+client-lib/index.html|基础库
+client-lib/version.html|基础库 版本分布
+client-lib/client.html|基础库 与客户端版本对应关系
 compatibility.html|兼容
 operating-mechanism.html|运行机制
 performance/index.html|性能
 performance/tips.html|性能 优化建议
 performance/tools.html|性能 分析工具
+release.html|基础库更新日志
