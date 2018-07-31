@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>模板</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,17 +13,14 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h1>
 <p>WXML&#x63D0;&#x4F9B;&#x6A21;&#x677F;&#xFF08;template&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x5B9A;&#x4E49;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x3002;</p>
 <h3 id="&#x5B9A;&#x4E49;&#x6A21;&#x677F;">&#x5B9A;&#x4E49;&#x6A21;&#x677F;</h3>
 <p>&#x4F7F;&#x7528; name &#x5C5E;&#x6027;&#xFF0C;&#x4F5C;&#x4E3A;&#x6A21;&#x677F;&#x7684;&#x540D;&#x5B57;&#x3002;&#x7136;&#x540E;&#x5728;<code>&lt;template/&gt;</code>&#x5185;&#x5B9A;&#x4E49;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#xFF0C;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!--
+<pre><code class="language-html"><span class="hljs-comment">&lt;!--
   index: int
   msg: string
   time: string
@@ -37,20 +34,20 @@
 </code></pre>
 <h3 id="&#x4F7F;&#x7528;&#x6A21;&#x677F;">&#x4F7F;&#x7528;&#x6A21;&#x677F;</h3>
 <p>&#x4F7F;&#x7528; is &#x5C5E;&#x6027;&#xFF0C;&#x58F0;&#x660E;&#x9700;&#x8981;&#x7684;&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6A21;&#x677F;&#x6240;&#x9700;&#x8981;&#x7684; data &#x4F20;&#x5165;&#xFF0C;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;msgItem&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;{{...item}}&quot;</span>/&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;msgItem&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;{{...item}}&quot;</span>/&gt;</span>
 </code></pre>
-<pre><code class="lang-js">Page({
-  data: {
-    item: {
-      index: <span class="hljs-number">0</span>,
-      msg: <span class="hljs-string">&apos;this is a template&apos;</span>,
-      time: <span class="hljs-string">&apos;2016-09-15&apos;</span>
+<pre><code class="language-js">Page({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">item</span>: {
+      <span class="hljs-attr">index</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">msg</span>: <span class="hljs-string">&apos;this is a template&apos;</span>,
+      <span class="hljs-attr">time</span>: <span class="hljs-string">&apos;2016-09-15&apos;</span>
     }
   }
 })
 </code></pre>
 <p>is &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Mustache &#x8BED;&#x6CD5;&#xFF0C;&#x6765;&#x52A8;&#x6001;&#x51B3;&#x5B9A;&#x5177;&#x4F53;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x54EA;&#x4E2A;&#x6A21;&#x677F;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odd&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odd&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> odd <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;even&quot;</span>&gt;</span>
@@ -58,19 +55,16 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{[1, 2, 3, 4, 5]}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;{{item % 2 == 0 ? &apos;even&apos; : &apos;odd&apos;}}&quot;</span>/&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;{{item % 2 == 0 ? &apos;even&apos; : &apos;odd&apos;}}&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span>
 </code></pre>
 <h3 id="&#x6A21;&#x677F;&#x7684;&#x4F5C;&#x7528;&#x57DF;">&#x6A21;&#x677F;&#x7684;&#x4F5C;&#x7528;&#x57DF;</h3>
 <p>&#x6A21;&#x677F;&#x62E5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x53EA;&#x80FD;&#x4F7F;&#x7528; data &#x4F20;&#x5165;&#x7684;&#x6570;&#x636E;&#x4EE5;&#x53CA;&#x6A21;&#x7248;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; <code>&lt;wxs /&gt;</code> &#x6A21;&#x5757;&#x3002;</p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

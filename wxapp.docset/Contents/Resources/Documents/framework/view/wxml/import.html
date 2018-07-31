@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>引用</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,66 +13,60 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="&#x5F15;&#x7528;">&#x5F15;&#x7528;</h1>
 <p>WXML &#x63D0;&#x4F9B;&#x4E24;&#x79CD;&#x6587;&#x4EF6;&#x5F15;&#x7528;&#x65B9;&#x5F0F;<code>import</code>&#x548C;<code>include</code>&#x3002;</p>
 <h3 id="import">import</h3>
 <p><code>import</code>&#x53EF;&#x4EE5;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x7684;<code>template</code>&#xFF0C;&#x5982;&#xFF1A;</p>
 <p>&#x5728; item.wxml &#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;<code>item</code>&#x7684;<code>template</code>&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- item.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- item.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 </code></pre>
 <p>&#x5728; index.wxml &#x4E2D;&#x5F15;&#x7528;&#x4E86; item.wxml&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>item</code>&#x6A21;&#x677F;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">import</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;item.wxml&quot;</span>/&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">import</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;item.wxml&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;item&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;{{text: &apos;forbar&apos;}}&quot;</span>/&gt;</span>
 </code></pre>
 <h3 id="import-&#x7684;&#x4F5C;&#x7528;&#x57DF;">import &#x7684;&#x4F5C;&#x7528;&#x57DF;</h3>
 <p>import &#x6709;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5373;&#x53EA;&#x4F1A; import &#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; template&#xFF0C;&#x800C;&#x4E0D;&#x4F1A; import &#x76EE;&#x6807;&#x6587;&#x4EF6; import &#x7684; template&#x3002;</p>
 <p><strong>&#x5982;&#xFF1A;C import B&#xFF0C;B import A&#xFF0C;&#x5728;C&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;B&#x5B9A;&#x4E49;&#x7684;<code>template</code>&#xFF0C;&#x5728;B&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;A&#x5B9A;&#x4E49;&#x7684;<code>template</code>&#xFF0C;&#x4F46;&#x662F;C&#x4E0D;&#x80FD;&#x4F7F;&#x7528;A&#x5B9A;&#x4E49;&#x7684;<code>template</code></strong>&#x3002;</p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- A.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- A.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;A&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> A template <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- B.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- B.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">import</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;a.wxml&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;B&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> B template <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- C.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- C.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">import</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;b.wxml&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;A&quot;</span>/&gt;</span>  <span class="hljs-comment">&lt;!-- Error! Can not use tempalte when not import A. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;B&quot;</span>/&gt;</span>
 </code></pre>
 <h3 id="include">include</h3>
 <p><code>include</code> &#x53EF;&#x4EE5;&#x5C06;&#x76EE;&#x6807;&#x6587;&#x4EF6;<strong>&#x9664;&#x4E86;</strong> <code>&lt;template/&gt;</code> <code>&lt;wxs/&gt;</code> &#x5916;&#x7684;&#x6574;&#x4E2A;&#x4EE3;&#x7801;&#x5F15;&#x5165;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x62F7;&#x8D1D;&#x5230; <code>include</code> &#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- index.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- index.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;header.wxml&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> body <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;footer.wxml&quot;</span>/&gt;</span>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- header.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- header.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> header <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- footer.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- footer.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> footer <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

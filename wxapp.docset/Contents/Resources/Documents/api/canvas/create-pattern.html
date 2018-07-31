@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>createPattern</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="canvascontextcreatepattern">canvasContext.createPattern</h1>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -26,7 +23,7 @@
 <h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
 <p>&#x5BF9;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x521B;&#x5EFA;&#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x65B9;&#x5411;&#x4E0A;&#x91CD;&#x590D;&#x5143;&#x56FE;&#x50CF;</p>
 <h3 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h3>
-<pre><code class="lang-javascript">canvasContext.createPattern(image, repetition)
+<pre><code class="language-javascript">canvasContext.createPattern(image, repetition)
 </code></pre>
 <h3 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h3>
 <table>
@@ -51,20 +48,17 @@
 </tbody>
 </table>
 <h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 <span class="hljs-keyword">const</span> pattern = ctx.createPattern(<span class="hljs-string">&apos;/path/to/image&apos;</span>, <span class="hljs-string">&apos;repeat-x&apos;</span>)
 ctx.fillStyle = pattern
 ctx.fillRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">300</span>, <span class="hljs-number">150</span>)
 ctx.draw()
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

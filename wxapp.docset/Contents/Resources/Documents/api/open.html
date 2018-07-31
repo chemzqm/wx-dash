@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>用户信息</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxgetuserinfoobject">wx.getUserInfo(OBJECT)</h3>
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x63A5;&#x53E3;&#x6709;&#x8C03;&#x6574;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#x5C06;&#x4E0D;&#x518D;&#x51FA;&#x73B0;&#x6388;&#x6743;&#x5F39;&#x7A97;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <a href="../component/button.html">&lt;button open-type=&quot;getUserInfo&quot;&gt;&lt;/button&gt;</a> &#x5F15;&#x5BFC;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x64CD;&#x4F5C;</strong></p>
 <ol>
@@ -77,6 +74,7 @@
 <td>Function</td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -166,7 +164,7 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x5982;&#x679C;&#x53EA;&#x662F;&#x5C55;&#x793A;&#x7528;&#x6237;&#x5934;&#x50CF;&#x6635;&#x79F0;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &lt;open-data /&gt; &#x7EC4;&#x4EF6; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userAvatarUrl&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userNickName&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span>
@@ -174,19 +172,19 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{canIUse}}&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;getUserInfo&quot;</span> <span class="hljs-attr">bindgetuserinfo</span>=<span class="hljs-string">&quot;bindGetUserInfo&quot;</span>&gt;</span>&#x6388;&#x6743;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>&gt;</span>&#x8BF7;&#x5347;&#x7EA7;&#x5FAE;&#x4FE1;&#x7248;&#x672C;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">//js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">//js</span>
 Page({
-  data: {
-    canIUse: wx.canIUse(<span class="hljs-string">&apos;button.open-type.getUserInfo&apos;</span>)
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">canIUse</span>: wx.canIUse(<span class="hljs-string">&apos;button.open-type.getUserInfo&apos;</span>)
   },
-  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-comment">// &#x67E5;&#x770B;&#x662F;&#x5426;&#x6388;&#x6743;</span>
     wx.getSetting({
-      success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
         <span class="hljs-keyword">if</span> (res.authSetting[<span class="hljs-string">&apos;scope.userInfo&apos;</span>]) {
           <span class="hljs-comment">// &#x5DF2;&#x7ECF;&#x6388;&#x6743;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528; getUserInfo &#x83B7;&#x53D6;&#x5934;&#x50CF;&#x6635;&#x79F0;</span>
           wx.getUserInfo({
-            success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
               <span class="hljs-built_in">console</span>.log(res.userInfo)
             }
           })
@@ -194,36 +192,33 @@ Page({
       }
     })
   },
-  bindGetUserInfo: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">bindGetUserInfo</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.log(e.detail.userInfo)
   }
 })
 </code></pre>
 <p>encryptedData &#x89E3;&#x5BC6;&#x540E;&#x4E3A;&#x4EE5;&#x4E0B; json &#x7ED3;&#x6784;&#xFF0C;&#x8BE6;&#x89C1;<a href="signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></p>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;openId&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;nickName&quot;</span>: <span class="hljs-string">&quot;NICKNAME&quot;</span>,
-    <span class="hljs-string">&quot;gender&quot;</span>: GENDER,
-    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;CITY&quot;</span>,
-    <span class="hljs-string">&quot;province&quot;</span>: <span class="hljs-string">&quot;PROVINCE&quot;</span>,
-    <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;COUNTRY&quot;</span>,
-    <span class="hljs-string">&quot;avatarUrl&quot;</span>: <span class="hljs-string">&quot;AVATARURL&quot;</span>,
-    <span class="hljs-string">&quot;unionId&quot;</span>: <span class="hljs-string">&quot;UNIONID&quot;</span>,
-    <span class="hljs-string">&quot;watermark&quot;</span>:
+<pre><code class="language-json">{
+    <span class="hljs-attr">&quot;openId&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
+    <span class="hljs-attr">&quot;nickName&quot;</span>: <span class="hljs-string">&quot;NICKNAME&quot;</span>,
+    <span class="hljs-attr">&quot;gender&quot;</span>: GENDER,
+    <span class="hljs-attr">&quot;city&quot;</span>: <span class="hljs-string">&quot;CITY&quot;</span>,
+    <span class="hljs-attr">&quot;province&quot;</span>: <span class="hljs-string">&quot;PROVINCE&quot;</span>,
+    <span class="hljs-attr">&quot;country&quot;</span>: <span class="hljs-string">&quot;COUNTRY&quot;</span>,
+    <span class="hljs-attr">&quot;avatarUrl&quot;</span>: <span class="hljs-string">&quot;AVATARURL&quot;</span>,
+    <span class="hljs-attr">&quot;unionId&quot;</span>: <span class="hljs-string">&quot;UNIONID&quot;</span>,
+    <span class="hljs-attr">&quot;watermark&quot;</span>:
     {
-        <span class="hljs-string">&quot;appid&quot;</span>:<span class="hljs-string">&quot;APPID&quot;</span>,
-    <span class="hljs-string">&quot;timestamp&quot;</span>:TIMESTAMP
+    	<span class="hljs-attr">&quot;appid&quot;</span>:<span class="hljs-string">&quot;APPID&quot;</span>,
+	<span class="hljs-attr">&quot;timestamp&quot;</span>:TIMESTAMP
     }
 }
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

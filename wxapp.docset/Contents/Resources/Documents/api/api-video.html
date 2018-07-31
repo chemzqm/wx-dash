@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>视频组件控制</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxcreatevideocontextvideoid-this">wx.createVideoContext(videoId, this)</h3>
 <p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE; video &#x4E0A;&#x4E0B;&#x6587; <code>videoContext</code> &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;video/&gt;</code> &#x7EC4;&#x4EF6;</p>
 <h4 id="videocontext">videoContext</h4>
@@ -45,6 +42,12 @@
 <td>&#x65E0;</td>
 <td>&#x6682;&#x505C;</td>
 <td></td>
+</tr>
+<tr>
+<td>stop</td>
+<td>&#x65E0;</td>
+<td>&#x505C;&#x6B62;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.0</a></td>
 </tr>
 <tr>
 <td>seek</td>
@@ -91,8 +94,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/X5V6Xmmk6xYB" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/X5V6Xmmk6xYB" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myVideo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span>   <span class="hljs-attr">enable-danmu</span> <span class="hljs-attr">danmu-btn</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bindblur</span>=<span class="hljs-string">&quot;bindInputBlur&quot;</span>/&gt;</span>
@@ -100,7 +103,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> (<span class="hljs-params"></span>) </span>{
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">let</span> rgb = []
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">3</span>; ++i){
     <span class="hljs-keyword">let</span> color = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">256</span>).toString(<span class="hljs-number">16</span>)
@@ -111,29 +114,26 @@
 }
 
 Page({
-  onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">this</span>.videoContext = wx.createVideoContext(<span class="hljs-string">&apos;myVideo&apos;</span>)
   },
-  inputValue: <span class="hljs-string">&apos;&apos;</span>,
-  bindInputBlur: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">inputValue</span>: <span class="hljs-string">&apos;&apos;</span>,
+  <span class="hljs-attr">bindInputBlur</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.inputValue = e.detail.value
   },
-  bindSendDanmu: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">bindSendDanmu</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.videoContext.sendDanmu({
-      text: <span class="hljs-keyword">this</span>.inputValue,
-      color: getRandomColor()
+      <span class="hljs-attr">text</span>: <span class="hljs-keyword">this</span>.inputValue,
+      <span class="hljs-attr">color</span>: getRandomColor()
     })
   }
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

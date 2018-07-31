@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>界面</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxshowtoastobject">wx.showToast(OBJECT)</h3>
 <p>&#x663E;&#x793A;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x6846;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -87,6 +84,7 @@
 <td>Function</td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -118,17 +116,17 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.showToast({
-  title: <span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,
-  icon: <span class="hljs-string">&apos;success&apos;</span>,
-  duration: <span class="hljs-number">2000</span>
+<pre><code class="language-javascript">wx.showToast({
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>,
+  <span class="hljs-attr">icon</span>: <span class="hljs-string">&apos;success&apos;</span>,
+  <span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span>
 })
 </code></pre>
 <h3 id="wxshowloadingobject">wx.showLoading(OBJECT)</h3>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
-<p>&#x663E;&#x793A; loading &#x63D0;&#x793A;&#x6846;, &#x9700;&#x4E3B;&#x52A8;&#x8C03;&#x7528; <a href="#wxhideloading">wx.hideLoading</a> &#x624D;&#x80FD;&#x5173;&#x95ED;&#x63D0;&#x793A;&#x6846;</p>
+<p>&#x663E;&#x793A; loading &#x63D0;&#x793A;&#x6846;, &#x9700;&#x4E3B;&#x52A8;&#x8C03;&#x7528; <a href=".#wxhideloading">wx.hideLoading</a> &#x624D;&#x80FD;&#x5173;&#x95ED;&#x63D0;&#x793A;&#x6846;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
@@ -179,8 +177,8 @@
 <p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
 <p>&#x9690;&#x85CF; loading &#x63D0;&#x793A;&#x6846;</p>
-<pre><code class="lang-javascript">wx.showLoading({
-  title: <span class="hljs-string">&apos;&#x52A0;&#x8F7D;&#x4E2D;&apos;</span>,
+<pre><code class="language-javascript">wx.showLoading({
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x52A0;&#x8F7D;&#x4E2D;&apos;</span>,
 })
 
 setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
@@ -288,10 +286,10 @@ setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.showModal({
-  title: <span class="hljs-string">&apos;&#x63D0;&#x793A;&apos;</span>,
-  content: <span class="hljs-string">&apos;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x6001;&#x5F39;&#x7A97;&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.showModal({
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x63D0;&#x793A;&apos;</span>,
+  <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x6001;&#x5F39;&#x7A97;&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">if</span> (res.confirm) {
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&apos;</span>)
     } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (res.cancel) {
@@ -363,12 +361,12 @@ setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.showActionSheet({
-  itemList: [<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>],
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.showActionSheet({
+  <span class="hljs-attr">itemList</span>: [<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>],
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.tapIndex)
   },
-  fail: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-attr">fail</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.errMsg)
   }
 })
@@ -381,13 +379,10 @@ setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span
 <li><code>tip</code>: <code>iOS</code>  wx.showModal &#x70B9;&#x51FB;&#x8499;&#x5C42;&#x4E0D;&#x4F1A;&#x5173;&#x95ED;&#x6A21;&#x6001;&#x5F39;&#x7A97;&#xFF0C;&#x6240;&#x4EE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x201C;&#x53D6;&#x6D88;&#x201D;&#x5206;&#x652F;&#x4E2D;&#x5B9E;&#x73B0;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

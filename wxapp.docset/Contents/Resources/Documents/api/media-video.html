@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>视频</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxchoosevideoobject">wx.chooseVideo(OBJECT)</h3>
 <p>&#x62CD;&#x6444;&#x89C6;&#x9891;&#x6216;&#x4ECE;&#x624B;&#x673A;&#x76F8;&#x518C;&#x4E2D;&#x9009;&#x89C6;&#x9891;&#xFF0C;&#x8FD4;&#x56DE;&#x89C6;&#x9891;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -73,6 +70,7 @@
 <td>Function</td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -109,26 +107,26 @@
 </table>
 <p><strong>&#x6CE8;&#xFF1A;&#x6587;&#x4EF6;&#x7684;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x672C;&#x6B21;&#x542F;&#x52A8;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x9700;&#x6301;&#x4E45;&#x4FDD;&#x5B58;&#xFF0C;&#x9700;&#x5728;&#x4E3B;&#x52A8;&#x8C03;&#x7528; <a href="file.html">wx.saveFile</a>&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5F97;&#x5230;&#x3002;</strong></p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/Qu4htbmu6RYo" target="_blank">&#x4EE3;&#x7801;&#x7247;&#x6BB5;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindButtonTap&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x89C6;&#x9891;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<p><a href="wechatide://minicode/Qu4htbmu6RYo">&#x4EE3;&#x7801;&#x7247;&#x6BB5;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindButtonTap&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x89C6;&#x9891;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript">Page({
-    bindButtonTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>
-        wx.chooseVideo({
-            sourceType: [<span class="hljs-string">&apos;album&apos;</span>,<span class="hljs-string">&apos;camera&apos;</span>],
-            maxDuration: <span class="hljs-number">60</span>,
-      camera: <span class="hljs-string">&apos;back&apos;</span>,
-            success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-                that.setData({
-                    src: res.tempFilePath
-                })
-            }
-        })
-    }
+<pre><code class="language-javascript">Page({
+	<span class="hljs-attr">bindButtonTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>
+		wx.chooseVideo({
+			<span class="hljs-attr">sourceType</span>: [<span class="hljs-string">&apos;album&apos;</span>,<span class="hljs-string">&apos;camera&apos;</span>],
+			<span class="hljs-attr">maxDuration</span>: <span class="hljs-number">60</span>,
+      <span class="hljs-attr">camera</span>: <span class="hljs-string">&apos;back&apos;</span>,
+			<span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+				that.setData({
+					<span class="hljs-attr">src</span>: res.tempFilePath
+				})
+			}
+		})
+	}
 })
 </code></pre>
 <h3 id="wxsavevideotophotosalbumobject">wx.saveVideoToPhotosAlbum(OBJECT)</h3>
@@ -191,8 +189,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.saveVideoToPhotosAlbum({
-  filePath: <span class="hljs-string">&apos;wxfile://xxx&apos;</span>
+<pre><code class="language-javascript">wx.saveVideoToPhotosAlbum({
+  <span class="hljs-attr">filePath</span>: <span class="hljs-string">&apos;wxfile://xxx&apos;</span>
   success(res) {
     <span class="hljs-built_in">console</span>.log(res.errMsg)
   }
@@ -203,13 +201,10 @@
 <li><code>tip</code>: camera &#x53C2;&#x6570;&#x5728;&#x90E8;&#x5206; Android &#x624B;&#x673A;&#x4E0B;&#x7531;&#x4E8E;&#x7CFB;&#x7EDF; ROM &#x4E0D;&#x652F;&#x6301;&#x65E0;&#x6CD5;&#x751F;&#x6548;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

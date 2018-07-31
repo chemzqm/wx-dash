@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>NFC</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <p>&#x6682;&#x4EC5;&#x652F;&#x6301; HCE&#xFF08;&#x57FA;&#x4E8E;&#x4E3B;&#x673A;&#x7684;&#x5361;&#x6A21;&#x62DF;&#xFF09;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x5C06;&#x5B89;&#x5353;&#x624B;&#x673A;&#x6A21;&#x62DF;&#x6210;&#x5B9E;&#x4F53;&#x667A;&#x80FD;&#x5361;&#x3002;</p>
 <p>&#x9002;&#x7528;&#x673A;&#x578B;&#xFF1A;&#x652F;&#x6301; NFC &#x529F;&#x80FD;&#xFF0C;&#x4E14;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x4E3A;Android5.0&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x624B;&#x673A;</p>
 <p>&#x9002;&#x7528;&#x5361;&#x8303;&#x56F4;&#xFF1A;&#x7B26;&#x5408;ISO 14443-4&#x6807;&#x51C6;&#x7684;CPU&#x5361;</p>
@@ -80,8 +77,8 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-javascript">wx.getHCEState({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.getHCEState({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.errCode)
   }
 })
@@ -151,8 +148,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.startHCE({
-  aid_list: [<span class="hljs-string">&apos;F222222222&apos;</span>]
+<pre><code class="language-javascript">wx.startHCE({
+  <span class="hljs-attr">aid_list</span>: [<span class="hljs-string">&apos;F222222222&apos;</span>]
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.errMsg)
   }
@@ -217,8 +214,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.stopHCE({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.stopHCE({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.errMsg)
   }
 })
@@ -323,15 +320,15 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> buffer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ArrayBuffer</span>(<span class="hljs-number">1</span>)
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> buffer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ArrayBuffer</span>(<span class="hljs-number">1</span>)
 <span class="hljs-keyword">const</span> dataView = <span class="hljs-keyword">new</span> <span class="hljs-built_in">DataView</span>(buffer)
 dataView.setUint8(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
 
 wx.startHCE({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     wx.onHCEMessage(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
       <span class="hljs-keyword">if</span> (res.messageType === <span class="hljs-number">1</span>) {
-        wx.sendHCEMessage({data: buffer})
+        wx.sendHCEMessage({<span class="hljs-attr">data</span>: buffer})
       }
     })
   }
@@ -382,13 +379,10 @@ wx.startHCE({
 </tbody>
 </table>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>文件</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxsavefileobject">wx.saveFile(OBJECT)</h3>
 <p>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;saveFile &#x4F1A;&#x628A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#xFF0C;&#x56E0;&#x6B64;&#x8C03;&#x7528;&#x6210;&#x529F;&#x540E;&#x4F20;&#x5165;&#x7684; tempFilePath &#x5C06;&#x4E0D;&#x53EF;&#x7528;</strong></p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -74,12 +71,12 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.chooseImage({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.chooseImage({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> tempFilePaths = res.tempFilePaths
     wx.saveFile({
-      tempFilePath: tempFilePaths[<span class="hljs-number">0</span>],
-      success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-attr">tempFilePath</span>: tempFilePaths[<span class="hljs-number">0</span>],
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
         <span class="hljs-keyword">var</span> savedFilePath = res.savedFilePath
       }
     })
@@ -173,8 +170,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getSavedFileList({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.getSavedFileList({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.fileList)
   }
 })
@@ -246,8 +243,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getSavedFileInfo({
-  filePath: <span class="hljs-string">&apos;wxfile://somefile&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x505A;&#x793A;&#x4F8B;&#x7528;&#xFF0C;&#x975E;&#x771F;&#x6B63;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+<pre><code class="language-javascript">wx.getSavedFileInfo({
+  <span class="hljs-attr">filePath</span>: <span class="hljs-string">&apos;wxfile://somefile&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x505A;&#x793A;&#x4F8B;&#x7528;&#xFF0C;&#x975E;&#x771F;&#x6B63;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.size)
     <span class="hljs-built_in">console</span>.log(res.createTime)
@@ -294,12 +291,12 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getSavedFileList({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.getSavedFileList({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">if</span> (res.fileList.length &gt; <span class="hljs-number">0</span>){
       wx.removeSavedFile({
-        filePath: res.fileList[<span class="hljs-number">0</span>].filePath,
-        complete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-attr">filePath</span>: res.fileList[<span class="hljs-number">0</span>].filePath,
+        <span class="hljs-attr">complete</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
           <span class="hljs-built_in">console</span>.log(res)
         }
       })
@@ -354,17 +351,18 @@
 <td>Function</td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-javascript">wx.downloadFile({
-  url: <span class="hljs-string">&apos;http://example.com/somefile.pdf&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.downloadFile({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;http://example.com/somefile.pdf&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> filePath = res.tempFilePath
     wx.openDocument({
-      filePath: filePath,
-      success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-attr">filePath</span>: filePath,
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6253;&#x5F00;&#x6587;&#x6863;&#x6210;&#x529F;&apos;</span>)
       }
     })
@@ -372,13 +370,10 @@
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

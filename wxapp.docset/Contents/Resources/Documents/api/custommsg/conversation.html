@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>发送客服消息</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="&#x53D1;&#x9001;&#x5BA2;&#x670D;&#x6D88;&#x606F;">&#x53D1;&#x9001;&#x5BA2;&#x670D;&#x6D88;&#x606F;</h3>
 <p>&#x5F53;&#x7528;&#x6237;&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5BA2;&#x670D;&#x4EA7;&#x751F;&#x7279;&#x5B9A;&#x52A8;&#x4F5C;&#x7684;&#x4EA4;&#x4E92;&#x65F6;&#xFF08;&#x5177;&#x4F53;&#x52A8;&#x4F5C;&#x5217;&#x8868;&#x8BF7;&#x89C1;&#x4E0B;&#x65B9;&#x8BF4;&#x660E;&#xFF09;&#xFF0C;&#x5FAE;&#x4FE1;&#x5C06;&#x4F1A;&#x628A;&#x6D88;&#x606F;&#x6570;&#x636E;&#x63A8;&#x9001;&#x7ED9;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#xFF08;&#x76EE;&#x524D;&#x4FEE;&#x6539;&#x4E3A;48&#x5C0F;&#x65F6;&#xFF09;&#x8C03;&#x7528;&#x5BA2;&#x670D;&#x63A5;&#x53E3;&#xFF0C;&#x901A;&#x8FC7;POST&#x4E00;&#x4E2A;JSON&#x6570;&#x636E;&#x5305;&#x6765;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7ED9;&#x666E;&#x901A;&#x7528;&#x6237;&#x3002;&#x6B64;&#x63A5;&#x53E3;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5BA2;&#x670D;&#x7B49;&#x6709;&#x4EBA;&#x5DE5;&#x6D88;&#x606F;&#x5904;&#x7406;&#x73AF;&#x8282;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x4E3A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x66F4;&#x52A0;&#x4F18;&#x8D28;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
 <p>&#x76EE;&#x524D;&#x5141;&#x8BB8;&#x7684;&#x52A8;&#x4F5C;&#x5217;&#x8868;&#x5982;&#x4E0B;&#xFF0C;&#x4E0D;&#x540C;&#x52A8;&#x4F5C;&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x5141;&#x8BB8;&#x7684;&#x5BA2;&#x670D;&#x63A5;&#x53E3;&#x4E0B;&#x53D1;&#x6D88;&#x606F;&#x6761;&#x6570;&#x548C;&#x4E0B;&#x53D1;&#x65F6;&#x9650;&#x4E0D;&#x540C;&#x3002;&#x4E0B;&#x53D1;&#x6761;&#x6570;&#x8FBE;&#x5230;&#x4E0A;&#x9650;&#x540E;&#xFF0C;&#x4F1A;&#x6536;&#x5230;&#x9519;&#x8BEF;&#x8FD4;&#x56DE;&#x7801;&#xFF0C;&#x5177;&#x4F53;&#x8BF7;&#x89C1;&#x8FD4;&#x56DE;&#x7801;&#x8BF4;&#x660E;&#x9875;&#xFF1A;</p>
@@ -42,20 +39,22 @@
 <p>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x8BF4;&#x660E;</p>
 <pre><code>http&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;: POST
 https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN
-</code></pre><p>&#x5404;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x6240;&#x9700;&#x7684;JSON&#x6570;&#x636E;&#x5305;&#x5982;&#x4E0B;&#xFF1A;</p>
+</code></pre>
+<p>&#x5404;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x6240;&#x9700;&#x7684;JSON&#x6570;&#x636E;&#x5305;&#x5982;&#x4E0B;&#xFF1A;</p>
 <h5 id="&#x53D1;&#x9001;&#x6587;&#x672C;&#x6D88;&#x606F;">&#x53D1;&#x9001;&#x6587;&#x672C;&#x6D88;&#x606F;</h5>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;touser&quot;</span>:<span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;msgtype&quot;</span>:<span class="hljs-string">&quot;text&quot;</span>,
-    <span class="hljs-string">&quot;text&quot;</span>:
+<pre><code class="language-json">{
+    <span class="hljs-attr">&quot;touser&quot;</span>:<span class="hljs-string">&quot;OPENID&quot;</span>,
+    <span class="hljs-attr">&quot;msgtype&quot;</span>:<span class="hljs-string">&quot;text&quot;</span>,
+    <span class="hljs-attr">&quot;text&quot;</span>:
     {
-         <span class="hljs-string">&quot;content&quot;</span>:<span class="hljs-string">&quot;Hello World&quot;</span>
+         <span class="hljs-attr">&quot;content&quot;</span>:<span class="hljs-string">&quot;Hello World&quot;</span>
     }
 }
 </code></pre>
 <p>&#x53D1;&#x9001;&#x6587;&#x672C;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x652F;&#x6301;&#x6DFB;&#x52A0;&#x53EF;&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6587;&#x5B57;&#x94FE;</p>
 <pre><code>&#x6587;&#x672C;&#x5185;&#x5BB9;....&lt;a href=&quot;http://www.qq.com&quot; data-miniprogram-appid=&quot;appid&quot; data-miniprogram-path=&quot;pages/index/index&quot;&gt;&#x70B9;&#x51FB;&#x8DF3;&#x5C0F;&#x7A0B;&#x5E8F;&lt;/a&gt;
-</code></pre><p>&#x8BF4;&#x660E;&#xFF1A;</p>
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;</p>
 <ol>
 <li>data-miniprogram-appid &#x9879;&#xFF0C;&#x586B;&#x5199;&#x5C0F;&#x7A0B;&#x5E8F;appid&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x94FE;&#x63A5;&#x8DF3;&#x8F6C;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF1B;</li>
 <li>data-miniprogram-path&#x9879;&#xFF0C;&#x586B;&#x5199;&#x5C0F;&#x7A0B;&#x5E8F;&#x8DEF;&#x5F84;&#xFF0C;&#x8DEF;&#x5F84;&#x4E0E;app.json&#x4E2D;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x53EF;&#x5E26;&#x53C2;&#x6570;&#xFF1B;</li>
@@ -63,38 +62,38 @@ https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN
 <li>&#x5C0F;&#x7A0B;&#x5E8F;&#x53D1;&#x5E26;&#x5C0F;&#x7A0B;&#x5E8F;&#x6587;&#x5B57;&#x94FE;&#x7684;&#x6587;&#x672C;&#x6D88;&#x606F;&#xFF0C;data-miniprogram-appid&#x5FC5;&#x987B;&#x662F;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;appid&#x3002;</li>
 </ol>
 <h5 id="&#x53D1;&#x9001;&#x56FE;&#x7247;&#x6D88;&#x606F;">&#x53D1;&#x9001;&#x56FE;&#x7247;&#x6D88;&#x606F;</h5>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;touser&quot;</span>:<span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;msgtype&quot;</span>:<span class="hljs-string">&quot;image&quot;</span>,
-    <span class="hljs-string">&quot;image&quot;</span>:
+<pre><code class="language-json">{
+    <span class="hljs-attr">&quot;touser&quot;</span>:<span class="hljs-string">&quot;OPENID&quot;</span>,
+    <span class="hljs-attr">&quot;msgtype&quot;</span>:<span class="hljs-string">&quot;image&quot;</span>,
+    <span class="hljs-attr">&quot;image&quot;</span>:
     {
-      <span class="hljs-string">&quot;media_id&quot;</span>:<span class="hljs-string">&quot;MEDIA_ID&quot;</span>
+      <span class="hljs-attr">&quot;media_id&quot;</span>:<span class="hljs-string">&quot;MEDIA_ID&quot;</span>
     }
 }
 </code></pre>
 <h5 id="&#x53D1;&#x9001;&#x56FE;&#x6587;&#x94FE;&#x63A5;">&#x53D1;&#x9001;&#x56FE;&#x6587;&#x94FE;&#x63A5;</h5>
 <p>&#x6BCF;&#x6B21;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x56FE;&#x6587;&#x94FE;&#x63A5;</p>
-<pre><code class="lang-json">{
+<pre><code class="language-json">{
 
-    <span class="hljs-string">&quot;touser&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;msgtype&quot;</span>: <span class="hljs-string">&quot;link&quot;</span>,
-    <span class="hljs-string">&quot;link&quot;</span>: {
-          <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Happy Day&quot;</span>,
-          <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Is Really A Happy Day&quot;</span>,
-          <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;URL&quot;</span>,
-          <span class="hljs-string">&quot;thumb_url&quot;</span>: <span class="hljs-string">&quot;THUMB_URL&quot;</span>
-    }
+&#xA0;&#xA0;&#xA0;&#xA0;<span class="hljs-attr">&quot;touser&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
+&#xA0;&#xA0;&#xA0;&#xA0;<span class="hljs-attr">&quot;msgtype&quot;</span>: <span class="hljs-string">&quot;link&quot;</span>,
+&#xA0;&#xA0;&#xA0;&#xA0;<span class="hljs-attr">&quot;link&quot;</span>: {
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Happy Day&quot;</span>,
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;Is Really A Happy Day&quot;</span>,
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;URL&quot;</span>,
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class="hljs-attr">&quot;thumb_url&quot;</span>: <span class="hljs-string">&quot;THUMB_URL&quot;</span>
+&#xA0;&#xA0;&#xA0;&#xA0;}
 }
 </code></pre>
 <h5 id="&#x53D1;&#x9001;&#x5C0F;&#x7A0B;&#x5E8F;&#x5361;&#x7247;">&#x53D1;&#x9001;&#x5C0F;&#x7A0B;&#x5E8F;&#x5361;&#x7247;</h5>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;touser&quot;</span>:<span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;msgtype&quot;</span>:<span class="hljs-string">&quot;miniprogrampage&quot;</span>,
-    <span class="hljs-string">&quot;miniprogrampage&quot;</span>:{
-        <span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;title&quot;</span>,
-        <span class="hljs-string">&quot;pagepath&quot;</span>:<span class="hljs-string">&quot;pagepath&quot;</span>,
-        <span class="hljs-string">&quot;thumb_media_id&quot;</span>:<span class="hljs-string">&quot;thumb_media_id&quot;</span>
-    }
+<pre><code class="language-json">{
+	<span class="hljs-attr">&quot;touser&quot;</span>:<span class="hljs-string">&quot;OPENID&quot;</span>,
+	<span class="hljs-attr">&quot;msgtype&quot;</span>:<span class="hljs-string">&quot;miniprogrampage&quot;</span>,
+	<span class="hljs-attr">&quot;miniprogrampage&quot;</span>:{
+		<span class="hljs-attr">&quot;title&quot;</span>:<span class="hljs-string">&quot;title&quot;</span>,
+		<span class="hljs-attr">&quot;pagepath&quot;</span>:<span class="hljs-string">&quot;pagepath&quot;</span>,
+		<span class="hljs-attr">&quot;thumb_media_id&quot;</span>:<span class="hljs-string">&quot;thumb_media_id&quot;</span>
+	}
 }
 </code></pre>
 <h5 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h5>
@@ -130,7 +129,7 @@ https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN
 <tr>
 <td>media_id</td>
 <td>&#x662F;</td>
-<td>&#x53D1;&#x9001;&#x7684;&#x56FE;&#x7247;&#x7684;&#x5A92;&#x4F53;ID&#xFF0C;&#x901A;&#x8FC7;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/custommsg/material.html?t=2018724" target="_blank">&#x65B0;&#x589E;&#x7D20;&#x6750;&#x63A5;&#x53E3;</a>&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x83B7;&#x5F97;&#x3002;</td>
+<td>&#x53D1;&#x9001;&#x7684;&#x56FE;&#x7247;&#x7684;&#x5A92;&#x4F53;ID&#xFF0C;&#x901A;&#x8FC7;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/custommsg/material.html?t=18073118">&#x65B0;&#x589E;&#x7D20;&#x6750;&#x63A5;&#x53E3;</a>&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x83B7;&#x5F97;&#x3002;</td>
 </tr>
 <tr>
 <td>title</td>
@@ -160,7 +159,7 @@ https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN
 <tr>
 <td>thumb_media_id</td>
 <td>&#x662F;</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6D88;&#x606F;&#x5361;&#x7247;&#x7684;&#x5C01;&#x9762;&#xFF0C; image&#x7C7B;&#x578B;&#x7684;media_id&#xFF0C;&#x901A;&#x8FC7;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/custommsg/material.html?t=2018724" target="_blank">&#x65B0;&#x589E;&#x7D20;&#x6750;&#x63A5;&#x53E3;</a>&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x83B7;&#x5F97;&#xFF0C;&#x5EFA;&#x8BAE;&#x5927;&#x5C0F;&#x4E3A;520*416</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6D88;&#x606F;&#x5361;&#x7247;&#x7684;&#x5C01;&#x9762;&#xFF0C; image&#x7C7B;&#x578B;&#x7684;media_id&#xFF0C;&#x901A;&#x8FC7;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/custommsg/material.html?t=18073118">&#x65B0;&#x589E;&#x7D20;&#x6750;&#x63A5;&#x53E3;</a>&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x83B7;&#x5F97;&#xFF0C;&#x5EFA;&#x8BAE;&#x5927;&#x5C0F;&#x4E3A;520*416</td>
 </tr>
 </tbody>
 </table>
@@ -208,13 +207,10 @@ https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN
 </tbody>
 </table>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>模块</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="wxs-&#x6A21;&#x5757;">WXS &#x6A21;&#x5757;</h1>
 <p>WXS &#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x5728; wxml &#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5185;&#xFF0C;&#x6216;&#x4EE5; <code>.wxs</code> &#x4E3A;&#x540E;&#x7F00;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x3002;</p>
 <h2 id="&#x6A21;&#x5757;">&#x6A21;&#x5757;</h2>
@@ -28,15 +25,15 @@
 <h2 id="wxs-&#x6587;&#x4EF6;">.wxs &#x6587;&#x4EF6;</h2>
 <p>&#x5728;<strong>&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</strong>&#x91CC;&#x9762;&#xFF0C;&#x53F3;&#x952E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x521B;&#x5EFA; <code>.wxs</code> &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x76F4;&#x63A5;&#x7F16;&#x5199; WXS &#x811A;&#x672C;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// /pages/comm.wxs</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// /pages/comm.wxs</span>
 
 <span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from comm.wxs&quot;</span>;
 <span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
   <span class="hljs-keyword">return</span> d;
 }
 <span class="hljs-built_in">module</span>.exports = {
-  foo: foo,
-  bar: bar
+  <span class="hljs-attr">foo</span>: foo,
+  <span class="hljs-attr">bar</span>: bar
 };
 </code></pre>
 <p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5728; <code>/pages/comm.wxs</code> &#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x7F16;&#x5199;&#x4E86; WXS &#x4EE3;&#x7801;&#x3002;&#x8BE5; <code>.wxs</code> &#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x7684; <code>.wxs</code> &#x6587;&#x4EF6; &#x6216; WXML &#x4E2D;&#x7684; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5F15;&#x7528;&#x3002;</p>
@@ -47,20 +44,20 @@
 <li><code>exports</code>:  &#x901A;&#x8FC7;&#x8BE5;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x5916;&#x5171;&#x4EAB;&#x672C;&#x6A21;&#x5757;&#x7684;&#x79C1;&#x6709;&#x53D8;&#x91CF;&#x4E0E;&#x51FD;&#x6570;&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/KYgu1Km36pZP" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
+<p><a href="wechatide://minicode/KYgu1Km36pZP" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
 
 <span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>;
 <span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
   <span class="hljs-keyword">return</span> d;
 }
 <span class="hljs-built_in">module</span>.exports = {
-  FOO: foo,
-  bar: bar,
+  <span class="hljs-attr">FOO</span>: foo,
+  <span class="hljs-attr">bar</span>: bar,
 };
 <span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&quot;some msg&quot;</span>;
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- page/index/index.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- page/index/index.wxml --&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../tools.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;tools&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{tools.msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -69,7 +66,8 @@
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>some msg
 &apos;hello world&apos; from tools.wxs
-</code></pre><h3 id="require&#x51FD;&#x6570;">require&#x51FD;&#x6570;</h3>
+</code></pre>
+<h3 id="require&#x51FD;&#x6570;">require&#x51FD;&#x6570;</h3>
 <p>&#x5728;<code>.wxs</code>&#x6A21;&#x5757;&#x4E2D;&#x5F15;&#x7528;&#x5176;&#x4ED6; <code>wxs</code> &#x6587;&#x4EF6;&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>require</code> &#x51FD;&#x6570;&#x3002;</p>
 <p>&#x5F15;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x5982;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
 <ul>
@@ -78,20 +76,20 @@
 <li>&#x5982;&#x679C;&#x4E00;&#x4E2A; <code>wxs</code> &#x6A21;&#x5757;&#x5728;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#xFF0C;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x88AB;&#x5F15;&#x7528;&#xFF0C;&#x5219;&#x8BE5;&#x6A21;&#x5757;&#x4E0D;&#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x4E0E;&#x8FD0;&#x884C;&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/E4g94Kme6rZ6" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
+<p><a href="wechatide://minicode/E4g94Kme6rZ6" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
 
 <span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>;
 <span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
   <span class="hljs-keyword">return</span> d;
 }
 <span class="hljs-built_in">module</span>.exports = {
-  FOO: foo,
-  bar: bar,
+  <span class="hljs-attr">FOO</span>: foo,
+  <span class="hljs-attr">bar</span>: bar,
 };
 <span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&quot;some msg&quot;</span>;
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">// /pages/logic.wxs</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// /pages/logic.wxs</span>
 
 <span class="hljs-keyword">var</span> tools = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./tools.wxs&quot;</span>);
 
@@ -99,7 +97,7 @@
 <span class="hljs-built_in">console</span>.log(tools.bar(<span class="hljs-string">&quot;logic.wxs&quot;</span>));
 <span class="hljs-built_in">console</span>.log(tools.msg);
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- /page/index/index.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- /page/index/index.wxml --&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../logic.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;logic&quot;</span> /&gt;</span>
 </code></pre>
@@ -107,7 +105,8 @@
 <pre><code>&apos;hello world&apos; from tools.wxs
 logic.wxs
 some msg
-</code></pre><h2 id="wxs-&#x6807;&#x7B7E;"><code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;</h2>
+</code></pre>
+<h2 id="wxs-&#x6807;&#x7B7E;"><code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;</h2>
 <table>
 <thead>
 <tr>
@@ -140,20 +139,21 @@ some msg
 <li>&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x53EF;&#x4EE5;&#x662F;&#xFF1A;&#x5B57;&#x6BCD;&#xFF08;a-zA-Z&#xFF09;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;&#xFF08;_&#xFF09;&#xFF0C; &#x6570;&#x5B57;&#xFF08;0-9&#xFF09;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/IzgmKKmn6tZ6" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
+<p><a href="wechatide://minicode/IzgmKKmn6tZ6" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
 var some_msg = &quot;hello world&quot;;
 module.exports = {
-    msg : some_msg,
+	msg : some_msg,
 }
 <span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{foo.msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>hello world
-</code></pre><p>&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x4E3A; <code>foo</code> &#x7684;&#x6A21;&#x5757;&#xFF0C;&#x5C06; <code>some_msg</code> &#x53D8;&#x91CF;&#x66B4;&#x9732;&#x51FA;&#x6765;&#xFF0C;&#x4F9B;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4F7F;&#x7528;&#x3002;</p>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x4E3A; <code>foo</code> &#x7684;&#x6A21;&#x5757;&#xFF0C;&#x5C06; <code>some_msg</code> &#x53D8;&#x91CF;&#x66B4;&#x9732;&#x51FA;&#x6765;&#xFF0C;&#x4F9B;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4F7F;&#x7528;&#x3002;</p>
 <h3 id="src-&#x5C5E;&#x6027;">src &#x5C5E;&#x6027;</h3>
 <p>src &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5F15;&#x7528;&#x5176;&#x4ED6;&#x7684; <code>wxs</code> &#x6587;&#x4EF6;&#x6A21;&#x5757;&#x3002;</p>
 <p>&#x5F15;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x5982;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
@@ -163,16 +163,16 @@ module.exports = {
 <li>&#x5982;&#x679C;&#x4E00;&#x4E2A; <code>wxs</code> &#x6A21;&#x5757;&#x5728;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#xFF0C;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x88AB;&#x5F15;&#x7528;&#xFF0C;&#x5219;&#x8BE5;&#x6A21;&#x5757;&#x4E0D;&#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x4E0E;&#x8FD0;&#x884C;&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/C7gYFKmh6vZI" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-js"><span class="hljs-comment">// /pages/index/index.js</span>
+<p><a href="wechatide://minicode/C7gYFKmh6vZI" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-js"><span class="hljs-comment">// /pages/index/index.js</span>
 
 Page({
-  data: {
-    msg: <span class="hljs-string">&quot;&apos;hello wrold&apos; from js&quot;</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;&apos;hello wrold&apos; from js&quot;</span>,
   }
 })
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- /pages/index/index.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- /pages/index/index.wxml --&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../comm.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;some_comms&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5355;&#x6807;&#x7B7E;&#x95ED;&#x5408;&#x7684;&#x5199;&#x6CD5;
@@ -187,20 +187,18 @@ Page({
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>&apos;hello world&apos; from comm.wxs
 &apos;hello wrold&apos; from js
-</code></pre><p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5728;&#x6587;&#x4EF6; <code>/page/index/index.wxml</code> &#x4E2D;&#x901A;&#x8FC7; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5F15;&#x7528;&#x4E86;  <code>/page/comm.wxs</code> &#x6A21;&#x5757;&#x3002;</p>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5728;&#x6587;&#x4EF6; <code>/page/index/index.wxml</code> &#x4E2D;&#x901A;&#x8FC7; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5F15;&#x7528;&#x4E86;  <code>/page/comm.wxs</code> &#x6A21;&#x5757;&#x3002;</p>
 <h3 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h3>
 <ul>
 <li><code>&lt;wxs&gt;</code> &#x6A21;&#x5757;&#x53EA;&#x80FD;&#x5728;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684; WXML &#x6587;&#x4EF6;&#x4E2D;&#x88AB;&#x8BBF;&#x95EE;&#x5230;&#x3002;&#x4F7F;&#x7528; <code>&lt;include&gt;</code> &#x6216; <code>&lt;import&gt;</code> &#x65F6;&#xFF0C;<code>&lt;wxs&gt;</code> &#x6A21;&#x5757;&#x4E0D;&#x4F1A;&#x88AB;&#x5F15;&#x5165;&#x5230;&#x5BF9;&#x5E94;&#x7684; WXML &#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
 <li><code>&lt;template&gt;</code> &#x6807;&#x7B7E;&#x4E2D;&#xFF0C;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5B9A;&#x4E49;&#x8BE5; <code>&lt;template&gt;</code> &#x7684; WXML &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; <code>&lt;wxs&gt;</code> &#x6A21;&#x5757;&#x3002;</li>
 </ul>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

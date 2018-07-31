@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>&#x5BFC;&#x822A;</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="navigator">navigator</h4>
 <p>&#x9875;&#x9762;&#x94FE;&#x63A5;&#x3002;</p>
 <table>
@@ -112,6 +109,7 @@
 <td>Number</td>
 <td>600</td>
 <td>&#x624B;&#x6307;&#x677E;&#x5F00;&#x540E;&#x70B9;&#x51FB;&#x6001;&#x4FDD;&#x7559;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -159,18 +157,18 @@
 </table>
 <p><strong>&#x6CE8;&#xFF1A;<code>navigator-hover</code> &#x9ED8;&#x8BA4;&#x4E3A; <code>{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}</code>, <code>&lt;navigator/&gt;</code> &#x7684;&#x5B50;&#x8282;&#x70B9;&#x80CC;&#x666F;&#x8272;&#x5E94;&#x4E3A;&#x900F;&#x660E;&#x8272;</strong></p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/2Ec11cmI6BY1" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-css"><span class="hljs-comment">/** wxss **/</span>
+<p><a href="wechatide://minicode/2Ec11cmI6BY1" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-css"><span class="hljs-comment">/** wxss **/</span>
 <span class="hljs-comment">/** &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7684;navigator&#x70B9;&#x51FB;&#x6001; **/</span>
 <span class="hljs-selector-class">.navigator-hover</span> {
-    <span class="hljs-attribute">color</span>:blue;
+	<span class="hljs-attribute">color</span>:blue;
 }
 <span class="hljs-comment">/** &#x81EA;&#x5B9A;&#x4E49;&#x5176;&#x4ED6;&#x70B9;&#x51FB;&#x6001;&#x6837;&#x5F0F;&#x7C7B; **/</span>
 <span class="hljs-selector-class">.other-navigator-hover</span> {
-    <span class="hljs-attribute">color</span>:red;
+	<span class="hljs-attribute">color</span>:red;
 }
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/navigate/navigate?title=navigate&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;navigator-hover&quot;</span>&gt;</span>&#x8DF3;&#x8F6C;&#x5230;&#x65B0;&#x9875;&#x9762;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;../../redirect/redirect/redirect?title=redirect&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;redirect&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>&gt;</span>&#x5728;&#x5F53;&#x524D;&#x9875;&#x6253;&#x5F00;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
@@ -178,32 +176,29 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;miniProgram&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;navigate&quot;</span> <span class="hljs-attr">app-id</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">extra-data</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;release&quot;</span>&gt;</span>&#x6253;&#x5F00;&#x7ED1;&#x5B9A;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- navigator.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- navigator.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span>&gt;</span> {{title}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> &#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x8FD4;&#x56DE;&#x56DE;&#x5230;&#x4E4B;&#x524D;&#x9875;&#x9762; <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- redirect.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- redirect.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center&quot;</span>&gt;</span> {{title}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> &#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2;&#x8FD4;&#x56DE;&#x56DE;&#x5230;&#x4E0A;&#x7EA7;&#x9875;&#x9762; <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js"><span class="hljs-comment">// redirect.js navigator.js</span>
+<pre><code class="language-js"><span class="hljs-comment">// redirect.js navigator.js</span>
 Page({
-  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      title: options.title
+      <span class="hljs-attr">title</span>: options.title
     })
   }
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

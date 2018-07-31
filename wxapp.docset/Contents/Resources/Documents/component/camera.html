@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>camera</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="camera">camera</h4>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -94,40 +91,37 @@
 <li><code>bug</code>: <code>scan-area</code> &#x5C5E;&#x6027;&#x76EE;&#x524D;&#x5B58;&#x5728;&#x8BC6;&#x522B;&#x533A;&#x57DF;&#x4E0D;&#x51C6;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5EFA;&#x8BAE;&#x5148;&#x4E0D;&#x6307;&#x5B9A;</li>
 </ol>
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/VBZ3Jim26zYu" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- camera.wxml --&gt;</span>
+<p><a href="wechatide://minicode/VBZ3Jim26zYu" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- camera.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">camera</span> <span class="hljs-attr">device-position</span>=<span class="hljs-string">&quot;back&quot;</span> <span class="hljs-attr">flash</span>=<span class="hljs-string">&quot;off&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;error&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">camera</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;takePhoto&quot;</span>&gt;</span>&#x62CD;&#x7167;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x9884;&#x89C8;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;widthFix&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">// camera.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// camera.js</span>
 Page({
-    takePhoto() {
-        <span class="hljs-keyword">const</span> ctx = wx.createCameraContext()
-        ctx.takePhoto({
-            quality: <span class="hljs-string">&apos;high&apos;</span>,
-            success: (res) =&gt; {
-                <span class="hljs-keyword">this</span>.setData({
-                    src: res.tempImagePath
-                })
-            }
-        })
-    },
-    error(e) {
-        <span class="hljs-built_in">console</span>.log(e.detail)
-    }
+	takePhoto() {
+		<span class="hljs-keyword">const</span> ctx = wx.createCameraContext()
+		ctx.takePhoto({
+			<span class="hljs-attr">quality</span>: <span class="hljs-string">&apos;high&apos;</span>,
+			<span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
+				<span class="hljs-keyword">this</span>.setData({
+					<span class="hljs-attr">src</span>: res.tempImagePath
+				})
+			}
+		})
+	},
+	error(e) {
+		<span class="hljs-built_in">console</span>.log(e.detail)
+	}
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

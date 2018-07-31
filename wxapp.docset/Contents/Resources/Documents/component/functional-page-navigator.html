@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>functional-page-navigator</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="functional-page-navigator">functional-page-navigator</h4>
 <p>&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4ECE;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a> &#x5F00;&#x59CB;&#x652F;&#x6301;&#x3002;</p>
 <p>&#x4EC5;&#x5728;&#x63D2;&#x4EF6;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x6709;&#x6548;&#xFF0C;&#x7528;&#x4E8E;&#x8DF3;&#x8F6C;&#x5230;&#x63D2;&#x4EF6;&#x529F;&#x80FD;&#x9875;&#x3002;</p>
@@ -35,7 +32,7 @@
 <td id="functional-page-navigator-version">version</td>
 <td>String</td>
 <td>release</td>
-<td>&#x8DF3;&#x8F6C;&#x5230;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7248;&#x672C;&#xFF0C;&#x6709;&#x6548;&#x503C; <code>develop</code>&#xFF08;&#x5F00;&#x53D1;&#x7248;&#xFF09;&#xFF0C;<code>trial</code>&#xFF08;&#x4F53;&#x9A8C;&#x7248;&#xFF09;&#xFF0C;<code>release</code>&#xFF08;&#x6B63;&#x5F0F;&#x7248;&#xFF09;&#xFF1B;<strong>&#x7EBF;&#x4E0A;&#x7248;&#x672C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x4E3A; <code>release</code> </strong></td>
+<td>&#x8DF3;&#x8F6C;&#x5230;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7248;&#x672C;&#xFF0C;&#x6709;&#x6548;&#x503C; <code>develop</code>&#xFF08;&#x5F00;&#x53D1;&#x7248;&#xFF09;&#xFF0C;<code>trial</code>&#xFF08;&#x4F53;&#x9A8C;&#x7248;&#xFF09;&#xFF0C;<code>release</code>&#xFF08;&#x6B63;&#x5F0F;&#x7248;&#xFF09;&#xFF1B;**&#x7EBF;&#x4E0A;&#x7248;&#x672C;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x4E3A; <code>release</code> **</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a></td>
 </tr>
 <tr>
@@ -100,15 +97,15 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">functional-page-navigator</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;loginAndGetUserInfo&quot;</span> <span class="hljs-attr">bind:success</span>=<span class="hljs-string">&quot;loginSuccess&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x767B;&#x5F55;&#x5230;&#x63D2;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">functional-page-navigator</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js"><span class="hljs-comment">// redirect.js navigator.js</span>
+<pre><code class="language-js"><span class="hljs-comment">// redirect.js navigator.js</span>
 Component({
-  methods: {
-    loginSuccess: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-attr">loginSuccess</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
       <span class="hljs-built_in">console</span>.log(e.detail.code) <span class="hljs-comment">// wx.login &#x7684; code</span>
       <span class="hljs-built_in">console</span>.log(e.detail.userInfo) <span class="hljs-comment">// wx.getUserInfo &#x7684; userInfo</span>
     }
@@ -122,14 +119,11 @@ Component({
 <li>&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x53EF;&#x4EE5;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x529F;&#x80FD;&#x9875;&#x7684;&#x8DF3;&#x8F6C;&#x76EE;&#x524D;&#x4E0D;&#x652F;&#x6301;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x8C03;&#x8BD5;&#xFF0C;&#x8BF7;&#x5728;&#x771F;&#x673A;&#x4E0A;&#x6D4B;&#x8BD5;&#x3002;</li>
 </ul>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

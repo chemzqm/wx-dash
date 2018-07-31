@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>音乐播放控制</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxgetbackgroundaudioplayerstateobject">wx.getBackgroundAudioPlayerState(OBJECT)</h3>
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;1.2.0 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x63A5;&#x53E3;&#x4E0D;&#x518D;&#x7EF4;&#x62A4;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x80FD;&#x529B;&#x66F4;&#x5F3A;&#x7684; <a href="getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a> &#x63A5;&#x53E3;</strong></p>
 <p>&#x83B7;&#x53D6;&#x540E;&#x53F0;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x3002;</p>
@@ -85,14 +82,14 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getBackgroundAudioPlayerState({
-    success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-keyword">var</span> status = res.status
-        <span class="hljs-keyword">var</span> dataUrl = res.dataUrl
-        <span class="hljs-keyword">var</span> currentPosition = res.currentPosition
-        <span class="hljs-keyword">var</span> duration = res.duration
-        <span class="hljs-keyword">var</span> downloadPercent = res.downloadPercent
-    }
+<pre><code class="language-javascript">wx.getBackgroundAudioPlayerState({
+	<span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+		<span class="hljs-keyword">var</span> status = res.status
+		<span class="hljs-keyword">var</span> dataUrl = res.dataUrl
+		<span class="hljs-keyword">var</span> currentPosition = res.currentPosition
+		<span class="hljs-keyword">var</span> duration = res.duration
+		<span class="hljs-keyword">var</span> downloadPercent = res.downloadPercent
+	}
 })
 </code></pre>
 <h3 id="wxplaybackgroundaudioobject">wx.playBackgroundAudio(OBJECT)</h3>
@@ -147,16 +144,16 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre><code class="lang-javascript">wx.playBackgroundAudio({
-    dataUrl: <span class="hljs-string">&apos;&apos;</span>,
-    title: <span class="hljs-string">&apos;&apos;</span>,
-    coverImgUrl: <span class="hljs-string">&apos;&apos;</span>
+<pre><code class="language-javascript">wx.playBackgroundAudio({
+    <span class="hljs-attr">dataUrl</span>: <span class="hljs-string">&apos;&apos;</span>,
+    <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&apos;</span>,
+    <span class="hljs-attr">coverImgUrl</span>: <span class="hljs-string">&apos;&apos;</span>
 })
 </code></pre>
 <h3 id="wxpausebackgroundaudio">wx.pauseBackgroundAudio()</h3>
 <p>&#x6682;&#x505C;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre><code class="lang-javascript">wx.pauseBackgroundAudio()
+<pre><code class="language-javascript">wx.pauseBackgroundAudio()
 </code></pre>
 <h3 id="wxseekbackgroundaudioobject">wx.seekBackgroundAudio(OBJECT)</h3>
 <p>&#x63A7;&#x5236;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x3002;</p>
@@ -198,14 +195,14 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre><code class="lang-javascript">wx.seekBackgroundAudio({
-    position: <span class="hljs-number">30</span>
+<pre><code class="language-javascript">wx.seekBackgroundAudio({
+    <span class="hljs-attr">position</span>: <span class="hljs-number">30</span>
 })
 </code></pre>
 <h3 id="wxstopbackgroundaudio">wx.stopBackgroundAudio()</h3>
 <p>&#x505C;&#x6B62;&#x64AD;&#x653E;&#x97F3;&#x4E50;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre><code class="lang-javascript">wx.stopBackgroundAudio()
+<pre><code class="language-javascript">wx.stopBackgroundAudio()
 </code></pre>
 <h3 id="wxonbackgroundaudioplaycallback">wx.onBackgroundAudioPlay(CALLBACK)</h3>
 <p>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x3002;</p>
@@ -218,13 +215,10 @@
 <li><code>bug</code>: <code>iOS</code> <code>6.3.30</code> wx.seekBackgroundAudio &#x4F1A;&#x6709;&#x77ED;&#x6682;&#x5EF6;&#x8FDF;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

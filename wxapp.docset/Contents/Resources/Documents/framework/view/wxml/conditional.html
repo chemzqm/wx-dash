@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>条件渲染</title>
-  <link rel="stylesheet" href="../../../style.css" />
-  <link rel="stylesheet" href="../../../website.css" />
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,25 +13,22 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="&#x6761;&#x4EF6;&#x6E32;&#x67D3;">&#x6761;&#x4EF6;&#x6E32;&#x67D3;</h1>
 <h3 id="wxif">wx:if</h3>
 <p>&#x5728;&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; <code>wx:if=&quot;{{condition}}&quot;</code> &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x8BE5;&#x4EE3;&#x7801;&#x5757;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{condition}}&quot;</span>&gt;</span> True <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{condition}}&quot;</span>&gt;</span> True <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528; <code>wx:elif</code> &#x548C; <code>wx:else</code> &#x6765;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; else &#x5757;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{length &gt; 5}}&quot;</span>&gt;</span> 1 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{length &gt; 5}}&quot;</span>&gt;</span> 1 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:elif</span>=<span class="hljs-string">&quot;{{length &gt; 2}}&quot;</span>&gt;</span> 2 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>&gt;</span> 3 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <h3 id="block-wxif">block wx:if</h3>
 <p>&#x56E0;&#x4E3A; <code>wx:if</code> &#x662F;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5C5E;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5B83;&#x6DFB;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x8981;&#x4E00;&#x6B21;&#x6027;&#x5224;&#x65AD;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x6807;&#x7B7E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; <code>&lt;block/&gt;</code> &#x6807;&#x7B7E;&#x5C06;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x5305;&#x88C5;&#x8D77;&#x6765;&#xFF0C;&#x5E76;&#x5728;&#x4E0A;&#x8FB9;&#x4F7F;&#x7528; <code>wx:if</code> &#x63A7;&#x5236;&#x5C5E;&#x6027;&#x3002;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{true}}&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{true}}&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> view1 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> view2 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span>
@@ -43,13 +40,10 @@
 <p>&#x76F8;&#x6BD4;&#x4E4B;&#x4E0B;&#xFF0C;<code>hidden</code> &#x5C31;&#x7B80;&#x5355;&#x7684;&#x591A;&#xFF0C;&#x7EC4;&#x4EF6;&#x59CB;&#x7EC8;&#x4F1A;&#x88AB;&#x6E32;&#x67D3;&#xFF0C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x63A7;&#x5236;&#x663E;&#x793A;&#x4E0E;&#x9690;&#x85CF;&#x3002;</p>
 <p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;<code>wx:if</code> &#x6709;&#x66F4;&#x9AD8;&#x7684;&#x5207;&#x6362;&#x6D88;&#x8017;&#x800C; <code>hidden</code> &#x6709;&#x66F4;&#x9AD8;&#x7684;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x6D88;&#x8017;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x9891;&#x7E41;&#x5207;&#x6362;&#x7684;&#x60C5;&#x666F;&#x4E0B;&#xFF0C;&#x7528; <code>hidden</code> &#x66F4;&#x597D;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x6761;&#x4EF6;&#x4E0D;&#x5927;&#x53EF;&#x80FD;&#x6539;&#x53D8;&#x5219; <code>wx:if</code> &#x8F83;&#x597D;&#x3002;</p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

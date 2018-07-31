@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>text</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="text">text</h4>
 <p>&#x6587;&#x672C;&#x3002;</p>
 <table>
@@ -84,8 +81,8 @@
 <li>&#x9664;&#x4E86;&#x6587;&#x672C;&#x8282;&#x70B9;&#x4EE5;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x90FD;&#x65E0;&#x6CD5;&#x957F;&#x6309;&#x9009;&#x4E2D;&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/Egao9cm46gY6" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/Egao9cm46gY6" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-view&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;add&quot;</span>&gt;</span>add line<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -93,42 +90,40 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> initData = <span class="hljs-string">&apos;this is first line\nthis is second line&apos;</span>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> initData = <span class="hljs-string">&apos;this is first line\nthis is second line&apos;</span>
 <span class="hljs-keyword">var</span> extraLine = [];
 Page({
-  data: {
-    text: initData
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">text</span>: initData
   },
-  add: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">add</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     extraLine.push(<span class="hljs-string">&apos;other line&apos;</span>)
     <span class="hljs-keyword">this</span>.setData({
-      text: initData + <span class="hljs-string">&apos;\n&apos;</span> + extraLine.join(<span class="hljs-string">&apos;\n&apos;</span>)
+      <span class="hljs-attr">text</span>: initData + <span class="hljs-string">&apos;\n&apos;</span> + extraLine.join(<span class="hljs-string">&apos;\n&apos;</span>)
     })
   },
-  remove: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">remove</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">if</span> (extraLine.length &gt; <span class="hljs-number">0</span>) {
       extraLine.pop()
       <span class="hljs-keyword">this</span>.setData({
-        text: initData + <span class="hljs-string">&apos;\n&apos;</span> + extraLine.join(<span class="hljs-string">&apos;\n&apos;</span>)
+        <span class="hljs-attr">text</span>: initData + <span class="hljs-string">&apos;\n&apos;</span> + extraLine.join(<span class="hljs-string">&apos;\n&apos;</span>)
       })
     }
   }
 })
+
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/text.png?t=2018724" alt="text"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/text.png?t=18073118" alt="text"></p>
 <h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
 <li><code>bug</code> : &#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x4F4E;&#x4E8E; <code>2.1.0</code> &#x65F6;&#xFF0C; <code>&lt;text/&gt;</code> &#x7EC4;&#x4EF6;&#x5185;&#x5D4C;&#x7684; <code>&lt;text/&gt;</code> style &#x8BBE;&#x7F6E;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x751F;&#x6548;&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

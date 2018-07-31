@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>导航</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxnavigatetoobject">wx.navigateTo(OBJECT)</h3>
 <p>&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x5E94;&#x7528;&#x5185;&#x7684;&#x67D0;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;<code>wx.navigateBack</code>&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5230;&#x539F;&#x9875;&#x9762;&#x3002;</p>
 <p><strong>OBJECT &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -59,13 +56,13 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.navigateTo({
-  url: <span class="hljs-string">&apos;test?id=1&apos;</span>
+<pre><code class="language-javascript">wx.navigateTo({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test?id=1&apos;</span>
 })
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">//test.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">//test.js</span>
 Page({
-  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">option</span>)</span>{
+  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">option</span>)</span>{
     <span class="hljs-built_in">console</span>.log(option.query)
   }
 })
@@ -111,8 +108,8 @@ Page({
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.redirectTo({
-  url: <span class="hljs-string">&apos;test?id=1&apos;</span>
+<pre><code class="language-javascript">wx.redirectTo({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test?id=1&apos;</span>
 })
 </code></pre>
 <h3 id="wxrelaunchobject">wx.reLaunch(OBJECT)</h3>
@@ -158,13 +155,13 @@ Page({
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.reLaunch({
-  url: <span class="hljs-string">&apos;test?id=1&apos;</span>
+<pre><code class="language-javascript">wx.reLaunch({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test?id=1&apos;</span>
 })
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">//test.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">//test.js</span>
 Page({
-  onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">option</span>)</span>{
+  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">option</span>)</span>{
     <span class="hljs-built_in">console</span>.log(option.query)
   }
 })
@@ -209,24 +206,24 @@ Page({
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;tabBar&quot;</span>: {
-    <span class="hljs-string">&quot;list&quot;</span>: [{
-      <span class="hljs-string">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;index&quot;</span>,
-      <span class="hljs-string">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x9996;&#x9875;&quot;</span>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;tabBar&quot;</span>: {
+    <span class="hljs-attr">&quot;list&quot;</span>: [{
+      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;index&quot;</span>,
+      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x9996;&#x9875;&quot;</span>
     },{
-      <span class="hljs-string">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;other&quot;</span>,
-      <span class="hljs-string">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x5176;&#x4ED6;&quot;</span>
+      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;other&quot;</span>,
+      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x5176;&#x4ED6;&quot;</span>
     }]
   }
 }
 </code></pre>
-<pre><code class="lang-javascript">wx.switchTab({
-  url: <span class="hljs-string">&apos;/index&apos;</span>
+<pre><code class="language-javascript">wx.switchTab({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;/index&apos;</span>
 })
 </code></pre>
 <h3 id="wxnavigatebackobject">wx.navigateBack(OBJECT)</h3>
-<p>&#x5173;&#x95ED;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x9875;&#x9762;&#x6216;&#x591A;&#x7EA7;&#x9875;&#x9762;&#x3002;&#x53EF;&#x901A;&#x8FC7; <a href="../framework/app-service/page.html#getCurrentPages("><code>getCurrentPages()</code></a>) &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x9875;&#x9762;&#x6808;&#xFF0C;&#x51B3;&#x5B9A;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x51E0;&#x5C42;&#x3002;</p>
+<p>&#x5173;&#x95ED;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x9875;&#x9762;&#x6216;&#x591A;&#x7EA7;&#x9875;&#x9762;&#x3002;&#x53EF;&#x901A;&#x8FC7; <a href="../framework/app-service/page.html#getcurrentpages"><code>getCurrentPages()</code></a> &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x9875;&#x9762;&#x6808;&#xFF0C;&#x51B3;&#x5B9A;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x51E0;&#x5C42;&#x3002;</p>
 <p><strong>OBJECT &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
@@ -247,21 +244,21 @@ Page({
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;&#x8C03;&#x7528; navigateTo &#x8DF3;&#x8F6C;&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x9875;&#x9762;&#x4F1A;&#x88AB;&#x52A0;&#x5165;&#x5806;&#x6808;&#xFF0C;&#x800C; redirectTo &#x65B9;&#x6CD5;&#x5219;&#x4E0D;&#x4F1A;&#x3002;&#x89C1;&#x4E0B;&#x65B9;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;&#x8C03;&#x7528; navigateTo &#x8DF3;&#x8F6C;&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x9875;&#x9762;&#x4F1A;&#x88AB;&#x52A0;&#x5165;&#x5806;&#x6808;&#xFF0C;&#x800C; redirectTo &#x65B9;&#x6CD5;&#x5219;&#x4E0D;&#x4F1A;&#x3002;&#x89C1;&#x4E0B;&#x65B9;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</span>
 
 <span class="hljs-comment">// &#x6B64;&#x5904;&#x662F;A&#x9875;&#x9762;</span>
 wx.navigateTo({
-  url: <span class="hljs-string">&apos;B?id=1&apos;</span>
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;B?id=1&apos;</span>
 })
 
 <span class="hljs-comment">// &#x6B64;&#x5904;&#x662F;B&#x9875;&#x9762;</span>
 wx.navigateTo({
-  url: <span class="hljs-string">&apos;C?id=1&apos;</span>
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;C?id=1&apos;</span>
 })
 
 <span class="hljs-comment">// &#x5728;C&#x9875;&#x9762;&#x5185; navigateBack&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;A&#x9875;&#x9762;</span>
 wx.navigateBack({
-  delta: <span class="hljs-number">2</span>
+  <span class="hljs-attr">delta</span>: <span class="hljs-number">2</span>
 })
 </code></pre>
 <h4 id="tip">Tip</h4>
@@ -269,13 +266,10 @@ wx.navigateBack({
 <li><code>tip</code>: wx.navigateTo &#x548C; wx.redirectTo &#x4E0D;&#x5141;&#x8BB8;&#x8DF3;&#x8F6C;&#x5230; tabbar &#x9875;&#x9762;&#xFF0C;&#x53EA;&#x80FD;&#x7528; wx.switchTab &#x8DF3;&#x8F6C;&#x5230; tabbar &#x9875;&#x9762;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

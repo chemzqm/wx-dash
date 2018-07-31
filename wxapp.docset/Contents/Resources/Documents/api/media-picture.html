@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>媒体</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxchooseimageobject">wx.chooseImage(OBJECT)</h3>
 <p>&#x4ECE;&#x672C;&#x5730;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x56FE;&#x7247;&#x6216;&#x4F7F;&#x7528;&#x76F8;&#x673A;&#x62CD;&#x7167;&#x3002;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -119,8 +116,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.chooseImage({
-  count: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x9ED8;&#x8BA4;9</span>
+<pre><code class="language-javascript">wx.chooseImage({
+  <span class="hljs-attr">count</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x9ED8;&#x8BA4;9</span>
   sizeType: [<span class="hljs-string">&apos;original&apos;</span>, <span class="hljs-string">&apos;compressed&apos;</span>], <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x662F;&#x539F;&#x56FE;&#x8FD8;&#x662F;&#x538B;&#x7F29;&#x56FE;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E8C;&#x8005;&#x90FD;&#x6709;</span>
   sourceType: [<span class="hljs-string">&apos;album&apos;</span>, <span class="hljs-string">&apos;camera&apos;</span>], <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x6765;&#x6E90;&#x662F;&#x76F8;&#x518C;&#x8FD8;&#x662F;&#x76F8;&#x673A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E8C;&#x8005;&#x90FD;&#x6709;</span>
   success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
@@ -175,8 +172,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.previewImage({
-  current: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-comment">// &#x5F53;&#x524D;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;http&#x94FE;&#x63A5;</span>
+<pre><code class="language-javascript">wx.previewImage({
+  <span class="hljs-attr">current</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-comment">// &#x5F53;&#x524D;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;http&#x94FE;&#x63A5;</span>
   urls: [] <span class="hljs-comment">// &#x9700;&#x8981;&#x9884;&#x89C8;&#x7684;&#x56FE;&#x7247;http&#x94FE;&#x63A5;&#x5217;&#x8868;</span>
 })
 </code></pre>
@@ -306,20 +303,20 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/Kd47Sbmr6yYu" target="_blank">&#x4EE3;&#x7801;&#x7247;&#x6BB5;</a></p>
-<pre><code class="lang-javascript">wx.getImageInfo({
-  src: <span class="hljs-string">&apos;images/a.jpg&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+<p><a href="wechatide://minicode/Kd47Sbmr6yYu">&#x4EE3;&#x7801;&#x7247;&#x6BB5;</a></p>
+<pre><code class="language-javascript">wx.getImageInfo({
+  <span class="hljs-attr">src</span>: <span class="hljs-string">&apos;images/a.jpg&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.width)
     <span class="hljs-built_in">console</span>.log(res.height)
   }
 })
 
 wx.chooseImage({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     wx.getImageInfo({
-      src: res.tempFilePaths[<span class="hljs-number">0</span>],
-      success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-attr">src</span>: res.tempFilePaths[<span class="hljs-number">0</span>],
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
         <span class="hljs-built_in">console</span>.log(res.width)
         <span class="hljs-built_in">console</span>.log(res.height)
       }
@@ -387,19 +384,16 @@ wx.chooseImage({
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.saveImageToPhotosAlbum({
+<pre><code class="language-javascript">wx.saveImageToPhotosAlbum({
     success(res) {
     }
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

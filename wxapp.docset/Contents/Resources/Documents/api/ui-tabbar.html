@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>设置tabBar</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxsettabbarbadgeobject">wx.setTabBarBadge(OBJECT)</h3>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -68,9 +65,9 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.setTabBarBadge({
-  index: <span class="hljs-number">0</span>,
-  text: <span class="hljs-string">&apos;1&apos;</span>
+<pre><code class="language-javascript">wx.setTabBarBadge({
+  <span class="hljs-attr">index</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;1&apos;</span>
 })
 </code></pre>
 <h3 id="wxremovetabbarbadgeobject">wx.removeTabBarBadge(OBJECT)</h3>
@@ -205,7 +202,7 @@
 </blockquote>
 <p>&#x70B9;&#x51FB; tab &#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x89C1; <a href="../framework/app-service/page.html">&#x94FE;&#x63A5;</a></p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">Page({
+<pre><code class="language-javascript">Page({
   onTabItemTap(item) {
     <span class="hljs-built_in">console</span>.log(item.index)
     <span class="hljs-built_in">console</span>.log(item.pagePath)
@@ -266,11 +263,11 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.setTabBarStyle({
-    color: <span class="hljs-string">&apos;#FF0000&apos;</span>,
-    selectedColor: <span class="hljs-string">&apos;#00FF00&apos;</span>,
-    backgroundColor: <span class="hljs-string">&apos;#0000FF&apos;</span>,
-    borderStyle: <span class="hljs-string">&apos;white&apos;</span>
+<pre><code class="language-javascript">wx.setTabBarStyle({
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&apos;#FF0000&apos;</span>,
+    <span class="hljs-attr">selectedColor</span>: <span class="hljs-string">&apos;#00FF00&apos;</span>,
+    <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&apos;#0000FF&apos;</span>,
+    <span class="hljs-attr">borderStyle</span>: <span class="hljs-string">&apos;white&apos;</span>
 })
 </code></pre>
 <h3 id="wxsettabbaritemobject">wx.setTabBarItem(OBJECT)</h3>
@@ -334,11 +331,11 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.setTabBarItem({
-    index: <span class="hljs-number">0</span>,
-    text: <span class="hljs-string">&apos;text&apos;</span>,
-    iconPath: <span class="hljs-string">&apos;/path/to/iconPath&apos;</span>,
-    selectedIconPath: <span class="hljs-string">&apos;/path/to/selectedIconPath&apos;</span>
+<pre><code class="language-javascript">wx.setTabBarItem({
+    <span class="hljs-attr">index</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;text&apos;</span>,
+    <span class="hljs-attr">iconPath</span>: <span class="hljs-string">&apos;/path/to/iconPath&apos;</span>,
+    <span class="hljs-attr">selectedIconPath</span>: <span class="hljs-string">&apos;/path/to/selectedIconPath&apos;</span>
 })
 </code></pre>
 <h3 id="wxshowtabbarobject">wx.showTabBar(OBJECT)</h3>
@@ -426,13 +423,10 @@
 </tbody>
 </table>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

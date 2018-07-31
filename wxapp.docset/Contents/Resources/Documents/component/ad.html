@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>ad</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="ad">ad</h4>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.9.94 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -29,6 +26,7 @@
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
 <th>&#x8BF4;&#x660E;</th>
+<th>&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -36,25 +34,106 @@
 <td id="ad-unit-id">unit-id</td>
 <td>String</td>
 <td></td>
-<td>&#x5E7F;&#x544A;&#x5355;&#x5143;id&#xFF0C;&#x53EF;&#x5728;<a href="https://mp.weixin.qq.com" target="_blank">&#x5C0F;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x540E;&#x53F0;</a>&#x7684;&#x6D41;&#x91CF;&#x4E3B;&#x6A21;&#x5757;&#x65B0;&#x5EFA;</td>
+<td>&#x5E7F;&#x544A;&#x5355;&#x5143;id&#xFF0C;&#x53EF;&#x5728;<a href="https://mp.weixin.qq.com">&#x5C0F;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x540E;&#x53F0;</a>&#x7684;&#x6D41;&#x91CF;&#x4E3B;&#x6A21;&#x5757;&#x65B0;&#x5EFA;</td>
+<td></td>
+</tr>
+<tr>
+<td id="ad-bindload">bindload</td>
+<td>Handler</td>
+<td></td>
+<td>&#x5E7F;&#x544A;&#x52A0;&#x8F7D;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.1 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.1</a></td>
+</tr>
+<tr>
+<td id="ad-binderror">binderror</td>
+<td>Handler</td>
+<td></td>
+<td>&#x5F53;&#x5E7F;&#x544A;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5;&#x4E8B;&#x4EF6;&#x83B7;&#x53D6;&#x9519;&#x8BEF;&#x7801;&#x53CA;&#x539F;&#x56E0;&#xFF0C;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;event.detail = {errCode: 1002}</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.1 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.1</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;1&#xFF1A;&#x76D1;&#x542C;&#x5230;error&#x56DE;&#x8C03;&#x540E;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x6027;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982;&#x9690;&#x85CF;&#x5E7F;&#x544A;&#x7EC4;&#x4EF6;&#x7684;&#x7236;&#x5BB9;&#x5668;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x4F46;&#x4E0D;&#x8981;&#x79FB;&#x9664;&#x5E7F;&#x544A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x65E0;&#x6CD5;&#x6536;&#x5230;bindload&#x7684;&#x56DE;&#x8C03;&#x3002;</strong></p>
+<h4 id="&#x9519;&#x8BEF;&#x7801;&#x4FE1;&#x606F;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x8868;">&#x9519;&#x8BEF;&#x7801;&#x4FE1;&#x606F;&#x4E0E;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x8868;</h4>
+<p>&#x9519;&#x8BEF;&#x7801;&#x662F;&#x901A;&#x8FC7;binderror&#x56DE;&#x8C03;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x4EE3;&#x7801;</th>
+<th>&#x5F02;&#x5E38;&#x60C5;&#x51B5;</th>
+<th>&#x7406;&#x7531;</th>
+<th>&#x89E3;&#x51B3;&#x65B9;&#x6848;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1000</td>
+<td>&#x540E;&#x7AEF;&#x9519;&#x8BEF;&#x8C03;&#x7528;&#x5931;&#x8D25;</td>
+<td>&#x8BE5;&#x9879;&#x9519;&#x8BEF;&#x4E0D;&#x662F;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x5F02;&#x5E38;&#x60C5;&#x51B5;</td>
+<td>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5FFD;&#x7565;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5373;&#x53EF;&#x6062;&#x590D;&#x3002;</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>&#x53C2;&#x6570;&#x9519;&#x8BEF;</td>
+<td>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x9519;&#x8BEF;</td>
+<td>&#x53EF;&#x4EE5;&#x524D;&#x5F80;developers.weixin.qq.com&#x786E;&#x8BA4;&#x5177;&#x4F53;&#x6559;&#x7A0B;&#xFF08;&#x5C0F;&#x7A0B;&#x5E8F;&#x548C;&#x5C0F;&#x6E38;&#x620F;&#x5206;&#x522B;&#x6709;&#x5404;&#x81EA;&#x7684;&#x6559;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x9876;&#x90E8;&#x9009;&#x9879;&#x4E2D;&#xFF0C;&#x201C;&#x8BBE;&#x8BA1;&#x201D;&#x4E00;&#x680F;&#x7684;&#x53F3;&#x4FA7;&#x8FDB;&#x884C;&#x5207;&#x6362;&#x3002;</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>&#x5E7F;&#x544A;&#x5355;&#x5143;&#x65E0;&#x6548;</td>
+<td>&#x53EF;&#x80FD;&#x662F;&#x62FC;&#x5199;&#x9519;&#x8BEF;&#x3001;&#x6216;&#x8005;&#x8BEF;&#x7528;&#x4E86;&#x5176;&#x4ED6;APP&#x7684;&#x5E7F;&#x544A;ID</td>
+<td>&#x8BF7;&#x91CD;&#x65B0;&#x524D;&#x5F80;mp.weixin.qq.com&#x786E;&#x8BA4;&#x5E7F;&#x544A;&#x4F4D;ID&#x3002;</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>&#x5185;&#x90E8;&#x9519;&#x8BEF;</td>
+<td>&#x8BE5;&#x9879;&#x9519;&#x8BEF;&#x4E0D;&#x662F;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x5F02;&#x5E38;&#x60C5;&#x51B5;</td>
+<td>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5FFD;&#x7565;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5373;&#x53EF;&#x6062;&#x590D;&#x3002;</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>&#x65E0;&#x9002;&#x5408;&#x7684;&#x5E7F;&#x544A;</td>
+<td>&#x5E7F;&#x544A;&#x4E0D;&#x662F;&#x6BCF;&#x4E00;&#x6B21;&#x90FD;&#x4F1A;&#x51FA;&#x73B0;&#xFF0C;&#x8FD9;&#x6B21;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x53EF;&#x80FD;&#x662F;&#x7531;&#x4E8E;&#x8BE5;&#x7528;&#x6237;&#x4E0D;&#x9002;&#x5408;&#x6D4F;&#x89C8;&#x5E7F;&#x544A;</td>
+<td>&#x5C5E;&#x4E8E;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#xFF0C;&#x4E14;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x9488;&#x5BF9;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x505A;&#x5F62;&#x6001;&#x4E0A;&#x7684;&#x517C;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td>1005</td>
+<td>&#x5E7F;&#x544A;&#x7EC4;&#x4EF6;&#x5BA1;&#x6838;&#x4E2D;</td>
+<td>&#x4F60;&#x7684;&#x5E7F;&#x544A;&#x6B63;&#x5728;&#x88AB;&#x5BA1;&#x6838;&#xFF0C;&#x65E0;&#x6CD5;&#x5C55;&#x73B0;&#x5E7F;&#x544A;</td>
+<td>&#x8BF7;&#x524D;&#x5F80;mp.weixin.qq.com&#x786E;&#x8BA4;&#x5BA1;&#x6838;&#x72B6;&#x6001;&#xFF0C;&#x4E14;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x9488;&#x5BF9;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x505A;&#x5F62;&#x6001;&#x4E0A;&#x7684;&#x517C;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>&#x5E7F;&#x544A;&#x7EC4;&#x4EF6;&#x88AB;&#x9A73;&#x56DE;</td>
+<td>&#x4F60;&#x7684;&#x5E7F;&#x544A;&#x5BA1;&#x6838;&#x5931;&#x8D25;&#xFF0C;&#x65E0;&#x6CD5;&#x5C55;&#x73B0;&#x5E7F;&#x544A;</td>
+<td>&#x8BF7;&#x524D;&#x5F80;mp.weixin.qq.com&#x786E;&#x8BA4;&#x5BA1;&#x6838;&#x72B6;&#x6001;&#xFF0C;&#x4E14;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x9488;&#x5BF9;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x505A;&#x5F62;&#x6001;&#x4E0A;&#x7684;&#x517C;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td>1007</td>
+<td>&#x5E7F;&#x544A;&#x7EC4;&#x4EF6;&#x88AB;&#x9A73;&#x56DE;</td>
+<td>&#x4F60;&#x7684;&#x5E7F;&#x544A;&#x80FD;&#x529B;&#x5DF2;&#x7ECF;&#x88AB;&#x5C01;&#x7981;&#xFF0C;&#x5C01;&#x7981;&#x671F;&#x95F4;&#x65E0;&#x6CD5;&#x5C55;&#x73B0;&#x5E7F;&#x544A;</td>
+<td>&#x8BF7;&#x524D;&#x5F80;mp.weixin.qq.com&#x786E;&#x8BA4;&#x5C0F;&#x7A0B;&#x5E8F;&#x5E7F;&#x544A;&#x5C01;&#x7981;&#x72B6;&#x6001;&#x3002;</td>
+</tr>
+<tr>
+<td>1008</td>
+<td>&#x5E7F;&#x544A;&#x5355;&#x5143;&#x5DF2;&#x5173;&#x95ED;</td>
+<td>&#x8BE5;&#x5E7F;&#x544A;&#x4F4D;&#x7684;&#x5E7F;&#x544A;&#x80FD;&#x529B;&#x5DF2;&#x7ECF;&#x88AB;&#x5173;&#x95ED;</td>
+<td>&#x8BF7;&#x524D;&#x5F80;mp.weixin.qq.com&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x5BF9;&#x5E94;&#x5E7F;&#x544A;&#x4F4D;&#x7684;&#x5C55;&#x73B0;&#x3002;</td>
 </tr>
 </tbody>
 </table>
 <h5 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h5>
 <ol>
-<li>&#x76EE;&#x524D;&#x53EF;&#x4EE5;&#x7ED9; <code>ad</code> &#x6807;&#x7B7E;&#x8BBE;&#x7F6E; wxss &#x6837;&#x5F0F;&#x8C03;&#x6574;&#x5E7F;&#x544A;&#x5BBD;&#x5EA6;&#xFF0C;&#x4EE5;&#x4F7F;&#x5E7F;&#x544A;&#x4E0E;&#x9875;&#x9762;&#x66F4;&#x878D;&#x6D3D;&#xFF0C;&#x4F46;&#x8BF7;&#x9075;&#x5FAA;<a href="https://wximg.qq.com/wxp/pdftool/get.html?id=rynYA8o3f&amp;pa=10&amp;name=miniprogramAds_supplier_guidance" target="_blank">&#x5C0F;&#x7A0B;&#x5E8F;&#x6D41;&#x91CF;&#x4E3B;&#x5E94;&#x7528;&#x89C4;&#x8303;</a></li>
+<li>&#x76EE;&#x524D;&#x53EF;&#x4EE5;&#x7ED9; <code>ad</code> &#x6807;&#x7B7E;&#x8BBE;&#x7F6E; wxss &#x6837;&#x5F0F;&#x8C03;&#x6574;&#x5E7F;&#x544A;&#x5BBD;&#x5EA6;&#xFF0C;&#x4EE5;&#x4F7F;&#x5E7F;&#x544A;&#x4E0E;&#x9875;&#x9762;&#x66F4;&#x878D;&#x6D3D;&#xFF0C;&#x4F46;&#x8BF7;&#x9075;&#x5FAA;<a href="https://wximg.qq.com/wxp/pdftool/get.html?id=rynYA8o3f&amp;pa=10&amp;name=miniprogramAds_supplier_guidance">&#x5C0F;&#x7A0B;&#x5E8F;&#x6D41;&#x91CF;&#x4E3B;&#x5E94;&#x7528;&#x89C4;&#x8303;</a></li>
 <li>&#x5728;&#x65E0;&#x5E7F;&#x544A;&#x5C55;&#x793A;&#x65F6;&#xFF0C;<code>ad</code> &#x6807;&#x7B7E;&#x4E0D;&#x4F1A;&#x5360;&#x7528;&#x9AD8;&#x5EA6;</li>
 <li><code>ad</code> &#x7EC4;&#x4EF6;&#x4E0D;&#x652F;&#x6301;&#x89E6;&#x53D1; <code>bindtap</code> &#x7B49;&#x89E6;&#x6478;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

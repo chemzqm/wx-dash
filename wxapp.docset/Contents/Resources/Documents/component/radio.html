@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>radio</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="radio-group">radio-group</h4>
 <p>&#x5355;&#x9879;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x5185;&#x90E8;&#x7531;&#x591A;&#x4E2A;<code>&lt;radio/&gt;</code>&#x7EC4;&#x6210;&#x3002;</p>
 <table>
@@ -76,39 +73,36 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/tpbv9cmv6HYr" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;radio-group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;radioChange&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/tpbv9cmv6HYr" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;radio-group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;radioChange&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{items}}&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>/&gt;</span>{{item.value}}
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">radio-group</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js">Page({
-  data: {
-    items: [
-      {name: <span class="hljs-string">&apos;USA&apos;</span>, value: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;CHN&apos;</span>, value: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;BRA&apos;</span>, value: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
-      {name: <span class="hljs-string">&apos;JPN&apos;</span>, value: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>},
-      {name: <span class="hljs-string">&apos;ENG&apos;</span>, value: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;TUR&apos;</span>, value: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
+<pre><code class="language-js">Page({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">items</span>: [
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;USA&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;CHN&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, <span class="hljs-attr">checked</span>: <span class="hljs-string">&apos;true&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;BRA&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;JPN&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;ENG&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;TUR&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
     ]
   },
-  radioChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">radioChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;radio&#x53D1;&#x751F;change&#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;value&#x503C;&#x4E3A;&#xFF1A;&apos;</span>, e.detail.value)
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/radio.png?t=2018724" alt="radio"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/radio.png?t=18073118" alt="radio"></p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

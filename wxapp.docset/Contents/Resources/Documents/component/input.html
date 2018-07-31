@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>input</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="input">input</h4>
 <p>&#x8F93;&#x5165;&#x6846;&#x3002;</p>
 <table>
@@ -175,11 +172,12 @@
 <td>EventHandle</td>
 <td></td>
 <td>&#x70B9;&#x51FB;&#x5B8C;&#x6210;&#x6309;&#x94AE;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = {value: value}</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <!--
-| auto-fill         | String      |                     | 快速填写表单字段，字段请看[定义](./form.md#autofill)                        | [1.2.0](/framework/compatibility.md "基础库 1.2.0 开始支持，低版本需做兼容处理。") |
+| auto-fill         | String      |                     | 快速填写表单字段，字段请看[定义](./form.md#autofill)                        | [1.2.0](../framework/compatibility.md "基础库 1.2.0 开始支持，低版本需做兼容处理。") |
 -->
 <p><strong>type &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
 <table>
@@ -243,8 +241,8 @@
 <li>&#x6CE8;&#xFF1A;confirm-type&#x7684;&#x6700;&#x7EC8;&#x8868;&#x73B0;&#x4E0E;&#x624B;&#x673A;&#x8F93;&#x5165;&#x6CD5;&#x672C;&#x8EAB;&#x7684;&#x5B9E;&#x73B0;&#x6709;&#x5173;&#xFF0C;&#x90E8;&#x5206;&#x5B89;&#x5353;&#x7CFB;&#x7EDF;&#x8F93;&#x5165;&#x6CD5;&#x548C;&#x7B2C;&#x4E09;&#x65B9;&#x8F93;&#x5165;&#x6CD5;&#x53EF;&#x80FD;&#x4E0D;&#x652F;&#x6301;&#x6216;&#x4E0D;&#x5B8C;&#x5168;&#x652F;&#x6301;&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/JYwgZ6ml6rYP" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!--input.wxml--&gt;</span>
+<p><a href="wechatide://minicode/JYwgZ6ml6rYP" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!--input.wxml--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x805A;&#x7126;&#x7684;input&quot;</span> <span class="hljs-attr">auto-focus</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -280,23 +278,23 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder-style</span>=<span class="hljs-string">&quot;color:red&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x5360;&#x4F4D;&#x7B26;&#x5B57;&#x4F53;&#x662F;&#x7EA2;&#x8272;&#x7684;&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">//input.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">//input.js</span>
 Page({
-  data: {
-    focus: <span class="hljs-literal">false</span>,
-    inputValue: <span class="hljs-string">&apos;&apos;</span>
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">focus</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">inputValue</span>: <span class="hljs-string">&apos;&apos;</span>
   },
-  bindButtonTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">bindButtonTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      focus: <span class="hljs-literal">true</span>
+      <span class="hljs-attr">focus</span>: <span class="hljs-literal">true</span>
     })
   },
-  bindKeyInput: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">bindKeyInput</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      inputValue: e.detail.value
+      <span class="hljs-attr">inputValue</span>: e.detail.value
     })
   },
-  bindReplaceInput: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">bindReplaceInput</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">var</span> value = e.detail.value
     <span class="hljs-keyword">var</span> pos = e.detail.cursor
     <span class="hljs-keyword">if</span>(pos != <span class="hljs-number">-1</span>){
@@ -308,8 +306,8 @@ Page({
 
     <span class="hljs-comment">//&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5149;&#x6807;&#x7684;&#x4F4D;&#x7F6E;</span>
     <span class="hljs-keyword">return</span> {
-      value: value.replace(<span class="hljs-regexp">/11/g</span>,<span class="hljs-string">&apos;2&apos;</span>),
-      cursor: pos
+      <span class="hljs-attr">value</span>: value.replace(<span class="hljs-regexp">/11/g</span>,<span class="hljs-string">&apos;2&apos;</span>),
+      <span class="hljs-attr">cursor</span>: pos
     }
 
     <span class="hljs-comment">//&#x6216;&#x8005;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;,&#x5149;&#x6807;&#x5728;&#x6700;&#x540E;&#x8FB9;</span>
@@ -317,7 +315,7 @@ Page({
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/input.png?t=2018724" alt="input"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/input.png?t=18073118" alt="input"></p>
 <h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
 <li><code>bug</code> : &#x5FAE;&#x4FE1;&#x7248;&#x672C; <code>6.3.30</code>, focus &#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x65E0;&#x6548;&#xFF1B;</li>
@@ -327,14 +325,11 @@ Page({
 <li><code>tip</code> : &#x5BF9;&#x4E8E;&#x5C06; <code>input</code> &#x5C01;&#x88C5;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x3001;&#x800C; <code>from</code> &#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5916;&#x7684;&#x60C5;&#x51B5;&#xFF0C; <code>form</code> &#x5C06;&#x4E0D;&#x80FD;&#x83B7;&#x5F97;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D; <code>input</code> &#x7684;&#x503C;&#x3002;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; <a href="../framework/custom-component/behaviors.html">&#x5185;&#x7F6E; behaviors</a> <code>wx://form-field</code>&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

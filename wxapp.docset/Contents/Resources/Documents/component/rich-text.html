@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>rich-text</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="rich-text">rich-text</h4>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -43,7 +40,7 @@
 </tbody>
 </table>
 <p>&#x652F;&#x6301;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;<code>tap</code>&#x3001;<code>touchstart</code>&#x3001;<code>touchmove</code>&#x3001;<code>touchcancel</code>&#x3001;<code>touchend</code>&#x548C;<code>longtap</code></p>
-<p><strong> nodes &#x5C5E;&#x6027;&#x63A8;&#x8350;&#x4F7F;&#x7528; Array &#x7C7B;&#x578B;&#xFF0C;&#x7531;&#x4E8E;&#x7EC4;&#x4EF6;&#x4F1A;&#x5C06; String &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A; Array &#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x800C;&#x6027;&#x80FD;&#x4F1A;&#x6709;&#x6240;&#x4E0B;&#x964D; </strong></p>
+<p><strong>nodes &#x5C5E;&#x6027;&#x63A8;&#x8350;&#x4F7F;&#x7528; Array &#x7C7B;&#x578B;&#xFF0C;&#x7531;&#x4E8E;&#x7EC4;&#x4EF6;&#x4F1A;&#x5C06; String &#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A; Array &#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x800C;&#x6027;&#x80FD;&#x4F1A;&#x6709;&#x6240;&#x4E0B;&#x964D;</strong></p>
 <h5 id="nodes">nodes</h5>
 <p>&#x73B0;&#x652F;&#x6301;&#x4E24;&#x79CD;&#x8282;&#x70B9;&#xFF0C;&#x901A;&#x8FC7;type&#x6765;&#x533A;&#x5206;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x548C;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF0C;&#x5728;&#x5BCC;&#x6587;&#x672C;&#x533A;&#x57DF;&#x91CC;&#x663E;&#x793A;&#x7684;HTML&#x8282;&#x70B9;</p>
 <p><strong>&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF1A;type = node</strong></p>
@@ -282,31 +279,32 @@
 </tr>
 <tr>
 <td>ul</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/zPVmpim46wYQ" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- rich-text.wxml --&gt;</span>
+<p><a href="wechatide://minicode/zPVmpim46wYQ" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- rich-text.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">rich-text</span> <span class="hljs-attr">nodes</span>=<span class="hljs-string">&quot;{{nodes}}&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;tap&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">rich-text</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript">// rich-text.js
+<pre><code class="language-javascript"><span class="hljs-comment">// rich-text.js</span>
 Page({
-  data: {
-    nodes: [{
-      name: &apos;div&apos;,
-      attrs: {
-        class: &apos;div_class&apos;,
-        style: &apos;line-height: 60px; color: red;&apos;
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">nodes</span>: [{
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;div&apos;</span>,
+      <span class="hljs-attr">attrs</span>: {
+        <span class="hljs-attr">class</span>: <span class="hljs-string">&apos;div_class&apos;</span>,
+        <span class="hljs-attr">style</span>: <span class="hljs-string">&apos;line-height: 60px; color: red;&apos;</span>
       },
-      children: [{
-        type: &apos;text&apos;,
-        text: &apos;Hello&amp;nbsp;World!&apos;
+      <span class="hljs-attr">children</span>: [{
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;text&apos;</span>,
+        <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;Hello&amp;nbsp;World!&apos;</span>
       }]
     }]
   },
   tap() {
-    console.log(&apos;tap&apos;)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;tap&apos;</span>)
   }
 })
 </code></pre>
@@ -321,14 +319,11 @@ Page({
 <li><code>tip</code>: &#x5982;&#x679C;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; <code>rich-text</code> &#x7EC4;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x4EC5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; wxss &#x6837;&#x5F0F;&#x5BF9; <code>rich-text</code> &#x4E2D;&#x7684; class &#x751F;&#x6548;&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

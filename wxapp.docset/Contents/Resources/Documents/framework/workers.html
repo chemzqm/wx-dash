@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>多线程</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,22 +13,19 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h2 id="&#x591A;&#x7EBF;&#x7A0B;-worker">&#x591A;&#x7EBF;&#x7A0B; Worker</h2>
 <p>&#x4E00;&#x4E9B;&#x5F02;&#x6B65;&#x5904;&#x7406;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x653E;&#x7F6E;&#x4E8E; Worker &#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x5F85;&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x518D;&#x628A;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E3B;&#x7EBF;&#x7A0B;&#x3002;Worker &#x8FD0;&#x884C;&#x4E8E;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x4E0E;&#x7EBF;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;&#x65B9;&#x6CD5;&#x3002;
 Worker &#x4E0E;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#xFF0C;&#x53CC;&#x65B9;&#x4F7F;&#x7528; <a href="../api/createWorker.html">Worker.postMessage()</a> &#x6765;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;<a href="../api/createWorker.html">Worker.onMessage()</a> &#x6765;&#x63A5;&#x6536;&#x6570;&#x636E;&#xFF0C;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x5E76;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x5171;&#x4EAB;&#xFF0C;&#x800C;&#x662F;&#x88AB;&#x590D;&#x5236;&#x7684;&#x3002;</p>
 <h4 id="&#x6B65;&#x9AA4;">&#x6B65;&#x9AA4;</h4>
-<p><a href="wechatide://minicode/akaQknmy6ZY6" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<p><a href="wechatide://minicode/akaQknmy6ZY6" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <h5 id="1-&#x914D;&#x7F6E;-worker-&#x4FE1;&#x606F;">1. &#x914D;&#x7F6E; Worker &#x4FE1;&#x606F;</h5>
 <p>&#x5728; <code>app.json</code> &#x4E2D;&#x53EF;&#x914D;&#x7F6E; <code>Worker</code> &#x4EE3;&#x7801;&#x653E;&#x7F6E;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#x5C06;&#x88AB;&#x6253;&#x5305;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
 <p>&#x914D;&#x7F6E;&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;workers&quot;</span>: <span class="hljs-string">&quot;workers&quot;</span>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;workers&quot;</span>: <span class="hljs-string">&quot;workers&quot;</span>
 }
 </code></pre>
 <h5 id="2-&#x6DFB;&#x52A0;-worker-&#x4EE3;&#x7801;&#x6587;&#x4EF6;">2. &#x6DFB;&#x52A0; Worker &#x4EE3;&#x7801;&#x6587;&#x4EF6;</h5>
@@ -36,7 +33,8 @@ Worker &#x4E0E;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&
 <pre><code>workers/request/index.js
 workers/request/utils.js
 workers/response/index.js
-</code></pre><p>&#x6DFB;&#x52A0;&#x540E;&#xFF0C;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x540E;&#xFF0C;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code>&#x251C;&#x2500;&#x2500; app.js
 &#x251C;&#x2500;&#x2500; app.json
 &#x251C;&#x2500;&#x2500; project.config.json
@@ -46,9 +44,10 @@ workers/response/index.js
     &#x2502;   &#x2514;&#x2500;&#x2500; utils.js
     &#x2514;&#x2500;&#x2500; response
         &#x2514;&#x2500;&#x2500; index.js
-</code></pre><h4 id="3-&#x7F16;&#x5199;-worker-&#x4EE3;&#x7801;">3. &#x7F16;&#x5199; Worker &#x4EE3;&#x7801;</h4>
+</code></pre>
+<h4 id="3-&#x7F16;&#x5199;-worker-&#x4EE3;&#x7801;">3. &#x7F16;&#x5199; Worker &#x4EE3;&#x7801;</h4>
 <p>&#x5728; <code>workers/request/index.js</code> &#x7F16;&#x5199; Worker &#x54CD;&#x5E94;&#x4EE3;&#x7801;</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> utils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./utils&apos;</span>)
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> utils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./utils&apos;</span>)
 
 <span class="hljs-comment">// &#x5728; Worker &#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x4F1A;&#x5168;&#x5C40;&#x66B4;&#x9732;&#x4E00;&#x4E2A; `worker` &#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528; worker.onMeesage/postMessage &#x5373;&#x53EF;</span>
 worker.onMessage(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
@@ -57,11 +56,11 @@ worker.onMessage(<span class="hljs-function"><span class="hljs-keyword">function
 </code></pre>
 <h4 id="4-&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E2D;&#x521D;&#x59CB;&#x5316;-worker">4. &#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E2D;&#x521D;&#x59CB;&#x5316; Worker</h4>
 <p>&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;&#x4EE3;&#x7801; app.js &#x4E2D;&#x521D;&#x59CB;&#x5316; Worker</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> worker = wx.createWorker(<span class="hljs-string">&apos;workers/request/index.js&apos;</span>) <span class="hljs-comment">// &#x6587;&#x4EF6;&#x540D;&#x6307;&#x5B9A; worker &#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> worker = wx.createWorker(<span class="hljs-string">&apos;workers/request/index.js&apos;</span>) <span class="hljs-comment">// &#x6587;&#x4EF6;&#x540D;&#x6307;&#x5B9A; worker &#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
 </code></pre>
 <h4 id="5-&#x4E3B;&#x7EBF;&#x7A0B;&#x5411;-worker-&#x53D1;&#x9001;&#x6D88;&#x606F;">5. &#x4E3B;&#x7EBF;&#x7A0B;&#x5411; Worker &#x53D1;&#x9001;&#x6D88;&#x606F;</h4>
-<pre><code class="lang-javascript">worker.postMessage({
-  msg: <span class="hljs-string">&apos;hello worker&apos;</span>
+<pre><code class="language-javascript">worker.postMessage({
+  <span class="hljs-attr">msg</span>: <span class="hljs-string">&apos;hello worker&apos;</span>
 })
 </code></pre>
 <p>worker &#x5BF9;&#x8C61;&#x7684;&#x5176;&#x5B83;&#x63A5;&#x53E3;&#x8BF7;&#x770B; <a href="../api/createWorker.html">worker&#x63A5;&#x53E3;&#x8BF4;&#x660E;</a></p>
@@ -74,13 +73,10 @@ worker.onMessage(<span class="hljs-function"><span class="hljs-keyword">function
 <li>Workers &#x4E4B;&#x95F4;&#x4E0D;&#x652F;&#x6301;&#x53D1;&#x9001;&#x6D88;&#x606F;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

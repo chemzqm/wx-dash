@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>wx.canvasToTempFilePath</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="wxcanvastotempfilepathobject-this">wx.canvasToTempFilePath(OBJECT, this)</h1>
 <p>&#x628A;&#x5F53;&#x524D;&#x753B;&#x5E03;&#x6307;&#x5B9A;&#x533A;&#x57DF;&#x7684;&#x5185;&#x5BB9;&#x5BFC;&#x51FA;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;canvas/&gt;</code> &#x7EC4;&#x4EF6;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -115,6 +112,7 @@
 <td>Function</td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -123,27 +121,24 @@
 <li><code>tip</code>: &#x5728; <code>draw</code> &#x56DE;&#x8C03;&#x91CC;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x624D;&#x80FD;&#x4FDD;&#x8BC1;&#x56FE;&#x7247;&#x5BFC;&#x51FA;&#x6210;&#x529F;&#x3002;</li>
 </ol>
 <h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h3>
-<pre><code class="lang-javascript">wx.canvasToTempFilePath({
-  x: <span class="hljs-number">100</span>,
-  y: <span class="hljs-number">200</span>,
-  width: <span class="hljs-number">50</span>,
-  height: <span class="hljs-number">50</span>,
-  destWidth: <span class="hljs-number">100</span>,
-  destHeight: <span class="hljs-number">100</span>,
-  canvasId: <span class="hljs-string">&apos;myCanvas&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.canvasToTempFilePath({
+  <span class="hljs-attr">x</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">y</span>: <span class="hljs-number">200</span>,
+  <span class="hljs-attr">width</span>: <span class="hljs-number">50</span>,
+  <span class="hljs-attr">height</span>: <span class="hljs-number">50</span>,
+  <span class="hljs-attr">destWidth</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">destHeight</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">canvasId</span>: <span class="hljs-string">&apos;myCanvas&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.tempFilePath)
   } 
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

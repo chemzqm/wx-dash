@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>地图组件控制</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxcreatemapcontextmapid-this">wx.createMapContext(mapId, this)</h3>
 <p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE; map &#x4E0A;&#x4E0B;&#x6587; <code>mapContext</code> &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;this&#xFF0C;&#x4EE5;&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#x5185; <code>&lt;map/&gt;</code> &#x7EC4;&#x4EF6;</p>
 <h4 id="mapcontext">mapContext</h4>
@@ -246,8 +243,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/3uVxpmmT6wY9" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- map.wxml --&gt;</span>
+<p><a href="wechatide://minicode/3uVxpmmT6wY9" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- map.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">map</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myMap&quot;</span> <span class="hljs-attr">show-location</span> /&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;getCenterLocation&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x4F4D;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -255,59 +252,56 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;translateMarker&quot;</span>&gt;</span>&#x79FB;&#x52A8;&#x6807;&#x6CE8;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;includePoints&quot;</span>&gt;</span>&#x7F29;&#x653E;&#x89C6;&#x91CE;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7ECF;&#x7EAC;&#x5EA6;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">// map.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// map.js</span>
 Page({
-  onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
     <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createMapContext &#x83B7;&#x53D6; map &#x4E0A;&#x4E0B;&#x6587;</span>
     <span class="hljs-keyword">this</span>.mapCtx = wx.createMapContext(<span class="hljs-string">&apos;myMap&apos;</span>)
   },
-  getCenterLocation: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">getCenterLocation</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.mapCtx.getCenterLocation({
-      success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
         <span class="hljs-built_in">console</span>.log(res.longitude)
         <span class="hljs-built_in">console</span>.log(res.latitude)
       }
     })
   },
-  moveToLocation: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">moveToLocation</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.mapCtx.moveToLocation()
   },
-  translateMarker: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">translateMarker</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.mapCtx.translateMarker({
-      markerId: <span class="hljs-number">0</span>,
-      autoRotate: <span class="hljs-literal">true</span>,
-      duration: <span class="hljs-number">1000</span>,
-      destination: {
-        latitude:<span class="hljs-number">23.10229</span>,
-        longitude:<span class="hljs-number">113.3345211</span>,
+      <span class="hljs-attr">markerId</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">autoRotate</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>,
+      <span class="hljs-attr">destination</span>: {
+        <span class="hljs-attr">latitude</span>:<span class="hljs-number">23.10229</span>,
+        <span class="hljs-attr">longitude</span>:<span class="hljs-number">113.3345211</span>,
       },
       animationEnd() {
         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;animation end&apos;</span>)
       }
     })
   },
-  includePoints: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">includePoints</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.mapCtx.includePoints({
-      padding: [<span class="hljs-number">10</span>],
-      points: [{
-        latitude:<span class="hljs-number">23.10229</span>,
-        longitude:<span class="hljs-number">113.3345211</span>,
+      <span class="hljs-attr">padding</span>: [<span class="hljs-number">10</span>],
+      <span class="hljs-attr">points</span>: [{
+        <span class="hljs-attr">latitude</span>:<span class="hljs-number">23.10229</span>,
+        <span class="hljs-attr">longitude</span>:<span class="hljs-number">113.3345211</span>,
       }, {
-        latitude:<span class="hljs-number">23.00229</span>,
-        longitude:<span class="hljs-number">113.3345211</span>,
+        <span class="hljs-attr">latitude</span>:<span class="hljs-number">23.00229</span>,
+        <span class="hljs-attr">longitude</span>:<span class="hljs-number">113.3345211</span>,
       }]
     })
   }
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

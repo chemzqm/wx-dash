@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>clip</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="canvascontextclip">canvasContext.clip</h1>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -26,30 +23,27 @@
 <h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
 <p>clip() &#x65B9;&#x6CD5;&#x4ECE;&#x539F;&#x59CB;&#x753B;&#x5E03;&#x4E2D;&#x526A;&#x5207;&#x4EFB;&#x610F;&#x5F62;&#x72B6;&#x548C;&#x5C3A;&#x5BF8;&#x3002;&#x4E00;&#x65E6;&#x526A;&#x5207;&#x4E86;&#x67D0;&#x4E2A;&#x533A;&#x57DF;&#xFF0C;&#x5219;&#x6240;&#x6709;&#x4E4B;&#x540E;&#x7684;&#x7ED8;&#x56FE;&#x90FD;&#x4F1A;&#x88AB;&#x9650;&#x5236;&#x5728;&#x88AB;&#x526A;&#x5207;&#x7684;&#x533A;&#x57DF;&#x5185;&#xFF08;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x753B;&#x5E03;&#x4E0A;&#x7684;&#x5176;&#x4ED6;&#x533A;&#x57DF;&#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528; clip() &#x65B9;&#x6CD5;&#x524D;&#x901A;&#x8FC7;&#x4F7F;&#x7528; save() &#x65B9;&#x6CD5;&#x5BF9;&#x5F53;&#x524D;&#x753B;&#x5E03;&#x533A;&#x57DF;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;&#xFF0C;&#x5E76;&#x5728;&#x4EE5;&#x540E;&#x7684;&#x4EFB;&#x610F;&#x65F6;&#x95F4;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x6062;&#x590D;&#xFF08;&#x901A;&#x8FC7; restore() &#x65B9;&#x6CD5;&#xFF09;&#x3002;</p>
 <h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<pre><code class="language-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 
 wx.downloadFile({
-  url: <span class="hljs-string">&apos;http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-      ctx.save()
-      ctx.beginPath()
-      ctx.arc(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">25</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>*<span class="hljs-built_in">Math</span>.PI)
-      ctx.clip()
-      ctx.drawImage(res.tempFilePath, <span class="hljs-number">25</span>, <span class="hljs-number">25</span>)
-      ctx.restore()
-      ctx.draw()
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  	ctx.save()
+  	ctx.beginPath()
+  	ctx.arc(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">25</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>*<span class="hljs-built_in">Math</span>.PI)
+  	ctx.clip()
+  	ctx.drawImage(res.tempFilePath, <span class="hljs-number">25</span>, <span class="hljs-number">25</span>)
+  	ctx.restore()
+  	ctx.draw()
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/clip.png?t=2018724" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/clip.png?t=18073118" alt=""></p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

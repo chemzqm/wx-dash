@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>位置</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxgetlocationobject">wx.getLocation(OBJECT)</h3>
 <p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x3001;&#x901F;&#x5EA6;&#x3002;&#x5F53;&#x7528;&#x6237;&#x79BB;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x6B64;&#x63A5;&#x53E3;&#x65E0;&#x6CD5;&#x8C03;&#x7528;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -66,6 +63,7 @@
 <td>Function</td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -117,9 +115,9 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getLocation({
-  type: <span class="hljs-string">&apos;wgs84&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.getLocation({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;wgs84&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> latitude = res.latitude
     <span class="hljs-keyword">var</span> longitude = res.longitude
     <span class="hljs-keyword">var</span> speed = res.speed
@@ -258,15 +256,15 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getLocation({
-  type: <span class="hljs-string">&apos;gcj02&apos;</span>, <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;wx.openLocation&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</span>
+<pre><code class="language-javascript">wx.getLocation({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;gcj02&apos;</span>, <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;wx.openLocation&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</span>
   success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">var</span> latitude = res.latitude
     <span class="hljs-keyword">var</span> longitude = res.longitude
     wx.openLocation({
-      latitude: latitude,
-      longitude: longitude,
-      scale: <span class="hljs-number">28</span>
+      <span class="hljs-attr">latitude</span>: latitude,
+      <span class="hljs-attr">longitude</span>: longitude,
+      <span class="hljs-attr">scale</span>: <span class="hljs-number">28</span>
     })
   }
 })
@@ -276,13 +274,10 @@
 <li><code>bug</code>: <code>iOS</code> <code>6.3.30</code> type &#x53C2;&#x6570;&#x4E0D;&#x751F;&#x6548;&#xFF0C;&#x53EA;&#x4F1A;&#x8FD4;&#x56DE; wgs84 &#x7C7B;&#x578B;&#x7684;&#x5750;&#x6807;&#x4FE1;&#x606F;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

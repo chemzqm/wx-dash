@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>&#x753B;&#x5E03;</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="canvas">canvas</h4>
 <p>&#x753B;&#x5E03;&#x3002;</p>
 <table>
@@ -85,23 +82,23 @@
 <li><strong>&#x540C;&#x4E00;&#x9875;&#x9762;&#x4E2D;&#x7684; canvas-id &#x4E0D;&#x53EF;&#x91CD;&#x590D;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x51FA;&#x73B0;&#x8FC7;&#x7684; canvas-id&#xFF0C;&#x8BE5; canvas &#x6807;&#x7B7E;&#x5BF9;&#x5E94;&#x7684;&#x753B;&#x5E03;&#x5C06;&#x88AB;&#x9690;&#x85CF;&#x5E76;&#x4E0D;&#x518D;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;</strong></li>
 </ol>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;<a href="../demo/api-canvas.zip">&#x4E0B;&#x8F7D;</a></strong></p>
-<p><a href="wechatide://minicode/oyVplmmG6xYt" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- canvas.wxml --&gt;</span>
+<p><a href="wechatide://minicode/oyVplmmG6xYt" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- canvas.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 300px; height: 200px;&quot;</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;firstCanvas&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x5F53;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x65F6;&#xFF0C;&#x6587;&#x6863;&#x6D41;&#x540E;&#x8FB9;&#x7684; canvas &#x7684;&#x663E;&#x793A;&#x5C42;&#x7EA7;&#x9AD8;&#x4E8E;&#x524D;&#x8FB9;&#x7684; canvas --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 400px; height: 500px;&quot;</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;secondCanvas&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x56E0;&#x4E3A; canvas-id &#x4E0E;&#x524D;&#x4E00;&#x4E2A; canvas &#x91CD;&#x590D;&#xFF0C;&#x8BE5; canvas &#x4E0D;&#x4F1A;&#x663E;&#x793A;&#xFF0C;&#x5E76;&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;&#x5230; AppService --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 400px; height: 500px;&quot;</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;secondCanvas&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;canvasIdErrorCallback&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">// canvas.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// canvas.js</span>
 Page({
-  canvasIdErrorCallback: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">canvasIdErrorCallback</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.error(e.detail.errMsg)
   },
-  onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
     <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createContext &#x83B7;&#x53D6;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587; context</span>
     <span class="hljs-keyword">var</span> context = wx.createCanvasContext(<span class="hljs-string">&apos;firstCanvas&apos;</span>)
-
+    
     context.setStrokeStyle(<span class="hljs-string">&quot;#00ff00&quot;</span>)
     context.setLineWidth(<span class="hljs-number">5</span>)
     context.rect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
@@ -130,14 +127,11 @@ Page({
 <li><code>bug</code>: &#x907F;&#x514D;&#x8BBE;&#x7F6E;&#x8FC7;&#x5927;&#x7684;&#x5BBD;&#x9AD8;&#xFF0C;&#x5728;&#x5B89;&#x5353;&#x4E0B;&#x4F1A;&#x6709;crash&#x7684;&#x95EE;&#x9898;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

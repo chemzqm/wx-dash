@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>WXML节点信息</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="wxml&#x8282;&#x70B9;&#x4FE1;&#x606F;api">WXML&#x8282;&#x70B9;&#x4FE1;&#x606F;API</h1>
 <h2 id="wxcreateselectorquery">wx.createSelectorQuery()</h2>
 <blockquote>
@@ -26,8 +23,8 @@
 </blockquote>
 <p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;SelectorQuery&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E0A;&#x4F7F;&#x7528;<code>select</code>&#x7B49;&#x65B9;&#x6CD5;&#x9009;&#x62E9;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;<code>boundingClientRect</code>&#x7B49;&#x65B9;&#x6CD5;&#x9009;&#x62E9;&#x9700;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">Page({
-  queryMultipleNodes: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+<pre><code class="language-javascript">Page({
+  <span class="hljs-attr">queryMultipleNodes</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">var</span> query = wx.createSelectorQuery()
     query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect()
     query.selectViewport().scrollOffset()
@@ -82,8 +79,8 @@
 </blockquote>
 <p>&#x5C06;&#x9009;&#x62E9;&#x5668;&#x7684;&#x9009;&#x53D6;&#x8303;&#x56F4;&#x66F4;&#x6539;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;<code>component</code>&#x5185;&#x3002;&#xFF08;&#x521D;&#x59CB;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x4EC5;&#x9009;&#x53D6;&#x9875;&#x9762;&#x8303;&#x56F4;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x4E0D;&#x4F1A;&#x9009;&#x53D6;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x3002;&#xFF09;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">Component({
-  queryMultipleNodes: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+<pre><code class="language-javascript">Component({
+  <span class="hljs-attr">queryMultipleNodes</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">var</span> query = wx.createSelectorQuery().in(<span class="hljs-keyword">this</span>)
     query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
       res.top <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5185; #the-id &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
@@ -111,8 +108,8 @@
 <p>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#x7684;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x663E;&#x793A;&#x533A;&#x57DF;&#xFF0C;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x5176;&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#x4E8E;DOM&#x7684;getBoundingClientRect&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;nodesRef&#x5BF9;&#x5E94;&#x7684;selectorQuery&#x3002;</p>
 <p>&#x8FD4;&#x56DE;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x7528;<code>left</code>&#x3001;<code>right</code>&#x3001;<code>top</code>&#x3001;<code>bottom</code>&#x3001;<code>width</code>&#x3001;<code>height</code>&#x5B57;&#x6BB5;&#x63CF;&#x8FF0;&#x3002;&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86;callback&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x6267;&#x884C;selectQuery&#x7684;exec&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4F1A;&#x5728;callback&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">Page({
-  getRect: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+<pre><code class="language-javascript">Page({
+  <span class="hljs-attr">getRect</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rect</span>)</span>{
       rect.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
       rect.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
@@ -124,7 +121,7 @@
       rect.height  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
     }).exec()
   },
-  getAllRects: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-attr">getAllRects</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     wx.createSelectorQuery().selectAll(<span class="hljs-string">&apos;.a-class&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rects</span>)</span>{
       rects.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rect</span>)</span>{
         rect.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
@@ -144,8 +141,8 @@
 <p>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#xFF0C;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F;<code>scroll-view</code>&#x6216;&#x8005;viewport&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;nodesRef&#x5BF9;&#x5E94;&#x7684;selectorQuery&#x3002;</p>
 <p>&#x8FD4;&#x56DE;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x7528;<code>scrollLeft</code>&#x3001;<code>scrollTop</code>&#x5B57;&#x6BB5;&#x63CF;&#x8FF0;&#x3002;&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86;callback&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x6267;&#x884C;selectQuery&#x7684;exec&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x4F1A;&#x5728;callback&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">Page({
-  getScrollOffset: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+<pre><code class="language-javascript">Page({
+  <span class="hljs-attr">getScrollOffset</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     wx.createSelectorQuery().selectViewport().scrollOffset(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
       res.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
       res.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
@@ -157,72 +154,27 @@
 </code></pre>
 <h3 id="nodesreffieldsfields-callback">nodesRef.fields(fields, [callback])</h3>
 <p>&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#x5728;<code>fields</code>&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;nodesRef&#x5BF9;&#x5E94;&#x7684;selectorQuery&#x3002;&#x53EF;&#x6307;&#x5B9A;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#x5305;&#x62EC;&#xFF1A;</p>
-<table>
-<thead>
-<tr>
-<th>&#x5B57;&#x6BB5;&#x540D;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>id</code></td>
-<td></td>
-</tr>
-<tr>
-<td>dataset</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>dataset</code></td>
-<td></td>
-</tr>
-<tr>
-<td>rect</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#xFF08;<code>left</code> <code>right</code> <code>top</code> <code>bottom</code>&#xFF09;</td>
-<td></td>
-</tr>
-<tr>
-<td>size</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5C3A;&#x5BF8;&#xFF08;<code>width</code> <code>height</code>&#xFF09;</td>
-<td></td>
-</tr>
-<tr>
-<td>scrollOffset</td>
-<td>&#x5426;</td>
-<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x7684; <code>scrollLeft</code> <code>scrollTop</code> &#xFF0C;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F;<code>scroll-view</code>&#x6216;&#x8005;viewport</td>
-<td></td>
-</tr>
-<tr>
-<td>properties</td>
-<td><code>[]</code></td>
-<td>&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x53EA;&#x80FD;&#x83B7;&#x5F97;&#x7EC4;&#x4EF6;&#x6587;&#x6863;&#x4E2D;&#x6807;&#x6CE8;&#x7684;&#x5E38;&#x89C4;&#x5C5E;&#x6027;&#x503C;&#xFF0C; <code>id</code> <code>class</code> <code>style</code> &#x548C;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#xFF09;</td>
-<td></td>
-</tr>
-<tr>
-<td>computedStyle</td>
-<td><code>[]</code></td>
-<td>&#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x540D;&#x7684;&#x5F53;&#x524D;&#x503C;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a></td>
-</tr>
-</tbody>
-</table>
+<p>| &#x5B57;&#x6BB5;&#x540D;       | &#x9ED8;&#x8BA4;&#x503C; | &#x8BF4;&#x660E;                                             | &#x6700;&#x4F4E;&#x7248;&#x672C; |
+| -----------  | ------ | ------------------------------------------------ | |
+| id           | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>id</code> | |
+| dataset      | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>dataset</code> | |
+| rect         | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#xFF08;<code>left</code> <code>right</code> <code>top</code> <code>bottom</code>&#xFF09; | |
+| size         | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5C3A;&#x5BF8;&#xFF08;<code>width</code> <code>height</code>&#xFF09; | |
+| scrollOffset | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x7684; <code>scrollLeft</code> <code>scrollTop</code> &#xFF0C;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F;<code>scroll-view</code>&#x6216;&#x8005;viewport | |
+| properties   | <code>[]</code>   | &#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x53EA;&#x80FD;&#x83B7;&#x5F97;&#x7EC4;&#x4EF6;&#x6587;&#x6863;&#x4E2D;&#x6807;&#x6CE8;&#x7684;&#x5E38;&#x89C4;&#x5C5E;&#x6027;&#x503C;&#xFF0C; <code>id</code> <code>class</code> <code>style</code> &#x548C;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#xFF09; | |
+| computedStyle | <code>[]</code>  | &#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x540D;&#x7684;&#x5F53;&#x524D;&#x503C; | <a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a> |</p>
 <blockquote>
 <p>&#x6CE8;&#x610F;&#xFF1A; computedStyle &#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E; size&#xFF0C;&#x5F53;&#x540C;&#x65F6;&#x5728; computedStyle &#x91CC;&#x6307;&#x5B9A;&#x4E86; width/height &#x548C;&#x4F20;&#x5165;&#x4E86; size: true&#xFF0C;&#x5219;&#x4F18;&#x5148;&#x8FD4;&#x56DE; computedStyle &#x83B7;&#x53D6;&#x5230;&#x7684; width/height&#x3002;</p>
 </blockquote>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">Page({
-  getFields: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+<pre><code class="language-javascript">Page({
+  <span class="hljs-attr">getFields</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).fields({
-      dataset: <span class="hljs-literal">true</span>,
-      size: <span class="hljs-literal">true</span>,
-      scrollOffset: <span class="hljs-literal">true</span>,
-      properties: [<span class="hljs-string">&apos;scrollX&apos;</span>, <span class="hljs-string">&apos;scrollY&apos;</span>],
-      computedStyle: [<span class="hljs-string">&apos;margin&apos;</span>, <span class="hljs-string">&apos;backgroundColor&apos;</span>]
+      <span class="hljs-attr">dataset</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">size</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">scrollOffset</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">properties</span>: [<span class="hljs-string">&apos;scrollX&apos;</span>, <span class="hljs-string">&apos;scrollY&apos;</span>],
+      <span class="hljs-attr">computedStyle</span>: [<span class="hljs-string">&apos;margin&apos;</span>, <span class="hljs-string">&apos;backgroundColor&apos;</span>]
     }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
       res.dataset    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
       res.width      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
@@ -241,13 +193,10 @@
 <h3 id="selectorqueryexeccallback">selectorQuery.exec([callback])</h3>
 <p>&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x6309;&#x8BF7;&#x6C42;&#x6B21;&#x5E8F;&#x6784;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x5728;callback&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#x3002;</p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

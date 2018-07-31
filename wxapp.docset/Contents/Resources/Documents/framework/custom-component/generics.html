@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>抽象节点</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,18 +13,15 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="&#x62BD;&#x8C61;&#x8282;&#x70B9;">&#x62BD;&#x8C61;&#x8282;&#x70B9;</h1>
 <p>&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x81EA;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.6 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.6</a> &#x5F00;&#x59CB;&#x652F;&#x6301;&#x3002;</p>
 <h2 id="&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x62BD;&#x8C61;&#x8282;&#x70B9;">&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x62BD;&#x8C61;&#x8282;&#x70B9;</h2>
 <p>&#x6709;&#x65F6;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6A21;&#x7248;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x8282;&#x70B9;&#xFF0C;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0D;&#x662F;&#x7531;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x8C03;&#x7528;&#x8005;&#x786E;&#x5B9A;&#x7684;&#x3002;&#x8FD9;&#x65F6;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x58F0;&#x660E;&#x4E3A;&#x201C;&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x201D;&#x3002;</p>
 <p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x201C;&#x9009;&#x6846;&#x7EC4;&#x201D;&#xFF08;selectable-group&#xFF09;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x5176;&#x4E2D;&#x53EF;&#x4EE5;&#x653E;&#x7F6E;&#x5355;&#x9009;&#x6846;&#xFF08;custom-radio&#xFF09;&#x6216;&#x8005;&#x590D;&#x9009;&#x6846;&#xFF08;custom-checkbox&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684; wxml &#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7F16;&#x5199;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- selectable-group.wxml --&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- selectable-group.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{labels}}&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">selectable</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;{{false}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">selectable</span>&gt;</span>
@@ -33,34 +30,34 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;&#xFF0C;&#x201C;selectable&#x201D;&#x4E0D;&#x662F;&#x4EFB;&#x4F55;&#x5728; json &#x6587;&#x4EF6;&#x7684; <code>usingComponents</code> &#x5B57;&#x6BB5;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x3002;&#x5B83;&#x9700;&#x8981;&#x5728; <code>componentGenerics</code> &#x5B57;&#x6BB5;&#x4E2D;&#x58F0;&#x660E;&#xFF1A;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;componentGenerics&quot;</span>: {
-    <span class="hljs-string">&quot;selectable&quot;</span>: <span class="hljs-literal">true</span>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;componentGenerics&quot;</span>: {
+    <span class="hljs-attr">&quot;selectable&quot;</span>: <span class="hljs-literal">true</span>
   }
 }
 </code></pre>
 <h2 id="&#x4F7F;&#x7528;&#x5305;&#x542B;&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x7684;&#x7EC4;&#x4EF6;">&#x4F7F;&#x7528;&#x5305;&#x542B;&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x7684;&#x7EC4;&#x4EF6;</h2>
 <p>&#x5728;&#x4F7F;&#x7528; selectable-group &#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x201C;selectable&#x201D;&#x5177;&#x4F53;&#x662F;&#x54EA;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">selectable-group</span> <span class="hljs-attr">generic:selectable</span>=<span class="hljs-string">&quot;custom-radio&quot;</span> /&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">selectable-group</span> <span class="hljs-attr">generic:selectable</span>=<span class="hljs-string">&quot;custom-radio&quot;</span> /&gt;</span>
 </code></pre>
 <p>&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x751F;&#x6210;&#x8FD9;&#x4E2A; selectable-group &#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;&#x201C;selectable&#x201D;&#x8282;&#x70B9;&#x4F1A;&#x751F;&#x6210;&#x201C;custom-radio&#x201D;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x3002;&#x7C7B;&#x4F3C;&#x5730;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">selectable-group</span> <span class="hljs-attr">generic:selectable</span>=<span class="hljs-string">&quot;custom-checkbox&quot;</span> /&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">selectable-group</span> <span class="hljs-attr">generic:selectable</span>=<span class="hljs-string">&quot;custom-checkbox&quot;</span> /&gt;</span>
 </code></pre>
 <p>&#x201C;selectable&#x201D;&#x8282;&#x70B9;&#x5219;&#x4F1A;&#x751F;&#x6210;&#x201C;custom-checkbox&#x201D;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x3002;</p>
 <p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0A;&#x8FF0;&#x7684; <code>custom-radio</code> &#x548C; <code>custom-checkbox</code> &#x9700;&#x8981;&#x5305;&#x542B;&#x5728;&#x8FD9;&#x4E2A; wxml &#x5BF9;&#x5E94; json &#x6587;&#x4EF6;&#x7684; <code>usingComponents</code> &#x5B9A;&#x4E49;&#x6BB5;&#x4E2D;&#x3002;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;usingComponents&quot;</span>: {
-    <span class="hljs-string">&quot;custom-radio&quot;</span>: <span class="hljs-string">&quot;path/to/custom/radio&quot;</span>,
-    <span class="hljs-string">&quot;custom-checkbox&quot;</span>: <span class="hljs-string">&quot;path/to/custom/checkbox&quot;</span>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;usingComponents&quot;</span>: {
+    <span class="hljs-attr">&quot;custom-radio&quot;</span>: <span class="hljs-string">&quot;path/to/custom/radio&quot;</span>,
+    <span class="hljs-attr">&quot;custom-checkbox&quot;</span>: <span class="hljs-string">&quot;path/to/custom/checkbox&quot;</span>
   }
 }
 </code></pre>
 <h2 id="&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x7684;&#x9ED8;&#x8BA4;&#x7EC4;&#x4EF6;">&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x7684;&#x9ED8;&#x8BA4;&#x7EC4;&#x4EF6;</h2>
 <p>&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7EC4;&#x4EF6;&#xFF0C;&#x5F53;&#x5177;&#x4F53;&#x7EC4;&#x4EF6;&#x672A;&#x88AB;&#x6307;&#x5B9A;&#x65F6;&#xFF0C;&#x5C06;&#x521B;&#x5EFA;&#x9ED8;&#x8BA4;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x9ED8;&#x8BA4;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x5728; <code>componentGenerics</code> &#x5B57;&#x6BB5;&#x4E2D;&#x6307;&#x5B9A;&#xFF1A;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;componentGenerics&quot;</span>: {
-    <span class="hljs-string">&quot;selectable&quot;</span>: {
-      <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;path/to/default/component&quot;</span>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;componentGenerics&quot;</span>: {
+    <span class="hljs-attr">&quot;selectable&quot;</span>: {
+      <span class="hljs-attr">&quot;default&quot;</span>: <span class="hljs-string">&quot;path/to/default/component&quot;</span>
     }
   }
 }
@@ -70,13 +67,10 @@
 <li>&#x8282;&#x70B9;&#x7684; generic &#x5F15;&#x7528; <code>generic:xxx=&quot;yyy&quot;</code> &#x4E2D;&#xFF0C;&#x503C; <code>yyy</code> &#x53EA;&#x80FD;&#x662F;&#x9759;&#x6001;&#x503C;&#xFF0C;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x3002;&#x56E0;&#x800C;&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x7279;&#x6027;&#x5E76;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x52A8;&#x6001;&#x51B3;&#x5B9A;&#x8282;&#x70B9;&#x540D;&#x7684;&#x573A;&#x666F;&#x3002;</li>
 </ul>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

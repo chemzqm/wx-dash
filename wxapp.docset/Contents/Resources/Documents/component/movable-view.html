@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>movable-view</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="movable-area">movable-area</h4>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -195,8 +192,8 @@
 </blockquote>
 <p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;movable-view&#x5FC5;&#x987B;&#x5728;<code>&lt;movable-area/&gt;</code>&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x662F;&#x76F4;&#x63A5;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x80FD;&#x79FB;&#x52A8;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/7QWXwimf6PYG" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/7QWXwimf6PYG" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>movable-view&#x533A;&#x57DF;&#x5C0F;&#x4E8E;movable-area<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">movable-area</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 200px; background: red;&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">movable-view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 50px; width: 50px; background: blue;&quot;</span> <span class="hljs-attr">x</span>=<span class="hljs-string">&quot;{{x}}&quot;</span> <span class="hljs-attr">y</span>=<span class="hljs-string">&quot;{{y}}&quot;</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;all&quot;</span>&gt;</span>
@@ -217,34 +214,31 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">movable-area</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript">Page({
-  data: {
-    x: <span class="hljs-number">0</span>,
-    y: <span class="hljs-number">0</span>
+<pre><code class="language-javascript">Page({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>
   },
-  tap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">tap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      x: <span class="hljs-number">30</span>,
-      y: <span class="hljs-number">30</span>
+      <span class="hljs-attr">x</span>: <span class="hljs-number">30</span>,
+      <span class="hljs-attr">y</span>: <span class="hljs-number">30</span>
     });
   },
-  onChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.log(e.detail)
   },
-  onScale: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">onScale</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.log(e.detail)
   }
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

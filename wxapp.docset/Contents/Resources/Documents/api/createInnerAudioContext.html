@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>wx.createInnerAudioContext</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxcreateinneraudiocontext">wx.createInnerAudioContext()</h3>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -304,25 +301,22 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> innerAudioContext = wx.createInnerAudioContext()
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> innerAudioContext = wx.createInnerAudioContext()
 innerAudioContext.autoplay = <span class="hljs-literal">true</span>
 innerAudioContext.src = <span class="hljs-string">&apos;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46&apos;</span>
-innerAudioContext.onPlay(() =&gt; {
+innerAudioContext.onPlay(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F00;&#x59CB;&#x64AD;&#x653E;&apos;</span>)
 })
-innerAudioContext.onError((res) =&gt; {
+innerAudioContext.onError(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
     <span class="hljs-built_in">console</span>.log(res.errMsg)
     <span class="hljs-built_in">console</span>.log(res.errCode)
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

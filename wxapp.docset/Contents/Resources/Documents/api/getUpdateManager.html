@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>更新</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxgetupdatemanager">wx.getUpdateManager()</h3>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -83,7 +80,7 @@
 <h5 id="applyupdate-&#x8BF4;&#x660E;&#xFF1A;">applyUpdate() &#x8BF4;&#x660E;&#xFF1A;</h5>
 <p>&#x5F53;&#x5C0F;&#x7A0B;&#x5E8F;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x65F6;&#xFF08;&#x5373;&#x6536;&#x5230; <code>onUpdateReady</code> &#x56DE;&#x8C03;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5F3A;&#x5236;&#x91CD;&#x542F;&#x5C0F;&#x7A0B;&#x5E8F;&#x5E76;&#x5E94;&#x7528;&#x4E0A;&#x6700;&#x65B0;&#x7248;&#x672C;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> updateManager = wx.getUpdateManager()
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> updateManager = wx.getUpdateManager()
 
 updateManager.onCheckForUpdate(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
   <span class="hljs-comment">// &#x8BF7;&#x6C42;&#x5B8C;&#x65B0;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x7684;&#x56DE;&#x8C03;</span>
@@ -92,16 +89,16 @@ updateManager.onCheckForUpdate(<span class="hljs-function"><span class="hljs-key
 
 updateManager.onUpdateReady(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   wx.showModal({
-    title: <span class="hljs-string">&apos;&#x66F4;&#x65B0;&#x63D0;&#x793A;&apos;</span>,
-    content: <span class="hljs-string">&apos;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x662F;&#x5426;&#x91CD;&#x542F;&#x5E94;&#x7528;&#xFF1F;&apos;</span>,
-    success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x66F4;&#x65B0;&#x63D0;&#x793A;&apos;</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x662F;&#x5426;&#x91CD;&#x542F;&#x5E94;&#x7528;&#xFF1F;&apos;</span>,
+    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
       <span class="hljs-keyword">if</span> (res.confirm) {
         <span class="hljs-comment">// &#x65B0;&#x7684;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x597D;&#xFF0C;&#x8C03;&#x7528; applyUpdate &#x5E94;&#x7528;&#x65B0;&#x7248;&#x672C;&#x5E76;&#x91CD;&#x542F;</span>
         updateManager.applyUpdate()
       }
     }
   })
-
+  
 })
 
 updateManager.onUpdateFailed(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -114,13 +111,10 @@ updateManager.onUpdateFailed(<span class="hljs-function"><span class="hljs-keywo
 <li>&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x7248;/&#x4F53;&#x9A8C;&#x7248;&#x6CA1;&#x6709;&#x300C;&#x7248;&#x672C;&#x300D;&#x6982;&#x5FF5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x5728;&#x5F00;&#x53D1;&#x7248;/&#x4F53;&#x9A8C;&#x7248;&#x4E0A;&#x6D4B;&#x8BD5;&#x66F4;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x60C5;&#x51B5;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

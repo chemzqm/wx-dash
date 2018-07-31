@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>WXSS</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="wxss">WXSS</h1>
 <p>WXSS(WeiXin Style Sheets)&#x662F;&#x4E00;&#x5957;&#x6837;&#x5F0F;&#x8BED;&#x8A00;&#xFF0C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0; WXML &#x7684;&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;&#x3002;</p>
 <p>WXSS &#x7528;&#x6765;&#x51B3;&#x5B9A; WXML &#x7684;&#x7EC4;&#x4EF6;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x663E;&#x793A;&#x3002;</p>
@@ -63,12 +60,12 @@
 <h3 id="&#x6837;&#x5F0F;&#x5BFC;&#x5165;">&#x6837;&#x5F0F;&#x5BFC;&#x5165;</h3>
 <p>&#x4F7F;&#x7528;<code>@import</code>&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x5BFC;&#x5165;&#x5916;&#x8054;&#x6837;&#x5F0F;&#x8868;&#xFF0C;<code>@import</code>&#x540E;&#x8DDF;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x5916;&#x8054;&#x6837;&#x5F0F;&#x8868;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x7528;<code>;</code>&#x8868;&#x793A;&#x8BED;&#x53E5;&#x7ED3;&#x675F;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-less"><span class="hljs-comment">/** common.wxss **/</span>
+<pre><code class="language-less"><span class="hljs-comment">/** common.wxss **/</span>
 <span class="hljs-selector-class">.small-p</span> {
   <span class="hljs-attribute">padding</span>:<span class="hljs-number">5px</span>;
 }
 </code></pre>
-<pre><code class="lang-less"><span class="hljs-comment">/** app.wxss **/</span>
+<pre><code class="language-less"><span class="hljs-comment">/** app.wxss **/</span>
 <span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;common.wxss&quot;</span>;
 <span class="hljs-selector-class">.middle-p</span> {
   <span class="hljs-attribute">padding</span>:<span class="hljs-number">15px</span>;
@@ -79,12 +76,12 @@
 <ul>
 <li>style&#xFF1A;&#x9759;&#x6001;&#x7684;&#x6837;&#x5F0F;&#x7EDF;&#x4E00;&#x5199;&#x5230; class &#x4E2D;&#x3002;style &#x63A5;&#x6536;&#x52A8;&#x6001;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x4F1A;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x8BF7;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5C06;&#x9759;&#x6001;&#x7684;&#x6837;&#x5F0F;&#x5199;&#x8FDB; style &#x4E2D;&#xFF0C;&#x4EE5;&#x514D;&#x5F71;&#x54CD;&#x6E32;&#x67D3;&#x901F;&#x5EA6;&#x3002;</li>
 </ul>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:{{color}};&quot;</span> /&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:{{color}};&quot;</span> /&gt;</span>
 </code></pre>
 <ul>
 <li>class&#xFF1A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x6837;&#x5F0F;&#x89C4;&#x5219;&#x4E2D;&#x7C7B;&#x9009;&#x62E9;&#x5668;&#x540D;(&#x6837;&#x5F0F;&#x7C7B;&#x540D;)&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x6837;&#x5F0F;&#x7C7B;&#x540D;&#x4E0D;&#x9700;&#x8981;&#x5E26;&#x4E0A;<code>.</code>&#xFF0C;&#x6837;&#x5F0F;&#x7C7B;&#x540D;&#x4E4B;&#x95F4;&#x7528;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x3002;</li>
 </ul>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;normal_view&quot;</span> /&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;normal_view&quot;</span> /&gt;</span>
 </code></pre>
 <h3 id="&#x9009;&#x62E9;&#x5668;">&#x9009;&#x62E9;&#x5668;</h3>
 <p>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x9009;&#x62E9;&#x5668;&#x6709;&#xFF1A;</p>
@@ -132,13 +129,10 @@
 <h3 id="&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x4E0E;&#x5C40;&#x90E8;&#x6837;&#x5F0F;">&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x4E0E;&#x5C40;&#x90E8;&#x6837;&#x5F0F;</h3>
 <p>&#x5B9A;&#x4E49;&#x5728; app.wxss &#x4E2D;&#x7684;&#x6837;&#x5F0F;&#x4E3A;&#x5168;&#x5C40;&#x6837;&#x5F0F;&#xFF0C;&#x4F5C;&#x7528;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;&#x5728; page &#x7684; wxss &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6837;&#x5F0F;&#x4E3A;&#x5C40;&#x90E8;&#x6837;&#x5F0F;&#xFF0C;&#x53EA;&#x4F5C;&#x7528;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x4F1A;&#x8986;&#x76D6; app.wxss &#x4E2D;&#x76F8;&#x540C;&#x7684;&#x9009;&#x62E9;&#x5668;&#x3002;</p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>drawImage</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="canvascontextdrawimage">canvasContext.drawImage</h1>
 <h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
 <p>&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x5230;&#x753B;&#x5E03;&#x3002;</p>
@@ -86,24 +83,21 @@
 <li>drawImage(sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) <strong>&#x4ECE; 1.9.0 &#x8D77;&#x652F;&#x6301;</strong></li>
 </ul>
 <h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 
 wx.chooseImage({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
     ctx.drawImage(res.tempFilePaths[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
     ctx.draw()
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/draw-image.png?t=2018724" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/draw-image.png?t=18073118" alt=""></p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

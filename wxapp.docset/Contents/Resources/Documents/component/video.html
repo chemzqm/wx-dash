@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>video</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="video">video</h4>
 <p>&#x89C6;&#x9891;&#x3002;</p>
 <table>
@@ -216,8 +213,8 @@
 </table>
 <p><code>&lt;video /&gt;</code> &#x9ED8;&#x8BA4;&#x5BBD;&#x5EA6;300px&#x3001;&#x9AD8;&#x5EA6;225px&#xFF0C;&#x53EF;&#x901A;&#x8FC7;wxss&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/X5V6Xmmk6xYB" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/X5V6Xmmk6xYB" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>   <span class="hljs-attr">controls</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindButtonTap&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x89C6;&#x9891;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -233,7 +230,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> (<span class="hljs-params"></span>) </span>{
+<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">let</span> rgb = []
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">3</span>; ++i){
     <span class="hljs-keyword">let</span> color = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">256</span>).toString(<span class="hljs-number">16</span>)
@@ -244,49 +241,49 @@
 }
 
 Page({
-  onReady: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
     <span class="hljs-keyword">this</span>.videoContext = wx.createVideoContext(<span class="hljs-string">&apos;myVideo&apos;</span>)
   },
-  inputValue: <span class="hljs-string">&apos;&apos;</span>,
-    data: {
-        src: <span class="hljs-string">&apos;&apos;</span>,
-    danmuList: [
+  <span class="hljs-attr">inputValue</span>: <span class="hljs-string">&apos;&apos;</span>,
+	<span class="hljs-attr">data</span>: {
+		<span class="hljs-attr">src</span>: <span class="hljs-string">&apos;&apos;</span>,
+    <span class="hljs-attr">danmuList</span>: [
       {
-        text: <span class="hljs-string">&apos;&#x7B2C; 1s &#x51FA;&#x73B0;&#x7684;&#x5F39;&#x5E55;&apos;</span>,
-        color: <span class="hljs-string">&apos;#ff0000&apos;</span>,
-        time: <span class="hljs-number">1</span>
+        <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;&#x7B2C; 1s &#x51FA;&#x73B0;&#x7684;&#x5F39;&#x5E55;&apos;</span>,
+        <span class="hljs-attr">color</span>: <span class="hljs-string">&apos;#ff0000&apos;</span>,
+        <span class="hljs-attr">time</span>: <span class="hljs-number">1</span>
       },
       {
-        text: <span class="hljs-string">&apos;&#x7B2C; 3s &#x51FA;&#x73B0;&#x7684;&#x5F39;&#x5E55;&apos;</span>,
-        color: <span class="hljs-string">&apos;#ff00ff&apos;</span>,
-        time: <span class="hljs-number">3</span>
+        <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;&#x7B2C; 3s &#x51FA;&#x73B0;&#x7684;&#x5F39;&#x5E55;&apos;</span>,
+        <span class="hljs-attr">color</span>: <span class="hljs-string">&apos;#ff00ff&apos;</span>,
+        <span class="hljs-attr">time</span>: <span class="hljs-number">3</span>
     }]
-    },
-  bindInputBlur: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+	},
+  <span class="hljs-attr">bindInputBlur</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.inputValue = e.detail.value
   },
-  bindButtonTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">bindButtonTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>
     wx.chooseVideo({
-      sourceType: [<span class="hljs-string">&apos;album&apos;</span>, <span class="hljs-string">&apos;camera&apos;</span>],
-      maxDuration: <span class="hljs-number">60</span>,
-      camera: [<span class="hljs-string">&apos;front&apos;</span>,<span class="hljs-string">&apos;back&apos;</span>],
-      success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-attr">sourceType</span>: [<span class="hljs-string">&apos;album&apos;</span>, <span class="hljs-string">&apos;camera&apos;</span>],
+      <span class="hljs-attr">maxDuration</span>: <span class="hljs-number">60</span>,
+      <span class="hljs-attr">camera</span>: [<span class="hljs-string">&apos;front&apos;</span>,<span class="hljs-string">&apos;back&apos;</span>],
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
         that.setData({
-          src: res.tempFilePath
+          <span class="hljs-attr">src</span>: res.tempFilePath
         })
       }
     })
   },
-  bindSendDanmu: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">bindSendDanmu</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.videoContext.sendDanmu({
-      text: <span class="hljs-keyword">this</span>.inputValue,
-      color: getRandomColor()
+      <span class="hljs-attr">text</span>: <span class="hljs-keyword">this</span>.inputValue,
+      <span class="hljs-attr">color</span>: getRandomColor()
     })
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/video.png?t=2018724" alt="video"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/video.png?t=18073118" alt="video"></p>
 <p>&#x76F8;&#x5173;api&#xFF1A;<a href="../api/api-video.html">wx.createVideoContext</a></p>
 <h5 id="bug--tip">Bug &amp; Tip</h5>
 <ol>
@@ -295,14 +292,11 @@ Page({
 <li><code>tip</code>: <code>css</code> &#x52A8;&#x753B;&#x5BF9; <code>video</code> &#x7EC4;&#x4EF6;&#x65E0;&#x6548;&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

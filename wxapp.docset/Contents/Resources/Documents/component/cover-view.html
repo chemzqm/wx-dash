@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>cover-view</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="cover-view">cover-view</h4>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
@@ -97,8 +94,8 @@
 <li><code>bug</code>: &#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5D4C;&#x5957; <code>cover-view</code> &#x65F6;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; slot &#x53CA;&#x5176;&#x7236;&#x8282;&#x70B9;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x901A;&#x8FC7; wx:if &#x63A7;&#x5236;&#x663E;&#x9690;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4; <code>cover-view</code> &#x4E0D;&#x663E;&#x793A;</li>
 </ol>
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/IBYfximo6AYL" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myVideo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;{{false}}&quot;</span> <span class="hljs-attr">event-model</span>=<span class="hljs-string">&quot;bubble&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/IBYfximo6AYL" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myVideo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;{{false}}&quot;</span> <span class="hljs-attr">event-model</span>=<span class="hljs-string">&quot;bubble&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;controls&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;play&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;play&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">cover-image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/path/to/icon_play&quot;</span> /&gt;</span>
@@ -110,7 +107,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">cover-view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-css"><span class="hljs-selector-class">.controls</span> {
+<pre><code class="language-css"><span class="hljs-selector-class">.controls</span> {
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
@@ -133,7 +130,7 @@
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">5px</span> auto;
 }
 </code></pre>
-<pre><code class="lang-javascript">Page({
+<pre><code class="language-javascript">Page({
   onReady() {
     <span class="hljs-keyword">this</span>.videoCtx = wx.createVideoContext(<span class="hljs-string">&apos;myVideo&apos;</span>)
   },
@@ -146,14 +143,11 @@
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

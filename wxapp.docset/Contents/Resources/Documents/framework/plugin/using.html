@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>使用插件</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,22 +13,19 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="&#x4F7F;&#x7528;&#x63D2;&#x4EF6;">&#x4F7F;&#x7528;&#x63D2;&#x4EF6;</h1>
 <h2 id="&#x7533;&#x8BF7;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;">&#x7533;&#x8BF7;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;</h2>
 <p>&#x5728;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x524D;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x540E;&#x53F0;&#x7684;&#x201C;&#x8BBE;&#x7F6E;-&#x7B2C;&#x4E09;&#x65B9;&#x670D;&#x52A1;-&#x63D2;&#x4EF6;&#x7BA1;&#x7406;&#x201D;&#x4E2D;&#x6DFB;&#x52A0;&#x63D2;&#x4EF6;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x767B;&#x5F55;&#x5C0F;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x540E;&#x53F0;&#xFF0C;&#x901A;&#x8FC7; appId &#x67E5;&#x627E;&#x63D2;&#x4EF6;&#x5E76;&#x6DFB;&#x52A0;&#x3002;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x7533;&#x8BF7;&#x540E;&#xFF0C;&#x65B9;&#x53EF;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x63D2;&#x4EF6;&#x3002;</p>
 <h2 id="&#x5F15;&#x5165;&#x63D2;&#x4EF6;&#x4EE3;&#x7801;&#x5305;">&#x5F15;&#x5165;&#x63D2;&#x4EF6;&#x4EE3;&#x7801;&#x5305;</h2>
 <p>&#x5BF9;&#x4E8E;&#x63D2;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x8005;&#xFF0C;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x524D;&#x8981;&#x5728; <code>app.json</code> &#x4E2D;&#x58F0;&#x660E;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;plugins&quot;</span>: {
-    <span class="hljs-string">&quot;myPlugin&quot;</span>: {
-      <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
-      <span class="hljs-string">&quot;provider&quot;</span>: <span class="hljs-string">&quot;wxxxxxxxxxxxxxxxxx&quot;</span>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;plugins&quot;</span>: {
+    <span class="hljs-attr">&quot;myPlugin&quot;</span>: {
+      <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+      <span class="hljs-attr">&quot;provider&quot;</span>: <span class="hljs-string">&quot;wxxxxxxxxxxxxxxxxx&quot;</span>
     }
   }
 }
@@ -37,15 +34,15 @@
 <h2 id="&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684;-js-&#x63A5;&#x53E3;">&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684; js &#x63A5;&#x53E3;</h2>
 <p>&#x5728;&#x5F15;&#x5165;&#x63D2;&#x4EF6;&#x4EE3;&#x7801;&#x5305;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6216;&#x8005; js &#x63A5;&#x53E3;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684; js &#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>requirePlugin</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> myPluginInterface = requirePlugin(<span class="hljs-string">&apos;myPlugin&apos;</span>)
+<pre><code class="language-js"><span class="hljs-keyword">var</span> myPluginInterface = requirePlugin(<span class="hljs-string">&apos;myPlugin&apos;</span>)
 
 myPluginInterface.hello()
 </code></pre>
 <h2 id="&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h2>
 <p>&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x548C;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x76F8;&#x4EFF;&#x3002;&#x5728; <code>json</code> &#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x9700;&#x8981;&#x5F15;&#x5165;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x4F7F;&#x7528; <code>plugin://</code> &#x534F;&#x8BAE;&#x5373;&#x53EF;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;usingComponents&quot;</span>: {
-    <span class="hljs-string">&quot;hello-component&quot;</span>: <span class="hljs-string">&quot;plugin://myPlugin/hello-component&quot;</span>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;usingComponents&quot;</span>: {
+    <span class="hljs-attr">&quot;hello-component&quot;</span>: <span class="hljs-string">&quot;plugin://myPlugin/hello-component&quot;</span>
   }
 }
 </code></pre>
@@ -58,18 +55,15 @@ myPluginInterface.hello()
 <p>&#x63D2;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x4ECE;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a> &#x5F00;&#x59CB;&#x652F;&#x6301;&#x3002;</p>
 <p>&#x9700;&#x8981;&#x8DF3;&#x8F6C;&#x5230;&#x63D2;&#x4EF6;&#x9875;&#x9762;&#x65F6;&#xFF0C; <code>url</code> &#x5E94;&#x4F7F;&#x7528; <code>plugin://</code> &#x524D;&#x7F00;&#x3002;</p>
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;plugin://myPlugin/hello-page&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;plugin://myPlugin/hello-page&quot;</span>&gt;</span>
   Go to pages/hello-page!
 <span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>扫码</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxscancodeobject">wx.scanCode(OBJECT)</h3>
 <p>&#x8C03;&#x8D77;&#x5BA2;&#x6237;&#x7AEF;&#x626B;&#x7801;&#x754C;&#x9762;&#xFF0C;&#x626B;&#x7801;&#x6210;&#x529F;&#x540E;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x679C;</p>
 <p><strong>Object &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -66,6 +63,7 @@
 <td>Function</td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -101,29 +99,26 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x673A;&#x548C;&#x76F8;&#x518C;&#x626B;&#x7801;</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// &#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x673A;&#x548C;&#x76F8;&#x518C;&#x626B;&#x7801;</span>
 wx.scanCode({
-  success: (res) =&gt; {
+  <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
     <span class="hljs-built_in">console</span>.log(res)
   }
 })
 
 <span class="hljs-comment">// &#x53EA;&#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x673A;&#x626B;&#x7801;</span>
 wx.scanCode({
-  onlyFromCamera: <span class="hljs-literal">true</span>,
-  success: (res) =&gt; {
+  <span class="hljs-attr">onlyFromCamera</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
     <span class="hljs-built_in">console</span>.log(res)
   }
 })
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

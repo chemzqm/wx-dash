@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>数据缓存</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <p>&#x6BCF;&#x4E2A;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; wx.setStorage&#xFF08;wx.setStorageSync&#xFF09;&#x3001;wx.getStorage&#xFF08;wx.getStorageSync&#xFF09;&#x3001;wx.clearStorage&#xFF08;wx.clearStorageSync&#xFF09;&#x53EF;&#x4EE5;&#x5BF9;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3001;&#x83B7;&#x53D6;&#x548C;&#x6E05;&#x7406;&#x3002;&#x540C;&#x4E00;&#x4E2A;&#x5FAE;&#x4FE1;&#x7528;&#x6237;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F; storage &#x4E0A;&#x9650;&#x4E3A; 10MB&#x3002;localStorage &#x4EE5;&#x7528;&#x6237;&#x7EF4;&#x5EA6;&#x9694;&#x79BB;&#xFF0C;&#x540C;&#x4E00;&#x53F0;&#x8BBE;&#x5907;&#x4E0A;&#xFF0C;A &#x7528;&#x6237;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;&#x5230; B &#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x3002;</p>
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x5982;&#x679C;&#x7528;&#x6237;&#x50A8;&#x5B58;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x6E05;&#x7A7A;&#x6700;&#x8FD1;&#x6700;&#x4E45;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x3002;&#x6211;&#x4EEC;&#x4E0D;&#x5EFA;&#x8BAE;&#x5C06;&#x5173;&#x952E;&#x4FE1;&#x606F;&#x5168;&#x90E8;&#x5B58;&#x5728; localStorage&#xFF0C;&#x4EE5;&#x9632;&#x50A8;&#x5B58;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x6216;&#x7528;&#x6237;&#x6362;&#x8BBE;&#x5907;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
 <h3 id="wxsetstorageobject">wx.setStorage(OBJECT)</h3>
@@ -67,9 +64,9 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.setStorage({
-  key:<span class="hljs-string">&quot;key&quot;</span>,
-  data:<span class="hljs-string">&quot;value&quot;</span>
+<pre><code class="language-javascript">wx.setStorage({
+  <span class="hljs-attr">key</span>:<span class="hljs-string">&quot;key&quot;</span>,
+  <span class="hljs-attr">data</span>:<span class="hljs-string">&quot;value&quot;</span>
 })
 </code></pre>
 <h3 id="wxsetstoragesynckeydata">wx.setStorageSync(KEY,DATA)</h3>
@@ -100,9 +97,9 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
-    wx.setStorageSync(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-string">&apos;value&apos;</span>)
-} <span class="hljs-keyword">catch</span> (e) {    
+<pre><code class="language-javascript"><span class="hljs-keyword">try</span> {
+	wx.setStorageSync(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-string">&apos;value&apos;</span>)
+} <span class="hljs-keyword">catch</span> (e) {	
 }
 </code></pre>
 <h3 id="wxgetstorageobject">wx.getStorage(OBJECT)</h3>
@@ -162,10 +159,10 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getStorage({
-  key: <span class="hljs-string">&apos;key&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-      <span class="hljs-built_in">console</span>.log(res.data)
+<pre><code class="language-javascript">wx.getStorage({
+  <span class="hljs-attr">key</span>: <span class="hljs-string">&apos;key&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  	<span class="hljs-built_in">console</span>.log(res.data)
   } 
 })
 </code></pre>
@@ -191,10 +188,10 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
+<pre><code class="language-javascript"><span class="hljs-keyword">try</span> {
   <span class="hljs-keyword">var</span> value = wx.getStorageSync(<span class="hljs-string">&apos;key&apos;</span>)
   <span class="hljs-keyword">if</span> (value) {
-      <span class="hljs-comment">// Do something with return value</span>
+  	<span class="hljs-comment">// Do something with return value</span>
   }
 } <span class="hljs-keyword">catch</span> (e) {
   <span class="hljs-comment">// Do something when catch error</span>
@@ -261,8 +258,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getStorageInfo({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.getStorageInfo({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.keys)
     <span class="hljs-built_in">console</span>.log(res.currentSize)
     <span class="hljs-built_in">console</span>.log(res.limitSize)
@@ -272,7 +269,7 @@
 <h3 id="wxgetstorageinfosync">wx.getStorageInfoSync</h3>
 <p>&#x540C;&#x6B65;&#x83B7;&#x53D6;&#x5F53;&#x524D;storage&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
+<pre><code class="language-javascript"><span class="hljs-keyword">try</span> {
   <span class="hljs-keyword">var</span> res = wx.getStorageInfoSync()
   <span class="hljs-built_in">console</span>.log(res.keys)
   <span class="hljs-built_in">console</span>.log(res.currentSize)
@@ -280,6 +277,7 @@
 } <span class="hljs-keyword">catch</span> (e) {
   <span class="hljs-comment">// Do something when catch error</span>
 }
+
 </code></pre>
 <h3 id="wxremovestorageobject">wx.removeStorage(OBJECT)</h3>
 <p>&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x5F02;&#x6B65;&#x79FB;&#x9664;&#x6307;&#x5B9A; key &#x3002;</p>
@@ -321,9 +319,9 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.removeStorage({
-  key: <span class="hljs-string">&apos;key&apos;</span>,
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.removeStorage({
+  <span class="hljs-attr">key</span>: <span class="hljs-string">&apos;key&apos;</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.data)
   } 
 })
@@ -350,7 +348,7 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
+<pre><code class="language-javascript"><span class="hljs-keyword">try</span> {
   wx.removeStorageSync(<span class="hljs-string">&apos;key&apos;</span>)
 } <span class="hljs-keyword">catch</span> (e) {
   <span class="hljs-comment">// Do something when catch error</span>
@@ -359,13 +357,13 @@
 <h3 id="wxclearstorage">wx.clearStorage()</h3>
 <p>&#x6E05;&#x7406;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.clearStorage()
+<pre><code class="language-javascript">wx.clearStorage()
 </code></pre>
 <h3 id="wxclearstoragesync">wx.clearStorageSync()</h3>
 <p>&#x540C;&#x6B65;&#x6E05;&#x7406;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
-    wx.clearStorageSync()
+<pre><code class="language-javascript"><span class="hljs-keyword">try</span> {
+	wx.clearStorageSync()
 } <span class="hljs-keyword">catch</span>(e) {
   <span class="hljs-comment">// Do something when catch error</span>
 }
@@ -375,13 +373,10 @@
 <li><code>tip</code>: &#x672C;&#x5730;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A; 10MB</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>form</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="form">form</h4>
 <p>&#x8868;&#x5355;&#xFF0C;&#x5C06;&#x7EC4;&#x4EF6;&#x5185;&#x7684;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;<code>&lt;switch/&gt;</code> <code>&lt;input/&gt;</code> <code>&lt;checkbox/&gt;</code> <code>&lt;slider/&gt;</code> <code>&lt;radio/&gt;</code> <code>&lt;picker/&gt;</code> &#x63D0;&#x4EA4;&#x3002;</p>
 <p>&#x5F53;&#x70B9;&#x51FB; <code>&lt;form/&gt;</code> &#x8868;&#x5355;&#x4E2D; formType &#x4E3A; submit &#x7684; <code>&lt;button/&gt;</code> &#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684; value &#x503C;&#x8FDB;&#x884C;&#x63D0;&#x4EA4;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x4E2D;&#x52A0;&#x4E0A; name &#x6765;&#x4F5C;&#x4E3A; key&#x3002;</p>
@@ -46,12 +43,13 @@
 <td id="form-bindreset">bindreset</td>
 <td>EventHandle</td>
 <td>&#x8868;&#x5355;&#x91CD;&#x7F6E;&#x65F6;&#x4F1A;&#x89E6;&#x53D1; reset &#x4E8B;&#x4EF6;</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <!--
-| bindautofill      | EventHandle | 表单项有被快速填充时触发                                                                     | [1.2.0](/framework/compatibility.md "基础库 1.2.0 开始支持，低版本需做兼容处理。") |
-| bindautofillerror | EventHandle | 快速填写出错时触发                                                                          | [1.6.0](/framework/compatibility.md "基础库 1.6.0 开始支持，低版本需做兼容处理。") |
+| bindautofill      | EventHandle | 表单项有被快速填充时触发                                                                     | [1.2.0](../framework/compatibility.md "基础库 1.2.0 开始支持，低版本需做兼容处理。") |
+| bindautofillerror | EventHandle | 快速填写出错时触发                                                                          | [1.6.0](../framework/compatibility.md "基础库 1.6.0 开始支持，低版本需做兼容处理。") |
 
 
 #### <a name="autofill"></a>快速填写表单
@@ -68,8 +66,8 @@
 | social_security      | card_num | 社保卡号 | 社保 |
 -->
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/MUaz7cmy6AYq" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">bindsubmit</span>=<span class="hljs-string">&quot;formSubmit&quot;</span> <span class="hljs-attr">bindreset</span>=<span class="hljs-string">&quot;formReset&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/MUaz7cmy6AYq" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">bindsubmit</span>=<span class="hljs-string">&quot;formSubmit&quot;</span> <span class="hljs-attr">bindreset</span>=<span class="hljs-string">&quot;formReset&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>switch<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;switch&quot;</span>/&gt;</span>
@@ -103,25 +101,22 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js">Page({
-  formSubmit: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+<pre><code class="language-js">Page({
+  <span class="hljs-attr">formSubmit</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;form&#x53D1;&#x751F;&#x4E86;submit&#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;&#x6570;&#x636E;&#x4E3A;&#xFF1A;&apos;</span>, e.detail.value)
   },
-  formReset: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">formReset</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;form&#x53D1;&#x751F;&#x4E86;reset&#x4E8B;&#x4EF6;&apos;</span>)
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/form.png?t=2018724" alt="form"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/form.png?t=18073118" alt="form"></p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>设备</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxgetsysteminfoobject">wx.getSystemInfo(OBJECT)</h3>
 <p>&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x3002;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -135,8 +132,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.getSystemInfo({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.getSystemInfo({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-built_in">console</span>.log(res.model)
     <span class="hljs-built_in">console</span>.log(res.pixelRatio)
     <span class="hljs-built_in">console</span>.log(res.windowWidth)
@@ -232,7 +229,7 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
+<pre><code class="language-javascript"><span class="hljs-keyword">try</span> {
   <span class="hljs-keyword">var</span> res = wx.getSystemInfoSync()
   <span class="hljs-built_in">console</span>.log(res.model)
   <span class="hljs-built_in">console</span>.log(res.pixelRatio)
@@ -246,13 +243,10 @@
 }
 </code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

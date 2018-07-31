@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>swiper</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="swiper">swiper</h4>
 <p>&#x6ED1;&#x5757;&#x89C6;&#x56FE;&#x5BB9;&#x5668;&#x3002;</p>
 <table>
@@ -174,8 +171,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/SeizywmX6gY0" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">swiper</span> <span class="hljs-attr">indicator-dots</span>=<span class="hljs-string">&quot;{{indicatorDots}}&quot;</span>
+<p><a href="wechatide://minicode/SeizywmX6gY0" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">swiper</span> <span class="hljs-attr">indicator-dots</span>=<span class="hljs-string">&quot;{{indicatorDots}}&quot;</span>
   <span class="hljs-attr">autoplay</span>=<span class="hljs-string">&quot;{{autoplay}}&quot;</span> <span class="hljs-attr">interval</span>=<span class="hljs-string">&quot;{{interval}}&quot;</span> <span class="hljs-attr">duration</span>=<span class="hljs-string">&quot;{{duration}}&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{imgUrls}}&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">swiper-item</span>&gt;</span>
@@ -188,36 +185,36 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">slider</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;intervalChange&quot;</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;500&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;2000&quot;</span>/&gt;</span> interval
 <span class="hljs-tag">&lt;<span class="hljs-name">slider</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;durationChange&quot;</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1000&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;10000&quot;</span>/&gt;</span> duration
 </code></pre>
-<pre><code class="lang-js">Page({
-  data: {
-    imgUrls: [
+<pre><code class="language-js">Page({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">imgUrls</span>: [
       <span class="hljs-string">&apos;http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg&apos;</span>,
       <span class="hljs-string">&apos;http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg&apos;</span>,
       <span class="hljs-string">&apos;http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg&apos;</span>
     ],
-    indicatorDots: <span class="hljs-literal">false</span>,
-    autoplay: <span class="hljs-literal">false</span>,
-    interval: <span class="hljs-number">5000</span>,
-    duration: <span class="hljs-number">1000</span>
+    <span class="hljs-attr">indicatorDots</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">autoplay</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">interval</span>: <span class="hljs-number">5000</span>,
+    <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>
   },
-  changeIndicatorDots: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">changeIndicatorDots</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      indicatorDots: !<span class="hljs-keyword">this</span>.data.indicatorDots
+      <span class="hljs-attr">indicatorDots</span>: !<span class="hljs-keyword">this</span>.data.indicatorDots
     })
   },
-  changeAutoplay: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">changeAutoplay</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      autoplay: !<span class="hljs-keyword">this</span>.data.autoplay
+      <span class="hljs-attr">autoplay</span>: !<span class="hljs-keyword">this</span>.data.autoplay
     })
   },
-  intervalChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">intervalChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      interval: e.detail.value
+      <span class="hljs-attr">interval</span>: e.detail.value
     })
   },
-  durationChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">durationChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      duration: e.detail.value
+      <span class="hljs-attr">duration</span>: e.detail.value
     })
   }
 })
@@ -227,14 +224,11 @@
 <li><code>tip</code>: &#x5982;&#x679C;&#x5728; <code>bindchange</code> &#x7684;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528; <code>setData</code> &#x6539;&#x53D8; <code>current</code> &#x503C;&#xFF0C;&#x5219;&#x6709;&#x53EF;&#x80FD;&#x5BFC;&#x81F4; <code>setData</code> &#x88AB;&#x4E0D;&#x505C;&#x5730;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x800C;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x8BF7;&#x5728;&#x6539;&#x53D8; <code>current</code> &#x503C;&#x524D;&#x68C0;&#x6D4B; <code>source</code> &#x5B57;&#x6BB5;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x7531;&#x4E8E;&#x7528;&#x6237;&#x89E6;&#x6478;&#x5F15;&#x8D77;&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>textarea</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="textarea">textarea</h4>
 <p>&#x591A;&#x884C;&#x8F93;&#x5165;&#x6846;&#x3002;</p>
 <table>
@@ -167,7 +164,7 @@
 <td id="textarea-bindinput">bindinput</td>
 <td>EventHandle</td>
 <td></td>
-<td>&#x5F53;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x65F6;&#xFF0C;&#x89E6;&#x53D1; input &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value, cursor}&#xFF0C;<strong> bindinput &#x5904;&#x7406;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5E76;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5230; textarea &#x4E0A; </strong></td>
+<td>&#x5F53;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x65F6;&#xFF0C;&#x89E6;&#x53D1; input &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value, cursor}&#xFF0C;** bindinput &#x5904;&#x7406;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5E76;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5230; textarea &#x4E0A; **</td>
 <td></td>
 </tr>
 <tr>
@@ -175,15 +172,16 @@
 <td>EventHandle</td>
 <td></td>
 <td>&#x70B9;&#x51FB;&#x5B8C;&#x6210;&#x65F6;&#xFF0C; &#x89E6;&#x53D1; confirm &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <!--
-| auto-fill         | String      |                   | 快速填写表单字段，字段请看[定义](./form.md#autofill)    | [1.2.0](/framework/compatibility.md "基础库 1.2.0 开始支持，低版本需做兼容处理。")|
+| auto-fill         | String      |                   | 快速填写表单字段，字段请看[定义](./form.md#autofill)    | [1.2.0](../framework/compatibility.md "基础库 1.2.0 开始支持，低版本需做兼容处理。")|
 -->
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/QAwRn6m86tYu" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-comment">&lt;!--textarea.wxml--&gt;</span>
+<p><a href="wechatide://minicode/QAwRn6m86tYu" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!--textarea.wxml--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">bindblur</span>=<span class="hljs-string">&quot;bindTextAreaBlur&quot;</span> <span class="hljs-attr">auto-height</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x81EA;&#x52A8;&#x53D8;&#x9AD8;&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -206,21 +204,21 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-comment">//textarea.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">//textarea.js</span>
 Page({
-  data: {
-    height: <span class="hljs-number">20</span>,
-    focus: <span class="hljs-literal">false</span>
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">height</span>: <span class="hljs-number">20</span>,
+    <span class="hljs-attr">focus</span>: <span class="hljs-literal">false</span>
   },
-  bindButtonTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-attr">bindButtonTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">this</span>.setData({
-      focus: <span class="hljs-literal">true</span>
+      <span class="hljs-attr">focus</span>: <span class="hljs-literal">true</span>
     })
   },
-  bindTextAreaBlur: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">bindTextAreaBlur</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.log(e.detail.value)
   },
-  bindFormSubmit: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">bindFormSubmit</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-built_in">console</span>.log(e.detail.value.textarea)
   }
 })
@@ -235,14 +233,11 @@ Page({
 <li><code>tip</code>: <code>css</code> &#x52A8;&#x753B;&#x5BF9; <code>textarea</code> &#x7EC4;&#x4EF6;&#x65E0;&#x6548;&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

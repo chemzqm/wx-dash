@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>label</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../website.css">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -11,12 +11,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h4 id="label">label</h4>
 <p>&#x7528;&#x6765;&#x6539;&#x8FDB;&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x7684;&#x53EF;&#x7528;&#x6027;&#xFF0C;&#x4F7F;&#x7528;<code>for</code>&#x5C5E;&#x6027;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;<code>id</code>&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x63A7;&#x4EF6;&#x653E;&#x5728;&#x8BE5;&#x6807;&#x7B7E;&#x4E0B;&#xFF0C;&#x5F53;&#x70B9;&#x51FB;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x5BF9;&#x5E94;&#x7684;&#x63A7;&#x4EF6;&#x3002;</p>
 <p><code>for</code>&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x5185;&#x90E8;&#x63A7;&#x4EF6;&#xFF0C;&#x5185;&#x90E8;&#x6709;&#x591A;&#x4E2A;&#x63A7;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x9ED8;&#x8BA4;&#x89E6;&#x53D1;&#x7B2C;&#x4E00;&#x4E2A;&#x63A7;&#x4EF6;&#x3002;</p>
@@ -38,8 +35,8 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<p><a href="wechatide://minicode/alak1cmR6JYU" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
+<p><a href="wechatide://minicode/alak1cmR6JYU" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x5728;label&#x5185;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;checkboxChange&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{checkboxItems}}&quot;</span>&gt;</span>
@@ -67,27 +64,27 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">radio-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js">Page({
-  data: {
-    checkboxItems: [
-      {name: <span class="hljs-string">&apos;USA&apos;</span>, value: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;CHN&apos;</span>, value: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;BRA&apos;</span>, value: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
-      {name: <span class="hljs-string">&apos;JPN&apos;</span>, value: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;ENG&apos;</span>, value: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;TUR&apos;</span>, value: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
+<pre><code class="language-js">Page({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">checkboxItems</span>: [
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;USA&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;CHN&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, <span class="hljs-attr">checked</span>: <span class="hljs-string">&apos;true&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;BRA&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;JPN&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>, <span class="hljs-attr">checked</span>: <span class="hljs-string">&apos;true&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;ENG&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;TUR&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
     ],
-    radioItems: [
-      {name: <span class="hljs-string">&apos;USA&apos;</span>, value: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;CHN&apos;</span>, value: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, checked: <span class="hljs-string">&apos;true&apos;</span>},
-      {name: <span class="hljs-string">&apos;BRA&apos;</span>, value: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
-      {name: <span class="hljs-string">&apos;JPN&apos;</span>, value: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>},
-      {name: <span class="hljs-string">&apos;ENG&apos;</span>, value: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
-      {name: <span class="hljs-string">&apos;TUR&apos;</span>, value: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
+    <span class="hljs-attr">radioItems</span>: [
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;USA&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x7F8E;&#x56FD;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;CHN&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x4E2D;&#x56FD;&apos;</span>, <span class="hljs-attr">checked</span>: <span class="hljs-string">&apos;true&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;BRA&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x5DF4;&#x897F;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;JPN&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x65E5;&#x672C;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;ENG&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x82F1;&#x56FD;&apos;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;TUR&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
     ],
-    hidden: <span class="hljs-literal">false</span>
+    <span class="hljs-attr">hidden</span>: <span class="hljs-literal">false</span>
   },
-  checkboxChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">checkboxChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">var</span> checked = e.detail.value
     <span class="hljs-keyword">var</span> changed = {}
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.checkboxItems.length; i ++) {
@@ -99,7 +96,7 @@
     }
     <span class="hljs-keyword">this</span>.setData(changed)
   },
-  radioChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-attr">radioChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
     <span class="hljs-keyword">var</span> checked = e.detail.value
     <span class="hljs-keyword">var</span> changed = {}
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.radioItems.length; i ++) {
@@ -112,8 +109,9 @@
     <span class="hljs-keyword">this</span>.setData(changed)
   }
 })
+
 </code></pre>
-<pre><code class="lang-css"><span class="hljs-selector-class">.label-1</span>, <span class="hljs-selector-class">.label-2</span>{
+<pre><code class="language-css"><span class="hljs-selector-class">.label-1</span>, <span class="hljs-selector-class">.label-2</span>{
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">15px</span>;
 }
 <span class="hljs-selector-class">.label-1__text</span>, <span class="hljs-selector-class">.label-2__text</span> {
@@ -167,16 +165,13 @@
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">15px</span>;
 }
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/label.png?t=2018724" alt="label"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/label.png?t=18073118" alt="label"></p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 
 
 </body></html>

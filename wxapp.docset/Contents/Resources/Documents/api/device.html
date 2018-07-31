@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>网络状态</title>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../website.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h3 id="wxgetnetworktypeobject">wx.getNetworkType(OBJECT)</h3>
 <p>&#x83B7;&#x53D6;&#x7F51;&#x7EDC;&#x7C7B;&#x578B;&#x3002;</p>
 <p><strong>OBJECT&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
@@ -67,8 +64,8 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-javascript">wx.getNetworkType({
-  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.getNetworkType({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
     <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x7F51;&#x7EDC;&#x7C7B;&#x578B;, &#x6709;&#x6548;&#x503C;&#xFF1A;</span>
     <span class="hljs-comment">// wifi/2g/3g/4g/unknown(Android&#x4E0B;&#x4E0D;&#x5E38;&#x89C1;&#x7684;&#x7F51;&#x7EDC;&#x7C7B;&#x578B;)/none(&#x65E0;&#x7F51;&#x7EDC;)</span>
     <span class="hljs-keyword">var</span> networkType = res.networkType
@@ -102,7 +99,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong> networkType &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
+<p><strong>networkType &#x6709;&#x6548;&#x503C;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
@@ -138,7 +135,7 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="lang-javascript">wx.onNetworkStatusChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+<pre><code class="language-javascript">wx.onNetworkStatusChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
   <span class="hljs-built_in">console</span>.log(res.isConnected)
   <span class="hljs-built_in">console</span>.log(res.networkType)
 })
@@ -316,13 +313,10 @@
 <li><code>tip</code>: <code>getScreenBrightness</code> &#x63A5;&#x53E3;&#x82E5;&#x5B89;&#x5353;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x4E2D;&#x5F00;&#x542F;&#x4E86;&#x81EA;&#x52A8;&#x8C03;&#x8282;&#x4EAE;&#x5EA6;&#x529F;&#x80FD;&#xFF0C;&#x5219;&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;&#x4F1A;&#x6839;&#x636E;&#x5149;&#x7EBF;&#x81EA;&#x52A8;&#x8C03;&#x6574;&#xFF0C;&#x8BE5;&#x63A5;&#x53E3;&#x4EC5;&#x80FD;&#x83B7;&#x53D6;&#x81EA;&#x52A8;&#x8C03;&#x8282;&#x4EAE;&#x5EA6;&#x4E4B;&#x524D;&#x7684;&#x503C;&#xFF0C;&#x800C;&#x975E;&#x5B9E;&#x65F6;&#x7684;&#x4EAE;&#x5EA6;&#x503C;&#x3002;</li>
 </ol>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>

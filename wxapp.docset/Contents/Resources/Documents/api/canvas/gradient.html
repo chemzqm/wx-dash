@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>gradient</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -13,12 +13,9 @@
 </head>
 <body>
   
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
                                 <h1 id="&#x6E10;&#x53D8;">&#x6E10;&#x53D8;</h1>
 <p>&#x6E10;&#x53D8;&#x80FD;&#x7528;&#x4E8E;&#x586B;&#x5145;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#xFF0C;&#x5706;&#xFF0C;&#x7EBF;&#xFF0C;&#x6587;&#x5B57;&#x7B49;&#x3002;&#x586B;&#x5145;&#x8272;&#x53EF;&#x4EE5;&#x4E0D;&#x56FA;&#x5B9A;&#x4F4D;&#x56FA;&#x5B9A;&#x7684;&#x4E00;&#x79CD;&#x989C;&#x8272;&#x3002;</p>
 <p>&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x989C;&#x8272;&#x6E10;&#x53D8;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
@@ -30,7 +27,7 @@
 <p><code>addColorStop(position, color)</code> &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x989C;&#x8272;&#x6E10;&#x53D8;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x989C;&#x8272;&#xFF0C;&#x4F4D;&#x7F6E;&#x5FC5;&#x987B;&#x4F4D;&#x4E8E;0&#x5230;1&#x4E4B;&#x95F4;&#x3002;</p>
 <p>&#x53EF;&#x4EE5;&#x7528;<code>setFillStyle()</code> &#x548C; <code>setStrokeStyle()</code> &#x65B9;&#x6CD5;&#x8BBE;&#x7F6E;&#x6E10;&#x53D8;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x753B;&#x56FE;&#x63CF;&#x8FF0;&#x3002;</p>
 <h3 id="&#x4F7F;&#x7528;-createlineargradient">&#x4F7F;&#x7528; createLinearGradient()</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<pre><code class="language-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 
 <span class="hljs-comment">// Create linear gradient</span>
 <span class="hljs-keyword">const</span> grd = ctx.createLinearGradient(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">0</span>)
@@ -42,9 +39,9 @@ ctx.setFillStyle(grd)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">80</span>)
 ctx.draw()
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/linear-gradient.png?t=2018724" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/linear-gradient.png?t=18073118" alt=""></p>
 <h3 id="&#x4F7F;&#x7528;-createcirculargradient">&#x4F7F;&#x7528; createCircularGradient()</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<pre><code class="language-js"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 
 <span class="hljs-comment">// Create circular gradient</span>
 <span class="hljs-keyword">const</span> grd = ctx.createCircularGradient(<span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>)
@@ -56,15 +53,12 @@ ctx.setFillStyle(grd)
 ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">80</span>)
 ctx.draw()
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/circular-gradient.png?t=2018724" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/circular-gradient.png?t=18073118" alt=""></p>
 
-                                
-                                </section>
-                            
-    </div>
-    
-</div>
-
+                            </section>      
+                        </div>
                         
+                    </div>
+                
 </body>
 </html>
