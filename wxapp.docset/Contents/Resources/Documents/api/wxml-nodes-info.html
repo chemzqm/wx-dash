@@ -154,15 +154,60 @@
 </code></pre>
 <h3 id="nodesreffieldsfields-callback">nodesRef.fields(fields, [callback])</h3>
 <p>&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#x5728;<code>fields</code>&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F;nodesRef&#x5BF9;&#x5E94;&#x7684;selectorQuery&#x3002;&#x53EF;&#x6307;&#x5B9A;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#x5305;&#x62EC;&#xFF1A;</p>
-<p>| &#x5B57;&#x6BB5;&#x540D;       | &#x9ED8;&#x8BA4;&#x503C; | &#x8BF4;&#x660E;                                             | &#x6700;&#x4F4E;&#x7248;&#x672C; |
-| -----------  | ------ | ------------------------------------------------ | |
-| id           | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>id</code> | |
-| dataset      | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>dataset</code> | |
-| rect         | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#xFF08;<code>left</code> <code>right</code> <code>top</code> <code>bottom</code>&#xFF09; | |
-| size         | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5C3A;&#x5BF8;&#xFF08;<code>width</code> <code>height</code>&#xFF09; | |
-| scrollOffset | &#x5426;     | &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x7684; <code>scrollLeft</code> <code>scrollTop</code> &#xFF0C;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F;<code>scroll-view</code>&#x6216;&#x8005;viewport | |
-| properties   | <code>[]</code>   | &#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x53EA;&#x80FD;&#x83B7;&#x5F97;&#x7EC4;&#x4EF6;&#x6587;&#x6863;&#x4E2D;&#x6807;&#x6CE8;&#x7684;&#x5E38;&#x89C4;&#x5C5E;&#x6027;&#x503C;&#xFF0C; <code>id</code> <code>class</code> <code>style</code> &#x548C;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#xFF09; | |
-| computedStyle | <code>[]</code>  | &#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x540D;&#x7684;&#x5F53;&#x524D;&#x503C; | <a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a> |</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>id</code></td>
+<td></td>
+</tr>
+<tr>
+<td>dataset</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;<code>dataset</code></td>
+<td></td>
+</tr>
+<tr>
+<td>rect</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#xFF08;<code>left</code> <code>right</code> <code>top</code> <code>bottom</code>&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5C3A;&#x5BF8;&#xFF08;<code>width</code> <code>height</code>&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>scrollOffset</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x7684; <code>scrollLeft</code> <code>scrollTop</code> &#xFF0C;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F;<code>scroll-view</code>&#x6216;&#x8005;viewport</td>
+<td></td>
+</tr>
+<tr>
+<td>properties</td>
+<td><code>[]</code></td>
+<td>&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x53EA;&#x80FD;&#x83B7;&#x5F97;&#x7EC4;&#x4EF6;&#x6587;&#x6863;&#x4E2D;&#x6807;&#x6CE8;&#x7684;&#x5E38;&#x89C4;&#x5C5E;&#x6027;&#x503C;&#xFF0C; <code>id</code> <code>class</code> <code>style</code> &#x548C;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>computedStyle</td>
+<td><code>[]</code></td>
+<td>&#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x540D;&#x7684;&#x5F53;&#x524D;&#x503C;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a></td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>&#x6CE8;&#x610F;&#xFF1A; computedStyle &#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E; size&#xFF0C;&#x5F53;&#x540C;&#x65F6;&#x5728; computedStyle &#x91CC;&#x6307;&#x5B9A;&#x4E86; width/height &#x548C;&#x4F20;&#x5165;&#x4E86; size: true&#xFF0C;&#x5219;&#x4F18;&#x5148;&#x8FD4;&#x56DE; computedStyle &#x83B7;&#x53D6;&#x5230;&#x7684; width/height&#x3002;</p>
 </blockquote>

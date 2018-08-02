@@ -66,11 +66,36 @@
 </blockquote>
 <p>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; IntersectionObserver &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>this.createIntersectionObserver([options])</code> &#x6765;&#x4EE3;&#x66FF;&#x3002;</p>
 <p><strong>&#x53EF;&#x9009;&#x7684; options &#xFF1A;</strong></p>
-<p>| &#x5B57;&#x6BB5;&#x540D;         | &#x7C7B;&#x578B;       | &#x8BF4;&#x660E;                                                         | &#x6700;&#x4F4E;&#x7248;&#x672C; |
-| -------------- | ---------- | ------------------------------------------------------------ |         |
-| thresholds | Array | &#x4E00;&#x4E2A;&#x6570;&#x503C;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x9608;&#x503C;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>[0]</code> &#x3002; |         |
-| initialRatio | Number | &#x521D;&#x59CB;&#x7684;&#x76F8;&#x4EA4;&#x6BD4;&#x4F8B;&#xFF0C;&#x5982;&#x679C;&#x8C03;&#x7528;&#x65F6;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x76F8;&#x4EA4;&#x6BD4;&#x4F8B;&#x4E0E;&#x8FD9;&#x4E2A;&#x503C;&#x4E0D;&#x76F8;&#x7B49;&#x4E14;&#x8FBE;&#x5230;&#x9608;&#x503C;&#xFF0C;&#x5219;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x76D1;&#x542C;&#x5668;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>0</code> &#x3002; |        |
-| selectAll | Boolean | &#x662F;&#x5426;&#x540C;&#x65F6;&#x89C2;&#x6D4B;&#x591A;&#x4E2A;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF08;&#x800C;&#x975E;&#x4E00;&#x4E2A;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x4E3A; <code>true</code> &#xFF0C; <code>observe</code> &#x7684; <code>targetSelector</code> &#x5C06;&#x9009;&#x4E2D;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#xFF08;&#x6CE8;&#x610F;&#xFF1A;&#x540C;&#x65F6;&#x9009;&#x4E2D;&#x8FC7;&#x591A;&#x8282;&#x70B9;&#x5C06;&#x5F71;&#x54CD;&#x6E32;&#x67D3;&#x6027;&#x80FD;&#xFF09; | <a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.0</a> |</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>thresholds</td>
+<td>Array</td>
+<td>&#x4E00;&#x4E2A;&#x6570;&#x503C;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x9608;&#x503C;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>[0]</code> &#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>initialRatio</td>
+<td>Number</td>
+<td>&#x521D;&#x59CB;&#x7684;&#x76F8;&#x4EA4;&#x6BD4;&#x4F8B;&#xFF0C;&#x5982;&#x679C;&#x8C03;&#x7528;&#x65F6;&#x68C0;&#x6D4B;&#x5230;&#x7684;&#x76F8;&#x4EA4;&#x6BD4;&#x4F8B;&#x4E0E;&#x8FD9;&#x4E2A;&#x503C;&#x4E0D;&#x76F8;&#x7B49;&#x4E14;&#x8FBE;&#x5230;&#x9608;&#x503C;&#xFF0C;&#x5219;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x76D1;&#x542C;&#x5668;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>0</code> &#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>selectAll</td>
+<td>Boolean</td>
+<td>&#x662F;&#x5426;&#x540C;&#x65F6;&#x89C2;&#x6D4B;&#x591A;&#x4E2A;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF08;&#x800C;&#x975E;&#x4E00;&#x4E2A;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x4E3A; <code>true</code> &#xFF0C; <code>observe</code> &#x7684; <code>targetSelector</code> &#x5C06;&#x9009;&#x4E2D;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#xFF08;&#x6CE8;&#x610F;&#xFF1A;&#x540C;&#x65F6;&#x9009;&#x4E2D;&#x8FC7;&#x591A;&#x8282;&#x70B9;&#x5C06;&#x5F71;&#x54CD;&#x6E32;&#x67D3;&#x6027;&#x80FD;&#xFF09;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.0.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.0.0</a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="intersectionobserverrelativetoselector-margins">intersectionObserver.relativeTo(selector, [margins])</h3>
 <p>&#x4F7F;&#x7528;&#x9009;&#x62E9;&#x5668;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x4F5C;&#x4E3A;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x4E4B;&#x4E00;&#x3002; <code>margins</code> &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6269;&#x5C55;&#xFF08;&#x6216;&#x6536;&#x7F29;&#xFF09;&#x53C2;&#x7167;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x7684;&#x8FB9;&#x754C;&#xFF0C;&#x53EF;&#x5305;&#x542B; <code>left</code> &#x3001; <code>right</code> &#x3001; <code>top</code> &#x3001; <code>bottom</code> &#x56DB;&#x9879;&#x3002;</p>
 <h3 id="intersectionobserverrelativetoviewportmargins">intersectionObserver.relativeToViewport([margins])</h3>
