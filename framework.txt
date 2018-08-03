@@ -1,9 +1,18 @@
 ./structure.html|目录结构
 ./config.html|配置
+./config.html|配置 全局配置
+./config.html|配置 页面配置
 ./app-service/index.html|逻辑层
 ./app-service/app.html|逻辑层 注册程序
 ./app-service/scene.html|逻辑层 场景值
 ./app-service/page.html|逻辑层 注册页面
+./app-service/page.html|逻辑层 注册页面 初始数据
+./app-service/page.html|逻辑层 注册页面 生命周期回调函数
+./app-service/page.html|逻辑层 注册页面 页面事件处理函数
+./app-service/page.html|逻辑层 注册页面 组件事件处理函数
+./app-service/page.html|逻辑层 注册页面 route
+./app-service/page.html|逻辑层 注册页面 setData
+./app-service/page.html|逻辑层 注册页面 页面生命周期
 ./app-service/route.html|逻辑层 路由
 ./app-service/module.html|逻辑层 模块化
 ./app-service/api.html|逻辑层 API

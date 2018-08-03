@@ -16,9 +16,9 @@
                     <div id="book-search-results">
                         <div class="search-noresults">
                             <section class="normal markdown-section">
-                                <h1 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h1>
+                                <h1 id="&#x5168;&#x5C40;&#x914D;&#x7F6E;">&#x5168;&#x5C40;&#x914D;&#x7F6E;</h1>
 <p><code>app.json</code>&#x6587;&#x4EF6;&#x7528;&#x6765;&#x5BF9;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#xFF0C;&#x51B3;&#x5B9A;&#x9875;&#x9762;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3001;&#x7A97;&#x53E3;&#x8868;&#x73B0;&#x3001;&#x8BBE;&#x7F6E;&#x7F51;&#x7EDC;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3001;&#x8BBE;&#x7F6E;&#x591A; tab &#x7B49;&#x3002;</p>
-<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x7684; <code>app.json</code> &#xFF1A;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x90E8;&#x5206;&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x7684; <code>app.json</code> &#xFF1A;</p>
 <pre><code class="language-json">{
   <span class="hljs-attr">&quot;pages&quot;</span>: [
     <span class="hljs-string">&quot;pages/index/index&quot;</span>,
@@ -43,7 +43,7 @@
   <span class="hljs-attr">&quot;debug&quot;</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
-<h3 id="appjson-&#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;">app.json &#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;</h3>
+<h4 id="appjson-&#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;">app.json &#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;</h4>
 <table>
 <thead>
 <tr>
@@ -55,52 +55,73 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="config.html#pages">pages</a></td>
+<td><a href="#pages">pages</a></td>
 <td>String Array</td>
 <td>&#x662F;</td>
-<td>&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x8DEF;&#x5F84;</td>
+<td>&#x9875;&#x9762;&#x8DEF;&#x5F84;&#x5217;&#x8868;</td>
 </tr>
 <tr>
-<td><a href="config.html#window">window</a></td>
+<td><a href="#window">window</a></td>
 <td>Object</td>
 <td>&#x5426;</td>
-<td>&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x9875;&#x9762;&#x7684;&#x7A97;&#x53E3;&#x8868;&#x73B0;</td>
+<td>&#x5168;&#x5C40;&#x7684;&#x9ED8;&#x8BA4;&#x7A97;&#x53E3;&#x8868;&#x73B0;</td>
 </tr>
 <tr>
-<td><a href="config.html#tabbar">tabBar</a></td>
+<td><a href="#tabbar">tabBar</a></td>
 <td>Object</td>
 <td>&#x5426;</td>
-<td>&#x8BBE;&#x7F6E;&#x5E95;&#x90E8; tab &#x7684;&#x8868;&#x73B0;</td>
+<td>&#x5E95;&#x90E8; <code>tab</code> &#x680F;&#x7684;&#x8868;&#x73B0;</td>
 </tr>
 <tr>
-<td><a href="config.html#networktimeout">networkTimeout</a></td>
+<td><a href="#networktimeout">networkTimeout</a></td>
 <td>Object</td>
 <td>&#x5426;</td>
-<td>&#x8BBE;&#x7F6E;&#x7F51;&#x7EDC;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</td>
+<td>&#x7F51;&#x7EDC;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</td>
 </tr>
 <tr>
-<td><a href="config.html#debug">debug</a></td>
+<td><a href="#debug">debug</a></td>
 <td>Boolean</td>
 <td>&#x5426;</td>
-<td>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x5F00;&#x542F; debug &#x6A21;&#x5F0F;</td>
+<td>&#x662F;&#x5426;&#x5F00;&#x542F; debug &#x6A21;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x5173;&#x95ED;</td>
+</tr>
+<tr>
+<td><a href="#functionalpages">functionalPages</a></td>
+<td>Boolean</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#x529F;&#x80FD;&#x9875;&#xFF0C;&#x9ED8;&#x8BA4;&#x5173;&#x95ED;</td>
+</tr>
+<tr>
+<td><a href="#subpackages">subPackages</a></td>
+<td>Object Array</td>
+<td>&#x5426;</td>
+<td>&#x5206;&#x5305;&#x7ED3;&#x6784;&#x914D;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="#workers">workers</a></td>
+<td>String</td>
+<td>&#x5426;</td>
+<td><code>Worker</code> &#x4EE3;&#x7801;&#x653E;&#x7F6E;&#x7684;&#x76EE;&#x5F55;</td>
 </tr>
 </tbody>
 </table>
-<h3 id="pages">pages</h3>
-<p>&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6765;&#x6307;&#x5B9A;&#x5C0F;&#x7A0B;&#x5E8F;&#x7531;&#x54EA;&#x4E9B;&#x9875;&#x9762;&#x7EC4;&#x6210;&#x3002;&#x6BCF;&#x4E00;&#x9879;&#x4EE3;&#x8868;&#x5BF9;&#x5E94;&#x9875;&#x9762;&#x7684;&#x3010;&#x8DEF;&#x5F84;+&#x6587;&#x4EF6;&#x540D;&#x3011;&#x4FE1;&#x606F;&#xFF0C;<strong>&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x9879;&#x4EE3;&#x8868;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x521D;&#x59CB;&#x9875;&#x9762;&#x3002;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x65B0;&#x589E;/&#x51CF;&#x5C11;&#x9875;&#x9762;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x5BF9; pages &#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;</strong></p>
-<p>&#x6587;&#x4EF6;&#x540D;&#x4E0D;&#x9700;&#x8981;&#x5199;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#xFF0C;&#x56E0;&#x4E3A;&#x6846;&#x67B6;&#x4F1A;&#x81EA;&#x52A8;&#x53BB;&#x5BFB;&#x627E;&#x8DEF;&#x5F84;&#x4E0B; <code>.json</code>, <code>.js</code>, <code>.wxml</code>, <code>.wxss</code> &#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x6574;&#x5408;&#x3002;</p>
+<h4 id="pages">pages</h4>
+<p>&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5C0F;&#x7A0B;&#x5E8F;&#x7531;&#x54EA;&#x4E9B;&#x9875;&#x9762;&#x7EC4;&#x6210;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684; &#x8DEF;&#x5F84;+&#x6587;&#x4EF6;&#x540D; &#x4FE1;&#x606F;&#x3002;&#x6587;&#x4EF6;&#x540D;&#x4E0D;&#x9700;&#x8981;&#x5199;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#xFF0C;&#x6846;&#x67B6;&#x4F1A;&#x81EA;&#x52A8;&#x53BB;&#x5BFB;&#x627E;&#x5BF9;&#x4E8E;&#x4F4D;&#x7F6E;&#x7684; <code>.json</code>, <code>.js</code>, <code>.wxml</code>, <code>.wxss</code> &#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p><strong>&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x9879;&#x4EE3;&#x8868;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x521D;&#x59CB;&#x9875;&#x9762;&#xFF08;&#x9996;&#x9875;&#xFF09;&#x3002;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x65B0;&#x589E;/&#x51CF;&#x5C11;&#x9875;&#x9762;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x5BF9; pages &#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;</strong></p>
 <p>&#x5982;&#x5F00;&#x53D1;&#x76EE;&#x5F55;&#x4E3A;&#xFF1A;</p>
-<blockquote>
-<p>pages/</p>
-<p>pages/index/index.wxml</p>
-<p>pages/index/index.js</p>
-<p>pages/index/index.wxss</p>
-<p>pages/logs/logs.wxml</p>
-<p>pages/logs/logs.js</p>
-<p>app.js</p>
-<p>app.json</p>
-<p>app.wxss</p>
-</blockquote>
+<pre><code>&#x251C;&#x2500;&#x2500; app.js
+&#x251C;&#x2500;&#x2500; app.json
+&#x251C;&#x2500;&#x2500; app.wxss
+&#x251C;&#x2500;&#x2500; pages
+&#x2502;&#xA0;&#xA0; &#x2502;&#x2500;&#x2500; index
+&#x2502;&#xA0;&#xA0; &#x2502;   &#x251C;&#x2500;&#x2500; index.wxml
+&#x2502;&#xA0;&#xA0; &#x2502;   &#x251C;&#x2500;&#x2500; index.js
+&#x2502;&#xA0;&#xA0; &#x2502;   &#x251C;&#x2500;&#x2500; index.json
+&#x2502;&#xA0;&#xA0; &#x2502;   &#x2514;&#x2500;&#x2500; index.wxss
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; logs
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; log.wxml
+&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; log.js
+&#x2514;&#x2500;&#x2500; utils
+</code></pre>
 <p>&#x5219;&#x9700;&#x8981;&#x5728; app.json &#x4E2D;&#x5199;</p>
 <pre><code class="language-json">{
   <span class="hljs-attr">&quot;pages&quot;</span>:[
@@ -126,14 +147,14 @@
 <td>navigationBarBackgroundColor</td>
 <td>HexColor</td>
 <td>#000000</td>
-<td>&#x5BFC;&#x822A;&#x680F;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x5982;&quot;#000000&quot;</td>
+<td>&#x5BFC;&#x822A;&#x680F;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x5982; <code>#000000</code></td>
 <td></td>
 </tr>
 <tr>
 <td>navigationBarTextStyle</td>
 <td>String</td>
 <td>white</td>
-<td>&#x5BFC;&#x822A;&#x680F;&#x6807;&#x9898;&#x989C;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301; black/white</td>
+<td>&#x5BFC;&#x822A;&#x680F;&#x6807;&#x9898;&#x989C;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301; <code>black</code> / <code>white</code></td>
 <td></td>
 </tr>
 <tr>
@@ -147,7 +168,7 @@
 <td>navigationStyle</td>
 <td>String</td>
 <td>default</td>
-<td>&#x5BFC;&#x822A;&#x680F;&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x652F;&#x6301; default/custom&#x3002;custom &#x6A21;&#x5F0F;&#x53EF;&#x81EA;&#x5B9A;&#x4E49;&#x5BFC;&#x822A;&#x680F;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;&#x53F3;&#x4E0A;&#x89D2;&#x80F6;&#x56CA;&#x72B6;&#x7684;&#x6309;&#x94AE;</td>
+<td>&#x5BFC;&#x822A;&#x680F;&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x503C;&#xFF1A;<br><code>default</code> &#x9ED8;&#x8BA4;&#x6837;&#x5F0F;<br> <code>custom</code> &#x81EA;&#x5B9A;&#x4E49;&#x5BFC;&#x822A;&#x680F;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;&#x53F3;&#x4E0A;&#x89D2;&#x80F6;&#x56CA;&#x6309;&#x94AE;</td>
 <td>&#x5FAE;&#x4FE1;&#x7248;&#x672C; 6.6.0</td>
 </tr>
 <tr>
@@ -161,7 +182,7 @@
 <td>backgroundTextStyle</td>
 <td>String</td>
 <td>dark</td>
-<td>&#x4E0B;&#x62C9; loading &#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x652F;&#x6301; dark/light</td>
+<td>&#x4E0B;&#x62C9; loading &#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x652F;&#x6301; <code>dark</code> / <code>light</code></td>
 <td></td>
 </tr>
 <tr>
@@ -182,20 +203,20 @@
 <td>enablePullDownRefresh</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#xFF0C;&#x8BE6;&#x89C1;<a href="app-service/page.html#&#x9875;&#x9762;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;">&#x9875;&#x9762;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;</a></td>
+<td>&#x662F;&#x5426;&#x5168;&#x5C40;&#x5F00;&#x542F;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x3002;<br>&#x8BE6;&#x89C1; <a href="app-service/page.html#onpulldownrefresh">Page.onPullDownRefresh</a></td>
 <td></td>
 </tr>
 <tr>
 <td>onReachBottomDistance</td>
 <td>Number</td>
 <td>50</td>
-<td>&#x9875;&#x9762;&#x4E0A;&#x62C9;&#x89E6;&#x5E95;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x8DDD;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;px</td>
+<td>&#x9875;&#x9762;&#x4E0A;&#x62C9;&#x89E6;&#x5E95;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x8DDD;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;px&#x3002;<br>&#x8BE6;&#x89C1; <a href="app-service/page.html#onreachbottom">Page.onReachButom</a></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <p><strong>&#x6CE8;&#xFF1A;HexColor&#xFF08;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;&#x503C;&#xFF09;&#xFF0C;&#x5982;&quot;#ff00ff&quot;</strong></p>
-<p><strong>&#x6CE8;&#xFF1A;navigationStyle &#x53EA;&#x5728; app.json &#x4E2D;&#x751F;&#x6548;&#x3002;&#x5F00;&#x542F; custom &#x540E;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x505A;&#x597D;&#x517C;&#x5BB9;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x5207;&#x5230; 1.7.0&#xFF08;&#x4E0D;&#x4EE3;&#x8868;&#x6700;&#x4F4E;&#x7248;&#x672C;&#xFF0C;&#x53EA;&#x4F9B;&#x8C03;&#x8BD5;&#x7528;&#xFF09; &#x53EF;&#x65B9;&#x4FBF;&#x5207;&#x5230;&#x65E7;&#x89C6;&#x89C9;</strong></p>
+<p><strong>&#x6CE8;&#xFF1A;navigationStyle &#x53EA;&#x5728; <code>app.json</code> &#x4E2D;&#x751F;&#x6548;&#x3002;&#x5F00;&#x542F; custom &#x540E;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x505A;&#x597D;&#x517C;&#x5BB9;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x5207;&#x5230; 1.7.0&#xFF08;&#x4E0D;&#x4EE3;&#x8868;&#x6700;&#x4F4E;&#x7248;&#x672C;&#xFF0C;&#x53EA;&#x4F9B;&#x8C03;&#x8BD5;&#x7528;&#xFF09;&#x53EF;&#x65B9;&#x4FBF;&#x5207;&#x5230;&#x65E7;&#x89C6;&#x89C9;</strong></p>
 <p>&#x5982; app.json &#xFF1A;</p>
 <pre><code class="language-json">{
   <span class="hljs-attr">&quot;window&quot;</span>:{
@@ -207,15 +228,9 @@
   }
 }
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/config.jpg?t=18080218" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/config.jpg?t=18080318" alt="" style="width:600px"></p>
 <h3 id="tabbar">tabBar</h3>
 <p>&#x5982;&#x679C;&#x5C0F;&#x7A0B;&#x5E8F;&#x662F;&#x4E00;&#x4E2A;&#x591A; tab &#x5E94;&#x7528;&#xFF08;&#x5BA2;&#x6237;&#x7AEF;&#x7A97;&#x53E3;&#x7684;&#x5E95;&#x90E8;&#x6216;&#x9876;&#x90E8;&#x6709; tab &#x680F;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x9875;&#x9762;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; tabBar &#x914D;&#x7F6E;&#x9879;&#x6307;&#x5B9A; tab &#x680F;&#x7684;&#x8868;&#x73B0;&#xFF0C;&#x4EE5;&#x53CA; tab &#x5207;&#x6362;&#x65F6;&#x663E;&#x793A;&#x7684;&#x5BF9;&#x5E94;&#x9875;&#x9762;&#x3002;</p>
-<p><strong>Tip&#xFF1A;</strong></p>
-<ol>
-<li>&#x5F53;&#x8BBE;&#x7F6E; position &#x4E3A; top &#x65F6;&#xFF0C;&#x5C06;&#x4E0D;&#x4F1A;&#x663E;&#x793A; icon</li>
-<li>tabBar &#x4E2D;&#x7684; list &#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;<strong>&#x53EA;&#x80FD;&#x914D;&#x7F6E;&#x6700;&#x5C11;2&#x4E2A;&#x3001;&#x6700;&#x591A;5&#x4E2A; tab</strong>&#xFF0C;tab &#x6309;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#x3002;</li>
-</ol>
-<p><strong>&#x5C5E;&#x6027;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <table>
 <thead>
 <tr>
@@ -253,25 +268,25 @@
 <td>String</td>
 <td>&#x5426;</td>
 <td>black</td>
-<td>tabbar&#x4E0A;&#x8FB9;&#x6846;&#x7684;&#x989C;&#x8272;&#xFF0C; &#x4EC5;&#x652F;&#x6301; black/white</td>
+<td>tabbar&#x4E0A;&#x8FB9;&#x6846;&#x7684;&#x989C;&#x8272;&#xFF0C; &#x4EC5;&#x652F;&#x6301; <code>black</code> / <code>white</code></td>
 </tr>
 <tr>
 <td>list</td>
 <td>Array</td>
 <td>&#x662F;</td>
 <td></td>
-<td>tab &#x7684;&#x5217;&#x8868;&#xFF0C;&#x8BE6;&#x89C1; list &#x5C5E;&#x6027;&#x8BF4;&#x660E;&#xFF0C;&#x6700;&#x5C11;2&#x4E2A;&#x3001;&#x6700;&#x591A;5&#x4E2A; tab</td>
+<td>tab &#x7684;&#x5217;&#x8868;&#xFF0C;&#x8BE6;&#x89C1; <code>list</code> &#x5C5E;&#x6027;&#x8BF4;&#x660E;&#xFF0C;&#x6700;&#x5C11;2&#x4E2A;&#x3001;&#x6700;&#x591A;5&#x4E2A; tab</td>
 </tr>
 <tr>
 <td>position</td>
 <td>String</td>
 <td>&#x5426;</td>
 <td>bottom</td>
-<td>&#x53EF;&#x9009;&#x503C; bottom&#x3001;top</td>
+<td>tabBar&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EC5;&#x652F;&#x6301; <code>bottom</code> / <code>top</code></td>
 </tr>
 </tbody>
 </table>
-<p>&#x5176;&#x4E2D; list &#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x9879;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x5176;&#x4E2D; list &#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;<strong>&#x53EA;&#x80FD;&#x914D;&#x7F6E;&#x6700;&#x5C11;2&#x4E2A;&#x3001;&#x6700;&#x591A;5&#x4E2A; tab</strong>&#x3002;tab &#x6309;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x6BCF;&#x4E2A;&#x9879;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
@@ -298,26 +313,26 @@
 <td>iconPath</td>
 <td>String</td>
 <td>&#x5426;</td>
-<td>&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#xFF0C;icon &#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A;40kb&#xFF0C;&#x5EFA;&#x8BAE;&#x5C3A;&#x5BF8;&#x4E3A; 81px * 81px&#xFF0C;&#x5F53; postion &#x4E3A; top &#x65F6;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x65E0;&#x6548;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x7F51;&#x7EDC;&#x56FE;&#x7247;</td>
+<td>&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#xFF0C;icon &#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A;40kb&#xFF0C;&#x5EFA;&#x8BAE;&#x5C3A;&#x5BF8;&#x4E3A; 81px * 81px&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x3002;<br><strong>&#x5F53; <code>postion</code> &#x4E3A; <code>top</code> &#x65F6;&#xFF0C;&#x4E0D;&#x663E;&#x793A; icon&#x3002;</strong></td>
 </tr>
 <tr>
 <td>selectedIconPath</td>
 <td>String</td>
 <td>&#x5426;</td>
-<td>&#x9009;&#x4E2D;&#x65F6;&#x7684;&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#xFF0C;icon &#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A;40kb&#xFF0C;&#x5EFA;&#x8BAE;&#x5C3A;&#x5BF8;&#x4E3A; 81px * 81px &#xFF0C;&#x5F53; postion &#x4E3A; top &#x65F6;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x65E0;&#x6548;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x7F51;&#x7EDC;&#x56FE;&#x7247;</td>
+<td>&#x9009;&#x4E2D;&#x65F6;&#x7684;&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#xFF0C;icon &#x5927;&#x5C0F;&#x9650;&#x5236;&#x4E3A;40kb&#xFF0C;&#x5EFA;&#x8BAE;&#x5C3A;&#x5BF8;&#x4E3A; 81px * 81px&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x7F51;&#x7EDC;&#x56FE;&#x7247;&#x3002;<br><strong>&#x5F53; <code>postion</code> &#x4E3A; <code>top</code> &#x65F6;&#xFF0C;&#x4E0D;&#x663E;&#x793A; icon&#x3002;</strong></td>
 </tr>
 </tbody>
 </table>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/tabbar.png?t=18080218" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/tabbar.png?t=18080318" alt=""></p>
 <h3 id="networktimeout">networkTimeout</h3>
-<p>&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5404;&#x79CD;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;</p>
-<p><strong>&#x5C5E;&#x6027;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>&#x5404;&#x7C7B;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x5747;&#x4E3A;&#x6BEB;&#x79D2;&#x3002;</p>
 <table>
 <thead>
 <tr>
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x5FC5;&#x586B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
@@ -326,33 +341,53 @@
 <td>request</td>
 <td>Number</td>
 <td>&#x5426;</td>
-<td><a href="../api/network-request.html">wx.request</a>&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#xFF1A;60000</td>
+<td>60000</td>
+<td><a href="../api/network-request.html">wx.request</a> &#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#x3002;</td>
 </tr>
 <tr>
 <td>connectSocket</td>
 <td>Number</td>
 <td>&#x5426;</td>
-<td><a href="../api/network-socket.html">wx.connectSocket</a>&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#xFF1A;60000</td>
+<td>60000</td>
+<td><a href="../api/network-socket.html">wx.connectSocket</a> &#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#x3002;</td>
 </tr>
 <tr>
 <td>uploadFile</td>
 <td>Number</td>
 <td>&#x5426;</td>
-<td><a href="../api/network-file.html#wxuploadfileobject">wx.uploadFile</a>&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#xFF1A;60000</td>
+<td>60000</td>
+<td><a href="../api/network-file.html#wxuploadfileobject">wx.uploadFile</a> &#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#x3002;</td>
 </tr>
 <tr>
 <td>downloadFile</td>
 <td>Number</td>
 <td>&#x5426;</td>
-<td><a href="../api/network-file.html#wxdownloadfileobject">wx.downloadFile</a>&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#xFF1A;60000</td>
+<td>60000</td>
+<td><a href="../api/network-file.html#wxdownloadfileobject">wx.downloadFile</a> &#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;&#x3002;</td>
 </tr>
 </tbody>
 </table>
 <h3 id="debug">debug</h3>
-<p>&#x53EF;&#x4EE5;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x5F00;&#x542F; debug &#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x7684;&#x63A7;&#x5236;&#x53F0;&#x9762;&#x677F;&#xFF0C;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x4EE5; info &#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;&#xFF0C;&#x5176;&#x4FE1;&#x606F;&#x6709;<code>Page&#x7684;&#x6CE8;&#x518C;</code>&#xFF0C;<code>&#x9875;&#x9762;&#x8DEF;&#x7531;</code>&#xFF0C;<code>&#x6570;&#x636E;&#x66F4;&#x65B0;</code>&#xFF0C;<code>&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;</code> &#x3002; &#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
-<h2 id="pagejson">page.json</h2>
-<p>&#x6BCF;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>.json</code>&#x6587;&#x4EF6;&#x6765;&#x5BF9;&#x672C;&#x9875;&#x9762;&#x7684;&#x7A97;&#x53E3;&#x8868;&#x73B0;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;	&#x9875;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x6BD4;<code>app.json</code>&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x7B80;&#x5355;&#x5F97;&#x591A;&#xFF0C;&#x53EA;&#x662F;&#x8BBE;&#x7F6E; app.json &#x4E2D;&#x7684; window &#x914D;&#x7F6E;&#x9879;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x9875;&#x9762;&#x4E2D;&#x914D;&#x7F6E;&#x9879;&#x4F1A;&#x8986;&#x76D6; app.json &#x7684; window &#x4E2D;&#x76F8;&#x540C;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
-<p>&#x9875;&#x9762;&#x7684;<code>.json</code>&#x53EA;&#x80FD;&#x8BBE;&#x7F6E; <code>window</code> &#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x4EE5;&#x51B3;&#x5B9A;&#x672C;&#x9875;&#x9762;&#x7684;&#x7A97;&#x53E3;&#x8868;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x9700;&#x5199; <code>window</code> &#x8FD9;&#x4E2A;&#x952E;&#xFF0C;&#x5982;&#xFF1A;</p>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x5F00;&#x542F; <code>debug</code> &#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x7684;&#x63A7;&#x5236;&#x53F0;&#x9762;&#x677F;&#xFF0C;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x4EE5; <code>info</code> &#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;&#xFF0C;&#x5176;&#x4FE1;&#x606F;&#x6709;Page&#x7684;&#x6CE8;&#x518C;&#xFF0C;&#x9875;&#x9762;&#x8DEF;&#x7531;&#xFF0C;&#x6570;&#x636E;&#x66F4;&#x65B0;&#xFF0C;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x7B49;&#x3002;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h3 id="functionalpages">functionalPages</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x542F;&#x7528;<a href="plugin/functional-pages.html">&#x63D2;&#x4EF6;&#x529F;&#x80FD;&#x9875;</a>&#x65F6;&#xFF0C;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5176; <code>functionalPages</code> &#x4E3A; <code>true</code>&#x3002;</p>
+<h3 id="subpackages">subPackages</h3>
+<blockquote>
+<p>&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF; 6.6.0 &#xFF0C;&#x57FA;&#x7840;&#x5E93; 1.7.3 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x652F;&#x6301;</p>
+</blockquote>
+<p>&#x542F;&#x7528;<a href="subpackages.html">&#x5206;&#x5305;&#x52A0;&#x8F7D;</a>&#x65F6;&#xFF0C;&#x58F0;&#x660E;&#x9879;&#x76EE;&#x5206;&#x5305;&#x7ED3;&#x6784;&#x3002;</p>
+<h3 id="workers">workers</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x4F7F;&#x7528; <a href="workers.html">Worker</a> &#x5904;&#x7406;&#x591A;&#x7EBF;&#x7A0B;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E; <code>Worker</code> &#x4EE3;&#x7801;&#x653E;&#x7F6E;&#x7684;&#x76EE;&#x5F55;</p>
+<h1 id="&#x9875;&#x9762;&#x914D;&#x7F6E;">&#x9875;&#x9762;&#x914D;&#x7F6E;</h1>
+<p>&#x6BCF;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>.json</code>&#x6587;&#x4EF6;&#x6765;&#x5BF9;&#x672C;&#x9875;&#x9762;&#x7684;&#x7A97;&#x53E3;&#x8868;&#x73B0;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x9875;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x53EA;&#x80FD;&#x8BBE;&#x7F6E; <code>app.json</code> &#x4E2D;&#x90E8;&#x5206; <code>window</code> &#x914D;&#x7F6E;&#x9879;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x9875;&#x9762;&#x4E2D;&#x914D;&#x7F6E;&#x9879;&#x4F1A;&#x8986;&#x76D6; <code>app.json</code> &#x7684; <code>window</code> &#x4E2D;&#x76F8;&#x540C;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
+<h4 id="&#x9875;&#x9762;&#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;">&#x9875;&#x9762;&#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;</h4>
 <table>
 <thead>
 <tr>
@@ -367,13 +402,13 @@
 <td>navigationBarBackgroundColor</td>
 <td>HexColor</td>
 <td>#000000</td>
-<td>&#x5BFC;&#x822A;&#x680F;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x5982;&quot;#000000&quot;</td>
+<td>&#x5BFC;&#x822A;&#x680F;&#x80CC;&#x666F;&#x989C;&#x8272;&#xFF0C;&#x5982; <code>#000000</code></td>
 </tr>
 <tr>
 <td>navigationBarTextStyle</td>
 <td>String</td>
 <td>white</td>
-<td>&#x5BFC;&#x822A;&#x680F;&#x6807;&#x9898;&#x989C;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301; black/white</td>
+<td>&#x5BFC;&#x822A;&#x680F;&#x6807;&#x9898;&#x989C;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301; <code>black</code> / <code>white</code></td>
 </tr>
 <tr>
 <td>navigationBarTitleText</td>
@@ -391,25 +426,25 @@
 <td>backgroundTextStyle</td>
 <td>String</td>
 <td>dark</td>
-<td>&#x4E0B;&#x62C9; loading &#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x652F;&#x6301; dark/light</td>
+<td>&#x4E0B;&#x62C9; loading &#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x652F;&#x6301; <code>dark</code> / <code>light</code></td>
 </tr>
 <tr>
 <td>enablePullDownRefresh</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#xFF0C;&#x8BE6;&#x89C1;<a href="app-service/page.html#&#x9875;&#x9762;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;">&#x9875;&#x9762;&#x76F8;&#x5173;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;</a>&#x3002;</td>
-</tr>
-<tr>
-<td>disableScroll</td>
-<td>Boolean</td>
-<td>false</td>
-<td>&#x8BBE;&#x7F6E;&#x4E3A; true &#x5219;&#x9875;&#x9762;&#x6574;&#x4F53;&#x4E0D;&#x80FD;&#x4E0A;&#x4E0B;&#x6EDA;&#x52A8;&#xFF1B;&#x53EA;&#x5728; page.json &#x4E2D;&#x6709;&#x6548;&#xFF0C;&#x65E0;&#x6CD5;&#x5728; app.json &#x4E2D;&#x8BBE;&#x7F6E;&#x8BE5;&#x9879;</td>
+<td>&#x662F;&#x5426;&#x5168;&#x5C40;&#x5F00;&#x542F;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x3002;<br>&#x8BE6;&#x89C1; <a href="app-service/page.html#onpulldownrefresh">Page.onPullDownRefresh</a></td>
 </tr>
 <tr>
 <td>onReachBottomDistance</td>
 <td>Number</td>
 <td>50</td>
-<td>&#x9875;&#x9762;&#x4E0A;&#x62C9;&#x89E6;&#x5E95;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x8DDD;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;px</td>
+<td>&#x9875;&#x9762;&#x4E0A;&#x62C9;&#x89E6;&#x5E95;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x8DDD;&#x9875;&#x9762;&#x5E95;&#x90E8;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;px&#x3002;<br>&#x8BE6;&#x89C1; <a href="app-service/page.html#onreachbottom">Page.onReachButom</a></td>
+</tr>
+<tr>
+<td>disableScroll</td>
+<td>Boolean</td>
+<td>false</td>
+<td>&#x8BBE;&#x7F6E;&#x4E3A; <code>true</code> &#x5219;&#x9875;&#x9762;&#x6574;&#x4F53;&#x4E0D;&#x80FD;&#x4E0A;&#x4E0B;&#x6EDA;&#x52A8;&#xFF1B;&#x53EA;&#x5728;&#x9875;&#x9762;&#x914D;&#x7F6E;&#x4E2D;&#x6709;&#x6548;&#xFF0C;&#x65E0;&#x6CD5;&#x5728; <code>app.json</code> &#x4E2D;&#x8BBE;&#x7F6E;&#x8BE5;&#x9879;</td>
 </tr>
 </tbody>
 </table>
@@ -421,6 +456,9 @@
   <span class="hljs-attr">&quot;backgroundTextStyle&quot;</span>: <span class="hljs-string">&quot;light&quot;</span>
 }
 </code></pre>
+<blockquote>
+<p>&#x9875;&#x9762;&#x7684;<code>.json</code>&#x53EA;&#x80FD;&#x8BBE;&#x7F6E; <code>window</code> &#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x4EE5;&#x51B3;&#x5B9A;&#x672C;&#x9875;&#x9762;&#x7684;&#x7A97;&#x53E3;&#x8868;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x9700;&#x5199; <code>window</code> &#x8FD9;&#x4E2A;&#x952E;&#x3002;</p>
+</blockquote>
 
                             </section>      
                         </div>

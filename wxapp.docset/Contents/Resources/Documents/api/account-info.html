@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>当前帐号信息</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxgetaccountinfosync">wx.getAccountInfoSync()</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.2.2 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x8BBF;&#x95EE;&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x6216;&#x63D2;&#x4EF6;&#x5E10;&#x53F7;&#x4FE1;&#x606F;&#x3002;</p>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>miniProgram</td>
+<td>Object</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x5E10;&#x53F7;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>plugin</td>
+<td>Object</td>
+<td>&#x63D2;&#x4EF6;&#x8D26;&#x53F7;&#x4FE1;&#x606F;&#xFF08;&#x4EC5;&#x5728;&#x63D2;&#x4EF6;&#x4E2D;&#x8C03;&#x7528;&#x65F6;&#x5305;&#x542B;&#x8FD9;&#x4E00;&#x9879;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5176;&#x4E2D;&#xFF0C; <code>miniProgram</code> &#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td>String</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F; appId</td>
+</tr>
+</tbody>
+</table>
+<p><code>plugin</code> &#x4EC5;&#x5F53;&#x5728;&#x63D2;&#x4EF6;&#x4E2D;&#x8C03;&#x7528;&#x65F6;&#x63D0;&#x4F9B;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appId</td>
+<td>String</td>
+<td>&#x63D2;&#x4EF6; appId</td>
+</tr>
+<tr>
+<td>version</td>
+<td>String</td>
+<td>&#x63D2;&#x4EF6;&#x7248;&#x672C;&#x53F7;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> accountInfo = wx.getAccountInfoSync();
+accountInfo.miniProgram.appId <span class="hljs-comment">// &#x5C0F;&#x7A0B;&#x5E8F; appId</span>
+accountInfo.plugin.appId <span class="hljs-comment">// &#x63D2;&#x4EF6; appId</span>
+accountInfo.plugin.version <span class="hljs-comment">// &#x63D2;&#x4EF6;&#x7248;&#x672C;&#x53F7;&#xFF0C; &apos;a.b.c&apos; &#x8FD9;&#x6837;&#x7684;&#x5F62;&#x5F0F;</span>
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
