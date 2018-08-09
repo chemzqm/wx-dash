@@ -425,35 +425,7 @@ wx.getWifiList()
 </tr>
 </tbody>
 </table>
-<!--
-### wx.onEvaluateWifi(CALLBACK)
-> 基础库 1.7.0 开始支持，低版本需做[兼容处理](../framework/compatibility.md)
 
-
-监听需要评估连上的 Wi-Fi 的请求，在回调里必须返回 `confidence` 字段
-
-**CALLBACK 返回参数说明：**
-
-| 参数            | 类型        | 说明                            |
-|-----------------|-------------|---------------------------------|
-| wifi            | Object      | Wi-Fi 信息                       |
-
-**wifi对象说明：**
-
-| 参数            | 类型        | 说明                            |
-|-----------------|-------------|---------------------------------|
-| SSID            | String      | Wi-Fi 的SSID                     |
-| BSSID           | String      | Wi-Fi 的BSSID                    |
-| secure          | Boolean     | Wi-Fi 是否安全                   |
-| signalStrength  | Number      | Wi-Fi 信号强度                   |
-
-**confidence 说明：**
-| 值   | 说明                   |
-| ---- | ---------------------- |
-| none | 无需打开网页登录       |
-| low  | 一次性需要打开网页登录 |
-| high | 每次都需要打开网页登录 |
--->
 <h3 id="wxgetconnectedwifiobject">wx.getConnectedWifi(OBJECT)</h3>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
