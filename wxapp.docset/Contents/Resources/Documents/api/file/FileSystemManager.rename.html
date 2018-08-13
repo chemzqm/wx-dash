@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>FileSystemManager.rename</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="filesystemmanagerrenameobject-object">FileSystemManager.rename(Object object)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.9.9 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x6587;&#x4EF6;&#x4ECE; oldPath &#x79FB;&#x52A8;&#x5230; newPath</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldPath</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6E90;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x666E;&#x901A;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</td>
+<td></td>
+</tr>
+<tr>
+<td>newPath</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x65B0;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fail-&#x56DE;&#x8C03;&#x51FD;&#x6570;">fail &#x56DE;&#x8C03;&#x51FD;&#x6570;</h4>
+<h5 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h5>
+<h6 id="object-res">Object res</h6>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.errMsg &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fail permission denied, rename ${oldPath} -&gt; ${newPath}</td>
+<td>&#x6307;&#x5B9A;&#x6E90;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x5199;&#x6743;&#x9650;</td>
+</tr>
+<tr>
+<td>fail no such file or directory, rename ${oldPath} -&gt; ${newPath}</td>
+<td>&#x6E90;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6216;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x4E0A;&#x5C42;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

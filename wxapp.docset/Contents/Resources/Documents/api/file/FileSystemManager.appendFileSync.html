@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>FileSystemManager.appendFileSync</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="filesystemmanagerappendfilesyncstring-filepath-stringarraybuffer-data-string-encoding">FileSystemManager.appendFileSync(string filePath, string|ArrayBuffer data, string encoding)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>FileSystemManager.appendFile &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-filepath">string filePath</h5>
+<p>&#x8981;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
+<h5 id="stringarraybuffer-data">string|ArrayBuffer data</h5>
+<p>&#x8981;&#x8FFD;&#x52A0;&#x7684;&#x6587;&#x672C;&#x6216;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;</p>
+<h5 id="string-encoding">string encoding</h5>
+<p>&#x6307;&#x5B9A;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;</p>
+<p><strong>encoding &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ascii</td>
+<td></td>
+</tr>
+<tr>
+<td>base64</td>
+<td></td>
+</tr>
+<tr>
+<td>binary</td>
+<td></td>
+</tr>
+<tr>
+<td>hex</td>
+<td></td>
+</tr>
+<tr>
+<td>ucs2/ucs-2/utf16le/utf-16le</td>
+<td>&#x4EE5;&#x5C0F;&#x7AEF;&#x5E8F;&#x8BFB;&#x53D6;</td>
+</tr>
+<tr>
+<td>utf-8/utf8</td>
+<td></td>
+</tr>
+<tr>
+<td>latin1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
+<table>
+<thead>
+<tr>
+<th>errMsg</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fail no such file or directory, open ${filePath}</td>
+<td>&#x6307;&#x5B9A;&#x7684; filePath &#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>fail illegal operation on a directory, open &quot;${filePath}&quot;</td>
+<td>&#x6307;&#x5B9A;&#x7684; filePath &#x662F;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>fail permission denied, open ${dirPath}</td>
+<td>&#x6307;&#x5B9A;&#x7684; filePath &#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x5199;&#x6743;&#x9650;</td>
+</tr>
+<tr>
+<td>fail sdcard not mounted</td>
+<td>&#x6307;&#x5B9A;&#x7684; filePath &#x662F;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

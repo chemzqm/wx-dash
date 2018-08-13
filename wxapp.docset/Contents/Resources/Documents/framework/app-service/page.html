@@ -359,11 +359,17 @@ Page({
   }
 })
 </code></pre>
-<h3 id="pageprototyperoute">Page.prototype.route</h3>
+<h3 id="pageroute">Page.route</h3>
 <blockquote>
 <p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
 </blockquote>
 <p>&#x5230;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x7C7B;&#x578B;&#x4E3A;<code>String</code>&#x3002;</p>
+<pre><code class="language-javascript">Page({
+  <span class="hljs-attr">onShow</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.route)
+  }
+})
+</code></pre>
 <h3 id="pageprototypesetdataobject-data-function-callback">Page.prototype.setData(Object data, Function callback)</h3>
 <p><code>setData</code> &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x903B;&#x8F91;&#x5C42;&#x53D1;&#x9001;&#x5230;&#x89C6;&#x56FE;&#x5C42;&#xFF08;&#x5F02;&#x6B65;&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x6539;&#x53D8;&#x5BF9;&#x5E94;&#x7684; <code>this.data</code> &#x7684;&#x503C;&#xFF08;&#x540C;&#x6B65;&#xFF09;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
@@ -460,7 +466,7 @@ Page({
 <h2 id="&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</h2>
 <p><strong>&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x7ACB;&#x9A6C;&#x5B8C;&#x5168;&#x5F04;&#x660E;&#x767D;&#xFF0C;&#x4E0D;&#x8FC7;&#x4EE5;&#x540E;&#x5B83;&#x4F1A;&#x6709;&#x5E2E;&#x52A9;&#x3002;</strong></p>
 <p>&#x4E0B;&#x56FE;&#x8BF4;&#x660E;&#x4E86; Page &#x5B9E;&#x4F8B;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;</p>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/mina-lifecycle.png?t=18081011" alt="" style="max-height:1000px;height:1000px"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/mina-lifecycle.png?t=18081317" alt="" style="max-height:1000px;height:1000px"></p>
 
                             </section>      
                         </div>

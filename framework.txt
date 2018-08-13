@@ -56,5 +56,6 @@
 ./performance/index.html|性能
 ./performance/tips.html|性能 优化建议
 ./performance/tools.html|性能 分析工具
+./file-system.html|文件系统
 ./release.html|基础库更新日志
 undefined|undefined
