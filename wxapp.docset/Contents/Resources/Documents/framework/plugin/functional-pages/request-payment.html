@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>支付功能页</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x9875;">&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x9875;</h1>
+<p>&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x9875;&#x7528;&#x4E8E;&#x5E2E;&#x52A9;&#x63D2;&#x4EF6;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; <code>wx.requestPayment</code> &#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x652F;&#x4ED8;&#x529F;&#x80FD;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x989D;&#x5916;&#x7684;&#x6743;&#x9650;&#x7533;&#x8BF7;&#xFF0C;&#x7533;&#x8BF7;&#x4F4D;&#x7F6E;&#x4F4D;&#x4E8E;<a href="https://mp.weixin.qq.com">&#x7BA1;&#x7406;&#x540E;&#x53F0;</a>&#x7684;&#x201C;&#x5C0F;&#x7A0B;&#x5E8F;&#x63D2;&#x4EF6; -&gt; &#x57FA;&#x672C;&#x8BBE;&#x7F6E; -&gt; &#x652F;&#x4ED8;&#x80FD;&#x529B;&#x201D;&#x8BBE;&#x7F6E;&#x9879;&#x4E2D;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x901A;&#x8FC7;&#x7533;&#x8BF7;&#xFF0C;&#x4E3B;&#x4F53;&#x4E3A;&#x4E2A;&#x4EBA;&#x5C0F;&#x7A0B;&#x5E8F;&#x5728;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x65F6;&#xFF0C;&#x90FD;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x91CC;&#x7684;&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x8C03;&#x7528;&#x53C2;&#x6570;">&#x8C03;&#x7528;&#x53C2;&#x6570;</h2>
+<p>&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x9875;&#x4F7F;&#x7528; <code>&lt;functional-page-navigator&gt;</code> &#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570; name &#x5E94;&#x4E3A;&#x56FA;&#x5B9A;&#x503C; <code>requestPayment</code>&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>arg&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fee</td>
+<td>Number</td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x663E;&#x793A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x91D1;&#x989D;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x5206;</td>
+</tr>
+<tr>
+<td>paymentArgs</td>
+<td>Object</td>
+<td>&#x5426;</td>
+<td>&#x4EFB;&#x610F;&#x6570;&#x636E;&#xFF0C;&#x4F20;&#x9012;&#x7ED9;&#x529F;&#x80FD;&#x9875;&#x4E2D;&#x7684;&#x54CD;&#x5E94;&#x51FD;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x56DE;&#x8C03;&#x7ED3;&#x679C;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x56DE;&#x8C03;&#x7C7B;&#x578B;</th>
+<th>errMsg</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>requestPayment:ok</td>
+<td>&#x8C03;&#x7528;&#x652F;&#x4ED8;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>requestPayment:fail cancel</td>
+<td>&#x7528;&#x6237;&#x53D6;&#x6D88;&#x652F;&#x4ED8;</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>requestPayment:fail (detail message)</td>
+<td>&#x8C03;&#x7528;&#x652F;&#x4ED8;&#x5931;&#x8D25;&#xFF0C;&#x5176;&#x4E2D; detail message &#x4E3A;&#x540E;&#x53F0;&#x8FD4;&#x56DE;&#x7684;&#x8BE6;&#x7EC6;&#x5931;&#x8D25;&#x539F;&#x56E0;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- plugin/components/pay.wxml --&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x4E0A;&#x7EBF;&#x65F6;&#xFF0C;version &#x5E94;&#x6539;&#x4E3A; &quot;release&quot;&#xFF0C;&#x5E76;&#x786E;&#x4FDD;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#x5DF2;&#x7ECF;&#x53D1;&#x5E03; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">functional-page-navigator</span>
+  <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;develop&quot;</span>
+  <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;requestPayment&quot;</span>
+  <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;{{ args }}&quot;</span>
+  <span class="hljs-attr">bind:success</span>=<span class="hljs-string">&quot;paymentSuccess&quot;</span>
+  <span class="hljs-attr">bind:fail</span>=<span class="hljs-string">&quot;paymentFailed&quot;</span>
+&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;payment-button&quot;</span>&gt;</span>&#x652F;&#x4ED8; 0.01 &#x5143;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">functional-page-navigator</span>&gt;</span>
+</code></pre>
+<pre><code class="language-javascript"><span class="hljs-comment">// plugin/components/pay.js</span>
+Component({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">args</span>: {
+      <span class="hljs-attr">fee</span>: <span class="hljs-number">1</span>,             <span class="hljs-comment">// &#x652F;&#x4ED8;&#x91D1;&#x989D;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x5206;</span>
+      customArgument: <span class="hljs-string">&apos;A&apos;</span> <span class="hljs-comment">// &#x5C06;&#x4F20;&#x9012;&#x5230;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;</span>
+    }
+  },
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-comment">// &#x652F;&#x4ED8;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x63A5;&#x53E3;</span>
+    paymentSuccess: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(e);
+    },
+    <span class="hljs-comment">// &#x652F;&#x4ED8;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x63A5;&#x53E3;</span>
+    paymentFailed: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(e);
+    }
+  }
+})
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;">&#x914D;&#x7F6E;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;</h2>
+<p>&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x9875;&#x9700;&#x8981;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x54CD;&#x5E94;&#x63D2;&#x4EF6;&#x4E2D;&#x7684;&#x652F;&#x4ED8;&#x8C03;&#x7528;&#x3002;&#x5373;&#xFF0C;&#x5728;&#x63D2;&#x4EF6;&#x4E2D;&#x8DF3;&#x8F6C;&#x5230;&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x9875;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x4F1A;&#x5728;&#x5408;&#x9002;&#x7684;&#x65F6;&#x673A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x6765;&#x5E2E;&#x52A9;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x63D0;&#x4F9B;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#xFF0C;&#x529F;&#x80FD;&#x9875;&#x8C03;&#x7528;&#x5C06;&#x901A;&#x8FC7; <code>fail</code> &#x4E8B;&#x4EF6;&#x8FD4;&#x56DE;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#x5E94;&#x4EE5;&#x5BFC;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#x5728;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684; <code>functional-pages/request-payment.js</code> &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x540D;&#x4E3A; <code>beforeRequestPayment</code>&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5E94;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>paymentArgs</td>
+<td>Object</td>
+<td>&#x5373;&#x901A;&#x8FC7; <code>&lt;functional-page-navigator&gt;</code> &#x7684; <code>arg</code> &#x53C2;&#x6570;&#x4E2D;&#x7684; <code>paymentArgs</code> &#x5B57;&#x6BB5;&#x4F20;&#x9012;&#x5230;&#x529F;&#x80FD;&#x9875;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x540E;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5C06;&#x53D1;&#x8D77;&#x652F;&#x4ED8;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E; <code>wx.requestPayment</code>&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>callback&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>Object</td>
+<td>&#x5931;&#x8D25;&#x4FE1;&#x606F;&#xFF0C;&#x82E5;&#x65E0;&#x5931;&#x8D25;&#xFF0C;&#x5E94;&#x8FD4;&#x56DE; <code>null</code></td>
+</tr>
+<tr>
+<td>requestPaymentArgs</td>
+<td>Object</td>
+<td>&#x652F;&#x4ED8;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x8C03;&#x7528; <code>wx.requestPayment</code>&#xFF0C;&#x53C2;&#x6570;&#x5982;&#x4E0B;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>reqeustPaymentArgs &#x7684;&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<p>&#x7528;&#x4E8E;&#x53D1;&#x8D77;&#x652F;&#x4ED8;&#xFF0C;&#x548C; <a href="../../../api/api-pay.html"><code>wx.requestPayment</code></a> &#x7684;&#x53C2;&#x6570;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x6CA1;&#x6709;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;<code>success</code>, <code>fail</code>, <code>complete</code>&#xFF09;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>timeStamp</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x65F6;&#x95F4;&#x6233;&#x4ECE;1970&#x5E74;1&#x6708;1&#x65E5;00:00:00&#x81F3;&#x4ECA;&#x7684;&#x79D2;&#x6570;,&#x5373;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>nonceStr</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x968F;&#x673A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x957F;&#x5EA6;&#x4E3A;32&#x4E2A;&#x5B57;&#x7B26;&#x4EE5;&#x4E0B;&#x3002;</td>
+</tr>
+<tr>
+<td>package</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7EDF;&#x4E00;&#x4E0B;&#x5355;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684; prepay_id &#x53C2;&#x6570;&#x503C;&#xFF0C;&#x63D0;&#x4EA4;&#x683C;&#x5F0F;&#x5982;&#xFF1A;prepay_id=***</td>
+</tr>
+<tr>
+<td>signType</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#xFF0C;&#x6682;&#x652F;&#x6301; MD5</td>
+</tr>
+<tr>
+<td>paySign</td>
+<td>String</td>
+<td>&#x662F;</td>
+<td>&#x7B7E;&#x540D;,&#x5177;&#x4F53;&#x7B7E;&#x540D;&#x65B9;&#x6848;&#x53C2;&#x89C1;<a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&amp;index=3">&#x5C0F;&#x7A0B;&#x5E8F;&#x652F;&#x4ED8;&#x63A5;&#x53E3;&#x6587;&#x6863;</a>;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;<a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&amp;index=1">&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x63A5;&#x53E3;&#x6587;&#x6863;</a></p>
+<p><strong>&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="language-js"><span class="hljs-comment">// functional-pages/request-payment.js</span>
+exports.beforeRequestPayment = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">paymentArgs, callback</span>) </span>{
+  <span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;</span>
+  <span class="hljs-comment">// &#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#xFF08;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF09;&#x4E0D;&#x5E94; require &#x5176;&#x4ED6;&#x975E; functional-pages &#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;</span>
+  <span class="hljs-comment">// &#x5176;&#x4ED6;&#x975E; functional-pages &#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x4E0D;&#x5E94; require &#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;</span>
+  <span class="hljs-comment">// &#x8FD9;&#x6837;&#x7684; require &#x8C03;&#x7528;&#x5728;&#x672A;&#x6765;&#x5C06;&#x4E0D;&#x88AB;&#x652F;&#x6301;&#x3002;</span>
+  <span class="hljs-comment">// </span>
+  <span class="hljs-comment">// &#x540C;&#x5728; functional-pages &#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x53EF;&#x4EE5; require</span>
+  <span class="hljs-keyword">var</span> getOpenIdURL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./URL&apos;</span>).getOpenIdURL;
+  <span class="hljs-keyword">var</span> paymentURL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./URL&apos;</span>).paymentURL;
+
+  <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6B64;&#x5904;&#x5E94;&#x4E3A;&#x4ECE;&#x63D2;&#x4EF6;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684; &apos;A&apos;</span>
+  <span class="hljs-keyword">var</span> customArgument = paymentArgs.customArgument;
+
+  <span class="hljs-comment">// &#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8C03;&#x7528; wx.login &#x65B9;&#x6CD5;&#x83B7;&#x53D6; code&#xFF0C;&#x7136;&#x540E;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;&#x4F7F;&#x7528; code &#x6362;&#x53D6;&#x4E0B;&#x5355;&#x7528;&#x6237;&#x7684; openId</span>
+  <span class="hljs-comment">// &#x5177;&#x4F53;&#x6587;&#x6863;&#x53C2;&#x8003; https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html?t=20161230#wxloginobject</span>
+  wx.login({
+    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+      wx.request({
+        <span class="hljs-attr">url</span>: getOpenIdURL,
+        <span class="hljs-attr">data</span>: { <span class="hljs-attr">code</span>: data.code },
+        <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+          <span class="hljs-comment">// &#x62C9;&#x53D6;&#x7528;&#x6237; openid &#x6210;&#x529F;</span>
+          <span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x8C03;&#x7528;&#x652F;&#x4ED8;&#x7EDF;&#x4E00;&#x4E0B;&#x5355;&#xFF0C;&#x8FD4;&#x56DE;&#x652F;&#x4ED8;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x5F00;&#x53D1;&#x548C;&#x666E;&#x901A;&#x7684; wx.requestPayment &#x76F8;&#x540C;</span>
+          <span class="hljs-comment">// &#x6587;&#x6863;&#x53EF;&#x4EE5;&#x53C2;&#x8003; https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_4&amp;index=3</span>
+          wx.request({
+            <span class="hljs-attr">url</span>: paymentURL,
+            <span class="hljs-attr">data</span>: { <span class="hljs-attr">openid</span>: res.data.openid },
+            <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;POST&apos;</span>,
+            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;unified order success, response is:&apos;</span>, res);
+              <span class="hljs-keyword">var</span> payargs = res.data.payargs;
+              <span class="hljs-comment">// &#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570; callback &#x8FDB;&#x884C;&#x652F;&#x4ED8;</span>
+              <span class="hljs-comment">// &#x5728; callback &#x4E2D;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A; err &#x548C; requestPaymentArgs&#xFF1A;</span>
+              <span class="hljs-comment">// err &#x5E94;&#x4E3A; null &#xFF08;&#x6216;&#x8005;&#x4E00;&#x4E9B;&#x5931;&#x8D25;&#x4FE1;&#x606F;&#xFF09;&#xFF1B;</span>
+              <span class="hljs-comment">// requestPaymentArgs &#x5C06;&#x88AB;&#x7528;&#x4E8E;&#x8C03;&#x7528; wx.requestPayment&#xFF0C;&#x9664;&#x4E86; success/fail/complete &#x4E0D;&#x88AB;&#x652F;&#x6301;&#x5916;&#xFF0C;</span>
+              <span class="hljs-comment">// &#x5E94;&#x4E0E; wx.requestPayment &#x53C2;&#x6570;&#x76F8;&#x540C;&#x3002;</span>
+              <span class="hljs-keyword">var</span> error = <span class="hljs-literal">null</span>;
+              <span class="hljs-keyword">var</span> requestPaymentArgs = {
+                <span class="hljs-attr">timeStamp</span>: payargs.timeStamp,
+                <span class="hljs-attr">nonceStr</span>: payargs.nonceStr,
+                <span class="hljs-attr">package</span>: payargs.package,
+                <span class="hljs-attr">signType</span>: payargs.signType,
+                <span class="hljs-attr">paySign</span>: payargs.paySign,
+              };
+              callback(error, requestPaymentArgs);
+            }
+          });
+        },
+        <span class="hljs-attr">fail</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x62C9;&#x53D6;&#x7528;&#x6237;openid&#x5931;&#x8D25;&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x5F00;&#x653E;&#x63A5;&#x53E3;&#x7B49;&#x670D;&#x52A1;&apos;</span>, res);
+          <span class="hljs-comment">// callback &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</span>
+          callback(res);
+        }
+      });
+    },
+    <span class="hljs-attr">fail</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;wx.login &#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x5F00;&#x653E;&#x63A5;&#x53E3;&#x7B49;&#x670D;&#x52A1;&apos;</span>, err)
+      <span class="hljs-comment">// callback &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</span>
+      callback(err);
+    }
+  });
+}
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#x4E0D;&#x5E94; <code>require</code> &#x5176;&#x4ED6;&#x975E; <code>functional-pages</code> &#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4ED6;&#x975E; <code>functional-pages</code> &#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x4E0D;&#x5E94; <code>require</code> &#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x6837;&#x7684; <code>require</code> &#x8C03;&#x7528;&#x5728;&#x672A;&#x6765;&#x5C06;&#x4E0D;&#x88AB;&#x652F;&#x6301;&#x3002;</strong></p>
+<p><strong>&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x5E94;&#x5F53;&#x88AB;&#x653E;&#x7F6E;&#x5728;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x4E2D;&#xFF08;&#x800C;&#x975E;&#x63D2;&#x4EF6;&#x4EE3;&#x7801;&#x4E2D;&#xFF09;&#xFF0C;&#x5B83;&#x662F;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF08;&#x800C;&#x975E;&#x63D2;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF09;&#x3002;</strong> &#x5982;&#x679C;&#x9700;&#x8981;&#x65B0;&#x589E;&#x6216;&#x66F4;&#x6539;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF0C;&#x9700;&#x8981;&#x53D1;&#x5E03;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x624D;&#x80FD;&#x5728;&#x6B63;&#x5F0F;&#x7248;&#x4E2D;&#x751F;&#x6548;&#xFF1B;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x9884;&#x89C8;&#x63D2;&#x4EF6;&#x6240;&#x6709;&#x8005;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x624D;&#x80FD;&#x5728;&#x5F00;&#x53D1;&#x7248;&#x4E2D;&#x751F;&#x6548;&#x3002;</p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>用户信息功能页</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="&#x7528;&#x6237;&#x4FE1;&#x606F;&#x529F;&#x80FD;&#x9875;">&#x7528;&#x6237;&#x4FE1;&#x606F;&#x529F;&#x80FD;&#x9875;</h1>
+<p>&#x7528;&#x6237;&#x4FE1;&#x606F;&#x529F;&#x80FD;&#x9875;&#x7528;&#x4E8E;&#x5E2E;&#x52A9;&#x63D2;&#x4EF6;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC; <code>openid</code> &#x548C;&#x6635;&#x79F0;&#x7B49;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; <code>wx.login</code> &#x548C; <code>wx.getUserInfo</code> &#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x8C03;&#x7528;&#x53C2;&#x6570;">&#x8C03;&#x7528;&#x53C2;&#x6570;</h2>
+<p>&#x7528;&#x6237;&#x4FE1;&#x606F;&#x529F;&#x80FD;&#x9875;&#x4F7F;&#x7528; <code>&lt;functional-page-navigator&gt;</code> &#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570; name &#x5E94;&#x4E3A;&#x56FA;&#x5B9A;&#x503C; <code>loginAndGetUserInfo</code>&#xFF0C;&#x5176;&#x4F59;&#x53C2;&#x6570;&#x4E0E; <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open.html?t=18081511#wxgetuserinfoobject"><code>wx.getUserInfo</code></a> &#x76F8;&#x540C;&#xFF0C;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF1A;</p>
+<p><strong>arg&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>withCredentials</td>
+<td>Boolean</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x5E26;&#x4E0A;&#x767B;&#x5F55;&#x6001;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>lang</td>
+<td>String</td>
+<td>&#x5426;</td>
+<td>&#x6307;&#x5B9A;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x8BED;&#x8A00;&#xFF0C;zh_CN &#x7B80;&#x4F53;&#x4E2D;&#x6587;&#xFF0C;zh_TW &#x7E41;&#x4F53;&#x4E2D;&#x6587;&#xFF0C;en &#x82F1;&#x6587;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;en&#x3002;</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Number</td>
+<td>&#x5426;</td>
+<td>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D; ms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#xFF1A;&#x5F53; withCredentials &#x4E3A; true &#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x5305;&#x542B; encryptedData, iv &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;</strong></p>
+<p><strong>bindsuccess&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>String</td>
+<td>&#x540C; <code>wx.login</code> &#x83B7;&#x5F97;&#x7684;&#x7528;&#x6237;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#xFF08;&#x6709;&#x6548;&#x671F;&#x4E94;&#x5206;&#x949F;&#xFF09;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x540E;&#x53F0;&#x8C03;&#x7528; api&#xFF0C;&#x4F7F;&#x7528; code &#x6362;&#x53D6; openid &#x548C; session_key &#x7B49;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>errMsg</td>
+<td>String</td>
+<td>&#x8C03;&#x7528;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td>userInfo</td>
+<td>OBJECT</td>
+<td>&#x7528;&#x6237;&#x4FE1;&#x606F;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x5305;&#x542B; openid &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>rawData</td>
+<td>String</td>
+<td>&#x4E0D;&#x5305;&#x62EC;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x7B7E;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>signature</td>
+<td>String</td>
+<td>&#x4F7F;&#x7528; sha1( rawData + sessionkey ) &#x5F97;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x4E8E;&#x6821;&#x9A8C;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x53C2;&#x8003;&#x6587;&#x6863; <a href="../../../api/signature.html">signature</a>&#x3002;</td>
+</tr>
+<tr>
+<td>encryptedData</td>
+<td>String</td>
+<td>&#x5305;&#x62EC;&#x654F;&#x611F;&#x6570;&#x636E;&#x5728;&#x5185;&#x7684;&#x5B8C;&#x6574;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="../../../api/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+</tr>
+<tr>
+<td>iv</td>
+<td>String</td>
+<td>&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x521D;&#x59CB;&#x5411;&#x91CF;&#xFF0C;&#x8BE6;&#x7EC6;&#x89C1;<a href="../../../api/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>userInfo&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nickName</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td>avatarUrl</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x5934;&#x50CF;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#x4EE3;&#x8868;&#x6B63;&#x65B9;&#x5F62;&#x5934;&#x50CF;&#x5927;&#x5C0F;&#xFF08;&#x6709;0&#x3001;46&#x3001;64&#x3001;96&#x3001;132&#x6570;&#x503C;&#x53EF;&#x9009;&#xFF0C;0&#x4EE3;&#x8868;132*132&#x6B63;&#x65B9;&#x5F62;&#x5934;&#x50CF;&#xFF09;&#xFF0C;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x5934;&#x50CF;&#x65F6;&#x8BE5;&#x9879;&#x4E3A;&#x7A7A;&#x3002;&#x82E5;&#x7528;&#x6237;&#x66F4;&#x6362;&#x5934;&#x50CF;&#xFF0C;&#x539F;&#x6709;&#x5934;&#x50CF;URL&#x5C06;&#x5931;&#x6548;&#x3002;</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x7684;&#x6027;&#x522B;&#xFF0C;&#x503C;&#x4E3A;1&#x65F6;&#x662F;&#x7537;&#x6027;&#xFF0C;&#x503C;&#x4E3A;2&#x65F6;&#x662F;&#x5973;&#x6027;&#xFF0C;&#x503C;&#x4E3A;0&#x65F6;&#x662F;&#x672A;&#x77E5;</td>
+</tr>
+<tr>
+<td>city</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6240;&#x5728;&#x57CE;&#x5E02;</td>
+</tr>
+<tr>
+<td>province</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6240;&#x5728;&#x7701;&#x4EFD;</td>
+</tr>
+<tr>
+<td>country</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6240;&#x5728;&#x56FD;&#x5BB6;</td>
+</tr>
+<tr>
+<td>language</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x7B80;&#x4F53;&#x4E2D;&#x6587;&#x4E3A;zh_CN</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!--plugin/components/hello-component.wxml--&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">functional-page-navigator</span>
+    <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;loginAndGetUserInfo&quot;</span>
+    <span class="hljs-attr">args</span>=<span class="hljs-string">&quot;{{ args }}&quot;</span>
+    <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;develop&quot;</span>
+    <span class="hljs-attr">bind:success</span>=<span class="hljs-string">&quot;loginSuccess&quot;</span>
+    <span class="hljs-attr">bind:fail</span>=<span class="hljs-string">&quot;loginFail&quot;</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;login&quot;</span>&gt;</span>&#x767B;&#x5F55;&#x5230;&#x63D2;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">functional-page-navigator</span>&gt;</span>
+</code></pre>
+<pre><code class="language-javascript"><span class="hljs-comment">// plugin/components/hello-component.js</span>
+Component({
+  <span class="hljs-attr">properties</span>: {},
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">args</span>: {
+      <span class="hljs-attr">withCredentials</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">lang</span>: <span class="hljs-string">&apos;zh_CN&apos;</span>
+    }
+  },
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-attr">loginSuccess</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(res.detail);
+    },
+    <span class="hljs-attr">loginFail</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(res);
+    }
+  }
+});
+</code></pre>
+<p><a href="wechatide://minicode/Uof4Iomt731Z">&#x5728;&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x67E5;&#x770B;&#x793A;&#x4F8B;</a>&#xFF1A;</p>
+<ol>
+<li>&#x7531;&#x4E8E;&#x63D2;&#x4EF6;&#x9700;&#x8981; appid &#x624D;&#x80FD;&#x5DE5;&#x4F5C;&#xFF0C;&#x8BF7;&#x586B;&#x5165;&#x4E00;&#x4E2A; appid&#xFF1B;</li>
+<li>&#x7531;&#x4E8E;&#x5F53;&#x524D;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x6253;&#x5F00;&#x8BE5;&#x793A;&#x4F8B;&#x540E;&#x8BF7; <strong>&#x624B;&#x52A8;&#x5C06; appid &#x586B;&#x5199;&#x5230; <code>miniprogram/app.json</code> &#x4E2D;&#xFF08;&#x5982;&#x4E0B;&#x56FE;&#xFF09;&#x4F7F;&#x793A;&#x4F8B;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x3002;</strong></li>
+</ol>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/plugin_minicode_guide.png?t=18081511" alt="&#x624B;&#x52A8;&#x586B;&#x5199; appid"></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

@@ -46,6 +46,8 @@
 ./plugin/using.html|插件 使用插件
 ./plugin/api-limit.html|插件 插件的限制
 ./plugin/functional-pages.html|插件 插件功能页
+./plugin/functional-pages/user-info.html|插件 插件功能页 用户信息功能页
+./plugin/functional-pages/request-payment.html|插件 插件功能页 支付功能页
 ./subpackages.html|分包加载
 ./workers.html|多线程
 ./client-lib/index.html|基础库
