@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义组件</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h1>
+<h2 id="wxnexttickfunction">wx.nextTick(FUNCTION)</h2>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a></p>
+</blockquote>
+<p>&#x5F53;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C; triggerEvent&#x3001;setData &#x7B49;&#x64CD;&#x4F5C;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;&#x8FDE;&#x9501;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x5BB9;&#x6613;&#x5F15;&#x53D1;&#x6E32;&#x67D3;&#x9519;&#x8BEF;&#xFF0C;&#x6B64;&#x63A5;&#x53E3;&#x53EF;&#x7528;&#x4E8E;&#x5EF6;&#x8FDF;&#x4E00;&#x90E8;&#x5206;&#x64CD;&#x4F5C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7247;&#x518D;&#x6267;&#x884C;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="language-javascript">Component({
+  ready() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1&apos;</span>)
+
+    wx.nextTick(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;3&apos;</span>)
+    }
+
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;2&apos;</span>)
+  }
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

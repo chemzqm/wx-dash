@@ -104,6 +104,24 @@ Component({
 </tr>
 </tbody>
 </table>
+<h3 id="wxcomponent-export">wx://component-export</h3>
+<p>&#x4ECE;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.3</a> &#x5F00;&#x59CB;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#x3002;</p>
+<p>&#x4F7F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x652F;&#x6301; <code>export</code> &#x5B9A;&#x4E49;&#x6BB5;&#x3002;&#x8FD9;&#x4E2A;&#x5B9A;&#x4E49;&#x6BB5;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x7EC4;&#x4EF6;&#x88AB; <code>selectComponent</code> &#x8C03;&#x7528;&#x65F6;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;</p>
+<p>&#x672A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5B9A;&#x4E49;&#x6BB5;&#x65F6;&#xFF0C; <code>selectComponent</code> &#x5C06;&#x8FD4;&#x56DE;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; <code>this</code> &#xFF08;&#x63D2;&#x4EF6;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5C06;&#x8FD4;&#x56DE; <code>null</code> &#xFF09;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5B9A;&#x4E49;&#x6BB5;&#x65F6;&#xFF0C;&#x5C06;&#x4EE5;&#x8FD9;&#x4E2A;&#x5B9A;&#x4E49;&#x6BB5;&#x7684;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#x4EE3;&#x66FF;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="language-js"><span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6; my-component &#x5185;&#x90E8;</span>
+Component({
+  <span class="hljs-attr">behaviors</span>: [<span class="hljs-string">&apos;wx://component-export&apos;</span>],
+  <span class="hljs-keyword">export</span>() {
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">myField</span>: <span class="hljs-string">&apos;myValue&apos;</span> }
+  }
+})
+</code></pre>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x65F6; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">my-component</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;the-id&quot;</span> /&gt;</span>
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">this</span>.selectComponent(<span class="hljs-string">&apos;the-id&apos;</span>) <span class="hljs-comment">// &#x7B49;&#x4E8E; { myField: &apos;myValue&apos; }</span>
+</code></pre>
 
                             </section>      
                         </div>
