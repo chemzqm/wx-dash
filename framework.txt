@@ -41,6 +41,7 @@
 ./custom-component/behaviors.html|自定义组件 behaviors
 ./custom-component/relations.html|自定义组件 组件间关系
 ./custom-component/generics.html|自定义组件 抽象节点
+./custom-component/extend.html|自定义组件 自定义组件扩展
 ./plugin/index.html|插件
 ./plugin/development.html|插件 开发插件
 ./plugin/using.html|插件 使用插件

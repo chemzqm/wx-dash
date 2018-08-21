@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义组件扩展</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6269;&#x5C55;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6269;&#x5C55;</h1>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x5B9A;&#x5236;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6269;&#x5C55;&#x673A;&#x5236;&#x3002;&#x4ECE;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.3</a> &#x5F00;&#x59CB;&#x652F;&#x6301;&#x3002;</p>
+<h2 id="&#x6269;&#x5C55;&#x540E;&#x7684;&#x6548;&#x679C;">&#x6269;&#x5C55;&#x540E;&#x7684;&#x6548;&#x679C;</h2>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3;&#x6269;&#x5C55;&#x540E;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5148;&#x4E3E;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<p><a href="wechatide://minicode/lfaCJxmo741S" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-js"><span class="hljs-comment">// behavior.js</span>
+<span class="hljs-built_in">module</span>.exports = Behavior({
+  definitionFilter(defFields) {
+    defFields.data.from = <span class="hljs-string">&apos;behavior&apos;</span>
+  },
+})
+
+<span class="hljs-comment">// component.js</span>
+Component({
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">from</span>: <span class="hljs-string">&apos;component&apos;</span>
+  },
+  <span class="hljs-attr">behaviors</span>: [<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;behavior.js&apos;</span>)],
+  ready() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.data.from) <span class="hljs-comment">// &#x6B64;&#x5904;&#x4F1A;&#x53D1;&#x73B0;&#x8F93;&#x51FA; behavior &#x800C;&#x4E0D;&#x662F; component</span>
+  }
+})
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x6269;&#x5C55;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x4FEE;&#x6539;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x6BB5;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5C31;&#x662F;&#x4FEE;&#x6539;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684; <code>data</code> &#x5B9A;&#x4E49;&#x6BB5;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x6269;&#x5C55;">&#x4F7F;&#x7528;&#x6269;&#x5C55;</h2>
+<p><code>Behavior()</code> &#x6784;&#x9020;&#x5668;&#x63D0;&#x4F9B;&#x4E86;&#x65B0;&#x7684;&#x5B9A;&#x4E49;&#x6BB5; <code>definitionFilter</code> &#xFF0C;&#x7528;&#x4E8E;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6269;&#x5C55;&#x3002; <code>definitionFilter</code> &#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x4F1A;&#x6CE8;&#x5165;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4F7F;&#x7528;&#x8BE5; behavior &#x7684; component/behavior &#x7684;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8BE5; behavior &#x6240;&#x4F7F;&#x7528;&#x7684; behavior &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code class="language-js"><span class="hljs-comment">// behavior3.js</span>
+<span class="hljs-built_in">module</span>.exports = Behavior({
+    definitionFilter(defFields, definitionFilterArr) {},
+})
+
+<span class="hljs-comment">// behavior2.js</span>
+<span class="hljs-built_in">module</span>.exports = Behavior({
+  <span class="hljs-attr">behaviors</span>: [<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;behavior3.js&apos;</span>)],
+  definitionFilter(defFields, definitionFilterArr) {
+    <span class="hljs-comment">// definitionFilterArr[0](defFields)</span>
+  },
+})
+
+<span class="hljs-comment">// behavior1.js</span>
+<span class="hljs-built_in">module</span>.exports = Behavior({
+  <span class="hljs-attr">behaviors</span>: [<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;behavior2.js&apos;</span>)],
+  definitionFilter(defFields, definitionFilterArr) {},
+})
+
+<span class="hljs-comment">// component.js</span>
+Component({
+  <span class="hljs-attr">behaviors</span>: [<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;behavior1.js&apos;</span>)],
+})
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x58F0;&#x660E;&#x4E86;1&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x548C;3&#x4E2A; behavior&#xFF0C;&#x6BCF;&#x4E2A; behavior &#x90FD;&#x4F7F;&#x7528;&#x4E86; <code>definitionFilter</code> &#x5B9A;&#x4E49;&#x6BB5;&#x3002;&#x90A3;&#x4E48;&#x6309;&#x7167;&#x58F0;&#x660E;&#x7684;&#x987A;&#x5E8F;&#x4F1A;&#x6709;&#x5982;&#x4E0B;&#x4E8B;&#x60C5;&#x53D1;&#x751F;&#xFF1A;</p>
+<ol>
+<li>&#x5F53;&#x8FDB;&#x884C; behavior2 &#x7684;&#x58F0;&#x660E;&#x65F6;&#x5C31;&#x4F1A;&#x8C03;&#x7528; behavior3 &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D; <code>defFields</code> &#x53C2;&#x6570;&#x662F; behavior2 &#x7684;&#x5B9A;&#x4E49;&#x6BB5;&#xFF0C; <code>definitionFilterArr</code> &#x53C2;&#x6570;&#x5373;&#x4E3A;&#x7A7A;&#x6570;&#x7EC4;&#xFF0C;&#x56E0;&#x4E3A; behavior3 &#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x7684; behavior &#x3002;</li>
+<li>&#x5F53;&#x8FDB;&#x884C; behavior1 &#x7684;&#x58F0;&#x660E;&#x65F6;&#x5C31;&#x4F1A;&#x8C03;&#x7528; behavior2 &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D; <code>defFields</code> &#x53C2;&#x6570;&#x662F; behavior1 &#x7684;&#x5B9A;&#x4E49;&#x6BB5;&#xFF0C; <code>definitionFilterArr</code> &#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;1&#x7684;&#x6570;&#x7EC4;&#xFF0C;<code>definitionFilterArr[0]</code> &#x5373;&#x4E3A; behavior3 &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A; behavior2 &#x4F7F;&#x7528;&#x4E86; behavior3&#x3002;&#x7528;&#x6237;&#x5728;&#x6B64;&#x5904;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x51B3;&#x5B9A;&#x5728;&#x8FDB;&#x884C; behavior1 &#x7684;&#x58F0;&#x660E;&#x65F6;&#x8981;&#x4E0D;&#x8981;&#x8C03;&#x7528; behavior3 &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8C03;&#x7528;&#xFF0C;&#x5728;&#x6B64;&#x5904;&#x8865;&#x5145;&#x4EE3;&#x7801; <code>definitionFilterArr[0](defFields)</code> &#x5373;&#x53EF;&#xFF0C;<code>definitionFilterArr</code> &#x53C2;&#x6570;&#x4F1A;&#x7531;&#x57FA;&#x7840;&#x5E93;&#x8865;&#x5145;&#x4F20;&#x5165;&#x3002;</li>
+<li>&#x540C;&#x7406;&#xFF0C;&#x5728;&#x8FDB;&#x884C; component &#x7684;&#x58F0;&#x660E;&#x65F6;&#x5C31;&#x4F1A;&#x8C03;&#x7528; behavior1 &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#x3002;</li>
+</ol>
+<p>&#x7B80;&#x5355;&#x6982;&#x62EC;&#xFF0C;<code>definitionFilter</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x5F53; A &#x4F7F;&#x7528;&#x4E86; B &#x65F6;&#xFF0C;A &#x58F0;&#x660E;&#x5C31;&#x4F1A;&#x8C03;&#x7528; B &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#x5E76;&#x4F20;&#x5165; A &#x7684;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x8BA9; B &#x53BB;&#x8FC7;&#x6EE4;&#x3002;&#x6B64;&#x65F6;&#x5982;&#x679C; B &#x8FD8;&#x4F7F;&#x7528;&#x4E86; C &#x548C; D &#xFF0C;&#x90A3;&#x4E48; B &#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x51B3;&#x5B9A;&#x8981;&#x4E0D;&#x8981;&#x8C03;&#x7528; C &#x548C; D &#x7684; <code>definitionFilter</code> &#x51FD;&#x6570;&#x53BB;&#x8FC7;&#x6EE4; A &#x7684;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<p><a href="wechatide://minicode/WaqPbxmN7E1j" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<h2 id="&#x771F;&#x5B9E;&#x6848;&#x4F8B;">&#x771F;&#x5B9E;&#x6848;&#x4F8B;</h2>
+<p>&#x4E0B;&#x9762;&#x5229;&#x7528;&#x6269;&#x5C55;&#x7B80;&#x5355;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x529F;&#x80FD;:</p>
+<pre><code class="language-js"><span class="hljs-comment">// behavior.js</span>
+<span class="hljs-built_in">module</span>.exports = Behavior({
+  <span class="hljs-attr">lifetimes</span>: {
+    created() {
+      <span class="hljs-keyword">this</span>._originalSetData = <span class="hljs-keyword">this</span>.setData <span class="hljs-comment">// &#x539F;&#x59CB; setData</span>
+      <span class="hljs-keyword">this</span>.setData = <span class="hljs-keyword">this</span>._setData <span class="hljs-comment">// &#x5C01;&#x88C5;&#x540E;&#x7684; setData</span>
+    }
+  },
+  definitionFilter(defFields) {
+    <span class="hljs-keyword">const</span> computed = defFields.computed || {}
+    <span class="hljs-keyword">const</span> computedKeys = <span class="hljs-built_in">Object</span>.keys(computed)
+    <span class="hljs-keyword">const</span> computedCache = {}
+
+    <span class="hljs-comment">// &#x8BA1;&#x7B97; computed</span>
+    <span class="hljs-keyword">const</span> calcComputed = <span class="hljs-function">(<span class="hljs-params">scope, insertToData</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> needUpdate = {}
+      <span class="hljs-keyword">const</span> data = defFields.data = defFields.data || {}
+
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">of</span> computedKeys) {
+        <span class="hljs-keyword">const</span> value = computed[key].call(scope) <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x65B0;&#x503C;</span>
+        <span class="hljs-keyword">if</span> (computedCache[key] !== value) needUpdate[key] = computedCache[key] = value
+        <span class="hljs-keyword">if</span> (insertToData) data[key] = needUpdate[key] <span class="hljs-comment">// &#x76F4;&#x63A5;&#x63D2;&#x5165;&#x5230; data &#x4E2D;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x624D;&#x9700;&#x8981;&#x7684;&#x64CD;&#x4F5C;</span>
+      }
+
+      <span class="hljs-keyword">return</span> needUpdate
+    }    
+
+    <span class="hljs-comment">// &#x91CD;&#x5199; setData &#x65B9;&#x6CD5;</span>
+    defFields.methods = defFields.methods || {}
+    defFields.methods._setData = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data, callback</span>) </span>{
+      <span class="hljs-keyword">const</span> originalSetData = <span class="hljs-keyword">this</span>._originalSetData <span class="hljs-comment">// &#x539F;&#x59CB; setData</span>
+      originalSetData.call(<span class="hljs-keyword">this</span>, data, callback) <span class="hljs-comment">// &#x505A; data &#x7684; setData</span>
+      <span class="hljs-keyword">const</span> needUpdate = calcComputed(<span class="hljs-keyword">this</span>) <span class="hljs-comment">// &#x8BA1;&#x7B97; computed</span>
+      originalSetData.call(<span class="hljs-keyword">this</span>, needUpdate) <span class="hljs-comment">// &#x505A; computed &#x7684; setData</span>
+    }
+
+    <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316; computed</span>
+    calcComputed(defFields, <span class="hljs-literal">true</span>) <span class="hljs-comment">// &#x8BA1;&#x7B97; computed</span>
+  }
+})
+</code></pre>
+<p>&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> beh = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./behavior.js&apos;</span>)
+Component({
+  <span class="hljs-attr">behaviors</span>: [beh],
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">a</span>: <span class="hljs-number">0</span>,
+  },
+  <span class="hljs-attr">computed</span>: {
+    b() {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.data.a + <span class="hljs-number">100</span>
+    },
+  },
+  <span class="hljs-attr">methods</span>: {
+    onTap() {
+      <span class="hljs-keyword">this</span>.setData({
+        <span class="hljs-attr">a</span>: ++<span class="hljs-keyword">this</span>.data.a,
+      })
+    }
+  }
+})
+</code></pre>
+<pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>data: {{a}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>computed: {{b}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onTap&quot;</span>&gt;</span>click<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<p>&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5BF9;&#x5DF2;&#x6709;&#x7684; setData &#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5C01;&#x88C5;&#xFF0C;&#x5728;&#x6BCF;&#x6B21; setData &#x7684;&#x65F6;&#x5019;&#x8BA1;&#x7B97;&#x51FA; computed &#x91CC;&#x5404;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x8BBE;&#x5230; data &#x4E2D;&#xFF0C;&#x5DF2;&#x8FBE;&#x5230;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<blockquote>
+<p>&#x6B64;&#x5B9E;&#x73B0;&#x53EA;&#x662F;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x6848;&#x4F8B;&#x6765;&#x5C55;&#x793A;&#xFF0C;&#x8BF7;&#x52FF;&#x76F4;&#x63A5;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5B98;&#x65B9;&#x6269;&#x5C55;&#x5305;">&#x5B98;&#x65B9;&#x6269;&#x5C55;&#x5305;</h2>
+<ul>
+<li><a href="https://github.com/wechat-miniprogram/computed">computed</a></li>
+</ul>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
