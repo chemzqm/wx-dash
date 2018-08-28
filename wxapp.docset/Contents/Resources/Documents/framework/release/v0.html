@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>v0.x版本</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="&#x57FA;&#x7840;&#x5E93;&#x66F4;&#x65B0;&#x65E5;&#x5FD7;-v0x&#x7248;&#x672C;">&#x57FA;&#x7840;&#x5E93;&#x66F4;&#x65B0;&#x65E5;&#x5FD7; (v0.x&#x7248;&#x672C;)</h1>
+<h3 id="20170106">2017.01.06</h3>
+<ol>
+<li><code>U</code>: &#x66F4;&#x65B0; &#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x4E8C;&#x7EF4;&#x7801;&#x63A5;&#x53E3;&#x7684;&#x8C03;&#x7528;&#x603B;&#x6B21;&#x6570;&#x4E3A; &#x5341;&#x4E07; &#x6B21; <a href="../../api/qrcode.html">&#x8BE6;&#x60C5;</a></li>
+</ol>
+<h3 id="20170105">2017.01.05</h3>
+<ol>
+<li><code>F</code>: &#x4FEE;&#x590D; touch &#x4E8B;&#x4EF6;&#x5728;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x4E0A;&#x51FA;&#x73B0; <code>preventDefault inside passive event</code> &#x7684;&#x95EE;&#x9898;</li>
+</ol>
+<h3 id="20170104">2017.01.04</h3>
+<ol>
+<li><code>U</code> &#x66F4;&#x65B0; API <code>wx.getLocation</code> <code>wx.getUserInfo</code> <code>wx.chooseLocation</code> <code>wx.startRecord</code> &#x8C03;&#x7528;&#x65F6;&#x9700;&#x8981;&#x7528;&#x6237;&#x6388;&#x6743;&#x786E;&#x8BA4;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x62D2;&#x7EDD;&#x6388;&#x6743;&#x65F6;&#xFF0C;&#x56DE;&#x8C03; &quot;<code>${APIName}:fail auth deny</code>&quot;</li>
+<li><code>U</code> &#x66F4;&#x65B0; API <code>wx.scanCode</code> &#x65B0;&#x589E; charSet&#x3001;scanType&#x3001;path &#x8FD4;&#x56DE;&#x53C2;&#x6570; <a href="../../api/scancode.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x66F4;&#x65B0; &#x7EC4;&#x4EF6; <code>&lt;video /&gt;</code> &#x5168;&#x5C4F;&#x6309;&#x94AE;&#x663E;&#x793A;&#x7684;&#x903B;&#x8F91;&#xFF08;&#x8DDF;&#x968F; controls &#x5C5E;&#x6027;&#x663E;&#x793A;&#xFF09;</li>
+<li><code>F</code> &#x4FEE;&#x590D; API <code>wx.switchTab</code> &#x540E; <code>getCurrentPages</code> &#x4E0D;&#x6B63;&#x786E;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; API <code>wx.uploadFile</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;<code>formData</code> &#x4F20;&#x5165;&#x6570;&#x5B57;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x53D8;&#x6210; <code>[object Number]</code> &#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; API <code>wx.navigateTo</code> &#x63A5;&#x53E3;&#x5728; iOS &#x4E0A;&#x9875;&#x9762;&#x672A;&#x663E;&#x793A;&#x65F6;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; API <code>wx.checkSession</code> &#x63A5;&#x53E3;&#x5728;&#x90E8;&#x5206; Android &#x673A;&#x5668;&#x4E0A;&#x6CA1;&#x6709;&#x56DE;&#x8C03;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; API <code>wx.reqeust</code> <code>wx.downloadFile</code> &#x63A5;&#x53E3;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x672A;&#x68C0;&#x67E5; 301 &#x91CD;&#x5B9A;&#x5411;&#x540E;&#x7684;&#x57DF;&#x540D;&#x5408;&#x6CD5;&#x6027;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;textarea /&gt;</code> &#x5728; Android &#x52A8;&#x6001;&#x8BBE;&#x7F6E; <code>focus</code> &#x65E0;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;picker /&gt;</code> &#x5728; iOS &#x4E0A;&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#x4E5F;&#x89E6;&#x53D1; <code>bindchange</code> &#x4E8B;&#x4EF6;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;textarea /&gt;</code> <code>&lt;input /&gt;</code> &#x5728; Android &#x4E0A; maxlength &lt;= 0 &#x65F6;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;video /&gt;</code> &#x5728; Android &#x4E0A;&#x64AD;&#x653E; m3u8 &#x76F4;&#x64AD;&#x89C6;&#x9891;&#x65F6;&#xFF0C;duration &#x663E;&#x793A;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;video /&gt;</code> &#x5728; iOS &#x8FDB;&#x5EA6;&#x6761;&#x65F6;&#x957F;&#x6CA1;&#x663E;&#x793A;&#x5B8C;&#x6574;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;audio /&gt;</code> &#x5148; seek &#x540E; play &#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;radio-group /&gt;</code> &#x4E2D;&#x7684; <code>&lt;radio /&gt;</code> &#x88AB;&#x5168;&#x90E8;&#x7F6E;&#x4E3A; false &#x65F6;&#x7684;&#x72B6;&#x6001;&#x540C;&#x6B65;&#x9519;&#x8BEF;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6; <code>&lt;swiper /&gt;</code>&#x540C;&#x65F6;&#x8BBE;&#x7F6E; <code>current</code> &#x548C; <code>children</code> &#x65F6;&#xFF0C;<code>current</code> &#x53EF;&#x80FD;&#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; <code>placeholder-class</code> <code>hover-class</code> &#x4E3A;&#x5E26;&#x7A7A;&#x683C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#x6837;&#x5F0F;&#x8BBE;&#x7F6E;&#x65E0;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x8FDE;&#x7EED; <code>setData</code> &#x65F6;&#x5E8F;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; iOS8 &#x4E0A;&#x5927;&#x91CF;&#x5F15;&#x7528;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x56FE;&#x7247;&#x4F1A;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x5361;&#x6B7B;&#x7684;&#x95EE;&#x9898;</li>
+</ol>
+<h3 id="2016-12-22">2016-12-22</h3>
+<ol>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> &#x7EC4;&#x4EF6;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0A;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x65F6;&#x6E05;&#x7A7A;&#x5185;&#x5BB9;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x5728;&#x9879;&#x76EE;&#x7F16;&#x8BD1;&#x540E;&#x4E0D;&#x89E6;&#x53D1; <code>App.onShow</code> &#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x5728; <code>&lt;template /&gt;</code> &#x4E2D;&#x4F7F;&#x7528; <code>wx:for</code> &#x4E2D;&#x53D6;&#x4E0D;&#x5230; <code>data</code> &#x4E2D;&#x7684;&#x503C;&#x7684;&#x95EE;&#x9898;</li>
+</ol>
+<h3 id="2016-12-21">2016-12-21</h3>
+<ol>
+<li><code>A</code> &#x65B0;&#x589E; API <code>wx.switchTab</code>  <a href="../../api/ui-navigate.html#wxswitchtabobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; API <code>wx.scanCode</code>  <a href="../../api/scancode.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; API <code>wx.createMapContext</code>  <a href="../../api/api-map.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; API <code>wx.createCanvasContext</code>  <a href="../../api/canvas/create-canvas-context.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; API <code>wx.showToast</code> &#x8C03;&#x7528;&#x53C2;&#x6570; mask <a href="../../api/api-react.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x9875;&#x9762;&#x65B9;&#x6CD5; <code>Page.onShareAppMessage</code> &#x7528;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x8F6C;&#x53D1;&#x5185;&#x5BB9; <a href="../../api/share.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x6846;&#x67B6;&#x65B9;&#x6CD5; <code>App.onError</code>  <a href="../../framework/app-service/app.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x9875;&#x9762;&#x914D;&#x7F6E;  <code>disabelScroll</code> <a href="../../framework/config.html#&#x9875;&#x9762;&#x914D;&#x7F6E;">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;picker-view/&gt;</code> &#x7EC4;&#x4EF6; <a href="../../component/picker-view.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;contact-button/&gt;</code> &#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x5BA2;&#x670D;&#x4F1A;&#x8BDD;&#x6309;&#x94AE; <a href="https://developers.weixin.qq.com/miniprogram/dev/component/contact-button.html?t=18082721">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;navigator/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; openType <a href="../../component/navigator.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;switch/&gt;</code> <code>&lt;checkbox/&gt;</code> <code>&lt;radio/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; color</li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;video/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; objectFit  <a href="../../component/video.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;map/&gt;</code>  &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; markers polyline circles include-points controls show-location <a href="../../component/map.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;swiper/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; circular &#x63A7;&#x5236;&#x8854;&#x63A5;&#x6ED1;&#x52A8; <a href="../../component/swiper.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;input/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; cursor-spacing <a href="../../component/input.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;textarea/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; cursor-spacing <a href="../../component/textarea.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;picker/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; disabled <a href="../../component/picker.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;view/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; hover-class <a href="../../component/view.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;slider/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; <code>color</code>&#x3001;<code>selected-color</code> <a href="../../component/slider.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;scroll-view/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; scroll-x, scroll-y &#x52A8;&#x6001;&#x4FEE;&#x6539;&#x652F;&#x6301; <a href="../../component/scroll-view.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;map/&gt;</code> &#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6; bindtap bindmarkertap bindcontrolstap bindregionchange <a href="../../component/map.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;input/&gt;</code>&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6; bindconfirm <a href="../../component/input.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;video/&gt;</code> &#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6; bindtimeupdate <a href="../../component/video.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;textarea/&gt;</code> &#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6; bindconfirm <a href="../../component/textarea.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;textarea/&gt;</code> &#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6; bindinput <a href="../../component/textarea.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;canvas/&gt;</code> &#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6; bindlongtap <a href="../../component/canvas.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>AudioContext.setSrc()</code> &#x4E0A;&#x4E0B;&#x6587; API <a href="../../api/api-audio.html#audiocontext">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>CanvasContext</code> &#x4E0A;&#x4E0B;&#x6587; <a href="../../api/canvas/intro.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>CanvasContext.arc()</code> &#x4E0A;&#x4E0B;&#x6587; API <a href="../../api/canvas/arc.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>CanvasContext.fillRect()</code> &#x4E0A;&#x4E0B;&#x6587; API <a href="../../api/canvas/fill-rect.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>CanvasContext.strokeRect()</code> &#x4E0A;&#x4E0B;&#x6587; API <a href="../../api/canvas/stroke-rect.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>CanvasContext.createLinearGradient()</code> &#x4E0A;&#x4E0B;&#x6587; API <a href="../../api/canvas/create-linear-gradient.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>CanvasContext.createCircularGradient()</code> &#x4E0A;&#x4E0B;&#x6587; API <a href="../../api/canvas/create-circular-gradient.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;scroll-view/&gt;</code> &#x7EC4;&#x4EF6;&#x8868;&#x73B0; &#x6EDA;&#x52A8;&#x65F6;&#x7981;&#x6B62;&#x5C06;&#x9875;&#x9762;&#x6EDA;&#x52A8;</li>
+<li><code>U</code> &#x66F4;&#x65B0; API <code>wx.getSystemInfo</code> &#x65B0;&#x589E; platform &#x8FD4;&#x56DE;&#x53C2;&#x6570; <a href="../../api/systeminfo.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x66F4;&#x65B0; API <code>wx.downloadFile</code> &#x5F53; HTTP &#x72B6;&#x6001;&#x7801;&#x4E3A; 200 &#x6216; 304 &#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8FD4;&#x56DE; tmpFilePath <a href="../../api/network-file.html#wxdownloadfileobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x66F4;&#x65B0; API <code>wx.showModal</code> &#x8C03;&#x7528;&#x53C2;&#x6570; confirmText cancelText &#x7684;&#x5B57;&#x6570;&#x9650;&#x5236; <a href="../../api/api-react.html#wxshowmodalobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x66F4;&#x65B0; API <code>wx.navigateTo</code> <code>wx.redirectTo</code> &#x4E0D;&#x5141;&#x8BB8;&#x8DF3;&#x8F6C;&#x5230; tabbar &#x9875;&#x9762;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <code>wx.switchTab</code> <a href="../../api/ui-navigate.html#wxswitchtabobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x66F4;&#x65B0; WXML dataset &#x8FD4;&#x56DE; &#x652F;&#x6301; Object &#x548C; Array</li>
+<li><code>U</code> &#x66F4;&#x65B0; <code>&lt;image/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; mode &#x53EF;&#x9009; widthFix <a href="../../component/image.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x66F4;&#x65B0; <code>&lt;picker/&gt;</code> &#x7EC4;&#x4EF6;&#x5C5E;&#x6027; range &#x589E;&#x52A0; ObjectArray &#x7C7B;&#x578B;&#x652F;&#x6301; <a href="../../component/picker.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x66F4;&#x65B0; <code>&lt;switch/&gt;</code> <code>&lt;checkbox/&gt;</code> <code>&lt;radio/&gt;</code> &#x9ED8;&#x8BA4;&#x6837;&#x5F0F;</li>
+<li><code>U</code> &#x66F4;&#x65B0; <code>CanvasContext.save()</code> <code>CanvasContext.restore()</code> &#x4E0A;&#x4E0B;&#x6587; API &#x4FDD;&#x5B58;&#x753B;&#x7B14; style</li>
+<li><code>U</code> &#x66F4;&#x65B0; <code>CanvasContext.arc()</code> &#x4E0A;&#x4E0B;&#x6587; API &#x53C2;&#x6570;&#x8C03;&#x6574;&#xFF0C;&#x65B0;&#x589E; <code>eAngle</code>, <code>counterclockwise</code>&#xFF0C;&#x53BB;&#x9664; <code>sweepAngle</code> <a href="../../api/canvas/arc.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x4F18;&#x5316; <code>&lt;swiper/&gt;</code> &#x6ED1;&#x52A8;&#x4F53;&#x9A8C;</li>
+<li><code>U</code> &#x4F18;&#x5316; <code>&lt;swiper/&gt;</code> <code>&lt;slider/&gt;</code> &#x5728; <code>&lt;scroll-view/&gt;</code> &#x4EA4;&#x4E92;&#x4F53;&#x9A8C;</li>
+<li><code>U</code> &#x4F18;&#x5316; <code>&lt;navigator/&gt;</code> <code>&lt;button/&gt;</code> &#x7EC4;&#x4EF6;&#x70B9;&#x51FB;&#x4F53;&#x9A8C;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.request</code> &#x5728; Android &#x4E0A; method &#x53EA;&#x80FD;&#x7528;&#x5927;&#x5199;&#x503C;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.uploadFile</code> &#x5728; iOS &#x4E0A;&#x65E0;&#x6CD5;&#x8BBE;&#x7F6E; header &#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.getLocation</code> type=gcj02 &#x5728; iOS &#x4E0A;&#x4E0D;&#x751F;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.showToast</code> &#x9000;&#x51FA;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#x4F9D;&#x7136;&#x663E;&#x793A;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.showModal</code> &#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x5728; Android &#x548C; iOS &#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.showModal</code> content &#x592A;&#x957F;&#x65F6;&#x6216; title &#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x5E03;&#x5C40;&#x9519;&#x4E71;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.showModal</code> cancelText &#x548C; confirmText &#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.showModal</code> &#x671F;&#x95F4;&#xFF0C;&#x952E;&#x76D8;&#x5F39;&#x51FA;&#xFF0C;&#x65E0;&#x6CD5;&#x6536;&#x8D77;&#x952E;&#x76D8;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.getImageInfo</code> &#x5728; Android &#x65E0;&#x6CD5;&#x83B7;&#x53D6; http &#x94FE;&#x63A5;&#x56FE;&#x7247;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.getSystemInfo</code> &#x56E0;&#x4E3A; tabbar &#x51FA;&#x73B0;&#x5BFC;&#x81F4;&#x83B7;&#x53D6;&#x7684;&#x5C4F;&#x5E55;&#x9AD8;&#x5EA6;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.downloadFile</code> &#x5728; Android &#x4E0A;&#x4E0B;&#x8F7D;&#x540E;&#x56FE;&#x7247;&#x65E0;&#x6CD5;&#x663E;&#x793A;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.request</code> &#x6CA1;&#x6709;&#x5BF9;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x6B63;&#x786E; encode &#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.login</code> &#x5728; iOS &#x4E2D; App.onLaunch &#x6CA1;&#x6709;&#x56DE;&#x8C03;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.createAnimationContext</code> &#x8BBE;&#x7F6E; transformOrigin &#x5F02;&#x5E38;&#x53CA;&#x52A8;&#x753B;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.navigateTo</code> <code>wx.redirectTo</code> &#x5728; iOS &#x4E0A;&#xFF0C;Page.onLoad &#x65E0;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>catch</code> &#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>setInterval</code> &#x5728; iOS &#x4F20;&#x53C2;&#x9519;&#x8BEF;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x5361;&#x6B7B;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>onReachBottom</code> &#x89E6;&#x53D1;&#x591A;&#x6B21;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;swiper/&gt;</code> &#x62E5;&#x6709;&#x6587;&#x672C;&#x8282;&#x70B9;&#x540E;&#x4EE3;&#x65F6;&#x51FA;&#x9519;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;switch/&gt;</code> <code>&lt;radio/&gt;</code> <code>&lt;checkbox/&gt;</code> <code>&lt;image/&gt;</code> <code>&lt;video/&gt;</code> hidden &#x5C5E;&#x6027;&#x4E0D;&#x751F;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;checkbox/&gt;</code> <code>&lt;radio/&gt;</code> label &#x65E0;&#x6CD5;&#x751F;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;scroll-view/&gt;</code> &#x6ED1;&#x52A8;&#x5230;&#x9876;&#x90E8;&#x6216;&#x5E95;&#x90E8;&#x95EA;&#x5C4F;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;video/&gt;</code> &#x5728; iOS &#x4E0A;&#x4E8B;&#x4EF6;&#x4E0D;&#x751F;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;video/&gt;</code> &#x5728; iOS &#x88AB;&#x79FB;&#x9664;&#x4E86;&#x58F0;&#x97F3;&#x4F1A;&#x7EE7;&#x7EED;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;text/&gt;</code> &#x5185;&#x5D4C;&#x4E0D;&#x4F1A;&#x52A8;&#x6001;&#x66F4;&#x65B0; class &#x548C; style &#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;button/&gt;</code> disabled &#x65F6;&#x6587;&#x5B57;&#x989C;&#x8272;&#x4E0D;&#x5BF9;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> focus &#x5C5E;&#x6027;&#x65E0;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> &#x5728; iOS9 &#x4F7F;&#x7528; display:flex &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x8F93;&#x5165;&#x4E0D;&#x663E;&#x793A;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> &#x521D;&#x59CB;&#x503C;&#x4E3A; undefined &#x65F6;&#x663E;&#x793A;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> placeholder &#x91CD;&#x5F71;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> <code>&lt;textare/&gt;</code> &#x805A;&#x7126;&#x524D;&#x540E;&#x989C;&#x8272;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;textarea/&gt;</code> position:fixed &#x5B9A;&#x4F4D;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;textarea/&gt;</code> &#x5728;&#x6253;&#x5F00; picker &#x540E;&#x4E0D;&#x89E6;&#x53D1; blur &#x4E8B;&#x4EF6;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;textarea/&gt;</code> &#x8BBE;&#x7F6E; auto-height &#x65F6;&#x9AD8;&#x5EA6;&#x53D8;&#x5316;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;textarea/&gt;</code> &#x9500;&#x6BC1;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;video/&gt;</code> &#x5728; Android &#x5168;&#x5C4F;&#x6309;&#x94AE;&#x70B9;&#x51FB;&#x4E24;&#x6B21;&#x624D;&#x80FD;&#x751F;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;audio/&gt;</code> &#x5728;&#x591A;&#x4E2A;&#x9875;&#x9762;&#x4E2D;&#x4F7F;&#x7528;&#x76F8;&#x540C; id &#x51B2;&#x7A81;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;canvas/&gt;</code> drawImage &#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x663E;&#x793A;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;image/&gt;</code> &#x5728; bindload &#x4E8B;&#x4EF6;&#x91CC;&#x9762; setData &#x4F1A;&#x51FA;&#x73B0;&#x6B7B;&#x5FAA;&#x73AF;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;scroll-view/&gt;</code> scroll-into-view &#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;form/&gt;</code> submit &#x53D6;&#x4E0D;&#x5230; input &#x7684;&#x5185;&#x5BB9;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>D</code> &#x5373;&#x5C06;&#x79FB;&#x9664; <code>&lt;navigator/&gt;</code> redirect &#x5C5E;&#x6027;</li>
+<li><code>D</code> &#x5373;&#x5C06;&#x79FB;&#x9664; <code>wx.createContext</code> &#x63A5;&#x53E3;</li>
+<li><code>D</code> &#x5373;&#x5C06;&#x79FB;&#x9664; <code>&lt;input/&gt;</code> auto-focus &#x5C5E;&#x6027;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528; focus &#x5C5E;&#x6027;&#x5373;&#x53EF;</li>
+<li><code>D</code> &#x5373;&#x5C06;&#x79FB;&#x9664; <code>&lt;map /&gt;</code> covers &#x5C5E;&#x6027;</li>
+</ol>
+<h3 id="20161031">2016.10.31</h3>
+<ol>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;button/&gt;</code> &#x7EC4;&#x4EF6;&#x7684;&#x90E8;&#x5206;&#x4E8B;&#x4EF6;&#x8C03;&#x7528;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x52A8;&#x6001;&#x53D8;&#x66F4; <code>&lt;swiper-item/&gt;</code> &#x7EC4;&#x4EF6;&#x5217;&#x8868;&#x65F6;&#x5B58;&#x5728;&#x7684; <code>&lt;swiper&gt;</code> &#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x90E8;&#x5206; rpx &#x65E0;&#x6548;</li>
+</ol>
+<h3 id="20161028">2016.10.28</h3>
+<ol>
+<li><code>F</code> &#x4FEE;&#x590D; <code>page.prototype.setData</code> &#x5728; <code>onLoad</code> &#x548C; <code>onShow</code> &#x4E2D;&#x672A;&#x53CA;&#x65F6;&#x8BBE;&#x7F6E;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.navigateTo</code> &#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.getStorageInfoSync</code> &#x8FD4;&#x56DE;&#x503C;&#x4E2D;&#x6709;&#x591A;&#x4F59; <code>errMsg</code> &#x7684;&#x95EE;&#x9898;</li>
+<li><code>A</code> &#x589E;&#x52A0; &#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x7BA1;&#x7406; API <code>wx.getSavedFileList</code>&#x3001;<code>wx.getSavedFileInfo</code>&#x3001;<code>wx.removeSavedFile</code>&#x3001;<code>wx.openDocument</code> <a href="../../api/file.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x589E;&#x52A0; &#x56DB;&#x4E2A;&#x6570;&#x636E;&#x7BA1;&#x7406; API <code>wx.removeStorage</code>&#x3001;<code>wx.removeStorageSync</code>&#x3001;<code>wx.getStorageInfo</code>&#x3001;<code>wx.getStorageInfoSync</code> <a href="../../api/data.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x56DB;&#x4E2A;&#x4EA4;&#x4E92;&#x53CD;&#x9988; API <code>wx.showToast</code>&#x3001;<code>wx.showModal</code>&#x3001;<code>wx.hideModal</code>&#x3001;<code>wx.showActionSheet</code> <a href="../../api/api-react.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x9009;&#x62E9;&#x5730;&#x7406;&#x4F4D;&#x7F6E; API <code>wx.chooseLocation</code> <a href="../../api/location.html#wxchooselocationobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x83B7;&#x53D6;&#x56FE;&#x7247;&#x4FE1;&#x606F; API <code>wx.getImageInfo</code> <a href="../../api/media-picture.html#wxgetimageinfoobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x97F3;&#x9891;&#x7EC4;&#x4EF6;&#x63A7;&#x5236; API <code>wx.createAudioContext</code> <a href="../../api/api-audio.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x89C6;&#x9891;&#x7EC4;&#x4EF6;&#x63A7;&#x5236; API <code>wx.createVideoContext</code> <a href="../../api/api-video.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x4E24;&#x4E2A;&#x8BBE;&#x5907; API <code>wx.getSystemInfoSync</code>&#x3001;<code>wx.makePhoneCall</code> <a href="../../api/device.html#wxgetsysteminfosync">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x7ED8;&#x56FE; API <code>wx.canvasToTempFilePath</code> <a href="../../api/canvas/temp-file.html#wxcanvastotempfilepathobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x5F00;&#x653E;&#x80FD;&#x529B; API <code>wx.checkSession</code> <a href="../../api/api-login.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>wx.navigateBack</code> delta &#x53C2;&#x6570;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x5C42;&#x7EA7;&#x8FD4;&#x56DE; <a href="../../api/ui-navigate.html#wxnavigatebackobject">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>wx.sendSocketMessage</code>&#x3001;<code>wx.onSocketMessage</code> &#x652F;&#x6301;&#x6536;&#x53D1; ArrayBuffer &#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+<li><code>A</code> &#x65B0;&#x589E; <code>getCurrentPages()</code> &#x65B9;&#x6CD5;&#xFF0C; &#x83B7;&#x53D6;&#x9875;&#x9762;&#x6808; <a href="../../framework/app-service/page.html#getcurrentpages">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>Page.onReachBottom()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x76D1;&#x542C;&#x9875;&#x9762;&#x5230;&#x8FBE;&#x5E95;&#x90E8; <a href="../../framework/app-service/page.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; &#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x589E;&#x52A0; changedTouches &#x5217;&#x8868;&#xFF0C;&#x53CD;&#x5E94;&#x624B;&#x6307;&#x89E6;&#x6478;&#x4F4D;&#x7F6E;&#x7684;&#x53D8;&#x5316; <a href="../../framework/view/wxml/event.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;textarea/&gt;</code> &#x7EC4;&#x4EF6; <a href="../../component/textarea.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;canvas/&gt;</code> &#x591A;&#x70B9;&#x89E6;&#x6478; <a href="../../component/canvas.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;canvas/&gt;</code> disable-scroll &#x5C5E;&#x6027; <a href="../../component/canvas.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;image/&gt;</code> bindload &#x4E8B;&#x4EF6;&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x5BBD;&#x9AD8; <a href="../../component/image.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;text/&gt;</code> &#x5D4C;&#x5957; <code>&lt;text/&gt;</code> &#x529F;&#x80FD; <a href="../../component/text.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;video/&gt;</code> controls autoplay &#x5C5E;&#x6027; <a href="../../component/video.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;video/&gt;</code> &#x652F;&#x6301;&#x8BBE;&#x7F6E;&#x5F39;&#x5E55;&#x3001;&#x53D1;&#x9001;&#x5F39;&#x5E55; <a href="../../component/video.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; <code>&lt;video/&gt;</code> &#x64AD;&#x653E;&#x7C7B;&#x4E8B;&#x4EF6; <a href="../../api/api-video.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; WXML <code>wx:key</code> &#x652F;&#x6301;&#xFF0C;&#x63D0;&#x5347;&#x5217;&#x8868;&#x6E32;&#x67D3;&#x65F6;&#x6027;&#x80FD; <a href="../../framework/view/wxml/list.html#wxkey">&#x8BE6;&#x60C5;</a></li>
+<li><code>A</code> &#x65B0;&#x589E; WXML &#x5173;&#x952E;&#x5B57;&#x3001;&#x6570;&#x636E;&#x8DEF;&#x5F84;&#x8BA1;&#x7B97; <a href="../../framework/view/wxml/data.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>U</code> &#x65B0;&#x589E; app.json <code>tabBar</code> &#x5C5E;&#x6027; <code>position</code> &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x663E;&#x793A;&#x4F4D;&#x7F6E; <a href="../../framework/config.html#tabbar">&#x8BE6;&#x60C5;</a></li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.navigateTo</code> api &#x8D85;&#x8FC7; 5 &#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x65E0;&#x8FD4;&#x56DE;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>U</code> &#x4FEE;&#x590D; <code>&lt;navigator/&gt;</code> &#x8BBE;&#x7F6E; <code>display: flex</code> &#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> <code>text-align:center</code>&#x3001;<code>text-align:right</code> &#x4E0D;&#x652F;&#x6301;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> &#x805A;&#x7126;&#x65F6;&#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;image/&gt;</code> base64 &#x56FE;&#x7247;&#x663E;&#x793A;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x52A8;&#x6001;&#x8282;&#x70B9;&#x66F4;&#x65B0;&#x5BFC;&#x81F4;&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x91CD;&#x7F6E;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x4F7F;&#x7528; rpx &#x5355;&#x4F4D;&#x90E8;&#x5206;&#x624B;&#x673A;&#x51FA;&#x73B0;&#x8FB9;&#x6846;&#x663E;&#x793A;&#x4E0D;&#x5168;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x4E0D;&#x540C;&#x9875;&#x9762;&#x4E2D;&#x76F8;&#x540C;&#x7684; <code>canvas-id</code> &#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; page &#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x5185;&#x7684; function &#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.drawCanvas</code> &#x5728; canvas &#x5BBD;&#x9AD8;&#x4E3A; 0 &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x753B;&#x4E0D;&#x51FA;&#x6765;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>wx.request</code> header &#x8BBE;&#x7F6E; &apos;Content-Type&apos; &#x5F02;&#x5E38;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>D</code> &#x5373;&#x5C06;&#x79FB;&#x9664; <code>App.prototype.getCurrentPage</code>&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x66F4;&#x529F;&#x80FD;&#x66F4;&#x5F3A;&#x5927;&#x7684; <code>getCurrentPages</code> &#x66FF;&#x4EE3; <a href="../../framework/app-service/app.html#appprototypegetcurrentpage">&#x8BE6;&#x60C5;</a></li>
+<li><code>D</code> &#x5373;&#x5C06;&#x79FB;&#x9664; <code>&lt;audio/&gt;</code> action &#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x97F3;&#x9891;&#x7EC4;&#x4EF6;&#x63A7;&#x5236; API &#x66FF;&#x4EE3; <a href="../../api/api-audio.html">&#x8BE6;&#x60C5;</a></li>
+<li><code>D</code> &#x5373;&#x5C06;&#x79FB;&#x9664;&#x7EC4;&#x4EF6;&#xFF1A; <code>&lt;toast/&gt;</code> <code>&lt;loading/&gt;</code> <code>&lt;action-sheet/&gt;</code> <code>&lt;modal/&gt;</code>, &#x53EF;&#x4F7F;&#x7528;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x4EA4;&#x4E92;&#x53CD;&#x9988; API &#x66FF;&#x4EE3; <a href="../../api/api-react.html">&#x8BE6;&#x60C5;</a></li>
+</ol>
+<h3 id="20161011">2016.10.11</h3>
+<ol>
+<li><code>A</code> &#x589E;&#x52A0; <code>&lt;video/&gt;</code> Android &#x6DFB;&#x52A0;&#x4E86;&#x9ED8;&#x8BA4;&#x7684;&#x63A7;&#x4EF6;</li>
+<li><code>A</code> &#x589E;&#x52A0; &#x6A21;&#x5757;&#x5316;&#x4E2D;&#x53EF;&#x4F7F;&#x7528; <code>exports</code> &#x5BF9;&#x5916;&#x66B4;&#x9732;&#x63A5;&#x53E3;</li>
+<li><code>A</code> &#x589E;&#x52A0; &#x6A21;&#x5757;&#x5316;&#x4E2D; <code>require</code> &#x53EF;&#x4E0D;&#x5199; <code>.js</code> &#x540E;&#x7F00;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;swiper/&gt;</code> &#x6ED1;&#x52A8;&#x7075;&#x654F;&#x5EA6;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;toast/&gt;</code> &#x4E2D;&#x56FE;&#x6807;&#x4F4D;&#x7F6E;&#x504F;&#x4E0A;&#xFF0C;&#x6CA1;&#x6709;&#x5C45;&#x4E2D;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;view/&gt;</code> &#x6807;&#x7B7E; hidden &#x5C5E;&#x6027;&#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;input/&gt;</code> iOS10 &#x4E0B;&#x9996;&#x6B21;&#x8F93;&#x5165;&#x4E0D;&#x663E;&#x793A;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;button/&gt;</code> type=&quot;mini&quot; &#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;button/&gt;</code> &#x51FA;&#x73B0; loading &#x65F6;&#xFF0C;loading&#x548C;&#x6587;&#x5B57;&#x5BF9;&#x9F50;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; <code>&lt;canvas/&gt;</code> drawImage &#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; Page &#x4E2D; data &#x4E4B;&#x5916;&#x7684;&#x6570;&#x636E;&#x65E0;&#x6CD5;&#x88AB;&#x91CD;&#x7F6E;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; &#x5927;&#x5C0F;&#x5199;&#x5BFC;&#x81F4;&#x7684; wx.request &#x7684; header &#x53C2;&#x6570;&#x5C5E;&#x6027;&#x88AB;&#x91CD;&#x590D;&#x8BBE;&#x7F6E;&#x7684;&#x95EE;&#x9898;</li>
+<li><code>F</code> &#x4FEE;&#x590D; app.js &#x4E2D;&#x65E0;&#x6CD5;&#x4F7F;&#x7528; <code>require</code> &#x7684;&#x95EE;&#x9898;</li>
+<li><code>R</code> &#x79FB;&#x9664; <code>&lt;switch/&gt;</code> &#x7EC4;&#x4EF6;&#x591A;&#x4F59;&#x70B9;&#x51FB;&#x6001;</li>
+<li><code>R</code> &#x79FB;&#x9664; <code>&lt;view/&gt;</code> &#x6807;&#x7B7E; inline &#x5C5E;&#x6027;</li>
+<li><code>R</code> &#x79FB;&#x9664; <code>&lt;page/&gt;</code> &#x6807;&#x7B7E;&#x7684; height 100% &#x7684;&#x9ED8;&#x8BA4;&#x6837;&#x5F0F;</li>
+</ol>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

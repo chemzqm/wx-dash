@@ -61,4 +61,7 @@
 ./performance/tools.html|性能 分析工具
 ./file-system.html|文件系统
 ./release.html|基础库更新日志
+./release.html|基础库更新日志 v2.x版本
+./release/v1.html|基础库更新日志 v1.x版本
+./release/v0.html|基础库更新日志 v0.x版本
 undefined|undefined
