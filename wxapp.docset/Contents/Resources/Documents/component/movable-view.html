@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
   <title>movable-view</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../website.css">
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -31,7 +33,7 @@
 </thead>
 <tbody>
 <tr>
-<td id="movable-view-scale-area">scale-area</td>
+<td>scale-area</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x5F53;&#x91CC;&#x9762;&#x7684;movable-view&#x8BBE;&#x7F6E;&#x4E3A;&#x652F;&#x6301;&#x53CC;&#x6307;&#x7F29;&#x653E;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x6B64;&#x503C;&#x53EF;&#x5C06;&#x7F29;&#x653E;&#x624B;&#x52BF;&#x751F;&#x6548;&#x533A;&#x57DF;&#x4FEE;&#x6539;&#x4E3A;&#x6574;&#x4E2A;movable-area</td>
@@ -57,105 +59,105 @@
 </thead>
 <tbody>
 <tr>
-<td id="movable-view-direction">direction</td>
+<td>direction</td>
 <td>String</td>
 <td>none</td>
 <td>movable-view&#x7684;&#x79FB;&#x52A8;&#x65B9;&#x5411;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x6709;all&#x3001;vertical&#x3001;horizontal&#x3001;none</td>
 <td></td>
 </tr>
 <tr>
-<td id="movable-view-inertia">inertia</td>
+<td>inertia</td>
 <td>Boolean</td>
 <td>false</td>
 <td>movable-view&#x662F;&#x5426;&#x5E26;&#x6709;&#x60EF;&#x6027;</td>
 <td></td>
 </tr>
 <tr>
-<td id="movable-view-out-of-bounds">out-of-bounds</td>
+<td>out-of-bounds</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x8D85;&#x8FC7;&#x53EF;&#x79FB;&#x52A8;&#x533A;&#x57DF;&#x540E;&#xFF0C;movable-view&#x662F;&#x5426;&#x8FD8;&#x53EF;&#x4EE5;&#x79FB;&#x52A8;</td>
 <td></td>
 </tr>
 <tr>
-<td id="movable-view-x">x</td>
+<td>x</td>
 <td>Number / String</td>
 <td></td>
 <td>&#x5B9A;&#x4E49;x&#x8F74;&#x65B9;&#x5411;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x5982;&#x679C;x&#x7684;&#x503C;&#x4E0D;&#x5728;&#x53EF;&#x79FB;&#x52A8;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x79FB;&#x52A8;&#x5230;&#x53EF;&#x79FB;&#x52A8;&#x8303;&#x56F4;&#xFF1B;&#x6539;&#x53D8;x&#x7684;&#x503C;&#x4F1A;&#x89E6;&#x53D1;&#x52A8;&#x753B;</td>
 <td></td>
 </tr>
 <tr>
-<td id="movable-view-y">y</td>
+<td>y</td>
 <td>Number / String</td>
 <td></td>
 <td>&#x5B9A;&#x4E49;y&#x8F74;&#x65B9;&#x5411;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x5982;&#x679C;y&#x7684;&#x503C;&#x4E0D;&#x5728;&#x53EF;&#x79FB;&#x52A8;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x79FB;&#x52A8;&#x5230;&#x53EF;&#x79FB;&#x52A8;&#x8303;&#x56F4;&#xFF1B;&#x6539;&#x53D8;y&#x7684;&#x503C;&#x4F1A;&#x89E6;&#x53D1;&#x52A8;&#x753B;</td>
 <td></td>
 </tr>
 <tr>
-<td id="movable-view-damping">damping</td>
+<td>damping</td>
 <td>Number</td>
 <td>20</td>
 <td>&#x963B;&#x5C3C;&#x7CFB;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;x&#x6216;y&#x6539;&#x53D8;&#x65F6;&#x7684;&#x52A8;&#x753B;&#x548C;&#x8FC7;&#x754C;&#x56DE;&#x5F39;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x503C;&#x8D8A;&#x5927;&#x79FB;&#x52A8;&#x8D8A;&#x5FEB;</td>
 <td></td>
 </tr>
 <tr>
-<td id="movable-view-friction">friction</td>
+<td>friction</td>
 <td>Number</td>
 <td>2</td>
 <td>&#x6469;&#x64E6;&#x7CFB;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x60EF;&#x6027;&#x6ED1;&#x52A8;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x503C;&#x8D8A;&#x5927;&#x6469;&#x64E6;&#x529B;&#x8D8A;&#x5927;&#xFF0C;&#x6ED1;&#x52A8;&#x8D8A;&#x5FEB;&#x505C;&#x6B62;&#xFF1B;&#x5FC5;&#x987B;&#x5927;&#x4E8E;0&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x88AB;&#x8BBE;&#x7F6E;&#x6210;&#x9ED8;&#x8BA4;&#x503C;</td>
 <td></td>
 </tr>
 <tr>
-<td id="movable-view-disabled">disabled</td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="movable-view-scale">scale</td>
+<td>scale</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x652F;&#x6301;&#x53CC;&#x6307;&#x7F29;&#x653E;&#xFF0C;&#x9ED8;&#x8BA4;&#x7F29;&#x653E;&#x624B;&#x52BF;&#x751F;&#x6548;&#x533A;&#x57DF;&#x662F;&#x5728;movable-view&#x5185;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="movable-view-scale-min">scale-min</td>
+<td>scale-min</td>
 <td>Number</td>
 <td>0.5</td>
 <td>&#x5B9A;&#x4E49;&#x7F29;&#x653E;&#x500D;&#x6570;&#x6700;&#x5C0F;&#x503C;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="movable-view-scale-max">scale-max</td>
+<td>scale-max</td>
 <td>Number</td>
 <td>10</td>
 <td>&#x5B9A;&#x4E49;&#x7F29;&#x653E;&#x500D;&#x6570;&#x6700;&#x5927;&#x503C;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="movable-view-scale-value">scale-value</td>
+<td>scale-value</td>
 <td>Number</td>
 <td>1</td>
 <td>&#x5B9A;&#x4E49;&#x7F29;&#x653E;&#x500D;&#x6570;&#xFF0C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A; 0.5 - 10</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="movable-view-animation">animation</td>
+<td>animation</td>
 <td>Boolean</td>
 <td>true</td>
 <td>&#x662F;&#x5426;&#x4F7F;&#x7528;&#x52A8;&#x753B;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a></td>
 </tr>
 <tr>
-<td id="movable-view-bindchange">bindchange</td>
+<td>bindchange</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x62D6;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x89E6;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;event.detail = {x: x, y: y, source: source}&#xFF0C;&#x5176;&#x4E2D;source&#x8868;&#x793A;&#x4EA7;&#x751F;&#x79FB;&#x52A8;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x503C;&#x53EF;&#x4E3A;touch&#xFF08;&#x62D6;&#x52A8;&#xFF09;&#x3001;touch-out-of-bounds&#xFF08;&#x8D85;&#x51FA;&#x79FB;&#x52A8;&#x8303;&#x56F4;&#xFF09;&#x3001;out-of-bounds&#xFF08;&#x8D85;&#x51FA;&#x79FB;&#x52A8;&#x8303;&#x56F4;&#x540E;&#x7684;&#x56DE;&#x5F39;&#xFF09;&#x3001;friction&#xFF08;&#x60EF;&#x6027;&#xFF09;&#x548C;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF08;setData&#xFF09;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="movable-view-bindscale">bindscale</td>
+<td>bindscale</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x7F29;&#x653E;&#x8FC7;&#x7A0B;&#x4E2D;&#x89E6;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;event.detail = {x: x, y: y, scale: scale}&#xFF0C;&#x5176;&#x4E2D;x&#x548C;y&#x5B57;&#x6BB5;&#x5728;<a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a>&#x4E4B;&#x540E;&#x5F00;&#x59CB;&#x652F;&#x6301;&#x8FD4;&#x56DE;</td>
@@ -239,6 +241,5 @@
                         
                     </div>
                 
-
-
-</body></html>
+</body>
+</html>
