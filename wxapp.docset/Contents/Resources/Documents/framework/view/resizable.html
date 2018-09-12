@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>响应显示区域变化</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="&#x54CD;&#x5E94;&#x663E;&#x793A;&#x533A;&#x57DF;&#x53D8;&#x5316;">&#x54CD;&#x5E94;&#x663E;&#x793A;&#x533A;&#x57DF;&#x53D8;&#x5316;</h1>
+<h2 id="&#x663E;&#x793A;&#x533A;&#x57DF;&#x5C3A;&#x5BF8;">&#x663E;&#x793A;&#x533A;&#x57DF;&#x5C3A;&#x5BF8;</h2>
+<p>&#x663E;&#x793A;&#x533A;&#x57DF;&#x6307;&#x5C0F;&#x7A0B;&#x5E8F;&#x754C;&#x9762;&#x4E2D;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5E03;&#x5C40;&#x5C55;&#x793A;&#x7684;&#x533A;&#x57DF;&#x3002;&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x5C3A;&#x5BF8;&#x81EA;&#x9875;&#x9762;&#x521D;&#x59CB;&#x5316;&#x8D77;&#x5C31;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x4ECE;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.3.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.3.0</a> &#x5F00;&#x59CB;&#xFF0C;&#x5728; iPad &#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#x3002;&#x4F7F;&#x5C0F;&#x7A0B;&#x5E8F;&#x652F;&#x6301; iPad &#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;&#x5728; <code>app.json</code> &#x4E2D;&#x6DFB;&#x52A0; <code>&quot;resizable&quot;: true</code> &#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;resizable&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x5C0F;&#x7A0B;&#x5E8F;&#x6DFB;&#x52A0;&#x4E86;&#x4E0A;&#x8FF0;&#x58F0;&#x660E;&#xFF0C;&#x5219;&#x5728;&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#x65F6;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5C06;&#x968F;&#x4E4B;&#x65CB;&#x8F6C;&#xFF0C;&#x663E;&#x793A;&#x533A;&#x57DF;&#x5C3A;&#x5BF8;&#x4E5F;&#x4F1A;&#x968F;&#x7740;&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#x800C;&#x53D8;&#x5316;&#x3002;</p>
+<h2 id="media-query">Media Query</h2>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x663E;&#x793A;&#x533A;&#x57DF;&#xFF0C;&#x9875;&#x9762;&#x7684;&#x5E03;&#x5C40;&#x4F1A;&#x6709;&#x6240;&#x5DEE;&#x5F02;&#x3002;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; media query &#x6765;&#x89E3;&#x51B3;&#x5927;&#x591A;&#x6570;&#x95EE;&#x9898;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="language-css"><span class="hljs-selector-class">.my-class</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">40px</span>;
+}
+
+@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">480px</span>) {
+  <span class="hljs-comment">/* &#x4EC5;&#x5728; 480px &#x6216;&#x66F4;&#x5BBD;&#x7684;&#x5C4F;&#x5E55;&#x4E0A;&#x751F;&#x6548;&#x7684;&#x6837;&#x5F0F;&#x89C4;&#x5219; */</span>
+  <span class="hljs-selector-class">.my-class</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  }
+}
+</code></pre>
+<h2 id="&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#x4E8B;&#x4EF6;">&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#x4E8B;&#x4EF6;</h2>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4EC5;&#x4EC5;&#x4F7F;&#x7528; media query &#x65E0;&#x6CD5;&#x63A7;&#x5236;&#x4E00;&#x4E9B;&#x7CBE;&#x7EC6;&#x7684;&#x5E03;&#x5C40;&#x53D8;&#x5316;&#x3002;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; js &#x4F5C;&#x4E3A;&#x8F85;&#x52A9;&#x3002;</p>
+<p>&#x5728; js &#x4E2D;&#x8BFB;&#x53D6;&#x9875;&#x9762;&#x7684;&#x663E;&#x793A;&#x533A;&#x57DF;&#x5C3A;&#x5BF8;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="../../api/wxml/SelectorQuery.selectViewport.html">selectorQuery.selectViewport</a> &#x3002;</p>
+<p>&#x9875;&#x9762;&#x5C3A;&#x5BF8;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>wx.onWindowResize</code> &#x6765;&#x76D1;&#x542C;&#x3002;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x5C06;&#x8FD4;&#x56DE;&#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x5C3A;&#x5BF8;&#x4FE1;&#x606F;&#x3002;</p>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="language-js">wx.onWindowResize(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  res.size.windowWidth <span class="hljs-comment">// &#x65B0;&#x7684;&#x663E;&#x793A;&#x533A;&#x57DF;&#x5BBD;&#x5EA6;</span>
+  res.size.windowHeight <span class="hljs-comment">// &#x65B0;&#x7684;&#x663E;&#x793A;&#x533A;&#x57DF;&#x9AD8;&#x5EA6;</span>
+
+  <span class="hljs-comment">// &#x89E6;&#x53D1;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684; resized &#x65B9;&#x6CD5;</span>
+  <span class="hljs-keyword">var</span> currentPages = getCurrentPages()
+  <span class="hljs-keyword">var</span> currentPage = currentPages[currentPages.length - <span class="hljs-number">1</span>]
+  <span class="hljs-keyword">if</span> (currentPage != <span class="hljs-literal">null</span> &amp;&amp; <span class="hljs-keyword">typeof</span> currentPage.resized === <span class="hljs-string">&apos;function&apos;</span>) {
+    currentPage.resized(res.size)
+  }
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

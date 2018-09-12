@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>生物认证</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h2 id="&#x751F;&#x7269;&#x8BA4;&#x8BC1;">&#x751F;&#x7269;&#x8BA4;&#x8BC1;</h2>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7; <a href="https://github.com/Tencent/soter">SOTER</a> &#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x751F;&#x7269;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#x6682;&#x65F6;&#x53EA;&#x652F;&#x6301;&#x6307;&#x7EB9;&#x8BC6;&#x522B;&#x8BA4;&#x8BC1;&#x3002;&#x8BBE;&#x5907;&#x652F;&#x6301;&#x7684;&#x751F;&#x7269;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x53EF;&#x4F7F;&#x7528; <a href="../../api/open-api/soter/wx.checkIsSupportSoterAuthentication.html"><code>wx.checkIsSupportSoterAuthentication</code></a> &#x67E5;&#x8BE2;</p>
+<h3 id="&#x8C03;&#x7528;&#x6D41;&#x7A0B;">&#x8C03;&#x7528;&#x6D41;&#x7A0B;</h3>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/soter.png?t=18091218" alt="" style="width:700px"></p>
+<h4 id="&#x6D41;&#x7A0B;&#x6B65;&#x9AA4;&#x8BF4;&#x660E;">&#x6D41;&#x7A0B;&#x6B65;&#x9AA4;&#x8BF4;&#x660E;</h4>
+<ol>
+<li>
+<p>&#x8C03;&#x7528; <a href="../../api/open-api/soter/wx.startSoterAuthentication.html"><code>wx.startSoterAuthentication</code></a>&#xFF0C;&#x83B7;&#x53D6; <code>resultJSON</code> &#x548C; <code>resultJSONSignature</code></p>
+</li>
+<li>
+<p>&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x7B7E;&#x540D;&#x6821;&#x9A8C;&#x3002;&#x6B64;&#x5904; <code>resultJSONSignature</code> &#x4F7F;&#x7528; SHA256withRSA/PSS &#x4F5C;&#x4E3A;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x9A8C;&#x7B7E;&#x3002;&#x6B64;&#x516C;&#x5F0F;&#x6570;&#x5B66;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;: <code>bool &#x9A8C;&#x7B7E;&#x7ED3;&#x679C;=verify(&#x7528;&#x4E8E;&#x7B7E;&#x540D;&#x7684;&#x539F;&#x4E32;&#xFF0C;&#x7B7E;&#x540D;&#x4E32;&#xFF0C;&#x9A8C;&#x8BC1;&#x7B7E;&#x540D;&#x7684;&#x516C;&#x94A5;)</code></p>
+</li>
+<li>
+<p>&#x5FAE;&#x4FE1;&#x63D0;&#x4F9B;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x7528;&#x4E8E;&#x53EF;&#x4FE1;&#x7684;&#x5BC6;&#x94A5;&#x9A8C;&#x7B7E;&#x670D;&#x52A1;&#xFF0C;&#x5FAE;&#x4FE1;&#x5C06;&#x4FDD;&#x8BC1;&#x8BE5;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x9A8C;&#x7B7E;&#x7ED3;&#x679C;&#x7684;&#x6B63;&#x786E;&#x6027;&#x4E0E;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x4E8E; Android root &#x60C5;&#x51B5;&#x4E0B;&#x8BE5;&#x63A5;&#x53E3;&#x5177;&#x6709;&#x4E0A;&#x8FF0;&#x7279;&#x5F81;&#xFF08;&#x5C06;&#x8FD4;&#x56DE;&#x662F;&#x5426;&#x4FDD;&#x8BC1;root&#x60C5;&#x51B5;&#x5B89;&#x5168;&#x6027;&#xFF09;&#x3002;</p>
+</li>
+</ol>
+<p>&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF1A;</p>
+<pre><code>POST http://api.weixin.qq.com/cgi-bin/soter/verify_signature?access_token=%access_token
+</code></pre>
+<p>post &#x6570;&#x636E;&#x5185;&#x5BB9;&#xFF08;JSON &#x7F16;&#x7801;&#xFF09;:</p>
+<pre><code class="language-json">{<span class="hljs-attr">&quot;openid&quot;</span>:<span class="hljs-string">&quot;$openid&quot;</span>, <span class="hljs-attr">&quot;json_string&quot;</span> : <span class="hljs-string">&quot;$resultJSON&quot;</span>, <span class="hljs-attr">&quot;json_signature&quot;</span> : <span class="hljs-string">&quot;$resultJSONSignature&quot;</span> }
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

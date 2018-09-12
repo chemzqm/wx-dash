@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>使用分包</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="&#x4F7F;&#x7528;&#x5206;&#x5305;">&#x4F7F;&#x7528;&#x5206;&#x5305;</h1>
+<h3 id="&#x914D;&#x7F6E;&#x65B9;&#x6CD5;">&#x914D;&#x7F6E;&#x65B9;&#x6CD5;</h3>
+<p>&#x5047;&#x8BBE;&#x652F;&#x6301;&#x5206;&#x5305;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&#x251C;&#x2500;&#x2500; app.js
+&#x251C;&#x2500;&#x2500; app.json
+&#x251C;&#x2500;&#x2500; app.wxss
+&#x251C;&#x2500;&#x2500; packageA
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; pages
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; cat
+&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; dog
+&#x251C;&#x2500;&#x2500; packageB
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; pages
+&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; apple
+&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; banana
+&#x251C;&#x2500;&#x2500; pages
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; index
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; logs
+&#x2514;&#x2500;&#x2500; utils
+</code></pre>
+<p>&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x5728; app.json <code>subPackages</code> &#x5B57;&#x6BB5;&#x58F0;&#x660E;&#x9879;&#x76EE;&#x5206;&#x5305;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;pages&quot;</span>:[
+    <span class="hljs-string">&quot;pages/index&quot;</span>,
+    <span class="hljs-string">&quot;pages/logs&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;subPackages&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;root&quot;</span>: <span class="hljs-string">&quot;packageA&quot;</span>,
+      <span class="hljs-attr">&quot;pages&quot;</span>: [
+        <span class="hljs-string">&quot;pages/cat&quot;</span>,
+        <span class="hljs-string">&quot;pages/dog&quot;</span>
+      ]
+    }, {
+      <span class="hljs-attr">&quot;root&quot;</span>: <span class="hljs-string">&quot;packageB&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;pack2&quot;</span>,
+      <span class="hljs-attr">&quot;pages&quot;</span>: [
+        <span class="hljs-string">&quot;pages/apple&quot;</span>,
+        <span class="hljs-string">&quot;pages/banana&quot;</span>
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><code>subPackages</code> &#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5206;&#x5305;&#x7684;&#x914D;&#x7F6E;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>root</td>
+<td>String</td>
+<td>&#x5206;&#x5305;&#x6839;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>&#x5206;&#x5305;&#x522B;&#x540D;&#xFF0C;<a href="preload.html">&#x5206;&#x5305;&#x9884;&#x4E0B;&#x8F7D;</a>&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>pages</td>
+<td>StringArray</td>
+<td>&#x5206;&#x5305;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#xFF0C;&#x76F8;&#x5BF9;&#x4E0E;&#x5206;&#x5305;&#x6839;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>independent</td>
+<td>Boolean</td>
+<td>&#x5206;&#x5305;&#x662F;&#x5426;&#x662F;<a href="independent.html">&#x72EC;&#x7ACB;&#x5206;&#x5305;</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6253;&#x5305;&#x539F;&#x5219;">&#x6253;&#x5305;&#x539F;&#x5219;</h3>
+<ul>
+<li>&#x58F0;&#x660E; <code>subPackages</code> &#x540E;&#xFF0C;&#x5C06;&#x6309; <code>subPackages</code> &#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x6253;&#x5305;&#xFF0C;<code>subPackages</code> &#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#x5916;&#x7684;&#x76EE;&#x5F55;&#x5C06;&#x88AB;&#x6253;&#x5305;&#x5230; app&#xFF08;&#x4E3B;&#x5305;&#xFF09; &#x4E2D;</li>
+<li>app&#xFF08;&#x4E3B;&#x5305;&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x81EA;&#x5DF1;&#x7684; pages&#xFF08;&#x5373;&#x6700;&#x5916;&#x5C42;&#x7684; pages &#x5B57;&#x6BB5;&#xFF09;</li>
+<li><code>subPackage</code> &#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0D;&#x80FD;&#x662F;&#x53E6;&#x5916;&#x4E00;&#x4E2A; <code>subPackage</code> &#x5185;&#x7684;&#x5B50;&#x76EE;&#x5F55;</li>
+<li><code>tabBar</code> &#x9875;&#x9762;&#x5FC5;&#x987B;&#x5728; app&#xFF08;&#x4E3B;&#x5305;&#xFF09;&#x5185;</li>
+</ul>
+<h3 id="&#x5F15;&#x7528;&#x539F;&#x5219;">&#x5F15;&#x7528;&#x539F;&#x5219;</h3>
+<ul>
+<li><code>packageA</code> &#x65E0;&#x6CD5; require <code>packageB</code> JS &#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5; require <code>app</code>&#x3001;&#x81EA;&#x5DF1; package &#x5185;&#x7684; JS &#x6587;&#x4EF6;</li>
+<li><code>packageA</code> &#x65E0;&#x6CD5; import <code>packageB</code> &#x7684; template&#xFF0C;&#x4F46;&#x53EF;&#x4EE5; require <code>app</code>&#x3001;&#x81EA;&#x5DF1; package &#x5185;&#x7684; template</li>
+<li><code>packageA</code> &#x65E0;&#x6CD5;&#x4F7F;&#x7528; <code>packageB</code> &#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>app</code>&#x3001;&#x81EA;&#x5DF1; package &#x5185;&#x7684;&#x8D44;&#x6E90;</li>
+</ul>
+<h3 id="&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;">&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;</h3>
+<p>&#x7531;&#x5FAE;&#x4FE1;&#x540E;&#x53F0;&#x7F16;&#x8BD1;&#x6765;&#x5904;&#x7406;&#x65E7;&#x7248;&#x672C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x517C;&#x5BB9;&#xFF0C;&#x540E;&#x53F0;&#x4F1A;&#x7F16;&#x8BD1;&#x4E24;&#x4EFD;&#x4EE3;&#x7801;&#x5305;&#xFF0C;&#x4E00;&#x4EFD;&#x662F;&#x5206;&#x5305;&#x540E;&#x4EE3;&#x7801;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4EFD;&#x662F;&#x6574;&#x5305;&#x7684;&#x517C;&#x5BB9;&#x4EE3;&#x7801;&#x3002;
+&#x65B0;&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x5206;&#x5305;&#xFF0C;&#x8001;&#x5BA2;&#x6237;&#x7AEF;&#x8FD8;&#x662F;&#x7528;&#x7684;&#x6574;&#x5305;&#xFF0C;&#x5B8C;&#x6574;&#x5305;&#x4F1A;&#x628A;&#x5404;&#x4E2A; <code>subPackage</code> &#x91CC;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#x653E;&#x5230; pages &#x4E2D;&#x3002;</p>
+<h3 id="&#x793A;&#x4F8B;&#x9879;&#x76EE;">&#x793A;&#x4F8B;&#x9879;&#x76EE;</h3>
+<p><a href="../../demo/demo-subpackages.zip">&#x4E0B;&#x8F7D; &#x5C0F;&#x7A0B;&#x5E8F;&#x793A;&#x4F8B;&#xFF08;&#x5206;&#x5305;&#x52A0;&#x8F7D;&#x7248;&#xFF09;&#x6E90;&#x7801;</a></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

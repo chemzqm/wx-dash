@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>WXML节点布局相交状态</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h1 id="wxml&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x76F8;&#x4EA4;&#x72B6;&#x6001;">WXML&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x76F8;&#x4EA4;&#x72B6;&#x6001;</h1>
+<p><a href="../../api/wxml/wx.createIntersectionObserver.html">&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x76F8;&#x4EA4;&#x72B6;&#x6001; API</a> &#x53EF;&#x7528;&#x4E8E;&#x76D1;&#x542C;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#x5728;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x76F8;&#x4EA4;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x4E00;&#x7EC4;API&#x5E38;&#x5E38;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x63A8;&#x65AD;&#x67D0;&#x4E9B;&#x8282;&#x70B9;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6237;&#x770B;&#x89C1;&#x3001;&#x6709;&#x591A;&#x5927;&#x6BD4;&#x4F8B;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6237;&#x770B;&#x89C1;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x7EC4;API&#x6D89;&#x53CA;&#x7684;&#x4E3B;&#x8981;&#x6982;&#x5FF5;&#x5982;&#x4E0B;&#x3002;</p>
+<ul>
+<li>&#x53C2;&#x7167;&#x8282;&#x70B9;&#xFF1A;&#x76D1;&#x542C;&#x7684;&#x53C2;&#x7167;&#x8282;&#x70B9;&#xFF0C;&#x53D6;&#x5B83;&#x7684;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x4F5C;&#x4E3A;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x3002;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x53C2;&#x7167;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x4F1A;&#x53D6;&#x5B83;&#x4EEC;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x7684; <strong>&#x4EA4;&#x96C6;</strong> &#x4F5C;&#x4E3A;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x3002;&#x9875;&#x9762;&#x663E;&#x793A;&#x533A;&#x57DF;&#x4E5F;&#x53EF;&#x4F5C;&#x4E3A;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x4E4B;&#x4E00;&#x3002;</li>
+<li>&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF1A;&#x76D1;&#x542C;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x9ED8;&#x8BA4;&#x53EA;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF08;&#x4F7F;&#x7528; <code>selectAll</code> &#x9009;&#x9879;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x76D1;&#x542C;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#xFF09;&#x3002;</li>
+<li>&#x76F8;&#x4EA4;&#x533A;&#x57DF;&#xFF1A;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x4E0E;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x7684;&#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x3002;</li>
+<li>&#x76F8;&#x4EA4;&#x6BD4;&#x4F8B;&#xFF1A;&#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x5360;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x7684;&#x6BD4;&#x4F8B;&#x3002;</li>
+<li>&#x9608;&#x503C;&#xFF1A;&#x76F8;&#x4EA4;&#x6BD4;&#x4F8B;&#x5982;&#x679C;&#x8FBE;&#x5230;&#x9608;&#x503C;&#xFF0C;&#x5219;&#x4F1A;&#x89E6;&#x53D1;&#x76D1;&#x542C;&#x5668;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x9608;&#x503C;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x3002;</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5728;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF08;&#x7528;&#x9009;&#x62E9;&#x5668; <code>.target-class</code> &#x6307;&#x5B9A;&#xFF09;&#x6BCF;&#x6B21;&#x8FDB;&#x5165;&#x6216;&#x79BB;&#x5F00;&#x9875;&#x9762;&#x663E;&#x793A;&#x533A;&#x57DF;&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="language-js">Page({
+  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    wx.createIntersectionObserver().relativeToViewport().observe(<span class="hljs-string">&apos;.target-class&apos;</span>, (res) =&gt; {
+      res.id <span class="hljs-comment">// &#x76EE;&#x6807;&#x8282;&#x70B9; id</span>
+      res.dataset <span class="hljs-comment">// &#x76EE;&#x6807;&#x8282;&#x70B9; dataset</span>
+      res.intersectionRatio <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x5360;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x7684;&#x6BD4;&#x4F8B;</span>
+      res.intersectionRect <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;</span>
+      res.intersectionRect.left <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      res.intersectionRect.top <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      res.intersectionRect.width <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x5BBD;&#x5EA6;</span>
+      res.intersectionRect.height <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x9AD8;&#x5EA6;</span>
+    })
+  }
+})
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5728;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF08;&#x7528;&#x9009;&#x62E9;&#x5668; <code>.target-class</code> &#x6307;&#x5B9A;&#xFF09;&#x4E0E;&#x53C2;&#x7167;&#x8282;&#x70B9;&#xFF08;&#x7528;&#x9009;&#x62E9;&#x5668; <code>.relative-class</code> &#x6307;&#x5B9A;&#xFF09;&#x5728;&#x9875;&#x9762;&#x663E;&#x793A;&#x533A;&#x57DF;&#x5185;&#x76F8;&#x4EA4;&#x6216;&#x76F8;&#x79BB;&#xFF0C;&#x4E14;&#x76F8;&#x4EA4;&#x6216;&#x76F8;&#x79BB;&#x7A0B;&#x5EA6;&#x8FBE;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x7684;20%&#x548C;50%&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
+<pre><code class="language-js">Page({
+  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    wx.createIntersectionObserver(<span class="hljs-keyword">this</span>, {
+      <span class="hljs-attr">thresholds</span>: [<span class="hljs-number">0.2</span>, <span class="hljs-number">0.5</span>]
+    }).relativeTo(<span class="hljs-string">&apos;.relative-class&apos;</span>).relativeToViewport().observe(<span class="hljs-string">&apos;.target-class&apos;</span>, (res) =&gt; {
+      res.intersectionRatio <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x5360;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x7684;&#x6BD4;&#x4F8B;</span>
+      res.intersectionRect <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;</span>
+      res.intersectionRect.left <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      res.intersectionRect.top <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      res.intersectionRect.width <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x5BBD;&#x5EA6;</span>
+      res.intersectionRect.height <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x9AD8;&#x5EA6;</span>
+    })
+  }
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
