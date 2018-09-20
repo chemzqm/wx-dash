@@ -16,7 +16,7 @@
                     <div id="book-search-results">
                         <div class="search-noresults">
                             <section class="normal markdown-section">
-                                <h3 id="stats-filesystemmanagerstatobject-object"><a href="Stats.html">Stats</a> FileSystemManager.stat(Object object)</h3>
+                                <h3 id="filesystemmanagerstatobject-object">FileSystemManager.stat(Object object)</h3>
 <p>&#x83B7;&#x53D6;&#x6587;&#x4EF6; Stats &#x5BF9;&#x8C61;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="object-object">Object object</h5>
@@ -88,9 +88,9 @@
 </thead>
 <tbody>
 <tr>
-<td>stat</td>
-<td><a href="Stats.html">Stats</a></td>
-<td>&#x4E00;&#x4E2A; Stats &#x5BF9;&#x8C61;</td>
+<td>stats</td>
+<td><a href="Stats.html">Stats</a>/Object</td>
+<td>&#x5F53; recursive &#x4E3A; false &#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Stats &#x5BF9;&#x8C61;&#x3002;&#x5F53; recursive &#x4E3A; true &#x4E14; path &#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Object&#xFF0C;key &#x4EE5; path &#x4E3A;&#x6839;&#x8DEF;&#x5F84;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;value &#x662F;&#x8BE5;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;&#x7684; Stats &#x5BF9;&#x8C61;&#x3002;</td>
 <td></td>
 </tr>
 </tbody>
@@ -135,8 +135,34 @@
 </tr>
 </tbody>
 </table>
-<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="stats"><a href="Stats.html">Stats</a></h5>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p>recursive &#x4E3A; false &#x65F6;</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> fs = wx.getFileSystemManager()
+fs.stat({
+    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
+        wx.env.USER_DATA_PATH
+    }
+    /testDir`</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(res.stats.isDirectory())
+  }
+})
+</code></pre>
+<p>recursive &#x4E3A; true &#x65F6;</p>
+<pre><code class="language-javascript">fs.stat({
+    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
+        wx.env.USER_DATA_PATH
+    }
+    /testDir`</span>,
+  <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+    <span class="hljs-built_in">Object</span>.keys(res.stats).forEach(<span class="hljs-function"><span class="hljs-params">path</span> =&gt;</span> {
+      <span class="hljs-keyword">let</span> stats = res.stats[path]
+      <span class="hljs-built_in">console</span>.log(path, stats.isDirectory())
+    })
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>
