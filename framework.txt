@@ -34,6 +34,8 @@
 ./view/wxs/05statement.html|视图层 WXS 语句
 ./view/wxs/06datatype.html|视图层 WXS 数据类型
 ./view/wxs/07basiclibrary.html|视图层 WXS 基础类库
+./view/intersection-observer.html|视图层 WXML节点布局相交状态
+./view/resizable.html|视图层 响应显示区域变化
 ./custom-component/index.html|自定义组件
 ./custom-component/wxml-wxss.html|自定义组件 组件模版和样式
 ./custom-component/component.html|自定义组件 Component构造器
@@ -42,6 +44,7 @@
 ./custom-component/relations.html|自定义组件 组件间关系
 ./custom-component/generics.html|自定义组件 抽象节点
 ./custom-component/extend.html|自定义组件 自定义组件扩展
+./custom-component/trdparty.html|自定义组件 开发第三方自定义组件
 ./plugin/index.html|插件
 ./plugin/development.html|插件 开发插件
 ./plugin/using.html|插件 使用插件
@@ -50,8 +53,54 @@
 ./plugin/functional-pages.html|插件 插件功能页
 ./plugin/functional-pages/user-info.html|插件 插件功能页 用户信息功能页
 ./plugin/functional-pages/request-payment.html|插件 插件功能页 支付功能页
-./subpackages.html|分包加载
-./workers.html|多线程
+./ability/network.html|基础能力
+./ability/network.html|基础能力 网络
+./ability/storage.html|基础能力 存储
+./ability/file-system.html|基础能力 文件系统
+./subpackages.html|基础能力 分包加载
+./subpackages/basic.html|基础能力 分包加载 使用分包
+./subpackages/independent.html|基础能力 分包加载 独立分包
+./subpackages/preload.html|基础能力 分包加载 分包预下载
+./workers.html|基础能力 多线程 Worker
+./device/bluetooth.html|硬件能力
+./device/bluetooth.html|硬件能力 蓝牙
+./device/nfc.html|硬件能力 NFC
+./device/wifi.html|硬件能力 Wi-Fi
+./open-ability/login.html|开放能力
+./open-ability/login.html|开放能力 用户信息
+./open-ability/login.html|开放能力 用户信息 小程序登录
+./open-ability/union-id.html|开放能力 用户信息 UnionID 机制说明
+./open-ability/authorize.html|开放能力 用户信息 授权
+./open-ability/signature.html|开放能力 用户信息 开放数据校验与解密
+./open-ability/getPhoneNumber.html|开放能力 用户信息 获取手机号
+./open-ability/bio-auth.html|开放能力 用户信息 生物认证
+./open-ability/share.html|开放能力 转发
+./open-ability/launchApp.html|开放能力 打开App
+./open-ability/template-message.html|开放能力 消息
+./open-ability/template-message.html|开放能力 消息 模版消息
+./open-ability/uniform-message.html|开放能力 消息 统一服务消息
+./open-ability/customer-message/customer-message.html|开放能力 消息 客服消息
+./open-ability/customer-message/customer-message.html|开放能力 消息 客服消息 概述
+./open-ability/customer-message/receive.html|开放能力 消息 客服消息 接收消息和事件
+./open-ability/customer-message/send.html|开放能力 消息 客服消息 发送消息
+./open-ability/customer-message/trans.html|开放能力 消息 客服消息 转发消息
+./open-ability/customer-message/typing.html|开放能力 消息 客服消息 下发客服输入状态
+./open-ability/customer-message/temp-media.html|开放能力 消息 客服消息 临时素材
+./open-ability/card/card.html|开放能力 卡券
+./open-ability/card/card.html|开放能力 卡券 概述
+./open-ability/card/membership-card.html|开放能力 卡券 会员卡组件
+./open-ability/qr-code.html|开放能力 获取二维码
+./open-ability/data-analysis.html|开放能力 数据分析
+./open-ability/nearby.html|开放能力 附近的小程序
+./usability/debug.html|可用性
+./usability/debug.html|可用性 调试
+./details.html|可用性 运行环境
+./details.html|可用性 运行环境 平台差异
+./details.html|可用性 运行环境 ES6 支持情况
+./operating-mechanism.html|可用性 运行机制
+./performance/index.html|可用性 性能
+./performance/tips.html|可用性 性能 优化建议
+./performance/tools.html|可用性 性能 分析工具
 ./client-lib/index.html|基础库
 ./client-lib/version.html|基础库 版本分布
 ./client-lib/client.html|基础库 与客户端版本对应关系
@@ -60,9 +109,4 @@
 ./release.html|基础库 更新日志 v2.x版本
 ./release/v1.html|基础库 更新日志 v1.x版本
 ./release/v0.html|基础库 更新日志 v0.x版本
-./operating-mechanism.html|运行机制
-./performance/index.html|性能
-./performance/tips.html|性能 优化建议
-./performance/tools.html|性能 分析工具
-./file-system.html|文件系统
 undefined|undefined
