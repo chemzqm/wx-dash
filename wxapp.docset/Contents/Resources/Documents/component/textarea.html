@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
   <title>textarea</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../website.css">
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -28,147 +30,147 @@
 </thead>
 <tbody>
 <tr>
-<td id="textarea-value">value</td>
+<td>value</td>
 <td>String</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x7684;&#x5185;&#x5BB9;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-placeholder">placeholder</td>
+<td>placeholder</td>
 <td>String</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x4E3A;&#x7A7A;&#x65F6;&#x5360;&#x4F4D;&#x7B26;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-placeholder-style">placeholder-style</td>
+<td>placeholder-style</td>
 <td>String</td>
 <td></td>
 <td>&#x6307;&#x5B9A; placeholder &#x7684;&#x6837;&#x5F0F;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-placeholder-class">placeholder-class</td>
+<td>placeholder-class</td>
 <td>String</td>
 <td>textarea-placeholder</td>
 <td>&#x6307;&#x5B9A; placeholder &#x7684;&#x6837;&#x5F0F;&#x7C7B;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-disabled">disabled</td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-maxlength">maxlength</td>
+<td>maxlength</td>
 <td>Number</td>
 <td>140</td>
 <td>&#x6700;&#x5927;&#x8F93;&#x5165;&#x957F;&#x5EA6;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A; -1 &#x7684;&#x65F6;&#x5019;&#x4E0D;&#x9650;&#x5236;&#x6700;&#x5927;&#x957F;&#x5EA6;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-auto-focus">auto-focus</td>
+<td>auto-focus</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x81EA;&#x52A8;&#x805A;&#x7126;&#xFF0C;&#x62C9;&#x8D77;&#x952E;&#x76D8;&#x3002;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-focus">focus</td>
+<td>focus</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x83B7;&#x53D6;&#x7126;&#x70B9;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-auto-height">auto-height</td>
+<td>auto-height</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x81EA;&#x52A8;&#x589E;&#x9AD8;&#xFF0C;&#x8BBE;&#x7F6E;auto-height&#x65F6;&#xFF0C;style.height&#x4E0D;&#x751F;&#x6548;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-fixed">fixed</td>
+<td>fixed</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x5982;&#x679C; textarea &#x662F;&#x5728;&#x4E00;&#x4E2A; <code>position:fixed</code> &#x7684;&#x533A;&#x57DF;&#xFF0C;&#x9700;&#x8981;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x5C5E;&#x6027; fixed &#x4E3A; true</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-cursor-spacing">cursor-spacing</td>
+<td>cursor-spacing</td>
 <td>Number</td>
 <td>0</td>
 <td>&#x6307;&#x5B9A;&#x5149;&#x6807;&#x4E0E;&#x952E;&#x76D8;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D; px &#x3002;&#x53D6; textarea &#x8DDD;&#x79BB;&#x5E95;&#x90E8;&#x7684;&#x8DDD;&#x79BB;&#x548C; cursor-spacing &#x6307;&#x5B9A;&#x7684;&#x8DDD;&#x79BB;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x4F5C;&#x4E3A;&#x5149;&#x6807;&#x4E0E;&#x952E;&#x76D8;&#x7684;&#x8DDD;&#x79BB;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-cursor">cursor</td>
+<td>cursor</td>
 <td>Number</td>
 <td></td>
 <td>&#x6307;&#x5B9A;focus&#x65F6;&#x7684;&#x5149;&#x6807;&#x4F4D;&#x7F6E;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
 </tr>
 <tr>
-<td id="textarea-show-confirm-bar">show-confirm-bar</td>
+<td>show-confirm-bar</td>
 <td>Boolean</td>
 <td>true</td>
 <td>&#x662F;&#x5426;&#x663E;&#x793A;&#x952E;&#x76D8;&#x4E0A;&#x65B9;&#x5E26;&#x6709;&#x201D;&#x5B8C;&#x6210;&#x201C;&#x6309;&#x94AE;&#x90A3;&#x4E00;&#x680F;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.0</a></td>
 </tr>
 <tr>
-<td id="textarea-selection-start">selection-start</td>
+<td>selection-start</td>
 <td>Number</td>
 <td>-1</td>
 <td>&#x5149;&#x6807;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x81EA;&#x52A8;&#x805A;&#x96C6;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x9700;&#x4E0E;selection-end&#x642D;&#x914D;&#x4F7F;&#x7528;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
 </tr>
 <tr>
-<td id="textarea-selection-end">selection-end</td>
+<td>selection-end</td>
 <td>Number</td>
 <td>-1</td>
 <td>&#x5149;&#x6807;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#xFF0C;&#x81EA;&#x52A8;&#x805A;&#x96C6;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x9700;&#x4E0E;selection-start&#x642D;&#x914D;&#x4F7F;&#x7528;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
 </tr>
 <tr>
-<td id="textarea-adjust-position">adjust-position</td>
+<td>adjust-position</td>
 <td>Boolean</td>
 <td>true</td>
 <td>&#x952E;&#x76D8;&#x5F39;&#x8D77;&#x65F6;&#xFF0C;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x4E0A;&#x63A8;&#x9875;&#x9762;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="textarea-bindfocus">bindfocus</td>
+<td>bindfocus</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x805A;&#x7126;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = { value, height }&#xFF0C;height &#x4E3A;&#x952E;&#x76D8;&#x9AD8;&#x5EA6;&#xFF0C;&#x5728;&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x652F;&#x6301;</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-bindblur">bindblur</td>
+<td>bindblur</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = {value, cursor}</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-bindlinechange">bindlinechange</td>
+<td>bindlinechange</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x884C;&#x6570;&#x53D8;&#x5316;&#x65F6;&#x8C03;&#x7528;&#xFF0C;event.detail = {height: 0, heightRpx: 0, lineCount: 0}</td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-bindinput">bindinput</td>
+<td>bindinput</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x5F53;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x65F6;&#xFF0C;&#x89E6;&#x53D1; input &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value, cursor}&#xFF0C;<strong>bindinput &#x5904;&#x7406;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5E76;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5230; textarea &#x4E0A;</strong></td>
 <td></td>
 </tr>
 <tr>
-<td id="textarea-bindconfirm">bindconfirm</td>
+<td>bindconfirm</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x70B9;&#x51FB;&#x5B8C;&#x6210;&#x65F6;&#xFF0C; &#x89E6;&#x53D1; confirm &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
@@ -234,6 +236,5 @@ Page({
                         
                     </div>
                 
-
-
-</body></html>
+</body>
+</html>

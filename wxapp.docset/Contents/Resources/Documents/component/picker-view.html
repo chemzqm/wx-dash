@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
   <title>picker-view</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../website.css">
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -27,37 +29,37 @@
 </thead>
 <tbody>
 <tr>
-<td id="picker-view-value">value</td>
+<td>value</td>
 <td>NumberArray</td>
 <td>&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x4F9D;&#x6B21;&#x8868;&#x793A; picker-view &#x5185;&#x7684; picker-view-column &#x9009;&#x62E9;&#x7684;&#x7B2C;&#x51E0;&#x9879;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;&#xFF0C;&#x6570;&#x5B57;&#x5927;&#x4E8E; picker-view-column &#x53EF;&#x9009;&#x9879;&#x957F;&#x5EA6;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x6700;&#x540E;&#x4E00;&#x9879;&#x3002;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-view-indicator-style">indicator-style</td>
+<td>indicator-style</td>
 <td>String</td>
 <td>&#x8BBE;&#x7F6E;&#x9009;&#x62E9;&#x5668;&#x4E2D;&#x95F4;&#x9009;&#x4E2D;&#x6846;&#x7684;&#x6837;&#x5F0F;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-view-indicator-class">indicator-class</td>
+<td>indicator-class</td>
 <td>String</td>
 <td>&#x8BBE;&#x7F6E;&#x9009;&#x62E9;&#x5668;&#x4E2D;&#x95F4;&#x9009;&#x4E2D;&#x6846;&#x7684;&#x7C7B;&#x540D;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
 </tr>
 <tr>
-<td id="picker-view-mask-style">mask-style</td>
+<td>mask-style</td>
 <td>String</td>
 <td>&#x8BBE;&#x7F6E;&#x8499;&#x5C42;&#x7684;&#x6837;&#x5F0F;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
 </tr>
 <tr>
-<td id="picker-view-mask-class">mask-class</td>
+<td>mask-class</td>
 <td>String</td>
 <td>&#x8BBE;&#x7F6E;&#x8499;&#x5C42;&#x7684;&#x7C7B;&#x540D;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
 </tr>
 <tr>
-<td id="picker-view-bindchange">bindchange</td>
+<td>bindchange</td>
 <td>EventHandle</td>
 <td>&#x5F53;&#x6EDA;&#x52A8;&#x9009;&#x62E9;&#xFF0C;value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}&#xFF1B;value&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x8868;&#x793A; picker-view &#x5185;&#x7684; picker-view-column &#x5F53;&#x524D;&#x9009;&#x62E9;&#x7684;&#x662F;&#x7B2C;&#x51E0;&#x9879;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;</td>
 <td></td>
@@ -121,7 +123,7 @@ Page({
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/picker_view.png?t=18092610" alt="picker_view"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/picker_view.png?t=18092717" alt="picker_view"></p>
 <h4 id="tips">Tips</h4>
 <ol>
 <li><code>tip</code>: &#x6EDA;&#x52A8;&#x65F6;&#x5728;iOS&#x81EA;&#x5E26;&#x632F;&#x52A8;&#x53CD;&#x9988;&#xFF0C;&#x53EF;&#x5728;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E; -&gt; &#x58F0;&#x97F3;&#x4E0E;&#x89E6;&#x611F; -&gt; &#x7CFB;&#x7EDF;&#x89E6;&#x611F;&#x53CD;&#x9988;&#x4E2D;&#x5173;&#x95ED;</li>
@@ -132,6 +134,5 @@ Page({
                         
                     </div>
                 
-
-
-</body></html>
+</body>
+</html>

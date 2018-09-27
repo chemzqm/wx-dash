@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-  <title>&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../website.css">
+  <title>媒体组件</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -28,73 +30,73 @@
 </thead>
 <tbody>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-id">id</td>
+<td>id</td>
 <td>String</td>
 <td></td>
 <td>audio &#x7EC4;&#x4EF6;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-src">src</td>
+<td>src</td>
 <td>String</td>
 <td></td>
 <td>&#x8981;&#x64AD;&#x653E;&#x97F3;&#x9891;&#x7684;&#x8D44;&#x6E90;&#x5730;&#x5740;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-loop">loop</td>
+<td>loop</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x5FAA;&#x73AF;&#x64AD;&#x653E;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-controls">controls</td>
+<td>controls</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-poster">poster</td>
+<td>poster</td>
 <td>String</td>
 <td></td>
 <td>&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;&#x4E0A;&#x7684;&#x97F3;&#x9891;&#x5C01;&#x9762;&#x7684;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; poster &#x65E0;&#x6548;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-name">name</td>
+<td>name</td>
 <td>String</td>
 <td>&#x672A;&#x77E5;&#x97F3;&#x9891;</td>
 <td>&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;&#x4E0A;&#x7684;&#x97F3;&#x9891;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x679C; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; name &#x65E0;&#x6548;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-author">author</td>
+<td>author</td>
 <td>String</td>
 <td>&#x672A;&#x77E5;&#x4F5C;&#x8005;</td>
 <td>&#x9ED8;&#x8BA4;&#x63A7;&#x4EF6;&#x4E0A;&#x7684;&#x4F5C;&#x8005;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x679C; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; author &#x65E0;&#x6548;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-binderror">binderror</td>
+<td>binderror</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x5F53;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#x89E6;&#x53D1; error &#x4E8B;&#x4EF6;&#xFF0C;detail = {errMsg: MediaError.code}</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindplay">bindplay</td>
+<td>bindplay</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x5F53;&#x5F00;&#x59CB;/&#x7EE7;&#x7EED;&#x64AD;&#x653E;&#x65F6;&#x89E6;&#x53D1;play&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindpause">bindpause</td>
+<td>bindpause</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x5F53;&#x6682;&#x505C;&#x64AD;&#x653E;&#x65F6;&#x89E6;&#x53D1; pause &#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindtimeupdate">bindtimeupdate</td>
+<td>bindtimeupdate</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x5F53;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; timeupdate &#x4E8B;&#x4EF6;&#xFF0C;detail = {currentTime, duration}</td>
 </tr>
 <tr>
-<td id="&#x5A92;&#x4F53;&#x7EC4;&#x4EF6;-bindended">bindended</td>
+<td>bindended</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x5F53;&#x64AD;&#x653E;&#x5230;&#x672B;&#x5C3E;&#x65F6;&#x89E6;&#x53D1; ended &#x4E8B;&#x4EF6;</td>
@@ -164,7 +166,7 @@ Page({
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/audio.png?t=18092610" alt="audio"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/audio.png?t=18092717" alt="audio"></p>
 <p>&#x76F8;&#x5173;api&#xFF1A;<a href="../api/media/audio/wx.createAudioContext.html">wx.createAudioContext</a></p>
 
                             </section>      
@@ -172,6 +174,5 @@ Page({
                         
                     </div>
                 
-
-
-</body></html>
+</body>
+</html>

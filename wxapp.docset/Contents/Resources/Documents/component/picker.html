@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
   <title>picker</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../website.css">
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
     body {
       padding: 1em;
@@ -29,42 +31,42 @@
 </thead>
 <tbody>
 <tr>
-<td id="picker-range">range</td>
+<td>range</td>
 <td>Array / Object Array</td>
 <td>[]</td>
 <td>mode&#x4E3A; selector &#x6216; multiSelector &#x65F6;&#xFF0C;range &#x6709;&#x6548;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-range-key">range-key</td>
+<td>range-key</td>
 <td>String</td>
 <td></td>
 <td>&#x5F53; range &#x662F;&#x4E00;&#x4E2A; Object Array &#x65F6;&#xFF0C;&#x901A;&#x8FC7; range-key &#x6765;&#x6307;&#x5B9A; Object &#x4E2D; key &#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x9009;&#x62E9;&#x5668;&#x663E;&#x793A;&#x5185;&#x5BB9;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-value">value</td>
+<td>value</td>
 <td>Number</td>
 <td>0</td>
 <td>value &#x7684;&#x503C;&#x8868;&#x793A;&#x9009;&#x62E9;&#x4E86; range &#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x4E2A;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindchange">bindchange</td>
+<td>bindchange</td>
 <td>EventHandle</td>
 <td></td>
 <td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-disabled">disabled</td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindcancel">bindcancel</td>
+<td>bindcancel</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x6216;&#x70B9;&#x906E;&#x7F69;&#x5C42;&#x6536;&#x8D77; picker &#x65F6;&#x89E6;&#x53D1;</td>
@@ -86,49 +88,49 @@
 </thead>
 <tbody>
 <tr>
-<td id="picker-range">range</td>
+<td>range</td>
 <td>&#x4E8C;&#x7EF4;Array / &#x4E8C;&#x7EF4;Object Array</td>
 <td>[]</td>
 <td>mode&#x4E3A; selector &#x6216; multiSelector &#x65F6;&#xFF0C;range &#x6709;&#x6548;&#x3002;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x957F;&#x5EA6;&#x8868;&#x793A;&#x591A;&#x5C11;&#x5217;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x6BCF;&#x9879;&#x8868;&#x793A;&#x6BCF;&#x5217;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;<code>[[&quot;a&quot;,&quot;b&quot;], [&quot;c&quot;,&quot;d&quot;]]</code></td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-range-key">range-key</td>
+<td>range-key</td>
 <td>String</td>
 <td></td>
 <td>&#x5F53; range &#x662F;&#x4E00;&#x4E2A; &#x4E8C;&#x7EF4;Object Array &#x65F6;&#xFF0C;&#x901A;&#x8FC7; range-key &#x6765;&#x6307;&#x5B9A; Object &#x4E2D; key &#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x9009;&#x62E9;&#x5668;&#x663E;&#x793A;&#x5185;&#x5BB9;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-value">value</td>
+<td>value</td>
 <td>Array</td>
 <td>[]</td>
 <td>value &#x6BCF;&#x4E00;&#x9879;&#x7684;&#x503C;&#x8868;&#x793A;&#x9009;&#x62E9;&#x4E86; range &#x5BF9;&#x5E94;&#x9879;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x4E2A;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindchange">bindchange</td>
+<td>bindchange</td>
 <td>EventHandle</td>
 <td></td>
 <td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindcolumnchange">bindcolumnchange</td>
+<td>bindcolumnchange</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x67D0;&#x4E00;&#x5217;&#x7684;&#x503C;&#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; columnchange &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {column: column, value: value}&#xFF0C;column &#x7684;&#x503C;&#x8868;&#x793A;&#x6539;&#x53D8;&#x4E86;&#x7B2C;&#x51E0;&#x5217;&#xFF08;&#x4E0B;&#x6807;&#x4ECE;0&#x5F00;&#x59CB;&#xFF09;&#xFF0C;value &#x7684;&#x503C;&#x8868;&#x793A;&#x53D8;&#x66F4;&#x503C;&#x7684;&#x4E0B;&#x6807;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindcancel">bindcancel</td>
+<td>bindcancel</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="picker-disabled">disabled</td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
@@ -149,42 +151,42 @@
 </thead>
 <tbody>
 <tr>
-<td id="picker-value">value</td>
+<td>value</td>
 <td>String</td>
 <td></td>
 <td>&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&quot;hh:mm&quot;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-start">start</td>
+<td>start</td>
 <td>String</td>
 <td></td>
 <td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;hh:mm&quot;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-end">end</td>
+<td>end</td>
 <td>String</td>
 <td></td>
 <td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x7684;&#x7ED3;&#x675F;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;hh:mm&quot;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindchange">bindchange</td>
+<td>bindchange</td>
 <td>EventHandle</td>
 <td></td>
 <td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindcancel">bindcancel</td>
+<td>bindcancel</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="picker-disabled">disabled</td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
@@ -205,49 +207,49 @@
 </thead>
 <tbody>
 <tr>
-<td id="picker-value">value</td>
+<td>value</td>
 <td>String</td>
 <td>0</td>
 <td>&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x65E5;&#x671F;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&quot;YYYY-MM-DD&quot;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-start">start</td>
+<td>start</td>
 <td>String</td>
 <td></td>
 <td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;YYYY-MM-DD&quot;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-end">end</td>
+<td>end</td>
 <td>String</td>
 <td></td>
 <td>&#x8868;&#x793A;&#x6709;&#x6548;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x7684;&#x7ED3;&#x675F;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x4E3A;&quot;YYYY-MM-DD&quot;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-fields">fields</td>
+<td>fields</td>
 <td>String</td>
 <td>day</td>
 <td>&#x6709;&#x6548;&#x503C; year,month,day&#xFF0C;&#x8868;&#x793A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x7C92;&#x5EA6;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindchange">bindchange</td>
+<td>bindchange</td>
 <td>EventHandle</td>
 <td></td>
 <td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value}</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindcancel">bindcancel</td>
+<td>bindcancel</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="picker-disabled">disabled</td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
@@ -291,35 +293,35 @@
 </thead>
 <tbody>
 <tr>
-<td id="picker-value">value</td>
+<td>value</td>
 <td>Array</td>
 <td>[]</td>
 <td>&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x7701;&#x5E02;&#x533A;&#xFF0C;&#x9ED8;&#x8BA4;&#x9009;&#x4E2D;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-custom-item">custom-item</td>
+<td>custom-item</td>
 <td>String</td>
 <td></td>
 <td>&#x53EF;&#x4E3A;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x9876;&#x90E8;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x9879;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
 </tr>
 <tr>
-<td id="picker-bindchange">bindchange</td>
+<td>bindchange</td>
 <td>EventHandle</td>
 <td></td>
 <td>value &#x6539;&#x53D8;&#x65F6;&#x89E6;&#x53D1; change &#x4E8B;&#x4EF6;&#xFF0C;event.detail = {value: value, code: code, postcode: postcode}&#xFF0C;&#x5176;&#x4E2D;&#x5B57;&#x6BB5;code&#x662F;&#x7EDF;&#x8BA1;&#x7528;&#x533A;&#x5212;&#x4EE3;&#x7801;&#xFF0C;postcode&#x662F;&#x90AE;&#x653F;&#x7F16;&#x7801;</td>
 <td></td>
 </tr>
 <tr>
-<td id="picker-bindcancel">bindcancel</td>
+<td>bindcancel</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x53D6;&#x6D88;&#x9009;&#x62E9;&#x65F6;&#x89E6;&#x53D1;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td id="picker-disabled">disabled</td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
@@ -537,13 +539,12 @@
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/picker.png?t=18092610" alt="picker"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/picker.png?t=18092717" alt="picker"></p>
 
                             </section>      
                         </div>
                         
                     </div>
                 
-
-
-</body></html>
+</body>
+</html>
