@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>IntersectionObserver.observe</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="intersectionobserverobservestring-targetselector-function-callback">IntersectionObserver.observe(string targetSelector, function callback)</h3>
+<p>&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E76;&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x76F8;&#x4EA4;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x60C5;&#x51B5;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-targetselector">string targetSelector</h5>
+<p>&#x9009;&#x62E9;&#x5668;</p>
+<h5 id="function-callback">function callback</h5>
+<p>&#x76D1;&#x542C;&#x76F8;&#x4EA4;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>intersectionRatio</td>
+<td>number</td>
+<td>&#x76F8;&#x4EA4;&#x6BD4;&#x4F8B;</td>
+<td></td>
+</tr>
+<tr>
+<td>intersectionRect</td>
+<td>Object</td>
+<td>&#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x7684;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>boundingClientRect</td>
+<td>Object</td>
+<td>&#x76EE;&#x6807;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>relativeRect</td>
+<td>Object</td>
+<td>&#x53C2;&#x7167;&#x533A;&#x57DF;&#x7684;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>time</td>
+<td>number</td>
+<td>&#x76F8;&#x4EA4;&#x68C0;&#x6D4B;&#x65F6;&#x7684;&#x65F6;&#x95F4;&#x6233;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.intersectionRect &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>number</td>
+<td>&#x5DE6;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>right</td>
+<td>number</td>
+<td>&#x53F3;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>top</td>
+<td>number</td>
+<td>&#x4E0A;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>number</td>
+<td>&#x4E0B;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.boundingClientRect &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>number</td>
+<td>&#x5DE6;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>right</td>
+<td>number</td>
+<td>&#x53F3;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>top</td>
+<td>number</td>
+<td>&#x4E0A;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>number</td>
+<td>&#x4E0B;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.relativeRect &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>number</td>
+<td>&#x5DE6;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>right</td>
+<td>number</td>
+<td>&#x53F3;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>top</td>
+<td>number</td>
+<td>&#x4E0A;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>number</td>
+<td>&#x4E0B;&#x8FB9;&#x754C;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

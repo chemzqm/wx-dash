@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>模板消息</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="addtemplate">addTemplate</h3>
+<p>&#x7EC4;&#x5408;&#x6A21;&#x677F;&#x5E76;&#x6DFB;&#x52A0;&#x81F3;&#x5E10;&#x53F7;&#x4E0B;&#x7684;&#x4E2A;&#x4EBA;&#x6A21;&#x677F;&#x5E93;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/cgi-bin/wxopen/template/add?access_token=ACCESS_TOKEN
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-accesstoken">string access_token</h5>
+<p><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></p>
+<h5 id="string-id">string id</h5>
+<p>&#x6A21;&#x677F;&#x6807;&#x9898;id&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#xFF0C;&#x4E5F;&#x53EF;&#x767B;&#x5F55;&#x5C0F;&#x7A0B;&#x5E8F;&#x540E;&#x53F0;&#x67E5;&#x770B;&#x83B7;&#x53D6;</p>
+<h5 id="arraynumber-keywordidlist">Array.&lt;number&gt; keyword_id_list</h5>
+<p>&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x884C;&#x7EC4;&#x5408;&#x597D;&#x7684;&#x6A21;&#x677F;&#x5173;&#x952E;&#x8BCD;&#x5217;&#x8868;&#xFF0C;&#x5173;&#x952E;&#x8BCD;&#x987A;&#x5E8F;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x642D;&#x914D;&#xFF08;&#x4F8B;&#x5982;[3,5,4]&#x6216;[4,5,3]&#xFF09;&#xFF0C;&#x6700;&#x591A;&#x652F;&#x6301;10&#x4E2A;&#x5173;&#x952E;&#x8BCD;&#x7EC4;&#x5408;</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+<tr>
+<td>template_id</td>
+<td>string</td>
+<td>&#x6DFB;&#x52A0;&#x81F3;&#x5E10;&#x53F7;&#x4E0B;&#x7684;&#x6A21;&#x677F;id&#xFF0C;&#x53D1;&#x9001;&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x65F6;&#x6240;&#x9700;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="post-&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;json">POST &#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;JSON</h4>
+<h3 id="&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;</h3>
+<pre><code class="language-json">{
+ <span class="hljs-attr">&quot;id&quot;</span>:<span class="hljs-string">&quot;AT0002&quot;</span>,
+ <span class="hljs-attr">&quot;keyword_id_list&quot;</span>:[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]
+}
+</code></pre>
+<h3 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;</h3>
+<pre><code class="language-json">{
+ <span class="hljs-attr">&quot;errcode&quot;</span>: <span class="hljs-number">0</span>,
+ <span class="hljs-attr">&quot;errmsg&quot;</span>: <span class="hljs-string">&quot;ok&quot;</span>,
+ <span class="hljs-attr">&quot;template_id&quot;</span>: <span class="hljs-string">&quot;wDYzYZVxobJivW9oMpSCpuvACOfJXQIoKUm0PY397Tc&quot;</span>
+}
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

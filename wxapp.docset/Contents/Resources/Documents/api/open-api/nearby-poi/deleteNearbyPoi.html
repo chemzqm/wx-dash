@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>deleteNearbyPoi</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="deletenearbypoi">deleteNearbyPoi</h3>
+<p>&#x5220;&#x9664;&#x5730;&#x70B9;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/wxa/delnearbypoi?access_token=ACCESS_TOKEN
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-accesstoken">string access_token</h5>
+<p><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></p>
+<h5 id="string-poiid">string poi_id</h5>
+<p>&#x9644;&#x8FD1;&#x5730;&#x70B9; ID</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="deletenearbypoiresponse">deleteNearbyPoiResponse</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>ok</td>
+<td>&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td>47001</td>
+<td></td>
+<td>POST&#x6570;&#x636E;json&#x683C;&#x5F0F;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>20002</td>
+<td></td>
+<td>POST&#x53C2;&#x6570;&#x975E;&#x6CD5;</td>
+</tr>
+<tr>
+<td>44002</td>
+<td></td>
+<td>POST&#x6570;&#x636E;&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr>
+<td>92000</td>
+<td></td>
+<td>&#x8BE5;&#x7ECF;&#x8425;&#x8D44;&#x8D28;&#x5DF2;&#x6DFB;&#x52A0;&#xFF0C;&#x8BF7;&#x52FF;&#x91CD;&#x590D;&#x6DFB;&#x52A0;</td>
+</tr>
+<tr>
+<td>92002</td>
+<td></td>
+<td>&#x9644;&#x8FD1;&#x5730;&#x70B9;&#x6DFB;&#x52A0;&#x6570;&#x91CF;&#x8FBE;&#x5230;&#x4E0A;&#x7EBF;&#xFF0C;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x6DFB;&#x52A0;</td>
+</tr>
+<tr>
+<td>92003</td>
+<td></td>
+<td>&#x5730;&#x70B9;&#x5DF2;&#x88AB;&#x5176;&#x5B83;&#x5C0F;&#x7A0B;&#x5E8F;&#x5360;&#x7528;</td>
+</tr>
+<tr>
+<td>92004</td>
+<td></td>
+<td>&#x9644;&#x8FD1;&#x529F;&#x80FD;&#x88AB;&#x5C01;&#x7981;</td>
+</tr>
+<tr>
+<td>92005</td>
+<td></td>
+<td>&#x5730;&#x70B9;&#x6B63;&#x5728;&#x5BA1;&#x6838;&#x4E2D;</td>
+</tr>
+<tr>
+<td>92006</td>
+<td></td>
+<td>&#x5730;&#x70B9;&#x6B63;&#x5728;&#x5C55;&#x793A;&#x5C0F;&#x7A0B;&#x5E8F;</td>
+</tr>
+<tr>
+<td>92007</td>
+<td></td>
+<td>&#x5730;&#x70B9;&#x5BA1;&#x6838;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>92008</td>
+<td></td>
+<td>&#x7A0B;&#x5E8F;&#x672A;&#x5C55;&#x793A;&#x5728;&#x8BE5;&#x5730;&#x70B9;</td>
+</tr>
+<tr>
+<td>93009</td>
+<td></td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x672A;&#x4E0A;&#x67B6;&#x6216;&#x4E0D;&#x53EF;&#x89C1;</td>
+</tr>
+<tr>
+<td>93010</td>
+<td></td>
+<td>&#x5730;&#x70B9;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>93011</td>
+<td></td>
+<td>&#x4E2A;&#x4EBA;&#x7C7B;&#x578B;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0D;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>93011</td>
+<td></td>
+<td>&#x4E2A;&#x4EBA;&#x7C7B;&#x578B;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0D;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>93012</td>
+<td></td>
+<td>&#x975E;&#x666E;&#x901A;&#x7C7B;&#x578B;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF08;&#x95E8;&#x5E97;&#x5C0F;&#x7A0B;&#x5E8F;&#x3001;&#x5C0F;&#x5E97;&#x5C0F;&#x7A0B;&#x5E8F;&#x7B49;&#xFF09;&#x4E0D;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>93013</td>
+<td></td>
+<td>&#x4ECE;&#x817E;&#x8BAF;&#x5730;&#x56FE;&#x83B7;&#x53D6;&#x5730;&#x5740;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>93014</td>
+<td></td>
+<td>&#x540C;&#x4E00;&#x8D44;&#x8D28;&#x8BC1;&#x4EF6;&#x53F7;&#x91CD;&#x590D;&#x6DFB;&#x52A0;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

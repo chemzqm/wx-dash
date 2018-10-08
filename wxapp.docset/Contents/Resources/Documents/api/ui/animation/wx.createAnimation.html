@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>动画</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="animation-wxcreateanimationobject-object"><a href="Animation.html">Animation</a> wx.createAnimation(Object object)</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x5B9E;&#x4F8B; <a href="Animation.html">animation</a>&#x3002;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x63CF;&#x8FF0;&#x52A8;&#x753B;&#x3002;&#x6700;&#x540E;&#x901A;&#x8FC7;&#x52A8;&#x753B;&#x5B9E;&#x4F8B;&#x7684; export &#x65B9;&#x6CD5;&#x5BFC;&#x51FA;&#x52A8;&#x753B;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;&#x7684; animation &#x5C5E;&#x6027;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>duration</td>
+<td>number</td>
+<td>400</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D; ms</td>
+<td></td>
+</tr>
+<tr>
+<td>timingFunction</td>
+<td>string</td>
+<td>&apos;linear&apos;</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x7684;&#x6548;&#x679C;</td>
+<td></td>
+</tr>
+<tr>
+<td>delay</td>
+<td>number</td>
+<td>0</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D; ms</td>
+<td></td>
+</tr>
+<tr>
+<td>transformOrigin</td>
+<td>string</td>
+<td>&apos;50% 50% 0&apos;</td>
+<td>&#x5426;</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>timingFunction &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&apos;linear&apos;</td>
+<td>&#x52A8;&#x753B;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x7684;&#x901F;&#x5EA6;&#x662F;&#x76F8;&#x540C;&#x7684;</td>
+</tr>
+<tr>
+<td>&apos;ease&apos;</td>
+<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x5FEB;&#xFF0C;&#x5728;&#x7ED3;&#x675F;&#x524D;&#x53D8;&#x6162;</td>
+</tr>
+<tr>
+<td>&apos;ease-in&apos;</td>
+<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td>&apos;ease-in-out&apos;</td>
+<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;</td>
+</tr>
+<tr>
+<td>&apos;ease-out&apos;</td>
+<td>&#x52A8;&#x753B;&#x4EE5;&#x4F4E;&#x901F;&#x7ED3;&#x675F;</td>
+</tr>
+<tr>
+<td>&apos;step-start&apos;</td>
+<td>&#x52A8;&#x753B;&#x7B2C;&#x4E00;&#x5E27;&#x5C31;&#x8DF3;&#x81F3;&#x7ED3;&#x675F;&#x72B6;&#x6001;&#x76F4;&#x5230;&#x7ED3;&#x675F;</td>
+</tr>
+<tr>
+<td>&apos;step-end&apos;</td>
+<td>&#x52A8;&#x753B;&#x4E00;&#x76F4;&#x4FDD;&#x6301;&#x5F00;&#x59CB;&#x72B6;&#x6001;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x5E27;&#x8DF3;&#x5230;&#x7ED3;&#x675F;&#x72B6;&#x6001;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="animation"><a href="Animation.html">Animation</a></h5>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

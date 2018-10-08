@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.drawImage</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="canvascontextdrawimagestring-imageresource-number-dx-number-dy-number-dwidth-number-dheight-number-sx-number-sy-number-swidth-number-sheight">CanvasContext.drawImage(string imageResource, number dx, number dy, number dWidth, number dHeight, number sx, number sy, number sWidth, number sHeight)</h3>
+<p>&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x5230;&#x753B;&#x5E03;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-imageresource">string imageResource</h5>
+<p>&#x6240;&#x8981;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x7247;&#x8D44;&#x6E90;</p>
+<h5 id="number-dx">number dx</h5>
+<p>&#x56FE;&#x50CF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x5728;&#x76EE;&#x6807; canvas &#x4E0A; x &#x8F74;&#x7684;&#x4F4D;&#x7F6E;</p>
+<h5 id="number-dy">number dy</h5>
+<p>&#x56FE;&#x50CF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x5728;&#x76EE;&#x6807; canvas &#x4E0A; y &#x8F74;&#x7684;&#x4F4D;&#x7F6E;</p>
+<h5 id="number-dwidth">number dWidth</h5>
+<p>&#x5728;&#x76EE;&#x6807;&#x753B;&#x5E03;&#x4E0A;&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x5141;&#x8BB8;&#x5BF9;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x7F29;&#x653E;</p>
+<h5 id="number-dheight">number dHeight</h5>
+<p>&#x5728;&#x76EE;&#x6807;&#x753B;&#x5E03;&#x4E0A;&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x5141;&#x8BB8;&#x5BF9;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x7F29;&#x653E;</p>
+<h5 id="number-sx">number sx</h5>
+<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; x &#x5750;&#x6807;</p>
+<h5 id="number-sy">number sy</h5>
+<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; y &#x5750;&#x6807;</p>
+<h5 id="number-swidth">number sWidth</h5>
+<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x5BBD;&#x5EA6;</p>
+<h5 id="number-sheight">number sHeight</h5>
+<p>&#x6E90;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x5F62;&#x9009;&#x62E9;&#x6846;&#x7684;&#x9AD8;&#x5EA6;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p>&#x6709;&#x4E09;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>drawImage(dx, dy)</li>
+<li>drawImage(dx, dy, dWidth, dHeight)</li>
+<li>drawImage(sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) &#x4ECE; 1.9.0 &#x8D77;&#x652F;&#x6301;</li>
+</ul>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+wx.chooseImage({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+    ctx.drawImage(res.tempFilePaths[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+    ctx.draw()
+  }
+})
+
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/draw-image.png?t=18100816" alt=""></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

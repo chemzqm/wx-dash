@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>文件管理器</title>
+  <title>FileSystemManager</title>
   <link rel="stylesheet" href="../../../style.css" />
   <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
@@ -18,7 +18,7 @@
                             <section class="normal markdown-section">
                                 <h3 id="filesystemmanager">FileSystemManager</h3>
 <blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.9.9 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 1.9.9</p>
 </blockquote>
 <p>&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;</p>
 <h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
@@ -28,7 +28,7 @@
 <p>&#x5728;&#x6587;&#x4EF6;&#x7ED3;&#x5C3E;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;</p>
 <h5 id="filesystemmanagersavefileobject-object"><a href="FileSystemManager.saveFile.html">FileSystemManager.saveFile(Object object)</a></h5>
 <p>&#x4FDD;&#x5B58;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x3002;&#x6B64;&#x63A5;&#x53E3;&#x4F1A;&#x79FB;&#x52A8;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x6B64;&#x8C03;&#x7528;&#x6210;&#x529F;&#x540E;&#xFF0C;tempFilePath &#x5C06;&#x4E0D;&#x53EF;&#x7528;&#x3002;</p>
-<h5 id="filesystemmanagergetsavedfilelist"><a href="FileSystemManager.getSavedFileList.html">FileSystemManager.getSavedFileList()</a></h5>
+<h5 id="filesystemmanagergetsavedfilelistobject-object"><a href="FileSystemManager.getSavedFileList.html">FileSystemManager.getSavedFileList(Object object)</a></h5>
 <p>&#x83B7;&#x53D6;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x5217;&#x8868;</p>
 <h5 id="filesystemmanagerremovesavedfileobject-object"><a href="FileSystemManager.removeSavedFile.html">FileSystemManager.removeSavedFile(Object object)</a></h5>
 <p>&#x5220;&#x9664;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;</p>
@@ -38,15 +38,15 @@
 <p>&#x83B7;&#x53D6;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x7684; &#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6; &#x6216; &#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6; &#x4FE1;&#x606F;</p>
 <h5 id="filesystemmanagermkdirobject-object"><a href="FileSystemManager.mkdir.html">FileSystemManager.mkdir(Object object)</a></h5>
 <p>&#x521B;&#x5EFA;&#x76EE;&#x5F55;</p>
-<h5 id="filesystemmanagerreaddirobject-object"><a href="FileSystemManager.readdir.html">FileSystemManager.readdir(Object object)</a></h5>
-<p>&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x6587;&#x4EF6;&#x5217;&#x8868;</p>
 <h5 id="filesystemmanagerreadfileobject-object"><a href="FileSystemManager.readFile.html">FileSystemManager.readFile(Object object)</a></h5>
 <p>&#x8BFB;&#x53D6;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
+<h5 id="filesystemmanagerreaddirobject-object"><a href="FileSystemManager.readdir.html">FileSystemManager.readdir(Object object)</a></h5>
+<p>&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x6587;&#x4EF6;&#x5217;&#x8868;</p>
 <h5 id="filesystemmanagerrenameobject-object"><a href="FileSystemManager.rename.html">FileSystemManager.rename(Object object)</a></h5>
 <p>&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x6587;&#x4EF6;&#x4ECE; oldPath &#x79FB;&#x52A8;&#x5230; newPath</p>
 <h5 id="filesystemmanagerrmdirobject-object"><a href="FileSystemManager.rmdir.html">FileSystemManager.rmdir(Object object)</a></h5>
 <p>&#x5220;&#x9664;&#x76EE;&#x5F55;</p>
-<h5 id="stats-filesystemmanagerstatobject-object"><a href="FileSystemManager.stat.html">Stats FileSystemManager.stat(Object object)</a></h5>
+<h5 id="filesystemmanagerstatobject-object"><a href="FileSystemManager.stat.html">FileSystemManager.stat(Object object)</a></h5>
 <p>&#x83B7;&#x53D6;&#x6587;&#x4EF6; Stats &#x5BF9;&#x8C61;</p>
 <h5 id="filesystemmanagerunlinkobject-object"><a href="FileSystemManager.unlink.html">FileSystemManager.unlink(Object object)</a></h5>
 <p>&#x5220;&#x9664;&#x6587;&#x4EF6;</p>

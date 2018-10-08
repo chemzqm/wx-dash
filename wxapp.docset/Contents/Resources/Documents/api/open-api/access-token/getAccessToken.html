@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>接口调用凭证</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="getaccesstoken">getAccessToken</h3>
+<p>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F; <a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183" target="_blank">access_token</a></p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>GET https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-granttype">string grant_type</h5>
+<p>&#x586B;&#x5199; client_credential</p>
+<h5 id="string-appid">string appid</h5>
+<p>&#x5C0F;&#x7A0B;&#x5E8F; appId</p>
+<h5 id="string-secret">string secret</h5>
+<p>&#x5C0F;&#x7A0B;&#x5E8F; appSecret</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td>&#x83B7;&#x53D6;&#x5230;&#x7684;&#x51ED;&#x8BC1;</td>
+<td></td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>number</td>
+<td>&#x51ED;&#x8BC1;&#x6709;&#x6548;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;</td>
+<td></td>
+</tr>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>errcode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>&#x7CFB;&#x7EDF;&#x7E41;&#x5FD9;&#xFF0C;&#x6B64;&#x65F6;&#x8BF7;&#x5F00;&#x53D1;&#x8005;&#x7A0D;&#x5019;&#x518D;&#x8BD5;</td>
+</tr>
+<tr>
+<td>0</td>
+<td>&#x8BF7;&#x6C42;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>40001</td>
+<td>AppSecret&#x9519;&#x8BEF;&#x6216;&#x8005;AppSecret&#x4E0D;&#x5C5E;&#x4E8E;&#x8FD9;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BF7;&#x5F00;&#x53D1;&#x8005;&#x786E;&#x8BA4;AppSecret&#x7684;&#x6B63;&#x786E;&#x6027;</td>
+</tr>
+<tr>
+<td>40002</td>
+<td>&#x8BF7;&#x786E;&#x4FDD;grant_type&#x5B57;&#x6BB5;&#x503C;&#x4E3A;client_credential</td>
+</tr>
+<tr>
+<td>40164</td>
+<td>&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x7684;IP&#x5730;&#x5740;&#x4E0D;&#x5728;&#x767D;&#x540D;&#x5355;&#x4E2D;&#xFF0C;&#x8BF7;&#x5728;&#x63A5;&#x53E3;IP&#x767D;&#x540D;&#x5355;&#x4E2D;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

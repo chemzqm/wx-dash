@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>RequestTask</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="requesttask">RequestTask</h3>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 1.4.0</p>
+</blockquote>
+<p>&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;&#x5BF9;&#x8C61;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
+<h5 id="requesttaskabort"><a href="RequestTask.abort.html">RequestTask.abort()</a></h5>
+<p>&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> requestTask = wx.request({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
+  data: {
+    <span class="hljs-attr">x</span>: <span class="hljs-string">&apos;&apos;</span> ,
+    <span class="hljs-attr">y</span>: <span class="hljs-string">&apos;&apos;</span>
+  },
+  <span class="hljs-attr">header</span>: {
+    <span class="hljs-string">&apos;content-type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>
+  },
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.data)
+  }
+})
+requestTask.abort() <span class="hljs-comment">// &#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;</span>
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

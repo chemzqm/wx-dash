@@ -16,36 +16,69 @@
                     <div id="book-search-results">
                         <div class="search-noresults">
                             <section class="normal markdown-section">
-                                <h3 id="stats-filesystemmanagerstatsyncstring-path">Stats FileSystemManager.statSync(string path)</h3>
-<blockquote>
-<p>&#x57FA;&#x7840;&#x5E93; 1.9.9 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
-</blockquote>
+                                <h3 id="statsobject-filesystemmanagerstatsyncstring-path-boolean-recursive"><a href="Stats.html">Stats</a>|Object FileSystemManager.statSync(string path, boolean recursive)</h3>
 <p>FileSystemManager.stat &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="string-path">string path</h5>
 <p>&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x8DEF;&#x5F84;</p>
+<h5 id="boolean-recursive">boolean recursive</h5>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 2.3.0</p>
+</blockquote>
+<p>&#x662F;&#x5426;&#x9012;&#x5F52;&#x83B7;&#x53D6;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x7684; Stats &#x4FE1;&#x606F;</p>
 <h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
-<h5 id="stats-stat"><a href="Stats.html">Stats</a> stat</h5>
-<p>&#x4E00;&#x4E2A; Stats &#x5BF9;&#x8C61;</p>
+<h5 id="statsobject-stats"><a href="Stats.html">Stats</a>|Object stats</h5>
+<p>&#x5F53; recursive &#x4E3A; false &#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Stats &#x5BF9;&#x8C61;&#x3002;&#x5F53; recursive &#x4E3A; true &#x4E14; path &#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;res.stats &#x662F;&#x4E00;&#x4E2A; Object&#xFF0C;key &#x4EE5; path &#x4E3A;&#x6839;&#x8DEF;&#x5F84;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;value &#x662F;&#x8BE5;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;&#x7684; Stats &#x5BF9;&#x8C61;&#x3002;</p>
 <h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
 <table>
 <thead>
 <tr>
-<th>errMsg</th>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>fail permission denied, open ${path}</td>
 <td>&#x6307;&#x5B9A;&#x7684; path &#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x8BFB;&#x6743;&#x9650;</td>
 </tr>
 <tr>
+<td></td>
 <td>fail no such file or directory ${path}</td>
 <td>&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</td>
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p>recursive &#x4E3A; false &#x65F6;</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">let</span> fs = wx.getFileSystemManager()
+fs.stat({
+    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
+        wx.env.USER_DATA_PATH
+    }
+    /testDir`</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(res.stats.isDirectory())
+  }
+})
+</code></pre>
+<p>recursive &#x4E3A; true &#x65F6;</p>
+<pre><code class="language-javascript">fs.stat({
+    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
+        wx.env.USER_DATA_PATH
+    }
+    /testDir`</span>,
+  <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+    <span class="hljs-built_in">Object</span>.keys(res.stats).forEach(<span class="hljs-function"><span class="hljs-params">path</span> =&gt;</span> {
+      <span class="hljs-keyword">let</span> stats = res.stats[path]
+      <span class="hljs-built_in">console</span>.log(path, stats.isDirectory())
+    })
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>

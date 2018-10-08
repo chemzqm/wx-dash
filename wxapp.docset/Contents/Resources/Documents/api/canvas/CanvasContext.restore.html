@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.restore</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="canvascontextrestore">CanvasContext.restore()</h3>
+<p>&#x6062;&#x590D;&#x4E4B;&#x524D;&#x4FDD;&#x5B58;&#x7684;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+<span class="hljs-comment">// save the default fill style</span>
+ctx.save()
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+
+<span class="hljs-comment">// restore to the previous saved state</span>
+ctx.restore()
+ctx.fillRect(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+
+ctx.draw()
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/save-restore.png?t=18100816" alt=""></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

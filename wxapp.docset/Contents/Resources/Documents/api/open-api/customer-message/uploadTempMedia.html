@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>uploadTempMedia</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="uploadtempmedia">uploadTempMedia</h3>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x672C;&#x63A5;&#x53E3;&#x628A;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#xFF08;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x56FE;&#x7247;&#xFF09;&#x4E0A;&#x4F20;&#x5230;&#x5FAE;&#x4FE1;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7528;&#x6237;&#x53D1;&#x9001;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x6216;&#x88AB;&#x52A8;&#x56DE;&#x590D;&#x7528;&#x6237;&#x6D88;&#x606F;&#x3002;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-accesstoken">string access_token</h5>
+<p><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></p>
+<h5 id="string-type">string type</h5>
+<p>&#x6587;&#x4EF6;&#x7C7B;&#x578B;</p>
+<p><strong>type &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>&#x56FE;&#x7247;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="file-media">file media</h5>
+<p>form-data &#x4E2D;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x6807;&#x8BC6;&#xFF0C;&#x6709;filename&#x3001;filelength&#x3001;content-type&#x7B49;&#x4FE1;&#x606F;</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>&#x6587;&#x4EF6;&#x7C7B;&#x578B;</td>
+<td></td>
+</tr>
+<tr>
+<td>media_id</td>
+<td>string</td>
+<td>&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x540E;&#xFF0C;&#x83B7;&#x53D6;&#x6807;&#x8BC6;</td>
+<td></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>number</td>
+<td>&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x65F6;&#x95F4;&#x6233;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>errcode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>40004</td>
+<td>&#x65E0;&#x6548;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x7C7B;&#x578B;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>type &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>&#x56FE;&#x7247;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8C03;&#x7528;&#x793A;&#x4F8B;">&#x8C03;&#x7528;&#x793A;&#x4F8B;</h4>
+<p>&#x4F7F;&#x7528; CURL &#x547D;&#x4EE4;&#xFF0C;&#x7528; FORM &#x8868;&#x5355;&#x65B9;&#x5F0F;&#x4E0A;&#x4F20;&#x4E00;&#x4E2A;&#x591A;&#x5A92;&#x4F53;&#x6587;&#x4EF6;</p>
+<pre><code class="language-sh">curl -F media=@test.jpg <span class="hljs-string">&quot;https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE&quot;</span>
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

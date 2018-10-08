@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>二维码</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="createwxaqrcode">createWXAQRCode</h3>
+<p>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x7684;&#x7801;&#x6570;&#x91CF;&#x8F83;&#x5C11;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x3002;<strong>&#x901A;&#x8FC7;&#x8BE5;&#x63A5;&#x53E3;&#x751F;&#x6210;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;&#x6709;&#x6570;&#x91CF;&#x9650;&#x5236;</strong>&#xFF0C;&#x8BE6;&#x89C1;<a href="../../../framework/open-ability/qr-code.html">&#x83B7;&#x53D6;&#x4E8C;&#x7EF4;&#x7801;</a>&#x3002;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=ACCESS_TOKEN
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-accesstoken">string access_token</h5>
+<p><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></p>
+<h5 id="string-path">string path</h5>
+<p>&#x626B;&#x7801;&#x8FDB;&#x5165;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#xFF0C;&#x6700;&#x5927;&#x957F;&#x5EA6; 128 &#x5B57;&#x8282;&#xFF0C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</p>
+<h5 id="number-width">number width</h5>
+<p>&#x4E8C;&#x7EF4;&#x7801;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x9ED8;&#x8BA4; 430px</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>errcode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>45029</td>
+<td>&#x751F;&#x6210;&#x7801;&#x4E2A;&#x6570;&#x603B;&#x548C;&#x5230;&#x8FBE;&#x6700;&#x5927;&#x4E2A;&#x6570;&#x9650;&#x5236;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x503C;&#x8BF4;&#x660E;</h4>
+<p>&#x5982;&#x679C;&#x8C03;&#x7528;&#x6210;&#x529F;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x56FE;&#x7247;&#x4E8C;&#x8FDB;&#x5236;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE; JSON &#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<ul>
+<li>&#x63A5;&#x53E3;&#x53EA;&#x80FD;&#x751F;&#x6210;&#x5DF2;&#x53D1;&#x5E03;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E8C;&#x7EF4;&#x7801;</li>
+<li>&#x4E0E; <a href="getWXACode.html">getWXACode</a> &#x603B;&#x5171;&#x751F;&#x6210;&#x7684;&#x7801;&#x6570;&#x91CF;&#x9650;&#x5236;&#x4E3A; 100,000&#xFF0C;&#x8BF7;&#x8C28;&#x614E;&#x8C03;&#x7528;&#x3002;</li>
+</ul>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

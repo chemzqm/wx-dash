@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>交互</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxshowmodalobject-object">wx.showModal(Object object)</h3>
+<p>&#x663E;&#x793A;&#x6A21;&#x6001;&#x5BF9;&#x8BDD;&#x6846;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x63D0;&#x793A;&#x7684;&#x6807;&#x9898;</td>
+<td></td>
+</tr>
+<tr>
+<td>content</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x63D0;&#x793A;&#x7684;&#x5185;&#x5BB9;</td>
+<td></td>
+</tr>
+<tr>
+<td>showCancel</td>
+<td>boolean</td>
+<td>true</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x663E;&#x793A;&#x53D6;&#x6D88;&#x6309;&#x94AE;</td>
+<td></td>
+</tr>
+<tr>
+<td>cancelText</td>
+<td>string</td>
+<td>&apos;&#x53D6;&#x6D88;&apos;</td>
+<td>&#x5426;</td>
+<td>&#x53D6;&#x6D88;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#xFF0C;&#x6700;&#x591A; 4 &#x4E2A;&#x5B57;&#x7B26;</td>
+<td></td>
+</tr>
+<tr>
+<td>cancelColor</td>
+<td>string</td>
+<td>#000000</td>
+<td>&#x5426;</td>
+<td>&#x53D6;&#x6D88;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;&#xFF0C;&#x5FC5;&#x987B;&#x662F; 16 &#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x7684;&#x989C;&#x8272;&#x5B57;&#x7B26;&#x4E32;</td>
+<td></td>
+</tr>
+<tr>
+<td>confirmText</td>
+<td>string</td>
+<td>&apos;&#x786E;&#x5B9A;&apos;</td>
+<td>&#x5426;</td>
+<td>&#x786E;&#x8BA4;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#xFF0C;&#x6700;&#x591A; 4 &#x4E2A;&#x5B57;&#x7B26;</td>
+<td></td>
+</tr>
+<tr>
+<td>confirmColor</td>
+<td>string</td>
+<td>#3cc51f</td>
+<td>&#x5426;</td>
+<td>&#x786E;&#x8BA4;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;&#xFF0C;&#x5FC5;&#x987B;&#x662F; 16 &#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x7684;&#x989C;&#x8272;&#x5B57;&#x7B26;&#x4E32;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>confirm</td>
+<td>boolean</td>
+<td>&#x4E3A; true &#x65F6;&#xFF0C;&#x8868;&#x793A;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x4E86;&#x786E;&#x5B9A;&#x6309;&#x94AE;</td>
+<td></td>
+</tr>
+<tr>
+<td>cancel</td>
+<td>boolean</td>
+<td>&#x4E3A; true &#x65F6;&#xFF0C;&#x8868;&#x793A;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x4E86;&#x53D6;&#x6D88;&#xFF08;&#x7528;&#x4E8E; Android &#x7CFB;&#x7EDF;&#x533A;&#x5206;&#x70B9;&#x51FB;&#x8499;&#x5C42;&#x5173;&#x95ED;&#x8FD8;&#x662F;&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#x6309;&#x94AE;&#x5173;&#x95ED;&#xFF09;</td>
+<td>&gt;= 1.1.0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<ul>
+<li>Android 6.7.2 &#x4EE5;&#x4E0B;&#x7248;&#x672C;&#xFF0C;&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#x6216;&#x8499;&#x5C42;&#x65F6;&#xFF0C;&#x56DE;&#x8C03; fail, errMsg &#x4E3A; &quot;fail cancel&quot;&#xFF1B;</li>
+<li>Android 6.7.2 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C; &#x548C; iOS &#x70B9;&#x51FB;&#x8499;&#x5C42;&#x4E0D;&#x4F1A;&#x5173;&#x95ED;&#x6A21;&#x6001;&#x5F39;&#x7A97;&#xFF0C;&#x6240;&#x4EE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x300C;&#x53D6;&#x6D88;&#x300D;&#x5206;&#x652F;&#x4E2D;&#x5B9E;&#x73B0;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</li>
+</ul>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

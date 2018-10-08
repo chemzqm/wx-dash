@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>NodesRef.fields</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="nodesreffieldsobject-fields">NodesRef.fields(Object fields)</h3>
+<p>&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#x5728;fields&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x662F; <code>nodesRef</code> &#x5BF9;&#x5E94;&#x7684; <code>selectorQuery</code></p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-fields">Object fields</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>boolean</td>
+<td>false</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9; id</td>
+<td></td>
+</tr>
+<tr>
+<td>dataset</td>
+<td>boolean</td>
+<td>false</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9; dataset</td>
+<td></td>
+</tr>
+<tr>
+<td>rect</td>
+<td>boolean</td>
+<td>false</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#xFF08;<code>left</code> <code>right</code> <code>top</code> <code>bottom</code>&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td>boolean</td>
+<td>false</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5C3A;&#x5BF8;&#xFF08;<code>width</code> <code>height</code>&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>scrollOffset</td>
+<td>boolean</td>
+<td>false</td>
+<td>&#x5426;</td>
+<td>&#x5426; &#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x7684; <code>scrollLeft</code> <code>scrollTop</code>&#xFF0C;&#x8282;&#x70B9;&#x5FC5;&#x987B;&#x662F; <code>scroll-view</code> &#x6216;&#x8005; <code>viewport</code></td>
+<td></td>
+</tr>
+<tr>
+<td>properties</td>
+<td>Array.&lt;string&gt;</td>
+<td>[]</td>
+<td>&#x5426;</td>
+<td>&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x5C5E;&#x6027;&#x540D;&#x7684;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x503C;&#xFF08;&#x53EA;&#x80FD;&#x83B7;&#x5F97;&#x7EC4;&#x4EF6;&#x6587;&#x6863;&#x4E2D;&#x6807;&#x6CE8;&#x7684;&#x5E38;&#x89C4;&#x5C5E;&#x6027;&#x503C;&#xFF0C;id class style &#x548C;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x4E0D;&#x53EF;&#x83B7;&#x53D6;&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>computedStyle</td>
+<td>Array.&lt;string&gt;</td>
+<td>[]</td>
+<td>&#x5426;</td>
+<td>&#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x540D;&#x7684;&#x5F53;&#x524D;&#x503C;</td>
+<td>&gt;= 2.1.0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript">Page({
+    <span class="hljs-attr">getFields</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).fields({
+            <span class="hljs-attr">dataset</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">size</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">scrollOffset</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">properties</span>: [<span class="hljs-string">&apos;scrollX&apos;</span>, <span class="hljs-string">&apos;scrollY&apos;</span>],
+            <span class="hljs-attr">computedStyle</span>: [<span class="hljs-string">&apos;margin&apos;</span>, <span class="hljs-string">&apos;backgroundColor&apos;</span>]
+        }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+            res.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
+            res.width <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
+            res.height <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
+            res.scrollLeft <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
+            res.scrollTop <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
+            res.scrollX <span class="hljs-comment">// &#x8282;&#x70B9; scroll-x &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
+            res.scrollY <span class="hljs-comment">// &#x8282;&#x70B9; scroll-y &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
+            <span class="hljs-comment">// &#x6B64;&#x5904;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x8981;&#x8FD4;&#x56DE;&#x7684;&#x6837;&#x5F0F;&#x540D;</span>
+            res.margin
+            res.backgroundColor
+        }).exec()
+    }
+})
+</code></pre>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<p>computedStyle &#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E; size&#xFF0C;&#x5F53;&#x540C;&#x65F6;&#x5728; computedStyle &#x91CC;&#x6307;&#x5B9A;&#x4E86; width/height &#x548C;&#x4F20;&#x5165;&#x4E86; size: true&#xFF0C;&#x5219;&#x4F18;&#x5148;&#x8FD4;&#x56DE; computedStyle &#x83B7;&#x53D6;&#x5230;&#x7684; width/height&#x3002;</p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

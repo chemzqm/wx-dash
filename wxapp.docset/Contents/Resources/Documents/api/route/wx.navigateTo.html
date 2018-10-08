@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.navigateTo</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxnavigatetoobject-object">wx.navigateTo(Object object)</h3>
+<p>&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x5E94;&#x7528;&#x5185;&#x7684;&#x67D0;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x8DF3;&#x5230; tabbar &#x9875;&#x9762;&#x3002;&#x4F7F;&#x7528; <a href="wx.navigateBack.html">wx.navigateBack</a> &#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5230;&#x539F;&#x9875;&#x9762;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x5E94;&#x7528;&#x5185;&#x975E; tabBar &#x7684;&#x9875;&#x9762;&#x7684;&#x8DEF;&#x5F84;, &#x8DEF;&#x5F84;&#x540E;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;&#x3002;&#x53C2;&#x6570;&#x4E0E;&#x8DEF;&#x5F84;&#x4E4B;&#x95F4;&#x4F7F;&#x7528; <code>?</code> &#x5206;&#x9694;&#xFF0C;&#x53C2;&#x6570;&#x952E;&#x4E0E;&#x53C2;&#x6570;&#x503C;&#x7528; <code>=</code> &#x76F8;&#x8FDE;&#xFF0C;&#x4E0D;&#x540C;&#x53C2;&#x6570;&#x7528; <code>&amp;</code> &#x5206;&#x9694;&#xFF1B;&#x5982; &apos;path?key=value&amp;key2=value2&apos;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.navigateTo({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test?id=1&apos;</span>
+})
+</code></pre>
+<pre><code class="language-javascript"><span class="hljs-comment">//test.js</span>
+Page({
+  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">option</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(option.query)
+  }
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

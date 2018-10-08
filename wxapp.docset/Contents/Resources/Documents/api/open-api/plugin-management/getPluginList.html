@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>getPluginList</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="getpluginlist">getPluginList</h3>
+<p>&#x67E5;&#x8BE2;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/wxa/plugin?access_token=TOKEN
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-accesstoken">string access_token</h5>
+<p><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></p>
+<h5 id="string-action">string action</h5>
+<p>&#x6B64;&#x63A5;&#x53E3;&#x4E0B;&#x586B;&#x5199; &quot;list&quot;</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+<tr>
+<td>plugin_list</td>
+<td>Array.&lt;Object&gt;</td>
+<td>&#x7533;&#x8BF7;&#x6216;&#x4F7F;&#x7528;&#x4E2D;&#x7684;&#x63D2;&#x4EF6;&#x5217;&#x8868;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>plugin_list &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appid</td>
+<td>string</td>
+<td>&#x63D2;&#x4EF6; appId</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>number</td>
+<td>&#x63D2;&#x4EF6;&#x72B6;&#x6001;</td>
+<td></td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>string</td>
+<td>&#x63D2;&#x4EF6;&#x6635;&#x79F0;</td>
+<td></td>
+</tr>
+<tr>
+<td>headimgurl</td>
+<td>string</td>
+<td>&#x63D2;&#x4EF6;&#x5934;&#x50CF;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>status &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>&#x7533;&#x8BF7;&#x4E2D;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&#x7533;&#x8BF7;&#x901A;&#x8FC7;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x5DF2;&#x62D2;&#x7EDD;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x5DF2;&#x8D85;&#x65F6;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>ok</td>
+<td>&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td>-1</td>
+<td></td>
+<td>&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>89236</td>
+<td></td>
+<td>&#x8BE5;&#x63D2;&#x4EF6;&#x4E0D;&#x80FD;&#x7533;&#x8BF7;</td>
+</tr>
+<tr>
+<td>89237</td>
+<td></td>
+<td>&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x8BE5;&#x63D2;&#x4EF6;</td>
+</tr>
+<tr>
+<td>89238</td>
+<td></td>
+<td>&#x7533;&#x8BF7;&#x6216;&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x8FBE;&#x5230;&#x4E0A;&#x9650;</td>
+</tr>
+<tr>
+<td>89239</td>
+<td></td>
+<td>&#x8BE5;&#x63D2;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>89240</td>
+<td></td>
+<td>&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x6709;&#x201C;&#x5F85;&#x786E;&#x8BA4;&#x201D;&#x7684;&#x7533;&#x8BF7;&#x53EF;&#x64CD;&#x4F5C;&#x901A;&#x8FC7;/&#x62D2;&#x7EDD;</td>
+</tr>
+<tr>
+<td>89241</td>
+<td></td>
+<td>&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x6709;&#x201C;&#x5DF2;&#x62D2;&#x7EDD;/&#x5DF2;&#x8D85;&#x65F6;&#x201D;&#x7684;&#x7533;&#x8BF7;&#x53EF;&#x64CD;&#x4F5C;&#x5220;&#x9664;</td>
+</tr>
+<tr>
+<td>89242</td>
+<td></td>
+<td>&#x8BE5;appid&#x4E0D;&#x5728;&#x7533;&#x8BF7;&#x5217;&#x8868;&#x5185;</td>
+</tr>
+<tr>
+<td>89243</td>
+<td></td>
+<td>&#x201C;&#x5F85;&#x786E;&#x8BA4;&#x201D;&#x7684;&#x7533;&#x8BF7;&#x4E0D;&#x53EF;&#x5220;&#x9664;</td>
+</tr>
+<tr>
+<td>89044</td>
+<td></td>
+<td>&#x4E0D;&#x5B58;&#x5728;&#x8BE5;&#x63D2;&#x4EF6;appid</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;</h4>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;action&quot;</span>:<span class="hljs-string">&quot;list&quot;</span>
+}
+</code></pre>
+<h4 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;</h4>
+<pre><code class="language-js">{
+  <span class="hljs-string">&quot;errcode&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;errmsg&quot;</span>: <span class="hljs-string">&quot;ok&quot;</span>,
+  <span class="hljs-string">&quot;plugin_list&quot;</span>: [
+    <span class="hljs-string">&quot;appid&quot;</span>: <span class="hljs-string">&quot;aaaa&quot;</span>,
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;nickname&quot;</span>: <span class="hljs-string">&quot;&#x63D2;&#x4EF6;&#x6635;&#x79F0;&quot;</span>,
+    <span class="hljs-string">&quot;headimgurl&quot;</span>: <span class="hljs-string">&quot;http://plugin.qq.com&quot;</span>,
+  ],
+}
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

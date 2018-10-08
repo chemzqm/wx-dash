@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>扫码</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxscancodeobject-object">wx.scanCode(Object object)</h3>
+<p>&#x8C03;&#x8D77;&#x5BA2;&#x6237;&#x7AEF;&#x626B;&#x7801;&#x754C;&#x9762;&#x8FDB;&#x884C;&#x626B;&#x7801;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onlyFromCamera</td>
+<td>boolean</td>
+<td>false</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x53EA;&#x80FD;&#x4ECE;&#x76F8;&#x673A;&#x626B;&#x7801;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x56FE;&#x7247;</td>
+<td>&gt;= 1.2.0</td>
+</tr>
+<tr>
+<td>scanType</td>
+<td>Array.&lt;string&gt;</td>
+<td>[&apos;barCode&apos;, &apos;qrCode&apos;]</td>
+<td>&#x5426;</td>
+<td>&#x626B;&#x7801;&#x7C7B;&#x578B;</td>
+<td>&gt;= 1.7.0</td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.scanType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>barCode</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>qrCode</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>datamatrix</td>
+<td>Data Matrix &#x7801;</td>
+</tr>
+<tr>
+<td>pdf417</td>
+<td>PDF417 &#x6761;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td>string</td>
+<td>&#x6240;&#x626B;&#x7801;&#x7684;&#x5185;&#x5BB9;</td>
+<td></td>
+</tr>
+<tr>
+<td>scanType</td>
+<td>string</td>
+<td>&#x6240;&#x626B;&#x7801;&#x7684;&#x7C7B;&#x578B;</td>
+<td></td>
+</tr>
+<tr>
+<td>charSet</td>
+<td>string</td>
+<td>&#x6240;&#x626B;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x96C6;</td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>string</td>
+<td>&#x5F53;&#x6240;&#x626B;&#x7684;&#x7801;&#x4E3A;&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x5408;&#x6CD5;&#x4E8C;&#x7EF4;&#x7801;&#x65F6;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x6B64;&#x5B57;&#x6BB5;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#x4E8C;&#x7EF4;&#x7801;&#x643A;&#x5E26;&#x7684; path</td>
+<td></td>
+</tr>
+<tr>
+<td>rawData</td>
+<td>string</td>
+<td>&#x539F;&#x59CB;&#x6570;&#x636E;&#xFF0C;base64&#x7F16;&#x7801;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.scanType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QR_CODE</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>AZTEC</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>CODABAR</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>CODE_39</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>CODE_93</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>CODE_128</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>DATA_MATRIX</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>EAN_8</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>EAN_13</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>ITF</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>MAXICODE</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>PDF_417</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>RSS_14</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>RSS_EXPANDED</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>UPC_A</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>UPC_E</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>UPC_EAN_EXTENSION</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>WX_CODE</td>
+<td>&#x4E8C;&#x7EF4;&#x7801;</td>
+</tr>
+<tr>
+<td>CODE_25</td>
+<td>&#x4E00;&#x7EF4;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

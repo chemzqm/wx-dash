@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.setFontSize</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="canvascontextsetfontsizenumber-fontsize">CanvasContext.setFontSize(number fontSize)</h3>
+<p>&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x7684;&#x5B57;&#x53F7;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="number-fontsize">number fontSize</h5>
+<p>&#x5B57;&#x4F53;&#x7684;&#x5B57;&#x53F7;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.setFontSize(<span class="hljs-number">20</span>)
+ctx.fillText(<span class="hljs-string">&apos;20&apos;</span>, <span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
+ctx.setFontSize(<span class="hljs-number">30</span>)
+ctx.fillText(<span class="hljs-string">&apos;30&apos;</span>, <span class="hljs-number">40</span>, <span class="hljs-number">40</span>)
+ctx.setFontSize(<span class="hljs-number">40</span>)
+ctx.fillText(<span class="hljs-string">&apos;40&apos;</span>, <span class="hljs-number">60</span>, <span class="hljs-number">60</span>)
+ctx.setFontSize(<span class="hljs-number">50</span>)
+ctx.fillText(<span class="hljs-string">&apos;50&apos;</span>, <span class="hljs-number">90</span>, <span class="hljs-number">90</span>)
+
+ctx.draw()
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/font-size.png?t=18100816" alt=""></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

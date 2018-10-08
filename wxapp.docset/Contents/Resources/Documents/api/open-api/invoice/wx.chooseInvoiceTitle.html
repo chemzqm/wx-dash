@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.chooseInvoiceTitle</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxchooseinvoicetitleobject-object">wx.chooseInvoiceTitle(Object object)</h3>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 1.5.0</p>
+</blockquote>
+<blockquote>
+<p>&#x8C03;&#x7528;&#x524D;&#x9700;&#x8981; <a href="../../../framework/open-ability/authorize.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.invoiceTitle</p>
+</blockquote>
+<p>&#x9009;&#x62E9;&#x7528;&#x6237;&#x7684;&#x53D1;&#x7968;&#x62AC;&#x5934;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>&#x62AC;&#x5934;&#x7C7B;&#x578B;</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>&#x62AC;&#x5934;&#x540D;&#x79F0;</td>
+<td></td>
+</tr>
+<tr>
+<td>taxNumber</td>
+<td>string</td>
+<td>&#x62AC;&#x5934;&#x7A0E;&#x53F7;</td>
+<td></td>
+</tr>
+<tr>
+<td>companyAddress</td>
+<td>string</td>
+<td>&#x5355;&#x4F4D;&#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>string</td>
+<td>&#x624B;&#x673A;&#x53F7;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>bankName</td>
+<td>string</td>
+<td>&#x94F6;&#x884C;&#x540D;&#x79F0;</td>
+<td></td>
+</tr>
+<tr>
+<td>bankAccount</td>
+<td>string</td>
+<td>&#x94F6;&#x884C;&#x8D26;&#x53F7;</td>
+<td></td>
+</tr>
+<tr>
+<td>errMsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.type &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>&#x5355;&#x4F4D;</td>
+</tr>
+<tr>
+<td>1</td>
+<td>&#x4E2A;&#x4EBA;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p><a href="wechatide://minicode/GJ4S9nmQ7x2E" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

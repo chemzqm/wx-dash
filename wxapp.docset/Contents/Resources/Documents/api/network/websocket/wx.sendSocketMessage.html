@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.sendSocketMessage</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxsendsocketmessageobject-object">wx.sendSocketMessage(Object object)</h3>
+<p>&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x5148; wx.connectSocket&#xFF0C;&#x5E76;&#x5728; wx.onSocketOpen &#x56DE;&#x8C03;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x53D1;&#x9001;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>string/ArrayBuffer</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x5185;&#x5BB9;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> socketOpen = <span class="hljs-literal">false</span>
+<span class="hljs-keyword">const</span> socketMsgQueue = []
+wx.connectSocket({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>
+})
+
+wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  socketOpen = <span class="hljs-literal">true</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; socketMsgQueue.length; i++){
+    sendSocketMessage(socketMsgQueue[i])
+  }
+  socketMsgQueue = []
+})
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sendSocketMessage</span>(<span class="hljs-params">msg</span>) </span>{
+  <span class="hljs-keyword">if</span> (socketOpen) {
+    wx.sendSocketMessage({
+      <span class="hljs-attr">data</span>:msg
+    })
+  } <span class="hljs-keyword">else</span> {
+    socketMsgQueue.push(msg)
+  }
+}
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

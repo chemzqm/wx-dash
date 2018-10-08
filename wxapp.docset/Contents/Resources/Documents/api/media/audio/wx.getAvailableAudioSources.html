@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.getAvailableAudioSources</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxgetavailableaudiosourcesobject-object">wx.getAvailableAudioSources(Object object)</h3>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 2.1.0</p>
+</blockquote>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x652F;&#x6301;&#x7684;&#x97F3;&#x9891;&#x8F93;&#x5165;&#x6E90;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>audioSources</td>
+<td>Array.&lt;string&gt;</td>
+<td>&#x652F;&#x6301;&#x7684;&#x97F3;&#x9891;&#x8F93;&#x5165;&#x6E90;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x5728; <a href="../recorder/RecorderManager.start.html">RecorderManager.start()</a> &#x63A5;&#x53E3;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x8FD4;&#x56DE;&#x503C;&#x5B9A;&#x4E49;&#x53C2;&#x8003; https://developer.android.com/reference/kotlin/android/media/MediaRecorder.AudioSource</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.audioSources &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>&#x81EA;&#x52A8;&#x8BBE;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x624B;&#x673A;&#x9EA6;&#x514B;&#x98CE;&#xFF0C;&#x63D2;&#x4E0A;&#x8033;&#x9EA6;&#x540E;&#x81EA;&#x52A8;&#x5207;&#x6362;&#x4F7F;&#x7528;&#x8033;&#x673A;&#x9EA6;&#x514B;&#x98CE;&#xFF0C;&#x6240;&#x6709;&#x5E73;&#x53F0;&#x9002;&#x7528;</td>
+</tr>
+<tr>
+<td>buildInMic</td>
+<td>&#x624B;&#x673A;&#x9EA6;&#x514B;&#x98CE;&#xFF0C;&#x4EC5;&#x9650; iOS</td>
+</tr>
+<tr>
+<td>headsetMic</td>
+<td>&#x8033;&#x673A;&#x9EA6;&#x514B;&#x98CE;&#xFF0C;&#x4EC5;&#x9650; iOS</td>
+</tr>
+<tr>
+<td>mic</td>
+<td>&#x9EA6;&#x514B;&#x98CE;&#xFF08;&#x6CA1;&#x63D2;&#x8033;&#x9EA6;&#x65F6;&#x662F;&#x624B;&#x673A;&#x9EA6;&#x514B;&#x98CE;&#xFF0C;&#x63D2;&#x8033;&#x9EA6;&#x65F6;&#x662F;&#x8033;&#x673A;&#x9EA6;&#x514B;&#x98CE;&#xFF09;&#xFF0C;&#x4EC5;&#x9650; Android</td>
+</tr>
+<tr>
+<td>camcorder</td>
+<td>&#x540C; mic&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x5F55;&#x5236;&#x97F3;&#x89C6;&#x9891;&#x5185;&#x5BB9;&#xFF0C;&#x4EC5;&#x9650; Android</td>
+</tr>
+<tr>
+<td>voice_communication</td>
+<td>&#x540C; mic&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x6C9F;&#x901A;&#xFF0C;&#x4EC5;&#x9650; Android</td>
+</tr>
+<tr>
+<td>voice_recognition</td>
+<td>&#x540C; mic&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#xFF0C;&#x4EC5;&#x9650; Android</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

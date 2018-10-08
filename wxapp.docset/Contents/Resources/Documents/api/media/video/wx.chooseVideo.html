@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.chooseVideo</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxchoosevideoobject-object">wx.chooseVideo(Object object)</h3>
+<p>&#x62CD;&#x6444;&#x89C6;&#x9891;&#x6216;&#x4ECE;&#x624B;&#x673A;&#x76F8;&#x518C;&#x4E2D;&#x9009;&#x89C6;&#x9891;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sourceType</td>
+<td>Array.&lt;string&gt;</td>
+<td>[&apos;album&apos;, &apos;camera&apos;]</td>
+<td>&#x5426;</td>
+<td>&#x89C6;&#x9891;&#x9009;&#x62E9;&#x7684;&#x6765;&#x6E90;</td>
+<td></td>
+</tr>
+<tr>
+<td>compressed</td>
+<td>boolean</td>
+<td>true</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x538B;&#x7F29;&#x6240;&#x9009;&#x62E9;&#x7684;&#x89C6;&#x9891;&#x6587;&#x4EF6;</td>
+<td>&gt;= 1.6.0</td>
+</tr>
+<tr>
+<td>maxDuration</td>
+<td>number</td>
+<td>60</td>
+<td>&#x5426;</td>
+<td>&#x62CD;&#x6444;&#x89C6;&#x9891;&#x6700;&#x957F;&#x62CD;&#x6444;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;</td>
+<td></td>
+</tr>
+<tr>
+<td>camera</td>
+<td>string</td>
+<td>&apos;back&apos;</td>
+<td>&#x5426;</td>
+<td>&#x9ED8;&#x8BA4;&#x62C9;&#x8D77;&#x7684;&#x662F;&#x524D;&#x7F6E;&#x6216;&#x8005;&#x540E;&#x7F6E;&#x6444;&#x50CF;&#x5934;&#x3002;&#x90E8;&#x5206; Android &#x624B;&#x673A;&#x4E0B;&#x7531;&#x4E8E;&#x7CFB;&#x7EDF; ROM &#x4E0D;&#x652F;&#x6301;&#x65E0;&#x6CD5;&#x751F;&#x6548;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.sourceType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>album</td>
+<td>&#x4ECE;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x89C6;&#x9891;</td>
+</tr>
+<tr>
+<td>camera</td>
+<td>&#x4F7F;&#x7528;&#x76F8;&#x673A;&#x62CD;&#x6444;&#x89C6;&#x9891;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.camera &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>back</td>
+<td>&#x9ED8;&#x8BA4;&#x62C9;&#x8D77;&#x540E;&#x7F6E;&#x6444;&#x50CF;&#x5934;</td>
+</tr>
+<tr>
+<td>front</td>
+<td>&#x9ED8;&#x8BA4;&#x62C9;&#x8D77;&#x524D;&#x7F6E;&#x6444;&#x50CF;&#x5934;</td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tempFilePath</td>
+<td>string</td>
+<td>&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>number</td>
+<td>&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x65F6;&#x95F4;&#x957F;&#x5EA6;</td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td>number</td>
+<td>&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x6570;&#x636E;&#x91CF;&#x5927;&#x5C0F;</td>
+<td></td>
+</tr>
+<tr>
+<td>height</td>
+<td>number</td>
+<td>&#x8FD4;&#x56DE;&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x9AD8;&#x5EA6;</td>
+<td></td>
+</tr>
+<tr>
+<td>width</td>
+<td>number</td>
+<td>&#x8FD4;&#x56DE;&#x9009;&#x5B9A;&#x89C6;&#x9891;&#x7684;&#x5BBD;&#x5EA6;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.chooseVideo({
+  <span class="hljs-attr">sourceType</span>: [<span class="hljs-string">&apos;album&apos;</span>,<span class="hljs-string">&apos;camera&apos;</span>],
+  <span class="hljs-attr">maxDuration</span>: <span class="hljs-number">60</span>,
+  <span class="hljs-attr">camera</span>: <span class="hljs-string">&apos;back&apos;</span>,
+  success(res) {
+    <span class="hljs-built_in">console</span>.log(res.tempFilePath)
+  }
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

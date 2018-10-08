@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.setLineCap</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="canvascontextsetlinecapstring-linecap">CanvasContext.setLineCap(string lineCap)</h3>
+<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x7AEF;&#x70B9;&#x6837;&#x5F0F;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-linecap">string lineCap</h5>
+<p>&#x7EBF;&#x6761;&#x7684;&#x7ED3;&#x675F;&#x7AEF;&#x70B9;&#x6837;&#x5F0F;</p>
+<p><strong>lineCap &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>butt</td>
+<td>&#x5411;&#x7EBF;&#x6761;&#x7684;&#x6BCF;&#x4E2A;&#x672B;&#x7AEF;&#x6DFB;&#x52A0;&#x5E73;&#x76F4;&#x7684;&#x8FB9;&#x7F18;&#x3002;</td>
+</tr>
+<tr>
+<td>round</td>
+<td>&#x5411;&#x7EBF;&#x6761;&#x7684;&#x6BCF;&#x4E2A;&#x672B;&#x7AEF;&#x6DFB;&#x52A0;&#x5706;&#x5F62;&#x7EBF;&#x5E3D;&#x3002;</td>
+</tr>
+<tr>
+<td>square</td>
+<td>&#x5411;&#x7EBF;&#x6761;&#x7684;&#x6BCF;&#x4E2A;&#x672B;&#x7AEF;&#x6DFB;&#x52A0;&#x6B63;&#x65B9;&#x5F62;&#x7EBF;&#x5E3D;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.beginPath()
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">10</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineCap(<span class="hljs-string">&apos;butt&apos;</span>)
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">30</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">30</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineCap(<span class="hljs-string">&apos;round&apos;</span>)
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">50</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineCap(<span class="hljs-string">&apos;square&apos;</span>)
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">70</span>)
+ctx.stroke()
+
+ctx.draw()
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/line-cap.png?t=18100816" alt=""></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

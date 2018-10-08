@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.setTextAlign</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="canvascontextsettextalignstring-align">CanvasContext.setTextAlign(string align)</h3>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 1.1.0</p>
+</blockquote>
+<p>&#x8BBE;&#x7F6E;&#x6587;&#x5B57;&#x7684;&#x5BF9;&#x9F50;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-align">string align</h5>
+<p>&#x6587;&#x5B57;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;</p>
+<p><strong>align &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>&#x5DE6;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>center</td>
+<td>&#x5C45;&#x4E2D;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>right</td>
+<td>&#x53F3;&#x5BF9;&#x9F50;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.setStrokeStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.moveTo(<span class="hljs-number">150</span>, <span class="hljs-number">20</span>)
+ctx.lineTo(<span class="hljs-number">150</span>, <span class="hljs-number">170</span>)
+ctx.stroke()
+
+ctx.setFontSize(<span class="hljs-number">15</span>)
+ctx.setTextAlign(<span class="hljs-string">&apos;left&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;textAlign=left&apos;</span>, <span class="hljs-number">150</span>, <span class="hljs-number">60</span>)
+
+ctx.setTextAlign(<span class="hljs-string">&apos;center&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;textAlign=center&apos;</span>, <span class="hljs-number">150</span>, <span class="hljs-number">80</span>)
+
+ctx.setTextAlign(<span class="hljs-string">&apos;right&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;textAlign=right&apos;</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+
+ctx.draw()
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/set-text-align.png?t=18100816" alt=""></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

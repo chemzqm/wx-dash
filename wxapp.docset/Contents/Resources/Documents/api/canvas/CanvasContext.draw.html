@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.draw</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="canvascontextdrawboolean-reserve-function-callback">CanvasContext.draw(boolean reserve, function callback)</h3>
+<p>&#x5C06;&#x4E4B;&#x524D;&#x5728;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x63CF;&#x8FF0;&#xFF08;&#x8DEF;&#x5F84;&#x3001;&#x53D8;&#x5F62;&#x3001;&#x6837;&#x5F0F;&#xFF09;&#x753B;&#x5230; canvas &#x4E2D;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="boolean-reserve">boolean reserve</h5>
+<p>&#x672C;&#x6B21;&#x7ED8;&#x5236;&#x662F;&#x5426;&#x63A5;&#x7740;&#x4E0A;&#x4E00;&#x6B21;&#x7ED8;&#x5236;&#x3002;&#x5373; reserve &#x53C2;&#x6570;&#x4E3A; false&#xFF0C;&#x5219;&#x5728;&#x672C;&#x6B21;&#x8C03;&#x7528;&#x7ED8;&#x5236;&#x4E4B;&#x524D; native &#x5C42;&#x4F1A;&#x5148;&#x6E05;&#x7A7A;&#x753B;&#x5E03;&#x518D;&#x7EE7;&#x7EED;&#x7ED8;&#x5236;&#xFF1B;&#x82E5; reserve &#x53C2;&#x6570;&#x4E3A; true&#xFF0C;&#x5219;&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x753B;&#x5E03;&#x4E0A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x672C;&#x6B21;&#x8C03;&#x7528; drawCanvas &#x7ED8;&#x5236;&#x7684;&#x5185;&#x5BB9;&#x8986;&#x76D6;&#x5728;&#x4E0A;&#x9762;&#xFF0C;&#x9ED8;&#x8BA4; false&#x3002;</p>
+<h5 id="function-callback">function callback</h5>
+<p>&#x7ED8;&#x5236;&#x5B8C;&#x6210;&#x540E;&#x6267;&#x884C;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p>&#x7B2C;&#x4E8C;&#x6B21; draw() reserve &#x4E3A; true&#x3002;&#x6240;&#x4EE5;&#x4FDD;&#x7559;&#x4E86;&#x4E0A;&#x4E00;&#x6B21;&#x7684;&#x7ED8;&#x5236;&#x7ED3;&#x679C;&#xFF0C;&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x8BBE;&#x7F6E;&#x7684; fillStyle &apos;red&apos; &#x4E5F;&#x53D8;&#x6210;&#x4E86;&#x9ED8;&#x8BA4;&#x7684; &apos;black&apos;&#x3002;</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.draw()
+ctx.fillRect(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.draw(<span class="hljs-literal">true</span>)
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/reserve.png?t=18100816" alt=""></p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;-2">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p>&#x7B2C;&#x4E8C;&#x6B21; draw() reserve &#x4E3A; false&#x3002;&#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x4FDD;&#x7559;&#x4E86;&#x4E0A;&#x4E00;&#x6B21;&#x7684;&#x7ED8;&#x5236;&#x7ED3;&#x679C;&#x548C;&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x8BBE;&#x7F6E;&#x7684; fillStyle &apos;red&apos;&#x3002;</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.draw()
+ctx.fillRect(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.draw()
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/un-reserve.png?t=18100816" alt=""></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

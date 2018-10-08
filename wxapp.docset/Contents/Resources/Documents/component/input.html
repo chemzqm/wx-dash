@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <title>input</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../website.css" />
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../website.css">
   <style type="text/css">
     body {
       padding: 1em;
@@ -30,147 +28,147 @@
 </thead>
 <tbody>
 <tr>
-<td>value</td>
+<td id="input-value">value</td>
 <td>String</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x7684;&#x521D;&#x59CB;&#x5185;&#x5BB9;</td>
 <td></td>
 </tr>
 <tr>
-<td>type</td>
+<td id="input-type">type</td>
 <td>String</td>
 <td>&quot;text&quot;</td>
 <td>input &#x7684;&#x7C7B;&#x578B;</td>
 <td></td>
 </tr>
 <tr>
-<td>password</td>
+<td id="input-password">password</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x662F;&#x5BC6;&#x7801;&#x7C7B;&#x578B;</td>
 <td></td>
 </tr>
 <tr>
-<td>placeholder</td>
+<td id="input-placeholder">placeholder</td>
 <td>String</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x4E3A;&#x7A7A;&#x65F6;&#x5360;&#x4F4D;&#x7B26;</td>
 <td></td>
 </tr>
 <tr>
-<td>placeholder-style</td>
+<td id="input-placeholder-style">placeholder-style</td>
 <td>String</td>
 <td></td>
 <td>&#x6307;&#x5B9A; placeholder &#x7684;&#x6837;&#x5F0F;</td>
 <td></td>
 </tr>
 <tr>
-<td>placeholder-class</td>
+<td id="input-placeholder-class">placeholder-class</td>
 <td>String</td>
 <td>&quot;input-placeholder&quot;</td>
 <td>&#x6307;&#x5B9A; placeholder &#x7684;&#x6837;&#x5F0F;&#x7C7B;</td>
 <td></td>
 </tr>
 <tr>
-<td>disabled</td>
+<td id="input-disabled">disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x662F;&#x5426;&#x7981;&#x7528;</td>
 <td></td>
 </tr>
 <tr>
-<td>maxlength</td>
+<td id="input-maxlength">maxlength</td>
 <td>Number</td>
 <td>140</td>
 <td>&#x6700;&#x5927;&#x8F93;&#x5165;&#x957F;&#x5EA6;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A; -1 &#x7684;&#x65F6;&#x5019;&#x4E0D;&#x9650;&#x5236;&#x6700;&#x5927;&#x957F;&#x5EA6;</td>
 <td></td>
 </tr>
 <tr>
-<td>cursor-spacing</td>
+<td id="input-cursor-spacing">cursor-spacing</td>
 <td>Number</td>
 <td>0</td>
 <td>&#x6307;&#x5B9A;&#x5149;&#x6807;&#x4E0E;&#x952E;&#x76D8;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x5355;&#x4F4D; px &#x3002;&#x53D6; input &#x8DDD;&#x79BB;&#x5E95;&#x90E8;&#x7684;&#x8DDD;&#x79BB;&#x548C; cursor-spacing &#x6307;&#x5B9A;&#x7684;&#x8DDD;&#x79BB;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x4F5C;&#x4E3A;&#x5149;&#x6807;&#x4E0E;&#x952E;&#x76D8;&#x7684;&#x8DDD;&#x79BB;</td>
 <td></td>
 </tr>
 <tr>
-<td>auto-focus</td>
+<td id="input-auto-focus">auto-focus</td>
 <td>Boolean</td>
 <td>false</td>
 <td>(&#x5373;&#x5C06;&#x5E9F;&#x5F03;&#xFF0C;&#x8BF7;&#x76F4;&#x63A5;&#x4F7F;&#x7528; focus )&#x81EA;&#x52A8;&#x805A;&#x7126;&#xFF0C;&#x62C9;&#x8D77;&#x952E;&#x76D8;</td>
 <td></td>
 </tr>
 <tr>
-<td>focus</td>
+<td id="input-focus">focus</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x83B7;&#x53D6;&#x7126;&#x70B9;</td>
 <td></td>
 </tr>
 <tr>
-<td>confirm-type</td>
+<td id="input-confirm-type">confirm-type</td>
 <td>String</td>
 <td>&quot;done&quot;</td>
 <td>&#x8BBE;&#x7F6E;&#x952E;&#x76D8;&#x53F3;&#x4E0B;&#x89D2;&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#xFF0C;&#x4EC5;&#x5728;type=&apos;text&apos;&#x65F6;&#x751F;&#x6548;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
 </tr>
 <tr>
-<td>confirm-hold</td>
+<td id="input-confirm-hold">confirm-hold</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x70B9;&#x51FB;&#x952E;&#x76D8;&#x53F3;&#x4E0B;&#x89D2;&#x6309;&#x94AE;&#x65F6;&#x662F;&#x5426;&#x4FDD;&#x6301;&#x952E;&#x76D8;&#x4E0D;&#x6536;&#x8D77;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></td>
 </tr>
 <tr>
-<td>cursor</td>
+<td id="input-cursor">cursor</td>
 <td>Number</td>
 <td></td>
 <td>&#x6307;&#x5B9A;focus&#x65F6;&#x7684;&#x5149;&#x6807;&#x4F4D;&#x7F6E;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a></td>
 </tr>
 <tr>
-<td>selection-start</td>
+<td id="input-selection-start">selection-start</td>
 <td>Number</td>
 <td>-1</td>
 <td>&#x5149;&#x6807;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x81EA;&#x52A8;&#x805A;&#x96C6;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x9700;&#x4E0E;selection-end&#x642D;&#x914D;&#x4F7F;&#x7528;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
 </tr>
 <tr>
-<td>selection-end</td>
+<td id="input-selection-end">selection-end</td>
 <td>Number</td>
 <td>-1</td>
 <td>&#x5149;&#x6807;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#xFF0C;&#x81EA;&#x52A8;&#x805A;&#x96C6;&#x65F6;&#x6709;&#x6548;&#xFF0C;&#x9700;&#x4E0E;selection-start&#x642D;&#x914D;&#x4F7F;&#x7528;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
 </tr>
 <tr>
-<td>adjust-position</td>
+<td id="input-adjust-position">adjust-position</td>
 <td>Boolean</td>
 <td>true</td>
 <td>&#x952E;&#x76D8;&#x5F39;&#x8D77;&#x65F6;&#xFF0C;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x4E0A;&#x63A8;&#x9875;&#x9762;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a></td>
 </tr>
 <tr>
-<td>bindinput</td>
+<td id="input-bindinput">bindinput</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x952E;&#x76D8;&#x8F93;&#x5165;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = {value, cursor, keyCode}&#xFF0C;keyCode &#x4E3A;&#x952E;&#x503C;&#xFF0C;2.1.0 &#x8D77;&#x652F;&#x6301;&#xFF0C;&#x5904;&#x7406;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x76F4;&#x63A5; return &#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C06;&#x66FF;&#x6362;&#x8F93;&#x5165;&#x6846;&#x7684;&#x5185;&#x5BB9;&#x3002;</td>
 <td></td>
 </tr>
 <tr>
-<td>bindfocus</td>
+<td id="input-bindfocus">bindfocus</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x805A;&#x7126;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = { value, height }&#xFF0C;height &#x4E3A;&#x952E;&#x76D8;&#x9AD8;&#x5EA6;&#xFF0C;&#x5728;&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x8D77;&#x652F;&#x6301;</td>
 <td></td>
 </tr>
 <tr>
-<td>bindblur</td>
+<td id="input-bindblur">bindblur</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x8F93;&#x5165;&#x6846;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = {value: value}</td>
 <td></td>
 </tr>
 <tr>
-<td>bindconfirm</td>
+<td id="input-bindconfirm">bindconfirm</td>
 <td>EventHandle</td>
 <td></td>
 <td>&#x70B9;&#x51FB;&#x5B8C;&#x6210;&#x6309;&#x94AE;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = {value: value}</td>
@@ -315,7 +313,7 @@ Page({
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/input.png?t=18092914" alt="input"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/input.png?t=18100816" alt="input"></p>
 <h4 id="bug--tip">Bug &amp; Tip</h4>
 <ol>
 <li>&#x8BF7;&#x6CE8;&#x610F;<a href="native-component.html#&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x9650;&#x5236;">&#x539F;&#x751F;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x9650;&#x5236;</a>&#x3002;</li>
@@ -331,5 +329,6 @@ Page({
                         
                     </div>
                 
-</body>
-</html>
+
+
+</body></html>

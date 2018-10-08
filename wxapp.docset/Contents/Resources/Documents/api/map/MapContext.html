@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>MapContext</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="mapcontext">MapContext</h3>
+<p>MapContext &#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="wx.createMapContext.html">wx.createMapContext</a> &#x83B7;&#x53D6;&#x3002;</p>
+<p><code>mapContext</code> &#x901A;&#x8FC7; <code>id</code> &#x8DDF;&#x4E00;&#x4E2A; <code>&lt;map/&gt;</code> &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <code>&lt;map/&gt;</code> &#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
+<h5 id="mapcontextgetcenterlocation"><a href="MapContext.getCenterLocation.html">MapContext.getCenterLocation()</a></h5>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F; gcj02 &#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E; <a href="../location/wx.openLocation.html">wx.openLocation()</a></p>
+<h5 id="mapcontextmovetolocation"><a href="MapContext.moveToLocation.html">MapContext.moveToLocation()</a></h5>
+<p>&#x5C06;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x5B9A;&#x4F4D;&#x70B9;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x5408;map&#x7EC4;&#x4EF6;&#x7684;show-location&#x4F7F;&#x7528;</p>
+<h5 id="mapcontexttranslatemarkerobject-object"><a href="MapContext.translateMarker.html">MapContext.translateMarker(Object object)</a></h5>
+<p>&#x5E73;&#x79FB;marker&#xFF0C;&#x5E26;&#x52A8;&#x753B;</p>
+<h5 id="mapcontextincludepointsobject-object"><a href="MapContext.includePoints.html">MapContext.includePoints(Object object)</a></h5>
+<p>&#x7F29;&#x653E;&#x89C6;&#x91CE;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7ECF;&#x7EAC;&#x5EA6;</p>
+<h5 id="mapcontextgetregion"><a href="MapContext.getRegion.html">MapContext.getRegion()</a></h5>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x7684;&#x89C6;&#x91CE;&#x8303;&#x56F4;</p>
+<h5 id="mapcontextgetscale"><a href="MapContext.getScale.html">MapContext.getScale()</a></h5>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x7684;&#x7F29;&#x653E;&#x7EA7;&#x522B;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p><a href="wechatide://minicode/3uVxpmmT6wY9" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- map.wxml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">map</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myMap&quot;</span> <span class="hljs-attr">show-location</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;getCenterLocation&quot;</span>&gt;</span>&#x83B7;&#x53D6;&#x4F4D;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;moveToLocation&quot;</span>&gt;</span>&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;translateMarker&quot;</span>&gt;</span>&#x79FB;&#x52A8;&#x6807;&#x6CE8;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;includePoints&quot;</span>&gt;</span>&#x7F29;&#x653E;&#x89C6;&#x91CE;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7ECF;&#x7EAC;&#x5EA6;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<pre><code class="language-javascript"><span class="hljs-comment">// map.js</span>
+Page({
+  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createMapContext &#x83B7;&#x53D6; map &#x4E0A;&#x4E0B;&#x6587;</span>
+    <span class="hljs-keyword">this</span>.mapCtx = wx.createMapContext(<span class="hljs-string">&apos;myMap&apos;</span>)
+  },
+  <span class="hljs-attr">getCenterLocation</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.getCenterLocation({
+      <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+        <span class="hljs-built_in">console</span>.log(res.longitude)
+        <span class="hljs-built_in">console</span>.log(res.latitude)
+      }
+    })
+  },
+  <span class="hljs-attr">moveToLocation</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.moveToLocation()
+  },
+  <span class="hljs-attr">translateMarker</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.translateMarker({
+      <span class="hljs-attr">markerId</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">autoRotate</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>,
+      <span class="hljs-attr">destination</span>: {
+        <span class="hljs-attr">latitude</span>:<span class="hljs-number">23.10229</span>,
+        <span class="hljs-attr">longitude</span>:<span class="hljs-number">113.3345211</span>,
+      },
+      animationEnd() {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;animation end&apos;</span>)
+      }
+    })
+  },
+  <span class="hljs-attr">includePoints</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.mapCtx.includePoints({
+      <span class="hljs-attr">padding</span>: [<span class="hljs-number">10</span>],
+      <span class="hljs-attr">points</span>: [{
+        <span class="hljs-attr">latitude</span>:<span class="hljs-number">23.10229</span>,
+        <span class="hljs-attr">longitude</span>:<span class="hljs-number">113.3345211</span>,
+      }, {
+        <span class="hljs-attr">latitude</span>:<span class="hljs-number">23.00229</span>,
+        <span class="hljs-attr">longitude</span>:<span class="hljs-number">113.3345211</span>,
+      }]
+    })
+  }
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

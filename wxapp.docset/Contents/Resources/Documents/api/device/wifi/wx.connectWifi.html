@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Wi-Fi</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxconnectwifiobject-object">wx.connectWifi(Object object)</h3>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 1.6.0</p>
+</blockquote>
+<p>&#x8FDE;&#x63A5; Wi-Fi&#x3002;&#x82E5;&#x5DF2;&#x77E5; Wi-Fi &#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#x8FDE;&#x63A5;&#x3002;&#x4EC5; Android &#x4E0E; iOS 11 &#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x652F;&#x6301;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>Wi-Fi &#x8BBE;&#x5907; SSID</td>
+<td></td>
+</tr>
+<tr>
+<td>BSSID</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>Wi-Fi &#x8BBE;&#x5907; BSSID</td>
+<td></td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>Wi-Fi &#x8BBE;&#x5907;&#x5BC6;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>ok</td>
+<td>&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td>12000</td>
+<td>not init</td>
+<td>&#x672A;&#x5148;&#x8C03;&#x7528; <code>startWifi</code> &#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td>12001</td>
+<td>system not support</td>
+<td>&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E0D;&#x652F;&#x6301;&#x76F8;&#x5173;&#x80FD;&#x529B;</td>
+</tr>
+<tr>
+<td>12002</td>
+<td>password error Wi-Fi</td>
+<td>&#x5BC6;&#x7801;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>12003</td>
+<td>connection timeout</td>
+<td>&#x8FDE;&#x63A5;&#x8D85;&#x65F6;</td>
+</tr>
+<tr>
+<td>12004</td>
+<td>duplicate request</td>
+<td>&#x91CD;&#x590D;&#x8FDE;&#x63A5; Wi-Fi</td>
+</tr>
+<tr>
+<td>12005</td>
+<td>wifi not turned on</td>
+<td>Android &#x7279;&#x6709;&#xFF0C;&#x672A;&#x6253;&#x5F00; Wi-Fi &#x5F00;&#x5173;</td>
+</tr>
+<tr>
+<td>12006</td>
+<td>gps not turned on</td>
+<td>Android &#x7279;&#x6709;&#xFF0C;&#x672A;&#x6253;&#x5F00; GPS &#x5B9A;&#x4F4D;&#x5F00;&#x5173;</td>
+</tr>
+<tr>
+<td>12007</td>
+<td>user denied</td>
+<td>&#x7528;&#x6237;&#x62D2;&#x7EDD;&#x6388;&#x6743;&#x94FE;&#x63A5; Wi-Fi</td>
+</tr>
+<tr>
+<td>12008</td>
+<td>invalid SSID</td>
+<td>&#x65E0;&#x6548; SSID</td>
+</tr>
+<tr>
+<td>12009</td>
+<td>system config err</td>
+<td>&#x7CFB;&#x7EDF;&#x8FD0;&#x8425;&#x5546;&#x914D;&#x7F6E;&#x62D2;&#x7EDD;&#x8FDE;&#x63A5; Wi-Fi</td>
+</tr>
+<tr>
+<td>12010</td>
+<td>system internal error</td>
+<td>&#x7CFB;&#x7EDF;&#x5176;&#x4ED6;&#x9519;&#x8BEF;&#xFF0C;&#x9700;&#x8981;&#x5728; errmsg &#x6253;&#x5370;&#x5177;&#x4F53;&#x7684;&#x9519;&#x8BEF;&#x539F;&#x56E0;</td>
+</tr>
+<tr>
+<td>12011</td>
+<td>weapp in background</td>
+<td>&#x5E94;&#x7528;&#x5728;&#x540E;&#x53F0;&#x65E0;&#x6CD5;&#x914D;&#x7F6E; Wi-Fi</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

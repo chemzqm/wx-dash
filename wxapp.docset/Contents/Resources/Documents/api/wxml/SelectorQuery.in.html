@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>SelectorQuery.in</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="selectorquery-selectorqueryincomponent-component"><a href="SelectorQuery.html">SelectorQuery</a> SelectorQuery.in(Component component)</h3>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 1.6.0</p>
+</blockquote>
+<p>&#x5C06;&#x9009;&#x62E9;&#x5668;&#x7684;&#x9009;&#x53D6;&#x8303;&#x56F4;&#x66F4;&#x6539;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6; <code>component</code> &#x5185;&#xFF08;&#x521D;&#x59CB;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x4EC5;&#x9009;&#x53D6;&#x9875;&#x9762;&#x8303;&#x56F4;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x4E0D;&#x4F1A;&#x9009;&#x53D6;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF09;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="component-component">Component component</h5>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="selectorquery"><a href="SelectorQuery.html">SelectorQuery</a></h5>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">Component({
+  queryMultipleNodes (){
+    <span class="hljs-keyword">const</span> query = wx.createSelectorQuery().in(<span class="hljs-keyword">this</span>)
+    query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+      res.top <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5185; #the-id &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+    }).exec()
+  }
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

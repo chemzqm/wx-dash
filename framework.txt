@@ -57,6 +57,7 @@
 ./ability/network.html|基础能力 网络
 ./ability/storage.html|基础能力 存储
 ./ability/file-system.html|基础能力 文件系统
+./ability/canvas.html|基础能力 画布
 ./subpackages.html|基础能力 分包加载
 ./subpackages/basic.html|基础能力 分包加载 使用分包
 ./subpackages/independent.html|基础能力 分包加载 独立分包

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.translate</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="canvascontexttranslatenumber-x-number-y">CanvasContext.translate(number x, number y)</h3>
+<p>&#x5BF9;&#x5F53;&#x524D;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x539F;&#x70B9; (0, 0) &#x8FDB;&#x884C;&#x53D8;&#x6362;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x539F;&#x70B9;&#x4E3A;&#x9875;&#x9762;&#x5DE6;&#x4E0A;&#x89D2;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="number-x">number x</h5>
+<p>&#x6C34;&#x5E73;&#x5750;&#x6807;&#x5E73;&#x79FB;&#x91CF;</p>
+<h5 id="number-y">number y</h5>
+<p>&#x7AD6;&#x76F4;&#x5750;&#x6807;&#x5E73;&#x79FB;&#x91CF;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.translate(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
+ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.translate(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>)
+ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+
+ctx.draw()
+</code></pre>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/canvas/translate.png?t=18100816" alt=""></p>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>code2Session</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="code2session">code2Session</h3>
+<p>&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x6821;&#x9A8C;&#xFF0C;&#x901A;&#x8FC7; <a href="wx.login.html">wx.login()</a> &#x63A5;&#x53E3;&#x83B7;&#x5F97;&#x4E34;&#x65F6;&#x767B;&#x5F55;&#x51ED;&#x8BC1; code &#x540E;&#x4F20;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x5B8C;&#x6210;&#x767B;&#x5F55;&#x6D41;&#x7A0B;&#x3002;&#x66F4;&#x591A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BE6;&#x89C1; <a href="../../../framework/open-ability/login.html">&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;</a>&#x3002;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>GET https://api.weixin.qq.com/sns/jscode2session?appid=APPID&amp;secret=SECRET&amp;js_code=JSCODE&amp;grant_type=authorization_code
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-appid">string appid</h5>
+<p>&#x5C0F;&#x7A0B;&#x5E8F; appId</p>
+<h5 id="string-secret">string secret</h5>
+<p>&#x5C0F;&#x7A0B;&#x5E8F; appSecret</p>
+<h5 id="string-jscode">string js_code</h5>
+<p>&#x767B;&#x5F55;&#x65F6;&#x83B7;&#x53D6;&#x7684; code</p>
+<h5 id="string-granttype">string grant_type</h5>
+<p>&#x6388;&#x6743;&#x7C7B;&#x578B;&#xFF0C;&#x6B64;&#x5904;&#x53EA;&#x9700;&#x586B;&#x5199; authorization_code</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openid</td>
+<td>string</td>
+<td>&#x7528;&#x6237;&#x552F;&#x4E00;&#x6807;&#x8BC6;</td>
+<td></td>
+</tr>
+<tr>
+<td>session_key</td>
+<td>string</td>
+<td>&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;</td>
+<td></td>
+</tr>
+<tr>
+<td>unionid</td>
+<td>string</td>
+<td>&#x7528;&#x6237;&#x5728;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x5728;&#x6EE1;&#x8DB3; UnionID &#x4E0B;&#x53D1;&#x6761;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x8FD4;&#x56DE;&#xFF0C;&#x8BE6;&#x89C1; <a href="../../../framework/open-ability/union-id.html">UnionID &#x673A;&#x5236;&#x8BF4;&#x660E;</a>&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errMsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>errcode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>&#x7CFB;&#x7EDF;&#x7E41;&#x5FD9;&#xFF0C;&#x6B64;&#x65F6;&#x8BF7;&#x5F00;&#x53D1;&#x8005;&#x7A0D;&#x5019;&#x518D;&#x8BD5;</td>
+</tr>
+<tr>
+<td>0</td>
+<td>&#x8BF7;&#x6C42;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>40029</td>
+<td>code &#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>45011</td>
+<td>&#x9891;&#x7387;&#x9650;&#x5236;&#xFF0C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x6BCF;&#x5206;&#x949F;100&#x6B21;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
