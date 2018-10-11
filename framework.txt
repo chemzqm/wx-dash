@@ -34,7 +34,7 @@
 ./view/wxs/05statement.html|视图层 WXS 语句
 ./view/wxs/06datatype.html|视图层 WXS 数据类型
 ./view/wxs/07basiclibrary.html|视图层 WXS 基础类库
-./view/intersection-observer.html|视图层 WXML节点布局相交状态
+./view/selector.html|视图层 获取界面上的节点信息
 ./view/resizable.html|视图层 响应显示区域变化
 ./custom-component/index.html|自定义组件
 ./custom-component/wxml-wxss.html|自定义组件 组件模版和样式
