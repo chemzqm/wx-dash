@@ -18,7 +18,7 @@
                             <section class="normal markdown-section">
                                 <h3 id="wxgetbluetoothdevicesobject-object">wx.getBluetoothDevices(Object object)</h3>
 <blockquote>
-<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= 1.1.0</p>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= <a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></p>
 </blockquote>
 <p>&#x83B7;&#x53D6;&#x5728;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x751F;&#x6548;&#x671F;&#x95F4;&#x6240;&#x6709;&#x5DF2;&#x53D1;&#x73B0;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x5305;&#x62EC;&#x5DF2;&#x7ECF;&#x548C;&#x672C;&#x673A;&#x5904;&#x4E8E;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x8BBE;&#x5907;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
@@ -78,6 +78,61 @@
 <td>devices</td>
 <td>Array.&lt;Object&gt;</td>
 <td>uuid &#x5BF9;&#x5E94;&#x7684;&#x7684;&#x5DF2;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x5217;&#x8868;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.devices &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#xFF0C;&#x67D0;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x6CA1;&#x6709;</td>
+<td></td>
+</tr>
+<tr>
+<td>deviceId</td>
+<td>string</td>
+<td>&#x7528;&#x4E8E;&#x533A;&#x5206;&#x8BBE;&#x5907;&#x7684; id</td>
+<td></td>
+</tr>
+<tr>
+<td>RSSI</td>
+<td>number</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x4FE1;&#x53F7;&#x5F3A;&#x5EA6;</td>
+<td></td>
+</tr>
+<tr>
+<td>advertisData</td>
+<td>ArrayBuffer</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684; ManufacturerData &#x6570;&#x636E;&#x6BB5;&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>advertisServiceUUIDs</td>
+<td>Array.&lt;string&gt;</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684; ServiceUUIDs &#x6570;&#x636E;&#x6BB5;</td>
+<td></td>
+</tr>
+<tr>
+<td>localName</td>
+<td>string</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684; LocalName &#x6570;&#x636E;&#x6BB5;</td>
+<td></td>
+</tr>
+<tr>
+<td>serviceData</td>
+<td>ArrayBuffer</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x6BB5;&#x4E2D;&#x7684; ServiceData &#x6570;&#x636E;&#x6BB5;</td>
 <td></td>
 </tr>
 </tbody>

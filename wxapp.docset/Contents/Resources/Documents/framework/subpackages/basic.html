@@ -35,13 +35,16 @@
 &#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; logs
 &#x2514;&#x2500;&#x2500; utils
 </code></pre>
-<p>&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x5728; app.json <code>subPackages</code> &#x5B57;&#x6BB5;&#x58F0;&#x660E;&#x9879;&#x76EE;&#x5206;&#x5305;&#x7ED3;&#x6784;&#xFF1A;</p>
+<p>&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x5728; app.json <code>subpackages</code> &#x5B57;&#x6BB5;&#x58F0;&#x660E;&#x9879;&#x76EE;&#x5206;&#x5305;&#x7ED3;&#x6784;&#xFF1A;</p>
+<blockquote>
+<p>&#x5199;&#x6210; subPackages &#x4E5F;&#x652F;&#x6301;&#x3002;</p>
+</blockquote>
 <pre><code class="language-json">{
   <span class="hljs-attr">&quot;pages&quot;</span>:[
     <span class="hljs-string">&quot;pages/index&quot;</span>,
     <span class="hljs-string">&quot;pages/logs&quot;</span>
   ],
-  <span class="hljs-attr">&quot;subPackages&quot;</span>: [
+  <span class="hljs-attr">&quot;subpackages&quot;</span>: [
     {
       <span class="hljs-attr">&quot;root&quot;</span>: <span class="hljs-string">&quot;packageA&quot;</span>,
       <span class="hljs-attr">&quot;pages&quot;</span>: [
@@ -59,7 +62,7 @@
   ]
 }
 </code></pre>
-<p><code>subPackages</code> &#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5206;&#x5305;&#x7684;&#x914D;&#x7F6E;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x9879;&#xFF1A;</p>
+<p><code>subpackages</code> &#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5206;&#x5305;&#x7684;&#x914D;&#x7F6E;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x9879;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
@@ -93,9 +96,9 @@
 </table>
 <h3 id="&#x6253;&#x5305;&#x539F;&#x5219;">&#x6253;&#x5305;&#x539F;&#x5219;</h3>
 <ul>
-<li>&#x58F0;&#x660E; <code>subPackages</code> &#x540E;&#xFF0C;&#x5C06;&#x6309; <code>subPackages</code> &#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x6253;&#x5305;&#xFF0C;<code>subPackages</code> &#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#x5916;&#x7684;&#x76EE;&#x5F55;&#x5C06;&#x88AB;&#x6253;&#x5305;&#x5230; app&#xFF08;&#x4E3B;&#x5305;&#xFF09; &#x4E2D;</li>
+<li>&#x58F0;&#x660E; <code>subpackages</code> &#x540E;&#xFF0C;&#x5C06;&#x6309; <code>subpackages</code> &#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x6253;&#x5305;&#xFF0C;<code>subpackages</code> &#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#x5916;&#x7684;&#x76EE;&#x5F55;&#x5C06;&#x88AB;&#x6253;&#x5305;&#x5230; app&#xFF08;&#x4E3B;&#x5305;&#xFF09; &#x4E2D;</li>
 <li>app&#xFF08;&#x4E3B;&#x5305;&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x6709;&#x81EA;&#x5DF1;&#x7684; pages&#xFF08;&#x5373;&#x6700;&#x5916;&#x5C42;&#x7684; pages &#x5B57;&#x6BB5;&#xFF09;</li>
-<li><code>subPackage</code> &#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0D;&#x80FD;&#x662F;&#x53E6;&#x5916;&#x4E00;&#x4E2A; <code>subPackage</code> &#x5185;&#x7684;&#x5B50;&#x76EE;&#x5F55;</li>
+<li><code>subpackage</code> &#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0D;&#x80FD;&#x662F;&#x53E6;&#x5916;&#x4E00;&#x4E2A; <code>subpackage</code> &#x5185;&#x7684;&#x5B50;&#x76EE;&#x5F55;</li>
 <li><code>tabBar</code> &#x9875;&#x9762;&#x5FC5;&#x987B;&#x5728; app&#xFF08;&#x4E3B;&#x5305;&#xFF09;&#x5185;</li>
 </ul>
 <h3 id="&#x5F15;&#x7528;&#x539F;&#x5219;">&#x5F15;&#x7528;&#x539F;&#x5219;</h3>
@@ -106,7 +109,7 @@
 </ul>
 <h3 id="&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;">&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;</h3>
 <p>&#x7531;&#x5FAE;&#x4FE1;&#x540E;&#x53F0;&#x7F16;&#x8BD1;&#x6765;&#x5904;&#x7406;&#x65E7;&#x7248;&#x672C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x517C;&#x5BB9;&#xFF0C;&#x540E;&#x53F0;&#x4F1A;&#x7F16;&#x8BD1;&#x4E24;&#x4EFD;&#x4EE3;&#x7801;&#x5305;&#xFF0C;&#x4E00;&#x4EFD;&#x662F;&#x5206;&#x5305;&#x540E;&#x4EE3;&#x7801;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4EFD;&#x662F;&#x6574;&#x5305;&#x7684;&#x517C;&#x5BB9;&#x4EE3;&#x7801;&#x3002;
-&#x65B0;&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x5206;&#x5305;&#xFF0C;&#x8001;&#x5BA2;&#x6237;&#x7AEF;&#x8FD8;&#x662F;&#x7528;&#x7684;&#x6574;&#x5305;&#xFF0C;&#x5B8C;&#x6574;&#x5305;&#x4F1A;&#x628A;&#x5404;&#x4E2A; <code>subPackage</code> &#x91CC;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#x653E;&#x5230; pages &#x4E2D;&#x3002;</p>
+&#x65B0;&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x5206;&#x5305;&#xFF0C;&#x8001;&#x5BA2;&#x6237;&#x7AEF;&#x8FD8;&#x662F;&#x7528;&#x7684;&#x6574;&#x5305;&#xFF0C;&#x5B8C;&#x6574;&#x5305;&#x4F1A;&#x628A;&#x5404;&#x4E2A; <code>subpackage</code> &#x91CC;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#x653E;&#x5230; pages &#x4E2D;&#x3002;</p>
 <h3 id="&#x793A;&#x4F8B;&#x9879;&#x76EE;">&#x793A;&#x4F8B;&#x9879;&#x76EE;</h3>
 <p><a href="../../demo/demo-subpackages.zip">&#x4E0B;&#x8F7D; &#x5C0F;&#x7A0B;&#x5E8F;&#x793A;&#x4F8B;&#xFF08;&#x5206;&#x5305;&#x52A0;&#x8F7D;&#x7248;&#xFF09;&#x6E90;&#x7801;</a></p>
 
