@@ -23,6 +23,16 @@
 <p>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x6307;&#x5B9A;&#x7684; key</p>
 <h5 id="objectstring-data">Object|string data</h5>
 <p>&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.setStorage({
+  <span class="hljs-attr">key</span>:<span class="hljs-string">&quot;key&quot;</span>,
+  <span class="hljs-attr">data</span>:<span class="hljs-string">&quot;value&quot;</span>
+})
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  wx.setStorageSync(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-string">&apos;value&apos;</span>)
+} <span class="hljs-keyword">catch</span> (e) { }
+</code></pre>
 
                             </section>      
                         </div>

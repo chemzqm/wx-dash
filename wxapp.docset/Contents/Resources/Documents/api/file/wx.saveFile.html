@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.saveFile</title>
+  <title>文件</title>
   <link rel="stylesheet" href="../../../style.css" />
   <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
@@ -88,16 +88,16 @@
 </tbody>
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript">wx.chooseImage({
-    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-keyword">var</span> tempFilePaths = res.tempFilePaths
-        wx.saveFile({
-            <span class="hljs-attr">tempFilePath</span>: tempFilePaths[<span class="hljs-number">0</span>],
-            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-                <span class="hljs-keyword">var</span> savedFilePath = res.savedFilePath
-            }
-        })
-    }
+<pre><code class="language-js">wx.chooseImage({
+  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-keyword">const</span> tempFilePaths = res.tempFilePaths
+    wx.saveFile({
+      <span class="hljs-attr">tempFilePath</span>: tempFilePaths[<span class="hljs-number">0</span>],
+      success (res) {
+        <span class="hljs-keyword">const</span> savedFilePath = res.savedFilePath
+      }
+    })
+  }
 })
 </code></pre>
 <h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>

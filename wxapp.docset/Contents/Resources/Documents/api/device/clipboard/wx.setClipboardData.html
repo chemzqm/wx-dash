@@ -69,6 +69,18 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.setClipboardData({
+  <span class="hljs-attr">data</span>: <span class="hljs-string">&apos;data&apos;</span>,
+  success (res) {
+    wx.getClipboardData({
+      success (res) {
+        <span class="hljs-built_in">console</span>.log(res.data) <span class="hljs-comment">// data</span>
+      }
+    })
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>

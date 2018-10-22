@@ -20,7 +20,7 @@
 <blockquote>
 <p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= <a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></p>
 </blockquote>
-<p>&#x663E;&#x793A; loading &#x63D0;&#x793A;&#x6846;, &#x9700;&#x4E3B;&#x52A8;&#x8C03;&#x7528; wx.hideLoading &#x624D;&#x80FD;&#x5173;&#x95ED;&#x63D0;&#x793A;&#x6846;</p>
+<p>&#x663E;&#x793A; loading &#x63D0;&#x793A;&#x6846;&#x3002;&#x9700;&#x4E3B;&#x52A8;&#x8C03;&#x7528; wx.hideLoading &#x624D;&#x80FD;&#x5173;&#x95ED;&#x63D0;&#x793A;&#x6846;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="object-object">Object object</h5>
 <table>
@@ -77,6 +77,15 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.showLoading({
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x52A0;&#x8F7D;&#x4E2D;&apos;</span>,
+})
+
+setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  wx.hideLoading()
+}, <span class="hljs-number">2000</span>)
+</code></pre>
 <h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
 <ul>
 <li><code>wx.showLoading</code> &#x548C; <code>wx.showToast</code> &#x540C;&#x65F6;&#x53EA;&#x80FD;&#x663E;&#x793A;&#x4E00;&#x4E2A;</li>

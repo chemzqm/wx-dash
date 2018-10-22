@@ -163,6 +163,32 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.getSystemInfo({
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.model)
+    <span class="hljs-built_in">console</span>.log(res.pixelRatio)
+    <span class="hljs-built_in">console</span>.log(res.windowWidth)
+    <span class="hljs-built_in">console</span>.log(res.windowHeight)
+    <span class="hljs-built_in">console</span>.log(res.language)
+    <span class="hljs-built_in">console</span>.log(res.version)
+    <span class="hljs-built_in">console</span>.log(res.platform)
+  }
+})
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  <span class="hljs-keyword">const</span> res = wx.getSystemInfoSync()
+  <span class="hljs-built_in">console</span>.log(res.model)
+  <span class="hljs-built_in">console</span>.log(res.pixelRatio)
+  <span class="hljs-built_in">console</span>.log(res.windowWidth)
+  <span class="hljs-built_in">console</span>.log(res.windowHeight)
+  <span class="hljs-built_in">console</span>.log(res.language)
+  <span class="hljs-built_in">console</span>.log(res.version)
+  <span class="hljs-built_in">console</span>.log(res.platform)
+} <span class="hljs-keyword">catch</span> (e) {
+  <span class="hljs-comment">// Do something when catch error</span>
+}
+</code></pre>
 
                             </section>      
                         </div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.onBLECharacteristicValueChange</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                <h3 id="wxonblecharacteristicvaluechangefunction-callback">wx.onBLECharacteristicValueChange(function callback)</h3>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= <a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></p>
+</blockquote>
+<p>&#x76D1;&#x542C;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x53D8;&#x5316;&#x3002;&#x5FC5;&#x987B;&#x5148;&#x542F;&#x7528; <code>notifyBLECharacteristicValueChange</code> &#x63A5;&#x53E3;&#x624D;&#x80FD;&#x63A5;&#x6536;&#x5230;&#x8BBE;&#x5907;&#x63A8;&#x9001;&#x7684; notification&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="function-callback">function callback</h5>
+<p>&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deviceId</td>
+<td>string</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id</td>
+<td></td>
+</tr>
+<tr>
+<td>serviceId</td>
+<td>string</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x7684; uuid</td>
+<td></td>
+</tr>
+<tr>
+<td>characteristicId</td>
+<td>string</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x7684; uuid</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>ArrayBuffer</td>
+<td>&#x7279;&#x5F81;&#x503C;&#x6700;&#x65B0;&#x7684;&#x503C;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p><a href="wechatide://minicode/OF4Y9Gme6rZ4" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-js"><span class="hljs-comment">// ArrayBuffer&#x8F6C;16&#x8FDB;&#x5EA6;&#x5B57;&#x7B26;&#x4E32;&#x793A;&#x4F8B;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ab2hex</span>(<span class="hljs-params">buffer</span>) </span>{
+  <span class="hljs-keyword">let</span> hexArr = <span class="hljs-built_in">Array</span>.prototype.map.call(
+    <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(buffer),
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">bit</span>) </span>{
+      <span class="hljs-keyword">return</span> (<span class="hljs-string">&apos;00&apos;</span> + bit.toString(<span class="hljs-number">16</span>)).slice(<span class="hljs-number">-2</span>)
+    }
+  )
+  <span class="hljs-keyword">return</span> hexArr.join(<span class="hljs-string">&apos;&apos;</span>);
+}
+wx.onBLECharacteristicValueChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`characteristic <span class="hljs-subst">${res.characteristicId}</span> has changed, now is <span class="hljs-subst">${res.value}</span>`</span>)
+  <span class="hljs-built_in">console</span>.log(ab2hext(res.value))
+})
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

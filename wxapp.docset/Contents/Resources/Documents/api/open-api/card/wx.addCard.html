@@ -20,7 +20,7 @@
 <blockquote>
 <p>&#x652F;&#x6301;&#x7248;&#x672C; &gt;= <a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.1.0</a></p>
 </blockquote>
-<p>&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x5361;&#x5238;&#x3002;&#x53EA;&#x6709;&#x901A;&#x8FC7; <a href="https://developers.weixin.qq.com/miniprogram/product/renzheng.html?t=18101919">&#x8BA4;&#x8BC1;</a> &#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x66F4;&#x591A;&#x6587;&#x6863;&#x8BF7;&#x53C2;&#x8003; <a href="https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&amp;key=1490190158&amp;version=1&amp;lang=zh_CN&amp;platform=2" target="_blank">&#x5FAE;&#x4FE1;&#x5361;&#x5238;&#x63A5;&#x53E3;&#x6587;&#x6863;</a>&#x3002;</p>
+<p>&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x5361;&#x5238;&#x3002;&#x53EA;&#x6709;&#x901A;&#x8FC7; <a href="https://developers.weixin.qq.com/miniprogram/product/renzheng.html?t=18102216">&#x8BA4;&#x8BC1;</a> &#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x66F4;&#x591A;&#x6587;&#x6863;&#x8BF7;&#x53C2;&#x8003; <a href="https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&amp;key=1490190158&amp;version=1&amp;lang=zh_CN&amp;platform=2" target="_blank">&#x5FAE;&#x4FE1;&#x5361;&#x5238;&#x63A5;&#x53E3;&#x6587;&#x6863;</a>&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="object-object">Object object</h5>
 <table>
@@ -229,22 +229,24 @@
 </tr>
 </tbody>
 </table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript">wx.addCard({
-    <span class="hljs-attr">cardList</span>: [{
-        <span class="hljs-attr">cardId</span>: <span class="hljs-string">&apos;&apos;</span>,
-        <span class="hljs-attr">cardExt</span>: <span class="hljs-string">&apos;{&quot;code&quot;: &quot;&quot;, &quot;openid&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;&quot;, &quot;signature&quot;:&quot;&quot;}&apos;</span>
-    }, {
-        <span class="hljs-attr">cardId</span>: <span class="hljs-string">&apos;&apos;</span>,
-        <span class="hljs-attr">cardExt</span>: <span class="hljs-string">&apos;{&quot;code&quot;: &quot;&quot;, &quot;openid&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;&quot;, &quot;signature&quot;:&quot;&quot;}&apos;</span>
-    }],
-    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-built_in">console</span>.log(res.cardList) <span class="hljs-comment">// &#x5361;&#x5238;&#x6DFB;&#x52A0;&#x7ED3;&#x679C;</span>
-    }
-})
-</code></pre>
 <h4 id="cardext-&#x8BF4;&#x660E;">cardExt &#x8BF4;&#x660E;</h4>
 <p>cardExt &#x662F;&#x5361;&#x5238;&#x7684;&#x6269;&#x5C55;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x503C;&#x662F;&#x4E00;&#x4E2A; JSON &#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.addCard({
+  <span class="hljs-attr">cardList</span>: [
+    {
+      <span class="hljs-attr">cardId</span>: <span class="hljs-string">&apos;&apos;</span>,
+      <span class="hljs-attr">cardExt</span>: <span class="hljs-string">&apos;{&quot;code&quot;: &quot;&quot;, &quot;openid&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;&quot;, &quot;signature&quot;:&quot;&quot;}&apos;</span>
+    }, {
+      <span class="hljs-attr">cardId</span>: <span class="hljs-string">&apos;&apos;</span>,
+      <span class="hljs-attr">cardExt</span>: <span class="hljs-string">&apos;{&quot;code&quot;: &quot;&quot;, &quot;openid&quot;: &quot;&quot;, &quot;timestamp&quot;: &quot;&quot;, &quot;signature&quot;:&quot;&quot;}&apos;</span>
+    }
+  ],
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.cardList) <span class="hljs-comment">// &#x5361;&#x5238;&#x6DFB;&#x52A0;&#x7ED3;&#x679C;</span>
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>

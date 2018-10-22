@@ -69,6 +69,22 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-comment">// &#x53EF;&#x4EE5;&#x901A;&#x8FC7; wx.getSetting &#x5148;&#x67E5;&#x8BE2;&#x4E00;&#x4E0B;&#x7528;&#x6237;&#x662F;&#x5426;&#x6388;&#x6743;&#x4E86; &quot;scope.record&quot; &#x8FD9;&#x4E2A; scope</span>
+wx.getSetting({
+  success(res) {
+    <span class="hljs-keyword">if</span> (!res.authSetting[<span class="hljs-string">&apos;scope.record&apos;</span>]) {
+      wx.authorize({
+        <span class="hljs-attr">scope</span>: <span class="hljs-string">&apos;scope.record&apos;</span>,
+        success () {
+          <span class="hljs-comment">// &#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x540C;&#x610F;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x5F55;&#x97F3;&#x529F;&#x80FD;&#xFF0C;&#x540E;&#x7EED;&#x8C03;&#x7528; wx.startRecord &#x63A5;&#x53E3;&#x4E0D;&#x4F1A;&#x5F39;&#x7A97;&#x8BE2;&#x95EE;</span>
+          wx.startRecord()
+        }
+      })
+    }
+  }
+}
+</code></pre>
 
                             </section>      
                         </div>

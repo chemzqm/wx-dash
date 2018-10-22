@@ -141,6 +141,19 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.showModal({
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x63D0;&#x793A;&apos;</span>,
+  <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x6001;&#x5F39;&#x7A97;&apos;</span>,
+  success (res) {
+    <span class="hljs-keyword">if</span> (res.confirm) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&apos;</span>)
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (res.cancel) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x53D6;&#x6D88;&apos;</span>)
+    }
+  }
+})
+</code></pre>
 <h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
 <ul>
 <li>Android 6.7.2 &#x4EE5;&#x4E0B;&#x7248;&#x672C;&#xFF0C;&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#x6216;&#x8499;&#x5C42;&#x65F6;&#xFF0C;&#x56DE;&#x8C03; fail, errMsg &#x4E3A; &quot;fail cancel&quot;&#xFF1B;</li>

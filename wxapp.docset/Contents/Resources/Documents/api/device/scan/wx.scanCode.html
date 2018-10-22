@@ -233,6 +233,22 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-comment">// &#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x673A;&#x548C;&#x76F8;&#x518C;&#x626B;&#x7801;</span>
+wx.scanCode({
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res)
+  }
+})
+
+<span class="hljs-comment">// &#x53EA;&#x5141;&#x8BB8;&#x4ECE;&#x76F8;&#x673A;&#x626B;&#x7801;</span>
+wx.scanCode({
+  <span class="hljs-attr">onlyFromCamera</span>: <span class="hljs-literal">true</span>,
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res)
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>

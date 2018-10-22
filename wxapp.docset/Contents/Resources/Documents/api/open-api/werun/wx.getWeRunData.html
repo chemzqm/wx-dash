@@ -23,7 +23,7 @@
 <blockquote>
 <p>&#x8C03;&#x7528;&#x524D;&#x9700;&#x8981; <a href="../../../framework/open-ability/authorize.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.werun</p>
 </blockquote>
-<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x8C03;&#x7528; wx.login &#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;&#x3002;&#x9700;&#x8981;&#x5148;&#x8C03;&#x7528; wx.login &#x63A5;&#x53E3;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="object-object">Object object</h5>
 <table>
@@ -91,6 +91,13 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.getWeRunData({
+  success (res) {
+    <span class="hljs-keyword">const</span> encryptedData = res.encryptedData
+  }
+})
+</code></pre>
 <h4 id="encrypteddata-&#x89E3;&#x5BC6;&#x540E;-json-&#x7ED3;&#x6784;">encryptedData &#x89E3;&#x5BC6;&#x540E; JSON &#x7ED3;&#x6784;</h4>
 <pre><code class="language-json">{
   <span class="hljs-attr">&quot;stepInfoList&quot;</span>: [

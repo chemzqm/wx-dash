@@ -23,7 +23,7 @@
 <blockquote>
 <p>&#x8C03;&#x7528;&#x524D;&#x9700;&#x8981; <a href="../../../framework/open-ability/authorize.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.address</p>
 </blockquote>
-<p>&#x8C03;&#x8D77;&#x7528;&#x6237;&#x7F16;&#x8F91;&#x6536;&#x8D27;&#x5730;&#x5740;&#x539F;&#x751F;&#x754C;&#x9762;&#xFF0C;&#x5E76;&#x5728;&#x7F16;&#x8F91;&#x5B8C;&#x6210;&#x540E;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x9009;&#x62E9;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x6536;&#x8D27;&#x5730;&#x5740;&#x3002;&#x8C03;&#x8D77;&#x7528;&#x6237;&#x7F16;&#x8F91;&#x6536;&#x8D27;&#x5730;&#x5740;&#x539F;&#x751F;&#x754C;&#x9762;&#xFF0C;&#x5E76;&#x5728;&#x7F16;&#x8F91;&#x5B8C;&#x6210;&#x540E;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x9009;&#x62E9;&#x7684;&#x5730;&#x5740;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="object-object">Object object</h5>
 <table>
@@ -135,6 +135,19 @@
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <p><a href="wechatide://minicode/024hHnmd772y" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-js">wx.chooseAddress({
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.userName)
+    <span class="hljs-built_in">console</span>.log(res.postalCode)
+    <span class="hljs-built_in">console</span>.log(res.provinceName)
+    <span class="hljs-built_in">console</span>.log(res.cityName)
+    <span class="hljs-built_in">console</span>.log(res.countyName)
+    <span class="hljs-built_in">console</span>.log(res.detailInfo)
+    <span class="hljs-built_in">console</span>.log(res.nationalCode)
+    <span class="hljs-built_in">console</span>.log(res.telNumber)
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>

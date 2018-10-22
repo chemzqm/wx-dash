@@ -91,6 +91,24 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.getStorageInfo({
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.keys)
+    <span class="hljs-built_in">console</span>.log(res.currentSize)
+    <span class="hljs-built_in">console</span>.log(res.limitSize)
+  }
+})
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  <span class="hljs-keyword">const</span> res = wx.getStorageInfoSync()
+  <span class="hljs-built_in">console</span>.log(res.keys)
+  <span class="hljs-built_in">console</span>.log(res.currentSize)
+  <span class="hljs-built_in">console</span>.log(res.limitSize)
+} <span class="hljs-keyword">catch</span> (e) {
+  <span class="hljs-comment">// Do something when catch error</span>
+}
+</code></pre>
 
                             </section>      
                         </div>

@@ -23,6 +23,13 @@
 <p>&#x83B7;&#x53D6;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;&#x5668;&#x5BF9;&#x8C61;&#x3002;</p>
 <h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
 <h5 id="logmanager"><a href="LogManager.html">LogManager</a></h5>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> logger = wx.getLogManager()
+logger.log({<span class="hljs-attr">str</span>: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;basic log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+logger.info({<span class="hljs-attr">str</span>: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;info log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+logger.debug({<span class="hljs-attr">str</span>: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;debug log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+logger.warn({<span class="hljs-attr">str</span>: <span class="hljs-string">&apos;hello world&apos;</span>}, <span class="hljs-string">&apos;warn log&apos;</span>, <span class="hljs-number">100</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
+</code></pre>
 
                             </section>      
                         </div>

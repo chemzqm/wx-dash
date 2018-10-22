@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>位置</title>
+  <title>wx.getLocation</title>
   <link rel="stylesheet" href="../../../style.css" />
   <link rel="stylesheet" href="../../../website.css" />
   <style type="text/css">
@@ -134,6 +134,17 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.getLocation({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;wgs84&apos;</span>,
+  success (res) {
+    <span class="hljs-keyword">const</span> latitude = res.latitude
+    <span class="hljs-keyword">const</span> longitude = res.longitude
+    <span class="hljs-keyword">const</span> speed = res.speed
+    <span class="hljs-keyword">const</span> accuracy = res.accuracy
+  }
+})
+</code></pre>
 <h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
 <ul>
 <li>&#x5DE5;&#x5177;&#x4E2D;&#x5B9A;&#x4F4D;&#x6A21;&#x62DF;&#x4F7F;&#x7528;IP&#x5B9A;&#x4F4D;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x8BEF;&#x5DEE;&#x3002;&#x4E14;&#x5DE5;&#x5177;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301; gcj02 &#x5750;&#x6807;&#x3002;</li>

@@ -17,101 +17,3065 @@
                         <div class="search-noresults">
                             <section class="normal markdown-section">
                                 <h1 id="api">API</h1>
-<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x4E30;&#x5BCC;&#x7684;&#x5FAE;&#x4FE1;&#x539F;&#x751F; API&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8C03;&#x8D77;&#x5FAE;&#x4FE1;&#x63D0;&#x4F9B;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x652F;&#x4ED8;&#x529F;&#x80FD;&#x7B49;&#x3002;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8BF7;&#x53C2;&#x8003; <a href="network/download/wx.downloadFile.html">API &#x6587;&#x6863;</a>&#x3002;</p>
-<p>&#x901A;&#x5E38;&#xFF0C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F; API &#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;</p>
-<h2 id="&#x4E8B;&#x4EF6;&#x76D1;&#x542C;-api">&#x4E8B;&#x4EF6;&#x76D1;&#x542C; API</h2>
-<p>&#x6211;&#x4EEC;&#x7EA6;&#x5B9A;&#xFF0C;&#x4EE5; <code>on</code> &#x5F00;&#x5934;&#x7684; API &#x7528;&#x6765;&#x76D1;&#x542C;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x89E6;&#x53D1;&#xFF0C;&#x5982;&#xFF1A;<code>wx.onSocketOpen</code>&#xFF0C;<code>wx.onCompassChange</code> &#x7B49;&#x3002;</p>
-<p>&#x8FD9;&#x7C7B; API &#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5F53;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x76F8;&#x5173;&#x6570;&#x636E;&#x4EE5;&#x53C2;&#x6570;&#x5F62;&#x5F0F;&#x4F20;&#x5165;&#x3002;</p>
-<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="language-js">wx.onCompassChange(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(res.direction)
-})
-</code></pre>
-<h2 id="&#x540C;&#x6B65;-api">&#x540C;&#x6B65; API</h2>
-<p>&#x6211;&#x4EEC;&#x7EA6;&#x5B9A;&#xFF0C;&#x4EE5; <code>Sync</code> &#x7ED3;&#x5C3E;&#x7684; API &#x90FD;&#x662F;&#x540C;&#x6B65; API&#xFF0C; &#x5982; <code>wx.setStorageSync</code>&#xFF0C;<code>wx.getSystemInfoSync</code> &#x7B49;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x540C;&#x6B65; API&#xFF0C;&#x5982; <code>wx.createWorker</code>&#xFF0C;<code>wx.getBackgroundAudioManager</code> &#x7B49;&#xFF0C;&#x8BE6;&#x60C5;&#x53C2;&#x89C1; API &#x6587;&#x6863;&#x4E2D;&#x7684;&#x8BF4;&#x660E;&#x3002;</p>
-<p>&#x540C;&#x6B65; API &#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#xFF0C;&#x5982;&#x679C;&#x6267;&#x884C;&#x51FA;&#x9519;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</p>
-<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="language-js"><span class="hljs-keyword">try</span> {
-  wx.setStorageSync(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-string">&apos;value&apos;</span>)
-} <span class="hljs-keyword">catch</span> (e) {
-  <span class="hljs-built_in">console</span>.error(e)
-}
-</code></pre>
-<h2 id="&#x5F02;&#x6B65;-api">&#x5F02;&#x6B65; API</h2>
-<p>&#x5927;&#x591A;&#x6570; API &#x90FD;&#x662F;&#x5F02;&#x6B65; API&#xFF0C;&#x5982; <code>wx.request</code>&#xFF0C;<code>wx.login</code> &#x7B49;&#x3002;&#x8FD9;&#x7C7B; API &#x63A5;&#x53E3;&#x901A;&#x5E38;&#x90FD;&#x63A5;&#x53D7;&#x4E00;&#x4E2A; <code>Object</code> &#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x90FD;&#x652F;&#x6301;&#x6309;&#x9700;&#x6307;&#x5B9A;&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#x6765;&#x63A5;&#x6536;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#xFF1A;</p>
-<p><strong>Object &#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<h2 id="&#x7F51;&#x7EDC;">&#x7F51;&#x7EDC;</h2>
+<h3 id="&#x4E0A;&#x4F20;">&#x4E0A;&#x4F20;</h3>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
+<th>API</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>success</td>
-<td>function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-</tr>
-<tr>
-<td>fail</td>
-<td>function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-</tr>
-<tr>
-<td>complete</td>
-<td>function</td>
-<td>&#x5426;</td>
-<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-</tr>
-<tr>
-<td>&#x5176;&#x4ED6;</td>
-<td>Any</td>
-<td>-</td>
-<td>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x7684;&#x5176;&#x4ED6;&#x53C2;&#x6570;</td>
+<td><a href="network/upload/wx.uploadFile.html">wx.uploadFile</a></td>
+<td>&#x5C06;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</strong></p>
-<p><code>success</code>&#xFF0C;<code>fail</code>&#xFF0C;<code>complete</code> &#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;&#x4F1A;&#x4F20;&#x5165;&#x4E00;&#x4E2A; <code>Object</code> &#x7C7B;&#x578B;&#x53C2;&#x6570;&#xFF0C;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<h4 id="uploadtask">UploadTask</h4>
 <table>
 <thead>
 <tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
+<th>API</th>
 <th>&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>errMsg</td>
-<td>string</td>
-<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x8C03;&#x7528;&#x6210;&#x529F;&#x8FD4;&#x56DE; <code>${apiName}:ok</code></td>
+<td><a href="network/upload/UploadTask.onProgressUpdate.html">UploadTask.onProgressUpdate</a></td>
+<td>&#x76D1;&#x542C;&#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
 </tr>
 <tr>
-<td>errCode</td>
-<td>number</td>
-<td>&#x9519;&#x8BEF;&#x7801;&#xFF0C;&#x4EC5;&#x90E8;&#x5206; API &#x652F;&#x6301;&#xFF0C;&#x5177;&#x4F53;&#x542B;&#x4E49;&#x8BF7;&#x53C2;&#x8003;&#x5BF9;&#x5E94; API &#x6587;&#x6863;&#xFF0C;&#x6210;&#x529F;&#x65F6;&#x4E3A; <code>0</code>&#x3002;</td>
-</tr>
-<tr>
-<td>&#x5176;&#x4ED6;</td>
-<td>Any</td>
-<td>&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x5176;&#x4ED6;&#x6570;&#x636E;</td>
+<td><a href="network/upload/UploadTask.abort.html">UploadTask.abort</a></td>
+<td>&#x4E2D;&#x65AD;&#x4E0A;&#x4F20;&#x4EFB;&#x52A1;</td>
 </tr>
 </tbody>
 </table>
-<p>&#x5F02;&#x6B65; API &#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x9700;&#x8981;&#x901A;&#x8FC7; <code>Object</code> &#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#x4E2D;&#x4F20;&#x5165;&#x7684;&#x5BF9;&#x5E94;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x3002;&#x90E8;&#x5206;&#x5F02;&#x6B65; API &#x4E5F;&#x4F1A;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982; <code>wx.request</code>&#xFF0C;<code>wx.connectSockets</code> &#x7B49;&#x3002;</p>
-<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
-<pre><code class="language-js">wx.login({
-  success(res) {
-    <span class="hljs-built_in">console</span>.log(res.code)
-  }
-})
-</code></pre>
+<h3 id="websocket">WebSocket</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="network/websocket/wx.onSocketError.html">wx.onSocketError</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/wx.onSocketMessage.html">wx.onSocketMessage</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x63A5;&#x53D7;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6D88;&#x606F;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/wx.onSocketClose.html">wx.onSocketClose</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/wx.onSocketOpen.html">wx.onSocketOpen</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x8FDE;&#x63A5;&#x6253;&#x5F00;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/wx.sendSocketMessage.html">wx.sendSocketMessage</a></td>
+<td>&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/wx.closeSocket.html">wx.closeSocket</a></td>
+<td>&#x5173;&#x95ED; WeSocket &#x8FDE;&#x63A5;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/wx.connectSocket.html">wx.connectSocket</a></td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; WebSocket &#x8FDE;&#x63A5;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sockettask">SocketTask</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="network/websocket/SocketTask.send.html">SocketTask.send</a></td>
+<td>&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/SocketTask.close.html">SocketTask.close</a></td>
+<td>&#x5173;&#x95ED; WebSocket &#x8FDE;&#x63A5;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/SocketTask.onOpen.html">SocketTask.onOpen</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x8FDE;&#x63A5;&#x6253;&#x5F00;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/SocketTask.onClose.html">SocketTask.onClose</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x8FDE;&#x63A5;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/SocketTask.onError.html">SocketTask.onError</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/websocket/SocketTask.onMessage.html">SocketTask.onMessage</a></td>
+<td>&#x76D1;&#x542C;WebSocket &#x63A5;&#x53D7;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6D88;&#x606F;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x53D1;&#x8D77;&#x8BF7;&#x6C42;">&#x53D1;&#x8D77;&#x8BF7;&#x6C42;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="network/request/wx.request.html">wx.request</a></td>
+<td>&#x53D1;&#x8D77; HTTPS &#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="requesttask">RequestTask</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="network/request/RequestTask.abort.html">RequestTask.abort</a></td>
+<td>&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#x4EFB;&#x52A1;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4E0B;&#x8F7D;">&#x4E0B;&#x8F7D;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="network/download/wx.downloadFile.html">wx.downloadFile</a></td>
+<td>&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x8D44;&#x6E90;&#x5230;&#x672C;&#x5730;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="downloadtask">DownloadTask</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="network/download/DownloadTask.onProgressUpdate.html">DownloadTask.onProgressUpdate</a></td>
+<td>&#x76D1;&#x542C;&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="network/download/DownloadTask.abort.html">DownloadTask.abort</a></td>
+<td>&#x4E2D;&#x65AD;&#x4E0B;&#x8F7D;&#x4EFB;&#x52A1;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5A92;&#x4F53;">&#x5A92;&#x4F53;</h2>
+<h3 id="&#x97F3;&#x9891;">&#x97F3;&#x9891;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/audio/wx.stopVoice.html">wx.stopVoice</a></td>
+<td>&#x7ED3;&#x675F;&#x64AD;&#x653E;&#x8BED;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/audio/wx.pauseVoice.html">wx.pauseVoice</a></td>
+<td>&#x6682;&#x505C;&#x6B63;&#x5728;&#x64AD;&#x653E;&#x7684;&#x8BED;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/audio/wx.playVoice.html">wx.playVoice</a></td>
+<td>&#x5F00;&#x59CB;&#x64AD;&#x653E;&#x8BED;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/audio/wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></td>
+<td>&#x8BBE;&#x7F6E; <a href="media/audio/InnerAudioContext.html">InnerAudioContext</a> &#x7684;&#x64AD;&#x653E;&#x9009;&#x9879;</td>
+</tr>
+<tr>
+<td><a href="media/audio/wx.getAvailableAudioSources.html">wx.getAvailableAudioSources</a></td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x652F;&#x6301;&#x7684;&#x97F3;&#x9891;&#x8F93;&#x5165;&#x6E90;</td>
+</tr>
+<tr>
+<td><a href="media/audio/wx.createAudioContext.html">wx.createAudioContext</a></td>
+<td>&#x521B;&#x5EFA; <code>audio</code> &#x4E0A;&#x4E0B;&#x6587; <code>AudioContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td><a href="media/audio/wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></td>
+<td>&#x521B;&#x5EFA;&#x5185;&#x90E8; <code>audio</code> &#x4E0A;&#x4E0B;&#x6587; <code>InnerAudioContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="audiocontext">AudioContext</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/audio/AudioContext.seek.html">AudioContext.seek</a></td>
+<td>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="media/audio/AudioContext.pause.html">AudioContext.pause</a></td>
+<td>&#x6682;&#x505C;&#x97F3;&#x9891;</td>
+</tr>
+<tr>
+<td><a href="media/audio/AudioContext.play.html">AudioContext.play</a></td>
+<td>&#x64AD;&#x653E;&#x97F3;&#x9891;</td>
+</tr>
+<tr>
+<td><a href="media/audio/AudioContext.setSrc.html">AudioContext.setSrc</a></td>
+<td>&#x8BBE;&#x7F6E;&#x97F3;&#x9891;&#x5730;&#x5740;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="inneraudiocontext">InnerAudioContext</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/audio/InnerAudioContext.destroy.html">InnerAudioContext.destroy</a></td>
+<td>&#x9500;&#x6BC1;&#x5F53;&#x524D;&#x5B9E;&#x4F8B;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.seek.html">InnerAudioContext.seek</a></td>
+<td>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.stop.html">InnerAudioContext.stop</a></td>
+<td>&#x505C;&#x6B62;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.pause.html">InnerAudioContext.pause</a></td>
+<td>&#x6682;&#x505C;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.play.html">InnerAudioContext.play</a></td>
+<td>&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offSeeked.html">InnerAudioContext.offSeeked</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x5B8C;&#x6210;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onSeeked.html">InnerAudioContext.onSeeked</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x5B8C;&#x6210;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offSeeking.html">InnerAudioContext.offSeeking</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onSeeking.html">InnerAudioContext.onSeeking</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offWaiting.html">InnerAudioContext.offWaiting</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x52A0;&#x8F7D;&#x4E2D;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onWaiting.html">InnerAudioContext.onWaiting</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x52A0;&#x8F7D;&#x4E2D;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offError.html">InnerAudioContext.offError</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onError.html">InnerAudioContext.onError</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offTimeUpdate.html">InnerAudioContext.offTimeUpdate</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onTimeUpdate.html">InnerAudioContext.onTimeUpdate</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offEnded.html">InnerAudioContext.offEnded</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x81EA;&#x7136;&#x64AD;&#x653E;&#x81F3;&#x7ED3;&#x675F;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onEnded.html">InnerAudioContext.onEnded</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x81EA;&#x7136;&#x64AD;&#x653E;&#x81F3;&#x7ED3;&#x675F;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offStop.html">InnerAudioContext.offStop</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onStop.html">InnerAudioContext.onStop</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offPause.html">InnerAudioContext.offPause</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onPause.html">InnerAudioContext.onPause</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offPlay.html">InnerAudioContext.offPlay</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onPlay.html">InnerAudioContext.onPlay</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.offCanplay.html">InnerAudioContext.offCanplay</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x97F3;&#x9891;&#x8FDB;&#x5165;&#x53EF;&#x4EE5;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/audio/InnerAudioContext.onCanplay.html">InnerAudioContext.onCanplay</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x8FDB;&#x5165;&#x53EF;&#x4EE5;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5F55;&#x97F3;">&#x5F55;&#x97F3;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/recorder/wx.stopRecord.html">wx.stopRecord</a></td>
+<td>&#x505C;&#x6B62;&#x5F55;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/wx.startRecord.html">wx.startRecord</a></td>
+<td>&#x5F00;&#x59CB;&#x5F55;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/wx.getRecorderManager.html">wx.getRecorderManager</a></td>
+<td>&#x83B7;&#x53D6;<strong>&#x5168;&#x5C40;&#x552F;&#x4E00;</strong>&#x7684;&#x5F55;&#x97F3;&#x7BA1;&#x7406;&#x5668; RecorderManager</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recordermanager">RecorderManager</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/recorder/RecorderManager.start.html">RecorderManager.start</a></td>
+<td>&#x5F00;&#x59CB;&#x5F55;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.pause.html">RecorderManager.pause</a></td>
+<td>&#x6682;&#x505C;&#x5F55;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.resume.html">RecorderManager.resume</a></td>
+<td>&#x7EE7;&#x7EED;&#x5F55;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.stop.html">RecorderManager.stop</a></td>
+<td>&#x505C;&#x6B62;&#x5F55;&#x97F3;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onStart.html">RecorderManager.onStart</a></td>
+<td>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onResume.html">RecorderManager.onResume</a></td>
+<td>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x7EE7;&#x7EED;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onPause.html">RecorderManager.onPause</a></td>
+<td>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onStop.html">RecorderManager.onStop</a></td>
+<td>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onFrameRecorded.html">RecorderManager.onFrameRecorded</a></td>
+<td>&#x76D1;&#x542C;&#x5DF2;&#x5F55;&#x5236;&#x5B8C;&#x6307;&#x5B9A;&#x5E27;&#x5927;&#x5C0F;&#x7684;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onError.html">RecorderManager.onError</a></td>
+<td>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onInterruptionBegin.html">RecorderManager.onInterruptionBegin</a></td>
+<td>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x56E0;&#x4E3A;&#x53D7;&#x5230;&#x7CFB;&#x7EDF;&#x5360;&#x7528;&#x800C;&#x88AB;&#x4E2D;&#x65AD;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/recorder/RecorderManager.onInterruptionEnd.html">RecorderManager.onInterruptionEnd</a></td>
+<td>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x4E2D;&#x65AD;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x80CC;&#x666F;&#x97F3;&#x9891;">&#x80CC;&#x666F;&#x97F3;&#x9891;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/background-audio/wx.onBackgroundAudioStop.html">wx.onBackgroundAudioStop</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.onBackgroundAudioPause.html">wx.onBackgroundAudioPause</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.onBackgroundAudioPlay.html">wx.onBackgroundAudioPlay</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.stopBackgroundAudio.html">wx.stopBackgroundAudio</a></td>
+<td>&#x505C;&#x6B62;&#x64AD;&#x653E;&#x97F3;&#x4E50;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.seekBackgroundAudio.html">wx.seekBackgroundAudio</a></td>
+<td>&#x63A7;&#x5236;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.pauseBackgroundAudio.html">wx.pauseBackgroundAudio</a></td>
+<td>&#x6682;&#x505C;&#x64AD;&#x653E;&#x97F3;&#x4E50;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.playBackgroundAudio.html">wx.playBackgroundAudio</a></td>
+<td>&#x4F7F;&#x7528;&#x540E;&#x53F0;&#x64AD;&#x653E;&#x5668;&#x64AD;&#x653E;&#x97F3;&#x4E50;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.getBackgroundAudioPlayerState.html">wx.getBackgroundAudioPlayerState</a></td>
+<td>&#x83B7;&#x53D6;&#x540E;&#x53F0;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a></td>
+<td>&#x83B7;&#x53D6;<strong>&#x5168;&#x5C40;&#x552F;&#x4E00;</strong>&#x7684;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x7BA1;&#x7406;&#x5668;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="backgroundaudiomanager">BackgroundAudioManager</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.play.html">BackgroundAudioManager.play</a></td>
+<td>&#x64AD;&#x653E;&#x97F3;&#x4E50;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.pause.html">BackgroundAudioManager.pause</a></td>
+<td>&#x6682;&#x505C;&#x97F3;&#x4E50;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.seek.html">BackgroundAudioManager.seek</a></td>
+<td>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.stop.html">BackgroundAudioManager.stop</a></td>
+<td>&#x505C;&#x6B62;&#x97F3;&#x4E50;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onCanPlay.html">BackgroundAudioManager.onCanPlay</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x8FDB;&#x5165;&#x53EF;&#x4EE5;&#x64AD;&#x653E;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onWaiting.html">BackgroundAudioManager.onWaiting</a></td>
+<td>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x52A0;&#x8F7D;&#x4E2D;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onError.html">BackgroundAudioManager.onError</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onPlay.html">BackgroundAudioManager.onPlay</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onPause.html">BackgroundAudioManager.onPause</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onSeeking.html">BackgroundAudioManager.onSeeking</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x5F00;&#x59CB;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onSeeked.html">BackgroundAudioManager.onSeeked</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x5B8C;&#x6210;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onEnded.html">BackgroundAudioManager.onEnded</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x81EA;&#x7136;&#x64AD;&#x653E;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onStop.html">BackgroundAudioManager.onStop</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onTimeUpdate.html">BackgroundAudioManager.onTimeUpdate</a></td>
+<td>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onNext.html">BackgroundAudioManager.onNext</a></td>
+<td>&#x76D1;&#x542C;&#x7528;&#x6237;&#x5728;&#x7CFB;&#x7EDF;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x9762;&#x677F;&#x70B9;&#x51FB;&#x4E0B;&#x4E00;&#x66F2;&#x4E8B;&#x4EF6;&#xFF08;&#x4EC5;iOS&#xFF09;</td>
+</tr>
+<tr>
+<td><a href="media/background-audio/BackgroundAudioManager.onPrev.html">BackgroundAudioManager.onPrev</a></td>
+<td>&#x76D1;&#x542C;&#x7528;&#x6237;&#x5728;&#x7CFB;&#x7EDF;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x9762;&#x677F;&#x70B9;&#x51FB;&#x4E0A;&#x4E00;&#x66F2;&#x4E8B;&#x4EF6;&#xFF08;&#x4EC5;iOS&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x76F8;&#x673A;">&#x76F8;&#x673A;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/camera/wx.createCameraContext.html">wx.createCameraContext</a></td>
+<td>&#x521B;&#x5EFA; <code>camera</code> &#x4E0A;&#x4E0B;&#x6587; <code>CameraContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cameracontext">CameraContext</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/camera/CameraContext.stopRecord.html">CameraContext.stopRecord</a></td>
+<td>&#x7ED3;&#x675F;&#x5F55;&#x50CF;</td>
+</tr>
+<tr>
+<td><a href="media/camera/CameraContext.startRecord.html">CameraContext.startRecord</a></td>
+<td>&#x5F00;&#x59CB;&#x5F55;&#x50CF;</td>
+</tr>
+<tr>
+<td><a href="media/camera/CameraContext.takePhoto.html">CameraContext.takePhoto</a></td>
+<td>&#x62CD;&#x6444;&#x7167;&#x7247;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5B9E;&#x65F6;&#x97F3;&#x89C6;&#x9891;">&#x5B9E;&#x65F6;&#x97F3;&#x89C6;&#x9891;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/live/wx.createLivePlayerContext.html">wx.createLivePlayerContext</a></td>
+<td>&#x521B;&#x5EFA; <code>live-player</code> &#x4E0A;&#x4E0B;&#x6587; <code>LivePlayerContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td><a href="media/live/wx.createLivePusherContext.html">wx.createLivePusherContext</a></td>
+<td>&#x521B;&#x5EFA; <code>live-pusher</code> &#x4E0A;&#x4E0B;&#x6587; <code>LivePusherContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="livepushercontext">LivePusherContext</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/live/LivePusherContext.toggleTorch.html">LivePusherContext.toggleTorch</a></td>
+<td>&#x5207;&#x6362;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePusherContext.snapshot.html">LivePusherContext.snapshot</a></td>
+<td>&#x5FEB;&#x7167;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePusherContext.switchCamera.html">LivePusherContext.switchCamera</a></td>
+<td>&#x5207;&#x6362;&#x524D;&#x540E;&#x6444;&#x50CF;&#x5934;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePusherContext.resume.html">LivePusherContext.resume</a></td>
+<td>&#x6062;&#x590D;&#x63A8;&#x6D41;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePusherContext.pause.html">LivePusherContext.pause</a></td>
+<td>&#x6682;&#x505C;&#x63A8;&#x6D41;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePusherContext.stop.html">LivePusherContext.stop</a></td>
+<td>&#x505C;&#x6B62;&#x63A8;&#x6D41;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePusherContext.start.html">LivePusherContext.start</a></td>
+<td>&#x64AD;&#x653E;&#x63A8;&#x6D41;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="liveplayercontext">LivePlayerContext</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/live/LivePlayerContext.stop.html">LivePlayerContext.stop</a></td>
+<td>&#x505C;&#x6B62;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePlayerContext.play.html">LivePlayerContext.play</a></td>
+<td>&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePlayerContext.exitFullScreen.html">LivePlayerContext.exitFullScreen</a></td>
+<td>&#x9000;&#x51FA;&#x5168;&#x5C4F;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePlayerContext.requestFullScreen.html">LivePlayerContext.requestFullScreen</a></td>
+<td>&#x8FDB;&#x5165;&#x5168;&#x5C4F;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePlayerContext.resume.html">LivePlayerContext.resume</a></td>
+<td>&#x6062;&#x590D;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePlayerContext.pause.html">LivePlayerContext.pause</a></td>
+<td>&#x6682;&#x505C;</td>
+</tr>
+<tr>
+<td><a href="media/live/LivePlayerContext.mute.html">LivePlayerContext.mute</a></td>
+<td>&#x9759;&#x97F3;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x89C6;&#x9891;">&#x89C6;&#x9891;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/video/wx.createVideoContext.html">wx.createVideoContext</a></td>
+<td>&#x521B;&#x5EFA; <code>video</code> &#x4E0A;&#x4E0B;&#x6587; <code>VideoContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td><a href="media/video/wx.saveVideoToPhotosAlbum.html">wx.saveVideoToPhotosAlbum</a></td>
+<td>&#x4FDD;&#x5B58;&#x89C6;&#x9891;&#x5230;&#x7CFB;&#x7EDF;&#x76F8;&#x518C;</td>
+</tr>
+<tr>
+<td><a href="media/video/wx.chooseVideo.html">wx.chooseVideo</a></td>
+<td>&#x62CD;&#x6444;&#x89C6;&#x9891;&#x6216;&#x4ECE;&#x624B;&#x673A;&#x76F8;&#x518C;&#x4E2D;&#x9009;&#x89C6;&#x9891;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="videocontext">VideoContext</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/video/VideoContext.hideStatusBar.html">VideoContext.hideStatusBar</a></td>
+<td>&#x9690;&#x85CF;&#x72B6;&#x6001;&#x680F;&#xFF0C;&#x4EC5;&#x5728;iOS&#x5168;&#x5C4F;&#x4E0B;&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.showStatusBar.html">VideoContext.showStatusBar</a></td>
+<td>&#x663E;&#x793A;&#x72B6;&#x6001;&#x680F;&#xFF0C;&#x4EC5;&#x5728;iOS&#x5168;&#x5C4F;&#x4E0B;&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.exitFullScreen.html">VideoContext.exitFullScreen</a></td>
+<td>&#x9000;&#x51FA;&#x5168;&#x5C4F;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.requestFullScreen.html">VideoContext.requestFullScreen</a></td>
+<td>&#x8FDB;&#x5165;&#x5168;&#x5C4F;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.playbackRate.html">VideoContext.playbackRate</a></td>
+<td>&#x8BBE;&#x7F6E;&#x500D;&#x901F;&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.sendDanmu.html">VideoContext.sendDanmu</a></td>
+<td>&#x64AD;&#x653E;&#x89C6;&#x9891;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.seek.html">VideoContext.seek</a></td>
+<td>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.stop.html">VideoContext.stop</a></td>
+<td>&#x505C;&#x6B62;&#x89C6;&#x9891;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.pause.html">VideoContext.pause</a></td>
+<td>&#x6682;&#x505C;&#x89C6;&#x9891;</td>
+</tr>
+<tr>
+<td><a href="media/video/VideoContext.play.html">VideoContext.play</a></td>
+<td>&#x64AD;&#x653E;&#x89C6;&#x9891;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x56FE;&#x7247;">&#x56FE;&#x7247;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/image/wx.saveImageToPhotosAlbum.html">wx.saveImageToPhotosAlbum</a></td>
+<td>&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x5230;&#x7CFB;&#x7EDF;&#x76F8;&#x518C;</td>
+</tr>
+<tr>
+<td><a href="media/image/wx.getImageInfo.html">wx.getImageInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="media/image/wx.previewImage.html">wx.previewImage</a></td>
+<td>&#x5728;&#x65B0;&#x9875;&#x9762;&#x4E2D;&#x5168;&#x5C4F;&#x9884;&#x89C8;&#x56FE;&#x7247;</td>
+</tr>
+<tr>
+<td><a href="media/image/wx.chooseImage.html">wx.chooseImage</a></td>
+<td>&#x4ECE;&#x672C;&#x5730;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x56FE;&#x7247;&#x6216;&#x4F7F;&#x7528;&#x76F8;&#x673A;&#x62CD;&#x7167;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5B57;&#x4F53;">&#x5B57;&#x4F53;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="media/font/wx.loadFontFace.html">wx.loadFontFace</a></td>
+<td>&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x7F51;&#x7EDC;&#x5B57;&#x4F53;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6587;&#x4EF6;">&#x6587;&#x4EF6;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="file/wx.saveFile.html">wx.saveFile</a></td>
+<td>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;</td>
+</tr>
+<tr>
+<td><a href="file/wx.openDocument.html">wx.openDocument</a></td>
+<td>&#x65B0;&#x5F00;&#x9875;&#x9762;&#x6253;&#x5F00;&#x6587;&#x6863;</td>
+</tr>
+<tr>
+<td><a href="file/wx.getSavedFileList.html">wx.getSavedFileList</a></td>
+<td>&#x83B7;&#x53D6;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td><a href="file/wx.getSavedFileInfo.html">wx.getSavedFileInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="file/wx.removeSavedFile.html">wx.removeSavedFile</a></td>
+<td>&#x5220;&#x9664;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="file/wx.getFileSystemManager.html">wx.getFileSystemManager</a></td>
+<td>&#x83B7;&#x53D6;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7684;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;</td>
+</tr>
+<tr>
+<td><a href="file/wx.getFileInfo.html">wx.getFileInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stats">Stats</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="file/Stats.isDirectory.html">Stats.isDirectory</a></td>
+<td>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td><a href="file/Stats.isFile.html">Stats.isFile</a></td>
+<td>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filesystemmanager">FileSystemManager</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="file/FileSystemManager.rename.html">FileSystemManager.rename</a></td>
+<td>&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.renameSync.html">FileSystemManager.renameSync</a></td>
+<td>FileSystemManager.rename &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.rmdir.html">FileSystemManager.rmdir</a></td>
+<td>&#x5220;&#x9664;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.rmdirSync.html">FileSystemManager.rmdirSync</a></td>
+<td>FileSystemManager.rmdir &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.copyFile.html">FileSystemManager.copyFile</a></td>
+<td>&#x590D;&#x5236;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.copyFileSync.html">FileSystemManager.copyFileSync</a></td>
+<td>FileSystemManager.copyFile &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.stat.html">FileSystemManager.stat</a></td>
+<td>&#x83B7;&#x53D6;&#x6587;&#x4EF6; Stats &#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.statSync.html">FileSystemManager.statSync</a></td>
+<td>FileSystemManager.stat &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.unlink.html">FileSystemManager.unlink</a></td>
+<td>&#x5220;&#x9664;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.unlinkSync.html">FileSystemManager.unlinkSync</a></td>
+<td>FileSystemManager.unlink &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.unzip.html">FileSystemManager.unzip</a></td>
+<td>&#x89E3;&#x538B;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.writeFile.html">FileSystemManager.writeFile</a></td>
+<td>&#x5199;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.writeFileSync.html">FileSystemManager.writeFileSync</a></td>
+<td>FileSystemManager.writeFile &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.removeSavedFile.html">FileSystemManager.removeSavedFile</a></td>
+<td>&#x5220;&#x9664;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.getSavedFileList.html">FileSystemManager.getSavedFileList</a></td>
+<td>&#x83B7;&#x53D6;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.saveFileSync.html">FileSystemManager.saveFileSync</a></td>
+<td>FileSystemManager.saveFile &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.saveFile.html">FileSystemManager.saveFile</a></td>
+<td>&#x4FDD;&#x5B58;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.appendFileSync.html">FileSystemManager.appendFileSync</a></td>
+<td>FileSystemManager.appendFile &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.appendFile.html">FileSystemManager.appendFile</a></td>
+<td>&#x5728;&#x6587;&#x4EF6;&#x7ED3;&#x5C3E;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.accessSync.html">FileSystemManager.accessSync</a></td>
+<td>FileSystemManager.access &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.access.html">FileSystemManager.access</a></td>
+<td>&#x5224;&#x65AD;&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.getFileInfo.html">FileSystemManager.getFileInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x7684; &#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6; &#x6216; &#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6; &#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.mkdir.html">FileSystemManager.mkdir</a></td>
+<td>&#x521B;&#x5EFA;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.mkdirSync.html">FileSystemManager.mkdirSync</a></td>
+<td>FileSystemManager.mkdir &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.readFile.html">FileSystemManager.readFile</a></td>
+<td>&#x8BFB;&#x53D6;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.readFileSync.html">FileSystemManager.readFileSync</a></td>
+<td>FileSystemManager.readFile &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.readdir.html">FileSystemManager.readdir</a></td>
+<td>&#x8BFB;&#x53D6;&#x76EE;&#x5F55;&#x5185;&#x6587;&#x4EF6;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td><a href="file/FileSystemManager.readdirSync.html">FileSystemManager.readdirSync</a></td>
+<td>FileSystemManager.readdir &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6570;&#x636E;&#x7F13;&#x5B58;">&#x6570;&#x636E;&#x7F13;&#x5B58;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="storage/wx.getStorageInfoSync.html">wx.getStorageInfoSync</a></td>
+<td>wx.getStorageInfo &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.getStorageInfo.html">wx.getStorageInfo</a></td>
+<td>&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x5F53;&#x524D;storage&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.clearStorageSync.html">wx.clearStorageSync</a></td>
+<td>wx.clearStorage &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.clearStorage.html">wx.clearStorage</a></td>
+<td>&#x6E05;&#x7406;&#x672C;&#x5730;&#x6570;&#x636E;&#x7F13;&#x5B58;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.removeStorageSync.html">wx.removeStorageSync</a></td>
+<td>wx.removeStorage &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.removeStorage.html">wx.removeStorage</a></td>
+<td>&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x79FB;&#x9664;&#x6307;&#x5B9A; key</td>
+</tr>
+<tr>
+<td><a href="storage/wx.setStorageSync.html">wx.setStorageSync</a></td>
+<td>wx.setStorage &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.setStorage.html">wx.setStorage</a></td>
+<td>&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x6307;&#x5B9A;&#x7684; key &#x4E2D;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.getStorageSync.html">wx.getStorageSync</a></td>
+<td>wx.getStorage &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="storage/wx.getStorage.html">wx.getStorage</a></td>
+<td>&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x5F02;&#x6B65;&#x83B7;&#x53D6;&#x6307;&#x5B9A; key &#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x4F4D;&#x7F6E;">&#x4F4D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="location/wx.chooseLocation.html">wx.chooseLocation</a></td>
+<td>&#x6253;&#x5F00;&#x5730;&#x56FE;&#x9009;&#x62E9;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="location/wx.openLocation.html">wx.openLocation</a></td>
+<td>&#x200B;&#x4F7F;&#x7528;&#x5FAE;&#x4FE1;&#x5185;&#x7F6E;&#x5730;&#x56FE;&#x67E5;&#x770B;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="location/wx.getLocation.html">wx.getLocation</a></td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x3001;&#x901F;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8BBE;&#x5907;">&#x8BBE;&#x5907;</h2>
+<h3 id="&#x7F57;&#x76D8;">&#x7F57;&#x76D8;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/compass/wx.startCompass.html">wx.startCompass</a></td>
+<td>&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x7F57;&#x76D8;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="device/compass/wx.stopCompass.html">wx.stopCompass</a></td>
+<td>&#x505C;&#x6B62;&#x76D1;&#x542C;&#x7F57;&#x76D8;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="device/compass/wx.onCompassChange.html">wx.onCompassChange</a></td>
+<td>&#x76D1;&#x542C;&#x7F57;&#x76D8;&#x6570;&#x636E;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wi-fi">Wi-Fi</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/wifi/wx.stopWifi.html">wx.stopWifi</a></td>
+<td>&#x5173;&#x95ED; Wi-Fi &#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td><a href="device/wifi/wx.startWifi.html">wx.startWifi</a></td>
+<td>&#x521D;&#x59CB;&#x5316; Wi-Fi &#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td><a href="device/wifi/wx.setWifiList.html">wx.setWifiList</a></td>
+<td>&#x8BBE;&#x7F6E; <code>wifiList</code> &#x4E2D; AP &#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="device/wifi/wx.onWifiConnected.html">wx.onWifiConnected</a></td>
+<td>&#x76D1;&#x542C;&#x8FDE;&#x63A5;&#x4E0A; Wi-Fi &#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="device/wifi/wx.onGetWifiList.html">wx.onGetWifiList</a></td>
+<td>&#x76D1;&#x542C;&#x83B7;&#x53D6;&#x5230; Wi-Fi &#x5217;&#x8868;&#x6570;&#x636E;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="device/wifi/wx.getWifiList.html">wx.getWifiList</a></td>
+<td>&#x8BF7;&#x6C42;&#x83B7;&#x53D6; Wi-Fi &#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td><a href="device/wifi/wx.getConnectedWifi.html">wx.getConnectedWifi</a></td>
+<td>&#x83B7;&#x53D6;&#x5DF2;&#x8FDE;&#x63A5;&#x4E2D;&#x7684; Wi-Fi &#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="device/wifi/wx.connectWifi.html">wx.connectWifi</a></td>
+<td>&#x8FDE;&#x63A5; Wi-Fi</td>
+</tr>
+<tr>
+<td><a href="device/wifi/WifiInfo.html">WifiInfo</a></td>
+<td>Wifi &#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nfc">NFC</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/nfc/wx.stopHCE.html">wx.stopHCE</a></td>
+<td>&#x5173;&#x95ED; NFC &#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td><a href="device/nfc/wx.startHCE.html">wx.startHCE</a></td>
+<td>&#x521D;&#x59CB;&#x5316; NFC &#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td><a href="device/nfc/wx.sendHCEMessage.html">wx.sendHCEMessage</a></td>
+<td>&#x53D1;&#x9001; NFC &#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="device/nfc/wx.onHCEMessage.html">wx.onHCEMessage</a></td>
+<td>&#x76D1;&#x542C;NFC &#x8BBE;&#x5907;&#x7684;&#x6D88;&#x606F;&#x56DE;&#x8C03;</td>
+</tr>
+<tr>
+<td><a href="device/nfc/wx.getHCEState.html">wx.getHCEState</a></td>
+<td>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x652F;&#x6301; HCE &#x80FD;&#x529B;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;">&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/bluetooth-ble/wx.writeBLECharacteristicValue.html">wx.writeBLECharacteristicValue</a></td>
+<td>&#x5411;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7279;&#x5F81;&#x503C;&#x4E2D;&#x5199;&#x5165;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.readBLECharacteristicValue.html">wx.readBLECharacteristicValue</a></td>
+<td>&#x8BFB;&#x53D6;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x503C;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.onBLEConnectionStateChange.html">wx.onBLEConnectionStateChange</a></td>
+<td>&#x76D1;&#x542C;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x6539;&#x53D8;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.onBLECharacteristicValueChange.html">wx.onBLECharacteristicValueChange</a></td>
+<td>&#x76D1;&#x542C;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.notifyBLECharacteristicValueChange.html">wx.notifyBLECharacteristicValueChange</a></td>
+<td>&#x542F;&#x7528;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7279;&#x5F81;&#x503C;&#x53D8;&#x5316;&#x65F6;&#x7684; notify &#x529F;&#x80FD;&#xFF0C;&#x8BA2;&#x9605;&#x7279;&#x5F81;&#x503C;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.getBLEDeviceServices.html">wx.getBLEDeviceServices</a></td>
+<td>&#x83B7;&#x53D6;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x6240;&#x6709;&#x670D;&#x52A1;(service)</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.getBLEDeviceCharacteristics.html">wx.getBLEDeviceCharacteristics</a></td>
+<td>&#x83B7;&#x53D6;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x67D0;&#x4E2A;&#x670D;&#x52A1;&#x4E2D;&#x6240;&#x6709;&#x7279;&#x5F81;&#x503C;(characteristic)</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.createBLEConnection.html">wx.createBLEConnection</a></td>
+<td>&#x8FDE;&#x63A5;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth-ble/wx.closeBLEConnection.html">wx.closeBLEConnection</a></td>
+<td>&#x65AD;&#x5F00;&#x4E0E;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x8FDE;&#x63A5;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x84DD;&#x7259;">&#x84DD;&#x7259;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/bluetooth/wx.stopBluetoothDevicesDiscovery.html">wx.stopBluetoothDevicesDiscovery</a></td>
+<td>&#x505C;&#x6B62;&#x641C;&#x5BFB;&#x9644;&#x8FD1;&#x7684;&#x84DD;&#x7259;&#x5916;&#x56F4;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.startBluetoothDevicesDiscovery.html">wx.startBluetoothDevicesDiscovery</a></td>
+<td>&#x5F00;&#x59CB;&#x641C;&#x5BFB;&#x9644;&#x8FD1;&#x7684;&#x84DD;&#x7259;&#x5916;&#x56F4;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.openBluetoothAdapter.html">wx.openBluetoothAdapter</a></td>
+<td>&#x521D;&#x59CB;&#x5316;&#x84DD;&#x7259;&#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.onBluetoothDeviceFound.html">wx.onBluetoothDeviceFound</a></td>
+<td>&#x76D1;&#x542C;&#x5BFB;&#x627E;&#x5230;&#x65B0;&#x8BBE;&#x5907;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.onBluetoothAdapterStateChange.html">wx.onBluetoothAdapterStateChange</a></td>
+<td>&#x76D1;&#x542C;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.getConnectedBluetoothDevices.html">wx.getConnectedBluetoothDevices</a></td>
+<td>&#x6839;&#x636E; uuid &#x83B7;&#x53D6;&#x5904;&#x4E8E;&#x5DF2;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.getBluetoothDevices.html">wx.getBluetoothDevices</a></td>
+<td>&#x83B7;&#x53D6;&#x5728;&#x84DD;&#x7259;&#x6A21;&#x5757;&#x751F;&#x6548;&#x671F;&#x95F4;&#x6240;&#x6709;&#x5DF2;&#x53D1;&#x73B0;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.getBluetoothAdapterState.html">wx.getBluetoothAdapterState</a></td>
+<td>&#x83B7;&#x53D6;&#x672C;&#x673A;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td><a href="device/bluetooth/wx.closeBluetoothAdapter.html">wx.closeBluetoothAdapter</a></td>
+<td>&#x5173;&#x95ED;&#x84DD;&#x7259;&#x6A21;&#x5757;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6027;&#x80FD;">&#x6027;&#x80FD;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/performance/wx.onMemoryWarning.html">wx.onMemoryWarning</a></td>
+<td>&#x76D1;&#x542C;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x544A;&#x8B66;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x52A0;&#x901F;&#x8BA1;">&#x52A0;&#x901F;&#x8BA1;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/accelerometer/wx.startAccelerometer.html">wx.startAccelerometer</a></td>
+<td>&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="device/accelerometer/wx.stopAccelerometer.html">wx.stopAccelerometer</a></td>
+<td>&#x505C;&#x6B62;&#x76D1;&#x542C;&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="device/accelerometer/wx.onAccelerometerChange.html">wx.onAccelerometerChange</a></td>
+<td>&#x76D1;&#x542C;&#x52A0;&#x901F;&#x5EA6;&#x6570;&#x636E;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7535;&#x91CF;">&#x7535;&#x91CF;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/battery/wx.getBatteryInfo.html">wx.getBatteryInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x7535;&#x91CF;</td>
+</tr>
+<tr>
+<td><a href="device/battery/wx.getBatteryInfoSync.html">wx.getBatteryInfoSync</a></td>
+<td>wx.getBatteryInfo &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x526A;&#x8D34;&#x677F;">&#x526A;&#x8D34;&#x677F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/clipboard/wx.getClipboardData.html">wx.getClipboardData</a></td>
+<td>&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x526A;&#x8D34;&#x677F;&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><a href="device/clipboard/wx.setClipboardData.html">wx.setClipboardData</a></td>
+<td>&#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x526A;&#x8D34;&#x677F;&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5C4F;&#x5E55;">&#x5C4F;&#x5E55;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/screen/wx.setScreenBrightness.html">wx.setScreenBrightness</a></td>
+<td>&#x8BBE;&#x7F6E;&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="device/screen/wx.setKeepScreenOn.html">wx.setKeepScreenOn</a></td>
+<td>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x4FDD;&#x6301;&#x5E38;&#x4EAE;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td><a href="device/screen/wx.onUserCaptureScreen.html">wx.onUserCaptureScreen</a></td>
+<td>&#x76D1;&#x542C;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x622A;&#x5C4F;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="device/screen/wx.getScreenBrightness.html">wx.getScreenBrightness</a></td>
+<td>&#x83B7;&#x53D6;&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x8054;&#x7CFB;&#x4EBA;">&#x8054;&#x7CFB;&#x4EBA;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/contact/wx.addPhoneContact.html">wx.addPhoneContact</a></td>
+<td>&#x6DFB;&#x52A0;&#x624B;&#x673A;&#x901A;&#x8BAF;&#x5F55;&#x8054;&#x7CFB;&#x4EBA;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x9640;&#x87BA;&#x4EEA;">&#x9640;&#x87BA;&#x4EEA;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/gyroscope/wx.startGyroscope.html">wx.startGyroscope</a></td>
+<td>&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x9640;&#x87BA;&#x4EEA;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="device/gyroscope/wx.stopGyroscope.html">wx.stopGyroscope</a></td>
+<td>&#x505C;&#x6B62;&#x76D1;&#x542C;&#x9640;&#x87BA;&#x4EEA;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="device/gyroscope/wx.onGyroscopeChange.html">wx.onGyroscopeChange</a></td>
+<td>&#x76D1;&#x542C;&#x9640;&#x87BA;&#x4EEA;&#x6570;&#x636E;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ibeacon">iBeacon</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/ibeacon/wx.startBeaconDiscovery.html">wx.startBeaconDiscovery</a></td>
+<td>&#x5F00;&#x59CB;&#x641C;&#x7D22;&#x9644;&#x8FD1;&#x7684; iBeacon &#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/ibeacon/wx.stopBeaconDiscovery.html">wx.stopBeaconDiscovery</a></td>
+<td>&#x505C;&#x6B62;&#x641C;&#x7D22;&#x9644;&#x8FD1;&#x7684; iBeacon &#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/ibeacon/wx.getBeacons.html">wx.getBeacons</a></td>
+<td>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x5DF2;&#x641C;&#x7D22;&#x5230;&#x7684; iBeacon &#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td><a href="device/ibeacon/wx.onBeaconUpdate.html">wx.onBeaconUpdate</a></td>
+<td>&#x76D1;&#x542C;iBeacon &#x8BBE;&#x5907;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="device/ibeacon/wx.onBeaconServiceChange.html">wx.onBeaconServiceChange</a></td>
+<td>&#x76D1;&#x542C;iBeacon &#x670D;&#x52A1;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td><a href="device/ibeacon/IBeaconInfo.html">IBeaconInfo</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x8BBE;&#x5907;&#x65B9;&#x5411;">&#x8BBE;&#x5907;&#x65B9;&#x5411;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/motion/wx.startDeviceMotionListening.html">wx.startDeviceMotionListening</a></td>
+<td>&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x65B9;&#x5411;&#x7684;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td><a href="device/motion/wx.stopDeviceMotionListening.html">wx.stopDeviceMotionListening</a></td>
+<td>&#x505C;&#x6B62;&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x65B9;&#x5411;&#x7684;&#x53D8;&#x5316;</td>
+</tr>
+<tr>
+<td><a href="device/motion/wx.onDeviceMotionChange.html">wx.onDeviceMotionChange</a></td>
+<td>&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x65B9;&#x5411;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7F51;&#x7EDC;-2">&#x7F51;&#x7EDC;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/network/wx.getNetworkType.html">wx.getNetworkType</a></td>
+<td>&#x83B7;&#x53D6;&#x7F51;&#x7EDC;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td><a href="device/network/wx.onNetworkStatusChange.html">wx.onNetworkStatusChange</a></td>
+<td>&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7535;&#x8BDD;">&#x7535;&#x8BDD;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/phone/wx.makePhoneCall.html">wx.makePhoneCall</a></td>
+<td>&#x62E8;&#x6253;&#x7535;&#x8BDD;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x626B;&#x7801;">&#x626B;&#x7801;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/scan/wx.scanCode.html">wx.scanCode</a></td>
+<td>&#x8C03;&#x8D77;&#x5BA2;&#x6237;&#x7AEF;&#x626B;&#x7801;&#x754C;&#x9762;&#x8FDB;&#x884C;&#x626B;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x632F;&#x52A8;">&#x632F;&#x52A8;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="device/vibrate/wx.vibrateShort.html">wx.vibrateShort</a></td>
+<td>&#x4F7F;&#x624B;&#x673A;&#x53D1;&#x751F;&#x8F83;&#x77ED;&#x65F6;&#x95F4;&#x7684;&#x632F;&#x52A8;&#xFF08;15 ms&#xFF09;</td>
+</tr>
+<tr>
+<td><a href="device/vibrate/wx.vibrateLong.html">wx.vibrateLong</a></td>
+<td>&#x4F7F;&#x624B;&#x673A;&#x53D1;&#x751F;&#x8F83;&#x957F;&#x65F6;&#x95F4;&#x7684;&#x632F;&#x52A8;&#xFF08;400 ms)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x754C;&#x9762;">&#x754C;&#x9762;</h2>
+<h3 id="&#x7A97;&#x53E3;">&#x7A97;&#x53E3;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/window/wx.offWindowResize.html">wx.offWindowResize</a></td>
+<td>&#x53D6;&#x6D88;&#x76D1;&#x542C;&#x7A97;&#x53E3;&#x5C3A;&#x5BF8;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="ui/window/wx.onWindowResize.html">wx.onWindowResize</a></td>
+<td>&#x76D1;&#x542C;&#x7A97;&#x53E3;&#x5C3A;&#x5BF8;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5BFC;&#x822A;&#x680F;">&#x5BFC;&#x822A;&#x680F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/navigation-bar/wx.setNavigationBarColor.html">wx.setNavigationBarColor</a></td>
+<td>&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x5BFC;&#x822A;&#x6761;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td><a href="ui/navigation-bar/wx.hideNavigationBarLoading.html">wx.hideNavigationBarLoading</a></td>
+<td>&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x6761;&#x52A0;&#x8F7D;&#x52A8;&#x753B;</td>
+</tr>
+<tr>
+<td><a href="ui/navigation-bar/wx.showNavigationBarLoading.html">wx.showNavigationBarLoading</a></td>
+<td>&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x663E;&#x793A;&#x5BFC;&#x822A;&#x6761;&#x52A0;&#x8F7D;&#x52A8;&#x753B;</td>
+</tr>
+<tr>
+<td><a href="ui/navigation-bar/wx.setNavigationBarTitle.html">wx.setNavigationBarTitle</a></td>
+<td>&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x6807;&#x9898;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7F6E;&#x9876;">&#x7F6E;&#x9876;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/sticky/wx.setTopBarText.html">wx.setTopBarText</a></td>
+<td>&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x7F6E;&#x9876;&#x680F;&#x6587;&#x5B57;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tab-bar">Tab Bar</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/tab-bar/wx.setTabBarItem.html">wx.setTabBarItem</a></td>
+<td>&#x52A8;&#x6001;&#x8BBE;&#x7F6E; tabBar &#x67D0;&#x4E00;&#x9879;&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><a href="ui/tab-bar/wx.setTabBarStyle.html">wx.setTabBarStyle</a></td>
+<td>&#x52A8;&#x6001;&#x8BBE;&#x7F6E; tabBar &#x7684;&#x6574;&#x4F53;&#x6837;&#x5F0F;</td>
+</tr>
+<tr>
+<td><a href="ui/tab-bar/wx.hideTabBar.html">wx.hideTabBar</a></td>
+<td>&#x9690;&#x85CF; tabBar</td>
+</tr>
+<tr>
+<td><a href="ui/tab-bar/wx.showTabBar.html">wx.showTabBar</a></td>
+<td>&#x663E;&#x793A; tabBar</td>
+</tr>
+<tr>
+<td><a href="ui/tab-bar/wx.hideTabBarRedDot.html">wx.hideTabBarRedDot</a></td>
+<td>&#x9690;&#x85CF; tabBar &#x67D0;&#x4E00;&#x9879;&#x7684;&#x53F3;&#x4E0A;&#x89D2;&#x7684;&#x7EA2;&#x70B9;</td>
+</tr>
+<tr>
+<td><a href="ui/tab-bar/wx.showTabBarRedDot.html">wx.showTabBarRedDot</a></td>
+<td>&#x663E;&#x793A; tabBar &#x67D0;&#x4E00;&#x9879;&#x7684;&#x53F3;&#x4E0A;&#x89D2;&#x7684;&#x7EA2;&#x70B9;</td>
+</tr>
+<tr>
+<td><a href="ui/tab-bar/wx.removeTabBarBadge.html">wx.removeTabBarBadge</a></td>
+<td>&#x79FB;&#x9664; tabBar &#x67D0;&#x4E00;&#x9879;&#x53F3;&#x4E0A;&#x89D2;&#x7684;&#x6587;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="ui/tab-bar/wx.setTabBarBadge.html">wx.setTabBarBadge</a></td>
+<td>&#x4E3A; tabBar &#x67D0;&#x4E00;&#x9879;&#x7684;&#x53F3;&#x4E0A;&#x89D2;&#x6DFB;&#x52A0;&#x6587;&#x672C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x80CC;&#x666F;">&#x80CC;&#x666F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/background/wx.setBackgroundTextStyle.html">wx.setBackgroundTextStyle</a></td>
+<td>&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x4E0B;&#x62C9;&#x80CC;&#x666F;&#x5B57;&#x4F53;&#x3001;loading &#x56FE;&#x7684;&#x6837;&#x5F0F;</td>
+</tr>
+<tr>
+<td><a href="ui/background/wx.setBackgroundColor.html">wx.setBackgroundColor</a></td>
+<td>&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x7684;&#x80CC;&#x666F;&#x8272;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/custom-component/wx.nextTick.html">wx.nextTick</a></td>
+<td>&#x5EF6;&#x8FDF;&#x4E00;&#x90E8;&#x5206;&#x64CD;&#x4F5C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7247;&#x518D;&#x6267;&#x884C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4E0B;&#x62C9;&#x5237;&#x65B0;">&#x4E0B;&#x62C9;&#x5237;&#x65B0;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/pull-down-refresh/wx.stopPullDownRefresh.html">wx.stopPullDownRefresh</a></td>
+<td>&#x505C;&#x6B62;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0B;&#x62C9;&#x5237;&#x65B0;</td>
+</tr>
+<tr>
+<td><a href="ui/pull-down-refresh/wx.startPullDownRefresh.html">wx.startPullDownRefresh</a></td>
+<td>&#x5F00;&#x59CB;&#x4E0B;&#x62C9;&#x5237;&#x65B0;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6EDA;&#x52A8;">&#x6EDA;&#x52A8;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/scroll/wx.pageScrollTo.html">wx.pageScrollTo</a></td>
+<td>&#x5C06;&#x9875;&#x9762;&#x6EDA;&#x52A8;&#x5230;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4EA4;&#x4E92;">&#x4EA4;&#x4E92;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/interaction/wx.showActionSheet.html">wx.showActionSheet</a></td>
+<td>&#x200B;&#x663E;&#x793A;&#x64CD;&#x4F5C;&#x83DC;&#x5355;</td>
+</tr>
+<tr>
+<td><a href="ui/interaction/wx.hideLoading.html">wx.hideLoading</a></td>
+<td>&#x9690;&#x85CF; loading &#x63D0;&#x793A;&#x6846;</td>
+</tr>
+<tr>
+<td><a href="ui/interaction/wx.showLoading.html">wx.showLoading</a></td>
+<td>&#x663E;&#x793A; loading &#x63D0;&#x793A;&#x6846;</td>
+</tr>
+<tr>
+<td><a href="ui/interaction/wx.hideToast.html">wx.hideToast</a></td>
+<td>&#x9690;&#x85CF;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x6846;</td>
+</tr>
+<tr>
+<td><a href="ui/interaction/wx.showToast.html">wx.showToast</a></td>
+<td>&#x663E;&#x793A;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x6846;</td>
+</tr>
+<tr>
+<td><a href="ui/interaction/wx.showModal.html">wx.showModal</a></td>
+<td>&#x663E;&#x793A;&#x6A21;&#x6001;&#x5BF9;&#x8BDD;&#x6846;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x83DC;&#x5355;">&#x83DC;&#x5355;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/menu/wx.getMenuButtonBoundingClientRect.html">wx.getMenuButtonBoundingClientRect</a></td>
+<td>&#x83B7;&#x53D6;&#x83DC;&#x5355;&#x6309;&#x94AE;&#x7684;&#x5E03;&#x5C40;&#x7F6E;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x52A8;&#x753B;">&#x52A8;&#x753B;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/animation/wx.createAnimation.html">wx.createAnimation</a></td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x5B9E;&#x4F8B; <a href="ui/animation/Animation.html">animation</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="animation">Animation</h4>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ui/animation/Animation.step.html">Animation.step</a></td>
+<td>&#x8868;&#x793A;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x5B8C;&#x6210;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.matrix.html">Animation.matrix</a></td>
+<td>&#x540C; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix" target="_blank">transform-function matrix</a></td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.matrix3d.html">Animation.matrix3d</a></td>
+<td>&#x540C; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d" target="_blank">transform-function matrix3d</a></td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.rotate.html">Animation.rotate</a></td>
+<td>&#x4ECE;&#x539F;&#x70B9;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.rotate3d.html">Animation.rotate3d</a></td>
+<td>&#x4ECE; X &#x8F74;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.rotateX.html">Animation.rotateX</a></td>
+<td>&#x4ECE; X &#x8F74;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.rotateY.html">Animation.rotateY</a></td>
+<td>&#x4ECE; Y &#x8F74;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.rotateZ.html">Animation.rotateZ</a></td>
+<td>&#x4ECE; Z &#x8F74;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.scale.html">Animation.scale</a></td>
+<td>&#x7F29;&#x653E;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.scale3d.html">Animation.scale3d</a></td>
+<td>&#x7F29;&#x653E;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.scaleX.html">Animation.scaleX</a></td>
+<td>&#x7F29;&#x653E; X &#x8F74;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.scaleY.html">Animation.scaleY</a></td>
+<td>&#x7F29;&#x653E; Y &#x8F74;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.scaleZ.html">Animation.scaleZ</a></td>
+<td>&#x7F29;&#x653E; Z &#x8F74;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.skew.html">Animation.skew</a></td>
+<td>&#x5BF9; X&#x3001;Y &#x8F74;&#x5750;&#x6807;&#x8FDB;&#x884C;&#x503E;&#x659C;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.skewX.html">Animation.skewX</a></td>
+<td>&#x5BF9; X &#x8F74;&#x5750;&#x6807;&#x8FDB;&#x884C;&#x503E;&#x659C;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.skewY.html">Animation.skewY</a></td>
+<td>&#x5BF9; Y &#x8F74;&#x5750;&#x6807;&#x8FDB;&#x884C;&#x503E;&#x659C;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.translate.html">Animation.translate</a></td>
+<td>&#x5E73;&#x79FB;&#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.translate3d.html">Animation.translate3d</a></td>
+<td>&#x5BF9; xyz &#x5750;&#x6807;&#x8FDB;&#x884C;&#x5E73;&#x79FB;&#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.translateX.html">Animation.translateX</a></td>
+<td>&#x5BF9; X &#x8F74;&#x5E73;&#x79FB;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.translateY.html">Animation.translateY</a></td>
+<td>&#x5BF9; Y &#x8F74;&#x5E73;&#x79FB;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.translateZ.html">Animation.translateZ</a></td>
+<td>&#x5BF9; Z &#x8F74;&#x5E73;&#x79FB;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.opacity.html">Animation.opacity</a></td>
+<td>&#x8BBE;&#x7F6E;&#x900F;&#x660E;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.backgroundColor.html">Animation.backgroundColor</a></td>
+<td>&#x8BBE;&#x7F6E;&#x80CC;&#x666F;&#x8272;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.width.html">Animation.width</a></td>
+<td>&#x8BBE;&#x7F6E;&#x5BBD;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.height.html">Animation.height</a></td>
+<td>&#x8BBE;&#x7F6E;&#x9AD8;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.left.html">Animation.left</a></td>
+<td>&#x8BBE;&#x7F6E; left &#x503C;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.right.html">Animation.right</a></td>
+<td>&#x8BBE;&#x7F6E; right &#x503C;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.top.html">Animation.top</a></td>
+<td>&#x8BBE;&#x7F6E; top &#x503C;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.bottom.html">Animation.bottom</a></td>
+<td>&#x8BBE;&#x7F6E; bottom &#x503C;</td>
+</tr>
+<tr>
+<td><a href="ui/animation/Animation.export.html">Animation.export</a></td>
+<td>&#x5BFC;&#x51FA;&#x52A8;&#x753B;&#x961F;&#x5217;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5F00;&#x653E;&#x63A5;&#x53E3;">&#x5F00;&#x653E;&#x63A5;&#x53E3;</h2>
+<h3 id="&#x6388;&#x6743;">&#x6388;&#x6743;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/authorize/wx.authorize.html">wx.authorize</a></td>
+<td>&#x63D0;&#x524D;&#x5411;&#x7528;&#x6237;&#x53D1;&#x8D77;&#x6388;&#x6743;&#x8BF7;&#x6C42;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x652F;&#x4ED8;">&#x652F;&#x4ED8;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/payment/wx.faceVerifyForPay.html">wx.faceVerifyForPay</a></td>
+<td>&#x652F;&#x4ED8;&#x5404;&#x4E2A;&#x5B89;&#x5168;&#x573A;&#x666F;&#x9A8C;&#x8BC1;&#x4EBA;&#x8138;</td>
+</tr>
+<tr>
+<td><a href="open-api/payment/wx.requestPayment.html">wx.requestPayment</a></td>
+<td>&#x53D1;&#x8D77;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x8DF3;&#x8F6C;">&#x5C0F;&#x7A0B;&#x5E8F;&#x8DF3;&#x8F6C;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/miniprogram-navigate/wx.navigateToMiniProgram.html">wx.navigateToMiniProgram</a></td>
+<td>&#x6253;&#x5F00;<strong>&#x540C;&#x4E00;&#x516C;&#x4F17;&#x53F7;&#x4E0B;&#x5173;&#x8054;</strong>&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;</td>
+</tr>
+<tr>
+<td><a href="open-api/miniprogram-navigate/wx.navigateBackMiniProgram.html">wx.navigateBackMiniProgram</a></td>
+<td>&#x8FD4;&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x751F;&#x7269;&#x8BA4;&#x8BC1;">&#x751F;&#x7269;&#x8BA4;&#x8BC1;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/soter/wx.startSoterAuthentication.html">wx.startSoterAuthentication</a></td>
+<td>&#x5F00;&#x59CB; SOTER &#x751F;&#x7269;&#x8BA4;&#x8BC1;</td>
+</tr>
+<tr>
+<td><a href="open-api/soter/wx.checkIsSupportSoterAuthentication.html">wx.checkIsSupportSoterAuthentication</a></td>
+<td>&#x83B7;&#x53D6;&#x672C;&#x673A;&#x652F;&#x6301;&#x7684; SOTER &#x751F;&#x7269;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td><a href="open-api/soter/wx.checkIsSoterEnrolledInDevice.html">wx.checkIsSoterEnrolledInDevice</a></td>
+<td>&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x5185;&#x662F;&#x5426;&#x5F55;&#x5165;&#x5982;&#x6307;&#x7EB9;&#x7B49;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x7684;&#x63A5;&#x53E3;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x8BBE;&#x7F6E;">&#x8BBE;&#x7F6E;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/setting/wx.openSetting.html">wx.openSetting</a></td>
+<td>&#x8C03;&#x8D77;&#x5BA2;&#x6237;&#x7AEF;&#x5C0F;&#x7A0B;&#x5E8F;&#x8BBE;&#x7F6E;&#x754C;&#x9762;&#xFF0C;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x7684;&#x64CD;&#x4F5C;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td><a href="open-api/setting/wx.getSetting.html">wx.getSetting</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x7684;&#x5F53;&#x524D;&#x8BBE;&#x7F6E;</td>
+</tr>
+<tr>
+<td><a href="open-api/setting/AuthSetting.html">AuthSetting</a></td>
+<td>&#x7528;&#x6237;&#x6388;&#x6743;&#x8BBE;&#x7F6E;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6570;&#x636E;&#x5206;&#x6790;">&#x6570;&#x636E;&#x5206;&#x6790;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/data-analysis/wx.reportAnalytics.html">wx.reportAnalytics</a></td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x6790;&#x6570;&#x636E;&#x4E0A;&#x62A5;&#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisWeeklyVisitTrend.html">getAnalysisWeeklyVisitTrend</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x5468;&#x8D8B;&#x52BF;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisDailySummary.html">getAnalysisDailySummary</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x6982;&#x51B5;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisDailyVisitTrend.html">getAnalysisDailyVisitTrend</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x65E5;&#x8D8B;&#x52BF;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisMonthlyRetain.html">getAnalysisMonthlyRetain</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x5468;&#x7559;&#x5B58;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisDailyRetain.html">getAnalysisDailyRetain</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x65E5;&#x7559;&#x5B58;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisUserPortrait.html">getAnalysisUserPortrait</a></td>
+<td>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x65B0;&#x589E;&#x6216;&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x7684;&#x753B;&#x50CF;&#x5206;&#x5E03;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisVisitDistribution.html">getAnalysisVisitDistribution</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5C0F;&#x7A0B;&#x5E8F;&#x8BBF;&#x95EE;&#x5206;&#x5E03;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisVisitPage.html">getAnalysisVisitPage</a></td>
+<td>&#x8BBF;&#x95EE;&#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisWeeklyRetain.html">getAnalysisWeeklyRetain</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x5468;&#x7559;&#x5B58;</td>
+</tr>
+<tr>
+<td><a href="open-api/data-analysis/getAnalysisMonthlyVisitTrend.html">getAnalysisMonthlyVisitTrend</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5C0F;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x6708;&#x8D8B;&#x52BF;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;">&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/werun/wx.getWeRunData.html">wx.getWeRunData</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8FC7;&#x53BB;&#x4E09;&#x5341;&#x5929;&#x5FAE;&#x4FE1;&#x8FD0;&#x52A8;&#x6B65;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x7528;&#x6237;&#x4FE1;&#x606F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/user-info/wx.getUserInfo.html">wx.getUserInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="open-api/user-info/UserInfo.html">UserInfo</a></td>
+<td>&#x7528;&#x6237;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x53D1;&#x7968;">&#x53D1;&#x7968;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/invoice/wx.chooseInvoiceTitle.html">wx.chooseInvoiceTitle</a></td>
+<td>&#x9009;&#x62E9;&#x7528;&#x6237;&#x7684;&#x53D1;&#x7968;&#x62AC;&#x5934;</td>
+</tr>
+<tr>
+<td><a href="open-api/invoice/wx.chooseInvoice.html">wx.chooseInvoice</a></td>
+<td>&#x9009;&#x62E9;&#x7528;&#x6237;&#x5DF2;&#x6709;&#x7684;&#x53D1;&#x7968;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5361;&#x5238;">&#x5361;&#x5238;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/card/wx.openCard.html">wx.openCard</a></td>
+<td>&#x67E5;&#x770B;&#x5FAE;&#x4FE1;&#x5361;&#x5305;&#x4E2D;&#x7684;&#x5361;&#x5238;</td>
+</tr>
+<tr>
+<td><a href="open-api/card/wx.addCard.html">wx.addCard</a></td>
+<td>&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x5361;&#x5238;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5F53;&#x524D;&#x8D26;&#x53F7;&#x4FE1;&#x606F;">&#x5F53;&#x524D;&#x8D26;&#x53F7;&#x4FE1;&#x606F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/account-info/wx.getAccountInfoSync.html">wx.getAccountInfoSync</a></td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8D26;&#x53F7;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6536;&#x8D27;&#x5730;&#x5740;">&#x6536;&#x8D27;&#x5730;&#x5740;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/address/wx.chooseAddress.html">wx.chooseAddress</a></td>
+<td>&#x83B7;&#x53D6;&#x7528;&#x6237;&#x6536;&#x8D27;&#x5730;&#x5740;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x767B;&#x5F55;">&#x767B;&#x5F55;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/login/wx.checkSession.html">wx.checkSession</a></td>
+<td>&#x68C0;&#x67E5;&#x767B;&#x5F55;&#x6001;&#x662F;&#x5426;&#x8FC7;&#x671F;</td>
+</tr>
+<tr>
+<td><a href="open-api/login/wx.login.html">wx.login</a></td>
+<td>&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#xFF08;code&#xFF09;</td>
+</tr>
+<tr>
+<td><a href="open-api/login/code2Session.html">code2Session</a></td>
+<td>&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x6821;&#x9A8C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x7EDF;&#x4E00;&#x670D;&#x52A1;&#x6D88;&#x606F;">&#x7EDF;&#x4E00;&#x670D;&#x52A1;&#x6D88;&#x606F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/uniform-message/sendUniformMessage.html">sendUniformMessage</a></td>
+<td>&#x4E0B;&#x53D1;&#x5C0F;&#x7A0B;&#x5E8F;&#x548C;&#x516C;&#x4F17;&#x53F7;&#x7EDF;&#x4E00;&#x7684;&#x670D;&#x52A1;&#x6D88;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/access-token/getAccessToken.html">getAccessToken</a></td>
+<td>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F; <a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140183" target="_blank">access_token</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5BA2;&#x670D;&#x6D88;&#x606F;">&#x5BA2;&#x670D;&#x6D88;&#x606F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/customer-message/customerTyping.html">customerTyping</a></td>
+<td>&#x4E0B;&#x53D1;&#x5BA2;&#x670D;&#x5F53;&#x524D;&#x8F93;&#x5165;&#x72B6;&#x6001;&#x7ED9;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td><a href="open-api/customer-message/getTempMedia.html">getTempMedia</a></td>
+<td>&#x83B7;&#x53D6;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x5185;&#x7684;&#x4E34;&#x65F6;&#x7D20;&#x6750;</td>
+</tr>
+<tr>
+<td><a href="open-api/customer-message/sendCustomerMessage.html">sendCustomerMessage</a></td>
+<td>&#x53D1;&#x9001;&#x5BA2;&#x670D;&#x6D88;&#x606F;&#x7ED9;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td><a href="open-api/customer-message/uploadTempMedia.html">uploadTempMedia</a></td>
+<td>&#x628A;&#x5A92;&#x4F53;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x5FAE;&#x4FE1;&#x670D;&#x52A1;&#x5668;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x9644;&#x8FD1;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;">&#x9644;&#x8FD1;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/nearby-poi/addNearbyPoi.html">addNearbyPoi</a></td>
+<td>&#x6DFB;&#x52A0;&#x5730;&#x70B9;</td>
+</tr>
+<tr>
+<td><a href="open-api/nearby-poi/deleteNearbyPoi.html">deleteNearbyPoi</a></td>
+<td>&#x5220;&#x9664;&#x5730;&#x70B9;</td>
+</tr>
+<tr>
+<td><a href="open-api/nearby-poi/getNearbyPoiList.html">getNearbyPoiList</a></td>
+<td>&#x67E5;&#x770B;&#x5730;&#x70B9;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td><a href="open-api/nearby-poi/setNearbyPoiShowStatus.html">setNearbyPoiShowStatus</a></td>
+<td>&#x5C55;&#x793A;/&#x53D6;&#x6D88;&#x5C55;&#x793A;&#x9644;&#x8FD1;&#x5C0F;&#x7A0B;&#x5E8F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x63D2;&#x4EF6;&#x7BA1;&#x7406;">&#x63D2;&#x4EF6;&#x7BA1;&#x7406;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/plugin-management/applyPlugin.html">applyPlugin</a></td>
+<td>&#x5411;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x53D1;&#x8D77;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684;&#x7533;&#x8BF7;</td>
+</tr>
+<tr>
+<td><a href="open-api/plugin-management/getPluginDevApplyList.html">getPluginDevApplyList</a></td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6240;&#x6709;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x65B9;&#xFF08;&#x4F9B;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#xFF09;</td>
+</tr>
+<tr>
+<td><a href="open-api/plugin-management/getPluginList.html">getPluginList</a></td>
+<td>&#x67E5;&#x8BE2;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="open-api/plugin-management/setDevPluginApplyStatus.html">setDevPluginApplyStatus</a></td>
+<td>&#x4FEE;&#x6539;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x7533;&#x8BF7;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x4F9B;&#x63D2;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#xFF09;</td>
+</tr>
+<tr>
+<td><a href="open-api/plugin-management/unbindPlugin.html">unbindPlugin</a></td>
+<td>&#x5220;&#x9664;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x63D2;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4E8C;&#x7EF4;&#x7801;">&#x4E8C;&#x7EF4;&#x7801;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/qr-code/createWXAQRCode.html">createWXAQRCode</a></td>
+<td>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x7684;&#x7801;&#x6570;&#x91CF;&#x8F83;&#x5C11;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;</td>
+</tr>
+<tr>
+<td><a href="open-api/qr-code/getWXACode.html">getWXACode</a></td>
+<td>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x7684;&#x7801;&#x6570;&#x91CF;&#x8F83;&#x5C11;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;</td>
+</tr>
+<tr>
+<td><a href="open-api/qr-code/getWXACodeUnlimit.html">getWXACodeUnlimit</a></td>
+<td>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x7801;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x7684;&#x7801;&#x6570;&#x91CF;&#x6781;&#x591A;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5185;&#x5BB9;&#x5B89;&#x5168;">&#x5185;&#x5BB9;&#x5B89;&#x5168;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/sec-check/imgSecCheck.html">imgSecCheck</a></td>
+<td>&#x6821;&#x9A8C;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x662F;&#x5426;&#x542B;&#x6709;&#x8FDD;&#x6CD5;&#x8FDD;&#x89C4;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><a href="open-api/sec-check/msgSecCheck.html">msgSecCheck</a></td>
+<td>&#x68C0;&#x67E5;&#x4E00;&#x6BB5;&#x6587;&#x672C;&#x662F;&#x5426;&#x542B;&#x6709;&#x8FDD;&#x6CD5;&#x8FDD;&#x89C4;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6A21;&#x677F;&#x6D88;&#x606F;">&#x6A21;&#x677F;&#x6D88;&#x606F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="open-api/template-message/addTemplate.html">addTemplate</a></td>
+<td>&#x7EC4;&#x5408;&#x6A21;&#x677F;&#x5E76;&#x6DFB;&#x52A0;&#x81F3;&#x5E10;&#x53F7;&#x4E0B;&#x7684;&#x4E2A;&#x4EBA;&#x6A21;&#x677F;&#x5E93;</td>
+</tr>
+<tr>
+<td><a href="open-api/template-message/deleteTemplate.html">deleteTemplate</a></td>
+<td>&#x5220;&#x9664;&#x5E10;&#x53F7;&#x4E0B;&#x7684;&#x67D0;&#x4E2A;&#x6A21;&#x677F;</td>
+</tr>
+<tr>
+<td><a href="open-api/template-message/getTemplateLibraryById.html">getTemplateLibraryById</a></td>
+<td>&#x83B7;&#x53D6;&#x6A21;&#x677F;&#x5E93;&#x67D0;&#x4E2A;&#x6A21;&#x677F;&#x6807;&#x9898;&#x4E0B;&#x5173;&#x952E;&#x8BCD;&#x5E93;</td>
+</tr>
+<tr>
+<td><a href="open-api/template-message/getTemplateLibraryList.html">getTemplateLibraryList</a></td>
+<td>&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x5E93;&#x6807;&#x9898;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td><a href="open-api/template-message/getTemplateList.html">getTemplateList</a></td>
+<td>&#x83B7;&#x53D6;&#x5E10;&#x53F7;&#x4E0B;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6A21;&#x677F;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td><a href="open-api/template-message/sendTemplateMessage.html">sendTemplateMessage</a></td>
+<td>&#x53D1;&#x9001;&#x6A21;&#x677F;&#x6D88;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x66F4;&#x65B0;">&#x66F4;&#x65B0;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="update/wx.getUpdateManager.html">wx.getUpdateManager</a></td>
+<td>&#x83B7;&#x53D6;<strong>&#x5168;&#x5C40;&#x552F;&#x4E00;</strong>&#x7684;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x5C0F;&#x7A0B;&#x5E8F;&#x66F4;&#x65B0;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="updatemanager">UpdateManager</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="update/UpdateManager.onCheckForUpdate.html">UpdateManager.onCheckForUpdate</a></td>
+<td>&#x76D1;&#x542C;&#x5411;&#x5FAE;&#x4FE1;&#x540E;&#x53F0;&#x8BF7;&#x6C42;&#x68C0;&#x67E5;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="update/UpdateManager.onUpdateReady.html">UpdateManager.onUpdateReady</a></td>
+<td>&#x76D1;&#x542C;&#x5C0F;&#x7A0B;&#x5E8F;&#x6709;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="update/UpdateManager.onUpdateFailed.html">UpdateManager.onUpdateFailed</a></td>
+<td>&#x76D1;&#x542C;&#x5C0F;&#x7A0B;&#x5E8F;&#x66F4;&#x65B0;&#x5931;&#x8D25;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="update/UpdateManager.applyUpdate.html">UpdateManager.applyUpdate</a></td>
+<td>&#x5F3A;&#x5236;&#x5C0F;&#x7A0B;&#x5E8F;&#x91CD;&#x542F;&#x5E76;&#x4F7F;&#x7528;&#x65B0;&#x7248;&#x672C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="worker">Worker</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="worker/wx.createWorker.html">wx.createWorker</a></td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <a href="../framework/workers.html">Worker &#x7EBF;&#x7A0B;</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="worker-2">Worker</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="worker/Worker.postMessage.html">Worker.postMessage</a></td>
+<td>&#x5411;&#x4E3B;&#x7EBF;&#x7A0B;/Worker &#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="worker/Worker.onMessage.html">Worker.onMessage</a></td>
+<td>&#x76D1;&#x542C;&#x4E3B;&#x7EBF;&#x7A0B;/Worker &#x7EBF;&#x7A0B;&#x5411;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td><a href="worker/Worker.terminate.html">Worker.terminate</a></td>
+<td>&#x7ED3;&#x675F;&#x5F53;&#x524D; Worker &#x7EBF;&#x7A0B;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6570;&#x636E;&#x4E0A;&#x62A5;">&#x6570;&#x636E;&#x4E0A;&#x62A5;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="report/wx.reportMonitor.html">wx.reportMonitor</a></td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x76D1;&#x63A7;&#x4E0A;&#x62A5;&#x63A5;&#x53E3;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="base/wx.canIUse.html">wx.canIUse</a></td>
+<td>&#x5224;&#x65AD;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;API&#xFF0C;&#x56DE;&#x8C03;&#xFF0C;&#x53C2;&#x6570;&#xFF0C;&#x7EC4;&#x4EF6;&#x7B49;&#x662F;&#x5426;&#x5728;&#x5F53;&#x524D;&#x7248;&#x672C;&#x53EF;&#x7528;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5B9A;&#x65F6;&#x5668;">&#x5B9A;&#x65F6;&#x5668;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="timer/setTimeout.html">setTimeout</a></td>
+<td>&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x5668;</td>
+</tr>
+<tr>
+<td><a href="timer/clearTimeout.html">clearTimeout</a></td>
+<td>&#x53D6;&#x6D88;&#x7531; setTimeout &#x8BBE;&#x7F6E;&#x7684;&#x5B9A;&#x65F6;&#x5668;</td>
+</tr>
+<tr>
+<td><a href="timer/setInterval.html">setInterval</a></td>
+<td>&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x5668;</td>
+</tr>
+<tr>
+<td><a href="timer/clearInterval.html">clearInterval</a></td>
+<td>&#x53D6;&#x6D88;&#x7531; setInterval &#x8BBE;&#x7F6E;&#x7684;&#x5B9A;&#x65F6;&#x5668;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5730;&#x56FE;">&#x5730;&#x56FE;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="map/wx.createMapContext.html">wx.createMapContext</a></td>
+<td>&#x521B;&#x5EFA; <code>map</code> &#x4E0A;&#x4E0B;&#x6587; <code>MapContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mapcontext">MapContext</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="map/MapContext.getScale.html">MapContext.getScale</a></td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x7684;&#x7F29;&#x653E;&#x7EA7;&#x522B;</td>
+</tr>
+<tr>
+<td><a href="map/MapContext.getRegion.html">MapContext.getRegion</a></td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x7684;&#x89C6;&#x91CE;&#x8303;&#x56F4;</td>
+</tr>
+<tr>
+<td><a href="map/MapContext.includePoints.html">MapContext.includePoints</a></td>
+<td>&#x7F29;&#x653E;&#x89C6;&#x91CE;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7ECF;&#x7EAC;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="map/MapContext.translateMarker.html">MapContext.translateMarker</a></td>
+<td>&#x5E73;&#x79FB;marker&#xFF0C;&#x5E26;&#x52A8;&#x753B;</td>
+</tr>
+<tr>
+<td><a href="map/MapContext.moveToLocation.html">MapContext.moveToLocation</a></td>
+<td>&#x5C06;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x5B9A;&#x4F4D;&#x70B9;</td>
+</tr>
+<tr>
+<td><a href="map/MapContext.getCenterLocation.html">MapContext.getCenterLocation</a></td>
+<td>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wxml">WXML</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="wxml/wx.createIntersectionObserver.html">wx.createIntersectionObserver</a></td>
+<td>&#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; IntersectionObserver &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</td>
+</tr>
+<tr>
+<td><a href="wxml/wx.createSelectorQuery.html">wx.createSelectorQuery</a></td>
+<td>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; SelectorQuery &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selectorquery">SelectorQuery</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="wxml/SelectorQuery.in.html">SelectorQuery.in</a></td>
+<td>&#x5C06;&#x9009;&#x62E9;&#x5668;&#x7684;&#x9009;&#x53D6;&#x8303;&#x56F4;&#x66F4;&#x6539;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6; <code>component</code> &#x5185;</td>
+</tr>
+<tr>
+<td><a href="wxml/SelectorQuery.exec.html">SelectorQuery.exec</a></td>
+<td>&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td><a href="wxml/SelectorQuery.selectViewport.html">SelectorQuery.selectViewport</a></td>
+<td>&#x9009;&#x62E9;&#x663E;&#x793A;&#x533A;&#x57DF;</td>
+</tr>
+<tr>
+<td><a href="wxml/SelectorQuery.selectAll.html">SelectorQuery.selectAll</a></td>
+<td>&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0B;&#x9009;&#x62E9;&#x5339;&#x914D;&#x9009;&#x62E9;&#x5668; selector &#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td><a href="wxml/SelectorQuery.select.html">SelectorQuery.select</a></td>
+<td>&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0B;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x9009;&#x62E9;&#x5668; <code>selector</code> &#x7684;&#x8282;&#x70B9;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nodesref">NodesRef</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="wxml/NodesRef.scrollOffset.html">NodesRef.scrollOffset</a></td>
+<td>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td><a href="wxml/NodesRef.boundingClientRect.html">NodesRef.boundingClientRect</a></td>
+<td>&#x6DFB;&#x52A0;&#x8282;&#x70B9;&#x7684;&#x5E03;&#x5C40;&#x4F4D;&#x7F6E;&#x7684;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td><a href="wxml/NodesRef.fields.html">NodesRef.fields</a></td>
+<td>&#x83B7;&#x53D6;&#x8282;&#x70B9;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intersectionobserver">IntersectionObserver</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="wxml/IntersectionObserver.disconnect.html">IntersectionObserver.disconnect</a></td>
+<td>&#x505C;&#x6B62;&#x76D1;&#x542C;</td>
+</tr>
+<tr>
+<td><a href="wxml/IntersectionObserver.observe.html">IntersectionObserver.observe</a></td>
+<td>&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E76;&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x76F8;&#x4EA4;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x60C5;&#x51B5;</td>
+</tr>
+<tr>
+<td><a href="wxml/IntersectionObserver.relativeToViewport.html">IntersectionObserver.relativeToViewport</a></td>
+<td>&#x6307;&#x5B9A;&#x9875;&#x9762;&#x663E;&#x793A;&#x533A;&#x57DF;&#x4F5C;&#x4E3A;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x4E4B;&#x4E00;</td>
+</tr>
+<tr>
+<td><a href="wxml/IntersectionObserver.relativeTo.html">IntersectionObserver.relativeTo</a></td>
+<td>&#x4F7F;&#x7528;&#x9009;&#x62E9;&#x5668;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x4F5C;&#x4E3A;&#x53C2;&#x7167;&#x533A;&#x57DF;&#x4E4B;&#x4E00;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x753B;&#x5E03;">&#x753B;&#x5E03;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="canvas/wx.canvasPutImageData.html">wx.canvasPutImageData</a></td>
+<td>&#x5C06;&#x50CF;&#x7D20;&#x6570;&#x636E;&#x7ED8;&#x5236;&#x5230;&#x753B;&#x5E03;</td>
+</tr>
+<tr>
+<td><a href="canvas/wx.canvasToTempFilePath.html">wx.canvasToTempFilePath</a></td>
+<td>&#x628A;&#x5F53;&#x524D;&#x753B;&#x5E03;&#x6307;&#x5B9A;&#x533A;&#x57DF;&#x7684;&#x5185;&#x5BB9;&#x5BFC;&#x51FA;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x56FE;&#x7247;</td>
+</tr>
+<tr>
+<td><a href="canvas/wx.createCanvasContext.html">wx.createCanvasContext</a></td>
+<td>&#x521B;&#x5EFA; canvas &#x7684;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587; <code>CanvasContext</code> &#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td><a href="canvas/wx.canvasGetImageData.html">wx.canvasGetImageData</a></td>
+<td>&#x83B7;&#x53D6; canvas &#x533A;&#x57DF;&#x9690;&#x542B;&#x7684;&#x50CF;&#x7D20;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td><a href="canvas/Color.html">Color</a></td>
+<td>&#x989C;&#x8272;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="canvasgradient">CanvasGradient</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="canvas/CanvasGradient.addColorStop.html">CanvasGradient.addColorStop</a></td>
+<td>&#x6DFB;&#x52A0;&#x989C;&#x8272;&#x7684;&#x6E10;&#x53D8;&#x70B9;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="canvascontext">CanvasContext</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="canvas/CanvasContext.setTextBaseline.html">CanvasContext.setTextBaseline</a></td>
+<td>&#x8BBE;&#x7F6E;&#x6587;&#x5B57;&#x7684;&#x7AD6;&#x76F4;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setTextAlign.html">CanvasContext.setTextAlign</a></td>
+<td>&#x8BBE;&#x7F6E;&#x6587;&#x5B57;&#x7684;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setFontSize.html">CanvasContext.setFontSize</a></td>
+<td>&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x7684;&#x5B57;&#x53F7;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.fillText.html">CanvasContext.fillText</a></td>
+<td>&#x5728;&#x753B;&#x5E03;&#x4E0A;&#x7ED8;&#x5236;&#x88AB;&#x586B;&#x5145;&#x7684;&#x6587;&#x672C;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setMiterLimit.html">CanvasContext.setMiterLimit</a></td>
+<td>&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x659C;&#x63A5;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setLineDash.html">CanvasContext.setLineDash</a></td>
+<td>&#x8BBE;&#x7F6E;&#x865A;&#x7EBF;&#x6837;&#x5F0F;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setLineCap.html">CanvasContext.setLineCap</a></td>
+<td>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x7AEF;&#x70B9;&#x6837;&#x5F0F;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setLineJoin.html">CanvasContext.setLineJoin</a></td>
+<td>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x4EA4;&#x70B9;&#x6837;&#x5F0F;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setLineWidth.html">CanvasContext.setLineWidth</a></td>
+<td>&#x8BBE;&#x7F6E;&#x7EBF;&#x6761;&#x7684;&#x5BBD;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setGlobalAlpha.html">CanvasContext.setGlobalAlpha</a></td>
+<td>&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x753B;&#x7B14;&#x900F;&#x660E;&#x5EA6;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setShadow.html">CanvasContext.setShadow</a></td>
+<td>&#x8BBE;&#x5B9A;&#x9634;&#x5F71;&#x6837;&#x5F0F;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setStrokeStyle.html">CanvasContext.setStrokeStyle</a></td>
+<td>&#x8BBE;&#x7F6E;&#x63CF;&#x8FB9;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setFillStyle.html">CanvasContext.setFillStyle</a></td>
+<td>&#x8BBE;&#x7F6E;&#x586B;&#x5145;&#x8272;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.setTransform.html">CanvasContext.setTransform</a></td>
+<td>&#x4F7F;&#x7528;&#x77E9;&#x9635;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#xFF08;&#x8986;&#x76D6;&#xFF09;&#x5F53;&#x524D;&#x53D8;&#x6362;&#x7684;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.transform.html">CanvasContext.transform</a></td>
+<td>&#x4F7F;&#x7528;&#x77E9;&#x9635;&#x591A;&#x6B21;&#x53E0;&#x52A0;&#x5F53;&#x524D;&#x53D8;&#x6362;&#x7684;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.strokeText.html">CanvasContext.strokeText</a></td>
+<td>&#x7ED9;&#x5B9A;&#x7684; (x, y) &#x4F4D;&#x7F6E;&#x7ED8;&#x5236;&#x6587;&#x672C;&#x63CF;&#x8FB9;&#x7684;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.drawImage.html">CanvasContext.drawImage</a></td>
+<td>&#x7ED8;&#x5236;&#x56FE;&#x50CF;&#x5230;&#x753B;&#x5E03;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.translate.html">CanvasContext.translate</a></td>
+<td>&#x5BF9;&#x5F53;&#x524D;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x539F;&#x70B9; (0, 0) &#x8FDB;&#x884C;&#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.rotate.html">CanvasContext.rotate</a></td>
+<td>&#x4EE5;&#x539F;&#x70B9;&#x4E3A;&#x4E2D;&#x5FC3;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x5F53;&#x524D;&#x5750;&#x6807;&#x8F74;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.scale.html">CanvasContext.scale</a></td>
+<td>&#x5728;&#x8C03;&#x7528;&#x540E;&#xFF0C;&#x4E4B;&#x540E;&#x521B;&#x5EFA;&#x7684;&#x8DEF;&#x5F84;&#x5176;&#x6A2A;&#x7EB5;&#x5750;&#x6807;&#x4F1A;&#x88AB;&#x7F29;&#x653E;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.closePath.html">CanvasContext.closePath</a></td>
+<td>&#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.stroke.html">CanvasContext.stroke</a></td>
+<td>&#x753B;&#x51FA;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x7684;&#x8FB9;&#x6846;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.fill.html">CanvasContext.fill</a></td>
+<td>&#x5BF9;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x586B;&#x5145;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.clearRect.html">CanvasContext.clearRect</a></td>
+<td>&#x6E05;&#x9664;&#x753B;&#x5E03;&#x4E0A;&#x5728;&#x8BE5;&#x77E9;&#x5F62;&#x533A;&#x57DF;&#x5185;&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.strokeRect.html">CanvasContext.strokeRect</a></td>
+<td>&#x753B;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;(&#x975E;&#x586B;&#x5145;)</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.fillRect.html">CanvasContext.fillRect</a></td>
+<td>&#x586B;&#x5145;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.clip.html">CanvasContext.clip</a></td>
+<td>&#x4ECE;&#x539F;&#x59CB;&#x753B;&#x5E03;&#x4E2D;&#x526A;&#x5207;&#x4EFB;&#x610F;&#x5F62;&#x72B6;&#x548C;&#x5C3A;&#x5BF8;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.arcTo.html">CanvasContext.arcTo</a></td>
+<td>&#x6839;&#x636E;&#x63A7;&#x5236;&#x70B9;&#x548C;&#x534A;&#x5F84;&#x7ED8;&#x5236;&#x5706;&#x5F27;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.rect.html">CanvasContext.rect</a></td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.arc.html">CanvasContext.arc</a></td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x6761;&#x5F27;&#x7EBF;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.bezierCurveTo.html">CanvasContext.bezierCurveTo</a></td>
+<td>&#x521B;&#x5EFA;&#x4E09;&#x6B21;&#x65B9;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.quadraticCurveTo.html">CanvasContext.quadraticCurveTo</a></td>
+<td>&#x521B;&#x5EFA;&#x4E8C;&#x6B21;&#x8D1D;&#x585E;&#x5C14;&#x66F2;&#x7EBF;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.lineTo.html">CanvasContext.lineTo</a></td>
+<td>&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x6761;&#x4ECE;&#x4E0A;&#x6B21;&#x6307;&#x5B9A;&#x70B9;&#x5230;&#x76EE;&#x6807;&#x70B9;&#x7684;&#x7EBF;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.moveTo.html">CanvasContext.moveTo</a></td>
+<td>&#x628A;&#x8DEF;&#x5F84;&#x79FB;&#x52A8;&#x5230;&#x753B;&#x5E03;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x70B9;&#xFF0C;&#x4E0D;&#x521B;&#x5EFA;&#x7EBF;&#x6761;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.beginPath.html">CanvasContext.beginPath</a></td>
+<td>&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.restore.html">CanvasContext.restore</a></td>
+<td>&#x6062;&#x590D;&#x4E4B;&#x524D;&#x4FDD;&#x5B58;&#x7684;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.save.html">CanvasContext.save</a></td>
+<td>&#x4FDD;&#x5B58;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.measureText.html">CanvasContext.measureText</a></td>
+<td>&#x6D4B;&#x91CF;&#x6587;&#x672C;&#x5C3A;&#x5BF8;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.createPattern.html">CanvasContext.createPattern</a></td>
+<td>&#x5BF9;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x521B;&#x5EFA;&#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x65B9;&#x5411;&#x4E0A;&#x91CD;&#x590D;&#x5143;&#x56FE;&#x50CF;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.createCircularGradient.html">CanvasContext.createCircularGradient</a></td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5706;&#x5F62;&#x7684;&#x6E10;&#x53D8;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.createLinearGradient.html">CanvasContext.createLinearGradient</a></td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x7684;&#x6E10;&#x53D8;&#x989C;&#x8272;</td>
+</tr>
+<tr>
+<td><a href="canvas/CanvasContext.draw.html">CanvasContext.draw</a></td>
+<td>&#x5C06;&#x4E4B;&#x524D;&#x5728;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x63CF;&#x8FF0;&#xFF08;&#x8DEF;&#x5F84;&#x3001;&#x53D8;&#x5F62;&#x3001;&#x6837;&#x5F0F;&#xFF09;&#x753B;&#x5230; canvas &#x4E2D;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x7CFB;&#x7EDF;">&#x7CFB;&#x7EDF;</h2>
+<h3 id="&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;">&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="system/system-info/wx.getSystemInfo.html">wx.getSystemInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td><a href="system/system-info/wx.getSystemInfoSync.html">wx.getSystemInfoSync</a></td>
+<td>wx.getSystemInfo &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;">&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="ext/wx.getExtConfig.html">wx.getExtConfig</a></td>
+<td>&#x83B7;&#x53D6;<a href="../devtools/ext.html">&#x7B2C;&#x4E09;&#x65B9;&#x5E73;&#x53F0;</a>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;&#x5B57;&#x6BB5;</td>
+</tr>
+<tr>
+<td><a href="ext/wx.getExtConfigSync.html">wx.getExtConfigSync</a></td>
+<td><a href="ext/wx.getExtConfig.html">wx.getExtConfig</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8F6C;&#x53D1;">&#x8F6C;&#x53D1;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="share/wx.updateShareMenu.html">wx.updateShareMenu</a></td>
+<td>&#x66F4;&#x65B0;&#x8F6C;&#x53D1;&#x5C5E;&#x6027;</td>
+</tr>
+<tr>
+<td><a href="share/wx.showShareMenu.html">wx.showShareMenu</a></td>
+<td>&#x663E;&#x793A;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x8F6C;&#x53D1;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td><a href="share/wx.hideShareMenu.html">wx.hideShareMenu</a></td>
+<td>&#x9690;&#x85CF;&#x8F6C;&#x53D1;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td><a href="share/wx.getShareInfo.html">wx.getShareInfo</a></td>
+<td>&#x83B7;&#x53D6;&#x8F6C;&#x53D1;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8DEF;&#x7531;">&#x8DEF;&#x7531;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="route/wx.navigateBack.html">wx.navigateBack</a></td>
+<td>&#x5173;&#x95ED;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x9875;&#x9762;&#x6216;&#x591A;&#x7EA7;&#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td><a href="route/wx.switchTab.html">wx.switchTab</a></td>
+<td>&#x8DF3;&#x8F6C;&#x5230; tabBar &#x9875;&#x9762;&#xFF0C;&#x5E76;&#x5173;&#x95ED;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x975E; tabBar &#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td><a href="route/wx.navigateTo.html">wx.navigateTo</a></td>
+<td>&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x5E94;&#x7528;&#x5185;&#x7684;&#x67D0;&#x4E2A;&#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td><a href="route/wx.reLaunch.html">wx.reLaunch</a></td>
+<td>&#x5173;&#x95ED;&#x6240;&#x6709;&#x9875;&#x9762;&#xFF0C;&#x6253;&#x5F00;&#x5230;&#x5E94;&#x7528;&#x5185;&#x7684;&#x67D0;&#x4E2A;&#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td><a href="route/wx.redirectTo.html">wx.redirectTo</a></td>
+<td>&#x5173;&#x95ED;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x5E94;&#x7528;&#x5185;&#x7684;&#x67D0;&#x4E2A;&#x9875;&#x9762;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8C03;&#x8BD5;">&#x8C03;&#x8BD5;</h2>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="debug/wx.getLogManager.html">wx.getLogManager</a></td>
+<td>&#x83B7;&#x53D6;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;&#x5668;&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td><a href="debug/wx.setEnableDebug.html">wx.setEnableDebug</a></td>
+<td>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x6253;&#x5F00;&#x8C03;&#x8BD5;&#x5F00;&#x5173;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="console">console</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="debug/console.debug.html">console.debug</a></td>
+<td>&#x5411;&#x8C03;&#x8BD5;&#x9762;&#x677F;&#x4E2D;&#x6253;&#x5370; debug &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/console.log.html">console.log</a></td>
+<td>&#x5411;&#x8C03;&#x8BD5;&#x9762;&#x677F;&#x4E2D;&#x6253;&#x5370; log &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/console.info.html">console.info</a></td>
+<td>&#x5411;&#x8C03;&#x8BD5;&#x9762;&#x677F;&#x4E2D;&#x6253;&#x5370; info &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/console.warn.html">console.warn</a></td>
+<td>&#x5411;&#x8C03;&#x8BD5;&#x9762;&#x677F;&#x4E2D;&#x6253;&#x5370; warn &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/console.error.html">console.error</a></td>
+<td>&#x5411;&#x8C03;&#x8BD5;&#x9762;&#x677F;&#x4E2D;&#x6253;&#x5370; error &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/console.group.html">console.group</a></td>
+<td>&#x5728;&#x8C03;&#x8BD5;&#x9762;&#x677F;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5206;&#x7EC4;</td>
+</tr>
+<tr>
+<td><a href="debug/console.groupEnd.html">console.groupEnd</a></td>
+<td>&#x7ED3;&#x675F;&#x7531; <a href="debug/console.group.html">console.group</a> &#x521B;&#x5EFA;&#x7684;&#x5206;&#x7EC4;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logmanager">LogManager</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="debug/LogManager.warn.html">LogManager.warn</a></td>
+<td>&#x5199; warn &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/LogManager.log.html">LogManager.log</a></td>
+<td>&#x5199; log &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/LogManager.info.html">LogManager.info</a></td>
+<td>&#x5199; info &#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td><a href="debug/LogManager.debug.html">LogManager.debug</a></td>
+<td>&#x5199; debug &#x65E5;&#x5FD7;</td>
+</tr>
+</tbody>
+</table>
 
                             </section>      
                         </div>

@@ -21,6 +21,20 @@
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="string-key">string key</h5>
 <p>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x6307;&#x5B9A;&#x7684; key</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.removeStorage({
+  <span class="hljs-attr">key</span>: <span class="hljs-string">&apos;key&apos;</span>,
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.data)
+  } 
+})
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  wx.removeStorageSync(<span class="hljs-string">&apos;key&apos;</span>)
+} <span class="hljs-keyword">catch</span> (e) {
+  <span class="hljs-comment">// Do something when catch error</span>
+}
+</code></pre>
 
                             </section>      
                         </div>

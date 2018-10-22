@@ -105,6 +105,15 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.checkIsSupportSoterAuthentication({
+  success(res) {
+    <span class="hljs-comment">// res.supportMode = [] &#x4E0D;&#x5177;&#x5907;&#x4EFB;&#x4F55;&#x88AB;SOTER&#x652F;&#x6301;&#x7684;&#x751F;&#x7269;&#x8BC6;&#x522B;&#x65B9;&#x5F0F;</span>
+    <span class="hljs-comment">// res.supportMode = [&apos;fingerPrint&apos;] &#x53EA;&#x652F;&#x6301;&#x6307;&#x7EB9;&#x8BC6;&#x522B;</span>
+    <span class="hljs-comment">// res.supportMode = [&apos;fingerPrint&apos;, &apos;facial&apos;] &#x652F;&#x6301;&#x6307;&#x7EB9;&#x8BC6;&#x522B;&#x548C;&#x4EBA;&#x8138;&#x8BC6;&#x522B;</span>
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>

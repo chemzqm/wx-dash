@@ -40,7 +40,7 @@
 <td>string</td>
 <td></td>
 <td>&#x662F;</td>
-<td>&#x9700;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x5E94;&#x7528;&#x5185;&#x9875;&#x9762;&#x8DEF;&#x5F84; , &#x8DEF;&#x5F84;&#x540E;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;&#x3002;&#x53C2;&#x6570;&#x4E0E;&#x8DEF;&#x5F84;&#x4E4B;&#x95F4;&#x4F7F;&#x7528;?&#x5206;&#x9694;&#xFF0C;&#x53C2;&#x6570;&#x952E;&#x4E0E;&#x53C2;&#x6570;&#x503C;&#x7528;=&#x76F8;&#x8FDE;&#xFF0C;&#x4E0D;&#x540C;&#x53C2;&#x6570;&#x7528;&amp;&#x5206;&#x9694;&#xFF1B;&#x5982; &apos;path?key=value&amp;key2=value2&apos;&#xFF0C;&#x5982;&#x679C;&#x8DF3;&#x8F6C;&#x7684;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#x662F; tabBar &#x9875;&#x9762;&#x5219;&#x4E0D;&#x80FD;&#x5E26;&#x53C2;&#x6570;</td>
+<td>&#x9700;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x5E94;&#x7528;&#x5185;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#xFF0C;&#x8DEF;&#x5F84;&#x540E;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;&#x3002;&#x53C2;&#x6570;&#x4E0E;&#x8DEF;&#x5F84;&#x4E4B;&#x95F4;&#x4F7F;&#x7528;?&#x5206;&#x9694;&#xFF0C;&#x53C2;&#x6570;&#x952E;&#x4E0E;&#x53C2;&#x6570;&#x503C;&#x7528;=&#x76F8;&#x8FDE;&#xFF0C;&#x4E0D;&#x540C;&#x53C2;&#x6570;&#x7528;&amp;&#x5206;&#x9694;&#xFF1B;&#x5982; &apos;path?key=value&amp;key2=value2&apos;&#xFF0C;&#x5982;&#x679C;&#x8DF3;&#x8F6C;&#x7684;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#x662F; tabBar &#x9875;&#x9762;&#x5219;&#x4E0D;&#x80FD;&#x5E26;&#x53C2;&#x6570;</td>
 <td></td>
 </tr>
 <tr>
@@ -69,6 +69,18 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.reLaunch({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test?id=1&apos;</span>
+})
+</code></pre>
+<pre><code class="language-html">// test
+Page({
+  onLoad (option) {
+    console.log(option.query)
+  }
+})
+</code></pre>
 
                             </section>      
                         </div>
