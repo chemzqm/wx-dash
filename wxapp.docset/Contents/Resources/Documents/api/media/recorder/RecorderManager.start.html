@@ -262,34 +262,6 @@
 </tr>
 </tbody>
 </table>
-<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> recorderManager = wx.getRecorderManager()
-
-recorderManager.onStart(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder start&apos;</span>)
-})
-recorderManager.onPause(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder pause&apos;</span>)
-})
-recorderManager.onStop(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder stop&apos;</span>, res)
-  <span class="hljs-keyword">const</span> { tempFilePath } = res
-})
-recorderManager.onFrameRecorded(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
-  <span class="hljs-keyword">const</span> { frameBuffer } = res
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;frameBuffer.byteLength&apos;</span>, frameBuffer.byteLength)
-})
-
-<span class="hljs-keyword">const</span> options = {
-  <span class="hljs-attr">duration</span>: <span class="hljs-number">10000</span>,
-  <span class="hljs-attr">sampleRate</span>: <span class="hljs-number">44100</span>,
-  <span class="hljs-attr">numberOfChannels</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">encodeBitRate</span>: <span class="hljs-number">192000</span>,
-  <span class="hljs-attr">format</span>: <span class="hljs-string">&apos;aac&apos;</span>,
-  <span class="hljs-attr">frameSize</span>: <span class="hljs-number">50</span>
-}
-</code></pre>
-<p>recorderManager.start(options)</p>
 
                             </section>      
                         </div>
