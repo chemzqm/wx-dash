@@ -125,8 +125,8 @@
 <td>pageLifetimes</td>
 <td>Object</td>
 <td>&#x5426;</td>
-<td>&#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x58F0;&#x660E;&#x5BF9;&#x8C61;&#xFF0C;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x9875;&#x9762;&#x7684;<code>show</code>&#x548C;<code>hide</code>&#x4E24;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;</td>
-<td><a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.3</a></td>
+<td>&#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x58F0;&#x660E;&#x5BF9;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x9875;&#x9762;&#x7684; <code>show</code> &#x3001; <code>hide</code> &#x3001; <code>resize</code> &#x751F;&#x547D;&#x5468;&#x671F;</td>
+<td><a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.3</a> &#xFF1B; <code>resize</code> &#x4E3A; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
 </tr>
 <tr>
 <td>definitionFilter</td>
@@ -223,6 +223,11 @@
 <td>String <code>relationKey</code></td>
 <td>&#x83B7;&#x53D6;&#x8FD9;&#x4E2A;&#x5173;&#x7CFB;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x6240;&#x6709;&#x5173;&#x8054;&#x8282;&#x70B9;&#xFF0C;&#x53C2;&#x89C1; <a href="relations.html">&#x7EC4;&#x4EF6;&#x95F4;&#x5173;&#x7CFB;</a></td>
 </tr>
+<tr>
+<td>groupSetData</td>
+<td>Function <code>callback</code></td>
+<td>&#x7ACB;&#x523B;&#x6267;&#x884C; <code>callback</code> &#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x591A;&#x4E2A; <code>setData</code> &#x4E4B;&#x95F4;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x754C;&#x9762;&#x7ED8;&#x5236;&#xFF08;&#x53EA;&#x6709;&#x67D0;&#x4E9B;&#x7279;&#x6B8A;&#x573A;&#x666F;&#x4E2D;&#x9700;&#x8981;&#xFF0C;&#x5982;&#x7528;&#x4E8E;&#x5728;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x540C;&#x65F6; setData &#x65F6;&#x8FDB;&#x884C;&#x754C;&#x9762;&#x7ED8;&#x5236;&#x540C;&#x6B65;&#xFF09;</td>
+</tr>
 </tbody>
 </table>
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
@@ -258,6 +263,8 @@
   <span class="hljs-attr">pageLifetimes</span>: {
     <span class="hljs-comment">// &#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</span>
     show: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
+    <span class="hljs-attr">hide</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
+    <span class="hljs-attr">resize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
   },
 
   <span class="hljs-attr">methods</span>: {

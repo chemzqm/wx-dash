@@ -1,6 +1,6 @@
 {
   "name": "wxdash",
-  "version": "1.0.95",
+  "version": "1.0.96",
   "description": "Create dash docset for wechat app",
   "scripts": {
     "build": "node index.js",

@@ -53,8 +53,11 @@
 ./plugin/functional-pages.html|插件 插件功能页
 ./plugin/functional-pages/user-info.html|插件 插件功能页 用户信息功能页
 ./plugin/functional-pages/request-payment.html|插件 插件功能页 支付功能页
+./plugin/functional-pages/choose-address.html|插件 插件功能页 收货地址功能页
 ./ability/network.html|基础能力
 ./ability/network.html|基础能力 网络
+./ability/network.html|基础能力 网络 使用说明
+./ability/mDNS.html|基础能力 网络 局域网通信
 ./ability/storage.html|基础能力 存储
 ./ability/file-system.html|基础能力 文件系统
 ./ability/canvas.html|基础能力 画布
@@ -76,6 +79,8 @@
 ./open-ability/getPhoneNumber.html|开放能力 用户信息 获取手机号
 ./open-ability/bio-auth.html|开放能力 用户信息 生物认证
 ./open-ability/share.html|开放能力 转发
+./open-ability/share.html|开放能力 转发 转发
+./open-ability/share/updatable-message.html|开放能力 转发 动态消息
 ./open-ability/launchApp.html|开放能力 打开App
 ./open-ability/template-message.html|开放能力 消息
 ./open-ability/template-message.html|开放能力 消息 模板消息
@@ -107,7 +112,7 @@
 ./client-lib/client.html|基础库 与客户端版本对应关系
 ./compatibility.html|基础库 旧版本兼容
 ./release.html|基础库 更新日志
-./release.html|基础库 更新日志 v2.x版本
+./release/v2.html|基础库 更新日志 v2.x版本
 ./release/v1.html|基础库 更新日志 v1.x版本
 ./release/v0.html|基础库 更新日志 v0.x版本
 undefined|undefined

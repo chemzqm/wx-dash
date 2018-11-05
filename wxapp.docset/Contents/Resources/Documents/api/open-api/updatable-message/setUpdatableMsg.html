@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>setUpdatableMsg</title>
+  <link rel="stylesheet" href="../../../../style.css" />
+  <link rel="stylesheet" href="../../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                                
+<h3 id="setupdatablemsg">setUpdatableMsg</h3>
+<p>&#x4FEE;&#x6539;&#x88AB;&#x5206;&#x6790;&#x7684;&#x52A8;&#x6001;&#x6D88;&#x606F;&#x3002;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/cgi-bin/message/wxopen/updatablemsg/send?access_token=ACCESS_TOKEN
+</code></pre>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-accesstoken">string access_token</h5>
+<p>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;&#x3002;</p>
+<h5 id="string-activityid">string activity_id</h5>
+<p>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x7684; ID&#x3002;</p>
+<h5 id="number-targetstate">number target_state</h5>
+<p>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x72B6;&#x6001;</p>
+<h5 id="object-templateinfo">Object template_info</h5>
+<p>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x677F;&#x4FE1;&#x606F;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parameter_list</td>
+<td>Array.&lt;Object&gt;</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6A21;&#x677F;&#x4E2D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x53C2;&#x6570;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>parameter_list &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parameter_name</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x4FEE;&#x6539;&#x7684;&#x53C2;&#x6570;&#x540D;</td>
+<td></td>
+</tr>
+<tr>
+<td>parameter_value</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x4FEE;&#x6539;&#x540E;&#x7684;&#x53C2;&#x6570;&#x503C;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>errcode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>&#x8BF7;&#x6C42;&#x6210;&#x529F;&#x3002;</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>&#x7CFB;&#x7EDF;&#x7E41;&#x5FD9;&#xFF0C;&#x6B64;&#x65F6;&#x8BF7;&#x5F00;&#x53D1;&#x8005;&#x7A0D;&#x5019;&#x518D;&#x8BD5;&#x3002;&#xB7;&#xB7;</td>
+</tr>
+<tr>
+<td>42001</td>
+<td>&#x7531;&#x4E8E;access_token&#x8FC7;&#x671F;&#x800C;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+<tr>
+<td>44002</td>
+<td>&#x7531;&#x4E8E;post&#x6570;&#x636E;&#x4E3A;&#x7A7A;&#x800C;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+<tr>
+<td>47001</td>
+<td>&#x7531;&#x4E8E;post&#x6570;&#x636E;&#x4E2D;&#x53C2;&#x6570;&#x7F3A;&#x5931;&#x800C;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+<tr>
+<td>47501</td>
+<td>&#x7531;&#x4E8E;&#x53C2;&#x6570;activity_id&#x9519;&#x8BEF;&#x800C;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+<tr>
+<td>47502</td>
+<td>&#x7531;&#x4E8E;&#x53C2;&#x6570;target_state&#x9519;&#x8BEF;&#x800C;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+<tr>
+<td>47503</td>
+<td>&#x7531;&#x4E8E;&#x53C2;&#x6570;version_type&#x9519;&#x8BEF;&#x800C;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+<tr>
+<td>47504</td>
+<td>&#x7531;&#x4E8E;activity_id&#x8FC7;&#x671F;&#x800C;&#x83B7;&#x53D6;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="curl-&#x8C03;&#x7528;&#x793A;&#x4F8B;">curl &#x8C03;&#x7528;&#x793A;&#x4F8B;</h4>
+<pre><code>curl -d &apos;{ &quot;activity_id&quot;: &quot;966_NGiqKR2V8nkfpBuZt1oxm8qLv092NAwG5W0-F4zo1j0qyKOYH2wTxVeFOQ8~n4XstT0DQLwxBE33BlwX&quot;,  &quot;target_state&quot;: 0, &quot;template_info&quot;: {	&quot;parameter_list&quot;: [ {&quot;name&quot;:&quot;member_count&quot;, &quot;value&quot; : &quot;2&quot;}, { &quot;name&quot;:&quot;room_limit&quot;, &quot;value&quot;  : &quot;5&quot; } ] } }&apos; \
+&apos;https://api.weixin.qq.com/cgi-bin/message/wxopen/updatablemsg/send?access_token=ACCESS_TOKEN&apos;
+</code></pre>
+
+                            </section>      
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

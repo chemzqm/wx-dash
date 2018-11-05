@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>wx.onCompassChange</title>
+  <title>罗盘</title>
   <link rel="stylesheet" href="../../../../style.css" />
   <link rel="stylesheet" href="../../../../website.css" />
   <style type="text/css">
@@ -16,7 +16,8 @@
                     <div id="book-search-results">
                         <div class="search-noresults">
                             <section class="normal markdown-section">
-                                <h3 id="wxoncompasschangefunction-callback">wx.onCompassChange(function callback)</h3>
+                                
+<h3 id="wxoncompasschangefunction-callback">wx.onCompassChange(function callback)</h3>
 <p>&#x76D1;&#x542C;&#x7F57;&#x76D8;&#x6570;&#x636E;&#x53D8;&#x5316;&#x4E8B;&#x4EF6;&#x3002;&#x9891;&#x7387;&#xFF1A;5 &#x6B21;/&#x79D2;&#xFF0C;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x5F00;&#x59CB;&#x76D1;&#x542C;&#xFF0C;&#x53EF;&#x4F7F;&#x7528; wx.stopCompass &#x505C;&#x6B62;&#x76D1;&#x542C;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="function-callback">function callback</h5>
@@ -39,13 +40,59 @@
 <td>&#x9762;&#x5BF9;&#x7684;&#x65B9;&#x5411;&#x5EA6;&#x6570;</td>
 <td></td>
 </tr>
+<tr>
+<td>accuracy</td>
+<td>number/string</td>
+<td>&#x7CBE;&#x5EA6;</td>
+<td>&gt;= <a href="../../../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
+</tr>
 </tbody>
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-js">wx.onCompassChange(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(res.direction)
+<pre><code class="language-javascript">wx.onCompassChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(res.direction)
 })
 </code></pre>
+<h4 id="accuracy-&#x5728;-iosandroid-&#x7684;&#x5DEE;&#x5F02;">accuracy &#x5728; iOS/Android &#x7684;&#x5DEE;&#x5F02;</h4>
+<p>&#x7531;&#x4E8E;&#x5E73;&#x53F0;&#x5DEE;&#x5F02;&#xFF0C;accuracy &#x5728; iOS/Android &#x7684;&#x503C;&#x4E0D;&#x540C;&#x3002;</p>
+<ul>
+<li>iOS&#xFF1A;accuracy &#x662F;&#x4E00;&#x4E2A; number &#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x76F8;&#x5BF9;&#x4E8E;&#x78C1;&#x5317;&#x6781;&#x7684;&#x504F;&#x5DEE;&#x3002;0 &#x8868;&#x793A;&#x8BBE;&#x5907;&#x6307;&#x5411;&#x78C1;&#x5317;&#xFF0C;90 &#x8868;&#x793A;&#x6307;&#x5411;&#x4E1C;&#xFF0C;180 &#x8868;&#x793A;&#x6307;&#x5411;&#x5357;&#xFF0C;&#x4F9D;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</li>
+<li>Android&#xFF1A;accuracy &#x662F;&#x4E00;&#x4E2A; string &#x7C7B;&#x578B;&#x7684;&#x679A;&#x4E3E;&#x503C;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>high</td>
+<td>&#x9AD8;&#x7CBE;&#x5EA6;</td>
+</tr>
+<tr>
+<td>medium</td>
+<td>&#x4E2D;&#x7B49;&#x7CBE;&#x5EA6;</td>
+</tr>
+<tr>
+<td>low</td>
+<td>&#x4F4E;&#x7CBE;&#x5EA6;</td>
+</tr>
+<tr>
+<td>no-contact</td>
+<td>&#x4E0D;&#x53EF;&#x4FE1;&#xFF0C;&#x4F20;&#x611F;&#x5668;&#x5931;&#x53BB;&#x8FDE;&#x63A5;</td>
+</tr>
+<tr>
+<td>unreliable</td>
+<td>&#x4E0D;&#x53EF;&#x4FE1;&#xFF0C;&#x539F;&#x56E0;&#x672A;&#x77E5;</td>
+</tr>
+<tr>
+<td>unknow ${value}</td>
+<td>&#x672A;&#x77E5;&#x7684;&#x7CBE;&#x5EA6;&#x679A;&#x4E3E;&#x503C;&#xFF0C;&#x5373;&#x8BE5; Android &#x7CFB;&#x7EDF;&#x6B64;&#x65F6;&#x8FD4;&#x56DE;&#x7684;&#x8868;&#x793A;&#x7CBE;&#x5EA6;&#x7684; value &#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684;&#x7CBE;&#x5EA6;&#x679A;&#x4E3E;&#x503C;</td>
+</tr>
+</tbody>
+</table>
 
                             </section>      
                         </div>
