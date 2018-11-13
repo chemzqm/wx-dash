@@ -16,8 +16,7 @@
                     <div id="book-search-results">
                         <div class="search-noresults">
                             <section class="normal markdown-section">
-                                
-<h3 id="wxopenlocationobject-object">wx.openLocation(Object object)</h3>
+                              <h3 id="wxopenlocationobject-object">wx.openLocation(Object object)</h3>
 <blockquote>
 <p>&#x8C03;&#x7528;&#x524D;&#x9700;&#x8981; <a href="../../framework/open-ability/authorize.html">&#x7528;&#x6237;&#x6388;&#x6743;</a> scope.userLocation</p>
 </blockquote>
@@ -104,20 +103,20 @@
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">wx.getLocation({
-  <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;gcj02&apos;</span>, <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;wx.openLocation&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</span>
-  success (res) {
-    <span class="hljs-keyword">const</span> latitude = res.latitude
-    <span class="hljs-keyword">const</span> longitude = res.longitude
-    wx.openLocation({
-      latitude,
-      longitude,
-      <span class="hljs-attr">scale</span>: <span class="hljs-number">28</span>
-    })
-  }
+ <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;gcj02&apos;</span>, <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;wx.openLocation&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</span>
+ success (res) {
+   <span class="hljs-keyword">const</span> latitude = res.latitude
+   <span class="hljs-keyword">const</span> longitude = res.longitude
+   wx.openLocation({
+     latitude,
+     longitude,
+     <span class="hljs-attr">scale</span>: <span class="hljs-number">18</span>
+   })
+ }
 })
 </code></pre>
 
-                            </section>      
+                            </section>
                         </div>
                         
                     </div>
