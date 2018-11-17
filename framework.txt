@@ -110,7 +110,7 @@
 ./client-lib/index.html|基础库
 ./client-lib/version.html|基础库 版本分布
 ./client-lib/client.html|基础库 与客户端版本对应关系
-./compatibility.html|基础库 旧版本兼容
+./compatibility.html|基础库 低版本兼容
 ./release.html|基础库 更新日志
 ./release/v2.html|基础库 更新日志 v2.x版本
 ./release/v1.html|基础库 更新日志 v1.x版本
