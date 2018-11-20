@@ -17,19 +17,60 @@
                         <div class="search-noresults">
                             <section class="normal markdown-section">
                               <h3 id="code2session">code2Session</h3>
+<blockquote>
+<p>&#x672C;&#x63A5;&#x53E3;&#x5E94;&#x5728;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;</p>
+</blockquote>
 <p>&#x767B;&#x5F55;&#x51ED;&#x8BC1;&#x6821;&#x9A8C;&#x3002;&#x901A;&#x8FC7; <a href="wx.login.html">wx.login()</a> &#x63A5;&#x53E3;&#x83B7;&#x5F97;&#x4E34;&#x65F6;&#x767B;&#x5F55;&#x51ED;&#x8BC1; code &#x540E;&#x4F20;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x5B8C;&#x6210;&#x767B;&#x5F55;&#x6D41;&#x7A0B;&#x3002;&#x66F4;&#x591A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BE6;&#x89C1; <a href="../../../framework/open-ability/login.html">&#x5C0F;&#x7A0B;&#x5E8F;&#x767B;&#x5F55;</a>&#x3002;</p>
 <h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
 <pre><code>GET https://api.weixin.qq.com/sns/jscode2session?appid=APPID&amp;secret=SECRET&amp;js_code=JSCODE&amp;grant_type=authorization_code
 </code></pre>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-appid">string appid</h5>
-<p>&#x5C0F;&#x7A0B;&#x5E8F; appId</p>
-<h5 id="string-secret">string secret</h5>
-<p>&#x5C0F;&#x7A0B;&#x5E8F; appSecret</p>
-<h5 id="string-jscode">string js_code</h5>
-<p>&#x767B;&#x5F55;&#x65F6;&#x83B7;&#x53D6;&#x7684; code</p>
-<h5 id="string-granttype">string grant_type</h5>
-<p>&#x6388;&#x6743;&#x7C7B;&#x578B;&#xFF0C;&#x6B64;&#x5904;&#x53EA;&#x9700;&#x586B;&#x5199; authorization_code</p>
+<h4 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appid</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F; appId</td>
+<td></td>
+</tr>
+<tr>
+<td>secret</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F; appSecret</td>
+<td></td>
+</tr>
+<tr>
+<td>js_code</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x767B;&#x5F55;&#x65F6;&#x83B7;&#x53D6;&#x7684; code</td>
+<td></td>
+</tr>
+<tr>
+<td>grant_type</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6388;&#x6743;&#x7C7B;&#x578B;&#xFF0C;&#x6B64;&#x5904;&#x53EA;&#x9700;&#x586B;&#x5199; authorization_code</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
 <h5 id="object">Object</h5>
 <p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
@@ -39,7 +80,7 @@
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>

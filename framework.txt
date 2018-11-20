@@ -38,8 +38,9 @@
 ./view/resizable.html|视图层 响应显示区域变化
 ./custom-component/index.html|自定义组件
 ./custom-component/wxml-wxss.html|自定义组件 组件模板和样式
-./custom-component/component.html|自定义组件 Component构造器
+./custom-component/component.html|自定义组件 Component 构造器
 ./custom-component/events.html|自定义组件 组件事件
+./custom-component/lifetimes.html|自定义组件 组件生命周期
 ./custom-component/behaviors.html|自定义组件 behaviors
 ./custom-component/relations.html|自定义组件 组件间关系
 ./custom-component/generics.html|自定义组件 抽象节点

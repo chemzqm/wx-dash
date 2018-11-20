@@ -17,17 +17,60 @@
                         <div class="search-noresults">
                             <section class="normal markdown-section">
                               <h3 id="setupdatablemsg">setUpdatableMsg</h3>
+<blockquote>
+<p>&#x672C;&#x63A5;&#x53E3;&#x5E94;&#x5728;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;</p>
+</blockquote>
 <p>&#x4FEE;&#x6539;&#x88AB;&#x5206;&#x4EAB;&#x7684;&#x52A8;&#x6001;&#x6D88;&#x606F;&#x3002;&#x8BE6;&#x89C1;<a href="../../../framework/open-ability/share/updatable-message.html">&#x52A8;&#x6001;&#x6D88;&#x606F;</a>&#x3002;</p>
 <h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
 <pre><code>POST https://api.weixin.qq.com/cgi-bin/message/wxopen/updatablemsg/send?access_token=ACCESS_TOKEN
 </code></pre>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-accesstoken">string access_token</h5>
-<p><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></p>
-<h5 id="string-activityid">string activity_id</h5>
-<p>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x7684; ID&#xFF0C;&#x901A;&#x8FC7; <a href="createActivityId.html">createActivityId</a> &#x63A5;&#x53E3;&#x83B7;&#x53D6;</p>
-<h5 id="number-targetstate">number target_state</h5>
-<p>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x5177;&#x4F53;&#x542B;&#x4E49;&#x89C1;&#x540E;&#x6587;&#xFF09;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>activity_id</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x7684; ID&#xFF0C;&#x901A;&#x8FC7; <a href="createActivityId.html">createActivityId</a> &#x63A5;&#x53E3;&#x83B7;&#x53D6;</td>
+<td></td>
+</tr>
+<tr>
+<td>target_state</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x5177;&#x4F53;&#x542B;&#x4E49;&#x89C1;&#x540E;&#x6587;&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>template_info</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x677F;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>target_state &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
 <table>
 <thead>
@@ -47,17 +90,16 @@
 </tr>
 </tbody>
 </table>
-<h5 id="object-templateinfo">Object template_info</h5>
-<p>&#x52A8;&#x6001;&#x6D88;&#x606F;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x677F;&#x4FE1;&#x606F;</p>
+<p><strong>template_info &#x7684;&#x7ED3;&#x6784;</strong></p>
 <table>
 <thead>
 <tr>
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x5FC5;&#x586B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -78,9 +120,9 @@
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x662F;&#x5426;&#x5FC5;&#x586B;</th>
+<th>&#x5FC5;&#x586B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -138,7 +180,7 @@
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>

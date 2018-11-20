@@ -17,17 +17,52 @@
                         <div class="search-noresults">
                             <section class="normal markdown-section">
                               <h3 id="gettemplatelist">getTemplateList</h3>
+<blockquote>
+<p>&#x672C;&#x63A5;&#x53E3;&#x5E94;&#x5728;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;</p>
+</blockquote>
 <p>&#x83B7;&#x53D6;&#x5E10;&#x53F7;&#x4E0B;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6A21;&#x677F;&#x5217;&#x8868;</p>
 <h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
 <pre><code>POST https://api.weixin.qq.com/cgi-bin/wxopen/template/list?access_token=ACCESS_TOKEN
 </code></pre>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<h5 id="string-accesstoken">string access_token</h5>
-<p><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></p>
-<h5 id="number-offset">number offset</h5>
-<p>offset&#x548C;count&#x7528;&#x4E8E;&#x5206;&#x9875;&#xFF0C;&#x8868;&#x793A;&#x4ECE;offset&#x5F00;&#x59CB;&#xFF0C;&#x62C9;&#x53D6;count&#x6761;&#x8BB0;&#x5F55;&#xFF0C;offset&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;count&#x6700;&#x5927;&#x4E3A;20&#x3002;&#x6700;&#x540E;&#x4E00;&#x9875;&#x7684;list&#x957F;&#x5EA6;&#x53EF;&#x80FD;&#x5C0F;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;count</p>
-<h5 id="number-count">number count</h5>
-<p>offset&#x548C;count&#x7528;&#x4E8E;&#x5206;&#x9875;&#xFF0C;&#x8868;&#x793A;&#x4ECE;offset&#x5F00;&#x59CB;&#xFF0C;&#x62C9;&#x53D6;count&#x6761;&#x8BB0;&#x5F55;&#xFF0C;offset&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;count&#x6700;&#x5927;&#x4E3A;20&#x3002;&#x6700;&#x540E;&#x4E00;&#x9875;&#x7684;list&#x957F;&#x5EA6;&#x53EF;&#x80FD;&#x5C0F;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;count</p>
+<h4 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td><a href="../access-token/getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x7528;&#x4E8E;&#x5206;&#x9875;&#xFF0C;&#x8868;&#x793A;&#x4ECE;offset&#x5F00;&#x59CB;&#x3002;&#x4ECE; 0 &#x5F00;&#x59CB;&#x8BA1;&#x6570;&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>count</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x7528;&#x4E8E;&#x5206;&#x9875;&#xFF0C;&#x8868;&#x793A;&#x62C9;&#x53D6;count&#x6761;&#x8BB0;&#x5F55;&#x3002;&#x6700;&#x5927;&#x4E3A; 20&#x3002;&#x6700;&#x540E;&#x4E00;&#x9875;&#x7684;list&#x957F;&#x5EA6;&#x53EF;&#x80FD;&#x5C0F;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;count&#x3002;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
 <h5 id="object">Object</h5>
 <p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
@@ -37,7 +72,7 @@
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -68,7 +103,7 @@
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x652F;&#x6301;&#x7248;&#x672C;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>

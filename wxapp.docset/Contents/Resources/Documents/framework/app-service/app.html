@@ -90,100 +90,13 @@
 })
 </code></pre>
 <h4 id="onlaunchobject">onLaunch(Object)</h4>
-<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5168;&#x5C40;&#x53EA;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x5C0F;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5168;&#x5C40;&#x53EA;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x3002;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="../../api/app/wx.getLaunchOptionsSync.html">wx.getLaunchOptionsSync</a> &#x83B7;&#x53D6;&#x3002;</p>
 <p><strong>Object &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
-<table>
-<thead>
-<tr>
-<th>&#x5B57;&#x6BB5;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>path</td>
-<td>String</td>
-<td>&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84;</td>
-</tr>
-<tr>
-<td>query</td>
-<td>Object</td>
-<td>&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;query</td>
-</tr>
-<tr>
-<td>scene</td>
-<td>Number</td>
-<td>&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;<a href="scene.html">&#x573A;&#x666F;&#x503C;</a></td>
-</tr>
-<tr>
-<td>shareTicket</td>
-<td>String</td>
-<td>shareTicket&#xFF0C;&#x8BE6;&#x89C1; <a href="../open-ability/share.html#&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x8F6C;&#x53D1;&#x4FE1;&#x606F;">&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x8F6C;&#x53D1;&#x4FE1;&#x606F;</a></td>
-</tr>
-<tr>
-<td>referrerInfo</td>
-<td>Object</td>
-<td>&#x5F53;&#x573A;&#x666F;&#x4E3A;&#x7531;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x6216;&#x516C;&#x4F17;&#x53F7;&#x6216;App&#x6253;&#x5F00;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x6B64;&#x5B57;&#x6BB5;</td>
-</tr>
-<tr>
-<td>referrerInfo.appId</td>
-<td>String</td>
-<td>&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F;&#x6216;&#x516C;&#x4F17;&#x53F7;&#x6216;App&#x7684; appId&#xFF0C;&#x8BE6;&#x89C1;&#x4E0B;&#x65B9;&#x8BF4;&#x660E;</td>
-</tr>
-<tr>
-<td>referrerInfo.extraData</td>
-<td>Object</td>
-<td>&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#xFF0C;scene=1037&#x6216;1038&#x65F6;&#x652F;&#x6301;</td>
-</tr>
-</tbody>
-</table>
-<p>&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#x652F;&#x6301;&#x8FD4;&#x56DE; referrerInfo.appId&#xFF1A;</p>
-<table>
-<thead>
-<tr>
-<th>&#x573A;&#x666F;&#x503C;</th>
-<th>&#x573A;&#x666F;</th>
-<th>appId &#x4FE1;&#x606F;&#x542B;&#x4E49;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1020</td>
-<td>&#x516C;&#x4F17;&#x53F7; profile &#x9875;&#x76F8;&#x5173;&#x5C0F;&#x7A0B;&#x5E8F;&#x5217;&#x8868;</td>
-<td>&#x6765;&#x6E90;&#x516C;&#x4F17;&#x53F7; appId</td>
-</tr>
-<tr>
-<td>1035</td>
-<td>&#x516C;&#x4F17;&#x53F7;&#x81EA;&#x5B9A;&#x4E49;&#x83DC;&#x5355;</td>
-<td>&#x6765;&#x6E90;&#x516C;&#x4F17;&#x53F7; appId</td>
-</tr>
-<tr>
-<td>1036</td>
-<td>App &#x5206;&#x4EAB;&#x6D88;&#x606F;&#x5361;&#x7247;</td>
-<td>&#x6765;&#x6E90;&#x5E94;&#x7528; appId</td>
-</tr>
-<tr>
-<td>1037</td>
-<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6253;&#x5F00;&#x5C0F;&#x7A0B;&#x5E8F;</td>
-<td>&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F; appId</td>
-</tr>
-<tr>
-<td>1038</td>
-<td>&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE;</td>
-<td>&#x6765;&#x6E90;&#x5C0F;&#x7A0B;&#x5E8F; appId</td>
-</tr>
-<tr>
-<td>1043</td>
-<td>&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;</td>
-<td>&#x6765;&#x6E90;&#x516C;&#x4F17;&#x53F7; appId</td>
-</tr>
-</tbody>
-</table>
+<p>&#x4E0E; <a href="../../api/app/wx.getLaunchOptionsSync.html">wx.getLaunchOptionsSync</a> &#x4E00;&#x81F4;</p>
 <h4 id="onshowobject">onShow(Object)</h4>
 <p>&#x5C0F;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#xFF0C;&#x6216;&#x4ECE;&#x540E;&#x53F0;&#x8FDB;&#x5165;&#x524D;&#x53F0;&#x663E;&#x793A;&#x65F6;&#x89E6;&#x53D1;&#x3002;</p>
 <p><strong>Object &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
-<p>&#x4E0E; <code>onLaunch</code> &#x4E00;&#x81F4;</p>
+<p>&#x4E0E; <a href="../../api/app/wx.getLaunchOptionsSync.html">wx.getLaunchOptionsSync</a> &#x4E00;&#x81F4;</p>
 <h4 id="onhide">onHide()</h4>
 <p>&#x5C0F;&#x7A0B;&#x5E8F;&#x4ECE;&#x524D;&#x53F0;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x65F6;&#x89E6;&#x53D1;&#x3002;</p>
 <h4 id="onerrorstring-error">onError(String error)</h4>
