@@ -18,16 +18,18 @@
                             <section class="normal markdown-section">
                               <h1 id="&#x517C;&#x5BB9;">&#x517C;&#x5BB9;</h1>
 <p>&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x529F;&#x80FD;&#x4E0D;&#x65AD;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x4F46;&#x662F;&#x65E7;&#x7248;&#x672C;&#x7684;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x5E76;&#x4E0D;&#x652F;&#x6301;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B0;&#x80FD;&#x529B;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x505A;&#x517C;&#x5BB9;&#x3002;</p>
-<p>&#x6587;&#x6863;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#xFF0C;API&#x7B49;&#x9875;&#x9762;&#x63CF;&#x8FF0;&#x4E2D;&#x5E26;&#x4E0A;&#x5404;&#x4E2A;&#x529F;&#x80FD;&#x6240;&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3002;</p>
-<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>wx.getSystemInfo</code> &#x6216;&#x8005; <code>wx.getSystemInfoSync</code> &#x83B7;&#x53D6;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x53F7;&#x3002;</p>
-<p>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>wx.canIUse</code> <a href="../api/base/wx.canIUse.html">&#x8BE6;&#x60C5;</a> &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5728;&#x8BE5;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x4E0B;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5BF9;&#x5E94;&#x7684;API&#x6216;&#x8005;&#x7EC4;&#x4EF6;</p>
-<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x7248;&#x672C;&#x6BD4;&#x8F83;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x7248;&#x672C;&#x6BD4;&#x8F83;</h3>
-<p>&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7684;&#x7248;&#x672C;&#x53F7;&#x98CE;&#x683C;&#x4E3A; Major.Minor.Patch&#xFF08;&#x4E3B;&#x7248;&#x672C;&#x53F7;.&#x6B21;&#x7248;&#x672C;&#x53F7;.&#x4FEE;&#x8BA2;&#x53F7;&#xFF09;&#x3002;
-&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7248;&#x672C;&#x53F7;&#x53BB;&#x505A;&#x517C;&#x5BB9;&#xFF0C;&#x4EE5;&#x4E0B;&#x4E3A;&#x53C2;&#x8003;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compareVersion</span>(<span class="hljs-params">v1, v2</span>) </span>{
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x4F4E;&#x7248;&#x672C;&#x7684;&#x517C;&#x5BB9;&#xFF1A;</p>
+<h3 id="1-&#x7248;&#x672C;&#x53F7;&#x6BD4;&#x8F83;">1. &#x7248;&#x672C;&#x53F7;&#x6BD4;&#x8F83;</h3>
+<p>&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;&#x57FA;&#x7840;&#x5E93;&#x7684;&#x7248;&#x672C;&#x53F7;&#x98CE;&#x683C;&#x4E3A; Major.Minor.Patch&#xFF08;&#x4E3B;&#x7248;&#x672C;&#x53F7;.&#x6B21;&#x7248;&#x672C;&#x53F7;.&#x4FEE;&#x8BA2;&#x7248;&#x672C;&#x53F7;&#xFF09;&#x3002;</p>
+<p>&#x6587;&#x6863;&#x4E2D;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#xFF0C;API&#x7B49;&#x9875;&#x9762;&#x63CF;&#x8FF0;&#x4E2D;&#x5E26;&#x4E0A;&#x5404;&#x4E2A;&#x529F;&#x80FD;&#x6240;&#x8981;&#x6C42;&#x7684;&#x6700;&#x4F4E;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x53F7;&#x3002;</p>
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x901A;&#x8FC7;&#x8C03;&#x7528; <a href="../api/system/system-info/wx.getSystemInfo.html"><code>wx.getSystemInfo</code></a> &#x6216;&#x8005; <a href="../api/system/system-info/wx.getSystemInfoSync.html"><code>wx.getSystemInfoSync</code></a> &#x83B7;&#x53D6;&#x5230;&#x5F53;&#x524D;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x57FA;&#x7840;&#x5E93;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3002;&#x901A;&#x8FC7;&#x7248;&#x672C;&#x53F7;&#x6BD4;&#x8F83;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x8FD0;&#x884C;&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x7248;&#x672C;&#x53F7;&#x6BD4;&#x8F83;&#x9002;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x60C5;&#x51B5;&#x3002;&#x90E8;&#x5206;&#x573A;&#x666F;&#x4E0B;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x540E;&#x9762;&#x63D0;&#x5230;&#x7684;&#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x53F7;&#x6BD4;&#x8F83;&#x3002;</strong></p>
+<p>&#x7248;&#x672C;&#x53F7;&#x6BD4;&#x8F83;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compareVersion</span>(<span class="hljs-params">v1, v2</span>) </span>{
   v1 = v1.split(<span class="hljs-string">&apos;.&apos;</span>)
   v2 = v2.split(<span class="hljs-string">&apos;.&apos;</span>)
-  <span class="hljs-keyword">var</span> len = <span class="hljs-built_in">Math</span>.max(v1.length, v2.length)
+  <span class="hljs-keyword">const</span> len = <span class="hljs-built_in">Math</span>.max(v1.length, v2.length)
 
   <span class="hljs-keyword">while</span> (v1.length &lt; len) {
     v1.push(<span class="hljs-string">&apos;0&apos;</span>)
@@ -36,9 +38,9 @@
     v2.push(<span class="hljs-string">&apos;0&apos;</span>)
   }
 
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) {
-    <span class="hljs-keyword">var</span> num1 = <span class="hljs-built_in">parseInt</span>(v1[i])
-    <span class="hljs-keyword">var</span> num2 = <span class="hljs-built_in">parseInt</span>(v2[i])
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) {
+    <span class="hljs-keyword">const</span> num1 = <span class="hljs-built_in">parseInt</span>(v1[i])
+    <span class="hljs-keyword">const</span> num2 = <span class="hljs-built_in">parseInt</span>(v2[i])
 
     <span class="hljs-keyword">if</span> (num1 &gt; num2) {
       <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
@@ -50,11 +52,22 @@
   <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
 }
 
-compareVersion(<span class="hljs-string">&apos;1.11.0&apos;</span>, <span class="hljs-string">&apos;1.9.9&apos;</span>)
-<span class="hljs-comment">// 1</span>
+compareVersion(<span class="hljs-string">&apos;1.11.0&apos;</span>, <span class="hljs-string">&apos;1.9.9&apos;</span>) <span class="hljs-comment">// 1</span>
 </code></pre>
-<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x63A5;&#x53E3;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x63A5;&#x53E3;</h3>
-<p>&#x5BF9;&#x4E8E;&#x65B0;&#x589E;&#x7684; API&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x652F;&#x6301;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x7684;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> version = wx.getSystemInfoSync().SDKVersion
+
+<span class="hljs-keyword">if</span> (compareVersion(version, <span class="hljs-string">&apos;1.1.0&apos;</span>) &gt;= <span class="hljs-number">0</span>) {
+  wx.openBluetoothAdapter()
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x5E0C;&#x671B;&#x7528;&#x6237;&#x5728;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4E0A;&#x4F53;&#x9A8C;&#x60A8;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B50;&#x63D0;&#x793A;</span>
+  wx.showModal({
+    <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x63D0;&#x793A;&apos;</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;&#x5F53;&#x524D;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#x8FC7;&#x4F4E;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x8BE5;&#x529F;&#x80FD;&#xFF0C;&#x8BF7;&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x5FAE;&#x4FE1;&#x7248;&#x672C;&#x540E;&#x91CD;&#x8BD5;&#x3002;&apos;</span>
+  })
+}
+</code></pre>
+<h3 id="2-api-&#x5B58;&#x5728;&#x5224;&#x65AD;">2. API &#x5B58;&#x5728;&#x5224;&#x65AD;</h3>
+<p>&#x5BF9;&#x4E8E;&#x65B0;&#x589E;&#x7684; API&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5224;&#x65AD;&#x8BE5;API&#x662F;&#x5426;&#x5B58;&#x5728;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x652F;&#x6301;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x7684;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
 <pre><code class="language-js"><span class="hljs-keyword">if</span> (wx.openBluetoothAdapter) {
   wx.openBluetoothAdapter()
 } <span class="hljs-keyword">else</span> {
@@ -65,7 +78,9 @@ compareVersion(<span class="hljs-string">&apos;1.11.0&apos;</span>, <span class=
   })
 }
 </code></pre>
-<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x53C2;&#x6570;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x53C2;&#x6570;</h3>
+<h3 id="3-wxcaniuse">3. wx.canIUse</h3>
+<p>&#x9664;&#x4E86;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x7248;&#x672C;&#x53F7;&#x5224;&#x65AD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="../api/base/wx.canIUse.html"><code>wx.canIUse</code></a> &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5728;&#x8BE5;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;&#x4E0B;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p><strong>API &#x53C2;&#x6570;&#x6216;&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x5BF9;&#x4E8E; API &#x7684;&#x53C2;&#x6570;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x503C;&#x6709;&#x65B0;&#x589E;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5224;&#x65AD;&#x3002;</p>
 <pre><code class="language-js">wx.showModal({
   <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
@@ -75,7 +90,7 @@ compareVersion(<span class="hljs-string">&apos;1.11.0&apos;</span>, <span class=
   }
 })
 </code></pre>
-<h3 id="&#x517C;&#x5BB9;&#x65B9;&#x5F0F;---&#x7EC4;&#x4EF6;">&#x517C;&#x5BB9;&#x65B9;&#x5F0F; - &#x7EC4;&#x4EF6;</h3>
+<p><strong>&#x7EC4;&#x4EF6;</strong></p>
 <p>&#x5BF9;&#x4E8E;&#x7EC4;&#x4EF6;&#xFF0C;&#x65B0;&#x589E;&#x7684;&#x7EC4;&#x4EF6;&#x6216;&#x5C5E;&#x6027;&#x5728;&#x65E7;&#x7248;&#x672C;&#x4E0A;&#x4E0D;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E5F;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x5982;&#x679C;&#x7279;&#x6B8A;&#x573A;&#x666F;&#x9700;&#x8981;&#x5BF9;&#x65E7;&#x7248;&#x672C;&#x505A;&#x4E00;&#x4E9B;&#x964D;&#x7EA7;&#x5904;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B50;&#x505A;&#x3002;</p>
 <pre><code class="language-js">Page({
   <span class="hljs-attr">data</span>: {
@@ -87,6 +102,9 @@ compareVersion(<span class="hljs-string">&apos;1.11.0&apos;</span>, <span class=
   <span class="hljs-tag">&lt;<span class="hljs-name">cover-view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{canIUse}}&quot;</span>&gt;</span>play<span class="hljs-tag">&lt;/<span class="hljs-name">cover-view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
+<blockquote>
+<p>canIUse &#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x968F;&#x57FA;&#x7840;&#x5E93;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x65B0;&#x7248;&#x672C;&#x4E2D;&#x7684;&#x65B0;&#x529F;&#x80FD;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x9057;&#x6F0F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5EFA;&#x8BAE;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x63D0;&#x524D;&#x6D4B;&#x8BD5;&#x3002;</p>
+</blockquote>
 <h2 id="&#x8BBE;&#x7F6E;&#x6700;&#x4F4E;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;">&#x8BBE;&#x7F6E;&#x6700;&#x4F4E;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;</h2>
 <blockquote>
 <p>&#x9700;&#x8981; iOS 6.5.8 / &#x5B89;&#x5353; 6.5.7 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x652F;&#x6301;</p>
