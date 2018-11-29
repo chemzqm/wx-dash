@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.readBLECharacteristicValue</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxreadblecharacteristicvalueobject-object">wx.readBLECharacteristicValue(Object object)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x8BFB;&#x53D6;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x503C;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x8BBE;&#x5907;&#x7684;&#x7279;&#x5F81;&#x503C;&#x652F;&#x6301; read &#x624D;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x8C03;&#x7528;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deviceId</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907; id</td>
+<td></td>
+</tr>
+<tr>
+<td>serviceId</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x7684; uuid</td>
+<td></td>
+</tr>
+<tr>
+<td>characteristicId</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x84DD;&#x7259;&#x7279;&#x5F81;&#x503C;&#x7684; uuid</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>ok</td>
+<td>&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td>10000</td>
+<td>not init</td>
+<td>&#x672A;&#x521D;&#x59CB;&#x5316;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;</td>
+</tr>
+<tr>
+<td>10001</td>
+<td>not available</td>
+<td>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x9002;&#x914D;&#x5668;&#x4E0D;&#x53EF;&#x7528;</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>no device</td>
+<td>&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>connection fail</td>
+<td>&#x8FDE;&#x63A5;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>no service</td>
+<td>&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>10005</td>
+<td>no characteristic</td>
+<td>&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x7279;&#x5F81;&#x503C;</td>
+</tr>
+<tr>
+<td>10006</td>
+<td>no connection</td>
+<td>&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x5DF2;&#x65AD;&#x5F00;</td>
+</tr>
+<tr>
+<td>10007</td>
+<td>property not support</td>
+<td>&#x5F53;&#x524D;&#x7279;&#x5F81;&#x503C;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>10008</td>
+<td>system error</td>
+<td>&#x5176;&#x4F59;&#x6240;&#x6709;&#x7CFB;&#x7EDF;&#x4E0A;&#x62A5;&#x7684;&#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td>10009</td>
+<td>system not support</td>
+<td>Android &#x7CFB;&#x7EDF;&#x7279;&#x6709;&#xFF0C;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x4F4E;&#x4E8E; 4.3 &#x4E0D;&#x652F;&#x6301; BLE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<ul>
+<li>&#x5E76;&#x884C;&#x8C03;&#x7528;&#x591A;&#x6B21;&#x4F1A;&#x5B58;&#x5728;&#x8BFB;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;</li>
+<li>&#x63A5;&#x53E3;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x4FE1;&#x606F;&#x9700;&#x8981;&#x5728; <code>onBLECharacteristicValueChange</code> &#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#x7684;&#x56DE;&#x8C03;&#x4E2D;&#x83B7;&#x53D6;&#x3002;</li>
+</ul>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p><a href="https://developers.weixin.qq.com/s/pQU51zmz7a3K" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-js"><span class="hljs-comment">// &#x5FC5;&#x987B;&#x5728;&#x8FD9;&#x91CC;&#x7684;&#x56DE;&#x8C03;&#x624D;&#x80FD;&#x83B7;&#x53D6;</span>
+wx.onBLECharacteristicValueChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">characteristic</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;characteristic value comed:&apos;</span>, characteristic)
+})
+
+wx.readBLECharacteristicValue({
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;</span>
+  deviceId,
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; serviceId &#x9700;&#x8981;&#x5728; getBLEDeviceServices &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
+  serviceId,
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; characteristicId &#x9700;&#x8981;&#x5728; getBLEDeviceCharacteristics &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
+  characteristicId,
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;readBLECharacteristicValue:&apos;</span>, res.errCode)
+  }
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

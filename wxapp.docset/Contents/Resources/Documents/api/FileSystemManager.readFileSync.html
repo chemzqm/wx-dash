@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>FileSystemManager.readFileSync</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="stringarraybuffer-filesystemmanagerreadfilesyncstring-filepath-string-encoding">string|ArrayBuffer FileSystemManager.readFileSync(string filePath, string encoding)</h3>
+<p><a href="FileSystemManager.readFile.html">FileSystemManager.readFile</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-filepath">string filePath</h5>
+<p>&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</p>
+<h5 id="string-encoding">string encoding</h5>
+<p>&#x6307;&#x5B9A;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4F20; encoding&#xFF0C;&#x5219;&#x4EE5; ArrayBuffer &#x683C;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5185;&#x5BB9;</p>
+<p><strong>encoding &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ascii</td>
+<td></td>
+</tr>
+<tr>
+<td>base64</td>
+<td></td>
+</tr>
+<tr>
+<td>binary</td>
+<td></td>
+</tr>
+<tr>
+<td>hex</td>
+<td></td>
+</tr>
+<tr>
+<td>ucs2/ucs-2/utf16le/utf-16le</td>
+<td>&#x4EE5;&#x5C0F;&#x7AEF;&#x5E8F;&#x8BFB;&#x53D6;</td>
+</tr>
+<tr>
+<td>utf-8/utf8</td>
+<td></td>
+</tr>
+<tr>
+<td>latin1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="stringarraybuffer-data">string|ArrayBuffer data</h5>
+<p>&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
+<h4 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>fail no such file or directory, open ${filePath}</td>
+<td>&#x6307;&#x5B9A;&#x7684; filePath &#x6240;&#x5728;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td></td>
+<td>fail permission denied, open ${dirPath}</td>
+<td>&#x6307;&#x5B9A;&#x7684; filePath &#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x8BFB;&#x6743;&#x9650;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

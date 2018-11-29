@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>MapContext.translateMarker</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="mapcontexttranslatemarkerobject-object">MapContext.translateMarker(Object object)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x5E73;&#x79FB;marker&#xFF0C;&#x5E26;&#x52A8;&#x753B;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>markerId</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6307;&#x5B9A; marker</td>
+<td></td>
+</tr>
+<tr>
+<td>destination</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6307;&#x5B9A; marker &#x79FB;&#x52A8;&#x5230;&#x7684;&#x76EE;&#x6807;&#x70B9;</td>
+<td></td>
+</tr>
+<tr>
+<td>autoRotate</td>
+<td>boolean</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x79FB;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x65CB;&#x8F6C; marker</td>
+<td></td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>marker &#x7684;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;</td>
+<td></td>
+</tr>
+<tr>
+<td>duration</td>
+<td>number</td>
+<td>1000</td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x957F;&#xFF0C;&#x5E73;&#x79FB;&#x4E0E;&#x65CB;&#x8F6C;&#x5206;&#x522B;&#x8BA1;&#x7B97;</td>
+<td></td>
+</tr>
+<tr>
+<td>animationEnd</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x52A8;&#x753B;&#x7ED3;&#x675F;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.destination &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>longitude</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x7ECF;&#x5EA6;</td>
+<td></td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x7EAC;&#x5EA6;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

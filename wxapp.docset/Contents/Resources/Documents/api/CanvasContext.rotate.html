@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.rotate</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextrotatenumber-rotate">CanvasContext.rotate(number rotate)</h3>
+<p>&#x4EE5;&#x539F;&#x70B9;&#x4E3A;&#x4E2D;&#x5FC3;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;&#x5F53;&#x524D;&#x5750;&#x6807;&#x8F74;&#x3002;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x65CB;&#x8F6C;&#x7684;&#x89D2;&#x5EA6;&#x4F1A;&#x53E0;&#x52A0;&#x3002;&#x539F;&#x70B9;&#x53EF;&#x4EE5;&#x7528; <code>translate</code> &#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="number-rotate">number rotate</h5>
+<p>&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#xFF0C;&#x4EE5;&#x5F27;&#x5EA6;&#x8BA1; degrees * Math.PI/180&#xFF1B;degrees &#x8303;&#x56F4;&#x4E3A; 0-360</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.strokeRect(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.rotate(<span class="hljs-number">20</span> * <span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">180</span>)
+ctx.strokeRect(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+ctx.rotate(<span class="hljs-number">20</span> * <span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">180</span>)
+ctx.strokeRect(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/rotate.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

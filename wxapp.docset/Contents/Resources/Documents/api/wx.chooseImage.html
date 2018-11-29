@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>图片</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxchooseimageobject-object">wx.chooseImage(Object object)</h3>
+<p>&#x4ECE;&#x672C;&#x5730;&#x76F8;&#x518C;&#x9009;&#x62E9;&#x56FE;&#x7247;&#x6216;&#x4F7F;&#x7528;&#x76F8;&#x673A;&#x62CD;&#x7167;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>number</td>
+<td>9</td>
+<td>&#x5426;</td>
+<td>&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x56FE;&#x7247;&#x5F20;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>sizeType</td>
+<td>Array.&lt;string&gt;</td>
+<td>[&apos;original&apos;, &apos;compressed&apos;]</td>
+<td>&#x5426;</td>
+<td>&#x6240;&#x9009;&#x7684;&#x56FE;&#x7247;&#x7684;&#x5C3A;&#x5BF8;</td>
+<td></td>
+</tr>
+<tr>
+<td>sourceType</td>
+<td>Array.&lt;string&gt;</td>
+<td>[&apos;album&apos;, &apos;camera&apos;]</td>
+<td>&#x5426;</td>
+<td>&#x9009;&#x62E9;&#x56FE;&#x7247;&#x7684;&#x6765;&#x6E90;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.sizeType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>original</td>
+<td>&#x539F;&#x56FE;</td>
+</tr>
+<tr>
+<td>compressed</td>
+<td>&#x538B;&#x7F29;&#x56FE;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.sourceType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>album</td>
+<td>&#x4ECE;&#x76F8;&#x518C;&#x9009;&#x56FE;</td>
+</tr>
+<tr>
+<td>camera</td>
+<td>&#x4F7F;&#x7528;&#x76F8;&#x673A;</td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tempFilePaths</td>
+<td>Array.&lt;string&gt;</td>
+<td>&#x56FE;&#x7247;&#x7684;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5217;&#x8868;</td>
+<td></td>
+</tr>
+<tr>
+<td>tempFiles</td>
+<td>Array.&lt;Object&gt;</td>
+<td>&#x56FE;&#x7247;&#x7684;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5217;&#x8868;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.2.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.2.0</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.tempFiles &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>string</td>
+<td>&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td>number</td>
+<td>&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D; B</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.chooseImage({
+  <span class="hljs-attr">count</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">sizeType</span>: [<span class="hljs-string">&apos;original&apos;</span>, <span class="hljs-string">&apos;compressed&apos;</span>],
+  <span class="hljs-attr">sourceType</span>: [<span class="hljs-string">&apos;album&apos;</span>, <span class="hljs-string">&apos;camera&apos;</span>],
+  success (res) {
+    <span class="hljs-comment">// tempFilePath&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;img&#x6807;&#x7B7E;&#x7684;src&#x5C5E;&#x6027;&#x663E;&#x793A;&#x56FE;&#x7247;</span>
+    <span class="hljs-keyword">const</span> tempFilePaths = res.tempFilePaths
+  }
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

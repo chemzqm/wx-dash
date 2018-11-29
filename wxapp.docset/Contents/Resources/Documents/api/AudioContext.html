@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AudioContext</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="audiocontext">AudioContext</h3>
+<p>AudioContext &#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="wx.createAudioContext.html">wx.createAudioContext</a> &#x83B7;&#x53D6;&#x3002;</p>
+<p><code>audioContext</code> &#x901A;&#x8FC7; <code>id</code> &#x8DDF;&#x4E00;&#x4E2A; <a href="../component/audio.html"><code>&lt;audio&gt;</code></a> &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <a href="../component/audio.html"><code>&lt;audio&gt;</code></a> &#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
+<h5 id="audiocontextsetsrcstring-src"><a href="AudioContext.setSrc.html">AudioContext.setSrc(string src)</a></h5>
+<p>&#x8BBE;&#x7F6E;&#x97F3;&#x9891;&#x5730;&#x5740;</p>
+<h5 id="audiocontextplay"><a href="AudioContext.play.html">AudioContext.play()</a></h5>
+<p>&#x64AD;&#x653E;&#x97F3;&#x9891;&#x3002;</p>
+<h5 id="audiocontextpause"><a href="AudioContext.pause.html">AudioContext.pause()</a></h5>
+<p>&#x6682;&#x505C;&#x97F3;&#x9891;&#x3002;</p>
+<h5 id="audiocontextseeknumber-position"><a href="AudioContext.seek.html">AudioContext.seek(number position)</a></h5>
+<p>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- audio.wxml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">audio</span>  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myAudio&quot;</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPlay&quot;</span>&gt;</span>&#x64AD;&#x653E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPause&quot;</span>&gt;</span>&#x6682;&#x505C;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audio14&quot;</span>&gt;</span>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x65F6;&#x95F4;&#x4E3A;14&#x79D2;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioStart&quot;</span>&gt;</span>&#x56DE;&#x5230;&#x5F00;&#x5934;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<pre><code class="language-js"><span class="hljs-comment">// audio.js</span>
+Page({
+  onReady (e) {
+    <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createAudioContext &#x83B7;&#x53D6; audio &#x4E0A;&#x4E0B;&#x6587; context</span>
+    <span class="hljs-keyword">this</span>.audioCtx = wx.createAudioContext(<span class="hljs-string">&apos;myAudio&apos;</span>)
+    <span class="hljs-keyword">this</span>.audioCtx.setSrc(<span class="hljs-string">&apos;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&amp;fromtag=46&apos;</span>)
+    <span class="hljs-keyword">this</span>.audioCtx.play()
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">src</span>: <span class="hljs-string">&apos;&apos;</span>
+  },
+  audioPlay () {
+    <span class="hljs-keyword">this</span>.audioCtx.play()
+  },
+  audioPause () {
+    <span class="hljs-keyword">this</span>.audioCtx.pause()
+  },
+  audio14 () {
+    <span class="hljs-keyword">this</span>.audioCtx.seek(<span class="hljs-number">14</span>)
+  },
+  audioStart () {
+    <span class="hljs-keyword">this</span>.audioCtx.seek(<span class="hljs-number">0</span>)
+  }
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

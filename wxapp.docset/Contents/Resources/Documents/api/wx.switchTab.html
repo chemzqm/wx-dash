@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.switchTab</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxswitchtabobject-object">wx.switchTab(Object object)</h3>
+<p>&#x8DF3;&#x8F6C;&#x5230; tabBar &#x9875;&#x9762;&#xFF0C;&#x5E76;&#x5173;&#x95ED;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x975E; tabBar &#x9875;&#x9762;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x9700;&#x8981;&#x8DF3;&#x8F6C;&#x7684; tabBar &#x9875;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#xFF08;&#x9700;&#x5728; app.json &#x7684; <a href="../framework/config.html#tabbar">tabBar</a> &#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x7684;&#x9875;&#x9762;&#xFF09;&#xFF0C;&#x8DEF;&#x5F84;&#x540E;&#x4E0D;&#x80FD;&#x5E26;&#x53C2;&#x6570;&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;tabBar&quot;</span>: {
+    <span class="hljs-attr">&quot;list&quot;</span>: [{
+      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;index&quot;</span>,
+      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x9996;&#x9875;&quot;</span>
+    },{
+      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;other&quot;</span>,
+      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x5176;&#x4ED6;&quot;</span>
+    }]
+  }
+}
+</code></pre>
+<pre><code class="language-js">wx.switchTab({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;/index&apos;</span>
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

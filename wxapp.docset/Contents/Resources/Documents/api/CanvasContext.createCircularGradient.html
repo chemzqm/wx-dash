@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.createCircularGradient</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvasgradient-canvascontextcreatecirculargradientnumber-x-number-y-number-r"><a href="CanvasGradient.html">CanvasGradient</a> CanvasContext.createCircularGradient(number x, number y, number r)</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5706;&#x5F62;&#x7684;&#x6E10;&#x53D8;&#x989C;&#x8272;&#x3002;&#x8D77;&#x70B9;&#x5728;&#x5706;&#x5FC3;&#xFF0C;&#x7EC8;&#x70B9;&#x5728;&#x5706;&#x73AF;&#x3002;&#x8FD4;&#x56DE;&#x7684;<a href="CanvasGradient.html"><code>CanvasGradient</code></a>&#x5BF9;&#x8C61;&#x9700;&#x8981;&#x4F7F;&#x7528; <a href="CanvasGradient.addColorStop.html">CanvasGradient.addColorStop()</a> &#x6765;&#x6307;&#x5B9A;&#x6E10;&#x53D8;&#x70B9;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x4E24;&#x4E2A;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="number-x">number x</h5>
+<p>&#x5706;&#x5FC3;&#x7684; x &#x5750;&#x6807;</p>
+<h5 id="number-y">number y</h5>
+<p>&#x5706;&#x5FC3;&#x7684; y &#x5750;&#x6807;</p>
+<h5 id="number-r">number r</h5>
+<p>&#x5706;&#x7684;&#x534A;&#x5F84;</p>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="canvasgradient"><a href="CanvasGradient.html">CanvasGradient</a></h5>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+<span class="hljs-comment">// Create circular gradient</span>
+<span class="hljs-keyword">const</span> grd = ctx.createCircularGradient(<span class="hljs-number">75</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>)
+grd.addColorStop(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;red&apos;</span>)
+grd.addColorStop(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;white&apos;</span>)
+
+<span class="hljs-comment">// Fill with gradient</span>
+ctx.setFillStyle(grd)
+ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">150</span>, <span class="hljs-number">80</span>)
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/circular-gradient.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

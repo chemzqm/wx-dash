@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.onHCEMessage</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxonhcemessagefunction-callback">wx.onHCEMessage(function callback)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.7.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x76D1;&#x542C;&#x63A5;&#x6536; NFC &#x8BBE;&#x5907;&#x6D88;&#x606F;&#x4E8B;&#x4EF6;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="function-callback">function callback</h5>
+<p>&#x63A5;&#x6536; NFC &#x8BBE;&#x5907;&#x6D88;&#x606F;&#x4E8B;&#x4EF6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>messageType</td>
+<td>number</td>
+<td>&#x6D88;&#x606F;&#x7C7B;&#x578B;</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>ArrayBuffer</td>
+<td><code>messageType=1</code> &#x65F6; ,&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x6536;&#x5230; NFC &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;</td>
+<td></td>
+</tr>
+<tr>
+<td>reason</td>
+<td>number</td>
+<td><code>messageType=2</code> &#x65F6;&#xFF0C;&#x539F;&#x56E0;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>messageType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>HCE APDU Command&#x7C7B;&#x578B;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x9700;&#x5BF9;&#x6B64;&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5E76;&#x8C03;&#x7528; sendHCEMessage &#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x6307;&#x4EE4;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&#x8BBE;&#x5907;&#x79BB;&#x573A;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</td>
+</tr>
+</tbody>
+</table>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

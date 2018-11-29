@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>UpdateManager</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="updatemanager">UpdateManager</h3>
+<p>UpdateManager &#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x6765;&#x7BA1;&#x7406;&#x66F4;&#x65B0;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="wx.getUpdateManager.html">wx.getUpdateManager</a> &#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5B9E;&#x4F8B;&#x3002;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
+<h5 id="updatemanagerapplyupdate"><a href="UpdateManager.applyUpdate.html">UpdateManager.applyUpdate()</a></h5>
+<p>&#x5F3A;&#x5236;&#x5C0F;&#x7A0B;&#x5E8F;&#x91CD;&#x542F;&#x5E76;&#x4F7F;&#x7528;&#x65B0;&#x7248;&#x672C;&#x3002;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x65B0;&#x7248;&#x672C;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF08;&#x5373;&#x6536;&#x5230; <code>onUpdateReady</code> &#x56DE;&#x8C03;&#xFF09;&#x8C03;&#x7528;&#x3002;</p>
+<h5 id="updatemanageroncheckforupdatefunction-callback"><a href="UpdateManager.onCheckForUpdate.html">UpdateManager.onCheckForUpdate(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5411;&#x5FAE;&#x4FE1;&#x540E;&#x53F0;&#x8BF7;&#x6C42;&#x68C0;&#x67E5;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#x4E8B;&#x4EF6;&#x3002;&#x5FAE;&#x4FE1;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x51B7;&#x542F;&#x52A8;&#x65F6;&#x81EA;&#x52A8;&#x68C0;&#x67E5;&#x66F4;&#x65B0;&#xFF0C;&#x4E0D;&#x9700;&#x7531;&#x5F00;&#x53D1;&#x8005;&#x4E3B;&#x52A8;&#x89E6;&#x53D1;&#x3002;</p>
+<h5 id="updatemanageronupdatereadyfunction-callback"><a href="UpdateManager.onUpdateReady.html">UpdateManager.onUpdateReady(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5C0F;&#x7A0B;&#x5E8F;&#x6709;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x4E3B;&#x52A8;&#x89E6;&#x53D1;&#x4E0B;&#x8F7D;&#xFF08;&#x65E0;&#x9700;&#x5F00;&#x53D1;&#x8005;&#x89E6;&#x53D1;&#xFF09;&#xFF0C;&#x4E0B;&#x8F7D;&#x6210;&#x529F;&#x540E;&#x56DE;&#x8C03;</p>
+<h5 id="updatemanageronupdatefailedfunction-callback"><a href="UpdateManager.onUpdateFailed.html">UpdateManager.onUpdateFailed(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5C0F;&#x7A0B;&#x5E8F;&#x66F4;&#x65B0;&#x5931;&#x8D25;&#x4E8B;&#x4EF6;&#x3002;&#x5C0F;&#x7A0B;&#x5E8F;&#x6709;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4E3B;&#x52A8;&#x89E6;&#x53D1;&#x4E0B;&#x8F7D;&#xFF08;&#x65E0;&#x9700;&#x5F00;&#x53D1;&#x8005;&#x89E6;&#x53D1;&#xFF09;&#xFF0C;&#x4E0B;&#x8F7D;&#x5931;&#x8D25;&#xFF08;&#x53EF;&#x80FD;&#x662F;&#x7F51;&#x7EDC;&#x539F;&#x56E0;&#x7B49;&#xFF09;&#x540E;&#x56DE;&#x8C03;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> updateManager = wx.getUpdateManager()
+
+updateManager.onCheckForUpdate(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-comment">// &#x8BF7;&#x6C42;&#x5B8C;&#x65B0;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x7684;&#x56DE;&#x8C03;</span>
+  <span class="hljs-built_in">console</span>.log(res.hasUpdate)
+})
+
+updateManager.onUpdateReady(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  wx.showModal({
+    <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&#x66F4;&#x65B0;&#x63D0;&#x793A;&apos;</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x662F;&#x5426;&#x91CD;&#x542F;&#x5E94;&#x7528;&#xFF1F;&apos;</span>,
+    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-keyword">if</span> (res.confirm) {
+        <span class="hljs-comment">// &#x65B0;&#x7684;&#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x597D;&#xFF0C;&#x8C03;&#x7528; applyUpdate &#x5E94;&#x7528;&#x65B0;&#x7248;&#x672C;&#x5E76;&#x91CD;&#x542F;</span>
+        updateManager.applyUpdate()
+      }
+    }
+  })
+})
+
+updateManager.onUpdateFailed(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// &#x65B0;&#x7248;&#x672C;&#x4E0B;&#x8F7D;&#x5931;&#x8D25;</span>
+})
+</code></pre>
+<h4 id="tips">Tips</h4>
+<ol>
+<li>&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x300C;&#x7F16;&#x8BD1;&#x6A21;&#x5F0F;&#x300D;&#x4E0B;&#x7684;&#x300C;&#x4E0B;&#x6B21;&#x7F16;&#x8BD1;&#x6A21;&#x62DF;&#x66F4;&#x65B0;&#x300D;&#x5F00;&#x5173;&#x6765;&#x8C03;&#x8BD5;</li>
+<li>&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x7248;/&#x4F53;&#x9A8C;&#x7248;&#x6CA1;&#x6709;&#x300C;&#x7248;&#x672C;&#x300D;&#x6982;&#x5FF5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x5728;&#x5F00;&#x53D1;&#x7248;/&#x4F53;&#x9A8C;&#x7248;&#x4E0A;&#x6D4B;&#x8BD5;&#x66F4;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x60C5;&#x51B5;</li>
+</ol>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

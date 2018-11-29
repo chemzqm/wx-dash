@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.openDocument</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxopendocumentobject-object">wx.openDocument(Object object)</h3>
+<p>&#x65B0;&#x5F00;&#x9875;&#x9762;&#x6253;&#x5F00;&#x6587;&#x6863;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filePath</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; downloadFile &#x83B7;&#x5F97;</td>
+<td></td>
+</tr>
+<tr>
+<td>fileType</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x6253;&#x5F00;&#x6587;&#x4EF6;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>object.fileType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>doc</td>
+<td>doc &#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>docx</td>
+<td>docx &#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>xls</td>
+<td>xls &#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>xlsx</td>
+<td>xlsx &#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>ppt</td>
+<td>ppt &#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>pptx</td>
+<td>pptx &#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>pdf</td>
+<td>pdf &#x683C;&#x5F0F;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript">wx.downloadFile({
+    <span class="hljs-comment">// &#x793A;&#x4F8B; url&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x5B58;&#x5728;</span>
+    url: <span class="hljs-string">&apos;http://example.com/somefile.pdf&apos;</span>,
+    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-keyword">const</span> filePath = res.tempFilePath
+        wx.openDocument({
+            <span class="hljs-attr">filePath</span>: filePath,
+            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6253;&#x5F00;&#x6587;&#x6863;&#x6210;&#x529F;&apos;</span>)
+            }
+        })
+    }
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

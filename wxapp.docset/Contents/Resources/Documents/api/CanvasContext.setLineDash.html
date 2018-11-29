@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.setLineDash</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextsetlinedasharraynumber-pattern-number-offset">CanvasContext.setLineDash(Array.&lt;number&gt; pattern, number offset)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<blockquote>
+<p>&#x4ECE;&#x57FA;&#x7840;&#x5E93; <a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a> &#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x63A5;&#x53E3;&#x505C;&#x6B62;&#x7EF4;&#x62A4;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <code>CanvasContext.lineDashOffset</code> &#x4EE3;&#x66FF;</p>
+</blockquote>
+<p>&#x8BBE;&#x7F6E;&#x865A;&#x7EBF;&#x6837;&#x5F0F;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="arraynumber-pattern">Array.&lt;number&gt; pattern</h5>
+<p>&#x4E00;&#x7EC4;&#x63CF;&#x8FF0;&#x4EA4;&#x66FF;&#x7ED8;&#x5236;&#x7EBF;&#x6BB5;&#x548C;&#x95F4;&#x8DDD;&#xFF08;&#x5750;&#x6807;&#x7A7A;&#x95F4;&#x5355;&#x4F4D;&#xFF09;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x5B57;</p>
+<h5 id="number-offset">number offset</h5>
+<p>&#x865A;&#x7EBF;&#x504F;&#x79FB;&#x91CF;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.setLineDash([<span class="hljs-number">10</span>, <span class="hljs-number">20</span>], <span class="hljs-number">5</span>);
+
+ctx.beginPath();
+ctx.moveTo(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>);
+ctx.lineTo(<span class="hljs-number">400</span>, <span class="hljs-number">100</span>);
+ctx.stroke();
+
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/set-line-dash.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

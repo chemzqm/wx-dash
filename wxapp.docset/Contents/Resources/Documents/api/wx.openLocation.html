@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.openLocation</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxopenlocationobject-object">wx.openLocation(Object object)</h3>
+<p>&#x4F7F;&#x7528;&#x5FAE;&#x4FE1;&#x5185;&#x7F6E;&#x5730;&#x56FE;&#x67E5;&#x770B;&#x4F4D;&#x7F6E;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latitude</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x7EAC;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-90~90&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x5357;&#x7EAC;&#x3002;&#x4F7F;&#x7528; gcj02 &#x56FD;&#x6D4B;&#x5C40;&#x5750;&#x6807;&#x7CFB;</td>
+<td></td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x7ECF;&#x5EA6;&#xFF0C;&#x8303;&#x56F4;&#x4E3A;-180~180&#xFF0C;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x897F;&#x7ECF;&#x3002;&#x4F7F;&#x7528; gcj02 &#x56FD;&#x6D4B;&#x5C40;&#x5750;&#x6807;&#x7CFB;</td>
+<td></td>
+</tr>
+<tr>
+<td>scale</td>
+<td>number</td>
+<td>18</td>
+<td>&#x5426;</td>
+<td>&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#xFF0C;&#x8303;&#x56F4;5~18</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x4F4D;&#x7F6E;&#x540D;</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x5730;&#x5740;&#x7684;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.getLocation({
+ <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;gcj02&apos;</span>, <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;wx.openLocation&#x7684;&#x7ECF;&#x7EAC;&#x5EA6;</span>
+ success (res) {
+   <span class="hljs-keyword">const</span> latitude = res.latitude
+   <span class="hljs-keyword">const</span> longitude = res.longitude
+   wx.openLocation({
+     latitude,
+     longitude,
+     <span class="hljs-attr">scale</span>: <span class="hljs-number">18</span>
+   })
+ }
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

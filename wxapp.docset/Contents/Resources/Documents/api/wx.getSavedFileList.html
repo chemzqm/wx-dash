@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.getSavedFileList</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxgetsavedfilelistobject-object">wx.getSavedFileList(Object object)</h3>
+<p>&#x83B7;&#x53D6;&#x8BE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0B;&#x5DF2;&#x4FDD;&#x5B58;&#x7684;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x5217;&#x8868;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fileList</td>
+<td>Array.&lt;Object&gt;</td>
+<td>&#x6587;&#x4EF6;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x662F;&#x4E00;&#x4E2A; FileItem</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>res.fileList &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filePath</td>
+<td>string</td>
+<td>&#x672C;&#x5730;&#x8DEF;&#x5F84;</td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td>number</td>
+<td>&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x4EE5;&#x5B57;&#x8282;&#x4E3A;&#x5355;&#x4F4D;</td>
+<td></td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>number</td>
+<td>&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x65F6;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x4ECE;1970/01/01 08:00:00 &#x5230;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x79D2;&#x6570;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.getSavedFileList({
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.fileList)
+  }
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

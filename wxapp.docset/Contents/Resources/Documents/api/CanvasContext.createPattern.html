@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.createPattern</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextcreatepatternstring-image-string-repetition">CanvasContext.createPattern(string image, string repetition)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x5BF9;&#x6307;&#x5B9A;&#x7684;&#x56FE;&#x50CF;&#x521B;&#x5EFA;&#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x65B9;&#x5411;&#x4E0A;&#x91CD;&#x590D;&#x5143;&#x56FE;&#x50CF;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-image">string image</h5>
+<p>&#x91CD;&#x590D;&#x7684;&#x56FE;&#x50CF;&#x6E90;&#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x5305;&#x5185;&#x8DEF;&#x5F84;&#x548C;&#x4E34;&#x65F6;&#x8DEF;&#x5F84;</p>
+<h5 id="string-repetition">string repetition</h5>
+<p>&#x5982;&#x4F55;&#x91CD;&#x590D;&#x56FE;&#x50CF;</p>
+<p><strong>repetition &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repeat</td>
+<td>&#x6C34;&#x5E73;&#x7AD6;&#x76F4;&#x65B9;&#x5411;&#x90FD;&#x91CD;&#x590D;</td>
+</tr>
+<tr>
+<td>repeat-x</td>
+<td>&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x91CD;&#x590D;</td>
+</tr>
+<tr>
+<td>repeat-y</td>
+<td>&#x7AD6;&#x76F4;&#x65B9;&#x5411;&#x91CD;&#x590D;</td>
+</tr>
+<tr>
+<td>no-repeat</td>
+<td>&#x4E0D;&#x91CD;&#x590D;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<span class="hljs-keyword">const</span> pattern = ctx.createPattern(<span class="hljs-string">&apos;/path/to/image&apos;</span>, <span class="hljs-string">&apos;repeat-x&apos;</span>)
+ctx.fillStyle = pattern
+ctx.fillRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">300</span>, <span class="hljs-number">150</span>)
+ctx.draw()
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

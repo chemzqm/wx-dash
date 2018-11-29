@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.setStorageSync</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxsetstoragesyncstring-key-object-data">wx.setStorageSync(string key, Object data)</h3>
+<p><a href="wx.setStorage.html">wx.setStorage</a> &#x7684;&#x540C;&#x6B65;&#x7248;&#x672C;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-key">string key</h5>
+<p>&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x6307;&#x5B9A;&#x7684; key</p>
+<h5 id="object-data">Object data</h5>
+<p>&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x53EA;&#x652F;&#x6301;&#x539F;&#x751F;&#x7C7B;&#x578B;&#x3001;Date&#x3001;&#x53CA;&#x80FD;&#x591F;&#x901A;&#x8FC7;<code>JSON.stringify</code>&#x5E8F;&#x5217;&#x5316;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.setStorage({
+  <span class="hljs-attr">key</span>:<span class="hljs-string">&quot;key&quot;</span>,
+  <span class="hljs-attr">data</span>:<span class="hljs-string">&quot;value&quot;</span>
+})
+</code></pre>
+<pre><code class="language-js"><span class="hljs-keyword">try</span> {
+  wx.setStorageSync(<span class="hljs-string">&apos;key&apos;</span>, <span class="hljs-string">&apos;value&apos;</span>)
+} <span class="hljs-keyword">catch</span> (e) { }
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

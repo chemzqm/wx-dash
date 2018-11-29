@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.showActionSheet</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxshowactionsheetobject-object">wx.showActionSheet(Object object)</h3>
+<p>&#x200B;&#x663E;&#x793A;&#x64CD;&#x4F5C;&#x83DC;&#x5355;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>itemList</td>
+<td>Array.&lt;string&gt;</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x6700;&#x5927;&#x4E3A; 6</td>
+<td></td>
+</tr>
+<tr>
+<td>itemColor</td>
+<td>string</td>
+<td>#000000</td>
+<td>&#x5426;</td>
+<td>&#x6309;&#x94AE;&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h6 id="objectsuccess-&#x56DE;&#x8C03;&#x51FD;&#x6570;">object.success &#x56DE;&#x8C03;&#x51FD;&#x6570;</h6>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tapIndex</td>
+<td>number</td>
+<td>&#x7528;&#x6237;&#x70B9;&#x51FB;&#x7684;&#x6309;&#x94AE;&#x5E8F;&#x53F7;&#xFF0C;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x4ECE;0&#x5F00;&#x59CB;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js">wx.showActionSheet({
+  <span class="hljs-attr">itemList</span>: [<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>],
+  success (res) {
+    <span class="hljs-built_in">console</span>.log(res.tapIndex)
+  },
+  fail (res) {
+    <span class="hljs-built_in">console</span>.log(res.errMsg)
+  }
+})
+</code></pre>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<ul>
+<li>Android 6.7.2 &#x4EE5;&#x4E0B;&#x7248;&#x672C;&#xFF0C;&#x70B9;&#x51FB;&#x53D6;&#x6D88;&#x6216;&#x8499;&#x5C42;&#x65F6;&#xFF0C;&#x56DE;&#x8C03; fail, errMsg &#x4E3A; &quot;fail cancel&quot;&#xFF1B;</li>
+<li>Android 6.7.2 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C; &#x548C; iOS &#x70B9;&#x51FB;&#x8499;&#x5C42;&#x4E0D;&#x4F1A;&#x5173;&#x95ED;&#x6A21;&#x6001;&#x5F39;&#x7A97;&#xFF0C;&#x6240;&#x4EE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x300C;&#x53D6;&#x6D88;&#x300D;&#x5206;&#x652F;&#x4E2D;&#x5B9E;&#x73B0;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</li>
+</ul>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

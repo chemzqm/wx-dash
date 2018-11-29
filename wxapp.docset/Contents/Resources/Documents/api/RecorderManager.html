@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>RecorderManager</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="recordermanager">RecorderManager</h3>
+<p>&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7684;&#x5F55;&#x97F3;&#x7BA1;&#x7406;&#x5668;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
+<h5 id="recordermanagerstartobject-object"><a href="RecorderManager.start.html">RecorderManager.start(Object object)</a></h5>
+<p>&#x5F00;&#x59CB;&#x5F55;&#x97F3;</p>
+<h5 id="recordermanagerpause"><a href="RecorderManager.pause.html">RecorderManager.pause()</a></h5>
+<p>&#x6682;&#x505C;&#x5F55;&#x97F3;</p>
+<h5 id="recordermanagerresume"><a href="RecorderManager.resume.html">RecorderManager.resume()</a></h5>
+<p>&#x7EE7;&#x7EED;&#x5F55;&#x97F3;</p>
+<h5 id="recordermanagerstop"><a href="RecorderManager.stop.html">RecorderManager.stop()</a></h5>
+<p>&#x505C;&#x6B62;&#x5F55;&#x97F3;</p>
+<h5 id="recordermanageronstartfunction-callback"><a href="RecorderManager.onStart.html">RecorderManager.onStart(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;</p>
+<h5 id="recordermanageronresumefunction-callback"><a href="RecorderManager.onResume.html">RecorderManager.onResume(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x7EE7;&#x7EED;&#x4E8B;&#x4EF6;</p>
+<h5 id="recordermanageronpausefunction-callback"><a href="RecorderManager.onPause.html">RecorderManager.onPause(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</p>
+<h5 id="recordermanageronstopfunction-callback"><a href="RecorderManager.onStop.html">RecorderManager.onStop(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</p>
+<h5 id="recordermanageronframerecordedfunction-callback"><a href="RecorderManager.onFrameRecorded.html">RecorderManager.onFrameRecorded(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5DF2;&#x5F55;&#x5236;&#x5B8C;&#x6307;&#x5B9A;&#x5E27;&#x5927;&#x5C0F;&#x7684;&#x6587;&#x4EF6;&#x4E8B;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86; frameSize&#xFF0C;&#x5219;&#x4F1A;&#x56DE;&#x8C03;&#x6B64;&#x4E8B;&#x4EF6;&#x3002;</p>
+<h5 id="recordermanageronerrorfunction-callback"><a href="RecorderManager.onError.html">RecorderManager.onError(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</p>
+<h5 id="recordermanageroninterruptionbeginfunction-callback"><a href="RecorderManager.onInterruptionBegin.html">RecorderManager.onInterruptionBegin(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x56E0;&#x4E3A;&#x53D7;&#x5230;&#x7CFB;&#x7EDF;&#x5360;&#x7528;&#x800C;&#x88AB;&#x4E2D;&#x65AD;&#x5F00;&#x59CB;&#x4E8B;&#x4EF6;&#x3002;&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#x4F1A;&#x89E6;&#x53D1;&#x6B64;&#x4E8B;&#x4EF6;&#xFF1A;&#x5FAE;&#x4FE1;&#x8BED;&#x97F3;&#x804A;&#x5929;&#x3001;&#x5FAE;&#x4FE1;&#x89C6;&#x9891;&#x804A;&#x5929;&#x3002;&#x6B64;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x5F55;&#x97F3;&#x4F1A;&#x88AB;&#x6682;&#x505C;&#x3002;pause &#x4E8B;&#x4EF6;&#x5728;&#x6B64;&#x4E8B;&#x4EF6;&#x540E;&#x89E6;&#x53D1;</p>
+<h5 id="recordermanageroninterruptionendfunction-callback"><a href="RecorderManager.onInterruptionEnd.html">RecorderManager.onInterruptionEnd(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x4E2D;&#x65AD;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;&#x3002;&#x5728;&#x6536;&#x5230; interruptionBegin &#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x5185;&#x6240;&#x6709;&#x5F55;&#x97F3;&#x4F1A;&#x6682;&#x505C;&#xFF0C;&#x6536;&#x5230;&#x6B64;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#x624D;&#x53EF;&#x518D;&#x6B21;&#x5F55;&#x97F3;&#x6210;&#x529F;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> recorderManager = wx.getRecorderManager()
+
+recorderManager.onStart(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder start&apos;</span>)
+})
+recorderManager.onPause(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder pause&apos;</span>)
+})
+recorderManager.onStop(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder stop&apos;</span>, res)
+  <span class="hljs-keyword">const</span> { tempFilePath } = res
+})
+recorderManager.onFrameRecorded(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> { frameBuffer } = res
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;frameBuffer.byteLength&apos;</span>, frameBuffer.byteLength)
+})
+
+<span class="hljs-keyword">const</span> options = {
+  <span class="hljs-attr">duration</span>: <span class="hljs-number">10000</span>,
+  <span class="hljs-attr">sampleRate</span>: <span class="hljs-number">44100</span>,
+  <span class="hljs-attr">numberOfChannels</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">encodeBitRate</span>: <span class="hljs-number">192000</span>,
+  <span class="hljs-attr">format</span>: <span class="hljs-string">&apos;aac&apos;</span>,
+  <span class="hljs-attr">frameSize</span>: <span class="hljs-number">50</span>
+}
+
+recorderManager.start(options)
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.setMiterLimit</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextsetmiterlimitnumber-miterlimit">CanvasContext.setMiterLimit(number miterLimit)</h3>
+<blockquote>
+<p>&#x4ECE;&#x57FA;&#x7840;&#x5E93; <a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.90 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.90</a> &#x5F00;&#x59CB;&#xFF0C;&#x672C;&#x63A5;&#x53E3;&#x505C;&#x6B62;&#x7EF4;&#x62A4;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <code>CanvasContext.miterLimit</code> &#x4EE3;&#x66FF;</p>
+</blockquote>
+<p>&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x659C;&#x63A5;&#x957F;&#x5EA6;&#x3002;&#x659C;&#x63A5;&#x957F;&#x5EA6;&#x6307;&#x7684;&#x662F;&#x5728;&#x4E24;&#x6761;&#x7EBF;&#x4EA4;&#x6C47;&#x5904;&#x5185;&#x89D2;&#x548C;&#x5916;&#x89D2;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x5F53; <a href="CanvasContext.setLineJoin.html">CanvasContext.setLineJoin()</a> &#x4E3A; miter &#x65F6;&#x624D;&#x6709;&#x6548;&#x3002;&#x8D85;&#x8FC7;&#x6700;&#x5927;&#x503E;&#x659C;&#x957F;&#x5EA6;&#x7684;&#xFF0C;&#x8FDE;&#x63A5;&#x5904;&#x5C06;&#x4EE5; lineJoin &#x4E3A; bevel &#x6765;&#x663E;&#x793A;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="number-miterlimit">number miterLimit</h5>
+<p>&#x6700;&#x5927;&#x659C;&#x63A5;&#x957F;&#x5EA6;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.beginPath()
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.setLineJoin(<span class="hljs-string">&apos;miter&apos;</span>)
+ctx.setMiterLimit(<span class="hljs-number">1</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">50</span>)
+ctx.lineTo(<span class="hljs-number">10</span>, <span class="hljs-number">90</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.setLineJoin(<span class="hljs-string">&apos;miter&apos;</span>)
+ctx.setMiterLimit(<span class="hljs-number">2</span>)
+ctx.moveTo(<span class="hljs-number">50</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">140</span>, <span class="hljs-number">50</span>)
+ctx.lineTo(<span class="hljs-number">50</span>, <span class="hljs-number">90</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.setLineJoin(<span class="hljs-string">&apos;miter&apos;</span>)
+ctx.setMiterLimit(<span class="hljs-number">3</span>)
+ctx.moveTo(<span class="hljs-number">90</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">180</span>, <span class="hljs-number">50</span>)
+ctx.lineTo(<span class="hljs-number">90</span>, <span class="hljs-number">90</span>)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.setLineWidth(<span class="hljs-number">10</span>)
+ctx.setLineJoin(<span class="hljs-string">&apos;miter&apos;</span>)
+ctx.setMiterLimit(<span class="hljs-number">4</span>)
+ctx.moveTo(<span class="hljs-number">130</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">220</span>, <span class="hljs-number">50</span>)
+ctx.lineTo(<span class="hljs-number">130</span>, <span class="hljs-number">90</span>)
+ctx.stroke()
+
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/miter-limit.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

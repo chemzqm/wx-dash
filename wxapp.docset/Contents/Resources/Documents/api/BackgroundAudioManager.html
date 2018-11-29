@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>BackgroundAudioManager</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="backgroundaudiomanager">BackgroundAudioManager</h3>
+<p>BackgroundAudioManager &#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a> &#x83B7;&#x53D6;&#x3002;</p>
+<h4 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h4>
+<h5 id="string-src">string src</h5>
+<p>&#x97F3;&#x9891;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF08;<a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.2.3 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.2.3</a> &#x5F00;&#x59CB;&#x652F;&#x6301;&#x4E91;&#x6587;&#x4EF6;ID&#xFF09;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;<strong>&#x5F53;&#x8BBE;&#x7F6E;&#x4E86;&#x65B0;&#x7684; src &#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5F00;&#x59CB;&#x64AD;&#x653E;</strong>&#xFF0C;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;&#x6709; m4a, aac, mp3, wav&#x3002;</p>
+<h5 id="number-starttime">number startTime</h5>
+<p>&#x97F3;&#x9891;&#x5F00;&#x59CB;&#x64AD;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#x3002;</p>
+<h5 id="string-title">string title</h5>
+<p>&#x97F3;&#x9891;&#x6807;&#x9898;&#xFF0C;&#x7528;&#x4E8E;&#x539F;&#x751F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x5668;&#x97F3;&#x9891;&#x6807;&#x9898;&#xFF08;&#x5FC5;&#x586B;&#xFF09;&#x3002;&#x539F;&#x751F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x5668;&#x4E2D;&#x7684;&#x5206;&#x4EAB;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x4EAB;&#x51FA;&#x53BB;&#x7684;&#x5361;&#x7247;&#x6807;&#x9898;&#xFF0C;&#x4E5F;&#x5C06;&#x4F7F;&#x7528;&#x8BE5;&#x503C;&#x3002;</p>
+<h5 id="string-epname">string epname</h5>
+<p>&#x4E13;&#x8F91;&#x540D;&#xFF0C;&#x539F;&#x751F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x5668;&#x4E2D;&#x7684;&#x5206;&#x4EAB;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x4EAB;&#x51FA;&#x53BB;&#x7684;&#x5361;&#x7247;&#x7B80;&#x4ECB;&#xFF0C;&#x4E5F;&#x5C06;&#x4F7F;&#x7528;&#x8BE5;&#x503C;&#x3002;</p>
+<h5 id="string-singer">string singer</h5>
+<p>&#x6B4C;&#x624B;&#x540D;&#xFF0C;&#x539F;&#x751F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x5668;&#x4E2D;&#x7684;&#x5206;&#x4EAB;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x4EAB;&#x51FA;&#x53BB;&#x7684;&#x5361;&#x7247;&#x7B80;&#x4ECB;&#xFF0C;&#x4E5F;&#x5C06;&#x4F7F;&#x7528;&#x8BE5;&#x503C;&#x3002;</p>
+<h5 id="string-coverimgurl">string coverImgUrl</h5>
+<p>&#x5C01;&#x9762;&#x56FE; URL&#xFF0C;&#x7528;&#x4E8E;&#x505A;&#x539F;&#x751F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x5668;&#x80CC;&#x666F;&#x56FE;&#x3002;&#x539F;&#x751F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x5668;&#x4E2D;&#x7684;&#x5206;&#x4EAB;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x4EAB;&#x51FA;&#x53BB;&#x7684;&#x5361;&#x7247;&#x914D;&#x56FE;&#x53CA;&#x80CC;&#x666F;&#x4E5F;&#x5C06;&#x4F7F;&#x7528;&#x8BE5;&#x56FE;&#x3002;</p>
+<h5 id="string-weburl">string webUrl</h5>
+<p>&#x9875;&#x9762;&#x94FE;&#x63A5;&#xFF0C;&#x539F;&#x751F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x5668;&#x4E2D;&#x7684;&#x5206;&#x4EAB;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x4EAB;&#x51FA;&#x53BB;&#x7684;&#x5361;&#x7247;&#x7B80;&#x4ECB;&#xFF0C;&#x4E5F;&#x5C06;&#x4F7F;&#x7528;&#x8BE5;&#x503C;&#x3002;</p>
+<h5 id="string-protocol">string protocol</h5>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.9.94 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x97F3;&#x9891;&#x534F;&#x8BAE;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; &apos;http&apos;&#xFF0C;&#x8BBE;&#x7F6E; &apos;hls&apos; &#x53EF;&#x4EE5;&#x652F;&#x6301;&#x64AD;&#x653E; HLS &#x534F;&#x8BAE;&#x7684;&#x76F4;&#x64AD;&#x97F3;&#x9891;&#x3002;</p>
+<h5 id="number-duration">number duration</h5>
+<p>&#x5F53;&#x524D;&#x97F3;&#x9891;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6709;&#x5408;&#x6CD5; src &#x65F6;&#x8FD4;&#x56DE;&#x3002;&#xFF08;&#x53EA;&#x8BFB;&#xFF09;</p>
+<h5 id="number-currenttime">number currentTime</h5>
+<p>&#x5F53;&#x524D;&#x97F3;&#x9891;&#x7684;&#x64AD;&#x653E;&#x4F4D;&#x7F6E;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;s&#xFF09;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6709;&#x5408;&#x6CD5; src &#x65F6;&#x8FD4;&#x56DE;&#x3002;&#xFF08;&#x53EA;&#x8BFB;&#xFF09;</p>
+<h5 id="boolean-paused">boolean paused</h5>
+<p>&#x5F53;&#x524D;&#x662F;&#x5426;&#x6682;&#x505C;&#x6216;&#x505C;&#x6B62;&#x3002;&#xFF08;&#x53EA;&#x8BFB;&#xFF09;</p>
+<h5 id="number-buffered">number buffered</h5>
+<p>&#x97F3;&#x9891;&#x5DF2;&#x7F13;&#x51B2;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4EC5;&#x4FDD;&#x8BC1;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x65F6;&#x95F4;&#x70B9;&#x5230;&#x6B64;&#x65F6;&#x95F4;&#x70B9;&#x5185;&#x5BB9;&#x5DF2;&#x7F13;&#x51B2;&#x3002;&#xFF08;&#x53EA;&#x8BFB;&#xFF09;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
+<h5 id="backgroundaudiomanagerplay"><a href="BackgroundAudioManager.play.html">BackgroundAudioManager.play()</a></h5>
+<p>&#x64AD;&#x653E;&#x97F3;&#x4E50;</p>
+<h5 id="backgroundaudiomanagerpause"><a href="BackgroundAudioManager.pause.html">BackgroundAudioManager.pause()</a></h5>
+<p>&#x6682;&#x505C;&#x97F3;&#x4E50;</p>
+<h5 id="backgroundaudiomanagerseeknumber-currenttime"><a href="BackgroundAudioManager.seek.html">BackgroundAudioManager.seek(number currentTime)</a></h5>
+<p>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</p>
+<h5 id="backgroundaudiomanagerstop"><a href="BackgroundAudioManager.stop.html">BackgroundAudioManager.stop()</a></h5>
+<p>&#x505C;&#x6B62;&#x97F3;&#x4E50;</p>
+<h5 id="backgroundaudiomanageroncanplayfunction-callback"><a href="BackgroundAudioManager.onCanplay.html">BackgroundAudioManager.onCanplay(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x8FDB;&#x5165;&#x53EF;&#x64AD;&#x653E;&#x72B6;&#x6001;&#x4E8B;&#x4EF6;&#x3002;&#x4F46;&#x4E0D;&#x4FDD;&#x8BC1;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x6D41;&#x7545;&#x64AD;&#x653E;</p>
+<h5 id="backgroundaudiomanageronwaitingfunction-callback"><a href="BackgroundAudioManager.onWaiting.html">BackgroundAudioManager.onWaiting(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x97F3;&#x9891;&#x52A0;&#x8F7D;&#x4E2D;&#x4E8B;&#x4EF6;&#x3002;&#x5F53;&#x97F3;&#x9891;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x4E0D;&#x8DB3;&#xFF0C;&#x9700;&#x8981;&#x505C;&#x4E0B;&#x6765;&#x52A0;&#x8F7D;&#x65F6;&#x4F1A;&#x89E6;&#x53D1;</p>
+<h5 id="backgroundaudiomanageronerrorfunction-callback"><a href="BackgroundAudioManager.onError.html">BackgroundAudioManager.onError(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanageronplayfunction-callback"><a href="BackgroundAudioManager.onPlay.html">BackgroundAudioManager.onPlay(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanageronpausefunction-callback"><a href="BackgroundAudioManager.onPause.html">BackgroundAudioManager.onPause(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x6682;&#x505C;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanageronseekingfunction-callback"><a href="BackgroundAudioManager.onSeeking.html">BackgroundAudioManager.onSeeking(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x5F00;&#x59CB;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanageronseekedfunction-callback"><a href="BackgroundAudioManager.onSeeked.html">BackgroundAudioManager.onSeeked(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x5B8C;&#x6210;&#x8DF3;&#x8F6C;&#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanageronendedfunction-callback"><a href="BackgroundAudioManager.onEnded.html">BackgroundAudioManager.onEnded(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x81EA;&#x7136;&#x64AD;&#x653E;&#x7ED3;&#x675F;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanageronstopfunction-callback"><a href="BackgroundAudioManager.onStop.html">BackgroundAudioManager.onStop(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanagerontimeupdatefunction-callback"><a href="BackgroundAudioManager.onTimeUpdate.html">BackgroundAudioManager.onTimeUpdate(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x80CC;&#x666F;&#x97F3;&#x9891;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;</p>
+<h5 id="backgroundaudiomanageronnextfunction-callback"><a href="BackgroundAudioManager.onNext.html">BackgroundAudioManager.onNext(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x7528;&#x6237;&#x5728;&#x7CFB;&#x7EDF;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x9762;&#x677F;&#x70B9;&#x51FB;&#x4E0B;&#x4E00;&#x66F2;&#x4E8B;&#x4EF6;&#xFF08;&#x4EC5;iOS&#xFF09;</p>
+<h5 id="backgroundaudiomanageronprevfunction-callback"><a href="BackgroundAudioManager.onPrev.html">BackgroundAudioManager.onPrev(function callback)</a></h5>
+<p>&#x76D1;&#x542C;&#x7528;&#x6237;&#x5728;&#x7CFB;&#x7EDF;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x9762;&#x677F;&#x70B9;&#x51FB;&#x4E0A;&#x4E00;&#x66F2;&#x4E8B;&#x4EF6;&#xFF08;&#x4EC5;iOS&#xFF09;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> backgroundAudioManager = wx.getBackgroundAudioManager()
+
+backgroundAudioManager.title = <span class="hljs-string">&apos;&#x6B64;&#x65F6;&#x6B64;&#x523B;&apos;</span>
+backgroundAudioManager.epname = <span class="hljs-string">&apos;&#x6B64;&#x65F6;&#x6B64;&#x523B;&apos;</span>
+backgroundAudioManager.singer = <span class="hljs-string">&apos;&#x8BB8;&#x5DCD;&apos;</span>
+backgroundAudioManager.coverImgUrl = <span class="hljs-string">&apos;http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000&apos;</span>
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x4E86; src &#x4E4B;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x64AD;&#x653E;</span>
+backgroundAudioManager.src = <span class="hljs-string">&apos;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46&apos;</span>
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

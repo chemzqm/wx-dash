@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>deleteTemplate</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="deletetemplate">deleteTemplate</h3>
+<blockquote>
+<p>&#x672C;&#x63A5;&#x53E3;&#x5E94;&#x5728;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;</p>
+</blockquote>
+<p>&#x5220;&#x9664;&#x5E10;&#x53F7;&#x4E0B;&#x7684;&#x67D0;&#x4E2A;&#x6A21;&#x677F;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/cgi-bin/wxopen/template/del?access_token=ACCESS_TOKEN
+</code></pre>
+<h4 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td><a href="getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></td>
+<td></td>
+</tr>
+<tr>
+<td>template_id</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x8981;&#x5220;&#x9664;&#x7684;&#x6A21;&#x677F;id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<p>&#x8FD4;&#x56DE;&#x7684; JSON &#x6570;&#x636E;&#x5305;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x9519;&#x8BEF;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>string</td>
+<td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="post-&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;json">POST &#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;JSON</h4>
+<h3 id="&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;</h3>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;template_id&quot;</span>:<span class="hljs-string">&quot;wDYzYZVxobJivW9oMpSCpuvACOfJXQIoKUm0PY397Tc&quot;</span>
+}
+</code></pre>
+<h3 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;</h3>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;errcode&quot;</span>:<span class="hljs-number">0</span>,
+  <span class="hljs-attr">&quot;errmsg&quot;</span>:<span class="hljs-string">&quot;ok&quot;</span>
+}
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

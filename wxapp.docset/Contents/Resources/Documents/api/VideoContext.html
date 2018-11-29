@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>VideoContext</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="videocontext">VideoContext</h3>
+<p>VideoContext &#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="wx.createVideoContext.html">wx.createVideoContext</a> &#x83B7;&#x53D6;&#x3002;</p>
+<p><code>videoContext</code> &#x901A;&#x8FC7; <code>id</code> &#x8DDF;&#x4E00;&#x4E2A; <a href="../component/video.html"><code>&lt;video&gt;</code></a> &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#xFF0C;&#x64CD;&#x4F5C;&#x5BF9;&#x5E94;&#x7684; <a href="../component/video.html"><code>&lt;video&gt;</code></a> &#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h4>
+<h5 id="videocontextplay"><a href="VideoContext.play.html">VideoContext.play()</a></h5>
+<p>&#x64AD;&#x653E;&#x89C6;&#x9891;</p>
+<h5 id="videocontextpause"><a href="VideoContext.pause.html">VideoContext.pause()</a></h5>
+<p>&#x6682;&#x505C;&#x89C6;&#x9891;</p>
+<h5 id="videocontextstop"><a href="VideoContext.stop.html">VideoContext.stop()</a></h5>
+<p>&#x505C;&#x6B62;&#x89C6;&#x9891;</p>
+<h5 id="videocontextseeknumber-position"><a href="VideoContext.seek.html">VideoContext.seek(number position)</a></h5>
+<p>&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</p>
+<h5 id="videocontextsenddanmuobject-data"><a href="VideoContext.sendDanmu.html">VideoContext.sendDanmu(Object data)</a></h5>
+<p>&#x53D1;&#x9001;&#x5F39;&#x5E55;</p>
+<h5 id="videocontextplaybackratenumber-rate"><a href="VideoContext.playbackRate.html">VideoContext.playbackRate(number rate)</a></h5>
+<p>&#x8BBE;&#x7F6E;&#x500D;&#x901F;&#x64AD;&#x653E;</p>
+<h5 id="videocontextrequestfullscreenobject-object"><a href="VideoContext.requestFullScreen.html">VideoContext.requestFullScreen(Object object)</a></h5>
+<p>&#x8FDB;&#x5165;&#x5168;&#x5C4F;</p>
+<h5 id="videocontextexitfullscreen"><a href="VideoContext.exitFullScreen.html">VideoContext.exitFullScreen()</a></h5>
+<p>&#x9000;&#x51FA;&#x5168;&#x5C4F;</p>
+<h5 id="videocontextshowstatusbar"><a href="VideoContext.showStatusBar.html">VideoContext.showStatusBar()</a></h5>
+<p>&#x663E;&#x793A;&#x72B6;&#x6001;&#x680F;&#xFF0C;&#x4EC5;&#x5728;iOS&#x5168;&#x5C4F;&#x4E0B;&#x6709;&#x6548;</p>
+<h5 id="videocontexthidestatusbar"><a href="VideoContext.hideStatusBar.html">VideoContext.hideStatusBar()</a></h5>
+<p>&#x9690;&#x85CF;&#x72B6;&#x6001;&#x680F;&#xFF0C;&#x4EC5;&#x5728;iOS&#x5168;&#x5C4F;&#x4E0B;&#x6709;&#x6548;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p><a href="https://developers.weixin.qq.com/s/X5V6Xmmk6xYB" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myVideo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span> <span class="hljs-attr">enable-danmu</span> <span class="hljs-attr">danmu-btn</span> <span class="hljs-attr">controls</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bindblur</span>=<span class="hljs-string">&quot;bindInputBlur&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindSendDanmu&quot;</span>&gt;</span>&#x53D1;&#x9001;&#x5F39;&#x5E55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> rgb = []
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">3</span>; ++i) {
+    <span class="hljs-keyword">let</span> color = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">256</span>).toString(<span class="hljs-number">16</span>)
+    color = color.length == <span class="hljs-number">1</span> ? <span class="hljs-string">&apos;0&apos;</span> + color : color
+    rgb.push(color)
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;#&apos;</span> + rgb.join(<span class="hljs-string">&apos;&apos;</span>)
+}
+
+Page({
+  onReady (res) {
+    <span class="hljs-keyword">this</span>.videoContext = wx.createVideoContext(<span class="hljs-string">&apos;myVideo&apos;</span>)
+  },
+  <span class="hljs-attr">inputValue</span>: <span class="hljs-string">&apos;&apos;</span>,
+  bindInputBlur (e) {
+    <span class="hljs-keyword">this</span>.inputValue = e.detail.value
+  },
+  bindSendDanmu () {
+    <span class="hljs-keyword">this</span>.videoContext.sendDanmu({
+      <span class="hljs-attr">text</span>: <span class="hljs-keyword">this</span>.inputValue,
+      <span class="hljs-attr">color</span>: getRandomColor()
+    })
+  }
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

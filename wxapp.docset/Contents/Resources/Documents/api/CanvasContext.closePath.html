@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.closePath</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextclosepath">CanvasContext.closePath()</h3>
+<p>&#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#x3002;&#x4F1A;&#x8FDE;&#x63A5;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#x3002;&#x5982;&#x679C;&#x5173;&#x95ED;&#x8DEF;&#x5F84;&#x540E;&#x6CA1;&#x6709;&#x8C03;&#x7528; <code>fill</code> &#x6216;&#x8005; <code>stroke</code> &#x5E76;&#x5F00;&#x542F;&#x4E86;&#x65B0;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x90A3;&#x4E4B;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x6E32;&#x67D3;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
+ctx.closePath()
+ctx.stroke()
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/close-line.png" alt=""></p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<span class="hljs-comment">// begin path</span>
+ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+ctx.closePath()
+
+<span class="hljs-comment">// begin another path</span>
+ctx.beginPath()
+ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+
+<span class="hljs-comment">// only fill this rect, not in current path</span>
+ctx.setFillStyle(<span class="hljs-string">&apos;blue&apos;</span>)
+ctx.fillRect(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+
+ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+
+<span class="hljs-comment">// it will fill current path</span>
+ctx.setFillStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.fill()
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/close-path.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

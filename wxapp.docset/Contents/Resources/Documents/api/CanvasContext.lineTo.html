@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.lineTo</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextlinetonumber-x-number-y">CanvasContext.lineTo(number x, number y)</h3>
+<p>&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x6761;&#x4ECE;&#x4E0A;&#x6B21;&#x6307;&#x5B9A;&#x70B9;&#x5230;&#x76EE;&#x6807;&#x70B9;&#x7684;&#x7EBF;&#x3002;&#x7528; <code>stroke</code> &#x65B9;&#x6CD5;&#x6765;&#x753B;&#x7EBF;&#x6761;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="number-x">number x</h5>
+<p>&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x7684; x &#x5750;&#x6807;</p>
+<h5 id="number-y">number y</h5>
+<p>&#x76EE;&#x6807;&#x4F4D;&#x7F6E;&#x7684; y &#x5750;&#x6807;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
+ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>)
+ctx.lineTo(<span class="hljs-number">110</span>, <span class="hljs-number">60</span>)
+ctx.stroke()
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/line-to.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

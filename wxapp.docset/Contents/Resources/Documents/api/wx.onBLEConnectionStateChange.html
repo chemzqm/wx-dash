@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>wx.onBLEConnectionStateChange</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxonbleconnectionstatechangefunction-callback">wx.onBLEConnectionStateChange(function callback)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.1.1 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x76D1;&#x542C;&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x6539;&#x53D8;&#x4E8B;&#x4EF6;&#x3002;&#x5305;&#x62EC;&#x5F00;&#x53D1;&#x8005;&#x4E3B;&#x52A8;&#x8FDE;&#x63A5;&#x6216;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x8BBE;&#x5907;&#x4E22;&#x5931;&#xFF0C;&#x8FDE;&#x63A5;&#x5F02;&#x5E38;&#x65AD;&#x5F00;&#x7B49;&#x7B49;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="function-callback">function callback</h5>
+<p>&#x4F4E;&#x529F;&#x8017;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x6539;&#x53D8;&#x4E8B;&#x4EF6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h6 id="&#x53C2;&#x6570;-2">&#x53C2;&#x6570;</h6>
+<p><strong>Object res</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deviceId</td>
+<td>string</td>
+<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;ID</td>
+<td></td>
+</tr>
+<tr>
+<td>connected</td>
+<td>boolean</td>
+<td>&#x662F;&#x5426;&#x5904;&#x4E8E;&#x5DF2;&#x8FDE;&#x63A5;&#x72B6;&#x6001;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p><a href="https://developers.weixin.qq.com/s/pQU51zmz7a3K" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<pre><code class="language-js">wx.onBLEConnectionStateChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  <span class="hljs-comment">// &#x8BE5;&#x65B9;&#x6CD5;&#x56DE;&#x8C03;&#x4E2D;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x8FDE;&#x63A5;&#x610F;&#x5916;&#x65AD;&#x5F00;&#x7B49;&#x5F02;&#x5E38;&#x60C5;&#x51B5;</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`device <span class="hljs-subst">${res.deviceId}</span> state has changed, connected: <span class="hljs-subst">${res.connected}</span>`</span>)
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

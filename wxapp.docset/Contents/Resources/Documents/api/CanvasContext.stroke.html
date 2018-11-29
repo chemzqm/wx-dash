@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.stroke</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextstroke">CanvasContext.stroke()</h3>
+<p>&#x753B;&#x51FA;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x7684;&#x8FB9;&#x6846;&#x3002;&#x9ED8;&#x8BA4;&#x989C;&#x8272;&#x8272;&#x4E3A;&#x9ED1;&#x8272;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+ctx.moveTo(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>)
+ctx.lineTo(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
+ctx.stroke()
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/stroke-line.png" alt=""></p>
+<p>stroke() &#x63CF;&#x7ED8;&#x7684;&#x7684;&#x8DEF;&#x5F84;&#x662F;&#x4ECE; beginPath() &#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x4F1A;&#x5C06; strokeRect() &#x5305;&#x542B;&#x8FDB;&#x53BB;&#x3002;</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+<span class="hljs-comment">// begin path</span>
+ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+ctx.setStrokeStyle(<span class="hljs-string">&apos;yellow&apos;</span>)
+ctx.stroke()
+
+<span class="hljs-comment">// begin another path</span>
+ctx.beginPath()
+ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+
+<span class="hljs-comment">// only stoke this rect, not in current path</span>
+ctx.setStrokeStyle(<span class="hljs-string">&apos;blue&apos;</span>)
+ctx.strokeRect(<span class="hljs-number">10</span>, <span class="hljs-number">70</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+
+ctx.rect(<span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">30</span>)
+
+<span class="hljs-comment">// it will stroke current path</span>
+ctx.setStrokeStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.stroke()
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/stroke-path.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>CanvasContext.setTextBaseline</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="canvascontextsettextbaselinestring-textbaseline">CanvasContext.setTextBaseline(string textBaseline)</h3>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../framework/compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x8BBE;&#x7F6E;&#x6587;&#x5B57;&#x7684;&#x7AD6;&#x76F4;&#x5BF9;&#x9F50;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="string-textbaseline">string textBaseline</h5>
+<p>&#x6587;&#x5B57;&#x7684;&#x7AD6;&#x76F4;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;</p>
+<p><strong>textBaseline &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top</td>
+<td>&#x9876;&#x90E8;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>&#x5E95;&#x90E8;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>middle</td>
+<td>&#x5C45;&#x4E2D;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>normal</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
+
+ctx.setStrokeStyle(<span class="hljs-string">&apos;red&apos;</span>)
+ctx.moveTo(<span class="hljs-number">5</span>, <span class="hljs-number">75</span>)
+ctx.lineTo(<span class="hljs-number">295</span>, <span class="hljs-number">75</span>)
+ctx.stroke()
+
+ctx.setFontSize(<span class="hljs-number">20</span>)
+
+ctx.setTextBaseline(<span class="hljs-string">&apos;top&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;top&apos;</span>, <span class="hljs-number">5</span>, <span class="hljs-number">75</span>)
+
+ctx.setTextBaseline(<span class="hljs-string">&apos;middle&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;middle&apos;</span>, <span class="hljs-number">50</span>, <span class="hljs-number">75</span>)
+
+ctx.setTextBaseline(<span class="hljs-string">&apos;bottom&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;bottom&apos;</span>, <span class="hljs-number">120</span>, <span class="hljs-number">75</span>)
+
+ctx.setTextBaseline(<span class="hljs-string">&apos;normal&apos;</span>)
+ctx.fillText(<span class="hljs-string">&apos;normal&apos;</span>, <span class="hljs-number">200</span>, <span class="hljs-number">75</span>)
+
+ctx.draw()
+</code></pre>
+<p><img src="../image/canvas/set-text-baseline.png" alt=""></p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

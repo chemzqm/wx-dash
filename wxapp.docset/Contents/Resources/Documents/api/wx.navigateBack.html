@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>路由</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="wxnavigatebackobject-object">wx.navigateBack(Object object)</h3>
+<p>&#x5173;&#x95ED;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x9875;&#x9762;&#x6216;&#x591A;&#x7EA7;&#x9875;&#x9762;&#x3002;&#x53EF;&#x901A;&#x8FC7; <a href="../framework/app-service/route.html#getcurrentpages">getCurrentPages()</a> &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x9875;&#x9762;&#x6808;&#xFF0C;&#x51B3;&#x5B9A;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x51E0;&#x5C42;&#x3002;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<h5 id="object-object">Object object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delta</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x8FD4;&#x56DE;&#x7684;&#x9875;&#x9762;&#x6570;&#xFF0C;&#x5982;&#x679C; delta &#x5927;&#x4E8E;&#x73B0;&#x6709;&#x9875;&#x9762;&#x6570;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5230;&#x9996;&#x9875;&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td>success</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code class="language-javascript"><span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;&#x8C03;&#x7528; navigateTo &#x8DF3;&#x8F6C;&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x9875;&#x9762;&#x4F1A;&#x88AB;&#x52A0;&#x5165;&#x5806;&#x6808;&#xFF0C;&#x800C; redirectTo &#x65B9;&#x6CD5;&#x5219;&#x4E0D;&#x4F1A;&#x3002;&#x89C1;&#x4E0B;&#x65B9;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</span>
+
+<span class="hljs-comment">// &#x6B64;&#x5904;&#x662F;A&#x9875;&#x9762;</span>
+wx.navigateTo({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;B?id=1&apos;</span>
+})
+
+<span class="hljs-comment">// &#x6B64;&#x5904;&#x662F;B&#x9875;&#x9762;</span>
+wx.navigateTo({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;C?id=1&apos;</span>
+})
+
+<span class="hljs-comment">// &#x5728;C&#x9875;&#x9762;&#x5185; navigateBack&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;A&#x9875;&#x9762;</span>
+wx.navigateBack({
+    <span class="hljs-attr">delta</span>: <span class="hljs-number">2</span>
+})
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
