@@ -20,7 +20,20 @@
 <p>&#x5411;&#x4E3B;&#x7EBF;&#x7A0B;/Worker &#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
 <h5 id="object-message">Object message</h5>
-<p>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684; JavaScript &#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684; JavaScript key-value &#x5F62;&#x5F0F;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<p>worker &#x7EBF;&#x7A0B;&#x4E2D;</p>
+<pre><code class="language-js">worker.postMessage({
+  <span class="hljs-attr">msg</span>: <span class="hljs-string">&apos;hello from worker&apos;</span>
+})
+</code></pre>
+<p>&#x4E3B;&#x7EBF;&#x7A0B;&#x4E2D;</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> worker = wx.createWorker(<span class="hljs-string">&apos;workers/request/index.js&apos;</span>)
+
+worker.postMessage({
+  <span class="hljs-attr">msg</span>: <span class="hljs-string">&apos;hello from main&apos;</span>
+})
+</code></pre>
 
                             </section>
                         </div>
