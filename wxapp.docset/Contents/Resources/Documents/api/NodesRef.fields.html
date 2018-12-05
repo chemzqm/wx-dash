@@ -88,6 +88,14 @@
 <td>&#x6307;&#x5B9A;&#x6837;&#x5F0F;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x540D;&#x7684;&#x5F53;&#x524D;&#x503C;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.1.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.1.0</a></td>
 </tr>
+<tr>
+<td>context</td>
+<td>boolean</td>
+<td>false</td>
+<td>&#x5426;</td>
+<td>&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x7684; Context &#x5BF9;&#x8C61;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.2 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.2</a></td>
+</tr>
 </tbody>
 </table>
 <h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
@@ -100,7 +108,8 @@
       <span class="hljs-attr">size</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-attr">scrollOffset</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-attr">properties</span>: [<span class="hljs-string">&apos;scrollX&apos;</span>, <span class="hljs-string">&apos;scrollY&apos;</span>],
-      <span class="hljs-attr">computedStyle</span>: [<span class="hljs-string">&apos;margin&apos;</span>, <span class="hljs-string">&apos;backgroundColor&apos;</span>]
+      <span class="hljs-attr">computedStyle</span>: [<span class="hljs-string">&apos;margin&apos;</span>, <span class="hljs-string">&apos;backgroundColor&apos;</span>],
+      <span class="hljs-attr">context</span>: <span class="hljs-literal">true</span>,
     }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
       res.dataset    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
       res.width      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
@@ -112,6 +121,7 @@
       <span class="hljs-comment">// &#x6B64;&#x5904;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x8981;&#x8FD4;&#x56DE;&#x7684;&#x6837;&#x5F0F;&#x540D;</span>
       res.margin
       res.backgroundColor
+      res.context    <span class="hljs-comment">// &#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x7684; Context &#x5BF9;&#x8C61;</span>
     }).exec()
   }
 })
