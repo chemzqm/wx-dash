@@ -81,7 +81,7 @@
 <tbody>
 <tr>
 <td>data</td>
-<td>Object/string</td>
+<td>any</td>
 <td>key&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;</td>
 <td></td>
 </tr>
@@ -90,13 +90,13 @@
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">wx.getStorage({
   <span class="hljs-attr">key</span>: <span class="hljs-string">&apos;key&apos;</span>,
-  success (res) {
+  success(res) {
     <span class="hljs-built_in">console</span>.log(res.data)
   }
 })
 </code></pre>
 <pre><code class="language-js"><span class="hljs-keyword">try</span> {
-  <span class="hljs-keyword">var</span> value = wx.getStorageSync(<span class="hljs-string">&apos;key&apos;</span>)
+  <span class="hljs-keyword">const</span> value = wx.getStorageSync(<span class="hljs-string">&apos;key&apos;</span>)
   <span class="hljs-keyword">if</span> (value) {
     <span class="hljs-comment">// Do something with return value</span>
   }

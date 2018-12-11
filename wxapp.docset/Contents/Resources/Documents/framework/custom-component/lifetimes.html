@@ -31,18 +31,18 @@
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <pre><code class="language-js">Component({
   <span class="hljs-attr">lifetimes</span>: {
-    <span class="hljs-attr">attached</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    attached() {
       <span class="hljs-comment">// &#x5728;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x8FDB;&#x5165;&#x9875;&#x9762;&#x8282;&#x70B9;&#x6811;&#x65F6;&#x6267;&#x884C;</span>
     },
-    <span class="hljs-attr">detached</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    detached() {
       <span class="hljs-comment">// &#x5728;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x88AB;&#x4ECE;&#x9875;&#x9762;&#x8282;&#x70B9;&#x6811;&#x79FB;&#x9664;&#x65F6;&#x6267;&#x884C;</span>
     },
   },
   <span class="hljs-comment">// &#x4EE5;&#x4E0B;&#x662F;&#x65E7;&#x5F0F;&#x7684;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x6301;&#x5BF9; &lt;2.2.3 &#x7248;&#x672C;&#x57FA;&#x7840;&#x5E93;&#x7684;&#x517C;&#x5BB9;</span>
-  attached: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  attached() {
     <span class="hljs-comment">// &#x5728;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x8FDB;&#x5165;&#x9875;&#x9762;&#x8282;&#x70B9;&#x6811;&#x65F6;&#x6267;&#x884C;</span>
   },
-  <span class="hljs-attr">detached</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  detached() {
     <span class="hljs-comment">// &#x5728;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x88AB;&#x4ECE;&#x9875;&#x9762;&#x8282;&#x70B9;&#x6811;&#x79FB;&#x9664;&#x65F6;&#x6267;&#x884C;</span>
   },
   <span class="hljs-comment">// ...</span>
@@ -133,13 +133,13 @@
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <pre><code class="language-js">Component({
   <span class="hljs-attr">pageLifetimes</span>: {
-    <span class="hljs-attr">show</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    show() {
       <span class="hljs-comment">// &#x9875;&#x9762;&#x88AB;&#x5C55;&#x793A;</span>
     },
-    <span class="hljs-attr">hide</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    hide() {
       <span class="hljs-comment">// &#x9875;&#x9762;&#x88AB;&#x9690;&#x85CF;</span>
     },
-    <span class="hljs-attr">resize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">size</span>) </span>{
+    resize(size) {
       <span class="hljs-comment">// &#x9875;&#x9762;&#x5C3A;&#x5BF8;&#x53D8;&#x5316;</span>
     }
   }

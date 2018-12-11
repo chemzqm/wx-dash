@@ -26,15 +26,15 @@ App({
 </code></pre>
 <pre><code class="language-javascript"><span class="hljs-comment">// a.js</span>
 <span class="hljs-comment">// The localValue can only be used in file a.js.</span>
-<span class="hljs-keyword">var</span> localValue = <span class="hljs-string">&apos;a&apos;</span>
+<span class="hljs-keyword">const</span> localValue = <span class="hljs-string">&apos;a&apos;</span>
 <span class="hljs-comment">// Get the app instance.</span>
-<span class="hljs-keyword">var</span> app = getApp()
+<span class="hljs-keyword">const</span> app = getApp()
 <span class="hljs-comment">// Get the global data and change it.</span>
 app.globalData++
 </code></pre>
 <pre><code class="language-javascript"><span class="hljs-comment">// b.js</span>
 <span class="hljs-comment">// You can redefine localValue in file b.js, without interference with the localValue in a.js.</span>
-<span class="hljs-keyword">var</span> localValue = <span class="hljs-string">&apos;b&apos;</span>
+<span class="hljs-keyword">const</span> localValue = <span class="hljs-string">&apos;b&apos;</span>
 <span class="hljs-comment">// If a.js it run before b.js, now the globalData shoule be 2.</span>
 <span class="hljs-built_in">console</span>.log(getApp().globalData)
 </code></pre>
@@ -57,12 +57,12 @@ app.globalData++
 exports.sayGoodbye = sayGoodbye
 </code></pre>
 <p>&#x200B;&#x5728;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x6A21;&#x5757;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; <code>require(path)</code> &#x5C06;&#x516C;&#x5171;&#x4EE3;&#x7801;&#x5F15;&#x5165;</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">var</span> common = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;common.js&apos;</span>)
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> common = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;common.js&apos;</span>)
 Page({
-  <span class="hljs-attr">helloMINA</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  helloMINA() {
     common.sayHello(<span class="hljs-string">&apos;MINA&apos;</span>)
   },
-  <span class="hljs-attr">goodbyeMINA</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  goodbyeMINA() {
     common.sayGoodbye(<span class="hljs-string">&apos;MINA&apos;</span>)
   }
 })

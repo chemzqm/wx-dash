@@ -38,10 +38,7 @@
   <span class="hljs-attr">&quot;subpackages&quot;</span>: [
     {
       <span class="hljs-attr">&quot;root&quot;</span>: <span class="hljs-string">&quot;packageA&quot;</span>,
-      <span class="hljs-attr">&quot;pages&quot;</span>: [
-        <span class="hljs-string">&quot;pages/cat&quot;</span>,
-        <span class="hljs-string">&quot;pages/dog&quot;</span>
-      ],
+      <span class="hljs-attr">&quot;pages&quot;</span>: [<span class="hljs-string">&quot;pages/cat&quot;</span>, <span class="hljs-string">&quot;pages/dog&quot;</span>],
       <span class="hljs-attr">&quot;plugins&quot;</span>: {
         <span class="hljs-attr">&quot;myPlugin&quot;</span>: {
           <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
@@ -84,10 +81,10 @@
 </code></pre>
 <h3 id="js-&#x63A5;&#x53E3;">js &#x63A5;&#x53E3;</h3>
 <p>&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x7684; js &#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>requirePlugin</code> &#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x63D2;&#x4EF6;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>hello</code> &#x7684;&#x65B9;&#x6CD5;&#x548C;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>world</code> &#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x8C03;&#x7528;&#xFF1A;</p>
-<pre><code class="language-js"><span class="hljs-keyword">var</span> myPluginInterface = requirePlugin(<span class="hljs-string">&apos;myPlugin&apos;</span>);
+<pre><code class="language-js"><span class="hljs-keyword">const</span> myPluginInterface = requirePlugin(<span class="hljs-string">&apos;myPlugin&apos;</span>)
 
-myPluginInterface.hello(); 
-<span class="hljs-keyword">var</span> myWorld = myPluginInterface.world;
+myPluginInterface.hello()
+<span class="hljs-keyword">const</span> myWorld = myPluginInterface.world
 </code></pre>
 
                             </section>

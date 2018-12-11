@@ -89,26 +89,26 @@
 </table>
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--plugin/components/hello-component.wxml--&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">functional-page-navigator</span>
-    <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;chooseAddress&quot;</span>
-    <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;develop&quot;</span>
-    <span class="hljs-attr">bind:success</span>=<span class="hljs-string">&quot;onSuccess&quot;</span>
-    <span class="hljs-attr">bind:fail</span>=<span class="hljs-string">&quot;onFail&quot;</span>
-  &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x9009;&#x62E9;&#x6536;&#x8D27;&#x5730;&#x5740;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">functional-page-navigator</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">functional-page-navigator</span>
+  <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;chooseAddress&quot;</span>
+  <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;develop&quot;</span>
+  <span class="hljs-attr">bind:success</span>=<span class="hljs-string">&quot;onSuccess&quot;</span>
+  <span class="hljs-attr">bind:fail</span>=<span class="hljs-string">&quot;onFail&quot;</span>
+&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x9009;&#x62E9;&#x6536;&#x8D27;&#x5730;&#x5740;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">functional-page-navigator</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript"><span class="hljs-comment">// plugin/components/hello-component.js</span>
 Component({
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">onSuccess</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-      <span class="hljs-built_in">console</span>.log(res.detail);
+    onSuccess(res) {
+      <span class="hljs-built_in">console</span>.log(res.detail)
     },
-    <span class="hljs-attr">onFail</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-      <span class="hljs-built_in">console</span>.log(res);
+    onFail(res) {
+      <span class="hljs-built_in">console</span>.log(res)
     }
   }
-});
+})
 </code></pre>
 
                             </section>

@@ -77,7 +77,7 @@
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{&quot;hello&quot; + name}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript">Page({
-  <span class="hljs-attr">data</span>:{
+  <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;MINA&apos;</span>
   }
 })
@@ -164,14 +164,10 @@
 </code></pre>
 <p>&#x6700;&#x7EC8;&#x7EC4;&#x5408;&#x6210;&#x7684;&#x5BF9;&#x8C61;&#x662F; <code>{a: 5, b: 3, c: 6}</code>&#x3002;</p>
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x82B1;&#x62EC;&#x53F7;&#x548C;&#x5F15;&#x53F7;&#x4E4B;&#x95F4;&#x5982;&#x679C;&#x6709;&#x7A7A;&#x683C;&#xFF0C;&#x5C06;&#x6700;&#x7EC8;&#x88AB;&#x89E3;&#x6790;&#x6210;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{[1,2,3]}} &quot;</span>&gt;</span>
-  {{item}}
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{[1,2,3]}} &quot;</span>&gt;</span> {{item}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x7B49;&#x540C;&#x4E8E;</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{[1,2,3] + &apos; &apos;}}&quot;</span>&gt;</span>
-  {{item}}
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{[1,2,3] + &apos; &apos;}}&quot;</span>&gt;</span> {{item}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 
                             </section>

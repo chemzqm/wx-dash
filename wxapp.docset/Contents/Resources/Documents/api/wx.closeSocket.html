@@ -79,14 +79,14 @@
   <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>
 })
 
-<span class="hljs-comment">//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6709;&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#xFF0C;</span>
-<span class="hljs-comment">//&#x5982;&#x679C; wx.connectSocket &#x8FD8;&#x6CA1;&#x56DE;&#x8C03; wx.onSocketOpen&#xFF0C;&#x800C;&#x5148;&#x8C03;&#x7528; wx.closeSocket&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x505A;&#x4E0D;&#x5230;&#x5173;&#x95ED; WebSocket &#x7684;&#x76EE;&#x7684;&#x3002;</span>
-<span class="hljs-comment">//&#x5FC5;&#x987B;&#x5728; WebSocket &#x6253;&#x5F00;&#x671F;&#x95F4;&#x8C03;&#x7528; wx.closeSocket &#x624D;&#x80FD;&#x5173;&#x95ED;&#x3002;</span>
-wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-comment">// &#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6709;&#x65F6;&#x5E8F;&#x95EE;&#x9898;&#xFF0C;</span>
+<span class="hljs-comment">// &#x5982;&#x679C; wx.connectSocket &#x8FD8;&#x6CA1;&#x56DE;&#x8C03; wx.onSocketOpen&#xFF0C;&#x800C;&#x5148;&#x8C03;&#x7528; wx.closeSocket&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x505A;&#x4E0D;&#x5230;&#x5173;&#x95ED; WebSocket &#x7684;&#x76EE;&#x7684;&#x3002;</span>
+<span class="hljs-comment">// &#x5FC5;&#x987B;&#x5728; WebSocket &#x6253;&#x5F00;&#x671F;&#x95F4;&#x8C03;&#x7528; wx.closeSocket &#x624D;&#x80FD;&#x5173;&#x95ED;&#x3002;</span>
+wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   wx.closeSocket()
 })
 
-wx.onSocketClose(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+wx.onSocketClose(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;WebSocket &#x5DF2;&#x5173;&#x95ED;&#xFF01;&apos;</span>)
 })
 </code></pre>

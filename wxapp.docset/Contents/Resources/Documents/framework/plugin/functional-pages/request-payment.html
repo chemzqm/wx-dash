@@ -90,18 +90,18 @@
 Component({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">args</span>: {
-      <span class="hljs-attr">fee</span>: <span class="hljs-number">1</span>,             <span class="hljs-comment">// &#x652F;&#x4ED8;&#x91D1;&#x989D;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x5206;</span>
+      <span class="hljs-attr">fee</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// &#x652F;&#x4ED8;&#x91D1;&#x989D;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x5206;</span>
       paymentArgs: <span class="hljs-string">&apos;A&apos;</span> <span class="hljs-comment">// &#x5C06;&#x4F20;&#x9012;&#x5230;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;</span>
     }
   },
   <span class="hljs-attr">methods</span>: {
     <span class="hljs-comment">// &#x652F;&#x4ED8;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x63A5;&#x53E3;</span>
-    paymentSuccess: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-      <span class="hljs-built_in">console</span>.log(e);
+    paymentSuccess(e) {
+      <span class="hljs-built_in">console</span>.log(e)
     },
     <span class="hljs-comment">// &#x652F;&#x4ED8;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x63A5;&#x53E3;</span>
-    paymentFailed: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-      <span class="hljs-built_in">console</span>.log(e);
+    paymentFailed(e) {
+      <span class="hljs-built_in">console</span>.log(e)
     }
   }
 })
@@ -208,60 +208,60 @@ exports.beforeRequestPayment = <span class="hljs-function"><span class="hljs-key
   <span class="hljs-comment">// &#x8FD9;&#x6837;&#x7684; require &#x8C03;&#x7528;&#x5728;&#x672A;&#x6765;&#x5C06;&#x4E0D;&#x88AB;&#x652F;&#x6301;&#x3002;</span>
   <span class="hljs-comment">//</span>
   <span class="hljs-comment">// &#x540C;&#x5728; functional-pages &#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x53EF;&#x4EE5; require</span>
-  <span class="hljs-keyword">var</span> getOpenIdURL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./URL&apos;</span>).getOpenIdURL;
-  <span class="hljs-keyword">var</span> paymentURL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./URL&apos;</span>).paymentURL;
+  <span class="hljs-keyword">const</span> getOpenIdURL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./URL&apos;</span>).getOpenIdURL
+  <span class="hljs-keyword">const</span> paymentURL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./URL&apos;</span>).paymentURL
 
   <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6B64;&#x5904;&#x5E94;&#x4E3A;&#x4ECE;&#x63D2;&#x4EF6;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684; &apos;A&apos;</span>
-  <span class="hljs-keyword">var</span> customArgument = paymentArgs.customArgument;
+  <span class="hljs-keyword">const</span> customArgument = paymentArgs.customArgument
 
   <span class="hljs-comment">// &#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x8C03;&#x7528; wx.login &#x65B9;&#x6CD5;&#x83B7;&#x53D6; code&#xFF0C;&#x7136;&#x540E;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;&#x4F7F;&#x7528; code &#x6362;&#x53D6;&#x4E0B;&#x5355;&#x7528;&#x6237;&#x7684; openId</span>
   <span class="hljs-comment">// &#x5177;&#x4F53;&#x6587;&#x6863;&#x53C2;&#x8003; https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html?t=20161230#wxloginobject</span>
   wx.login({
-    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+    success(data) {
       wx.request({
         <span class="hljs-attr">url</span>: getOpenIdURL,
-        <span class="hljs-attr">data</span>: { <span class="hljs-attr">code</span>: data.code },
-        <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-attr">data</span>: {<span class="hljs-attr">code</span>: data.code},
+        success(res) {
           <span class="hljs-comment">// &#x62C9;&#x53D6;&#x7528;&#x6237; openid &#x6210;&#x529F;</span>
           <span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x8C03;&#x7528;&#x652F;&#x4ED8;&#x7EDF;&#x4E00;&#x4E0B;&#x5355;&#xFF0C;&#x8FD4;&#x56DE;&#x652F;&#x4ED8;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x5F00;&#x53D1;&#x548C;&#x666E;&#x901A;&#x7684; wx.requestPayment &#x76F8;&#x540C;</span>
           <span class="hljs-comment">// &#x6587;&#x6863;&#x53EF;&#x4EE5;&#x53C2;&#x8003; https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_4&amp;index=3</span>
           wx.request({
             <span class="hljs-attr">url</span>: paymentURL,
-            <span class="hljs-attr">data</span>: { <span class="hljs-attr">openid</span>: res.data.openid },
+            <span class="hljs-attr">data</span>: {<span class="hljs-attr">openid</span>: res.data.openid},
             <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;POST&apos;</span>,
-            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;unified order success, response is:&apos;</span>, res);
-              <span class="hljs-keyword">var</span> payargs = res.data.payargs;
+            success(res) {
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;unified order success, response is:&apos;</span>, res)
+              <span class="hljs-keyword">const</span> payargs = res.data.payargs
               <span class="hljs-comment">// &#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570; callback &#x8FDB;&#x884C;&#x652F;&#x4ED8;</span>
               <span class="hljs-comment">// &#x5728; callback &#x4E2D;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A; err &#x548C; requestPaymentArgs&#xFF1A;</span>
               <span class="hljs-comment">// err &#x5E94;&#x4E3A; null &#xFF08;&#x6216;&#x8005;&#x4E00;&#x4E9B;&#x5931;&#x8D25;&#x4FE1;&#x606F;&#xFF09;&#xFF1B;</span>
               <span class="hljs-comment">// requestPaymentArgs &#x5C06;&#x88AB;&#x7528;&#x4E8E;&#x8C03;&#x7528; wx.requestPayment&#xFF0C;&#x9664;&#x4E86; success/fail/complete &#x4E0D;&#x88AB;&#x652F;&#x6301;&#x5916;&#xFF0C;</span>
               <span class="hljs-comment">// &#x5E94;&#x4E0E; wx.requestPayment &#x53C2;&#x6570;&#x76F8;&#x540C;&#x3002;</span>
-              <span class="hljs-keyword">var</span> error = <span class="hljs-literal">null</span>;
-              <span class="hljs-keyword">var</span> requestPaymentArgs = {
+              <span class="hljs-keyword">const</span> error = <span class="hljs-literal">null</span>
+              <span class="hljs-keyword">const</span> requestPaymentArgs = {
                 <span class="hljs-attr">timeStamp</span>: payargs.timeStamp,
                 <span class="hljs-attr">nonceStr</span>: payargs.nonceStr,
                 <span class="hljs-attr">package</span>: payargs.package,
                 <span class="hljs-attr">signType</span>: payargs.signType,
                 <span class="hljs-attr">paySign</span>: payargs.paySign,
-              };
-              callback(error, requestPaymentArgs);
+              }
+              callback(error, requestPaymentArgs)
             }
-          });
+          })
         },
-        <span class="hljs-attr">fail</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x62C9;&#x53D6;&#x7528;&#x6237;openid&#x5931;&#x8D25;&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x5F00;&#x653E;&#x63A5;&#x53E3;&#x7B49;&#x670D;&#x52A1;&apos;</span>, res);
+        fail(res) {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x62C9;&#x53D6;&#x7528;&#x6237;openid&#x5931;&#x8D25;&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x5F00;&#x653E;&#x63A5;&#x53E3;&#x7B49;&#x670D;&#x52A1;&apos;</span>, res)
           <span class="hljs-comment">// callback &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</span>
-          callback(res);
+          callback(res)
         }
-      });
+      })
     },
-    <span class="hljs-attr">fail</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+    fail(err) {
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;wx.login &#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#xFF0C;&#x5C06;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x5F00;&#x653E;&#x63A5;&#x53E3;&#x7B49;&#x670D;&#x52A1;&apos;</span>, err)
       <span class="hljs-comment">// callback &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</span>
-      callback(err);
+      callback(err)
     }
-  });
+  })
 }
 </code></pre>
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x529F;&#x80FD;&#x9875;&#x51FD;&#x6570;&#x4E0D;&#x5E94; <code>require</code> &#x5176;&#x4ED6;&#x975E; <code>functional-pages</code> &#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4ED6;&#x975E; <code>functional-pages</code> &#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x4E0D;&#x5E94; <code>require</code> &#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x6837;&#x7684; <code>require</code> &#x8C03;&#x7528;&#x5728;&#x672A;&#x6765;&#x5C06;&#x4E0D;&#x88AB;&#x652F;&#x6301;&#x3002;</strong></p>

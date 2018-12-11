@@ -127,8 +127,8 @@
 dataView.setUint8(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
 
 wx.startHCE({
-  success (res) {
-    wx.onHCEMessage(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  success(res) {
+    wx.onHCEMessage(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
       <span class="hljs-keyword">if</span> (res.messageType === <span class="hljs-number">1</span>) {
         wx.sendHCEMessage({<span class="hljs-attr">data</span>: buffer})
       }

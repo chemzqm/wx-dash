@@ -84,25 +84,24 @@
 <p><a href="https://developers.weixin.qq.com/s/Egao9cm46gY6" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-view&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;add&quot;</span>&gt;</span>add line<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;add&quot;</span>&gt;</span>add line<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;remove&quot;</span>&gt;</span>remove line<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="language-js"><span class="hljs-keyword">var</span> initData = <span class="hljs-string">&apos;this is first line\nthis is second line&apos;</span>
-<span class="hljs-keyword">var</span> extraLine = [];
+<pre><code class="language-js"><span class="hljs-keyword">const</span> initData = <span class="hljs-string">&apos;this is first line\nthis is second line&apos;</span>
+<span class="hljs-keyword">const</span> extraLine = []
 Page({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">text</span>: initData
   },
-  <span class="hljs-attr">add</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  add(e) {
     extraLine.push(<span class="hljs-string">&apos;other line&apos;</span>)
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">text</span>: initData + <span class="hljs-string">&apos;\n&apos;</span> + extraLine.join(<span class="hljs-string">&apos;\n&apos;</span>)
     })
   },
-  <span class="hljs-attr">remove</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  remove(e) {
     <span class="hljs-keyword">if</span> (extraLine.length &gt; <span class="hljs-number">0</span>) {
       extraLine.pop()
       <span class="hljs-keyword">this</span>.setData({
@@ -111,7 +110,6 @@ Page({
     }
   }
 })
-
 </code></pre>
 <p><img src="../image/pic/text.png" alt="text"></p>
 <h4 id="bug--tip">Bug &amp; Tip</h4>

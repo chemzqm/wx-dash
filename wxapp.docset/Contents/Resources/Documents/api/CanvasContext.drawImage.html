@@ -47,12 +47,11 @@
 <pre><code class="language-javascript"><span class="hljs-keyword">const</span> ctx = wx.createCanvasContext(<span class="hljs-string">&apos;myCanvas&apos;</span>)
 
 wx.chooseImage({
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+  success(res) {
     ctx.drawImage(res.tempFilePaths[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
     ctx.draw()
   }
 })
-
 </code></pre>
 <p><img src="../image/canvas/draw-image.png" alt=""></p>
 

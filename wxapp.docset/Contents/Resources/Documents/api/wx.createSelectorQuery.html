@@ -27,8 +27,8 @@
 <pre><code class="language-js"><span class="hljs-keyword">const</span> query = wx.createSelectorQuery()
 query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect()
 query.selectViewport().scrollOffset()
-query.exec(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-  res[<span class="hljs-number">0</span>].top       <span class="hljs-comment">// #the-id&#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+query.exec(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+  res[<span class="hljs-number">0</span>].top <span class="hljs-comment">// #the-id&#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
   res[<span class="hljs-number">1</span>].scrollTop <span class="hljs-comment">// &#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
 })
 </code></pre>

@@ -28,9 +28,9 @@
 <h5 id="selectorquery"><a href="SelectorQuery.html">SelectorQuery</a></h5>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">Component({
-  queryMultipleNodes (){
+  queryMultipleNodes() {
     <span class="hljs-keyword">const</span> query = wx.createSelectorQuery().in(<span class="hljs-keyword">this</span>)
-    query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+    query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
       res.top <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5185; #the-id &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
     }).exec()
   }

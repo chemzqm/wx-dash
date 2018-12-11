@@ -170,8 +170,8 @@
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <p><a href="https://developers.weixin.qq.com/s/pQU51zmz7a3K" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-js"><span class="hljs-comment">// &#x5411;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x53D1;&#x9001;&#x4E00;&#x4E2A;0x00&#x7684;16&#x8FDB;&#x5236;&#x6570;&#x636E;</span>
-<span class="hljs-keyword">let</span> buffer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ArrayBuffer</span>(<span class="hljs-number">1</span>)
-<span class="hljs-keyword">let</span> dataView = <span class="hljs-keyword">new</span> <span class="hljs-built_in">DataView</span>(buffer)
+<span class="hljs-keyword">const</span> buffer = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ArrayBuffer</span>(<span class="hljs-number">1</span>)
+<span class="hljs-keyword">const</span> dataView = <span class="hljs-keyword">new</span> <span class="hljs-built_in">DataView</span>(buffer)
 dataView.setUint8(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
 
 wx.writeBLECharacteristicValue({
@@ -183,7 +183,7 @@ wx.writeBLECharacteristicValue({
   characteristicId,
   <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684;value&#x662F;ArrayBuffer&#x7C7B;&#x578B;</span>
   value: buffer,
-  success (res) {
+  success(res) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;writeBLECharacteristicValue success&apos;</span>, res.errMsg)
   }
 })

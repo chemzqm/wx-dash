@@ -76,7 +76,7 @@
 <p><a href="https://developers.weixin.qq.com/s/hGa3DcmW6qYw" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;checkboxChange&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{items}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>/&gt;</span>{{item.value}}
+    <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span> /&gt;</span>{{item.value}}
   <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">checkbox-group</span>&gt;</span>
 </code></pre>
@@ -91,7 +91,7 @@
       {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;TUR&apos;</span>, <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;&#x6CD5;&#x56FD;&apos;</span>},
     ]
   },
-  <span class="hljs-attr">checkboxChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  checkboxChange(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkbox&#x53D1;&#x751F;change&#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;value&#x503C;&#x4E3A;&#xFF1A;&apos;</span>, e.detail.value)
   }
 })

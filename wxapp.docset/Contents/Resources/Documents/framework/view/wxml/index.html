@@ -57,9 +57,7 @@ Page({
 <h3 id="&#x6A21;&#x677F;"><a href="template.html">&#x6A21;&#x677F;</a></h3>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;staffName&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
-    FirstName: {{firstName}}, LastName: {{lastName}}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> FirstName: {{firstName}}, LastName: {{lastName}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;staffName&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;{{...staffA}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
@@ -82,7 +80,7 @@ Page({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">count</span>: <span class="hljs-number">1</span>
   },
-  <span class="hljs-attr">add</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  add(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">count</span>: <span class="hljs-keyword">this</span>.data.count + <span class="hljs-number">1</span>
     })

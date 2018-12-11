@@ -88,22 +88,26 @@
 <span class="hljs-comment">&lt;!-- &#x5F53;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x65F6;&#xFF0C;&#x6587;&#x6863;&#x6D41;&#x540E;&#x8FB9;&#x7684; canvas &#x7684;&#x663E;&#x793A;&#x5C42;&#x7EA7;&#x9AD8;&#x4E8E;&#x524D;&#x8FB9;&#x7684; canvas --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 400px; height: 500px;&quot;</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;secondCanvas&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x56E0;&#x4E3A; canvas-id &#x4E0E;&#x524D;&#x4E00;&#x4E2A; canvas &#x91CD;&#x590D;&#xFF0C;&#x8BE5; canvas &#x4E0D;&#x4F1A;&#x663E;&#x793A;&#xFF0C;&#x5E76;&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4E8B;&#x4EF6;&#x5230; AppService --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 400px; height: 500px;&quot;</span> <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;secondCanvas&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;canvasIdErrorCallback&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">canvas</span>
+  <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 400px; height: 500px;&quot;</span>
+  <span class="hljs-attr">canvas-id</span>=<span class="hljs-string">&quot;secondCanvas&quot;</span>
+  <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;canvasIdErrorCallback&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript"><span class="hljs-comment">// canvas.js</span>
 Page({
-  <span class="hljs-attr">canvasIdErrorCallback</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  canvasIdErrorCallback(e) {
     <span class="hljs-built_in">console</span>.error(e.detail.errMsg)
   },
-  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  onReady(e) {
     <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createContext &#x83B7;&#x53D6;&#x7ED8;&#x56FE;&#x4E0A;&#x4E0B;&#x6587; context</span>
-    <span class="hljs-keyword">var</span> context = wx.createCanvasContext(<span class="hljs-string">&apos;firstCanvas&apos;</span>)
-    
-    context.setStrokeStyle(<span class="hljs-string">&quot;#00ff00&quot;</span>)
+    <span class="hljs-keyword">const</span> context = wx.createCanvasContext(<span class="hljs-string">&apos;firstCanvas&apos;</span>)
+
+    context.setStrokeStyle(<span class="hljs-string">&apos;#00ff00&apos;</span>)
     context.setLineWidth(<span class="hljs-number">5</span>)
     context.rect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
     context.stroke()
-    context.setStrokeStyle(<span class="hljs-string">&quot;#ff0000&quot;</span>)
+    context.setStrokeStyle(<span class="hljs-string">&apos;#ff0000&apos;</span>)
     context.setLineWidth(<span class="hljs-number">2</span>)
     context.moveTo(<span class="hljs-number">160</span>, <span class="hljs-number">100</span>)
     context.arc(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">60</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI, <span class="hljs-literal">true</span>)

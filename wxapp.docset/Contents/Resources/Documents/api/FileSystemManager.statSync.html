@@ -53,12 +53,9 @@
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <p>recursive &#x4E3A; false &#x65F6;</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">let</span> fs = wx.getFileSystemManager()
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> fs = wx.getFileSystemManager()
 fs.stat({
-    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
-        wx.env.USER_DATA_PATH
-    }
-    /testDir`</span>,
+  <span class="hljs-attr">path</span>: <span class="hljs-string">`<span class="hljs-subst">${wx.env.USER_DATA_PATH}</span>/testDir`</span>,
   <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
     <span class="hljs-built_in">console</span>.log(res.stats.isDirectory())
   }
@@ -66,14 +63,11 @@ fs.stat({
 </code></pre>
 <p>recursive &#x4E3A; true &#x65F6;</p>
 <pre><code class="language-javascript">fs.stat({
-    <span class="hljs-attr">path</span>: <span class="hljs-string">`$ {
-        wx.env.USER_DATA_PATH
-    }
-    /testDir`</span>,
+  <span class="hljs-attr">path</span>: <span class="hljs-string">`<span class="hljs-subst">${wx.env.USER_DATA_PATH}</span>/testDir`</span>,
   <span class="hljs-attr">recursive</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
     <span class="hljs-built_in">Object</span>.keys(res.stats).forEach(<span class="hljs-function"><span class="hljs-params">path</span> =&gt;</span> {
-      <span class="hljs-keyword">let</span> stats = res.stats[path]
+      <span class="hljs-keyword">const</span> stats = res.stats[path]
       <span class="hljs-built_in">console</span>.log(path, stats.isDirectory())
     })
   }

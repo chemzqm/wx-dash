@@ -145,58 +145,63 @@
 </tr>
 </tbody>
 </table>
+<h4 id="&#x63A5;&#x53E3;&#x8C03;&#x6574;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8C03;&#x6574;&#x8BF4;&#x660E;</h4>
+<p>&#x5728;&#x7528;&#x6237;&#x672A;&#x6388;&#x6743;&#x8FC7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#xFF0C;&#x5C06;&#x4E0D;&#x518D;&#x51FA;&#x73B0;&#x6388;&#x6743;&#x5F39;&#x7A97;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x8FDB;&#x5165; fail &#x56DE;&#x8C03;&#xFF08;&#x8BE6;&#x89C1;<a href="https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01" target="_blank">&#x300A;&#x516C;&#x544A;&#x300B;</a>)&#x3002;&#x5728;&#x7528;&#x6237;&#x5DF2;&#x6388;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x6210;&#x529F;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3002;</p>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code class="language-javascript"><span class="hljs-comment">// &#x5FC5;&#x987B;&#x662F;&#x5728;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x6388;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;</span>
+<pre><code class="language-js"><span class="hljs-comment">// &#x5FC5;&#x987B;&#x662F;&#x5728;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x6388;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;</span>
 wx.getUserInfo({
-    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-keyword">var</span> userInfo = res.userInfo
-        <span class="hljs-keyword">var</span> nickName = userInfo.nickName
-        <span class="hljs-keyword">var</span> avatarUrl = userInfo.avatarUrl
-        <span class="hljs-keyword">var</span> gender = userInfo.gender <span class="hljs-comment">//&#x6027;&#x522B; 0&#xFF1A;&#x672A;&#x77E5;&#x3001;1&#xFF1A;&#x7537;&#x3001;2&#xFF1A;&#x5973;</span>
-        <span class="hljs-keyword">var</span> province = userInfo.province
-        <span class="hljs-keyword">var</span> city = userInfo.city
-        <span class="hljs-keyword">var</span> country = userInfo.country
-    }
+  success(res) {
+    <span class="hljs-keyword">const</span> userInfo = res.userInfo
+    <span class="hljs-keyword">const</span> nickName = userInfo.nickName
+    <span class="hljs-keyword">const</span> avatarUrl = userInfo.avatarUrl
+    <span class="hljs-keyword">const</span> gender = userInfo.gender <span class="hljs-comment">// &#x6027;&#x522B; 0&#xFF1A;&#x672A;&#x77E5;&#x3001;1&#xFF1A;&#x7537;&#x3001;2&#xFF1A;&#x5973;</span>
+    <span class="hljs-keyword">const</span> province = userInfo.province
+    <span class="hljs-keyword">const</span> city = userInfo.city
+    <span class="hljs-keyword">const</span> country = userInfo.country
+  }
 })
 </code></pre>
 <p>encryptedData &#x89E3;&#x5BC6;&#x540E;&#x4E3A;&#x4EE5;&#x4E0B; json &#x7ED3;&#x6784;&#xFF0C;&#x8BE6;&#x89C1;<a href="../framework/open-ability/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</a></p>
-<pre><code class="language-javascript">{
-    <span class="hljs-string">&quot;openId&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
-    <span class="hljs-string">&quot;nickName&quot;</span>: <span class="hljs-string">&quot;NICKNAME&quot;</span>,
-    <span class="hljs-string">&quot;gender&quot;</span>: GENDER,
-    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;CITY&quot;</span>,
-    <span class="hljs-string">&quot;province&quot;</span>: <span class="hljs-string">&quot;PROVINCE&quot;</span>,
-    <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;COUNTRY&quot;</span>,
-    <span class="hljs-string">&quot;avatarUrl&quot;</span>: <span class="hljs-string">&quot;AVATARURL&quot;</span>,
-    <span class="hljs-string">&quot;unionId&quot;</span>: <span class="hljs-string">&quot;UNIONID&quot;</span>,
-    <span class="hljs-string">&quot;watermark&quot;</span>: {
-        <span class="hljs-string">&quot;appid&quot;</span>: <span class="hljs-string">&quot;APPID&quot;</span>,
-        <span class="hljs-string">&quot;timestamp&quot;</span>: TIMESTAMP
-    }
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;openId&quot;</span>: <span class="hljs-string">&quot;OPENID&quot;</span>,
+  <span class="hljs-attr">&quot;nickName&quot;</span>: <span class="hljs-string">&quot;NICKNAME&quot;</span>,
+  <span class="hljs-attr">&quot;gender&quot;</span>: GENDER,
+  <span class="hljs-attr">&quot;city&quot;</span>: <span class="hljs-string">&quot;CITY&quot;</span>,
+  <span class="hljs-attr">&quot;province&quot;</span>: <span class="hljs-string">&quot;PROVINCE&quot;</span>,
+  <span class="hljs-attr">&quot;country&quot;</span>: <span class="hljs-string">&quot;COUNTRY&quot;</span>,
+  <span class="hljs-attr">&quot;avatarUrl&quot;</span>: <span class="hljs-string">&quot;AVATARURL&quot;</span>,
+  <span class="hljs-attr">&quot;unionId&quot;</span>: <span class="hljs-string">&quot;UNIONID&quot;</span>,
+  <span class="hljs-attr">&quot;watermark&quot;</span>: {
+    <span class="hljs-attr">&quot;appid&quot;</span>: <span class="hljs-string">&quot;APPID&quot;</span>,
+    <span class="hljs-attr">&quot;timestamp&quot;</span>: TIMESTAMP
+  }
 }
 </code></pre>
-<h4 id="&#x63A5;&#x53E3;&#x8C03;&#x6574;&#x8BF4;&#x660E;">&#x63A5;&#x53E3;&#x8C03;&#x6574;&#x8BF4;&#x660E;</h4>
-<p>&#x5728;&#x7528;&#x6237;&#x672A;&#x6388;&#x6743;&#x8FC7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#xFF0C;&#x5C06;&#x4E0D;&#x518D;&#x51FA;&#x73B0;&#x6388;&#x6743;&#x5F39;&#x7A97;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x8FDB;&#x5165; fail &#x56DE;&#x8C03;&#xFF08;&#x8BE6;&#x89C1;<a href="https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01" target="_blank">&#x300A;&#x516C;&#x544A;&#x300B;</a>)&#x3002;&#x5728;&#x7528;&#x6237;&#x5DF2;&#x6388;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x6210;&#x529F;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3002;</p>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;-2">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x5982;&#x679C;&#x53EA;&#x662F;&#x5C55;&#x793A;&#x7528;&#x6237;&#x5934;&#x50CF;&#x6635;&#x79F0;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &lt;open-data /&gt; &#x7EC4;&#x4EF6; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userAvatarUrl&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userNickName&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x9700;&#x8981;&#x4F7F;&#x7528; button &#x6765;&#x6388;&#x6743;&#x767B;&#x5F55; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{canIUse}}&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;getUserInfo&quot;</span> <span class="hljs-attr">bindgetuserinfo</span>=<span class="hljs-string">&quot;bindGetUserInfo&quot;</span>&gt;</span>&#x6388;&#x6743;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+  <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{canIUse}}&quot;</span>
+  <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;getUserInfo&quot;</span>
+  <span class="hljs-attr">bindgetuserinfo</span>=<span class="hljs-string">&quot;bindGetUserInfo&quot;</span>
+  &gt;</span>&#x6388;&#x6743;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>
+&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>&gt;</span>&#x8BF7;&#x5347;&#x7EA7;&#x5FAE;&#x4FE1;&#x7248;&#x672C;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js">Page({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">canIUse</span>: wx.canIUse(<span class="hljs-string">&apos;button.open-type.getUserInfo&apos;</span>)
   },
-  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onLoad() {
     <span class="hljs-comment">// &#x67E5;&#x770B;&#x662F;&#x5426;&#x6388;&#x6743;</span>
     wx.getSetting({
-      success (res){
+      success(res) {
         <span class="hljs-keyword">if</span> (res.authSetting[<span class="hljs-string">&apos;scope.userInfo&apos;</span>]) {
           <span class="hljs-comment">// &#x5DF2;&#x7ECF;&#x6388;&#x6743;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528; getUserInfo &#x83B7;&#x53D6;&#x5934;&#x50CF;&#x6635;&#x79F0;</span>
           wx.getUserInfo({
-            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+            success(res) {
               <span class="hljs-built_in">console</span>.log(res.userInfo)
             }
           })
@@ -204,7 +209,7 @@ wx.getUserInfo({
       }
     })
   },
-  bindGetUserInfo (e) {
+  bindGetUserInfo(e) {
     <span class="hljs-built_in">console</span>.log(e.detail.userInfo)
   }
 })

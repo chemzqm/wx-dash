@@ -18,7 +18,7 @@
                             <section class="normal markdown-section">
                               <h2 id="&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h2>
 <p>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x5957;&#x4EE5;&#x5C0F;&#x7A0B;&#x5E8F;&#x548C;&#x7528;&#x6237;&#x7EF4;&#x5EA6;&#x9694;&#x79BB;&#x7684;&#x5B58;&#x50A8;&#x4EE5;&#x53CA;&#x4E00;&#x5957;&#x76F8;&#x5E94;&#x7684;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x3002;&#x901A;&#x8FC7; <a href="../../api/wx.getFileSystemManager.html">wx.getFileSystemManager()</a> &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x7BA1;&#x7406;&#x64CD;&#x4F5C;&#x901A;&#x8FC7; <a href="../../api/FileSystemManager.html">FileSystemManager</a> &#x6765;&#x8C03;&#x7528;&#x3002;</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">var</span> fs = wx.getFileSystemManager()
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> fs = wx.getFileSystemManager()
 </code></pre>
 <p>&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4E24;&#x5927;&#x7C7B;&#xFF1A;</p>
 <ul>
@@ -42,7 +42,7 @@
 <p>&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6307;&#x7684;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x88AB;&#x7528;&#x6237;&#x6DFB;&#x52A0;&#x5230;&#x624B;&#x673A;&#x540E;&#xFF0C;&#x4F1A;&#x6709;&#x4E00;&#x5757;&#x72EC;&#x7ACB;&#x7684;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x533A;&#x57DF;&#xFF0C;&#x4EE5;&#x7528;&#x6237;&#x7EF4;&#x5EA6;&#x9694;&#x79BB;&#x3002;&#x5373;&#x540C;&#x4E00;&#x53F0;&#x624B;&#x673A;&#xFF0C;&#x6BCF;&#x4E2A;&#x5FAE;&#x4FE1;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x5230;&#x5176;&#x4ED6;&#x767B;&#x5F55;&#x7528;&#x6237;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x4E0D;&#x540C; appId &#x4E4B;&#x95F4;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x4E0D;&#x80FD;&#x4E92;&#x76F8;&#x8BBF;&#x95EE;&#x3002;
 <img src="./image/file-sandbox.png" alt="&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6C99;&#x76D2;.png"></p>
 <p>&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5747;&#x4E3A;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#xFF1A;</p>
-<pre><code class="language-javascript">{{&#x534F;&#x8BAE;&#x540D;}}:<span class="hljs-comment">//&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+<pre><code>{{&#x534F;&#x8BAE;&#x540D;}}://&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
 </code></pre>
 <blockquote>
 <p>&#x5176;&#x4E2D;&#xFF0C;&#x534F;&#x8BAE;&#x540D;&#x5728; iOS/Android &#x5BA2;&#x6237;&#x7AEF;&#x4E3A; <code>&quot;wxfile&quot;</code>&#xFF0C;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0A;&#x4E3A; <code>&quot;http&quot;</code>&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x65E0;&#x9700;&#x5173;&#x6CE8;&#x8FD9;&#x4E2A;&#x5DEE;&#x5F02;&#xFF0C;&#x4E5F;&#x4E0D;&#x5E94;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x53BB;&#x786C;&#x7F16;&#x7801;&#x5B8C;&#x6574;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</p>
@@ -51,8 +51,8 @@
 <p>&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x7279;&#x5B9A;&#x63A5;&#x53E3;&#x4EA7;&#x751F;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5199;&#x5165;&#x5185;&#x5BB9;&#x3002;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x4EA7;&#x751F;&#x540E;&#xFF0C;&#x4EC5;&#x5728;&#x5F53;&#x524D;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#x6709;&#x6548;&#xFF0C;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#x5373;&#x4E0D;&#x53EF;&#x7528;&#x3002;&#x56E0;&#x6B64;&#xFF0C;<strong>&#x4E0D;&#x53EF;&#x628A;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#x4E0B;&#x6B21;&#x4F7F;&#x7528;</strong>&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x4E0B;&#x6B21;&#x5728;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x901A;&#x8FC7; <a href="../../api/FileSystemManager.saveFile.html">FileSystemManager.saveFile()</a> &#x6216; <a href="../../api/FileSystemManager.copyFile.html">FileSystemManager.copyFile()</a> &#x63A5;&#x53E3;&#x628A;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x6210;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x6216;&#x672C;&#x5730;&#x7528;&#x6237;&#x6587;&#x4EF6;&#x3002;</p>
 <h5 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h5>
 <pre><code class="language-javascript">wx.chooseImage({
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">var</span> tempFilePaths = res.tempFilePaths <span class="hljs-comment">// tempFilePaths &#x7684;&#x6BCF;&#x4E00;&#x9879;&#x662F;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
+  success(res) {
+    <span class="hljs-keyword">const</span> tempFilePaths = res.tempFilePaths <span class="hljs-comment">// tempFilePaths &#x7684;&#x6BCF;&#x4E00;&#x9879;&#x662F;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</span>
   }
 })
 </code></pre>

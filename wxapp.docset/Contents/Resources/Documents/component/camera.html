@@ -85,9 +85,13 @@
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/VBZ3Jim26zYu" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- camera.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">camera</span> <span class="hljs-attr">device-position</span>=<span class="hljs-string">&quot;back&quot;</span> <span class="hljs-attr">flash</span>=<span class="hljs-string">&quot;off&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;error&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">camera</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;takePhoto&quot;</span>&gt;</span>&#x62CD;&#x7167;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x9884;&#x89C8;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">camera</span>
+  <span class="hljs-attr">device-position</span>=<span class="hljs-string">&quot;back&quot;</span>
+  <span class="hljs-attr">flash</span>=<span class="hljs-string">&quot;off&quot;</span>
+  <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;error&quot;</span>
+  <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">camera</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;takePhoto&quot;</span>&gt;</span>&#x62CD;&#x7167;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x9884;&#x89C8;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;widthFix&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript"><span class="hljs-comment">// camera.js</span>

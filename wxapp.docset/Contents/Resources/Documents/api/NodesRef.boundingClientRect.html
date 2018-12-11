@@ -87,29 +87,29 @@
 <h5 id="selectorquery"><a href="SelectorQuery.html">SelectorQuery</a></h5>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">Page({
-  getRect () {
-    wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rect</span>)</span>{
-      rect.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
+  getRect() {
+    wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">rect</span>) </span>{
+      rect.id <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
       rect.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
-      rect.left    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-      rect.right   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-      rect.top     <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-      rect.bottom  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0B;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-      rect.width   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
-      rect.height  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
+      rect.left <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.right <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.top <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.bottom <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0B;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+      rect.width <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
+      rect.height <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
     }).exec()
   },
-  getAllRects () {
-    wx.createSelectorQuery().selectAll(<span class="hljs-string">&apos;.a-class&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rects</span>)</span>{
-      rects.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rect</span>)</span>{
-        rect.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
+  getAllRects() {
+    wx.createSelectorQuery().selectAll(<span class="hljs-string">&apos;.a-class&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">rects</span>) </span>{
+      rects.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">rect</span>) </span>{
+        rect.id <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
         rect.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
-        rect.left    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-        rect.right   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-        rect.top     <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-        rect.bottom  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0B;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
-        rect.width   <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
-        rect.height  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
+        rect.left <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.right <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.top <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.bottom <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x4E0B;&#x8FB9;&#x754C;&#x5750;&#x6807;</span>
+        rect.width <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
+        rect.height <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
       })
     }).exec()
   }

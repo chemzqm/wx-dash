@@ -45,7 +45,7 @@ Component({
 <p>&#x4EE5;&#x4E0B;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x660E;&#xFF1A;</p>
 <pre><code class="language-js"><span class="hljs-comment">// behavior3.js</span>
 <span class="hljs-built_in">module</span>.exports = Behavior({
-    definitionFilter(defFields, definitionFilterArr) {},
+  definitionFilter(defFields, definitionFilterArr) {},
 })
 
 <span class="hljs-comment">// behavior2.js</span>
@@ -96,14 +96,14 @@ Component({
       <span class="hljs-keyword">const</span> needUpdate = {}
       <span class="hljs-keyword">const</span> data = defFields.data = defFields.data || {}
 
-      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">of</span> computedKeys) {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">of</span> computedKeys) {
         <span class="hljs-keyword">const</span> value = computed[key].call(scope) <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x65B0;&#x503C;</span>
         <span class="hljs-keyword">if</span> (computedCache[key] !== value) needUpdate[key] = computedCache[key] = value
         <span class="hljs-keyword">if</span> (insertToData) data[key] = needUpdate[key] <span class="hljs-comment">// &#x76F4;&#x63A5;&#x63D2;&#x5165;&#x5230; data &#x4E2D;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x624D;&#x9700;&#x8981;&#x7684;&#x64CD;&#x4F5C;</span>
       }
 
       <span class="hljs-keyword">return</span> needUpdate
-    }    
+    }
 
     <span class="hljs-comment">// &#x91CD;&#x5199; setData &#x65B9;&#x6CD5;</span>
     defFields.methods = defFields.methods || {}

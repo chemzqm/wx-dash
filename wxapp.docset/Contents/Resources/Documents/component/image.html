@@ -148,14 +148,17 @@
 <p><a href="https://developers.weixin.qq.com/s/8Mc01cmS6WYi" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page__hd&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page__title&quot;</span>&gt;</span>image<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page__desc&quot;</span>&gt;</span>&#x56FE;&#x7247;<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page__title&quot;</span>&gt;</span>image<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page__desc&quot;</span>&gt;</span>&#x56FE;&#x7247;<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page__bd&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{array}}&quot;</span> <span class="hljs-attr">wx:for-item</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>{{item.text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__ctn&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 200px; height: 200px; background-color: #eeeeee;&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;{{item.mode}}&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">image</span>
+          <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 200px; height: 200px; background-color: #eeeeee;&quot;</span>
+          <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;{{item.mode}}&quot;</span>
+          <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>
+        &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -166,43 +169,43 @@
     <span class="hljs-attr">array</span>: [{
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;scaleToFill&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;scaleToFill&#xFF1A;&#x4E0D;&#x4FDD;&#x6301;&#x7EB5;&#x6A2A;&#x6BD4;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x4F7F;&#x56FE;&#x7247;&#x5B8C;&#x5168;&#x9002;&#x5E94;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;aspectFit&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;aspectFit&#xFF1A;&#x4FDD;&#x6301;&#x7EB5;&#x6A2A;&#x6BD4;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x4F7F;&#x56FE;&#x7247;&#x7684;&#x957F;&#x8FB9;&#x80FD;&#x5B8C;&#x5168;&#x663E;&#x793A;&#x51FA;&#x6765;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;aspectFill&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;aspectFill&#xFF1A;&#x4FDD;&#x6301;&#x7EB5;&#x6A2A;&#x6BD4;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x4FDD;&#x8BC1;&#x56FE;&#x7247;&#x7684;&#x77ED;&#x8FB9;&#x80FD;&#x5B8C;&#x5168;&#x663E;&#x793A;&#x51FA;&#x6765;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;top&apos;</span>,
-      <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;top&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x9876;&#x90E8;&#x533A;&#x57DF;&apos;</span> 
-    }, {      
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;top&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x9876;&#x90E8;&#x533A;&#x57DF;&apos;</span>
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;bottom&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;bottom&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x5E95;&#x90E8;&#x533A;&#x57DF;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;center&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;center&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x4E2D;&#x95F4;&#x533A;&#x57DF;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;left&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;left&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x5DE6;&#x8FB9;&#x533A;&#x57DF;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;right&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;right&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x53F3;&#x8FB9;&#x8FB9;&#x533A;&#x57DF;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;top left&apos;</span>,
-      <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;top left&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x5DE6;&#x4E0A;&#x8FB9;&#x533A;&#x57DF;&apos;</span> 
-    }, { 
+      <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;top left&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x5DE6;&#x4E0A;&#x8FB9;&#x533A;&#x57DF;&apos;</span>
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;top right&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;top right&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x53F3;&#x4E0A;&#x8FB9;&#x533A;&#x57DF;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;bottom left&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;bottom left&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x5DE6;&#x4E0B;&#x8FB9;&#x533A;&#x57DF;&apos;</span>
-    }, { 
+    }, {
       <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;bottom right&apos;</span>,
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;bottom right&#xFF1A;&#x4E0D;&#x7F29;&#x653E;&#x56FE;&#x7247;&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x56FE;&#x7247;&#x7684;&#x53F3;&#x4E0B;&#x8FB9;&#x533A;&#x57DF;&apos;</span>
     }],
     <span class="hljs-attr">src</span>: <span class="hljs-string">&apos;../../resources/cat.jpg&apos;</span>
   },
-  <span class="hljs-attr">imageError</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  imageError(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;image3&#x53D1;&#x751F;error&#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.errMsg)
   }
 })

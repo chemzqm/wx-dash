@@ -61,15 +61,15 @@
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/6db9lcmu6VYt" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;body-view&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;switch1Change&quot;</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;switch2Change&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;switch1Change&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;switch2Change&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js">Page({
-  <span class="hljs-attr">switch1Change</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>)</span>{
+  switch1Change(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;switch1 &#x53D1;&#x751F; change &#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
   },
-  <span class="hljs-attr">switch2Change</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>)</span>{
+  switch2Change(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;switch2 &#x53D1;&#x751F; change &#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
   }
 })

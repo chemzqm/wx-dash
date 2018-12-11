@@ -183,7 +183,10 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">bindblur</span>=<span class="hljs-string">&quot;bindTextAreaBlur&quot;</span> <span class="hljs-attr">auto-height</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x81EA;&#x52A8;&#x53D8;&#x9AD8;&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;placeholder&#x989C;&#x8272;&#x662F;&#x7EA2;&#x8272;&#x7684;&quot;</span> <span class="hljs-attr">placeholder-style</span>=<span class="hljs-string">&quot;color:red;&quot;</span>  /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span>
+    <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;placeholder&#x989C;&#x8272;&#x662F;&#x7EA2;&#x8272;&#x7684;&quot;</span>
+    <span class="hljs-attr">placeholder-style</span>=<span class="hljs-string">&quot;color:red;&quot;</span>
+  /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x805A;&#x7126;&#x7684;textarea&quot;</span> <span class="hljs-attr">auto-focus</span> /&gt;</span>
@@ -196,26 +199,26 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">bindsubmit</span>=<span class="hljs-string">&quot;bindFormSubmit&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;form &#x4E2D;&#x7684; textarea&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;textarea&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;form &#x4E2D;&#x7684; textarea&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;textarea&quot;</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">form-type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span> &#x63D0;&#x4EA4; <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="language-javascript"><span class="hljs-comment">//textarea.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// textarea.js</span>
 Page({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">height</span>: <span class="hljs-number">20</span>,
     <span class="hljs-attr">focus</span>: <span class="hljs-literal">false</span>
   },
-  <span class="hljs-attr">bindButtonTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  bindButtonTap() {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">focus</span>: <span class="hljs-literal">true</span>
     })
   },
-  <span class="hljs-attr">bindTextAreaBlur</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  bindTextAreaBlur(e) {
     <span class="hljs-built_in">console</span>.log(e.detail.value)
   },
-  <span class="hljs-attr">bindFormSubmit</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  bindFormSubmit(e) {
     <span class="hljs-built_in">console</span>.log(e.detail.value.textarea)
   }
 })

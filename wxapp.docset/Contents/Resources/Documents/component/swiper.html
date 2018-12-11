@@ -172,18 +172,23 @@
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/SeizywmX6gY0" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">swiper</span> <span class="hljs-attr">indicator-dots</span>=<span class="hljs-string">&quot;{{indicatorDots}}&quot;</span>
-  <span class="hljs-attr">autoplay</span>=<span class="hljs-string">&quot;{{autoplay}}&quot;</span> <span class="hljs-attr">interval</span>=<span class="hljs-string">&quot;{{interval}}&quot;</span> <span class="hljs-attr">duration</span>=<span class="hljs-string">&quot;{{duration}}&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">swiper</span>
+  <span class="hljs-attr">indicator-dots</span>=<span class="hljs-string">&quot;{{indicatorDots}}&quot;</span>
+  <span class="hljs-attr">autoplay</span>=<span class="hljs-string">&quot;{{autoplay}}&quot;</span>
+  <span class="hljs-attr">interval</span>=<span class="hljs-string">&quot;{{interval}}&quot;</span>
+  <span class="hljs-attr">duration</span>=<span class="hljs-string">&quot;{{duration}}&quot;</span>
+&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{imgUrls}}&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">swiper-item</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{item}}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slide-image&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;355&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;150&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{item}}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slide-image&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;355&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;150&quot;</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">swiper-item</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">swiper</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeIndicatorDots&quot;</span>&gt;</span> indicator-dots <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeAutoplay&quot;</span>&gt;</span> autoplay <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">slider</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;intervalChange&quot;</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;500&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;2000&quot;</span>/&gt;</span> interval
-<span class="hljs-tag">&lt;<span class="hljs-name">slider</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;durationChange&quot;</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1000&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;10000&quot;</span>/&gt;</span> duration
+<span class="hljs-tag">&lt;<span class="hljs-name">slider</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;intervalChange&quot;</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;500&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;2000&quot;</span> /&gt;</span> interval
+<span class="hljs-tag">&lt;<span class="hljs-name">slider</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;durationChange&quot;</span> <span class="hljs-attr">show-value</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1000&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;10000&quot;</span> /&gt;</span>
+duration
 </code></pre>
 <pre><code class="language-js">Page({
   <span class="hljs-attr">data</span>: {
@@ -197,22 +202,22 @@
     <span class="hljs-attr">interval</span>: <span class="hljs-number">5000</span>,
     <span class="hljs-attr">duration</span>: <span class="hljs-number">1000</span>
   },
-  <span class="hljs-attr">changeIndicatorDots</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  changeIndicatorDots(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">indicatorDots</span>: !<span class="hljs-keyword">this</span>.data.indicatorDots
     })
   },
-  <span class="hljs-attr">changeAutoplay</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  changeAutoplay(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">autoplay</span>: !<span class="hljs-keyword">this</span>.data.autoplay
     })
   },
-  <span class="hljs-attr">intervalChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  intervalChange(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">interval</span>: e.detail.value
     })
   },
-  <span class="hljs-attr">durationChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  durationChange(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">duration</span>: e.detail.value
     })

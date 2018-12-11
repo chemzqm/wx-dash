@@ -30,7 +30,7 @@
 <li><code>undefined</code>&#x3001;<code>ArrayBuffer</code>&#x3001;<code>Function</code> &#x7C7B;&#x578B;&#x65E0;&#x6CD5;&#x663E;&#x793A;</li>
 <li>&#x65E0;&#x6CD5;&#x6253;&#x5370;&#x5B58;&#x5728;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;</li>
 </ul>
-<pre><code class="language-js"><span class="hljs-keyword">let</span> a = {}
+<pre><code class="language-js"><span class="hljs-keyword">const</span> a = {}
 a.b = a
 <span class="hljs-built_in">console</span>.log(a) <span class="hljs-comment">// 2.3.2 &#x4EE5;&#x4E0B;&#x7248;&#x672C;&#xFF0C;&#x4F1A;&#x6253;&#x5370; `An object width circular reference can&apos;t be logged`</span>
 </code></pre>
@@ -38,12 +38,12 @@ a.b = a
 <ul>
 <li>2.3.2 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x652F;&#x6301;&#x6253;&#x5370;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x5BF9;&#x8C61;&#x3002;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x4F1A;&#x663E;&#x793A;&#x5F15;&#x7528;&#x8DEF;&#x5F84;&#xFF0C;<code>@</code>&#x8868;&#x793A;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x3002;</li>
 </ul>
-<pre><code class="language-js"><span class="hljs-keyword">const</span> circular = { <span class="hljs-attr">x</span>: {}, <span class="hljs-attr">c</span>: {} }
-circular.x = [{ <span class="hljs-attr">promise</span>: <span class="hljs-built_in">Promise</span>.resolve() }]
+<pre><code class="language-js"><span class="hljs-keyword">const</span> circular = {<span class="hljs-attr">x</span>: {}, <span class="hljs-attr">c</span>: {}}
+circular.x = [{<span class="hljs-attr">promise</span>: <span class="hljs-built_in">Promise</span>.resolve()}]
 circular.a = circular
 circular.c.x0 = circular.x[<span class="hljs-number">0</span>]
 
-<span class="hljs-built_in">console</span>.log(circular) 
+<span class="hljs-built_in">console</span>.log(circular)
 <span class="hljs-comment">// &quot;{a: &apos;&lt;Circular: @&gt;&apos;, c: {x0: &apos;&lt;Circular: @.x[0]&gt;&apos;}, x: [{promise: &apos;&lt;Promise&gt;&apos;}]}&quot;</span>
 </code></pre>
 <ul>

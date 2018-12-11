@@ -83,7 +83,12 @@
 <p><a href="https://developers.weixin.qq.com/s/YfbJZcmG6zYM" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{year}}&#x5E74;{{month}}&#x6708;{{day}}&#x65E5;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker-view</span> <span class="hljs-attr">indicator-style</span>=<span class="hljs-string">&quot;height: 50px;&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{value}}&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindChange&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">picker-view</span>
+    <span class="hljs-attr">indicator-style</span>=<span class="hljs-string">&quot;height: 50px;&quot;</span>
+    <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span>
+    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{value}}&quot;</span>
+    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindChange&quot;</span>
+  &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">picker-view-column</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{years}}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;line-height: 50px&quot;</span>&gt;</span>{{item}}&#x5E74;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">picker-view-column</span>&gt;</span>
@@ -105,25 +110,25 @@
   years.push(i)
 }
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span> ; i &lt;= <span class="hljs-number">12</span>; i++) {
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">12</span>; i++) {
   months.push(i)
 }
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span> ; i &lt;= <span class="hljs-number">31</span>; i++) {
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">31</span>; i++) {
   days.push(i)
 }
 
 Page({
   <span class="hljs-attr">data</span>: {
-    <span class="hljs-attr">years</span>: years,
+    years,
     <span class="hljs-attr">year</span>: date.getFullYear(),
-    <span class="hljs-attr">months</span>: months,
+    months,
     <span class="hljs-attr">month</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-attr">days</span>: days,
+    days,
     <span class="hljs-attr">day</span>: <span class="hljs-number">2</span>,
     <span class="hljs-attr">value</span>: [<span class="hljs-number">9999</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
   },
-  <span class="hljs-attr">bindChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  bindChange(e) {
     <span class="hljs-keyword">const</span> val = e.detail.value
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">year</span>: <span class="hljs-keyword">this</span>.data.years[val[<span class="hljs-number">0</span>]],

@@ -240,9 +240,9 @@
     <span class="hljs-attr">myProperty</span>: { <span class="hljs-comment">// &#x5C5E;&#x6027;&#x540D;</span>
       type: <span class="hljs-built_in">String</span>, <span class="hljs-comment">// &#x7C7B;&#x578B;&#xFF08;&#x5FC5;&#x586B;&#xFF09;&#xFF0C;&#x76EE;&#x524D;&#x63A5;&#x53D7;&#x7684;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#xFF1A;String, Number, Boolean, Object, Array, null&#xFF08;&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#xFF09;</span>
       value: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-comment">// &#x5C5E;&#x6027;&#x521D;&#x59CB;&#x503C;&#xFF08;&#x53EF;&#x9009;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x672A;&#x6307;&#x5B9A;&#x5219;&#x4F1A;&#x6839;&#x636E;&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x4E00;&#x4E2A;</span>
-      observer: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newVal, oldVal, changedPath</span>) </span>{
-         <span class="hljs-comment">// &#x5C5E;&#x6027;&#x88AB;&#x6539;&#x53D8;&#x65F6;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x53EF;&#x9009;&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x5728;methods&#x6BB5;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x540D;&#x5B57;&#x7B26;&#x4E32;, &#x5982;&#xFF1A;&apos;_propertyChange&apos;</span>
-         <span class="hljs-comment">// &#x901A;&#x5E38; newVal &#x5C31;&#x662F;&#x65B0;&#x8BBE;&#x7F6E;&#x7684;&#x6570;&#x636E;&#xFF0C; oldVal &#x662F;&#x65E7;&#x6570;&#x636E;</span>
+      observer(newVal, oldVal, changedPath) {
+        <span class="hljs-comment">// &#x5C5E;&#x6027;&#x88AB;&#x6539;&#x53D8;&#x65F6;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x53EF;&#x9009;&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x5728;methods&#x6BB5;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x540D;&#x5B57;&#x7B26;&#x4E32;, &#x5982;&#xFF1A;&apos;_propertyChange&apos;</span>
+        <span class="hljs-comment">// &#x901A;&#x5E38; newVal &#x5C31;&#x662F;&#x65B0;&#x8BBE;&#x7F6E;&#x7684;&#x6570;&#x636E;&#xFF0C; oldVal &#x662F;&#x65E7;&#x6570;&#x636E;</span>
       }
     },
     <span class="hljs-attr">myProperty2</span>: <span class="hljs-built_in">String</span> <span class="hljs-comment">// &#x7B80;&#x5316;&#x7684;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;</span>
@@ -251,36 +251,36 @@
 
   lifetimes: {
     <span class="hljs-comment">// &#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x51FD;&#x6570;&#xFF0C;&#x6216;&#x4E00;&#x4E2A;&#x5728;methods&#x6BB5;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x540D;</span>
-    attached: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
-    <span class="hljs-attr">moved</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
-    <span class="hljs-attr">detached</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
+    attached() { },
+    moved() { },
+    detached() { },
   },
 
   <span class="hljs-comment">// &#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x51FD;&#x6570;&#xFF0C;&#x6216;&#x4E00;&#x4E2A;&#x5728;methods&#x6BB5;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x540D;</span>
-  attached: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ }, <span class="hljs-comment">// &#x6B64;&#x5904;attached&#x7684;&#x58F0;&#x660E;&#x4F1A;&#x88AB;lifetimes&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x58F0;&#x660E;&#x8986;&#x76D6;</span>
-  ready: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ },
+  attached() { }, <span class="hljs-comment">// &#x6B64;&#x5904;attached&#x7684;&#x58F0;&#x660E;&#x4F1A;&#x88AB;lifetimes&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x58F0;&#x660E;&#x8986;&#x76D6;</span>
+  ready() { },
 
   <span class="hljs-attr">pageLifetimes</span>: {
     <span class="hljs-comment">// &#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</span>
-    show: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
-    <span class="hljs-attr">hide</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
-    <span class="hljs-attr">resize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ },
+    show() { },
+    hide() { },
+    resize() { },
   },
 
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">onMyButtonTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    onMyButtonTap() {
       <span class="hljs-keyword">this</span>.setData({
         <span class="hljs-comment">// &#x66F4;&#x65B0;&#x5C5E;&#x6027;&#x548C;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#x4E0E;&#x66F4;&#x65B0;&#x9875;&#x9762;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;</span>
       })
     },
     <span class="hljs-comment">// &#x5185;&#x90E8;&#x65B9;&#x6CD5;&#x5EFA;&#x8BAE;&#x4EE5;&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x5934;</span>
-    _myPrivateMethod: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    _myPrivateMethod() {
       <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x5C06; data.A[0].B &#x8BBE;&#x4E3A; &apos;myPrivateData&apos;</span>
       <span class="hljs-keyword">this</span>.setData({
         <span class="hljs-string">&apos;A[0].B&apos;</span>: <span class="hljs-string">&apos;myPrivateData&apos;</span>
       })
     },
-    <span class="hljs-attr">_propertyChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newVal, oldVal</span>) </span>{
+    _propertyChange(newVal, oldVal) {
 
     }
   }
@@ -305,7 +305,7 @@
   },
 
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    onLoad() {
       <span class="hljs-keyword">this</span>.data.paramA <span class="hljs-comment">// &#x9875;&#x9762;&#x53C2;&#x6570; paramA &#x7684;&#x503C;</span>
       <span class="hljs-keyword">this</span>.data.paramB <span class="hljs-comment">// &#x9875;&#x9762;&#x53C2;&#x6570; paramB &#x7684;&#x503C;</span>
     }

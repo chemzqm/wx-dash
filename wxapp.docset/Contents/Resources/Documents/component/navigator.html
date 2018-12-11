@@ -193,19 +193,41 @@
 <pre><code class="language-css"><span class="hljs-comment">/** wxss **/</span>
 <span class="hljs-comment">/** &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7684;navigator&#x70B9;&#x51FB;&#x6001; **/</span>
 <span class="hljs-selector-class">.navigator-hover</span> {
-  <span class="hljs-attribute">color</span>:blue;
+  <span class="hljs-attribute">color</span>: blue;
 }
 <span class="hljs-comment">/** &#x81EA;&#x5B9A;&#x4E49;&#x5176;&#x4ED6;&#x70B9;&#x51FB;&#x6001;&#x6837;&#x5F0F;&#x7C7B; **/</span>
 <span class="hljs-selector-class">.other-navigator-hover</span> {
-  <span class="hljs-attribute">color</span>:red;
+  <span class="hljs-attribute">color</span>: red;
 }
 </code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/navigate/navigate?title=navigate&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;navigator-hover&quot;</span>&gt;</span>&#x8DF3;&#x8F6C;&#x5230;&#x65B0;&#x9875;&#x9762;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;../../redirect/redirect/redirect?title=redirect&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;redirect&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>&gt;</span>&#x5728;&#x5F53;&#x524D;&#x9875;&#x6253;&#x5F00;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/index/index&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;switchTab&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>&gt;</span>&#x5207;&#x6362; Tab<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;miniProgram&quot;</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;navigate&quot;</span> <span class="hljs-attr">app-id</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">extra-data</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;release&quot;</span>&gt;</span>&#x6253;&#x5F00;&#x7ED1;&#x5B9A;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
+    <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/navigate/navigate?title=navigate&quot;</span>
+    <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;navigator-hover&quot;</span>
+    &gt;</span>&#x8DF3;&#x8F6C;&#x5230;&#x65B0;&#x9875;&#x9762;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>
+  &gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
+    <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;../../redirect/redirect/redirect?title=redirect&quot;</span>
+    <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;redirect&quot;</span>
+    <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>
+    &gt;</span>&#x5728;&#x5F53;&#x524D;&#x9875;&#x6253;&#x5F00;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>
+  &gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
+    <span class="hljs-attr">url</span>=<span class="hljs-string">&quot;/page/index/index&quot;</span>
+    <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;switchTab&quot;</span>
+    <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;other-navigator-hover&quot;</span>
+    &gt;</span>&#x5207;&#x6362; Tab<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>
+  &gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">navigator</span>
+    <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;miniProgram&quot;</span>
+    <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;navigate&quot;</span>
+    <span class="hljs-attr">app-id</span>=<span class="hljs-string">&quot;&quot;</span>
+    <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;&quot;</span>
+    <span class="hljs-attr">extra-data</span>=<span class="hljs-string">&quot;&quot;</span>
+    <span class="hljs-attr">version</span>=<span class="hljs-string">&quot;release&quot;</span>
+    &gt;</span>&#x6253;&#x5F00;&#x7ED1;&#x5B9A;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;<span class="hljs-tag">&lt;/<span class="hljs-name">navigator</span>
+  &gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- navigator.wxml --&gt;</span>
@@ -218,7 +240,7 @@
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// redirect.js navigator.js</span>
 Page({
-  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+  onLoad(options) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">title</span>: options.title
     })

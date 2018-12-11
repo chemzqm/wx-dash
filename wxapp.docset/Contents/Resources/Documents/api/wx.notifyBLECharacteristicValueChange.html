@@ -170,13 +170,13 @@
 <p><a href="https://developers.weixin.qq.com/s/pQU51zmz7a3K" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-js">wx.notifyBLECharacteristicValueChange({
   <span class="hljs-attr">state</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x542F;&#x7528; notify &#x529F;&#x80FD;</span>
-  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;  </span>
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; deviceId &#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7; createBLEConnection &#x4E0E;&#x5BF9;&#x5E94;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;</span>
   deviceId,
   <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; serviceId &#x9700;&#x8981;&#x5728; getBLEDeviceServices &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   serviceId,
   <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; characteristicId &#x9700;&#x8981;&#x5728; getBLEDeviceCharacteristics &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   characteristicId,
-  success (res) {
+  success(res) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;notifyBLECharacteristicValueChange success&apos;</span>, res.errMsg)
   }
 })

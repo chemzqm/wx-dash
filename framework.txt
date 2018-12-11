@@ -46,6 +46,7 @@
 ./custom-component/generics.html|自定义组件 抽象节点
 ./custom-component/extend.html|自定义组件 自定义组件扩展
 ./custom-component/trdparty.html|自定义组件 开发第三方自定义组件
+./custom-component/unit-test.html|自定义组件 单元测试
 ./plugin/index.html|插件
 ./plugin/development.html|插件 开发插件
 ./plugin/using.html|插件 使用插件

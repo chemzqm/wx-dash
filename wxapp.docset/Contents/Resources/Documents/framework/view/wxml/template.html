@@ -26,15 +26,12 @@
   time: string
 --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;msgItem&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> {{index}}: {{msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> Time: {{time}} <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> {{index}}: {{msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> Time: {{time}} <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 </code></pre>
 <h3 id="&#x4F7F;&#x7528;&#x6A21;&#x677F;">&#x4F7F;&#x7528;&#x6A21;&#x677F;</h3>
 <p>&#x4F7F;&#x7528; is &#x5C5E;&#x6027;&#xFF0C;&#x58F0;&#x660E;&#x9700;&#x8981;&#x7684;&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6A21;&#x677F;&#x6240;&#x9700;&#x8981;&#x7684; data &#x4F20;&#x5165;&#xFF0C;&#x5982;&#xFF1A;</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;msgItem&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;{{...item}}&quot;</span>/&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;msgItem&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;{{...item}}&quot;</span> /&gt;</span>
 </code></pre>
 <pre><code class="language-js">Page({
   <span class="hljs-attr">data</span>: {
@@ -55,7 +52,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{[1, 2, 3, 4, 5]}}&quot;</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;{{item % 2 == 0 ? &apos;even&apos; : &apos;odd&apos;}}&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;{{item % 2 == 0 ? &apos;even&apos; : &apos;odd&apos;}}&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span>
 </code></pre>
 <h3 id="&#x6A21;&#x677F;&#x7684;&#x4F5C;&#x7528;&#x57DF;">&#x6A21;&#x677F;&#x7684;&#x4F5C;&#x7528;&#x57DF;</h3>

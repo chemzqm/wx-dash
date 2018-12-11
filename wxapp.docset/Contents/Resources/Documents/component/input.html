@@ -241,7 +241,7 @@
 <p><a href="https://developers.weixin.qq.com/s/JYwgZ6ml6rYP" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--input.wxml--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x805A;&#x7126;&#x7684;input&quot;</span> <span class="hljs-attr">auto-focus</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x805A;&#x7126;&#x7684;input&quot;</span> <span class="hljs-attr">auto-focus</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8FD9;&#x4E2A;&#x53EA;&#x6709;&#x5728;&#x6309;&#x94AE;&#x70B9;&#x51FB;&#x7684;&#x65F6;&#x5019;&#x624D;&#x805A;&#x7126;&quot;</span> <span class="hljs-attr">focus</span>=<span class="hljs-string">&quot;{{focus}}&quot;</span> /&gt;</span>
@@ -250,23 +250,19 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x6700;&#x5927;&#x8F93;&#x5165;&#x957F;&#x5EA6;10&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;10&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x6700;&#x5927;&#x8F93;&#x5165;&#x957F;&#x5EA6;10&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x4F60;&#x8F93;&#x5165;&#x7684;&#x662F;&#xFF1A;{{inputValue}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">bindinput</span>=<span class="hljs-string">&quot;bindKeyInput&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8F93;&#x5165;&#x540C;&#x6B65;&#x5230;view&#x4E2D;&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bindinput</span>=<span class="hljs-string">&quot;bindKeyInput&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8F93;&#x5165;&#x540C;&#x6B65;&#x5230;view&#x4E2D;&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">bindinput</span>=<span class="hljs-string">&quot;bindReplaceInput&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8FDE;&#x7EED;&#x7684;&#x4E24;&#x4E2A;1&#x4F1A;&#x53D8;&#x6210;2&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bindinput</span>=<span class="hljs-string">&quot;bindReplaceInput&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8FDE;&#x7EED;&#x7684;&#x4E24;&#x4E2A;1&#x4F1A;&#x53D8;&#x6210;2&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">password</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> /&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">password</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">password</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">password</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;digit&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x5E26;&#x5C0F;&#x6570;&#x70B9;&#x7684;&#x6570;&#x5B57;&#x952E;&#x76D8;&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;digit&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x5E26;&#x5C0F;&#x6570;&#x70B9;&#x7684;&#x6570;&#x5B57;&#x952E;&#x76D8;&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;idcard&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8EAB;&#x4EFD;&#x8BC1;&#x8F93;&#x5165;&#x952E;&#x76D8;&quot;</span> /&gt;</span>
@@ -275,40 +271,40 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder-style</span>=<span class="hljs-string">&quot;color:red&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x5360;&#x4F4D;&#x7B26;&#x5B57;&#x4F53;&#x662F;&#x7EA2;&#x8272;&#x7684;&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="language-javascript"><span class="hljs-comment">//input.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// input.js</span>
 Page({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">focus</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">inputValue</span>: <span class="hljs-string">&apos;&apos;</span>
   },
-  <span class="hljs-attr">bindButtonTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  bindButtonTap() {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">focus</span>: <span class="hljs-literal">true</span>
     })
   },
-  <span class="hljs-attr">bindKeyInput</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  bindKeyInput(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">inputValue</span>: e.detail.value
     })
   },
-  <span class="hljs-attr">bindReplaceInput</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-keyword">var</span> value = e.detail.value
-    <span class="hljs-keyword">var</span> pos = e.detail.cursor
-    <span class="hljs-keyword">if</span>(pos != <span class="hljs-number">-1</span>){
-      <span class="hljs-comment">//&#x5149;&#x6807;&#x5728;&#x4E2D;&#x95F4;</span>
-      <span class="hljs-keyword">var</span> left = e.detail.value.slice(<span class="hljs-number">0</span>,pos)
-      <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x5149;&#x6807;&#x7684;&#x4F4D;&#x7F6E;</span>
-      pos = left.replace(<span class="hljs-regexp">/11/g</span>,<span class="hljs-string">&apos;2&apos;</span>).length
+  bindReplaceInput(e) {
+    <span class="hljs-keyword">const</span> value = e.detail.value
+    <span class="hljs-keyword">let</span> pos = e.detail.cursor
+    <span class="hljs-keyword">if</span> (pos != <span class="hljs-number">-1</span>) {
+      <span class="hljs-comment">// &#x5149;&#x6807;&#x5728;&#x4E2D;&#x95F4;</span>
+      <span class="hljs-keyword">const</span> left = e.detail.value.slice(<span class="hljs-number">0</span>, pos)
+      <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x5149;&#x6807;&#x7684;&#x4F4D;&#x7F6E;</span>
+      pos = left.replace(<span class="hljs-regexp">/11/g</span>, <span class="hljs-string">&apos;2&apos;</span>).length
     }
 
-    <span class="hljs-comment">//&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5149;&#x6807;&#x7684;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-comment">// &#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5149;&#x6807;&#x7684;&#x4F4D;&#x7F6E;</span>
     <span class="hljs-keyword">return</span> {
-      <span class="hljs-attr">value</span>: value.replace(<span class="hljs-regexp">/11/g</span>,<span class="hljs-string">&apos;2&apos;</span>),
+      <span class="hljs-attr">value</span>: value.replace(<span class="hljs-regexp">/11/g</span>, <span class="hljs-string">&apos;2&apos;</span>),
       <span class="hljs-attr">cursor</span>: pos
     }
 
-    <span class="hljs-comment">//&#x6216;&#x8005;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;,&#x5149;&#x6807;&#x5728;&#x6700;&#x540E;&#x8FB9;</span>
-    <span class="hljs-comment">//return value.replace(/11/g,&apos;2&apos;),</span>
+    <span class="hljs-comment">// &#x6216;&#x8005;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;,&#x5149;&#x6807;&#x5728;&#x6700;&#x540E;&#x8FB9;</span>
+    <span class="hljs-comment">// return value.replace(/11/g,&apos;2&apos;),</span>
   }
 })
 </code></pre>

@@ -26,10 +26,10 @@
 
 wx.downloadFile({
   <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg&apos;</span>,
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  success(res) {
     ctx.save()
     ctx.beginPath()
-    ctx.arc(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">25</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>*<span class="hljs-built_in">Math</span>.PI)
+    ctx.arc(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">25</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.PI)
     ctx.clip()
     ctx.drawImage(res.tempFilePath, <span class="hljs-number">25</span>, <span class="hljs-number">25</span>)
     ctx.restore()

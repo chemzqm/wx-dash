@@ -31,24 +31,24 @@ Component({
   <span class="hljs-attr">relations</span>: {
     <span class="hljs-string">&apos;./custom-li&apos;</span>: {
       <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;child&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x5B50;&#x8282;&#x70B9;</span>
-      linked: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+      linked(target) {
         <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x6709;custom-li&#x88AB;&#x63D2;&#x5165;&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;&#x8BE5;&#x8282;&#x70B9;attached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
       },
-      <span class="hljs-attr">linkChanged</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+      linkChanged(target) {
         <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x6709;custom-li&#x88AB;&#x79FB;&#x52A8;&#x540E;&#x6267;&#x884C;&#xFF0C;target&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;&#x8BE5;&#x8282;&#x70B9;moved&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
       },
-      <span class="hljs-attr">unlinked</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+      unlinked(target) {
         <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x6709;custom-li&#x88AB;&#x79FB;&#x9664;&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;&#x8BE5;&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;&#x8BE5;&#x8282;&#x70B9;detached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
       }
     }
   },
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">_getAllLi</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    _getAllLi() {
       <span class="hljs-comment">// &#x4F7F;&#x7528;getRelationNodes&#x53EF;&#x4EE5;&#x83B7;&#x5F97;nodes&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x5DF2;&#x5173;&#x8054;&#x7684;custom-li&#xFF0C;&#x4E14;&#x662F;&#x6709;&#x5E8F;&#x7684;</span>
-      <span class="hljs-keyword">var</span> nodes = <span class="hljs-keyword">this</span>.getRelationNodes(<span class="hljs-string">&apos;path/to/custom-li&apos;</span>)
+      <span class="hljs-keyword">const</span> nodes = <span class="hljs-keyword">this</span>.getRelationNodes(<span class="hljs-string">&apos;path/to/custom-li&apos;</span>)
     }
   },
-  <span class="hljs-attr">ready</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  ready() {
     <span class="hljs-keyword">this</span>._getAllLi()
   }
 })
@@ -58,13 +58,13 @@ Component({
   <span class="hljs-attr">relations</span>: {
     <span class="hljs-string">&apos;./custom-ul&apos;</span>: {
       <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;parent&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x7236;&#x8282;&#x70B9;</span>
-      linked: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+      linked(target) {
         <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x88AB;&#x63D2;&#x5165;&#x5230;custom-ul&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;custom-ul&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;attached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
       },
-      <span class="hljs-attr">linkChanged</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+      linkChanged(target) {
         <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x88AB;&#x79FB;&#x52A8;&#x540E;&#x6267;&#x884C;&#xFF0C;target&#x662F;custom-ul&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;moved&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
       },
-      <span class="hljs-attr">unlinked</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+      unlinked(target) {
         <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x88AB;&#x79FB;&#x9664;&#x65F6;&#x6267;&#x884C;&#xFF0C;target&#x662F;custom-ul&#x8282;&#x70B9;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x89E6;&#x53D1;&#x5728;detached&#x751F;&#x547D;&#x5468;&#x671F;&#x4E4B;&#x540E;</span>
       }
     }
@@ -90,7 +90,7 @@ Component({
 })
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-input.js</span>
-<span class="hljs-keyword">var</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+<span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
 Component({
   <span class="hljs-attr">behaviors</span>: [customFormControls],
   <span class="hljs-attr">relations</span>: {
@@ -101,7 +101,7 @@ Component({
 })
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-submit.js</span>
-<span class="hljs-keyword">var</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+<span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
 Component({
   <span class="hljs-attr">behaviors</span>: [customFormControls],
   <span class="hljs-attr">relations</span>: {
@@ -113,10 +113,10 @@ Component({
 </code></pre>
 <p>&#x5219;&#x5728; <code>relations</code> &#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;behavior&#x6765;&#x4EE3;&#x66FF;&#x7EC4;&#x4EF6;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF1A;</p>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-form.js</span>
-<span class="hljs-keyword">var</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+<span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
 Component({
   <span class="hljs-attr">relations</span>: {
-    <span class="hljs-string">&apos;customFormControls&apos;</span>: {
+    <span class="hljs-attr">customFormControls</span>: {
       <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;descendant&apos;</span>, <span class="hljs-comment">// &#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E94;&#x4E3A;&#x5B50;&#x5B59;&#x8282;&#x70B9;</span>
       target: customFormControls
     }

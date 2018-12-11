@@ -76,7 +76,7 @@ wx.getSetting({
     <span class="hljs-keyword">if</span> (!res.authSetting[<span class="hljs-string">&apos;scope.record&apos;</span>]) {
       wx.authorize({
         <span class="hljs-attr">scope</span>: <span class="hljs-string">&apos;scope.record&apos;</span>,
-        success () {
+        success() {
           <span class="hljs-comment">// &#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x540C;&#x610F;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x5F55;&#x97F3;&#x529F;&#x80FD;&#xFF0C;&#x540E;&#x7EED;&#x8C03;&#x7528; wx.startRecord &#x63A5;&#x53E3;&#x4E0D;&#x4F1A;&#x5F39;&#x7A97;&#x8BE2;&#x95EE;</span>
           wx.startRecord()
         }

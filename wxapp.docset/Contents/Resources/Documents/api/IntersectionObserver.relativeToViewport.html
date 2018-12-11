@@ -70,7 +70,7 @@
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF08;&#x7528;&#x9009;&#x62E9;&#x5668; .target-class &#x6307;&#x5B9A;&#xFF09;&#x8FDB;&#x5165;&#x663E;&#x793A;&#x533A;&#x57DF;&#x4EE5;&#x4E0B; 100px &#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
 <pre><code class="language-javascript">Page({
-  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  onLoad() {
     wx.createIntersectionObserver().relativeToViewport({<span class="hljs-attr">bottom</span>: <span class="hljs-number">100</span>}).observe(<span class="hljs-string">&apos;.target-class&apos;</span>, (res) =&gt; {
       res.intersectionRatio <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;&#x5360;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x7684;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x7684;&#x6BD4;&#x4F8B;</span>
       res.intersectionRect <span class="hljs-comment">// &#x76F8;&#x4EA4;&#x533A;&#x57DF;</span>

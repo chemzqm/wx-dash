@@ -97,39 +97,39 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-comment">//index.js</span>
+<pre><code class="language-javascript"><span class="hljs-comment">// index.js</span>
 Page({
   <span class="hljs-attr">data</span>: {
-    <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;This is page data.&quot;</span>
+    <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;This is page data.&apos;</span>
   },
-  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+  onLoad(options) {
     <span class="hljs-comment">// Do some initialize when page load.</span>
   },
-  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onReady() {
     <span class="hljs-comment">// Do something when page ready.</span>
   },
-  <span class="hljs-attr">onShow</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onShow() {
     <span class="hljs-comment">// Do something when page show.</span>
   },
-  <span class="hljs-attr">onHide</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onHide() {
     <span class="hljs-comment">// Do something when page hide.</span>
   },
-  <span class="hljs-attr">onUnload</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onUnload() {
     <span class="hljs-comment">// Do something when page close.</span>
   },
-  <span class="hljs-attr">onPullDownRefresh</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onPullDownRefresh() {
     <span class="hljs-comment">// Do something when pull down.</span>
   },
-  <span class="hljs-attr">onReachBottom</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onReachBottom() {
     <span class="hljs-comment">// Do something when page reach bottom.</span>
   },
-  <span class="hljs-attr">onShareAppMessage</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  onShareAppMessage() {
     <span class="hljs-comment">// return custom share data when user share.</span>
   },
-  <span class="hljs-attr">onPageScroll</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onPageScroll() {
     <span class="hljs-comment">// Do something when page scroll</span>
   },
-  <span class="hljs-attr">onResize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onResize() {
     <span class="hljs-comment">// Do something when page resize</span>
   },
   onTabItemTap(item) {
@@ -138,10 +138,10 @@ Page({
     <span class="hljs-built_in">console</span>.log(item.text)
   },
   <span class="hljs-comment">// Event handler.</span>
-  viewTap: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  viewTap() {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;Set some data for updating view.&apos;</span>
-    }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-comment">// this is setData callback</span>
     })
   },
@@ -157,8 +157,7 @@ Page({
 <p>&#x6E32;&#x67D3;&#x5C42;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="../view/wxml/index.html">WXML</a> &#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/2PeBsKmn6EZ9" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript">Page({
   <span class="hljs-attr">data</span>: {
@@ -301,7 +300,7 @@ Page({
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/mffqUKmr6fZU" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-javascript">Page({
-  <span class="hljs-attr">onShareAppMessage</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+  onShareAppMessage(res) {
     <span class="hljs-keyword">if</span> (res.from === <span class="hljs-string">&apos;button&apos;</span>) {
       <span class="hljs-comment">// &#x6765;&#x81EA;&#x9875;&#x9762;&#x5185;&#x8F6C;&#x53D1;&#x6309;&#x94AE;</span>
       <span class="hljs-built_in">console</span>.log(res.target)
@@ -370,7 +369,7 @@ Page({
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;viewTap&quot;</span>&gt;</span> click me <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript">Page({
-  <span class="hljs-attr">viewTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  viewTap() {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;view tap&apos;</span>)
   }
 })
@@ -381,7 +380,7 @@ Page({
 </blockquote>
 <p>&#x5230;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x7C7B;&#x578B;&#x4E3A;<code>String</code>&#x3002;</p>
 <pre><code class="language-javascript">Page({
-  <span class="hljs-attr">onShow</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  onShow() {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.route)
   }
 })
@@ -429,8 +428,7 @@ Page({
 <p><a href="https://developers.weixin.qq.com/s/HofnzKmb6fZe" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--index.wxml--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeText&quot;</span>&gt;</span> Change normal data <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{num}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeText&quot;</span>&gt;</span> Change normal data <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{num}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeNum&quot;</span>&gt;</span> Change normal num <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeItemInArray&quot;</span>&gt;</span> Change Array data <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -449,32 +447,32 @@ Page({
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;init data&apos;</span>
     }
   },
-  <span class="hljs-attr">changeText</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  changeText() {
     <span class="hljs-comment">// this.data.text = &apos;changed data&apos; // &#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x4FEE;&#x6539; this.data</span>
     <span class="hljs-comment">// &#x5E94;&#x8BE5;&#x4F7F;&#x7528; setData</span>
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">text</span>: <span class="hljs-string">&apos;changed data&apos;</span>
     })
   },
-  <span class="hljs-attr">changeNum</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  changeNum() {
     <span class="hljs-comment">// &#x6216;&#x8005;&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539; this.data &#x4E4B;&#x540E;&#x9A6C;&#x4E0A;&#x7528; setData &#x8BBE;&#x7F6E;&#x4E00;&#x4E0B;&#x4FEE;&#x6539;&#x4E86;&#x7684;&#x5B57;&#x6BB5;</span>
     <span class="hljs-keyword">this</span>.data.num = <span class="hljs-number">1</span>
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">num</span>: <span class="hljs-keyword">this</span>.data.num
     })
   },
-  <span class="hljs-attr">changeItemInArray</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  changeItemInArray() {
     <span class="hljs-comment">// &#x5BF9;&#x4E8E;&#x5BF9;&#x8C61;&#x6216;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x5176;&#x4E0B;&#x7684;&#x5B50;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x901A;&#x5E38;&#x6BD4;&#x4FEE;&#x6539;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x6216;&#x6570;&#x7EC4;&#x66F4;&#x597D;</span>
     <span class="hljs-keyword">this</span>.setData({
-      <span class="hljs-string">&apos;array[0].text&apos;</span>:<span class="hljs-string">&apos;changed data&apos;</span>
+      <span class="hljs-string">&apos;array[0].text&apos;</span>: <span class="hljs-string">&apos;changed data&apos;</span>
     })
   },
-  <span class="hljs-attr">changeItemInObject</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  changeItemInObject() {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-string">&apos;object.text&apos;</span>: <span class="hljs-string">&apos;changed data&apos;</span>
-    });
+    })
   },
-  <span class="hljs-attr">addNewField</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  addNewField() {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-string">&apos;newField.text&apos;</span>: <span class="hljs-string">&apos;new data&apos;</span>
     })

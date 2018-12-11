@@ -74,16 +74,16 @@
 <p><strong>&#x5C0F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x673A;&#x5236;&#x5728;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; 1.4.0 &#x6709;&#x6240;&#x6539;&#x53D8;&#xFF1A;</strong> &#x4E0A;&#x4E00;&#x6761;&#x5173;&#x95ED;&#x903B;&#x8F91;&#x5728;&#x65B0;&#x7248;&#x672C;&#x5DF2;&#x4E0D;&#x9002;&#x7528;&#x3002;<a href="../operating-mechanism.html">&#x8BE6;&#x60C5;</a></p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="language-js">App({
-  onLaunch (options) {
+  onLaunch(options) {
     <span class="hljs-comment">// Do something initial when launch.</span>
   },
-  onShow (options) {
+  onShow(options) {
     <span class="hljs-comment">// Do something when show.</span>
   },
-  onHide () {
+  onHide() {
     <span class="hljs-comment">// Do something when hide.</span>
   },
-  onError (msg) {
+  onError(msg) {
     <span class="hljs-built_in">console</span>.log(msg)
   },
   <span class="hljs-attr">globalData</span>: <span class="hljs-string">&apos;I am global data&apos;</span>
@@ -142,7 +142,7 @@
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="language-javascript"><span class="hljs-comment">// other.js</span>
-<span class="hljs-keyword">var</span> appInstance = getApp()
+<span class="hljs-keyword">const</span> appInstance = getApp()
 <span class="hljs-built_in">console</span>.log(appInstance.globalData) <span class="hljs-comment">// I am global data</span>
 </code></pre>
 <p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>

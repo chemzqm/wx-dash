@@ -131,7 +131,15 @@
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/NycgqcmS6KYY" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- audio.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">&quot;{{poster}}&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;{{name}}&quot;</span> <span class="hljs-attr">author</span>=<span class="hljs-string">&quot;{{author}}&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myAudio&quot;</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">loop</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">audio</span>
+  <span class="hljs-attr">poster</span>=<span class="hljs-string">&quot;{{poster}}&quot;</span>
+  <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;{{name}}&quot;</span>
+  <span class="hljs-attr">author</span>=<span class="hljs-string">&quot;{{author}}&quot;</span>
+  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{src}}&quot;</span>
+  <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myAudio&quot;</span>
+  <span class="hljs-attr">controls</span>
+  <span class="hljs-attr">loop</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPlay&quot;</span>&gt;</span>&#x64AD;&#x653E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;audioPause&quot;</span>&gt;</span>&#x6682;&#x505C;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -140,7 +148,7 @@
 </code></pre>
 <pre><code class="language-javascript"><span class="hljs-comment">// audio.js</span>
 Page({
-  <span class="hljs-attr">onReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  onReady(e) {
     <span class="hljs-comment">// &#x4F7F;&#x7528; wx.createAudioContext &#x83B7;&#x53D6; audio &#x4E0A;&#x4E0B;&#x6587; context</span>
     <span class="hljs-keyword">this</span>.audioCtx = wx.createAudioContext(<span class="hljs-string">&apos;myAudio&apos;</span>)
   },
@@ -150,16 +158,16 @@ Page({
     <span class="hljs-attr">author</span>: <span class="hljs-string">&apos;&#x8BB8;&#x5DCD;&apos;</span>,
     <span class="hljs-attr">src</span>: <span class="hljs-string">&apos;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&amp;fromtag=46&apos;</span>,
   },
-  <span class="hljs-attr">audioPlay</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  audioPlay() {
     <span class="hljs-keyword">this</span>.audioCtx.play()
   },
-  <span class="hljs-attr">audioPause</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  audioPause() {
     <span class="hljs-keyword">this</span>.audioCtx.pause()
   },
-  <span class="hljs-attr">audio14</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  audio14() {
     <span class="hljs-keyword">this</span>.audioCtx.seek(<span class="hljs-number">14</span>)
   },
-  <span class="hljs-attr">audioStart</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  audioStart() {
     <span class="hljs-keyword">this</span>.audioCtx.seek(<span class="hljs-number">0</span>)
   }
 })

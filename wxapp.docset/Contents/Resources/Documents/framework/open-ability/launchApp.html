@@ -42,10 +42,12 @@
 <p>Android &#x7B2C;&#x4E09;&#x65B9; app &#x9700;&#x8981;&#x5904;&#x7406; <code>ShowMessageFromWX.req</code> &#x7684;&#x5FAE;&#x4FE1;&#x56DE;&#x8C03;&#xFF0C;iOS &#x5219;&#x9700;&#x8981;&#x5C06; appId &#x6DFB;&#x52A0;&#x5230;&#x7B2C;&#x4E09;&#x65B9; app &#x5DE5;&#x7A0B;&#x6240;&#x5C5E;&#x7684; plist &#x6587;&#x4EF6; URL types &#x5B57;&#x6BB5;&#x3002;
 <code>app-parameter</code> &#x7684;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; <a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_Android.zip" target="_blank">Android SDKSample</a> &#x4E2D; WXEntryActivity &#x4E2D;&#x7684; onResp &#x65B9;&#x6CD5;&#x4EE5;&#x53CA; <a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/download/sdk/WeChatSDK_sample_iOS_1.4.2.1.zip" target="_blank">iOS SDKSample</a> &#x4E2D; WXApiDelegate &#x4E2D;&#x7684; onResp &#x65B9;&#x6CD5;&#x3002;</p>
 <h3 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h3>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;launchApp&quot;</span> <span class="hljs-attr">app-parameter</span>=<span class="hljs-string">&quot;wechat&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;launchAppError&quot;</span>&gt;</span>&#x6253;&#x5F00;APP<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span> 
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;launchApp&quot;</span> <span class="hljs-attr">app-parameter</span>=<span class="hljs-string">&quot;wechat&quot;</span> <span class="hljs-attr">binderror</span>=<span class="hljs-string">&quot;launchAppError&quot;</span>
+  &gt;</span>&#x6253;&#x5F00;APP<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>
+&gt;</span>
 </code></pre>
 <pre><code class="language-js">Page({
-  launchAppError (e) {
+  launchAppError(e) {
     <span class="hljs-built_in">console</span>.log(e.detail.errMsg)
   }
 })

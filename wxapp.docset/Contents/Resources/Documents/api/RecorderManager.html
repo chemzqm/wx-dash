@@ -54,10 +54,10 @@ recorderManager.onPause(<span class="hljs-function"><span class="hljs-params">()
 })
 recorderManager.onStop(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;recorder stop&apos;</span>, res)
-  <span class="hljs-keyword">const</span> { tempFilePath } = res
+  <span class="hljs-keyword">const</span> {tempFilePath} = res
 })
 recorderManager.onFrameRecorded(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
-  <span class="hljs-keyword">const</span> { frameBuffer } = res
+  <span class="hljs-keyword">const</span> {frameBuffer} = res
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;frameBuffer.byteLength&apos;</span>, frameBuffer.byteLength)
 })
 

@@ -48,8 +48,8 @@
 <h5 id="selectorquery"><a href="SelectorQuery.html">SelectorQuery</a></h5>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">Page({
-  getContext () {
-    wx.createSelectorQuery().select(<span class="hljs-string">&apos;.the-video-class&apos;</span>).context(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+  getContext() {
+    wx.createSelectorQuery().select(<span class="hljs-string">&apos;.the-video-class&apos;</span>).context(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
       <span class="hljs-built_in">console</span>.log(res.context) <span class="hljs-comment">// &#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x7684; Context &#x5BF9;&#x8C61;&#x3002;&#x5982;&#xFF1A;&#x9009;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x662F; &lt;video&gt; &#x7EC4;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x5904;&#x5373;&#x8FD4;&#x56DE; VideoContext &#x5BF9;&#x8C61;</span>
     }).exec()
   }

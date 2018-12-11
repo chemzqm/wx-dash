@@ -199,7 +199,12 @@
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>movable-view&#x533A;&#x57DF;&#x5C0F;&#x4E8E;movable-area<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">movable-area</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 200px; background: red;&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">movable-view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 50px; width: 50px; background: blue;&quot;</span> <span class="hljs-attr">x</span>=<span class="hljs-string">&quot;{{x}}&quot;</span> <span class="hljs-attr">y</span>=<span class="hljs-string">&quot;{{y}}&quot;</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;all&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">movable-view</span>
+      <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 50px; width: 50px; background: blue;&quot;</span>
+      <span class="hljs-attr">x</span>=<span class="hljs-string">&quot;{{x}}&quot;</span>
+      <span class="hljs-attr">y</span>=<span class="hljs-string">&quot;{{y}}&quot;</span>
+      <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;all&quot;</span>
+    &gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">movable-view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">movable-area</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
@@ -207,12 +212,27 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>movable-view&#x533A;&#x57DF;&#x5927;&#x4E8E;movable-area<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">movable-area</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 100px; width: 100px; background: red;&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">movable-view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 200px; background: blue;&quot;</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;all&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">movable-view</span>
+      <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 200px; background: blue;&quot;</span>
+      <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;all&quot;</span>
+    &gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">movable-view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">movable-area</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x53EF;&#x653E;&#x7F29;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">movable-area</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 200px; background: red;&quot;</span> <span class="hljs-attr">scale-area</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">movable-view</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 50px; width: 50px; background: blue;&quot;</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;all&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;onChange&quot;</span> <span class="hljs-attr">bindscale</span>=<span class="hljs-string">&quot;onScale&quot;</span> <span class="hljs-attr">scale</span> <span class="hljs-attr">scale-min</span>=<span class="hljs-string">&quot;0.5&quot;</span> <span class="hljs-attr">scale-max</span>=<span class="hljs-string">&quot;4&quot;</span> <span class="hljs-attr">scale-value</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">movable-area</span>
+    <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px; width: 200px; background: red;&quot;</span>
+    <span class="hljs-attr">scale-area</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">movable-view</span>
+      <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 50px; width: 50px; background: blue;&quot;</span>
+      <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;all&quot;</span>
+      <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;onChange&quot;</span>
+      <span class="hljs-attr">bindscale</span>=<span class="hljs-string">&quot;onScale&quot;</span>
+      <span class="hljs-attr">scale</span>
+      <span class="hljs-attr">scale-min</span>=<span class="hljs-string">&quot;0.5&quot;</span>
+      <span class="hljs-attr">scale-max</span>=<span class="hljs-string">&quot;4&quot;</span>
+      <span class="hljs-attr">scale-value</span>=<span class="hljs-string">&quot;2&quot;</span>
+    &gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">movable-view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">movable-area</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -222,16 +242,16 @@
     <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>
   },
-  <span class="hljs-attr">tap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  tap(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">x</span>: <span class="hljs-number">30</span>,
       <span class="hljs-attr">y</span>: <span class="hljs-number">30</span>
-    });
+    })
   },
-  <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  onChange(e) {
     <span class="hljs-built_in">console</span>.log(e.detail)
   },
-  <span class="hljs-attr">onScale</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  onScale(e) {
     <span class="hljs-built_in">console</span>.log(e.detail)
   }
 })

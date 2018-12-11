@@ -63,12 +63,12 @@
 <h5 id="selectorquery"><a href="SelectorQuery.html">SelectorQuery</a></h5>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">Page({
-  getScrollOffset () {
-    wx.createSelectorQuery().selectViewport().scrollOffset(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
-      res.id      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
+  getScrollOffset() {
+    wx.createSelectorQuery().selectViewport().scrollOffset(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
+      res.id <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;ID</span>
       res.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
       res.scrollLeft <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
-      res.scrollTop  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
+      res.scrollTop <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
     }).exec()
   }
 })

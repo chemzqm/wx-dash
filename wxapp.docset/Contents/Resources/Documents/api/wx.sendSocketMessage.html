@@ -73,9 +73,9 @@ wx.connectSocket({
   <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;test.php&apos;</span>
 })
 
-wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
   socketOpen = <span class="hljs-literal">true</span>
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; socketMsgQueue.length; i++){
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; socketMsgQueue.length; i++) {
     sendSocketMessage(socketMsgQueue[i])
   }
   socketMsgQueue = []
@@ -84,7 +84,7 @@ wx.onSocketOpen(<span class="hljs-function"><span class="hljs-keyword">function<
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sendSocketMessage</span>(<span class="hljs-params">msg</span>) </span>{
   <span class="hljs-keyword">if</span> (socketOpen) {
     wx.sendSocketMessage({
-      <span class="hljs-attr">data</span>:msg
+      <span class="hljs-attr">data</span>: msg
     })
   } <span class="hljs-keyword">else</span> {
     socketMsgQueue.push(msg)

@@ -28,10 +28,7 @@
 <p>&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x8981;&#x5728; <code>wxml</code> &#x6587;&#x4EF6;&#x4E2D;&#x7F16;&#x5199;&#x7EC4;&#x4EF6;&#x6A21;&#x677F;&#xFF0C;&#x5728; <code>wxss</code> &#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5199;&#x6CD5;&#x4E0E;&#x9875;&#x9762;&#x7684;&#x5199;&#x6CD5;&#x7C7B;&#x4F3C;&#x3002;&#x5177;&#x4F53;&#x7EC6;&#x8282;&#x548C;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x53C2;&#x89C1; <a href="wxml-wxss.html">&#x7EC4;&#x4EF6;&#x6A21;&#x677F;&#x548C;&#x6837;&#x5F0F;</a> &#x3002;</p>
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x8FD9;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;WXML&#x7ED3;&#x6784; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>
-  {{innerText}}
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span> {{innerText}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
 </code></pre>
 <pre><code class="language-css"><span class="hljs-comment">/* &#x8FD9;&#x91CC;&#x7684;&#x6837;&#x5F0F;&#x53EA;&#x5E94;&#x7528;&#x4E8E;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6; */</span>
 <span class="hljs-selector-class">.inner</span> {
@@ -56,7 +53,7 @@
   },
   <span class="hljs-attr">methods</span>: {
     <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;</span>
-    customMethod: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+    customMethod() {}
   }
 })
 </code></pre>
@@ -80,15 +77,20 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684; <code>wxml</code> &#x8282;&#x70B9;&#x7ED3;&#x6784;&#x5728;&#x4E0E;&#x6570;&#x636E;&#x7ED3;&#x5408;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x88AB;&#x63D2;&#x5165;&#x5230;&#x5F15;&#x7528;&#x4F4D;&#x7F6E;&#x5185;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x4E3A;&#x9875;&#x9762;&#x6DFB;&#x52A0; usingComponents &#x4F1A;&#x4F7F;&#x5F97;&#x9875;&#x9762;&#x7684;&#x903B;&#x8F91;&#x53D1;&#x751F;&#x4E00;&#x4E9B;&#x7EC6;&#x5FAE;&#x53D8;&#x5316;&#xFF08;&#x5177;&#x4F53;&#x800C;&#x8A00;&#xFF0C;&#x9875;&#x9762;&#x4F1A;&#x5177;&#x6709;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#x7684;&#x7279;&#x5F81;&#xFF09;&#x3002;&#x5982;&#x679C;&#x9875;&#x9762;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x9700;&#x8981;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x9875;&#x9762;&#x903B;&#x8F91;&#x662F;&#x5426;&#x6709;&#x53D8;&#x5316;&#x3002;</strong></p>
-<p><strong>Tips</strong>:</p>
+<h3 id="&#x7EC6;&#x8282;&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x7EC6;&#x8282;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h3>
+<p>&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7EC6;&#x8282;&#xFF1A;</p>
 <ul>
-<li>&#x5BF9;&#x4E8E;&#x57FA;&#x7840;&#x5E93;&#x7684;1.5.x&#x7248;&#x672C;&#xFF0C; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.7 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.7</a> &#x4E5F;&#x6709;&#x90E8;&#x5206;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x652F;&#x6301;&#x3002;</li>
-<li>&#x56E0;&#x4E3A;WXML&#x8282;&#x70B9;&#x6807;&#x7B7E;&#x540D;&#x53EA;&#x80FD;&#x662F;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3001;&#x4E2D;&#x5212;&#x7EBF;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x6240;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x6807;&#x7B7E;&#x540D;&#x4E5F;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x3002;</li>
+<li>&#x56E0;&#x4E3A; WXML &#x8282;&#x70B9;&#x6807;&#x7B7E;&#x540D;&#x53EA;&#x80FD;&#x662F;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3001;&#x4E2D;&#x5212;&#x7EBF;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x6240;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x6807;&#x7B7E;&#x540D;&#x4E5F;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x3002;</li>
 <li>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#xFF0C;&#x5F15;&#x7528;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#x4E8E;&#x9875;&#x9762;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#xFF08;&#x4F7F;&#x7528; <code>usingComponents</code> &#x5B57;&#x6BB5;&#xFF09;&#x3002;</li>
-<li>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x548C;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x6240;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x540D;&#x4E0D;&#x80FD;&#x4EE5;&#x201C;wx-&#x201D;&#x4E3A;&#x524D;&#x7F00;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#x3002;</li>
-<li>&#x65E7;&#x7248;&#x672C;&#x7684;&#x57FA;&#x7840;&#x5E93;&#x4E0D;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x8282;&#x70B9;&#x4F1A;&#x53D8;&#x4E3A;&#x9ED8;&#x8BA4;&#x7684;&#x7A7A;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x548C;&#x9875;&#x9762;&#x6240;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x540D;&#x4E0D;&#x80FD;&#x4EE5;&#x201C;wx-&#x201D;&#x4E3A;&#x524D;&#x7F00;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#x3002;</li>
 </ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x662F;&#x5426;&#x5728;&#x9875;&#x9762;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; <code>usingComponents</code> &#x4F1A;&#x4F7F;&#x5F97;&#x9875;&#x9762;&#x7684; <code>this</code> &#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x7A0D;&#x6709;&#x5DEE;&#x5F02;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528; <code>usingComponents</code> &#x9875;&#x9762;&#x7684;&#x539F;&#x578B;&#x4E0E;&#x4E0D;&#x4F7F;&#x7528;&#x65F6;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5373; <code>Object.getPrototypeOf(this)</code> &#x7ED3;&#x679C;&#x4E0D;&#x540C;&#x3002;</li>
+<li>&#x4F7F;&#x7528; <code>usingComponents</code> &#x65F6;&#x4F1A;&#x591A;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x5982; <code>selectComponent</code> &#x3002;</li>
+<li>&#x51FA;&#x4E8E;&#x6027;&#x80FD;&#x8003;&#x8651;&#xFF0C;&#x4F7F;&#x7528; <code>usingComponents</code> &#x65F6;&#xFF0C; <code>setData</code> &#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x88AB;&#x76F4;&#x63A5;&#x6DF1;&#x590D;&#x5236;&#xFF0C;&#x5373; <code>this.setData({ field: obj })</code> &#x540E; <code>this.data.field === obj</code> &#x3002;&#xFF08;&#x6DF1;&#x590D;&#x5236;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x503C;&#x88AB;&#x7EC4;&#x4EF6;&#x95F4;&#x4F20;&#x9012;&#x65F6;&#x53D1;&#x751F;&#x3002;&#xFF09;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x9875;&#x9762;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x65B0;&#x589E;&#x6216;&#x5220;&#x9664; <code>usingComponents</code> &#x5B9A;&#x4E49;&#x6BB5;&#x65F6;&#x5EFA;&#x8BAE;&#x91CD;&#x65B0;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
 
                             </section>
                         </div>

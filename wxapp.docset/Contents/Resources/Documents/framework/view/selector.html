@@ -22,10 +22,10 @@
 <p>&#x6700;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x6CD5;&#x662F;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x6765;&#x67E5;&#x8BE2;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EE5;&#x53CA;&#x754C;&#x9762;&#x7684;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="language-js"><span class="hljs-keyword">const</span> query = wx.createSelectorQuery()
-query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+query.select(<span class="hljs-string">&apos;#the-id&apos;</span>).boundingClientRect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
   res.top <span class="hljs-comment">// #the-id &#x8282;&#x70B9;&#x7684;&#x4E0A;&#x8FB9;&#x754C;&#x5750;&#x6807;&#xFF08;&#x76F8;&#x5BF9;&#x4E8E;&#x663E;&#x793A;&#x533A;&#x57DF;&#xFF09;</span>
 })
-query.selectViewport().scrollOffset(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+query.selectViewport().scrollOffset(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
   res.scrollTop <span class="hljs-comment">// &#x663E;&#x793A;&#x533A;&#x57DF;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
 })
 query.exec()
@@ -45,7 +45,7 @@ query.exec()
 <p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5728;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF08;&#x7528;&#x9009;&#x62E9;&#x5668; <code>.target-class</code> &#x6307;&#x5B9A;&#xFF09;&#x6BCF;&#x6B21;&#x8FDB;&#x5165;&#x6216;&#x79BB;&#x5F00;&#x9875;&#x9762;&#x663E;&#x793A;&#x533A;&#x57DF;&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="language-js">Page({
-  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  onLoad() {
     wx.createIntersectionObserver().relativeToViewport().observe(<span class="hljs-string">&apos;.target-class&apos;</span>, (res) =&gt; {
       res.id <span class="hljs-comment">// &#x76EE;&#x6807;&#x8282;&#x70B9; id</span>
       res.dataset <span class="hljs-comment">// &#x76EE;&#x6807;&#x8282;&#x70B9; dataset</span>
@@ -62,7 +62,7 @@ query.exec()
 <p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5728;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF08;&#x7528;&#x9009;&#x62E9;&#x5668; <code>.target-class</code> &#x6307;&#x5B9A;&#xFF09;&#x4E0E;&#x53C2;&#x7167;&#x8282;&#x70B9;&#xFF08;&#x7528;&#x9009;&#x62E9;&#x5668; <code>.relative-class</code> &#x6307;&#x5B9A;&#xFF09;&#x5728;&#x9875;&#x9762;&#x663E;&#x793A;&#x533A;&#x57DF;&#x5185;&#x76F8;&#x4EA4;&#x6216;&#x76F8;&#x79BB;&#xFF0C;&#x4E14;&#x76F8;&#x4EA4;&#x6216;&#x76F8;&#x79BB;&#x7A0B;&#x5EA6;&#x8FBE;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#x5E03;&#x5C40;&#x533A;&#x57DF;&#x7684;20%&#x548C;50%&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="language-js">Page({
-  <span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  onLoad() {
     wx.createIntersectionObserver(<span class="hljs-keyword">this</span>, {
       <span class="hljs-attr">thresholds</span>: [<span class="hljs-number">0.2</span>, <span class="hljs-number">0.5</span>]
     }).relativeTo(<span class="hljs-string">&apos;.relative-class&apos;</span>).relativeToViewport().observe(<span class="hljs-string">&apos;.target-class&apos;</span>, (res) =&gt; {

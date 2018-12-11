@@ -35,7 +35,7 @@
 <li>&#x5728;&#x76F8;&#x5E94;&#x7684;Page&#x5B9A;&#x4E49;&#x4E2D;&#x5199;&#x4E0A;&#x76F8;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x662F;event&#x3002;</li>
 </ul>
 <pre><code class="language-js">Page({
-  <span class="hljs-attr">tapName</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+  tapName(event) {
     <span class="hljs-built_in">console</span>.log(event)
   }
 })
@@ -44,38 +44,42 @@
 <li>&#x53EF;&#x4EE5;&#x770B;&#x5230;log&#x51FA;&#x6765;&#x7684;&#x4FE1;&#x606F;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</li>
 </ul>
 <pre><code class="language-json">{
-  <span class="hljs-attr">&quot;type&quot;</span>:<span class="hljs-string">&quot;tap&quot;</span>,
-  <span class="hljs-attr">&quot;timeStamp&quot;</span>:<span class="hljs-number">895</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;tap&quot;</span>,
+  <span class="hljs-attr">&quot;timeStamp&quot;</span>: <span class="hljs-number">895</span>,
   <span class="hljs-attr">&quot;target&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;tapTest&quot;</span>,
-    <span class="hljs-attr">&quot;dataset&quot;</span>:  {
-      <span class="hljs-attr">&quot;hi&quot;</span>:<span class="hljs-string">&quot;WeChat&quot;</span>
+    <span class="hljs-attr">&quot;dataset&quot;</span>: {
+      <span class="hljs-attr">&quot;hi&quot;</span>: <span class="hljs-string">&quot;WeChat&quot;</span>
     }
   },
-  <span class="hljs-attr">&quot;currentTarget&quot;</span>:  {
+  <span class="hljs-attr">&quot;currentTarget&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;tapTest&quot;</span>,
     <span class="hljs-attr">&quot;dataset&quot;</span>: {
-      <span class="hljs-attr">&quot;hi&quot;</span>:<span class="hljs-string">&quot;WeChat&quot;</span>
+      <span class="hljs-attr">&quot;hi&quot;</span>: <span class="hljs-string">&quot;WeChat&quot;</span>
     }
   },
   <span class="hljs-attr">&quot;detail&quot;</span>: {
-    <span class="hljs-attr">&quot;x&quot;</span>:<span class="hljs-number">53</span>,
-    <span class="hljs-attr">&quot;y&quot;</span>:<span class="hljs-number">14</span>
+    <span class="hljs-attr">&quot;x&quot;</span>: <span class="hljs-number">53</span>,
+    <span class="hljs-attr">&quot;y&quot;</span>: <span class="hljs-number">14</span>
   },
-  <span class="hljs-attr">&quot;touches&quot;</span>:[{
-    <span class="hljs-attr">&quot;identifier&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-attr">&quot;pageX&quot;</span>:<span class="hljs-number">53</span>,
-    <span class="hljs-attr">&quot;pageY&quot;</span>:<span class="hljs-number">14</span>,
-    <span class="hljs-attr">&quot;clientX&quot;</span>:<span class="hljs-number">53</span>,
-    <span class="hljs-attr">&quot;clientY&quot;</span>:<span class="hljs-number">14</span>
-  }],
-  <span class="hljs-attr">&quot;changedTouches&quot;</span>:[{
-    <span class="hljs-attr">&quot;identifier&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-attr">&quot;pageX&quot;</span>:<span class="hljs-number">53</span>,
-    <span class="hljs-attr">&quot;pageY&quot;</span>:<span class="hljs-number">14</span>,
-    <span class="hljs-attr">&quot;clientX&quot;</span>:<span class="hljs-number">53</span>,
-    <span class="hljs-attr">&quot;clientY&quot;</span>:<span class="hljs-number">14</span>
-  }]
+  <span class="hljs-attr">&quot;touches&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;pageX&quot;</span>: <span class="hljs-number">53</span>,
+      <span class="hljs-attr">&quot;pageY&quot;</span>: <span class="hljs-number">14</span>,
+      <span class="hljs-attr">&quot;clientX&quot;</span>: <span class="hljs-number">53</span>,
+      <span class="hljs-attr">&quot;clientY&quot;</span>: <span class="hljs-number">14</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;changedTouches&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;pageX&quot;</span>: <span class="hljs-number">53</span>,
+      <span class="hljs-attr">&quot;pageY&quot;</span>: <span class="hljs-number">14</span>,
+      <span class="hljs-attr">&quot;clientX&quot;</span>: <span class="hljs-number">53</span>,
+      <span class="hljs-attr">&quot;clientY&quot;</span>: <span class="hljs-number">14</span>
+    }
+  ]
 }
 </code></pre>
 <h2 id="&#x4E8B;&#x4EF6;&#x8BE6;&#x89E3;">&#x4E8B;&#x4EF6;&#x8BE6;&#x89E3;</h2>
@@ -169,27 +173,40 @@
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;outer&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;handleTap1&quot;</span>&gt;</span>
   outer view
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;middle&quot;</span> <span class="hljs-attr">catchtap</span>=<span class="hljs-string">&quot;handleTap2&quot;</span>&gt;</span>
-    middle view
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;inner&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;handleTap3&quot;</span>&gt;</span>
-      inner view
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    middle view <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;inner&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;handleTap3&quot;</span>&gt;</span> inner view <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <h3 id="&#x4E8B;&#x4EF6;&#x7684;&#x6355;&#x83B7;&#x9636;&#x6BB5;">&#x4E8B;&#x4EF6;&#x7684;&#x6355;&#x83B7;&#x9636;&#x6BB5;</h3>
 <p>&#x81EA;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C; <a href="../../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.5.0</a> &#x8D77;&#xFF0C;&#x89E6;&#x6478;&#x7C7B;&#x4E8B;&#x4EF6;&#x652F;&#x6301;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x3002;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x4F4D;&#x4E8E;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x4E4B;&#x524D;&#xFF0C;&#x4E14;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x4E2D;&#xFF0C;&#x4E8B;&#x4EF6;&#x5230;&#x8FBE;&#x8282;&#x70B9;&#x7684;&#x987A;&#x5E8F;&#x4E0E;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x6070;&#x597D;&#x76F8;&#x53CD;&#x3002;&#x9700;&#x8981;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x7528;<code>capture-bind</code>&#x3001;<code>capture-catch</code>&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x540E;&#x8005;&#x5C06;&#x4E2D;&#x65AD;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x548C;&#x53D6;&#x6D88;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x3002;</p>
 <p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB; inner view &#x4F1A;&#x5148;&#x540E;&#x8C03;&#x7528;<code>handleTap2</code>&#x3001;<code>handleTap4</code>&#x3001;<code>handleTap3</code>&#x3001;<code>handleTap1</code>&#x3002;</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;outer&quot;</span> <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap1&quot;</span> <span class="hljs-attr">capture-bind:touchstart</span>=<span class="hljs-string">&quot;handleTap2&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>
+  <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;outer&quot;</span>
+  <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap1&quot;</span>
+  <span class="hljs-attr">capture-bind:touchstart</span>=<span class="hljs-string">&quot;handleTap2&quot;</span>
+&gt;</span>
   outer view
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;inner&quot;</span> <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap3&quot;</span> <span class="hljs-attr">capture-bind:touchstart</span>=<span class="hljs-string">&quot;handleTap4&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;inner&quot;</span>
+    <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap3&quot;</span>
+    <span class="hljs-attr">capture-bind:touchstart</span>=<span class="hljs-string">&quot;handleTap4&quot;</span>
+  &gt;</span>
     inner view
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x5982;&#x679C;&#x5C06;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;<code>capture-bind</code>&#x6539;&#x4E3A;<code>capture-catch</code>&#xFF0C;&#x5C06;&#x53EA;&#x89E6;&#x53D1;<code>handleTap2</code>&#x3002;</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;outer&quot;</span> <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap1&quot;</span> <span class="hljs-attr">capture-catch:touchstart</span>=<span class="hljs-string">&quot;handleTap2&quot;</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>
+  <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;outer&quot;</span>
+  <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap1&quot;</span>
+  <span class="hljs-attr">capture-catch:touchstart</span>=<span class="hljs-string">&quot;handleTap2&quot;</span>
+&gt;</span>
   outer view
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;inner&quot;</span> <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap3&quot;</span> <span class="hljs-attr">capture-bind:touchstart</span>=<span class="hljs-string">&quot;handleTap4&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;inner&quot;</span>
+    <span class="hljs-attr">bind:touchstart</span>=<span class="hljs-string">&quot;handleTap3&quot;</span>
+    <span class="hljs-attr">capture-bind:touchstart</span>=<span class="hljs-string">&quot;handleTap4&quot;</span>
+  &gt;</span>
     inner view
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -334,10 +351,12 @@
 &#x4E66;&#x5199;&#x65B9;&#x5F0F;&#xFF1A;
 &#x4EE5;<code>data-</code>&#x5F00;&#x5934;&#xFF0C;&#x591A;&#x4E2A;&#x5355;&#x8BCD;&#x7531;&#x8FDE;&#x5B57;&#x7B26;<code>-</code>&#x94FE;&#x63A5;&#xFF0C;&#x4E0D;&#x80FD;&#x6709;&#x5927;&#x5199;(&#x5927;&#x5199;&#x4F1A;&#x81EA;&#x52A8;&#x8F6C;&#x6210;&#x5C0F;&#x5199;)&#x5982;<code>data-element-type</code>&#xFF0C;&#x6700;&#x7EC8;&#x5728; event.currentTarget.dataset &#x4E2D;&#x4F1A;&#x5C06;&#x8FDE;&#x5B57;&#x7B26;&#x8F6C;&#x6210;&#x9A7C;&#x5CF0;<code>elementType</code>&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">data-alpha-beta</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">data-alphaBeta</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindViewTap&quot;</span>&gt;</span> DataSet Test <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">data-alpha-beta</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">data-alphaBeta</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;bindViewTap&quot;</span>&gt;</span>
+  DataSet Test
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript">Page({
-  <span class="hljs-attr">bindViewTap</span>:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+  bindViewTap(event) {
     event.currentTarget.dataset.alphaBeta === <span class="hljs-number">1</span> <span class="hljs-comment">// - &#x4F1A;&#x8F6C;&#x4E3A;&#x9A7C;&#x5CF0;&#x5199;&#x6CD5;</span>
     event.currentTarget.dataset.alphabeta === <span class="hljs-number">2</span> <span class="hljs-comment">// &#x5927;&#x5199;&#x4F1A;&#x8F6C;&#x4E3A;&#x5C0F;&#x5199;</span>
   }

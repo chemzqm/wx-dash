@@ -29,11 +29,7 @@
 <p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x4F7F;&#x7528; WXS &#x7684;&#x7B80;&#x5355;&#x793A;&#x4F8B;&#xFF1A;</p>
 <h3 id="&#x9875;&#x9762;&#x6E32;&#x67D3;">&#x9875;&#x9762;&#x6E32;&#x67D3;</h3>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;m1&quot;</span>&gt;</span>
-var msg = &quot;hello world&quot;;
-
-module.exports.message = msg;
-<span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;m1&quot;</span>&gt;</span> var msg = &quot;hello world&quot;; module.exports.message = msg; <span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{m1.message}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
@@ -51,17 +47,9 @@ Page({
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x4E0B;&#x9762;&#x7684; getMax &#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x4E14;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x7684;&#x503C; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;m1&quot;</span>&gt;</span>
-var getMax = function(array) {
-  var max = undefined;
-  for (var i = 0; i <span class="hljs-tag">&lt; <span class="hljs-attr">array.length</span>; ++<span class="hljs-attr">i</span>) {
-    <span class="hljs-attr">max</span> = <span class="hljs-string">max</span> === <span class="hljs-string">undefined</span> ? 
-      <span class="hljs-attr">array</span>[<span class="hljs-attr">i</span>] <span class="hljs-attr">:</span> 
-      (<span class="hljs-attr">max</span> &gt;</span>= array[i] ? max : array[i]);
-  }
-  return max;
-}
-
-module.exports.getMax = getMax;
+  var getMax = function(array) { var max = undefined; for (var i = 0; i <span class="hljs-tag">&lt;
+  <span class="hljs-attr">array.length</span>; ++<span class="hljs-attr">i</span>) { <span class="hljs-attr">max</span> = <span class="hljs-string">max</span> === <span class="hljs-string">undefined</span> ? <span class="hljs-attr">array</span>[<span class="hljs-attr">i</span>] <span class="hljs-attr">:</span> (<span class="hljs-attr">max</span> &gt;</span>= array[i] ?
+  max : array[i]); } return max; } module.exports.getMax = getMax;
 <span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- &#x8C03;&#x7528; wxs &#x91CC;&#x9762;&#x7684; getMax &#x51FD;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x4E3A; page.js &#x91CC;&#x9762;&#x7684; array --&gt;</span>

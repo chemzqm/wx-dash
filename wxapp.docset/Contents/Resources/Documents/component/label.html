@@ -37,31 +37,48 @@
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/alak1cmR6JYU" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x5728;label&#x5185;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;checkboxChange&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{checkboxItems}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">checkbox</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__icon&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__icon-checked&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__text&quot;</span>&gt;</span>{{item.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">checkbox-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x5728;label&#x5185;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;checkboxChange&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{checkboxItems}}&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span>
+          <span class="hljs-attr">hidden</span>
+          <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span>
+          <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>
+        &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">checkbox</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__icon&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">view</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__icon-checked&quot;</span>
+            <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>
+          &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-1__text&quot;</span>&gt;</span>{{item.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">checkbox-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>label&#x7528;for&#x6807;&#x8BC6;&#x8868;&#x5355;&#x7EC4;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;radioChange&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{radioItems}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">radio</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">radio</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__icon&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__icon-checked&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>label&#x7528;for&#x6807;&#x8BC6;&#x8868;&#x5355;&#x7EC4;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;group&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;radioChange&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2&quot;</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{radioItems}}&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">radio</span>
+        <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span>
+        <span class="hljs-attr">hidden</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span>
+        <span class="hljs-attr">checked</span>=<span class="hljs-string">&quot;{{item.checked}}&quot;</span>
+      &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">radio</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__icon&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">view</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__icon-checked&quot;</span>
+          <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>
+        &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__text&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span>
+        &gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{item.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>
+      &gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label-2__text&quot;</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;{{item.name}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{item.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">radio-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">radio-group</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js">Page({
@@ -84,85 +101,85 @@
     ],
     <span class="hljs-attr">hidden</span>: <span class="hljs-literal">false</span>
   },
-  <span class="hljs-attr">checkboxChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-keyword">var</span> checked = e.detail.value
-    <span class="hljs-keyword">var</span> changed = {}
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.checkboxItems.length; i ++) {
+  checkboxChange(e) {
+    <span class="hljs-keyword">const</span> checked = e.detail.value
+    <span class="hljs-keyword">const</span> changed = {}
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.checkboxItems.length; i++) {
       <span class="hljs-keyword">if</span> (checked.indexOf(<span class="hljs-keyword">this</span>.data.checkboxItems[i].name) !== <span class="hljs-number">-1</span>) {
-        changed[<span class="hljs-string">&apos;checkboxItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">true</span>
+        changed[<span class="hljs-string">&apos;checkboxItems[&apos;</span> + i + <span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">true</span>
       } <span class="hljs-keyword">else</span> {
-        changed[<span class="hljs-string">&apos;checkboxItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">false</span>
+        changed[<span class="hljs-string">&apos;checkboxItems[&apos;</span> + i + <span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">false</span>
       }
     }
     <span class="hljs-keyword">this</span>.setData(changed)
   },
-  <span class="hljs-attr">radioChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-keyword">var</span> checked = e.detail.value
-    <span class="hljs-keyword">var</span> changed = {}
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.radioItems.length; i ++) {
+  radioChange(e) {
+    <span class="hljs-keyword">const</span> checked = e.detail.value
+    <span class="hljs-keyword">const</span> changed = {}
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>.data.radioItems.length; i++) {
       <span class="hljs-keyword">if</span> (checked.indexOf(<span class="hljs-keyword">this</span>.data.radioItems[i].name) !== <span class="hljs-number">-1</span>) {
-        changed[<span class="hljs-string">&apos;radioItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">true</span>
+        changed[<span class="hljs-string">&apos;radioItems[&apos;</span> + i + <span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">true</span>
       } <span class="hljs-keyword">else</span> {
-        changed[<span class="hljs-string">&apos;radioItems[&apos;</span>+i+<span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">false</span>
+        changed[<span class="hljs-string">&apos;radioItems[&apos;</span> + i + <span class="hljs-string">&apos;].checked&apos;</span>] = <span class="hljs-literal">false</span>
       }
     }
     <span class="hljs-keyword">this</span>.setData(changed)
   }
 })
-
 </code></pre>
-<pre><code class="language-css"><span class="hljs-selector-class">.label-1</span>, <span class="hljs-selector-class">.label-2</span>{
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">15px</span>;
+<pre><code class="language-css"><span class="hljs-selector-class">.label-1</span>,
+<span class="hljs-selector-class">.label-2</span> {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">15px</span>;
 }
-<span class="hljs-selector-class">.label-1__text</span>, <span class="hljs-selector-class">.label-2__text</span> {
-    <span class="hljs-attribute">display</span>: inline-block;
-    <span class="hljs-attribute">vertical-align</span>: middle;
+<span class="hljs-selector-class">.label-1__text</span>,
+<span class="hljs-selector-class">.label-2__text</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">vertical-align</span>: middle;
 }
 
 <span class="hljs-selector-class">.label-1__icon</span> {
-    <span class="hljs-attribute">position</span>: relative;
-    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
-    <span class="hljs-attribute">display</span>: inline-block;
-    <span class="hljs-attribute">vertical-align</span>: middle;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">18px</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
-    <span class="hljs-attribute">background</span>: <span class="hljs-number">#fcfff4</span>;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">vertical-align</span>: middle;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fcfff4</span>;
 }
 
 <span class="hljs-selector-class">.label-1__icon-checked</span> {
-    <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">top</span>: <span class="hljs-number">3px</span>;
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">3px</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-attribute">background</span>: <span class="hljs-number">#1aad19</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">3px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">3px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#1aad19</span>;
 }
 
-
 <span class="hljs-selector-class">.label-2__icon</span> {
-    <span class="hljs-attribute">position</span>: relative;
-    <span class="hljs-attribute">display</span>: inline-block;
-    <span class="hljs-attribute">vertical-align</span>: middle;
-    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">18px</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
-    <span class="hljs-attribute">background</span>: <span class="hljs-number">#fcfff4</span>;
-    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">vertical-align</span>: middle;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fcfff4</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50px</span>;
 }
 
 <span class="hljs-selector-class">.label-2__icon-checked</span> {
-    <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">left</span>: <span class="hljs-number">3px</span>;
-    <span class="hljs-attribute">top</span>: <span class="hljs-number">3px</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-attribute">background</span>: <span class="hljs-number">#1aad19</span>;
-    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">3px</span>;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">3px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#1aad19</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
 }
 
-<span class="hljs-selector-class">.label-4_text</span>{
-    <span class="hljs-attribute">text-align</span>: center;
-    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">15px</span>;
+<span class="hljs-selector-class">.label-4_text</span> {
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">15px</span>;
 }
 </code></pre>
 <p><img src="../image/pic/label.png" alt="label"></p>

@@ -46,23 +46,15 @@
 </code></pre>
 <p>&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x5728;<code>app.json</code>&#x7684;<code>subpackages</code>&#x5B57;&#x6BB5;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x5206;&#x5305;&#x914D;&#x7F6E;&#x9879;&#x4E2D;&#x5B9A;&#x4E49;<code>independent</code>&#x5B57;&#x6BB5;&#x58F0;&#x660E;&#x5BF9;&#x5E94;&#x5206;&#x5305;&#x4E3A;&#x72EC;&#x7ACB;&#x5206;&#x5305;&#x3002;</p>
 <pre><code class="language-json">{
-  <span class="hljs-attr">&quot;pages&quot;</span>: [
-    <span class="hljs-string">&quot;pages/index&quot;</span>,
-    <span class="hljs-string">&quot;pages/logs&quot;</span>
-  ],
+  <span class="hljs-attr">&quot;pages&quot;</span>: [<span class="hljs-string">&quot;pages/index&quot;</span>, <span class="hljs-string">&quot;pages/logs&quot;</span>],
   <span class="hljs-attr">&quot;subpackages&quot;</span>: [
     {
       <span class="hljs-attr">&quot;root&quot;</span>: <span class="hljs-string">&quot;moduleA&quot;</span>,
-      <span class="hljs-attr">&quot;pages&quot;</span>: [
-        <span class="hljs-string">&quot;pages/rabbit&quot;</span>,
-        <span class="hljs-string">&quot;pages/squirrel&quot;</span>
-      ]
-    }, {
+      <span class="hljs-attr">&quot;pages&quot;</span>: [<span class="hljs-string">&quot;pages/rabbit&quot;</span>, <span class="hljs-string">&quot;pages/squirrel&quot;</span>]
+    },
+    {
       <span class="hljs-attr">&quot;root&quot;</span>: <span class="hljs-string">&quot;moduleA&quot;</span>,
-      <span class="hljs-attr">&quot;pages&quot;</span>: [
-        <span class="hljs-string">&quot;pages/pear&quot;</span>,
-        <span class="hljs-string">&quot;pages/pineapple&quot;</span>
-      ],
+      <span class="hljs-attr">&quot;pages&quot;</span>: [<span class="hljs-string">&quot;pages/pear&quot;</span>, <span class="hljs-string">&quot;pages/pineapple&quot;</span>],
       <span class="hljs-attr">&quot;independent&quot;</span>: <span class="hljs-literal">true</span>
     }
   ]

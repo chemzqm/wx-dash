@@ -777,13 +777,26 @@
 <p><strong>&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/3uVxpmmT6wY9" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- map.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">map</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">longitude</span>=<span class="hljs-string">&quot;113.324520&quot;</span> <span class="hljs-attr">latitude</span>=<span class="hljs-string">&quot;23.099994&quot;</span> <span class="hljs-attr">scale</span>=<span class="hljs-string">&quot;14&quot;</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;{{controls}}&quot;</span> <span class="hljs-attr">bindcontroltap</span>=<span class="hljs-string">&quot;controltap&quot;</span> <span class="hljs-attr">markers</span>=<span class="hljs-string">&quot;{{markers}}&quot;</span> <span class="hljs-attr">bindmarkertap</span>=<span class="hljs-string">&quot;markertap&quot;</span> <span class="hljs-attr">polyline</span>=<span class="hljs-string">&quot;{{polyline}}&quot;</span> <span class="hljs-attr">bindregionchange</span>=<span class="hljs-string">&quot;regionchange&quot;</span> <span class="hljs-attr">show-location</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">map</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">map</span>
+  <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;map&quot;</span>
+  <span class="hljs-attr">longitude</span>=<span class="hljs-string">&quot;113.324520&quot;</span>
+  <span class="hljs-attr">latitude</span>=<span class="hljs-string">&quot;23.099994&quot;</span>
+  <span class="hljs-attr">scale</span>=<span class="hljs-string">&quot;14&quot;</span>
+  <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;{{controls}}&quot;</span>
+  <span class="hljs-attr">bindcontroltap</span>=<span class="hljs-string">&quot;controltap&quot;</span>
+  <span class="hljs-attr">markers</span>=<span class="hljs-string">&quot;{{markers}}&quot;</span>
+  <span class="hljs-attr">bindmarkertap</span>=<span class="hljs-string">&quot;markertap&quot;</span>
+  <span class="hljs-attr">polyline</span>=<span class="hljs-string">&quot;{{polyline}}&quot;</span>
+  <span class="hljs-attr">bindregionchange</span>=<span class="hljs-string">&quot;regionchange&quot;</span>
+  <span class="hljs-attr">show-location</span>
+  <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 300px;&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">map</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript"><span class="hljs-comment">// map.js</span>
 Page({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">markers</span>: [{
-      <span class="hljs-attr">iconPath</span>: <span class="hljs-string">&quot;/resources/others.png&quot;</span>,
+      <span class="hljs-attr">iconPath</span>: <span class="hljs-string">&apos;/resources/others.png&apos;</span>,
       <span class="hljs-attr">id</span>: <span class="hljs-number">0</span>,
       <span class="hljs-attr">latitude</span>: <span class="hljs-number">23.099994</span>,
       <span class="hljs-attr">longitude</span>: <span class="hljs-number">113.324520</span>,
@@ -798,7 +811,7 @@ Page({
         <span class="hljs-attr">longitude</span>: <span class="hljs-number">113.324520</span>,
         <span class="hljs-attr">latitude</span>: <span class="hljs-number">23.21229</span>
       }],
-      <span class="hljs-attr">color</span>:<span class="hljs-string">&quot;#FF0000DD&quot;</span>,
+      <span class="hljs-attr">color</span>: <span class="hljs-string">&apos;#FF0000DD&apos;</span>,
       <span class="hljs-attr">width</span>: <span class="hljs-number">2</span>,
       <span class="hljs-attr">dottedLine</span>: <span class="hljs-literal">true</span>
     }],

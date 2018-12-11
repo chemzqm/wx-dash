@@ -160,7 +160,7 @@
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <p><a href="https://developers.weixin.qq.com/s/pQU51zmz7a3K" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-js"><span class="hljs-comment">// &#x5FC5;&#x987B;&#x5728;&#x8FD9;&#x91CC;&#x7684;&#x56DE;&#x8C03;&#x624D;&#x80FD;&#x83B7;&#x53D6;</span>
-wx.onBLECharacteristicValueChange(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">characteristic</span>) </span>{
+wx.onBLECharacteristicValueChange(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">characteristic</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;characteristic value comed:&apos;</span>, characteristic)
 })
 
@@ -171,7 +171,7 @@ wx.readBLECharacteristicValue({
   serviceId,
   <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684; characteristicId &#x9700;&#x8981;&#x5728; getBLEDeviceCharacteristics &#x63A5;&#x53E3;&#x4E2D;&#x83B7;&#x53D6;</span>
   characteristicId,
-  success (res) {
+  success(res) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;readBLECharacteristicValue:&apos;</span>, res.errCode)
   }
 })

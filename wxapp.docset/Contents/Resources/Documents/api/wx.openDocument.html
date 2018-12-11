@@ -115,17 +115,17 @@
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-javascript">wx.downloadFile({
-    <span class="hljs-comment">// &#x793A;&#x4F8B; url&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x5B58;&#x5728;</span>
-    url: <span class="hljs-string">&apos;http://example.com/somefile.pdf&apos;</span>,
-    <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-        <span class="hljs-keyword">const</span> filePath = res.tempFilePath
-        wx.openDocument({
-            <span class="hljs-attr">filePath</span>: filePath,
-            <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6253;&#x5F00;&#x6587;&#x6863;&#x6210;&#x529F;&apos;</span>)
-            }
-        })
-    }
+  <span class="hljs-comment">// &#x793A;&#x4F8B; url&#xFF0C;&#x5E76;&#x975E;&#x771F;&#x5B9E;&#x5B58;&#x5728;</span>
+  url: <span class="hljs-string">&apos;http://example.com/somefile.pdf&apos;</span>,
+  success(res) {
+    <span class="hljs-keyword">const</span> filePath = res.tempFilePath
+    wx.openDocument({
+      filePath,
+      success(res) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6253;&#x5F00;&#x6587;&#x6863;&#x6210;&#x529F;&apos;</span>)
+      }
+    })
+  }
 })
 </code></pre>
 

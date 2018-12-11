@@ -89,11 +89,11 @@
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">wx.chooseImage({
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  success(res) {
     <span class="hljs-keyword">const</span> tempFilePaths = res.tempFilePaths
     wx.saveFile({
       <span class="hljs-attr">tempFilePath</span>: tempFilePaths[<span class="hljs-number">0</span>],
-      success (res) {
+      success(res) {
         <span class="hljs-keyword">const</span> savedFilePath = res.savedFilePath
       }
     })

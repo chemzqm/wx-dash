@@ -133,18 +133,18 @@
 <p>&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x4E0A;&#x4F20;&#x8FDB;&#x5EA6;&#x8FDB;&#x5EA6;&#x53D8;&#x5316;&#x7684;&#x4E8B;&#x4EF6;&#x548C;&#x53D6;&#x6D88;&#x4E0A;&#x4F20;&#x7684;&#x5BF9;&#x8C61;</p>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">wx.chooseImage({
-  success (res) {
+  success(res) {
     <span class="hljs-keyword">const</span> tempFilePaths = res.tempFilePaths
     wx.uploadFile({
-      <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;https://example.weixin.qq.com/upload&apos;</span>, <span class="hljs-comment">//&#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
+      <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;https://example.weixin.qq.com/upload&apos;</span>, <span class="hljs-comment">// &#x4EC5;&#x4E3A;&#x793A;&#x4F8B;&#xFF0C;&#x975E;&#x771F;&#x5B9E;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;</span>
       filePath: tempFilePaths[<span class="hljs-number">0</span>],
       <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;file&apos;</span>,
       <span class="hljs-attr">formData</span>: {
-        <span class="hljs-string">&apos;user&apos;</span>: <span class="hljs-string">&apos;test&apos;</span>
+        <span class="hljs-attr">user</span>: <span class="hljs-string">&apos;test&apos;</span>
       },
-      success (res){
+      success(res) {
         <span class="hljs-keyword">const</span> data = res.data
-        <span class="hljs-comment">//do something</span>
+        <span class="hljs-comment">// do something</span>
       }
     })
   }

@@ -102,7 +102,7 @@
 <p>computedStyle &#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E; size&#xFF0C;&#x5F53;&#x540C;&#x65F6;&#x5728; computedStyle &#x91CC;&#x6307;&#x5B9A;&#x4E86; width/height &#x548C;&#x4F20;&#x5165;&#x4E86; size: true&#xFF0C;&#x5219;&#x4F18;&#x5148;&#x8FD4;&#x56DE; computedStyle &#x83B7;&#x53D6;&#x5230;&#x7684; width/height&#x3002;</p>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">Page({
-  getFields () {
+  getFields() {
     wx.createSelectorQuery().select(<span class="hljs-string">&apos;#the-id&apos;</span>).fields({
       <span class="hljs-attr">dataset</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-attr">size</span>: <span class="hljs-literal">true</span>,
@@ -111,17 +111,17 @@
       <span class="hljs-attr">computedStyle</span>: [<span class="hljs-string">&apos;margin&apos;</span>, <span class="hljs-string">&apos;backgroundColor&apos;</span>],
       <span class="hljs-attr">context</span>: <span class="hljs-literal">true</span>,
     }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>{
-      res.dataset    <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
-      res.width      <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
-      res.height     <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
+      res.dataset <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;dataset</span>
+      res.width <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x5BBD;&#x5EA6;</span>
+      res.height <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;</span>
       res.scrollLeft <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x6C34;&#x5E73;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
-      res.scrollTop  <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
-      res.scrollX    <span class="hljs-comment">// &#x8282;&#x70B9; scroll-x &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
-      res.scrollY    <span class="hljs-comment">// &#x8282;&#x70B9; scroll-y &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
+      res.scrollTop <span class="hljs-comment">// &#x8282;&#x70B9;&#x7684;&#x7AD6;&#x76F4;&#x6EDA;&#x52A8;&#x4F4D;&#x7F6E;</span>
+      res.scrollX <span class="hljs-comment">// &#x8282;&#x70B9; scroll-x &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
+      res.scrollY <span class="hljs-comment">// &#x8282;&#x70B9; scroll-y &#x5C5E;&#x6027;&#x7684;&#x5F53;&#x524D;&#x503C;</span>
       <span class="hljs-comment">// &#x6B64;&#x5904;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x8981;&#x8FD4;&#x56DE;&#x7684;&#x6837;&#x5F0F;&#x540D;</span>
       res.margin
       res.backgroundColor
-      res.context    <span class="hljs-comment">// &#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x7684; Context &#x5BF9;&#x8C61;</span>
+      res.context <span class="hljs-comment">// &#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x7684; Context &#x5BF9;&#x8C61;</span>
     }).exec()
   }
 })

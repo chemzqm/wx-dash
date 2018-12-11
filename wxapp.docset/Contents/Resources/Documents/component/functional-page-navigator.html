@@ -89,14 +89,17 @@
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- sample.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">functional-page-navigator</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;loginAndGetUserInfo&quot;</span> <span class="hljs-attr">bind:success</span>=<span class="hljs-string">&quot;loginSuccess&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">functional-page-navigator</span>
+  <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;loginAndGetUserInfo&quot;</span>
+  <span class="hljs-attr">bind:success</span>=<span class="hljs-string">&quot;loginSuccess&quot;</span>
+&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x767B;&#x5F55;&#x5230;&#x63D2;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">functional-page-navigator</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// redirect.js navigator.js</span>
 Component({
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">loginSuccess</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    loginSuccess(e) {
       <span class="hljs-built_in">console</span>.log(e.detail.code) <span class="hljs-comment">// wx.login &#x7684; code</span>
       <span class="hljs-built_in">console</span>.log(e.detail.userInfo) <span class="hljs-comment">// wx.getUserInfo &#x7684; userInfo</span>
     }

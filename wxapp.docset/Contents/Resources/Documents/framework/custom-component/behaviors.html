@@ -33,9 +33,9 @@
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">myBehaviorData</span>: {}
   },
-  <span class="hljs-attr">attached</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{},
+  attached() {},
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">myBehaviorMethod</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+    myBehaviorMethod() {}
   }
 })
 </code></pre>
@@ -43,7 +43,7 @@
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/6SfsUKmE6iZC" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-js"><span class="hljs-comment">// my-component.js</span>
-<span class="hljs-keyword">var</span> myBehavior = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;my-behavior&apos;</span>)
+<span class="hljs-keyword">const</span> myBehavior = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;my-behavior&apos;</span>)
 Component({
   <span class="hljs-attr">behaviors</span>: [myBehavior],
   <span class="hljs-attr">properties</span>: {
@@ -54,9 +54,9 @@ Component({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">myData</span>: {}
   },
-  <span class="hljs-attr">attached</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{},
+  attached() {},
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">myMethod</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+    myMethod() {}
   }
 })
 </code></pre>
@@ -114,7 +114,7 @@ Component({
 Component({
   <span class="hljs-attr">behaviors</span>: [<span class="hljs-string">&apos;wx://component-export&apos;</span>],
   <span class="hljs-keyword">export</span>() {
-    <span class="hljs-keyword">return</span> { <span class="hljs-attr">myField</span>: <span class="hljs-string">&apos;myValue&apos;</span> }
+    <span class="hljs-keyword">return</span> {<span class="hljs-attr">myField</span>: <span class="hljs-string">&apos;myValue&apos;</span>}
   }
 })
 </code></pre>

@@ -331,14 +331,18 @@
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x666E;&#x901A;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">picker</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindPickerChange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{index}}&quot;</span> <span class="hljs-attr">range</span>=<span class="hljs-string">&quot;{{array}}&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;&#xFF1A;{{array[index]}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span> &#x5F53;&#x524D;&#x9009;&#x62E9;&#xFF1A;{{array[index]}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x591A;&#x5217;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;multiSelector&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindMultiPickerChange&quot;</span> <span class="hljs-attr">bindcolumnchange</span>=<span class="hljs-string">&quot;bindMultiPickerColumnChange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{multiIndex}}&quot;</span> <span class="hljs-attr">range</span>=<span class="hljs-string">&quot;{{multiArray}}&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
+    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;multiSelector&quot;</span>
+    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindMultiPickerChange&quot;</span>
+    <span class="hljs-attr">bindcolumnchange</span>=<span class="hljs-string">&quot;bindMultiPickerColumnChange&quot;</span>
+    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{multiIndex}}&quot;</span>
+    <span class="hljs-attr">range</span>=<span class="hljs-string">&quot;{{multiArray}}&quot;</span>
+  &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
       &#x5F53;&#x524D;&#x9009;&#x62E9;&#xFF1A;{{multiArray[0][multiIndex[0]]}}&#xFF0C;{{multiArray[1][multiIndex[1]]}}&#xFF0C;{{multiArray[2][multiIndex[2]]}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -346,24 +350,37 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x65F6;&#x95F4;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;time&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{time}}&quot;</span> <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;09:01&quot;</span> <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;21:01&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindTimeChange&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;: {{time}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
+    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;time&quot;</span>
+    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{time}}&quot;</span>
+    <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;09:01&quot;</span>
+    <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;21:01&quot;</span>
+    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindTimeChange&quot;</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span> &#x5F53;&#x524D;&#x9009;&#x62E9;: {{time}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x65E5;&#x671F;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;date&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{date}}&quot;</span> <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;2015-09-01&quot;</span> <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;2017-09-01&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindDateChange&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
-      &#x5F53;&#x524D;&#x9009;&#x62E9;: {{date}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
+    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;date&quot;</span>
+    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{date}}&quot;</span>
+    <span class="hljs-attr">start</span>=<span class="hljs-string">&quot;2015-09-01&quot;</span>
+    <span class="hljs-attr">end</span>=<span class="hljs-string">&quot;2017-09-01&quot;</span>
+    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindDateChange&quot;</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span> &#x5F53;&#x524D;&#x9009;&#x62E9;: {{date}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">picker</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>&#x7701;&#x5E02;&#x533A;&#x9009;&#x62E9;&#x5668;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;region&quot;</span> <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindRegionChange&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{region}}&quot;</span> <span class="hljs-attr">custom-item</span>=<span class="hljs-string">&quot;{{customItem}}&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">picker</span>
+    <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;region&quot;</span>
+    <span class="hljs-attr">bindchange</span>=<span class="hljs-string">&quot;bindRegionChange&quot;</span>
+    <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;{{region}}&quot;</span>
+    <span class="hljs-attr">custom-item</span>=<span class="hljs-string">&quot;{{customItem}}&quot;</span>
+  &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span>
       &#x5F53;&#x524D;&#x9009;&#x62E9;&#xFF1A;{{region[0]}}&#xFF0C;{{region[1]}}&#xFF0C;{{region[2]}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -441,94 +458,94 @@
     <span class="hljs-attr">region</span>: [<span class="hljs-string">&apos;&#x5E7F;&#x4E1C;&#x7701;&apos;</span>, <span class="hljs-string">&apos;&#x5E7F;&#x5DDE;&#x5E02;&apos;</span>, <span class="hljs-string">&apos;&#x6D77;&#x73E0;&#x533A;&apos;</span>],
     <span class="hljs-attr">customItem</span>: <span class="hljs-string">&apos;&#x5168;&#x90E8;&apos;</span>
   },
-  <span class="hljs-attr">bindPickerChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  bindPickerChange(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">index</span>: e.detail.value
     })
   },
-  <span class="hljs-attr">bindMultiPickerChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  bindMultiPickerChange(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">multiIndex</span>: e.detail.value
     })
   },
-  <span class="hljs-attr">bindMultiPickerColumnChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4FEE;&#x6539;&#x7684;&#x5217;&#x4E3A;&apos;</span>, e.detail.column, <span class="hljs-string">&apos;&#xFF0C;&#x503C;&#x4E3A;&apos;</span>, e.detail.value);
-    <span class="hljs-keyword">var</span> data = {
+  bindMultiPickerColumnChange(e) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4FEE;&#x6539;&#x7684;&#x5217;&#x4E3A;&apos;</span>, e.detail.column, <span class="hljs-string">&apos;&#xFF0C;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
+    <span class="hljs-keyword">const</span> data = {
       <span class="hljs-attr">multiArray</span>: <span class="hljs-keyword">this</span>.data.multiArray,
       <span class="hljs-attr">multiIndex</span>: <span class="hljs-keyword">this</span>.data.multiIndex
-    };
-    data.multiIndex[e.detail.column] = e.detail.value;
+    }
+    data.multiIndex[e.detail.column] = e.detail.value
     <span class="hljs-keyword">switch</span> (e.detail.column) {
       <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
         <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">0</span>]) {
           <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-            data.multiArray[<span class="hljs-number">1</span>] = [<span class="hljs-string">&apos;&#x6241;&#x6027;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x7EBF;&#x5F62;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x73AF;&#x8282;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8F6F;&#x4F53;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8282;&#x80A2;&#x52A8;&#x7269;&apos;</span>];
-            data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>];
-            <span class="hljs-keyword">break</span>;
+            data.multiArray[<span class="hljs-number">1</span>] = [<span class="hljs-string">&apos;&#x6241;&#x6027;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x7EBF;&#x5F62;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x73AF;&#x8282;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8F6F;&#x4F53;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x8282;&#x80A2;&#x52A8;&#x7269;&apos;</span>]
+            data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>]
+            <span class="hljs-keyword">break</span>
           <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-            data.multiArray[<span class="hljs-number">1</span>] = [<span class="hljs-string">&apos;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x4E24;&#x6816;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x722C;&#x884C;&#x52A8;&#x7269;&apos;</span>];
-            data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9CAB;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x5E26;&#x9C7C;&apos;</span>];
-            <span class="hljs-keyword">break</span>;
+            data.multiArray[<span class="hljs-number">1</span>] = [<span class="hljs-string">&apos;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x4E24;&#x6816;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x722C;&#x884C;&#x52A8;&#x7269;&apos;</span>]
+            data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9CAB;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x5E26;&#x9C7C;&apos;</span>]
+            <span class="hljs-keyword">break</span>
         }
-        data.multiIndex[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;
-        data.multiIndex[<span class="hljs-number">2</span>] = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">break</span>;
+        data.multiIndex[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+        data.multiIndex[<span class="hljs-number">2</span>] = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">break</span>
       <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
         <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">0</span>]) {
           <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
             <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">1</span>]) {
               <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x732A;&#x8089;&#x7EE6;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x5438;&#x8840;&#x866B;&apos;</span>]
+                <span class="hljs-keyword">break</span>
               <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x86D4;&#x866B;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x86D4;&#x866B;&apos;</span>]
+                <span class="hljs-keyword">break</span>
               <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x8682;&#x8681;&apos;</span>, <span class="hljs-string">&apos;&#x8682;&#x87E5;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x8682;&#x8681;&apos;</span>, <span class="hljs-string">&apos;&#x8682;&#x87E5;&apos;</span>]
+                <span class="hljs-keyword">break</span>
               <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x6CB3;&#x868C;&apos;</span>, <span class="hljs-string">&apos;&#x8717;&#x725B;&apos;</span>, <span class="hljs-string">&apos;&#x86DE;&#x8753;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x6CB3;&#x868C;&apos;</span>, <span class="hljs-string">&apos;&#x8717;&#x725B;&apos;</span>, <span class="hljs-string">&apos;&#x86DE;&#x8753;&apos;</span>]
+                <span class="hljs-keyword">break</span>
               <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x6606;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x7532;&#x58F3;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x86DB;&#x5F62;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x591A;&#x8DB3;&#x52A8;&#x7269;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x6606;&#x866B;&apos;</span>, <span class="hljs-string">&apos;&#x7532;&#x58F3;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x86DB;&#x5F62;&#x52A8;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x591A;&#x8DB3;&#x52A8;&#x7269;&apos;</span>]
+                <span class="hljs-keyword">break</span>
             }
-            <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>
           <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
             <span class="hljs-keyword">switch</span> (data.multiIndex[<span class="hljs-number">1</span>]) {
               <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9CAB;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x5E26;&#x9C7C;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9CAB;&#x9C7C;&apos;</span>, <span class="hljs-string">&apos;&#x5E26;&#x9C7C;&apos;</span>]
+                <span class="hljs-keyword">break</span>
               <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9752;&#x86D9;&apos;</span>, <span class="hljs-string">&apos;&#x5A03;&#x5A03;&#x9C7C;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x9752;&#x86D9;&apos;</span>, <span class="hljs-string">&apos;&#x5A03;&#x5A03;&#x9C7C;&apos;</span>]
+                <span class="hljs-keyword">break</span>
               <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
-                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x8725;&#x8734;&apos;</span>, <span class="hljs-string">&apos;&#x9F9F;&apos;</span>, <span class="hljs-string">&apos;&#x58C1;&#x864E;&apos;</span>];
-                <span class="hljs-keyword">break</span>;
+                data.multiArray[<span class="hljs-number">2</span>] = [<span class="hljs-string">&apos;&#x8725;&#x8734;&apos;</span>, <span class="hljs-string">&apos;&#x9F9F;&apos;</span>, <span class="hljs-string">&apos;&#x58C1;&#x864E;&apos;</span>]
+                <span class="hljs-keyword">break</span>
             }
-            <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">break</span>
         }
-        data.multiIndex[<span class="hljs-number">2</span>] = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">break</span>;
+        data.multiIndex[<span class="hljs-number">2</span>] = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">break</span>
     }
-    <span class="hljs-built_in">console</span>.log(data.multiIndex);
-    <span class="hljs-keyword">this</span>.setData(data);
+    <span class="hljs-built_in">console</span>.log(data.multiIndex)
+    <span class="hljs-keyword">this</span>.setData(data)
   },
-  <span class="hljs-attr">bindDateChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  bindDateChange(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">date</span>: e.detail.value
     })
   },
-  <span class="hljs-attr">bindTimeChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  bindTimeChange(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">time</span>: e.detail.value
     })
   },
-  <span class="hljs-attr">bindRegionChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+  bindRegionChange(e) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;picker&#x53D1;&#x9001;&#x9009;&#x62E9;&#x6539;&#x53D8;&#xFF0C;&#x643A;&#x5E26;&#x503C;&#x4E3A;&apos;</span>, e.detail.value)
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">region</span>: e.detail.value

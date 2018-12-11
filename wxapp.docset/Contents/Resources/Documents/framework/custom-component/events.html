@@ -34,7 +34,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">component-tag-name</span> <span class="hljs-attr">bind:myevent</span>=<span class="hljs-string">&quot;onMyEvent&quot;</span> /&gt;</span>
 </code></pre>
 <pre><code class="language-js">Page({
-  <span class="hljs-attr">onMyEvent</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+  onMyEvent(e) {
     e.detail <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x65F6;&#x63D0;&#x4F9B;&#x7684;detail&#x5BF9;&#x8C61;</span>
   }
 })
@@ -47,11 +47,11 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onTap&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x8FD9;&#x4E2A;&#x6309;&#x94AE;&#x5C06;&#x89E6;&#x53D1;&#x201C;myevent&#x201D;&#x4E8B;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js">Component({
-  <span class="hljs-attr">properties</span>: {}
-  methods: {
-    <span class="hljs-attr">onTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-      <span class="hljs-keyword">var</span> myEventDetail = {} <span class="hljs-comment">// detail&#x5BF9;&#x8C61;&#xFF0C;&#x63D0;&#x4F9B;&#x7ED9;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x51FD;&#x6570;</span>
-      <span class="hljs-keyword">var</span> myEventOption = {} <span class="hljs-comment">// &#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x9009;&#x9879;</span>
+  <span class="hljs-attr">properties</span>: {},
+  <span class="hljs-attr">methods</span>: {
+    onTap() {
+      <span class="hljs-keyword">const</span> myEventDetail = {} <span class="hljs-comment">// detail&#x5BF9;&#x8C61;&#xFF0C;&#x63D0;&#x4F9B;&#x7ED9;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x51FD;&#x6570;</span>
+      <span class="hljs-keyword">const</span> myEventOption = {} <span class="hljs-comment">// &#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x9009;&#x9879;</span>
       <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;myevent&apos;</span>, myEventDetail, myEventOption)
     }
   }
@@ -101,22 +101,18 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">another-component</span>&gt;</span>
 </code></pre>
 <pre><code class="language-html">// &#x7EC4;&#x4EF6; another-component.wxml
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;anotherEventListener&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;anotherEventListener&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-html">// &#x7EC4;&#x4EF6; my-component.wxml
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;myEventListener&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;myEventListener&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// &#x7EC4;&#x4EF6; my-component.js</span>
 Component({
   <span class="hljs-attr">methods</span>: {
-    <span class="hljs-attr">onTap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    onTap() {
       <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;customevent&apos;</span>, {}) <span class="hljs-comment">// &#x53EA;&#x4F1A;&#x89E6;&#x53D1; pageEventListener2</span>
-      <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;customevent&apos;</span>, {}, { <span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span> }) <span class="hljs-comment">// &#x4F1A;&#x4F9D;&#x6B21;&#x89E6;&#x53D1; pageEventListener2 &#x3001; pageEventListener1</span>
-      <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;customevent&apos;</span>, {}, { <span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">composed</span>: <span class="hljs-literal">true</span> }) <span class="hljs-comment">// &#x4F1A;&#x4F9D;&#x6B21;&#x89E6;&#x53D1; pageEventListener2 &#x3001; anotherEventListener &#x3001; pageEventListener1</span>
+      <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;customevent&apos;</span>, {}, {<span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span>}) <span class="hljs-comment">// &#x4F1A;&#x4F9D;&#x6B21;&#x89E6;&#x53D1; pageEventListener2 &#x3001; pageEventListener1</span>
+      <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;customevent&apos;</span>, {}, {<span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">composed</span>: <span class="hljs-literal">true</span>}) <span class="hljs-comment">// &#x4F1A;&#x4F9D;&#x6B21;&#x89E6;&#x53D1; pageEventListener2 &#x3001; anotherEventListener &#x3001; pageEventListener1</span>
     }
   }
 })

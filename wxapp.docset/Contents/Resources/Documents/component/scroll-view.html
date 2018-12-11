@@ -104,9 +104,17 @@
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>vertical scroll<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">scroll-view</span> <span class="hljs-attr">scroll-y</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px;&quot;</span> <span class="hljs-attr">bindscrolltoupper</span>=<span class="hljs-string">&quot;upper&quot;</span> <span class="hljs-attr">bindscrolltolower</span>=<span class="hljs-string">&quot;lower&quot;</span> <span class="hljs-attr">bindscroll</span>=<span class="hljs-string">&quot;scroll&quot;</span> <span class="hljs-attr">scroll-into-view</span>=<span class="hljs-string">&quot;{{toView}}&quot;</span> <span class="hljs-attr">scroll-top</span>=<span class="hljs-string">&quot;{{scrollTop}}&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">scroll-view</span>
+    <span class="hljs-attr">scroll-y</span>
+    <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 200px;&quot;</span>
+    <span class="hljs-attr">bindscrolltoupper</span>=<span class="hljs-string">&quot;upper&quot;</span>
+    <span class="hljs-attr">bindscrolltolower</span>=<span class="hljs-string">&quot;lower&quot;</span>
+    <span class="hljs-attr">bindscroll</span>=<span class="hljs-string">&quot;scroll&quot;</span>
+    <span class="hljs-attr">scroll-into-view</span>=<span class="hljs-string">&quot;{{toView}}&quot;</span>
+    <span class="hljs-attr">scroll-top</span>=<span class="hljs-string">&quot;{{scrollTop}}&quot;</span>
+  &gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;green&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item bc_green&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;red&quot;</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item bc_red&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item bc_red&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;yellow&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item bc_yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;blue&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item bc_blue&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">scroll-view</span>&gt;</span>
@@ -120,29 +128,29 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>horizontal scroll<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">scroll-view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view_H&quot;</span> <span class="hljs-attr">scroll-x</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;green&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item_H bc_green&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;red&quot;</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item_H bc_red&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;red&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item_H bc_red&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;yellow&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item_H bc_yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;blue&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-view-item_H bc_blue&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">scroll-view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
-<pre><code class="language-js"><span class="hljs-keyword">var</span> order = [<span class="hljs-string">&apos;red&apos;</span>, <span class="hljs-string">&apos;yellow&apos;</span>, <span class="hljs-string">&apos;blue&apos;</span>, <span class="hljs-string">&apos;green&apos;</span>, <span class="hljs-string">&apos;red&apos;</span>]
+<pre><code class="language-js"><span class="hljs-keyword">const</span> order = [<span class="hljs-string">&apos;red&apos;</span>, <span class="hljs-string">&apos;yellow&apos;</span>, <span class="hljs-string">&apos;blue&apos;</span>, <span class="hljs-string">&apos;green&apos;</span>, <span class="hljs-string">&apos;red&apos;</span>]
 Page({
   <span class="hljs-attr">data</span>: {
     <span class="hljs-attr">toView</span>: <span class="hljs-string">&apos;red&apos;</span>,
     <span class="hljs-attr">scrollTop</span>: <span class="hljs-number">100</span>
   },
-  <span class="hljs-attr">upper</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  upper(e) {
     <span class="hljs-built_in">console</span>.log(e)
   },
-  <span class="hljs-attr">lower</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  lower(e) {
     <span class="hljs-built_in">console</span>.log(e)
   },
-  <span class="hljs-attr">scroll</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  scroll(e) {
     <span class="hljs-built_in">console</span>.log(e)
   },
-  <span class="hljs-attr">tap</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; order.length; ++i) {
+  tap(e) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; order.length; ++i) {
       <span class="hljs-keyword">if</span> (order[i] === <span class="hljs-keyword">this</span>.data.toView) {
         <span class="hljs-keyword">this</span>.setData({
           <span class="hljs-attr">toView</span>: order[i + <span class="hljs-number">1</span>]
@@ -151,13 +159,12 @@ Page({
       }
     }
   },
-  <span class="hljs-attr">tapMove</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  tapMove(e) {
     <span class="hljs-keyword">this</span>.setData({
       <span class="hljs-attr">scrollTop</span>: <span class="hljs-keyword">this</span>.data.scrollTop + <span class="hljs-number">10</span>
     })
   }
 })
-
 </code></pre>
 <p><img src="../image/pic/scroll-view.png" alt="scroll-view"></p>
 <h5 id="bug--tip">Bug &amp; Tip</h5>

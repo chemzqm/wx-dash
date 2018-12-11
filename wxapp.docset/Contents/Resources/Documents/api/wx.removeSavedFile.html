@@ -68,16 +68,16 @@
 </table>
 <h4 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="language-js">wx.getSavedFileList({
- success (res) {
-   <span class="hljs-keyword">if</span> (res.fileList.length &gt; <span class="hljs-number">0</span>){
-     wx.removeSavedFile({
-       <span class="hljs-attr">filePath</span>: res.fileList[<span class="hljs-number">0</span>].filePath,
-       complete (res) {
-         <span class="hljs-built_in">console</span>.log(res)
-       }
-     })
-   }
- }
+  success(res) {
+    <span class="hljs-keyword">if</span> (res.fileList.length &gt; <span class="hljs-number">0</span>) {
+      wx.removeSavedFile({
+        <span class="hljs-attr">filePath</span>: res.fileList[<span class="hljs-number">0</span>].filePath,
+        complete(res) {
+          <span class="hljs-built_in">console</span>.log(res)
+        }
+      })
+    }
+  }
 })
 </code></pre>
 

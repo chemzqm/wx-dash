@@ -24,10 +24,7 @@
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/1udXLnmi6KY2" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x7EC4;&#x4EF6;&#x6A21;&#x677F; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x8282;&#x70B9;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x8282;&#x70B9;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x5F15;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x9875;&#x9762;&#x6A21;&#x677F; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
@@ -65,8 +62,7 @@
 <p>&#x6B64;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;wxml&#x4E2D;&#x4F7F;&#x7528;&#x591A;&#x4E2A;slot&#xFF0C;&#x4EE5;&#x4E0D;&#x540C;&#x7684; <code>name</code> &#x6765;&#x533A;&#x5206;&#x3002;</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x7EC4;&#x4EF6;&#x6A21;&#x677F; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;before&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x7EC6;&#x8282;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;before&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#x8FD9;&#x91CC;&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x7EC6;&#x8282;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;after&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
@@ -90,10 +86,14 @@
 <li>&#x7EE7;&#x627F;&#x6837;&#x5F0F;&#xFF0C;&#x5982; <code>font</code> &#x3001; <code>color</code> &#xFF0C;&#x4F1A;&#x4ECE;&#x7EC4;&#x4EF6;&#x5916;&#x7EE7;&#x627F;&#x5230;&#x7EC4;&#x4EF6;&#x5185;&#x3002;</li>
 <li>&#x9664;&#x7EE7;&#x627F;&#x6837;&#x5F0F;&#x5916;&#xFF0C; <code>app.wxss</code> &#x4E2D;&#x7684;&#x6837;&#x5F0F;&#x3001;&#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x9875;&#x9762;&#x7684;&#x7684;&#x6837;&#x5F0F;&#x5BF9;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x65E0;&#x6548;&#x3002;</li>
 </ul>
-<pre><code class="language-css"><span class="hljs-selector-id">#a</span> { } <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
-<span class="hljs-selector-attr">[a]</span> { } <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
-<span class="hljs-selector-tag">button</span> { } <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
-<span class="hljs-selector-class">.a</span> &gt; <span class="hljs-selector-class">.b</span> { } <span class="hljs-comment">/* &#x9664;&#x975E; .a &#x662F; view &#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4E00;&#x5B9A;&#x4F1A;&#x751F;&#x6548; */</span>
+<pre><code class="language-css"><span class="hljs-selector-id">#a</span> {
+} <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
+<span class="hljs-selector-attr">[a]</span> {
+} <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
+<span class="hljs-selector-tag">button</span> {
+} <span class="hljs-comment">/* &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; */</span>
+<span class="hljs-selector-class">.a</span> &gt; <span class="hljs-selector-class">.b</span> {
+} <span class="hljs-comment">/* &#x9664;&#x975E; .a &#x662F; view &#x7EC4;&#x4EF6;&#x8282;&#x70B9;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4E00;&#x5B9A;&#x4F1A;&#x751F;&#x6548; */</span>
 </code></pre>
 <p>&#x9664;&#x6B64;&#x4EE5;&#x5916;&#xFF0C;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5B83;&#x6240;&#x5728;&#x8282;&#x70B9;&#x7684;&#x9ED8;&#x8BA4;&#x6837;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528; <code>:host</code> &#x9009;&#x62E9;&#x5668;&#xFF08;&#x9700;&#x8981;&#x5305;&#x542B;&#x57FA;&#x7840;&#x5E93; <a href="../compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.7.2 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.7.2</a> &#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x652F;&#x6301;&#xFF09;&#x3002;</p>
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
@@ -116,7 +116,9 @@ Component({
 })
 </code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- &#x7EC4;&#x4EF6; custom-component.wxml --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">custom-component</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;my-class&quot;</span>&gt;</span>&#x8FD9;&#x6BB5;&#x6587;&#x672C;&#x7684;&#x989C;&#x8272;&#x7531;&#x7EC4;&#x4EF6;&#x5916;&#x7684; class &#x51B3;&#x5B9A;<span class="hljs-tag">&lt;/<span class="hljs-name">custom-component</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">custom-component</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;my-class&quot;</span>
+  &gt;</span>&#x8FD9;&#x6BB5;&#x6587;&#x672C;&#x7684;&#x989C;&#x8272;&#x7531;&#x7EC4;&#x4EF6;&#x5916;&#x7684; class &#x51B3;&#x5B9A;<span class="hljs-tag">&lt;/<span class="hljs-name">custom-component</span>
+&gt;</span>
 </code></pre>
 <p>&#x8FD9;&#x6837;&#xFF0C;&#x7EC4;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x6837;&#x5F0F;&#x7C7B;&#x5BF9;&#x5E94;&#x7684; class &#xFF0C;&#x5C31;&#x50CF;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x5C5E;&#x6027;&#x4E00;&#x6837;&#x3002;</p>
 <p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF1A;</strong></p>

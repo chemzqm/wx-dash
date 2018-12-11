@@ -21,30 +21,28 @@
 <h2 id="&#x914D;&#x7F6E;&#x793A;&#x4F8B;">&#x914D;&#x7F6E;&#x793A;&#x4F8B;</h2>
 <p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x90E8;&#x5206;&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x7684; <code>app.json</code> &#xFF1A;</p>
 <pre><code class="language-json">{
-  <span class="hljs-attr">&quot;pages&quot;</span>: [
-    <span class="hljs-string">&quot;pages/index/index&quot;</span>,
-    <span class="hljs-string">&quot;pages/logs/index&quot;</span>
-  ],
+  <span class="hljs-attr">&quot;pages&quot;</span>: [<span class="hljs-string">&quot;pages/index/index&quot;</span>, <span class="hljs-string">&quot;pages/logs/index&quot;</span>],
   <span class="hljs-attr">&quot;window&quot;</span>: {
     <span class="hljs-attr">&quot;navigationBarTitleText&quot;</span>: <span class="hljs-string">&quot;Demo&quot;</span>
   },
   <span class="hljs-attr">&quot;tabBar&quot;</span>: {
-    <span class="hljs-attr">&quot;list&quot;</span>: [{
-      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;pages/index/index&quot;</span>,
-      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x9996;&#x9875;&quot;</span>
-    }, {
-      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;pages/logs/logs&quot;</span>,
-      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x65E5;&#x5FD7;&quot;</span>
-    }]
+    <span class="hljs-attr">&quot;list&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;pages/index/index&quot;</span>,
+        <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x9996;&#x9875;&quot;</span>
+      },
+      {
+        <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;pages/logs/logs&quot;</span>,
+        <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x65E5;&#x5FD7;&quot;</span>
+      }
+    ]
   },
   <span class="hljs-attr">&quot;networkTimeout&quot;</span>: {
     <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-number">10000</span>,
     <span class="hljs-attr">&quot;downloadFile&quot;</span>: <span class="hljs-number">10000</span>
   },
   <span class="hljs-attr">&quot;debug&quot;</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">&quot;navigateToMiniProgramAppIdList&quot;</span>: [
-    <span class="hljs-string">&quot;wxe5f52902cf4de896&quot;</span>
-  ]
+  <span class="hljs-attr">&quot;navigateToMiniProgramAppIdList&quot;</span>: [<span class="hljs-string">&quot;wxe5f52902cf4de896&quot;</span>]
 }
 </code></pre>
 <h2 id="appjson-&#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;">app.json &#x914D;&#x7F6E;&#x9879;&#x5217;&#x8868;</h2>
@@ -179,10 +177,7 @@
 </code></pre>
 <p>&#x5219;&#x9700;&#x8981;&#x5728; app.json &#x4E2D;&#x5199;</p>
 <pre><code class="language-json">{
-  <span class="hljs-attr">&quot;pages&quot;</span>:[
-    <span class="hljs-string">&quot;pages/index/index&quot;</span>,
-    <span class="hljs-string">&quot;pages/logs/logs&quot;</span>
-  ]
+  <span class="hljs-attr">&quot;pages&quot;</span>: [<span class="hljs-string">&quot;pages/index/index&quot;</span>, <span class="hljs-string">&quot;pages/logs/logs&quot;</span>]
 }
 </code></pre>
 <h3 id="window">window</h3>
@@ -282,7 +277,7 @@
 <p><strong>&#x6CE8;&#xFF1A;&#x5BA2;&#x6237;&#x7AEF; 6.7.2 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;<code>navigationStyle: custom</code> &#x5BF9; <a href="../component/web-view.html"><code>&lt;web-view&gt;</code></a> &#x7EC4;&#x4EF6;&#x65E0;&#x6548;</strong></p>
 <p>&#x5982; app.json &#xFF1A;</p>
 <pre><code class="language-json">{
-  <span class="hljs-attr">&quot;window&quot;</span>:{
+  <span class="hljs-attr">&quot;window&quot;</span>: {
     <span class="hljs-attr">&quot;navigationBarBackgroundColor&quot;</span>: <span class="hljs-string">&quot;#ffffff&quot;</span>,
     <span class="hljs-attr">&quot;navigationBarTextStyle&quot;</span>: <span class="hljs-string">&quot;black&quot;</span>,
     <span class="hljs-attr">&quot;navigationBarTitleText&quot;</span>: <span class="hljs-string">&quot;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;&#x529F;&#x80FD;&#x6F14;&#x793A;&quot;</span>,

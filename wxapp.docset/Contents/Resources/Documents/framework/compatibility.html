@@ -83,7 +83,7 @@ compareVersion(<span class="hljs-string">&apos;1.11.0&apos;</span>, <span class=
 <p><strong>API &#x53C2;&#x6570;&#x6216;&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x5BF9;&#x4E8E; API &#x7684;&#x53C2;&#x6570;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x503C;&#x6709;&#x65B0;&#x589E;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5224;&#x65AD;&#x3002;</p>
 <pre><code class="language-js">wx.showModal({
-  <span class="hljs-attr">success</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+  success(res) {
     <span class="hljs-keyword">if</span> (wx.canIUse(<span class="hljs-string">&apos;showModal.cancel&apos;</span>)) {
       <span class="hljs-built_in">console</span>.log(res.cancel)
     }
