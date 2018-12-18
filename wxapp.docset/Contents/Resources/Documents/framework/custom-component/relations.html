@@ -91,6 +91,7 @@ Component({
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-input.js</span>
 <span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+
 Component({
   <span class="hljs-attr">behaviors</span>: [customFormControls],
   <span class="hljs-attr">relations</span>: {
@@ -102,6 +103,7 @@ Component({
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-submit.js</span>
 <span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+
 Component({
   <span class="hljs-attr">behaviors</span>: [customFormControls],
   <span class="hljs-attr">relations</span>: {
@@ -114,6 +116,7 @@ Component({
 <p>&#x5219;&#x5728; <code>relations</code> &#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;behavior&#x6765;&#x4EE3;&#x66FF;&#x7EC4;&#x4EF6;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF1A;</p>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-form.js</span>
 <span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
+
 Component({
   <span class="hljs-attr">relations</span>: {
     <span class="hljs-attr">customFormControls</span>: {
