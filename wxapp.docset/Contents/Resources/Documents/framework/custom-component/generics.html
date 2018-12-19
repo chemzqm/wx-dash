@@ -23,7 +23,10 @@
 <p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x201C;&#x9009;&#x6846;&#x7EC4;&#x201D;&#xFF08;selectable-group&#xFF09;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x5176;&#x4E2D;&#x53EF;&#x4EE5;&#x653E;&#x7F6E;&#x5355;&#x9009;&#x6846;&#xFF08;custom-radio&#xFF09;&#x6216;&#x8005;&#x590D;&#x9009;&#x6846;&#xFF08;custom-checkbox&#xFF09;&#x3002;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684; wxml &#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7F16;&#x5199;&#xFF1A;</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- selectable-group.wxml --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{labels}}&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">selectable</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;{{false}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">selectable</span>&gt;</span> {{item}} <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">selectable</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;{{false}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">selectable</span>&gt;</span>
+    {{item}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;&#xFF0C;&#x201C;selectable&#x201D;&#x4E0D;&#x662F;&#x4EFB;&#x4F55;&#x5728; json &#x6587;&#x4EF6;&#x7684; <code>usingComponents</code> &#x5B57;&#x6BB5;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x8282;&#x70B9;&#x3002;&#x5B83;&#x9700;&#x8981;&#x5728; <code>componentGenerics</code> &#x5B57;&#x6BB5;&#x4E2D;&#x58F0;&#x660E;&#xFF1A;</p>

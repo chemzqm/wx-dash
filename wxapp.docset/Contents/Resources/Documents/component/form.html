@@ -51,7 +51,8 @@
 <p><a href="https://developers.weixin.qq.com/s/MUaz7cmy6AYq" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">bindsubmit</span>=<span class="hljs-string">&quot;formSubmit&quot;</span> <span class="hljs-attr">bindreset</span>=<span class="hljs-string">&quot;formReset&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>switch<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;switch&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>switch<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">switch</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;switch&quot;</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>slider<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -65,15 +66,27 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>radio<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">radio-group</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;radio-group&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;radio1&quot;</span> /&gt;</span>radio1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;radio2&quot;</span> /&gt;</span>radio2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;radio1&quot;</span> /&gt;</span>
+        radio1
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">radio</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;radio2&quot;</span> /&gt;</span>
+        radio2
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">radio-group</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section section_gap&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section__title&quot;</span>&gt;</span>checkbox<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">checkbox-group</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;checkbox&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;checkbox1&quot;</span> /&gt;</span>checkbox1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;checkbox2&quot;</span> /&gt;</span>checkbox2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;checkbox1&quot;</span> /&gt;</span>
+        checkbox1
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">checkbox</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;checkbox2&quot;</span> /&gt;</span>
+        checkbox2
+      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">checkbox-group</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-area&quot;</span>&gt;</span>
@@ -91,7 +104,7 @@
   }
 })
 </code></pre>
-<p><img src="../image/pic/form.png" alt="form"></p>
+<p><img src="../image/pic/form.png?t=18121916" alt="form"></p>
 
                             </section>
                         </div>

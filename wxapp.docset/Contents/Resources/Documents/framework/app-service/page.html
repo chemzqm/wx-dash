@@ -157,7 +157,8 @@ Page({
 <p>&#x6E32;&#x67D3;&#x5C42;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="../view/wxml/index.html">WXML</a> &#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/2PeBsKmn6EZ9" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript">Page({
   <span class="hljs-attr">data</span>: {
@@ -366,7 +367,7 @@ Page({
 <p><code>Page</code> &#x4E2D;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;&#x5728;&#x6E32;&#x67D3;&#x5C42;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;<a href="../view/wxml/event.html">&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;</a>&#xFF0C;&#x5F53;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C; Page &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/vUf6fKmX64Zn" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;viewTap&quot;</span>&gt;</span> click me <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;viewTap&quot;</span>&gt;</span>click me<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-javascript">Page({
   viewTap() {
@@ -427,8 +428,10 @@ Page({
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/HofnzKmb6fZe" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--index.wxml--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeText&quot;</span>&gt;</span>Change normal data<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{num}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeNum&quot;</span>&gt;</span>Change normal num<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeText&quot;</span>&gt;</span>Change normal data<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{num}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeNum&quot;</span>&gt;</span>Change normal num<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{array[0].text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;changeItemInArray&quot;</span>&gt;</span>Change Array data<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{object.text}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
@@ -481,7 +484,7 @@ Page({
 <h2 id="&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</h2>
 <p><strong>&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x7ACB;&#x9A6C;&#x5B8C;&#x5168;&#x5F04;&#x660E;&#x767D;&#xFF0C;&#x4E0D;&#x8FC7;&#x4EE5;&#x540E;&#x5B83;&#x4F1A;&#x6709;&#x5E2E;&#x52A9;&#x3002;</strong></p>
 <p>&#x4E0B;&#x56FE;&#x8BF4;&#x660E;&#x4E86; Page &#x5B9E;&#x4F8B;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;</p>
-<p><img src="../../image/mina-lifecycle.png" alt="" style="max-height:1000px;height:1000px"></p>
+<p><img src="../../image/mina-lifecycle.png?t=18121916" alt="" style="max-height:1000px;height:1000px"></p>
 
                             </section>
                         </div>

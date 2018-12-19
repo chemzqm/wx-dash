@@ -29,9 +29,9 @@
 <p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x4F7F;&#x7528; WXS &#x7684;&#x7B80;&#x5355;&#x793A;&#x4F8B;&#xFF1A;</p>
 <h3 id="&#x9875;&#x9762;&#x6E32;&#x67D3;">&#x9875;&#x9762;&#x6E32;&#x67D3;</h3>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;m1&quot;</span>&gt;</span> var msg = &quot;hello world&quot;; module.exports.message = msg; <span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;m1&quot;</span>&gt;</span>var msg = &quot;hello world&quot;; module.exports.message = msg;<span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{m1.message}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{m1.message}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>hello world
@@ -53,7 +53,7 @@ Page({
 <span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- &#x8C03;&#x7528; wxs &#x91CC;&#x9762;&#x7684; getMax &#x51FD;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x4E3A; page.js &#x91CC;&#x9762;&#x7684; array --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{m1.getMax(array)}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{m1.getMax(array)}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>5

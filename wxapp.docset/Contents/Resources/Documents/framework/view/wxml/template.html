@@ -26,7 +26,10 @@
   time: string
 --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;msgItem&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> {{index}}: {{msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span> Time: {{time}} <span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>{{index}}: {{msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>Time: {{time}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 </code></pre>
 <h3 id="&#x4F7F;&#x7528;&#x6A21;&#x677F;">&#x4F7F;&#x7528;&#x6A21;&#x677F;</h3>
@@ -45,10 +48,10 @@
 </code></pre>
 <p>is &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Mustache &#x8BED;&#x6CD5;&#xFF0C;&#x6765;&#x52A8;&#x6001;&#x51B3;&#x5B9A;&#x5177;&#x4F53;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x54EA;&#x4E2A;&#x6A21;&#x677F;&#xFF1A;</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;odd&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> odd <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>odd<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;even&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> even <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>even<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{[1, 2, 3, 4, 5]}}&quot;</span>&gt;</span>

@@ -44,18 +44,18 @@
 ./custom-component/behaviors.html|自定义组件 behaviors
 ./custom-component/relations.html|自定义组件 组件间关系
 ./custom-component/generics.html|自定义组件 抽象节点
-./custom-component/extend.html|自定义组件 自定义组件扩展
+./custom-component/extend.html|自定义组件 扩展
 ./custom-component/trdparty.html|自定义组件 开发第三方自定义组件
 ./custom-component/unit-test.html|自定义组件 单元测试
 ./plugin/index.html|插件
 ./plugin/development.html|插件 开发插件
 ./plugin/using.html|插件 使用插件
-./plugin/api-limit.html|插件 插件调用 API 的限制
-./plugin/component-limit.html|插件 插件使用组件的限制
-./plugin/functional-pages.html|插件 插件功能页
-./plugin/functional-pages/user-info.html|插件 插件功能页 用户信息功能页
-./plugin/functional-pages/request-payment.html|插件 插件功能页 支付功能页
-./plugin/functional-pages/choose-address.html|插件 插件功能页 收货地址功能页
+./plugin/api-limit.html|插件 调用 API 的限制
+./plugin/component-limit.html|插件 使用组件的限制
+./plugin/functional-pages.html|插件 功能页
+./plugin/functional-pages/user-info.html|插件 功能页 用户信息功能页
+./plugin/functional-pages/request-payment.html|插件 功能页 支付功能页
+./plugin/functional-pages/choose-address.html|插件 功能页 收货地址功能页
 ./ability/network.html|基础能力
 ./ability/network.html|基础能力 网络
 ./ability/network.html|基础能力 网络 使用说明
@@ -81,7 +81,7 @@
 ./open-ability/getPhoneNumber.html|开放能力 用户信息 获取手机号
 ./open-ability/bio-auth.html|开放能力 用户信息 生物认证
 ./open-ability/share.html|开放能力 转发
-./open-ability/share.html|开放能力 转发 转发
+./open-ability/share.html|开放能力 转发
 ./open-ability/share/updatable-message.html|开放能力 转发 动态消息
 ./open-ability/launchApp.html|开放能力 打开App
 ./open-ability/template-message.html|开放能力 消息

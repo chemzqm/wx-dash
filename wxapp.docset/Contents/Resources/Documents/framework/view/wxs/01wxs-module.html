@@ -59,8 +59,9 @@
 </code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- page/index/index.wxml --&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../tools.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;tools&quot;</span> /&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{tools.msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{tools.bar(tools.FOO)}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./../tools.wxs&quot;</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;tools&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{tools.msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{tools.bar(tools.FOO)}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>some msg
@@ -144,7 +145,7 @@ some msg
 <span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
   var some_msg = &quot;hello world&quot;; module.exports = { msg : some_msg, }
 <span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{foo.msg}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{foo.msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>hello world
@@ -176,9 +177,9 @@ Page({
 --&gt;</span>
 
 <span class="hljs-comment">&lt;!-- &#x8C03;&#x7528; some_comms &#x6A21;&#x5757;&#x91CC;&#x9762;&#x7684; bar &#x51FD;&#x6570;&#xFF0C;&#x4E14;&#x53C2;&#x6570;&#x4E3A; some_comms &#x6A21;&#x5757;&#x91CC;&#x9762;&#x7684; foo --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{some_comms.bar(some_comms.foo)}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{some_comms.bar(some_comms.foo)}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- &#x8C03;&#x7528; some_comms &#x6A21;&#x5757;&#x91CC;&#x9762;&#x7684; bar &#x51FD;&#x6570;&#xFF0C;&#x4E14;&#x53C2;&#x6570;&#x4E3A; page/index/index.js &#x91CC;&#x9762;&#x7684; msg --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{some_comms.bar(msg)}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{some_comms.bar(msg)}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <p>&#x9875;&#x9762;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code>&apos;hello world&apos; from comm.wxs

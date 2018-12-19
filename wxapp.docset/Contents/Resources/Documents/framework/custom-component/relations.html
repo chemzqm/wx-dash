@@ -20,8 +20,8 @@
 <h2 id="&#x5B9A;&#x4E49;&#x548C;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x95F4;&#x5173;&#x7CFB;">&#x5B9A;&#x4E49;&#x548C;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x95F4;&#x5173;&#x7CFB;</h2>
 <p>&#x6709;&#x65F6;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x7EC4;&#x4EF6;&#xFF1A;</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">custom-ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">custom-li</span>&gt;</span> item 1 <span class="hljs-tag">&lt;/<span class="hljs-name">custom-li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">custom-li</span>&gt;</span> item 2 <span class="hljs-tag">&lt;/<span class="hljs-name">custom-li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">custom-li</span>&gt;</span>item 1<span class="hljs-tag">&lt;/<span class="hljs-name">custom-li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">custom-li</span>&gt;</span>item 2<span class="hljs-tag">&lt;/<span class="hljs-name">custom-li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">custom-ul</span>&gt;</span>
 </code></pre>
 <p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C; <code>custom-ul</code> &#x548C; <code>custom-li</code> &#x90FD;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x4EEC;&#x6709;&#x76F8;&#x4E92;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x76F8;&#x4E92;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x5F80;&#x5F80;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x3002;&#x6B64;&#x65F6;&#x5728;&#x7EC4;&#x4EF6;&#x5B9A;&#x4E49;&#x65F6;&#x52A0;&#x5165; <code>relations</code> &#x5B9A;&#x4E49;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x6837;&#x7684;&#x95EE;&#x9898;&#x3002;&#x793A;&#x4F8B;&#xFF1A;</p>
@@ -80,7 +80,7 @@ Component({
     input
     <span class="hljs-tag">&lt;<span class="hljs-name">custom-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">custom-input</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">custom-submit</span>&gt;</span> submit <span class="hljs-tag">&lt;/<span class="hljs-name">custom-submit</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">custom-submit</span>&gt;</span>submit<span class="hljs-tag">&lt;/<span class="hljs-name">custom-submit</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">custom-form</span>&gt;</span>
 </code></pre>
 <p><code>custom-form</code> &#x7EC4;&#x4EF6;&#x60F3;&#x8981;&#x5173;&#x8054; <code>custom-input</code> &#x548C; <code>custom-submit</code> &#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x90FD;&#x6709;&#x540C;&#x4E00;&#x4E2A;behavior&#xFF1A;</p>
@@ -91,7 +91,6 @@ Component({
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-input.js</span>
 <span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
-
 Component({
   <span class="hljs-attr">behaviors</span>: [customFormControls],
   <span class="hljs-attr">relations</span>: {
@@ -103,7 +102,6 @@ Component({
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-submit.js</span>
 <span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
-
 Component({
   <span class="hljs-attr">behaviors</span>: [customFormControls],
   <span class="hljs-attr">relations</span>: {
@@ -116,7 +114,6 @@ Component({
 <p>&#x5219;&#x5728; <code>relations</code> &#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x4E2D;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;behavior&#x6765;&#x4EE3;&#x66FF;&#x7EC4;&#x4EF6;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x5173;&#x8054;&#x7684;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF1A;</p>
 <pre><code class="language-js"><span class="hljs-comment">// path/to/custom-form.js</span>
 <span class="hljs-keyword">const</span> customFormControls = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./custom-form-controls&apos;</span>)
-
 Component({
   <span class="hljs-attr">relations</span>: {
     <span class="hljs-attr">customFormControls</span>: {

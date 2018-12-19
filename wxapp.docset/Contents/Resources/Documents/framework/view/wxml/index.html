@@ -21,7 +21,7 @@
 <p>&#x7528;&#x4EE5;&#x4E0B;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x770B;&#x770B; WXML &#x5177;&#x6709;&#x4EC0;&#x4E48;&#x80FD;&#x529B;&#xFF1A;</p>
 <h3 id="&#x6570;&#x636E;&#x7ED1;&#x5B9A;"><a href="data.html">&#x6570;&#x636E;&#x7ED1;&#x5B9A;</a></h3>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> {{message}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// page.js</span>
 Page({
@@ -32,7 +32,7 @@ Page({
 </code></pre>
 <h3 id="&#x5217;&#x8868;&#x6E32;&#x67D3;"><a href="list.html">&#x5217;&#x8868;&#x6E32;&#x67D3;</a></h3>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{array}}&quot;</span>&gt;</span> {{item}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;{{array}}&quot;</span>&gt;</span>{{item}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// page.js</span>
 Page({
@@ -43,9 +43,9 @@ Page({
 </code></pre>
 <h3 id="&#x6761;&#x4EF6;&#x6E32;&#x67D3;"><a href="conditional.html">&#x6761;&#x4EF6;&#x6E32;&#x67D3;</a></h3>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{view == &apos;WEBVIEW&apos;}}&quot;</span>&gt;</span> WEBVIEW <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:elif</span>=<span class="hljs-string">&quot;{{view == &apos;APP&apos;}}&quot;</span>&gt;</span> APP <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>=<span class="hljs-string">&quot;{{view == &apos;MINA&apos;}}&quot;</span>&gt;</span> MINA <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;{{view == &apos;WEBVIEW&apos;}}&quot;</span>&gt;</span>WEBVIEW<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:elif</span>=<span class="hljs-string">&quot;{{view == &apos;APP&apos;}}&quot;</span>&gt;</span>APP<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>=<span class="hljs-string">&quot;{{view == &apos;MINA&apos;}}&quot;</span>&gt;</span>MINA<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// page.js</span>
 Page({
@@ -57,7 +57,7 @@ Page({
 <h3 id="&#x6A21;&#x677F;"><a href="template.html">&#x6A21;&#x677F;</a></h3>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!--wxml--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;staffName&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span> FirstName: {{firstName}}, LastName: {{lastName}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>FirstName: {{firstName}}, LastName: {{lastName}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;staffName&quot;</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&quot;{{...staffA}}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
@@ -74,7 +74,7 @@ Page({
 })
 </code></pre>
 <h3 id="&#x4E8B;&#x4EF6;"><a href="event.html">&#x4E8B;&#x4EF6;</a></h3>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;add&quot;</span>&gt;</span> {{count}} <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;add&quot;</span>&gt;</span>{{count}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js">Page({
   <span class="hljs-attr">data</span>: {
