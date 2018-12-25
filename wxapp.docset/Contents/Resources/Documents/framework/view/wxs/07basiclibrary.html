@@ -65,25 +65,26 @@
 <li><code>parse(string)</code>: &#x5C06; <code>JSON</code> &#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5316;&#x6210;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x5BF9;&#x8C61;&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.stringify())
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">undefined</span>))
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">null</span>) === <span class="hljs-string">&apos;null&apos;</span>)
+<pre><code class="language-js">
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.stringify());
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">undefined</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;null&quot;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">null</span>));
 
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-number">111</span>) === <span class="hljs-string">&apos;111&apos;</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&apos;111&apos;</span>) === <span class="hljs-string">&apos;&quot;111&quot;&apos;</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">true</span>) === <span class="hljs-string">&apos;true&apos;</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;111&quot;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-number">111</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&quot;111&quot;&apos;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&quot;111&quot;</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;true&quot;</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">true</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}));
 
 
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify()))
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">undefined</span>)))
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">null</span>)) === <span class="hljs-literal">null</span>)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify()));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">undefined</span>)));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">null</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">null</span>)));
 
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-number">111</span>)) === <span class="hljs-number">111</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&apos;111&apos;</span>)) === <span class="hljs-string">&apos;111&apos;</span>)
-<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">true</span>)) === <span class="hljs-literal">true</span>)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">111</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-number">111</span>)));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;111&quot;</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-string">&quot;111&quot;</span>)));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-literal">true</span>)));
 
-<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span> === <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{})))
+<span class="hljs-built_in">console</span>.log(<span class="hljs-literal">undefined</span>===<span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{})));
 </code></pre>
 <h2 id="number">Number</h2>
 <h3 id="&#x5C5E;&#x6027;-2">&#x5C5E;&#x6027;</h3>

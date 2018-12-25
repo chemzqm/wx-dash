@@ -25,16 +25,16 @@
 <h2 id="wxs-&#x6587;&#x4EF6;">.wxs &#x6587;&#x4EF6;</h2>
 <p>&#x5728;<strong>&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</strong>&#x91CC;&#x9762;&#xFF0C;&#x53F3;&#x952E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x521B;&#x5EFA; <code>.wxs</code> &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x76F4;&#x63A5;&#x7F16;&#x5199; WXS &#x811A;&#x672C;&#x3002;</p>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-comment">// /pages/comm.wxs</span>
+<pre><code class="language-js"><span class="hljs-comment">// /pages/comm.wxs</span>
 
-<span class="hljs-keyword">const</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from comm.wxs&quot;</span>
-<span class="hljs-keyword">const</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
-  <span class="hljs-keyword">return</span> d
+<span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from comm.wxs&quot;</span>;
+<span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+  <span class="hljs-keyword">return</span> d;
 }
 <span class="hljs-built_in">module</span>.exports = {
-  foo,
-  bar
-}
+  <span class="hljs-attr">foo</span>: foo,
+  <span class="hljs-attr">bar</span>: bar
+};
 </code></pre>
 <p>&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x5728; <code>/pages/comm.wxs</code> &#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x7F16;&#x5199;&#x4E86; WXS &#x4EE3;&#x7801;&#x3002;&#x8BE5; <code>.wxs</code> &#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x7684; <code>.wxs</code> &#x6587;&#x4EF6; &#x6216; WXML &#x4E2D;&#x7684; <code>&lt;wxs&gt;</code> &#x6807;&#x7B7E;&#x5F15;&#x7528;&#x3002;</p>
 <h3 id="module-&#x5BF9;&#x8C61;">module &#x5BF9;&#x8C61;</h3>
@@ -45,17 +45,17 @@
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/KYgu1Km36pZP" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
+<pre><code class="language-js"><span class="hljs-comment">// /pages/tools.wxs</span>
 
-<span class="hljs-keyword">const</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>
-<span class="hljs-keyword">const</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
-  <span class="hljs-keyword">return</span> d
+<span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>;
+<span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
+  <span class="hljs-keyword">return</span> d;
 }
 <span class="hljs-built_in">module</span>.exports = {
   <span class="hljs-attr">FOO</span>: foo,
-  bar,
-}
-<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&apos;some msg&apos;</span>
+  <span class="hljs-attr">bar</span>: bar,
+};
+<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&quot;some msg&quot;</span>;
 </code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- page/index/index.wxml --&gt;</span>
 
@@ -77,25 +77,25 @@
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/E4g94Kme6rZ6" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-javascript"><span class="hljs-comment">// /pages/tools.wxs</span>
+<pre><code class="language-wxs">// /pages/tools.wxs
 
-<span class="hljs-keyword">const</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>
-<span class="hljs-keyword">const</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
-  <span class="hljs-keyword">return</span> d
+var foo = &quot;&apos;hello world&apos; from tools.wxs&quot;;
+var bar = function (d) {
+  return d;
 }
-<span class="hljs-built_in">module</span>.exports = {
-  <span class="hljs-attr">FOO</span>: foo,
-  bar,
-}
-<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&apos;some msg&apos;</span>
+module.exports = {
+  FOO: foo,
+  bar: bar,
+};
+module.exports.msg = &quot;some msg&quot;;
 </code></pre>
-<pre><code class="language-javascript"><span class="hljs-comment">// /pages/logic.wxs</span>
+<pre><code class="language-js"><span class="hljs-comment">// /pages/logic.wxs</span>
 
-<span class="hljs-keyword">const</span> tools = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./tools.wxs&apos;</span>)
+<span class="hljs-keyword">var</span> tools = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./tools.wxs&quot;</span>);
 
-<span class="hljs-built_in">console</span>.log(tools.FOO)
-<span class="hljs-built_in">console</span>.log(tools.bar(<span class="hljs-string">&apos;logic.wxs&apos;</span>))
-<span class="hljs-built_in">console</span>.log(tools.msg)
+<span class="hljs-built_in">console</span>.log(tools.FOO);
+<span class="hljs-built_in">console</span>.log(tools.bar(<span class="hljs-string">&quot;logic.wxs&quot;</span>));
+<span class="hljs-built_in">console</span>.log(tools.msg);
 </code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- /page/index/index.wxml --&gt;</span>
 

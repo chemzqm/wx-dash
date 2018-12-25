@@ -35,54 +35,59 @@
 </li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-comment">// if ...</span>
+<pre><code class="language-js"><span class="hljs-comment">// if ...</span>
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) &#x8BED;&#x53E5;
+<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) &#x8BED;&#x53E5;;
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) { &#x8BED;&#x53E5; }
+<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) 
+  &#x8BED;&#x53E5;;
 
 <span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 }
 
 
-<span class="hljs-comment">// if ... else</span>
+<span class="hljs-comment">// if ... else </span>
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) &#x8BED;&#x53E5;
-<span class="hljs-keyword">else</span> &#x8BED;&#x53E5;
+<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) &#x8BED;&#x53E5;;
+<span class="hljs-keyword">else</span> &#x8BED;&#x53E5;;
 
-<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) { &#x8BED;&#x53E5; } <span class="hljs-keyword">else</span> { &#x8BED;&#x53E5; }
+<span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) 
+  &#x8BED;&#x53E5;;
+<span class="hljs-keyword">else</span> 
+  &#x8BED;&#x53E5;;
 
 <span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 } <span class="hljs-keyword">else</span> {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 }
 
 <span class="hljs-comment">// if ... else if ... else ...</span>
 
 <span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 } <span class="hljs-keyword">else</span> {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 }
+
 </code></pre>
 <h2 id="switch-&#x8BED;&#x53E5;">switch &#x8BED;&#x53E5;</h2>
 <p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-keyword">switch</span> (&#x8868;&#x8FBE;&#x5F0F;) {
+<pre><code class="language-js"><span class="hljs-keyword">switch</span> (&#x8868;&#x8FBE;&#x5F0F;) {
   <span class="hljs-keyword">case</span> &#x53D8;&#x91CF;:
-    &#x8BED;&#x53E5;
+    &#x8BED;&#x53E5;;
   <span class="hljs-keyword">case</span> &#x6570;&#x5B57;:
-    &#x8BED;&#x53E5;
-    <span class="hljs-keyword">break</span>
+    &#x8BED;&#x53E5;;
+    <span class="hljs-keyword">break</span>;
   <span class="hljs-keyword">case</span> &#x5B57;&#x7B26;&#x4E32;:
-    &#x8BED;&#x53E5;
+    &#x8BED;&#x53E5;;
   <span class="hljs-keyword">default</span>:
-    &#x8BED;&#x53E5;
+    &#x8BED;&#x53E5;;
 }
 </code></pre>
 <ul>
@@ -90,20 +95,20 @@
 <li><code>case</code> &#x5173;&#x952E;&#x8BCD;&#x540E;&#x9762;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#xFF1A;<code>&#x53D8;&#x91CF;</code>&#xFF0C;<code>&#x6570;&#x5B57;</code>&#xFF0C;<code>&#x5B57;&#x7B26;&#x4E32;</code>&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-keyword">const</span> exp = <span class="hljs-number">10</span>
+<pre><code class="language-js"><span class="hljs-keyword">var</span> exp = <span class="hljs-number">10</span>;
 
-<span class="hljs-keyword">switch</span> (exp) {
-  <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;10&apos;</span>:
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;string 10&apos;</span>)
-    <span class="hljs-keyword">break</span>
-  <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;number 10&apos;</span>)
-    <span class="hljs-keyword">break</span>
-  <span class="hljs-keyword">case</span> exp:
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;var exp&apos;</span>)
-    <span class="hljs-keyword">break</span>
-  <span class="hljs-keyword">default</span>:
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;default&apos;</span>)
+<span class="hljs-keyword">switch</span> ( exp ) {
+<span class="hljs-keyword">case</span> <span class="hljs-string">&quot;10&quot;</span>:
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;string 10&quot;</span>);
+  <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;number 10&quot;</span>);
+  <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">case</span> exp:
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;var exp&quot;</span>);
+  <span class="hljs-keyword">break</span>;
+<span class="hljs-keyword">default</span>:
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;default&quot;</span>);
 }
 </code></pre>
 <p><strong>&#x8F93;&#x51FA;&#xFF1A;</strong></p>
@@ -111,35 +116,37 @@
 </code></pre>
 <h2 id="for-&#x8BED;&#x53E5;">for &#x8BED;&#x53E5;</h2>
 <p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-keyword">for</span> (&#x8BED;&#x53E5;; &#x8BED;&#x53E5;; &#x8BED;&#x53E5;) &#x8BED;&#x53E5;
+<pre><code class="language-js"><span class="hljs-keyword">for</span> (&#x8BED;&#x53E5;; &#x8BED;&#x53E5;; &#x8BED;&#x53E5;)
+  &#x8BED;&#x53E5;;
 
 <span class="hljs-keyword">for</span> (&#x8BED;&#x53E5;; &#x8BED;&#x53E5;; &#x8BED;&#x53E5;) {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 }
 </code></pre>
 <ul>
 <li>&#x652F;&#x6301;&#x4F7F;&#x7528; <code>break</code>&#xFF0C;<code>continue</code> &#x5173;&#x952E;&#x8BCD;&#x3002;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; ++i) {
-  <span class="hljs-built_in">console</span>.log(i)
-  <span class="hljs-keyword">if</span> (i &gt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">break</span>
+<pre><code class="language-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; ++i) {
+  <span class="hljs-built_in">console</span>.log(i);
+  <span class="hljs-keyword">if</span>( i &gt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">break</span>;
 }
 </code></pre>
 <p><strong>&#x8F93;&#x51FA;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-number">0</span>
+<pre><code class="language-js"><span class="hljs-number">0</span>
 <span class="hljs-number">1</span>
 </code></pre>
 <h2 id="while-&#x8BED;&#x53E5;">while &#x8BED;&#x53E5;</h2>
 <p><strong>&#x793A;&#x4F8B;&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
-<pre><code class="language-javascript"><span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;) &#x8BED;&#x53E5;
+<pre><code class="language-js"><span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;)
+  &#x8BED;&#x53E5;;
 
-<span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;) {
-  &#x4EE3;&#x7801;&#x5757;
+<span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;){
+  &#x4EE3;&#x7801;&#x5757;;
 }
 
 <span class="hljs-keyword">do</span> {
-  &#x4EE3;&#x7801;&#x5757;
+  &#x4EE3;&#x7801;&#x5757;;
 } <span class="hljs-keyword">while</span> (&#x8868;&#x8FBE;&#x5F0F;)
 </code></pre>
 <ul>
