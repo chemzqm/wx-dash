@@ -77,17 +77,17 @@
 </ul>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/E4g94Kme6rZ6" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
-<pre><code class="language-wxs">// /pages/tools.wxs
+<pre><code class="language-js"><span class="hljs-comment">// /pages/tools.wxs</span>
 
-var foo = &quot;&apos;hello world&apos; from tools.wxs&quot;;
-var bar = function (d) {
-  return d;
+<span class="hljs-keyword">var</span> foo = <span class="hljs-string">&quot;&apos;hello world&apos; from tools.wxs&quot;</span>;
+<span class="hljs-keyword">var</span> bar = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d</span>) </span>{
+  <span class="hljs-keyword">return</span> d;
 }
-module.exports = {
-  FOO: foo,
-  bar: bar,
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">FOO</span>: foo,
+  <span class="hljs-attr">bar</span>: bar,
 };
-module.exports.msg = &quot;some msg&quot;;
+<span class="hljs-built_in">module</span>.exports.msg = <span class="hljs-string">&quot;some msg&quot;</span>;
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// /pages/logic.wxs</span>
 
