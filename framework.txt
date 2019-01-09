@@ -68,6 +68,9 @@
 ./subpackages/independent.html|基础能力 分包加载 独立分包
 ./subpackages/preload.html|基础能力 分包加载 分包预下载
 ./workers.html|基础能力 多线程 Worker
+./server-ability/backend-api.html|后端能力
+./server-ability/backend-api.html|后端能力 后端API
+./server-ability/message-push.html|后端能力 消息推送
 ./device/bluetooth.html|硬件能力
 ./device/bluetooth.html|硬件能力 蓝牙
 ./device/nfc.html|硬件能力 NFC
@@ -100,6 +103,9 @@
 ./open-ability/qr-code.html|开放能力 获取二维码
 ./open-ability/data-analysis.html|开放能力 数据分析
 ./open-ability/nearby.html|开放能力 附近的小程序
+./open-ability/express.html|开放能力 物流助手
+./open-ability/express.html|开放能力 物流助手 接入说明
+./open-ability/express-download.html|开放能力 物流助手 打单软件
 ./usability/debug.html|可用性
 ./usability/debug.html|可用性 调试
 ./details.html|可用性 运行环境

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>统一服务消息</title>
+  <title>sendUniformMessage</title>
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
@@ -18,7 +18,7 @@
                             <section class="normal markdown-section">
                               <h3 id="senduniformmessage">sendUniformMessage</h3>
 <blockquote>
-<p>&#x672C;&#x63A5;&#x53E3;&#x5E94;&#x5728;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;</p>
+<p>&#x672C;&#x63A5;&#x53E3;&#x5E94;&#x5728;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x53C2;&#x89C1;<a href="../framework/server-ability/backend-api.html">&#x540E;&#x7AEF;API</a>&#x3002;</p>
 </blockquote>
 <p>&#x4E0B;&#x53D1;&#x5C0F;&#x7A0B;&#x5E8F;&#x548C;&#x516C;&#x4F17;&#x53F7;&#x7EDF;&#x4E00;&#x7684;&#x670D;&#x52A1;&#x6D88;&#x606F;</p>
 <h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
@@ -33,7 +33,6 @@
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
 <th>&#x5FC5;&#x586B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -43,7 +42,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td><a href="getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></td>
-<td></td>
 </tr>
 <tr>
 <td>touser</td>
@@ -51,7 +49,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x7528;&#x6237;openid&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;openid&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;mp_template_msg.appid&#x5BF9;&#x5E94;&#x7684;&#x516C;&#x4F17;&#x53F7;&#x7684;openid</td>
-<td></td>
 </tr>
 <tr>
 <td>weapp_template_msg</td>
@@ -59,7 +56,6 @@
 <td></td>
 <td>&#x5426;</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x63A5;&#x53E3;; &#x6709;&#x6B64;&#x8282;&#x70B9;&#x5219;&#x4F18;&#x5148;&#x53D1;&#x9001;&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x6D88;&#x606F;</td>
-<td></td>
 </tr>
 <tr>
 <td>mp_template_msg</td>
@@ -67,7 +63,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x63A5;&#x53E3;&#xFF1B;&#x6709;&#x6B64;&#x8282;&#x70B9;&#x5E76;&#x4E14;&#x6CA1;&#x6709;weapp_template_msg&#x8282;&#x70B9;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -80,7 +75,6 @@
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
 <th>&#x5FC5;&#x586B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -90,7 +84,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;ID</td>
-<td></td>
 </tr>
 <tr>
 <td>page</td>
@@ -98,7 +91,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x8DEF;&#x5F84;</td>
-<td></td>
 </tr>
 <tr>
 <td>form_id</td>
@@ -106,7 +98,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x6D88;&#x606F;formid</td>
-<td></td>
 </tr>
 <tr>
 <td>data</td>
@@ -114,7 +105,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x6570;&#x636E;</td>
-<td></td>
 </tr>
 <tr>
 <td>emphasis_keyword</td>
@@ -122,7 +112,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x6A21;&#x677F;&#x653E;&#x5927;&#x5173;&#x952E;&#x8BCD;</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -135,7 +124,6 @@
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
 <th>&#x5FC5;&#x586B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -145,7 +133,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x516C;&#x4F17;&#x53F7;appid&#xFF0C;&#x8981;&#x6C42;&#x4E0E;&#x5C0F;&#x7A0B;&#x5E8F;&#x6709;&#x7ED1;&#x5B9A;&#x4E14;&#x540C;&#x4E3B;&#x4F53;</td>
-<td></td>
 </tr>
 <tr>
 <td>template_id</td>
@@ -153,7 +140,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;id</td>
-<td></td>
 </tr>
 <tr>
 <td>url</td>
@@ -161,7 +147,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x6240;&#x8981;&#x8DF3;&#x8F6C;&#x7684;url</td>
-<td></td>
 </tr>
 <tr>
 <td>miniprogram</td>
@@ -169,7 +154,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x6240;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x5FC5;&#x987B;&#x4E0E;&#x516C;&#x4F17;&#x53F7;&#x5177;&#x6709;&#x7ED1;&#x5B9A;&#x5173;&#x7CFB;</td>
-<td></td>
 </tr>
 <tr>
 <td>data</td>
@@ -177,7 +161,6 @@
 <td></td>
 <td>&#x662F;</td>
 <td>&#x516C;&#x4F17;&#x53F7;&#x6A21;&#x677F;&#x6D88;&#x606F;&#x7684;&#x6570;&#x636E;</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -190,7 +173,6 @@
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -198,13 +180,11 @@
 <td>errcode</td>
 <td>number</td>
 <td>&#x9519;&#x8BEF;&#x7801;</td>
-<td></td>
 </tr>
 <tr>
 <td>errmsg</td>
 <td>string</td>
 <td>&#x9519;&#x8BEF;&#x4FE1;&#x606F;</td>
-<td></td>
 </tr>
 </tbody>
 </table>

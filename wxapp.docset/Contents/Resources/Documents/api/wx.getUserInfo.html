@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>用户信息</title>
+  <title>wx.getUserInfo</title>
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../../website.css" />
   <style type="text/css">
@@ -31,7 +31,6 @@
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
 <th>&#x5FC5;&#x586B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -41,7 +40,6 @@
 <td></td>
 <td>&#x5426;</td>
 <td>&#x662F;&#x5426;&#x5E26;&#x4E0A;&#x767B;&#x5F55;&#x6001;&#x4FE1;&#x606F;&#x3002;&#x5F53; withCredentials &#x4E3A; true &#x65F6;&#xFF0C;&#x8981;&#x6C42;&#x6B64;&#x524D;&#x6709;&#x8C03;&#x7528;&#x8FC7; wx.login &#x4E14;&#x767B;&#x5F55;&#x6001;&#x5C1A;&#x672A;&#x8FC7;&#x671F;&#xFF0C;&#x6B64;&#x65F6;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x5305;&#x542B; encryptedData, iv &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF1B;&#x5F53; withCredentials &#x4E3A; false &#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x6C42;&#x6709;&#x767B;&#x5F55;&#x6001;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x5305;&#x542B; encryptedData, iv &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;</td>
-<td></td>
 </tr>
 <tr>
 <td>lang</td>
@@ -49,7 +47,6 @@
 <td>en</td>
 <td>&#x5426;</td>
 <td>&#x663E;&#x793A;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x8BED;&#x8A00;</td>
-<td></td>
 </tr>
 <tr>
 <td>success</td>
@@ -57,7 +54,6 @@
 <td></td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
 </tr>
 <tr>
 <td>fail</td>
@@ -65,7 +61,6 @@
 <td></td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
-<td></td>
 </tr>
 <tr>
 <td>complete</td>
@@ -73,7 +68,6 @@
 <td></td>
 <td>&#x5426;</td>
 <td>&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;&#x8C03;&#x7528;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#xFF09;</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +103,6 @@
 <th>&#x5C5E;&#x6027;</th>
 <th>&#x7C7B;&#x578B;</th>
 <th>&#x8BF4;&#x660E;</th>
-<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -117,31 +110,26 @@
 <td>userInfo</td>
 <td><a href="UserInfo.html">UserInfo</a></td>
 <td>&#x7528;&#x6237;&#x4FE1;&#x606F;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x5305;&#x542B; openid &#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;</td>
-<td></td>
 </tr>
 <tr>
 <td>rawData</td>
 <td>string</td>
 <td>&#x4E0D;&#x5305;&#x62EC;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x7B7E;&#x540D;</td>
-<td></td>
 </tr>
 <tr>
 <td>signature</td>
 <td>string</td>
 <td>&#x4F7F;&#x7528; sha1( rawData + sessionkey ) &#x5F97;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7528;&#x4E8E;&#x6821;&#x9A8C;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x8BE6;&#x89C1; <a href="../framework/open-ability/signature.html">&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x548C;&#x52A0;&#x89E3;&#x5BC6;</a></td>
-<td></td>
 </tr>
 <tr>
 <td>encryptedData</td>
 <td>string</td>
 <td>&#x5305;&#x62EC;&#x654F;&#x611F;&#x6570;&#x636E;&#x5728;&#x5185;&#x7684;&#x5B8C;&#x6574;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#xFF0C;&#x8BE6;&#x89C1; <a href="../framework/open-ability/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x548C;&#x52A0;&#x89E3;&#x5BC6;</a></td>
-<td></td>
 </tr>
 <tr>
 <td>iv</td>
 <td>string</td>
 <td>&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x7684;&#x521D;&#x59CB;&#x5411;&#x91CF;&#xFF0C;&#x8BE6;&#x89C1; <a href="../framework/open-ability/signature.html#&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;">&#x7528;&#x6237;&#x6570;&#x636E;&#x7684;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x548C;&#x52A0;&#x89E3;&#x5BC6;</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>

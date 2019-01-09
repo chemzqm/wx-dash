@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>addOrder</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="addorder">addOrder</h3>
+<blockquote>
+<p>&#x672C;&#x63A5;&#x53E3;&#x5E94;&#x5728;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x7528;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x53C2;&#x89C1;<a href="../framework/server-ability/backend-api.html">&#x540E;&#x7AEF;API</a>&#x3002;</p>
+</blockquote>
+<p>&#x751F;&#x6210;&#x8FD0;&#x5355;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;">&#x8BF7;&#x6C42;&#x5730;&#x5740;</h4>
+<pre><code>POST https://api.weixin.qq.com/cgi-bin/express/business/order/add?access_token=ACCESS_TOKEN
+</code></pre>
+<h4 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td><a href="getAccessToken.html">&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;</a></td>
+</tr>
+<tr>
+<td>order_id</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x8BA2;&#x5355;ID&#xFF0C;&#x987B;&#x4FDD;&#x8BC1;&#x5168;&#x5C40;&#x552F;&#x4E00;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;512&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>openid</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x7528;&#x6237; openid</td>
+</tr>
+<tr>
+<td>delivery_id</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5FEB;&#x9012;&#x516C;&#x53F8;ID&#xFF0C;&#x53C2;&#x89C1;<a href="getAllDelivery.html"><code>getAllDelivery</code></a></td>
+</tr>
+<tr>
+<td>biz_id</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5FEB;&#x9012;&#x5BA2;&#x6237;&#x7F16;&#x7801;&#x6216;&#x8005;&#x73B0;&#x4ED8;&#x7F16;&#x7801;</td>
+</tr>
+<tr>
+<td>custom_remark</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x5FEB;&#x9012;&#x5907;&#x6CE8;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&quot;&#x6613;&#x788E;&#x7269;&#x54C1;&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;1024&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>sender</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>receiver</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>cargo</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x4FE1;&#x606F;&#xFF0C;&#x5C06;&#x4F20;&#x9012;&#x7ED9;&#x5FEB;&#x9012;&#x516C;&#x53F8;</td>
+</tr>
+<tr>
+<td>shop</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5546;&#x54C1;&#x4FE1;&#x606F;&#xFF0C;&#x4F1A;&#x5C55;&#x793A;&#x5230;&#x7269;&#x6D41;&#x901A;&#x77E5;&#x6D88;&#x606F;&#x4E2D;</td>
+</tr>
+<tr>
+<td>insured</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x4FDD;&#x4EF7;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>service</td>
+<td>Object</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x670D;&#x52A1;&#x7C7B;&#x578B;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>sender &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x59D3;&#x540D;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>tel</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x624B;&#x673A;&#x53F7;&#xFF0C;&#x82E5;&#x4E0D;&#x586B;&#x5199;&#x5219;&#x5FC5;&#x987B;&#x586B;&#x5199; mobile&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;32&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#xFF0C;&#x82E5;&#x4E0D;&#x586B;&#x5199;&#x5219;&#x5FC5;&#x987B;&#x586B;&#x5199; tel&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;32&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>company</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x516C;&#x53F8;&#x540D;&#x79F0;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>post_code</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x90AE;&#x7F16;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;10&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x56FD;&#x5BB6;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>province</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x7701;&#x4EFD;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;&#x5E7F;&#x4E1C;&#x7701;&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x5E02;/&#x5730;&#x533A;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;&#x5E7F;&#x5DDE;&#x5E02;&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>area</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x533A;/&#x53BF;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;&#x6D77;&#x73E0;&#x533A;&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x53D1;&#x4EF6;&#x4EBA;&#x8BE6;&#x7EC6;&#x5730;&#x5740;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;XX&#x8DEF;XX&#x53F7;XX&#x5927;&#x53A6;XX&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;512&#x5B57;&#x8282;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>receiver &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x540D;&#x5B57;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>tel</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x624B;&#x673A;&#x53F7;&#xFF0C;&#x82E5;&#x4E0D;&#x586B;&#x5199;&#x5219;&#x5FC5;&#x987B;&#x586B;&#x5199; mobile&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;32&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x7535;&#x8BDD;&#x53F7;&#xFF0C;&#x82E5;&#x4E0D;&#x586B;&#x5199;&#x5219;&#x5FC5;&#x987B;&#x586B;&#x5199; tel&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;32&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>company</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x516C;&#x53F8;&#x540D;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>post_code</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x90AE;&#x7F16;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;10&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td></td>
+<td>&#x5426;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x6240;&#x5728;&#x56FD;&#x5BB6;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>province</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x7701;&#x4EFD;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;&#x5E7F;&#x4E1C;&#x7701;&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x5730;&#x533A;/&#x5E02;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;&#x5E7F;&#x5DDE;&#x5E02;&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>area</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x533A;/&#x53BF;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;&#x5929;&#x6CB3;&#x533A;&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;64&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6536;&#x4EF6;&#x4EBA;&#x8BE6;&#x7EC6;&#x5730;&#x5740;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&quot;XX&#x8DEF;XX&#x53F7;XX&#x5927;&#x53A6;XX&quot;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;512&#x5B57;&#x8282;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>cargo &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x603B;&#x91CD;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x5343;&#x514B;(kg)</td>
+</tr>
+<tr>
+<td>space_x</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x5398;&#x7C73;(cm)</td>
+</tr>
+<tr>
+<td>space_y</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x5BBD;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x5398;&#x7C73;(cm)</td>
+</tr>
+<tr>
+<td>space_z</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x9AD8;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x5398;&#x7C73;(cm)</td>
+</tr>
+<tr>
+<td>detail_list</td>
+<td>Array.&lt;Object&gt;</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x4E2D;&#x5546;&#x54C1;&#x8BE6;&#x60C5;&#x5217;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>cargo.detail_list &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x4E2D;&#x5546;&#x54C1;&#x540D;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;128&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td>count</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5305;&#x88F9;&#x4E2D;&#x5546;&#x54C1;&#x6570;&#x91CF;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>shop &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wxa_path</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5546;&#x5BB6;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E3A;&#x8BA2;&#x5355;&#x9875;&#x9762;</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5546;&#x54C1;&#x7F29;&#x7565;&#x56FE; url</td>
+</tr>
+<tr>
+<td>goods_name</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5546;&#x54C1;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>goods_count</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5546;&#x54C1;&#x6570;&#x91CF;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>insured &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use_insured</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x662F;&#x5426;&#x4FDD;&#x4EF7;&#xFF0C;0 &#x8868;&#x793A;&#x4E0D;&#x4FDD;&#x4EF7;&#xFF0C;1 &#x8868;&#x793A;&#x4FDD;&#x4EF7;</td>
+</tr>
+<tr>
+<td>insured_value</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x4FDD;&#x4EF7;&#x91D1;&#x989D;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x5206;&#xFF0C;&#x6BD4;&#x5982;: 10000 &#x8868;&#x793A; 100 &#x5143;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>service &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service_type</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x670D;&#x52A1;ID&#xFF0C;&#x8BE6;&#x89C1;<a href="../framework/open-ability/express.html#&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x7684;&#x5FEB;&#x9012;&#x516C;&#x53F8;&#x57FA;&#x672C;&#x4FE1;&#x606F;">&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x7684;&#x5FEB;&#x9012;&#x516C;&#x53F8;&#x57FA;&#x672C;&#x4FE1;&#x606F;</a></td>
+</tr>
+<tr>
+<td>service_name</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;&#x8BE6;&#x89C1;<a href="../framework/open-ability/express.html#&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x7684;&#x5FEB;&#x9012;&#x516C;&#x53F8;&#x57FA;&#x672C;&#x4FE1;&#x606F;">&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x7684;&#x5FEB;&#x9012;&#x516C;&#x53F8;&#x57FA;&#x672C;&#x4FE1;&#x606F;</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;">&#x8FD4;&#x56DE;&#x503C;</h4>
+<h5 id="object">Object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>string</td>
+<td>&#x8BA2;&#x5355;ID&#xFF0C;&#x4E0B;&#x5355;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>waybill_id</td>
+<td>string</td>
+<td>&#x8FD0;&#x5355;ID&#xFF0C;&#x4E0B;&#x5355;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>waybill_data</td>
+<td>Array.&lt;Object&gt;</td>
+<td>&#x8FD0;&#x5355;&#x4FE1;&#x606F;&#xFF0C;&#x4E0B;&#x5355;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>errcode</td>
+<td>number</td>
+<td>&#x5FAE;&#x4FE1;&#x4FA7;&#x9519;&#x8BEF;&#x7801;&#xFF0C;&#x4E0B;&#x5355;&#x5931;&#x8D25;&#x65F6;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>errmsg</td>
+<td>string</td>
+<td>&#x5FAE;&#x4FE1;&#x4FA7;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x4E0B;&#x5355;&#x5931;&#x8D25;&#x65F6;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>delivery_resultcode</td>
+<td>number</td>
+<td>&#x5FEB;&#x9012;&#x4FA7;&#x9519;&#x8BEF;&#x7801;&#xFF0C;&#x4E0B;&#x5355;&#x5931;&#x8D25;&#x65F6;&#x8FD4;&#x56DE;</td>
+</tr>
+<tr>
+<td>delivery_resultmsg</td>
+<td>string</td>
+<td>&#x5FEB;&#x9012;&#x4FA7;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x4E0B;&#x5355;&#x5931;&#x8D25;&#x65F6;&#x8FD4;&#x56DE;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>waybill_data &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>&#x8FD0;&#x5355;&#x4FE1;&#x606F; key</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>&#x8FD0;&#x5355;&#x4FE1;&#x606F; value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>errcode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>&#x7CFB;&#x7EDF;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>9300501</td>
+<td>&#x5FEB;&#x9012;&#x4FA7;&#x903B;&#x8F91;&#x9519;&#x8BEF;&#xFF0C;&#x8BE6;&#x7EC6;&#x539F;&#x56E0;&#x9700;&#x8981;&#x770B; delivery_resultcode</td>
+</tr>
+<tr>
+<td>9300503</td>
+<td>delivery_id &#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>9300510</td>
+<td>service_type &#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>9300526</td>
+<td>&#x5B57;&#x6BB5;&#x957F;&#x5EA6;&#x4E0D;&#x6B63;&#x786E;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x793A;&#x4F8B;</h4>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;order_id&quot;</span>: <span class="hljs-string">&quot;01234567890123456789&quot;</span>,
+  <span class="hljs-attr">&quot;openid&quot;</span>: <span class="hljs-string">&quot;oABC123456&quot;</span>,
+  <span class="hljs-attr">&quot;delivery_id&quot;</span>: <span class="hljs-string">&quot;SF&quot;</span>,
+  <span class="hljs-attr">&quot;biz_id&quot;</span>: <span class="hljs-string">&quot;xyz&quot;</span>,
+  <span class="hljs-attr">&quot;custom_remark&quot;</span>: <span class="hljs-string">&quot;&#x6613;&#x788E;&#x7269;&#x54C1;&quot;</span>,
+  <span class="hljs-attr">&quot;sender&quot;</span>: {
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>,
+    <span class="hljs-attr">&quot;tel&quot;</span>: <span class="hljs-string">&quot;18666666666&quot;</span>,
+    <span class="hljs-attr">&quot;mobile&quot;</span>: <span class="hljs-string">&quot;020-88888888&quot;</span>,
+    <span class="hljs-attr">&quot;company&quot;</span>: <span class="hljs-string">&quot;&#x516C;&#x53F8;&#x540D;&quot;</span>,
+    <span class="hljs-attr">&quot;post_code&quot;</span>: <span class="hljs-string">&quot;123456&quot;</span>,
+    <span class="hljs-attr">&quot;country&quot;</span>: <span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>,
+    <span class="hljs-attr">&quot;province&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x4E1C;&#x7701;&quot;</span>,
+    <span class="hljs-attr">&quot;city&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x5DDE;&#x5E02;&quot;</span>,
+    <span class="hljs-attr">&quot;area&quot;</span>: <span class="hljs-string">&quot;&#x6D77;&#x73E0;&#x533A;&quot;</span>,
+    <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;XX&#x8DEF;XX&#x53F7;XX&#x5927;&#x53A6;XX&#x680B;XX&quot;</span>
+  },
+  <span class="hljs-attr">&quot;receiver&quot;</span>: {
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x738B;&#x5C0F;&#x8499;&quot;</span>,
+    <span class="hljs-attr">&quot;tel&quot;</span>: <span class="hljs-string">&quot;18610000000&quot;</span>,
+    <span class="hljs-attr">&quot;mobile&quot;</span>: <span class="hljs-string">&quot;020-77777777&quot;</span>,
+    <span class="hljs-attr">&quot;company&quot;</span>: <span class="hljs-string">&quot;&#x516C;&#x53F8;&#x540D;&quot;</span>,
+    <span class="hljs-attr">&quot;post_code&quot;</span>: <span class="hljs-string">&quot;654321&quot;</span>,
+    <span class="hljs-attr">&quot;country&quot;</span>: <span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>,
+    <span class="hljs-attr">&quot;province&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x4E1C;&#x7701;&quot;</span>,
+    <span class="hljs-attr">&quot;city&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x5DDE;&#x5E02;&quot;</span>,
+    <span class="hljs-attr">&quot;area&quot;</span>: <span class="hljs-string">&quot;&#x5929;&#x6CB3;&#x533A;&quot;</span>,
+    <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;XX&#x8DEF;XX&#x53F7;XX&#x5927;&#x53A6;XX&#x680B;XX&quot;</span>
+  },
+  <span class="hljs-attr">&quot;shop&quot;</span>: {
+    <span class="hljs-attr">&quot;wxa_path&quot;</span>: <span class="hljs-string">&quot;/index/index?from=waybill&amp;id=01234567890123456789&quot;</span>,
+    <span class="hljs-attr">&quot;img_url&quot;</span>: <span class="hljs-string">&quot;https://mmbiz.qpic.cn/mmbiz_png/OiaFLUqewuIDNQnTiaCInIG8ibdosYHhQHPbXJUrqYSNIcBL60vo4LIjlcoNG1QPkeH5GWWEB41Ny895CokeAah8A/640&quot;</span>,
+    <span class="hljs-attr">&quot;goods_name&quot;</span>: <span class="hljs-string">&quot;&#x4E00;&#x5343;&#x96F6;&#x4E00;&#x591C;&#x94BB;&#x77F3;&#x5305;&amp;&#x7231;&#x9A6C;&#x4ED5;&#x94C2;&#x91D1;&#x5305;&quot;</span>,
+    <span class="hljs-attr">&quot;goods_count&quot;</span>: <span class="hljs-number">2</span>
+  },
+  <span class="hljs-attr">&quot;cargo&quot;</span>: {
+    <span class="hljs-attr">&quot;count&quot;</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">&quot;weight&quot;</span>: <span class="hljs-number">5.5</span>,
+    <span class="hljs-attr">&quot;space_x&quot;</span>: <span class="hljs-number">30.5</span>,
+    <span class="hljs-attr">&quot;space_y&quot;</span>: <span class="hljs-number">20</span>,
+    <span class="hljs-attr">&quot;space_z&quot;</span>: <span class="hljs-number">20</span>,
+    <span class="hljs-attr">&quot;detail_list&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x4E00;&#x5343;&#x96F6;&#x4E00;&#x591C;&#x94BB;&#x77F3;&#x5305;&quot;</span>,
+        <span class="hljs-attr">&quot;count&quot;</span>: <span class="hljs-number">1</span>
+      },
+      {
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7231;&#x9A6C;&#x4ED5;&#x94C2;&#x91D1;&#x5305;&quot;</span>,
+        <span class="hljs-attr">&quot;count&quot;</span>: <span class="hljs-number">1</span>
+      }
+    ]
+  },
+  <span class="hljs-attr">&quot;insured&quot;</span>: {
+    <span class="hljs-attr">&quot;use_insured&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">&quot;insured_value&quot;</span>: <span class="hljs-number">10000</span>
+  },
+  <span class="hljs-attr">&quot;service&quot;</span>: {
+    <span class="hljs-attr">&quot;service_type&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">&quot;service_name&quot;</span>: <span class="hljs-string">&quot;&#x6807;&#x51C6;&#x5FEB;&#x9012;&quot;</span>
+  }
+}
+</code></pre>
+<h4 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;</h4>
+<p>&#x4E0B;&#x5355;&#x6210;&#x529F;</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;order_id&quot;</span>: <span class="hljs-string">&quot;01234567890123456789&quot;</span>,
+  <span class="hljs-attr">&quot;waybill_id&quot;</span>: <span class="hljs-string">&quot;123456789&quot;</span>,
+  <span class="hljs-attr">&quot;waybill_data&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;SF_bagAddr&quot;</span>,
+      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;&#x5E7F;&#x5DDE;&#x8F6C;&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;SF_mark&quot;</span>,
+      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;101- 07-03 509&quot;</span>
+    }
+  ]
+}
+</code></pre>
+<p>&#x4E0B;&#x5355;&#x5931;&#x8D25;</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;errcode&quot;</span>: <span class="hljs-number">9300501</span>,
+  <span class="hljs-attr">&quot;errmsg&quot;</span>: <span class="hljs-string">&quot;delivery logic fail&quot;</span>,
+  <span class="hljs-attr">&quot;delivery_resultcode&quot;</span>: <span class="hljs-number">10002</span>,
+  <span class="hljs-attr">&quot;delivery_resultmsg&quot;</span>: <span class="hljs-string">&quot;&#x5BA2;&#x6237;&#x5BC6;&#x7801;&#x4E0D;&#x6B63;&#x786E;&quot;</span>
+}
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

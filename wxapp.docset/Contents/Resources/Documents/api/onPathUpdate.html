@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>onPathUpdate</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="onpathupdate">onPathUpdate</h3>
+<blockquote>
+<p>&#x672C;&#x6587;&#x6863;&#x63CF;&#x8FF0;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x7684;&#x6D88;&#x606F;&#x6216;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x53C2;&#x89C1;<a href="../framework/server-ability/message-push.html">&#x6D88;&#x606F;&#x63A8;&#x9001;</a>&#x3002;</p>
+</blockquote>
+<p>&#x8FD0;&#x5355;&#x8F68;&#x8FF9;&#x66F4;&#x65B0;&#x4E8B;&#x4EF6;&#x3002;&#x5F53;&#x8FD0;&#x5355;&#x8F68;&#x8FF9;&#x6709;&#x66F4;&#x65B0;&#x65F6;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x5982;&#x4E0B;&#x6570;&#x636E;&#x5305;&#x3002;&#x6536;&#x5230;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x56DE;&#x590D;<code>success</code>&#x6216;&#x8005;&#x7A7A;&#x4E32;&#x5373;&#x53EF;&#x3002;</p>
+<h4 id="&#x6D88;&#x606F;&#x53C2;&#x6570;">&#x6D88;&#x606F;&#x53C2;&#x6570;</h4>
+<h5 id="object">Object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ToUserName</td>
+<td>string</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x539F;&#x59CB;ID</td>
+</tr>
+<tr>
+<td>FromUserName</td>
+<td>string</td>
+<td>&#x53D1;&#x9001;&#x8005;&#x7684;openid</td>
+</tr>
+<tr>
+<td>CreateTime</td>
+<td>number</td>
+<td>&#x6D88;&#x606F;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&#xFF08;&#x6574;&#x578B;&#xFF09;</td>
+</tr>
+<tr>
+<td>MsgType</td>
+<td>string</td>
+<td>&#x56FA;&#x5B9A; event</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>string</td>
+<td>&#x56FA;&#x5B9A; add_express_path</td>
+</tr>
+<tr>
+<td>DeliveryID</td>
+<td>string</td>
+<td>&#x5FEB;&#x9012;&#x516C;&#x53F8;ID</td>
+</tr>
+<tr>
+<td>WayBillId</td>
+<td>string</td>
+<td>&#x8FD0;&#x5355;ID</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>number</td>
+<td>&#x8F68;&#x8FF9;&#x7248;&#x672C;&#x53F7;&#xFF08;&#x6574;&#x578B;&#xFF09;</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>number</td>
+<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9;&#x6570;&#xFF08;&#x6574;&#x578B;&#xFF09;</td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>Array.&lt;Object&gt;</td>
+<td>&#x8F68;&#x8FF9;&#x5217;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Actions &#x7684;&#x7ED3;&#x6784;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ActionTime</td>
+<td>number</td>
+<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9;&#x65F6;&#x95F4;&#x70B9;&#xFF08;&#x6574;&#x578B;&#xFF09;</td>
+</tr>
+<tr>
+<td>ActionType</td>
+<td>number</td>
+<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9;&#x7C7B;&#x578B;&#xFF08;&#x6574;&#x578B;&#xFF09;</td>
+</tr>
+<tr>
+<td>ActionMsg</td>
+<td>string</td>
+<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9;&#x8BE6;&#x60C5;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6D88;&#x606F;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;">&#x6D88;&#x606F;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;</h4>
+<p>JSON &#x683C;&#x5F0F;</p>
+<pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">xml</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ToUserName</span>&gt;</span>&lt;![CDATA[toUser]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ToUserName</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">FromUserName</span>&gt;</span>&lt;![CDATA[fromUser]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">FromUserName</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">CreateTime</span>&gt;</span>1546924844<span class="hljs-tag">&lt;/<span class="hljs-name">CreateTime</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">MsgType</span>&gt;</span>&lt;![CDATA[event]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">MsgType</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Event</span>&gt;</span>&lt;![CDATA[add_express_path]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">Event</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">DeliveryID</span>&gt;</span>&lt;![CDATA[SF]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">DeliveryID</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">WayBillId</span>&gt;</span>&lt;![CDATA[123456789]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">WayBillId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Version</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">Version</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Count</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">Count</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Actions</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionTime</span>&gt;</span>1546924840<span class="hljs-tag">&lt;/<span class="hljs-name">ActionTime</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionType</span>&gt;</span>100001<span class="hljs-tag">&lt;/<span class="hljs-name">ActionType</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionMsg</span>&gt;</span>&lt;![CDATA[&#x5C0F;&#x54E5;A&#x63FD;&#x4EF6;&#x6210;&#x529F;]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ActionMsg</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Actions</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Actions</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionTime</span>&gt;</span>1546924841<span class="hljs-tag">&lt;/<span class="hljs-name">ActionTime</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionType</span>&gt;</span>200001<span class="hljs-tag">&lt;/<span class="hljs-name">ActionType</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionMsg</span>&gt;</span>&lt;![CDATA[&#x5230;&#x8FBE;&#x5E7F;&#x5DDE;&#x96C6;&#x5305;&#x5730;]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ActionMsg</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Actions</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Actions</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionTime</span>&gt;</span>1546924842<span class="hljs-tag">&lt;/<span class="hljs-name">ActionTime</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionType</span>&gt;</span>200001<span class="hljs-tag">&lt;/<span class="hljs-name">ActionType</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ActionMsg</span>&gt;</span>&lt;![CDATA[&#x8FD0;&#x5F80;&#x76EE;&#x7684;&#x5730;]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ActionMsg</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Actions</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">xml</span>&gt;</span>
+</code></pre>
+<p>JSON</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;ToUserName&quot;</span>: <span class="hljs-string">&quot;toUser&quot;</span>,
+  <span class="hljs-attr">&quot;FromUserName&quot;</span>: <span class="hljs-string">&quot;fromUser&quot;</span>,
+  <span class="hljs-attr">&quot;CreateTime&quot;</span>: <span class="hljs-number">1546924844</span>,
+  <span class="hljs-attr">&quot;MsgType&quot;</span>: <span class="hljs-string">&quot;event&quot;</span>,
+  <span class="hljs-attr">&quot;Event&quot;</span>: <span class="hljs-string">&quot;add_express_path&quot;</span>,
+  <span class="hljs-attr">&quot;DeliveryID&quot;</span>: <span class="hljs-string">&quot;SF&quot;</span>,
+  <span class="hljs-attr">&quot;WayBillId&quot;</span>: <span class="hljs-string">&quot;123456789&quot;</span>,
+  <span class="hljs-attr">&quot;Version&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-attr">&quot;Count&quot;</span>: <span class="hljs-number">3</span>,
+  <span class="hljs-attr">&quot;Actions&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;ActionTime&quot;</span>: <span class="hljs-number">1546924840</span>,
+      <span class="hljs-attr">&quot;ActionType&quot;</span>: <span class="hljs-number">100001</span>,
+      <span class="hljs-attr">&quot;ActionMsg&quot;</span>: <span class="hljs-string">&quot;&#x5C0F;&#x54E5;A&#x63FD;&#x4EF6;&#x6210;&#x529F;&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;ActionTime&quot;</span>: <span class="hljs-number">1546924841</span>,
+      <span class="hljs-attr">&quot;ActionType&quot;</span>: <span class="hljs-number">200001</span>,
+      <span class="hljs-attr">&quot;ActionMsg&quot;</span>: <span class="hljs-string">&quot;&#x5230;&#x8FBE;&#x5E7F;&#x5DDE;&#x96C6;&#x5305;&#x5730;&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;ActionTime&quot;</span>: <span class="hljs-number">1546924842</span>,
+      <span class="hljs-attr">&quot;ActionType&quot;</span>: <span class="hljs-number">200001</span>,
+      <span class="hljs-attr">&quot;ActionMsg&quot;</span>: <span class="hljs-string">&quot;&#x8FD0;&#x5F80;&#x76EE;&#x7684;&#x5730;&quot;</span>
+    }
+  ]
+}
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
