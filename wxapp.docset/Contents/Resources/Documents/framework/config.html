@@ -300,7 +300,7 @@
   }
 }
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/config.jpg?t=19011016" alt="" style="width:600px"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/config.jpg?t=19011119" alt="" style="width:600px"></p>
 <h3 id="tabbar">tabBar</h3>
 <p>&#x5982;&#x679C;&#x5C0F;&#x7A0B;&#x5E8F;&#x662F;&#x4E00;&#x4E2A;&#x591A; tab &#x5E94;&#x7528;&#xFF08;&#x5BA2;&#x6237;&#x7AEF;&#x7A97;&#x53E3;&#x7684;&#x5E95;&#x90E8;&#x6216;&#x9876;&#x90E8;&#x6709; tab &#x680F;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x9875;&#x9762;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; tabBar &#x914D;&#x7F6E;&#x9879;&#x6307;&#x5B9A; tab &#x680F;&#x7684;&#x8868;&#x73B0;&#xFF0C;&#x4EE5;&#x53CA; tab &#x5207;&#x6362;&#x65F6;&#x663E;&#x793A;&#x7684;&#x5BF9;&#x5E94;&#x9875;&#x9762;&#x3002;</p>
 <table>
@@ -311,6 +311,7 @@
 <th>&#x5FC5;&#x586B;</th>
 <th>&#x9ED8;&#x8BA4;&#x503C;</th>
 <th>&#x63CF;&#x8FF0;</th>
+<th>&#x6700;&#x4F4E;&#x7248;&#x672C;</th>
 </tr>
 </thead>
 <tbody>
@@ -320,6 +321,7 @@
 <td>&#x662F;</td>
 <td></td>
 <td>tab &#x4E0A;&#x7684;&#x6587;&#x5B57;&#x9ED8;&#x8BA4;&#x989C;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;</td>
+<td></td>
 </tr>
 <tr>
 <td>selectedColor</td>
@@ -327,6 +329,7 @@
 <td>&#x662F;</td>
 <td></td>
 <td>tab &#x4E0A;&#x7684;&#x6587;&#x5B57;&#x9009;&#x4E2D;&#x65F6;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;</td>
+<td></td>
 </tr>
 <tr>
 <td>backgroundColor</td>
@@ -334,6 +337,7 @@
 <td>&#x662F;</td>
 <td></td>
 <td>tab &#x7684;&#x80CC;&#x666F;&#x8272;&#xFF0C;&#x4EC5;&#x652F;&#x6301;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;</td>
+<td></td>
 </tr>
 <tr>
 <td>borderStyle</td>
@@ -341,6 +345,7 @@
 <td>&#x5426;</td>
 <td>black</td>
 <td>tabbar&#x4E0A;&#x8FB9;&#x6846;&#x7684;&#x989C;&#x8272;&#xFF0C; &#x4EC5;&#x652F;&#x6301; <code>black</code> / <code>white</code></td>
+<td></td>
 </tr>
 <tr>
 <td>list</td>
@@ -348,6 +353,7 @@
 <td>&#x662F;</td>
 <td></td>
 <td>tab &#x7684;&#x5217;&#x8868;&#xFF0C;&#x8BE6;&#x89C1; <code>list</code> &#x5C5E;&#x6027;&#x8BF4;&#x660E;&#xFF0C;&#x6700;&#x5C11;2&#x4E2A;&#x3001;&#x6700;&#x591A;5&#x4E2A; tab</td>
+<td></td>
 </tr>
 <tr>
 <td>position</td>
@@ -355,10 +361,19 @@
 <td>&#x5426;</td>
 <td>bottom</td>
 <td>tabBar&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EC5;&#x652F;&#x6301; <code>bottom</code> / <code>top</code></td>
+<td></td>
+</tr>
+<tr>
+<td>custom</td>
+<td>Boolean</td>
+<td>&#x5426;</td>
+<td>false</td>
+<td>&#x81EA;&#x5B9A;&#x4E49; tabBar&#xFF0C;&#x89C1;<a href="ability/custom-tabbar.html">&#x8BE6;&#x60C5;</a></td>
+<td><a href="compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.5.0</a></td>
 </tr>
 </tbody>
 </table>
-<p>&#x5176;&#x4E2D; list &#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;<strong>&#x53EA;&#x80FD;&#x914D;&#x7F6E;&#x6700;&#x5C11;2&#x4E2A;&#x3001;&#x6700;&#x591A;5&#x4E2A; tab</strong>&#x3002;tab &#x6309;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x6BCF;&#x4E2A;&#x9879;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x5176;&#x4E2D; list &#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;<strong>&#x53EA;&#x80FD;&#x914D;&#x7F6E;&#x6700;&#x5C11; 2 &#x4E2A;&#x3001;&#x6700;&#x591A; 5 &#x4E2A; tab</strong>&#x3002;tab &#x6309;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x6BCF;&#x4E2A;&#x9879;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
 <table>
 <thead>
 <tr>
@@ -395,7 +410,7 @@
 </tr>
 </tbody>
 </table>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/tabbar.png?t=19011016" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/tabbar.png?t=19011119" alt=""></p>
 <h3 id="networktimeout">networkTimeout</h3>
 <p>&#x5404;&#x7C7B;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x5747;&#x4E3A;&#x6BEB;&#x79D2;&#x3002;</p>
 <table>
@@ -555,7 +570,7 @@
   }
 }
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/permission-desc.jpeg?t=19011016" alt=""></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/permission-desc.jpeg?t=19011119" alt=""></p>
 <h1 id="&#x9875;&#x9762;&#x914D;&#x7F6E;">&#x9875;&#x9762;&#x914D;&#x7F6E;</h1>
 <p>&#x6BCF;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>.json</code>&#x6587;&#x4EF6;&#x6765;&#x5BF9;&#x672C;&#x9875;&#x9762;&#x7684;&#x7A97;&#x53E3;&#x8868;&#x73B0;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
 <p>&#x9875;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x53EA;&#x80FD;&#x8BBE;&#x7F6E; <code>app.json</code> &#x4E2D;&#x90E8;&#x5206; <code>window</code> &#x914D;&#x7F6E;&#x9879;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x9875;&#x9762;&#x4E2D;&#x914D;&#x7F6E;&#x9879;&#x4F1A;&#x8986;&#x76D6; <code>app.json</code> &#x7684; <code>window</code> &#x4E2D;&#x76F8;&#x540C;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>

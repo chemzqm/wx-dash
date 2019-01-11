@@ -68,9 +68,10 @@
 ./subpackages/independent.html|基础能力 分包加载 独立分包
 ./subpackages/preload.html|基础能力 分包加载 分包预下载
 ./workers.html|基础能力 多线程 Worker
-./server-ability/backend-api.html|后端能力
-./server-ability/backend-api.html|后端能力 后端API
-./server-ability/message-push.html|后端能力 消息推送
+./server-ability/backend-api.html|基础能力 后端能力
+./server-ability/backend-api.html|基础能力 后端能力 后端API
+./server-ability/message-push.html|基础能力 后端能力 消息推送
+./ability/custom-tabbar.html|基础能力 自定义 tabBar
 ./device/bluetooth.html|硬件能力
 ./device/bluetooth.html|硬件能力 蓝牙
 ./device/nfc.html|硬件能力 NFC

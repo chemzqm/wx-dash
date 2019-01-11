@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义 tabBar</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h2 id="&#x81EA;&#x5B9A;&#x4E49;-tabbar">&#x81EA;&#x5B9A;&#x4E49; tabBar</h2>
+<p>&#x81EA;&#x5B9A;&#x4E49; tabBar &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x5730;&#x8BBE;&#x7F6E; tabBar &#x6837;&#x5F0F;&#xFF0C;&#x4EE5;&#x6EE1;&#x8DB3;&#x66F4;&#x591A;&#x4E2A;&#x6027;&#x5316;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+<p>&#x5728;&#x81EA;&#x5B9A;&#x4E49; tabBar &#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x53EF;&#x5207;&#x6362;&#x7684; tab &#x9875;&#x4ECD;&#x65E7;&#x4E8E;&#x4F9D;&#x8D56;&#x4E8E; tabBar &#x914D;&#x7F6E;&#x7684; list &#x9879;&#xFF0C;&#x5E76;&#x4E14;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6E32;&#x67D3; tabBar&#xFF0C;&#x63A8;&#x8350;&#x7528; fixed &#x5728;&#x5E95;&#x90E8;&#x7684; cover-view + cover-image &#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x6837;&#x5F0F;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1; tabBar &#x5C42;&#x7EA7;&#x76F8;&#x5BF9;&#x8F83;&#x9AD8;&#x3002;
+&#x6B64;&#x5916;&#xFF0C;&#x5728;&#x8BE5;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x4E0E; tabBar &#x6837;&#x5F0F;&#x76F8;&#x5173;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5982; <a href="../../api/wx.setTabBarItem.html">wx.setTabBarItem</a> &#x7B49;&#x5C06;&#x5931;&#x6548;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x6D41;&#x7A0B;">&#x4F7F;&#x7528;&#x6D41;&#x7A0B;</h2>
+<h3 id="1-&#x914D;&#x7F6E;&#x4FE1;&#x606F;">1. &#x914D;&#x7F6E;&#x4FE1;&#x606F;</h3>
+<p>&#x5728; <code>app.json</code> &#x4E2D;&#x7684; <code>tabBar</code> &#x6307;&#x5B9A; <code>custom</code> &#x5B57;&#x6BB5;&#xFF0C;&#x540C;&#x65F6;&#x5176;&#x4F59;&#x5FC5;&#x586B;&#x9879;&#x4E5F;&#x9700;&#x7167;&#x5E38;&#x586B;&#x5199;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;tabBar&quot;</span>: {
+    <span class="hljs-attr">&quot;custom&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;color&quot;</span>: <span class="hljs-string">&quot;#000000&quot;</span>,
+    <span class="hljs-attr">&quot;selectedColor&quot;</span>: <span class="hljs-string">&quot;#000000&quot;</span>,
+    <span class="hljs-attr">&quot;backgroundColor&quot;</span>: <span class="hljs-string">&quot;#000000&quot;</span>,
+    <span class="hljs-attr">&quot;list&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;page/component/index&quot;</span>,
+        <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x7EC4;&#x4EF6;&quot;</span>
+      },
+      {
+        <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;page/API/index&quot;</span>,
+        <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x63A5;&#x53E3;&quot;</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="2-&#x6DFB;&#x52A0;-tabbar-&#x4EE3;&#x7801;&#x6587;&#x4EF6;">2. &#x6DFB;&#x52A0; tabBar &#x4EE3;&#x7801;&#x6587;&#x4EF6;</h3>
+<p>&#x5728;&#x4EE3;&#x7801;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;&#x5165;&#x53E3;&#x6587;&#x4EF6;:</p>
+<pre><code>custom-tab-bar/index.js
+custom-tab-bar/index.json
+custom-tab-bar/index.wxml
+custom-tab-bar/index.wxss
+</code></pre>
+<h3 id="3-&#x7F16;&#x5199;-tabbar-&#x4EE3;&#x7801;">3. &#x7F16;&#x5199; tabBar &#x4EE3;&#x7801;</h3>
+<p>&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x7F16;&#x5199;&#x5373;&#x53EF;&#xFF0C;&#x5207;&#x6362; tab &#x9875;&#x53EF;&#x901A;&#x8FC7; <a href="../../api/wx.switchTab.html">wx.switchTab</a> &#x63A5;&#x53E3;&#x3002;</p>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
