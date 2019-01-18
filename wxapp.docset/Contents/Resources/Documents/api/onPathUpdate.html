@@ -97,12 +97,12 @@
 <tr>
 <td>ActionTime</td>
 <td>number</td>
-<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9;&#x65F6;&#x95F4;&#x70B9;&#xFF08;&#x6574;&#x578B;&#xFF09;</td>
+<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9; Unix &#x65F6;&#x95F4;&#x6233;</td>
 </tr>
 <tr>
 <td>ActionType</td>
 <td>number</td>
-<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9;&#x7C7B;&#x578B;&#xFF08;&#x6574;&#x578B;&#xFF09;</td>
+<td>&#x8F68;&#x8FF9;&#x8282;&#x70B9;&#x7C7B;&#x578B;</td>
 </tr>
 <tr>
 <td>ActionMsg</td>
@@ -111,8 +111,55 @@
 </tr>
 </tbody>
 </table>
+<p><strong>ActionType &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100001</td>
+<td>&#x63FD;&#x4EF6;&#x9636;&#x6BB5;-&#x63FD;&#x4EF6;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>100002</td>
+<td>&#x63FD;&#x4EF6;&#x9636;&#x6BB5;-&#x63FD;&#x4EF6;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>100003</td>
+<td>&#x63FD;&#x4EF6;&#x9636;&#x6BB5;-&#x5206;&#x914D;&#x4E1A;&#x52A1;&#x5458;</td>
+</tr>
+<tr>
+<td>200001</td>
+<td>&#x8FD0;&#x8F93;&#x9636;&#x6BB5;-&#x66F4;&#x65B0;&#x8FD0;&#x8F93;&#x8F68;&#x8FF9;</td>
+</tr>
+<tr>
+<td>300002</td>
+<td>&#x6D3E;&#x9001;&#x9636;&#x6BB5;-&#x5F00;&#x59CB;&#x6D3E;&#x9001;</td>
+</tr>
+<tr>
+<td>300003</td>
+<td>&#x6D3E;&#x9001;&#x9636;&#x6BB5;-&#x7B7E;&#x6536;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>300004</td>
+<td>&#x6D3E;&#x9001;&#x9636;&#x6BB5;-&#x7B7E;&#x6536;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>400001</td>
+<td>&#x5F02;&#x5E38;&#x9636;&#x6BB5;-&#x8BA2;&#x5355;&#x53D6;&#x6D88;</td>
+</tr>
+<tr>
+<td>400002</td>
+<td>&#x5F02;&#x5E38;&#x9636;&#x6BB5;-&#x8BA2;&#x5355;&#x6EDE;&#x7559;</td>
+</tr>
+</tbody>
+</table>
 <h4 id="&#x6D88;&#x606F;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;">&#x6D88;&#x606F;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;</h4>
-<p>JSON &#x683C;&#x5F0F;</p>
+<p>XML &#x683C;&#x5F0F;</p>
 <pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">xml</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ToUserName</span>&gt;</span>&lt;![CDATA[toUser]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ToUserName</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">FromUserName</span>&gt;</span>&lt;![CDATA[fromUser]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">FromUserName</span>&gt;</span>
@@ -138,9 +185,9 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">ActionType</span>&gt;</span>200001<span class="hljs-tag">&lt;/<span class="hljs-name">ActionType</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ActionMsg</span>&gt;</span>&lt;![CDATA[&#x8FD0;&#x5F80;&#x76EE;&#x7684;&#x5730;]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ActionMsg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">Actions</span>&gt;</span>
- <span class="hljs-tag">&lt;/<span class="hljs-name">xml</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">xml</span>&gt;</span>
 </code></pre>
-<p>JSON</p>
+<p>JSON &#x683C;&#x5F0F;</p>
 <pre><code class="language-json">{
   <span class="hljs-attr">&quot;ToUserName&quot;</span>: <span class="hljs-string">&quot;toUser&quot;</span>,
   <span class="hljs-attr">&quot;FromUserName&quot;</span>: <span class="hljs-string">&quot;fromUser&quot;</span>,

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>onGetQuota</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h3 id="ongetquota">onGetQuota</h3>
+<blockquote>
+<p>&#x672C;&#x6587;&#x6863;&#x63CF;&#x8FF0;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x7684;&#x6D88;&#x606F;&#x6216;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x53C2;&#x89C1;<a href="../framework/server-ability/message-push.html">&#x6D88;&#x606F;&#x63A8;&#x9001;</a>&#x3002;</p>
+</blockquote>
+<p>&#x67E5;&#x8BE2;&#x5546;&#x6237;&#x4F59;&#x989D;&#x4E8B;&#x4EF6;&#x3002;</p>
+<h4 id="&#x6D88;&#x606F;&#x53C2;&#x6570;">&#x6D88;&#x606F;&#x53C2;&#x6570;</h4>
+<h5 id="object">Object</h5>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ToUserName</td>
+<td>string</td>
+<td>&#x5FEB;&#x9012;&#x516C;&#x53F8;&#x5C0F;&#x7A0B;&#x5E8F; UserName</td>
+</tr>
+<tr>
+<td>FromUserName</td>
+<td>string</td>
+<td>&#x5FAE;&#x4FE1;&#x56E2;&#x961F;&#x7684; OpenID &#xFF08;&#x56FA;&#x5B9A;&#x503C;&#xFF09;</td>
+</tr>
+<tr>
+<td>CreateTime</td>
+<td>number</td>
+<td>&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#xFF0C;Unix&#x65F6;&#x95F4;&#x6233;</td>
+</tr>
+<tr>
+<td>MsgType</td>
+<td>string</td>
+<td>&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A; event</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>string</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A; get_quota&#xFF0C;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;</td>
+</tr>
+<tr>
+<td>BizID</td>
+<td>string</td>
+<td>&#x5546;&#x6237;ID&#xFF0C;&#x5373;&#x5546;&#x6237;&#x5728;&#x5FEB;&#x9012;&#x6CE8;&#x518C;&#x7684;&#x5BA2;&#x6237;&#x7F16;&#x7801;&#x6216;&#x6708;&#x7ED3;&#x8D26;&#x6237;&#x540D;</td>
+</tr>
+<tr>
+<td>BizPwd</td>
+<td>string</td>
+<td>BizID &#x5BF9;&#x5E94;&#x7684;&#x5BC6;&#x7801;</td>
+</tr>
+<tr>
+<td>ShopAppID</td>
+<td>string</td>
+<td>&#x5546;&#x6237;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684; AppID</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6D88;&#x606F;&#x8FD4;&#x56DE;">&#x6D88;&#x606F;&#x8FD4;&#x56DE;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ToUserName</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x539F;&#x6837;&#x8FD4;&#x56DE;&#x8BF7;&#x6C42;&#x4E2D;&#x7684; FromUserName</td>
+</tr>
+<tr>
+<td>FromUserName</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5FEB;&#x9012;&#x516C;&#x53F8;&#x5C0F;&#x7A0B;&#x5E8F; UserName</td>
+</tr>
+<tr>
+<td>CreateTime</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#xFF0C;Unix&#x65F6;&#x95F4;&#x6233;</td>
+</tr>
+<tr>
+<td>MsgType</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A;event</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x4E3A;get_quota&#xFF0C;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;</td>
+</tr>
+<tr>
+<td>BizID</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5546;&#x6237;ID</td>
+</tr>
+<tr>
+<td>ResultCode</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5904;&#x7406;&#x7ED3;&#x679C;&#x9519;&#x8BEF;&#x7801;</td>
+</tr>
+<tr>
+<td>ResultMsg</td>
+<td>string</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5904;&#x7406;&#x7ED3;&#x679C;&#x8BE6;&#x60C5;</td>
+</tr>
+<tr>
+<td>Quota</td>
+<td>number</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x5546;&#x6237;&#x53EF;&#x7528;&#x4F59;&#x989D;&#xFF0C;0 &#x8868;&#x793A;&#x65E0;&#x53EF;&#x7528;&#x4F59;&#x989D;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ResultCode &#x7684;&#x5408;&#x6CD5;&#x503C;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>&#x67E5;&#x8BE2;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>&#x5176;&#x4ED6;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td>10001</td>
+<td>&#x5BA2;&#x6237;&#x7F16;&#x7801;&#x6216;&#x8005;&#x6708;&#x7ED3;&#x8D26;&#x6237;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>&#x5BA2;&#x6237;&#x5BC6;&#x7801;&#x4E0D;&#x6B63;&#x786E;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6D88;&#x606F;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;">&#x6D88;&#x606F;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;</h4>
+<p>XML &#x683C;&#x5F0F;</p>
+<pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">xml</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ToUserName</span>&gt;</span>&lt;![CDATA[gh_abcdefg]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ToUserName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">FromUserName</span>&gt;</span>&lt;![CDATA[oABCD]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">FromUserName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">CreateTime</span>&gt;</span>1533042556<span class="hljs-tag">&lt;/<span class="hljs-name">CreateTime</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">MsgType</span>&gt;</span>&lt;![CDATA[event]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">MsgType</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Event</span>&gt;</span>&lt;![CDATA[get_quota]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">Event</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">BizID</span>&gt;</span>&lt;![CDATA[xyz]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">BizID</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">BizPwd</span>&gt;</span>&lt;![CDATA[xyz123]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">BizPwd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ShopAppID</span>&gt;</span>&lt;![CDATA[wxABCD]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ShopAppID</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">xml</span>&gt;</span>
+</code></pre>
+<p>JSON &#x683C;&#x5F0F;</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;ToUserName&quot;</span>: <span class="hljs-string">&quot;gh_abcdefg&quot;</span>,
+  <span class="hljs-attr">&quot;FromUserName&quot;</span>: <span class="hljs-string">&quot;oABCD&quot;</span>,
+  <span class="hljs-attr">&quot;CreateTime&quot;</span>: <span class="hljs-number">1533042556</span>,
+  <span class="hljs-attr">&quot;MsgType&quot;</span>: <span class="hljs-string">&quot;event&quot;</span>,
+  <span class="hljs-attr">&quot;Event&quot;</span>: <span class="hljs-string">&quot;get_quota&quot;</span>,
+  <span class="hljs-attr">&quot;BizID&quot;</span>: <span class="hljs-string">&quot;xyz&quot;</span>,
+  <span class="hljs-attr">&quot;BizPwd&quot;</span>: <span class="hljs-string">&quot;xyz123&quot;</span>,
+  <span class="hljs-attr">&quot;ShopAppID&quot;</span>: <span class="hljs-string">&quot;wxABCD&quot;</span>
+}
+</code></pre>
+<h4 id="&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5305;&#x793A;&#x4F8B;</h4>
+<p>XML &#x683C;&#x5F0F;</p>
+<pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">xml</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ToUserName</span>&gt;</span>&lt;![CDATA[oABCD]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ToUserName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">FromUserName</span>&gt;</span>&lt;![CDATA[gh_abcdefg]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">FromUserName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">CreateTime</span>&gt;</span>1533042556<span class="hljs-tag">&lt;/<span class="hljs-name">CreateTime</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">MsgType</span>&gt;</span>&lt;![CDATA[event]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">MsgType</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Event</span>&gt;</span>&lt;![CDATA[get_quota]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">Event</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">BizID</span>&gt;</span>&lt;![CDATA[xyz]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">BizID</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ResultCode</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">ResultCode</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ResultMsg</span>&gt;</span>&lt;![CDATA[success]]&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">ResultMsg</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Quota</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">Quota</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">xml</span>&gt;</span>
+</code></pre>
+<p>JSON &#x683C;&#x5F0F;</p>
+<pre><code class="language-json">{
+  <span class="hljs-attr">&quot;ToUserName&quot;</span>: <span class="hljs-string">&quot;oABCD&quot;</span>,
+  <span class="hljs-attr">&quot;FromUserName&quot;</span>: <span class="hljs-string">&quot;gh_abcdefg&quot;</span>,
+  <span class="hljs-attr">&quot;CreateTime&quot;</span>: <span class="hljs-number">1533042556</span>,
+  <span class="hljs-attr">&quot;MsgType&quot;</span>: <span class="hljs-string">&quot;event&quot;</span>,
+  <span class="hljs-attr">&quot;Event&quot;</span>: <span class="hljs-string">&quot;get_quota&quot;</span>,
+  <span class="hljs-attr">&quot;BizID&quot;</span>: <span class="hljs-string">&quot;xyz&quot;</span>,
+  <span class="hljs-attr">&quot;ResultCode&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">&quot;ResultMsg&quot;</span>: <span class="hljs-string">&quot;success&quot;</span>,
+  <span class="hljs-attr">&quot;Quota&quot;</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>

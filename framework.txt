@@ -105,7 +105,8 @@
 ./open-ability/data-analysis.html|开放能力 数据分析
 ./open-ability/nearby.html|开放能力 附近的小程序
 ./open-ability/express.html|开放能力 物流助手
-./open-ability/express.html|开放能力 物流助手 接入说明
+./open-ability/express.html|开放能力 物流助手 商户侧接入说明
+./open-ability/express-delivery.html|开放能力 物流助手 快递侧接入说明
 ./open-ability/express-download.html|开放能力 物流助手 打单软件
 ./usability/debug.html|可用性
 ./usability/debug.html|可用性 调试
