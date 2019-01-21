@@ -101,10 +101,14 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">another-component</span>&gt;</span>
 </code></pre>
 <pre><code class="language-html">// &#x7EC4;&#x4EF6; another-component.wxml
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;anotherEventListener&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;anotherEventListener&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-html">// &#x7EC4;&#x4EF6; my-component.wxml
-<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;myEventListener&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">bindcustomevent</span>=<span class="hljs-string">&quot;myEventListener&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">slot</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
 </code></pre>
 <pre><code class="language-js"><span class="hljs-comment">// &#x7EC4;&#x4EF6; my-component.js</span>
 Component({
