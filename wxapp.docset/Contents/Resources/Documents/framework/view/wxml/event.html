@@ -82,6 +82,29 @@
   ]
 }
 </code></pre>
+<h2 id="&#x4F7F;&#x7528;wxs&#x51FD;&#x6570;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;">&#x4F7F;&#x7528;WXS&#x51FD;&#x6570;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;</h2>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.4.4 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../../compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<p>&#x4ECE;&#x57FA;&#x7840;&#x5E93;&#x7248;&#x672C;<code>2.4.4</code>&#x5F00;&#x59CB;&#xFF0C;&#x652F;&#x6301;&#x4F7F;&#x7528;WXS&#x51FD;&#x6570;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#xFF0C;WXS&#x51FD;&#x6570;&#x63A5;&#x53D7;2&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;event&#xFF0C;&#x5728;&#x539F;&#x6709;&#x7684;event&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x52A0;&#x4E86;<code>event.instance</code>&#x5BF9;&#x8C61;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;<code>ownerInstance</code>&#xFF0C;&#x548C;<code>event.instance</code>&#x4E00;&#x6837;&#x662F;&#x4E00;&#x4E2A;<code>ComponentDescriptor</code>&#x5BF9;&#x8C61;&#x3002;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x7ED1;&#x5B9A;&#x548C;&#x6CE8;&#x518C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7684;WXS&#x51FD;&#x6570;&#x3002;</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;wxs&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./test.wxs&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;tapTest&quot;</span> <span class="hljs-attr">data-hi</span>=<span class="hljs-string">&quot;WeChat&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;{{wxs.tapName}}&quot;</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+**&#x6CE8;&#xFF1A;&#x7ED1;&#x5B9A;&#x7684;WXS&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x7528;{{}}&#x62EC;&#x8D77;&#x6765;**
+</code></pre>
+<ul>
+<li>test.wxs&#x6587;&#x4EF6;&#x5B9E;&#x73B0;tapName&#x51FD;&#x6570;</li>
+</ul>
+<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tapName</span>(<span class="hljs-params">event, ownerInstance</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;tap wechat&apos;</span>, <span class="hljs-built_in">JSON</span>.stringify(event))
+}
+<span class="hljs-built_in">module</span>.exports = {
+  tapName
+}
+</code></pre>
+<p><code>ownerInstance</code>&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684;&#x6837;&#x5F0F;&#x548C;class&#xFF0C;&#x5177;&#x4F53;&#x5305;&#x542B;&#x7684;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;WXS&#x51FD;&#x6570;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BF7;<a href="../interactive-animation.html">&#x70B9;&#x51FB;&#x67E5;&#x770B;&#x8BE6;&#x60C5;</a>&#x3002;</p>
 <h2 id="&#x4E8B;&#x4EF6;&#x8BE6;&#x89E3;">&#x4E8B;&#x4EF6;&#x8BE6;&#x89E3;</h2>
 <h3 id="&#x4E8B;&#x4EF6;&#x5206;&#x7C7B;">&#x4E8B;&#x4EF6;&#x5206;&#x7C7B;</h3>
 <p>&#x4E8B;&#x4EF6;&#x5206;&#x4E3A;&#x5192;&#x6CE1;&#x4E8B;&#x4EF6;&#x548C;&#x975E;&#x5192;&#x6CE1;&#x4E8B;&#x4EF6;&#xFF1A;</p>
