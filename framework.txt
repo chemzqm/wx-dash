@@ -23,6 +23,7 @@
 ./view/wxml/conditional.html|视图层 WXML 条件渲染
 ./view/wxml/template.html|视图层 WXML 模板
 ./view/wxml/event.html|视图层 WXML 事件
+./view/interactive-animation.html|视图层 WXML 事件 WXS响应事件
 ./view/wxml/import.html|视图层 WXML 引用
 ./view/wxss.html|视图层 WXSS
 ./view/component.html|视图层 基础组件

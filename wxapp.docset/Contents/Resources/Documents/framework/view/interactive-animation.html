@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>WXS响应事件</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../../../website.css" />
+  <style type="text/css">
+    body {
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  
+                    <div id="book-search-results">
+                        <div class="search-noresults">
+                            <section class="normal markdown-section">
+                              <h2 id="&#x5C0F;&#x7A0B;&#x5E8F;&#x4EA4;&#x4E92;&#x52A8;&#x753B;">&#x5C0F;&#x7A0B;&#x5E8F;&#x4EA4;&#x4E92;&#x52A8;&#x753B;</h2>
+<blockquote>
+<p>&#x57FA;&#x7840;&#x5E93; 2.4.4 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;<a href="../compatibility.html">&#x517C;&#x5BB9;&#x5904;&#x7406;</a>&#x3002;</p>
+</blockquote>
+<h3 id="&#x80CC;&#x666F;">&#x80CC;&#x666F;</h3>
+<p>&#x6709;&#x9891;&#x7E41;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x7684;&#x6548;&#x679C;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E0A;&#x8868;&#x73B0;&#x662F;&#x6BD4;&#x8F83;&#x5361;&#x987F;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x9875;&#x9762;&#x6709; 2 &#x4E2A;&#x5143;&#x7D20; A &#x548C; B&#xFF0C;&#x7528;&#x6237;&#x5728; A &#x4E0A;&#x505A; touchmove &#x624B;&#x52BF;&#xFF0C;&#x8981;&#x6C42; B &#x4E5F;&#x8DDF;&#x968F;&#x79FB;&#x52A8;&#xFF0C;<a href="../../component/movable-view.html"><code>&lt;movable-view&gt;</code></a> &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x4E00;&#x6B21; touchmove &#x4E8B;&#x4EF6;&#x7684;&#x54CD;&#x5E94;&#x8FC7;&#x7A0B;&#x4E3A;&#xFF1A;</p>
+<p>a&#x3001;touchmove &#x4E8B;&#x4EF6;&#x4ECE;&#x89C6;&#x56FE;&#x5C42;&#xFF08;Webview&#xFF09;&#x629B;&#x5230;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;</p>
+<p>b&#x3001;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;&#x5904;&#x7406; touchmove &#x4E8B;&#x4EF6;&#xFF0C;&#x518D;&#x901A;&#x8FC7; setData &#x6765;&#x6539;&#x53D8; B &#x7684;&#x4F4D;&#x7F6E;</p>
+<p>&#x4E00;&#x6B21; touchmove &#x7684;&#x54CD;&#x5E94;&#x9700;&#x8981;&#x7ECF;&#x8FC7; 2 &#x6B21;&#x7684;&#x903B;&#x8F91;&#x5C42;&#x548C;&#x6E32;&#x67D3;&#x5C42;&#x7684;&#x901A;&#x4FE1;&#x4EE5;&#x53CA;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#xFF0C;&#x901A;&#x4FE1;&#x7684;&#x8017;&#x65F6;&#x6BD4;&#x8F83;&#x5927;&#x3002;&#x6B64;&#x5916; setData &#x6E32;&#x67D3;&#x4E5F;&#x4F1A;&#x963B;&#x585E;&#x5176;&#x5B83;&#x811A;&#x672C;&#x6267;&#x884C;&#xFF0C;&#x5BFC;&#x81F4;&#x4E86;&#x6574;&#x4E2A;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x7684;&#x52A8;&#x753B;&#x8FC7;&#x7A0B;&#x4F1A;&#x6709;&#x5EF6;&#x8FDF;&#x3002;</p>
+<h3 id="&#x5B9E;&#x73B0;&#x65B9;&#x6848;">&#x5B9E;&#x73B0;&#x65B9;&#x6848;</h3>
+<p>&#x672C;&#x65B9;&#x6848;&#x57FA;&#x672C;&#x7684;&#x601D;&#x8DEF;&#x662F;&#x51CF;&#x5C11;&#x901A;&#x4FE1;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x8BA9;&#x4E8B;&#x4EF6;&#x5728;&#x89C6;&#x56FE;&#x5C42;&#xFF08;Webview&#xFF09;&#x54CD;&#x5E94;&#x3002;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6846;&#x67B6;&#x5206;&#x4E3A;&#x89C6;&#x56FE;&#x5C42;&#xFF08;Webview&#xFF09;&#x548C;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x5206;&#x5C42;&#x7684;&#x76EE;&#x7684;&#x662F;&#x7BA1;&#x63A7;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x53EA;&#x80FD;&#x8FD0;&#x884C;&#x5728;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x601D;&#x8DEF;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5728;&#x89C6;&#x56FE;&#x5C42;&#xFF08;Webview&#xFF09;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x7684;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/framework/view/interative-model.png?t=19012314" alt="" onerror="this.src !== &apos;./interative-model.png?t=19012314&apos; &amp;&amp; (this.src = &apos;./interative-model.png?t=19012314&apos;)"></p>
+<p>&#x4F7F;&#x7528; <a href="wxs/index.html">WXS</a> &#x51FD;&#x6570;&#x7528;&#x6765;&#x54CD;&#x5E94;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E8B;&#x4EF6;&#xFF0C;&#x76EE;&#x524D;&#x53EA;&#x80FD;&#x54CD;&#x5E94;&#x5185;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;&#x3002;WXS &#x51FD;&#x6570;&#x7684;&#x9664;&#x4E86;&#x7EAF;&#x903B;&#x8F91;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C01;&#x88C5;&#x597D;&#x7684;<code>ComponentDescriptor</code> &#x5B9E;&#x4F8B;&#x6765;&#x8BBF;&#x95EE;&#x4EE5;&#x53CA;&#x8BBE;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684; class &#x548C;&#x6837;&#x5F0F;&#xFF0C;&#x5BF9;&#x4E8E;&#x4EA4;&#x4E92;&#x52A8;&#x753B;&#xFF0C;&#x8BBE;&#x7F6E; style &#x548C; class &#x8DB3;&#x591F;&#x4E86;&#x3002;WXS &#x51FD;&#x6570;&#x7684;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> wxsFunction = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event, ownerInstance</span>) </span>{
+  <span class="hljs-keyword">const</span> instance = ownerInstance.selectComponent(<span class="hljs-string">&apos;.classSelector&apos;</span>) <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;</span>
+  instance.setStyle({
+    <span class="hljs-string">&apos;font-size&apos;</span>: <span class="hljs-string">&apos;14px&apos;</span> <span class="hljs-comment">// &#x652F;&#x6301;rpx</span>
+  })
+  instance.getDataset()
+  instance.setClass(className)
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span> <span class="hljs-comment">// &#x4E0D;&#x5F80;&#x4E0A;&#x5192;&#x6CE1;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x8C03;&#x7528;&#x4E86;&#x540C;&#x65F6;&#x8C03;&#x7528;&#x4E86;stopPropagation&#x548C;preventDefault</span>
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x5165;&#x53C2; <code>event</code> &#x662F;&#x5C0F;&#x7A0B;&#x5E8F;<a href="wxml/event.html">&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;</a>&#x57FA;&#x7840;&#x4E0A;&#x591A;&#x4E86; <code>event.instance</code> &#x6765;&#x8868;&#x793A;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x7EC4;&#x4EF6;&#x7684; <code>ComponentDescriptor</code> &#x5B9E;&#x4F8B;&#x3002;<code>ownerInstance</code> &#x8868;&#x793A;&#x7684;&#x662F;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x7EC4;&#x4EF6;&#x7684; <code>ComponentDescriptor</code> &#x5B9E;&#x4F8B;&#xFF0C;&#x5982;&#x679C;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x7EC4;&#x4EF6;&#x662F;&#x5728;&#x9875;&#x9762;&#x5185;&#x7684;&#xFF0C;<code>ownerInstance</code> &#x8868;&#x793A;&#x7684;&#x662F;&#x9875;&#x9762;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p><code>ComponentDescriptor</code>&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selectComponent</td>
+<td>selector&#x5BF9;&#x8C61;</td>
+<td>&#x8FD4;&#x56DE;&#x7EC4;&#x4EF6;&#x7684; <code>ComponentDescriptor</code> &#x5B9E;&#x4F8B;&#x3002;</td>
+</tr>
+<tr>
+<td>selectAllComponents</td>
+<td>selector&#x5BF9;&#x8C61;&#x6570;&#x7EC4;</td>
+<td>&#x8FD4;&#x56DE;&#x7EC4;&#x4EF6;&#x7684; <code>ComponentDescriptor</code> &#x5B9E;&#x4F8B;&#x6570;&#x7EC4;&#x3002;</td>
+</tr>
+<tr>
+<td>setStyle</td>
+<td>Object/string</td>
+<td>&#x8BBE;&#x7F6E;&#x7EC4;&#x4EF6;&#x6837;&#x5F0F;&#xFF0C;&#x652F;&#x6301;<code>rpx</code>&#x3002;&#x8BBE;&#x7F6E;&#x7684;&#x6837;&#x5F0F;&#x4F18;&#x5148;&#x7EA7;&#x6BD4;&#x7EC4;&#x4EF6; wxml &#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x7684;&#x6837;&#x5F0F;&#x9AD8;&#x3002;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E;&#x6700;&#x9876;&#x5C42;&#x9875;&#x9762;&#x7684;&#x6837;&#x5F0F;&#x3002;</td>
+</tr>
+<tr>
+<td>addClass/removeClass/ hasClass</td>
+<td>string</td>
+<td>&#x8BBE;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684; class&#x3002;&#x8BBE;&#x7F6E;&#x7684; class &#x4F18;&#x5148;&#x7EA7;&#x6BD4;&#x7EC4;&#x4EF6; wxml &#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x7684; class &#x9AD8;&#x3002;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E;&#x6700;&#x9876;&#x5C42;&#x9875;&#x9762;&#x7684; class&#x3002;</td>
+</tr>
+<tr>
+<td>getDataset</td>
+<td>&#x65E0;</td>
+<td>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;/&#x9875;&#x9762;&#x7684; dataset &#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td>callMethod</td>
+<td>(funcName:string, args:object)</td>
+<td>&#x8C03;&#x7528;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;/&#x9875;&#x9762;&#x5728;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x3002;funcName&#x8868;&#x793A;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;args&#x8868;&#x793A;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>requestAnimationFrame</td>
+<td>Function</td>
+<td>&#x548C;&#x539F;&#x751F; <code>requestAnimationFrame</code> &#x4E00;&#x6837;&#x3002;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x3002;</td>
+</tr>
+<tr>
+<td>getState</td>
+<td>&#x65E0;</td>
+<td>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;object&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x6709;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#x540E;&#x7EED;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</td>
+</tr>
+<tr>
+<td>triggerEvent</td>
+<td>(eventName, detail)</td>
+<td>&#x548C;&#x7EC4;&#x4EF6;&#x7684;<a href="../custom-component/events.html">triggerEvent</a>&#x4E00;&#x81F4;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>WXS &#x8FD0;&#x884C;&#x5728;&#x89C6;&#x56FE;&#x5C42;&#xFF08;Webview&#xFF09;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x903B;&#x8F91;&#x6BD5;&#x7ADF;&#x80FD;&#x505A;&#x7684;&#x4E8B;&#x4EF6;&#x6BD4;&#x8F83;&#x5C11;&#xFF0C;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x673A;&#x5236;&#x548C;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x901A;&#x4FE1;&#xFF0C;&#x4E0A;&#x9762;&#x7684; <code>callMethod</code> &#x662F; WXS &#x91CC;&#x9762;&#x8C03;&#x7528;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C; <code>WxsPropObserver</code> &#x662F;&#x903B;&#x8F91;&#x5C42;&#xFF08;App Service&#xFF09;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x8C03;&#x7528; WXS &#x903B;&#x8F91;&#x7684;&#x673A;&#x5236;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h3>
+<ul>
+<li>WXML&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#xFF1A;</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">wxs</span> <span class="hljs-attr">module</span>=<span class="hljs-string">&quot;test&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./test.wxs&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wxs</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>
+  <span class="hljs-attr">change:prop</span>=<span class="hljs-string">&quot;{{test.propObserver}}&quot;</span>
+  <span class="hljs-attr">prop</span>=<span class="hljs-string">&quot;{{propValue}}&quot;</span>
+  <span class="hljs-attr">bindtouchmove</span>=<span class="hljs-string">&quot;{{test.touchmove}}&quot;</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;movable&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;<code>change:prop</code>&#xFF08;&#x5C5E;&#x6027;&#x524D;&#x9762;&#x5E26;change:&#x524D;&#x7F00;&#xFF09;&#x662F;&#x5728; prop &#x5C5E;&#x6027;&#x88AB;&#x8BBE;&#x7F6E;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1; WXS &#x51FD;&#x6570;&#xFF0C;&#x503C;&#x5FC5;&#x987B;&#x7528;<code>{{}}</code>&#x62EC;&#x8D77;&#x6765;&#x3002;&#x7C7B;&#x4F3C; Component &#x5B9A;&#x4E49;&#x7684; properties &#x91CC;&#x9762;&#x7684; observer &#x5C5E;&#x6027;&#xFF0C;&#x5728;<code>setData({propValue: newValue})</code>&#x8C03;&#x7528;&#x4E4B;&#x540E;&#x4F1A;&#x89E6;&#x53D1;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;WXS&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x7528;<code>{{}}</code>&#x62EC;&#x8D77;&#x6765;&#x3002;&#x5F53; prop &#x7684;&#x503C;&#x88AB;&#x8BBE;&#x7F6E; WXS &#x51FD;&#x6570;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#xFF0C;&#x800C;&#x4E0D;&#x53EA;&#x662F;&#x503C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x9875;&#x9762;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x6B21;<code>WxsPropObserver</code>&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<ul>
+<li>WXS&#x6587;&#x4EF6;<code>test.wxs</code>&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x5E76;&#x5BFC;&#x51FA;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x548C;&#x5C5E;&#x6027;&#x6539;&#x53D8;&#x89E6;&#x53D1;&#x7684;&#x51FD;&#x6570;&#xFF1A;</li>
+</ul>
+<pre><code class="language-javascript"><span class="hljs-built_in">module</span>.exports = {
+  touchmove(event, instance) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;log event&apos;</span>, <span class="hljs-built_in">JSON</span>.stringify(event))
+  },
+  propObserver(newValue, oldValue, ownerInstance, instance) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;prop observer&apos;</span>, newValue, oldValue)
+  }
+}
+</code></pre>
+<p>&#x66F4;&#x591A;&#x793A;&#x4F8B;&#x8BF7;&#x67E5;&#x770B;<a href="https://developers.weixin.qq.com/s/ylShYBma7f5J" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
+<h3 id="tips">Tips</h3>
+<ol>
+<li>&#x76EE;&#x524D;&#x8FD8;&#x4E0D;&#x652F;&#x6301;<a href="../../component/native-component.html">&#x539F;&#x751F;&#x7EC4;&#x4EF6;</a>&#x7684;&#x4E8B;&#x4EF6;&#x3001;<a href="../../component/input.html"><code>&lt;input&gt;</code></a>&#x548C;<a href="../../component/textarea.html"><code>&lt;textarea&gt;</code></a>&#x7EC4;&#x4EF6;&#x7684; bindinput &#x4E8B;&#x4EF6;</li>
+<li>1.02.1901170&#x53CA;&#x4EE5;&#x540E;&#x7248;&#x672C;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0A;&#x652F;&#x6301;&#x4EA4;&#x4E92;&#x52A8;&#x753B;&#xFF0C;&#x6700;&#x4F4E;&#x7248;&#x672C;&#x57FA;&#x7840;&#x5E93;&#x662F;2.4.4</li>
+<li>&#x76EE;&#x524D;&#x5728;WXS&#x51FD;&#x6570;&#x91CC;&#x9762;&#x4EC5;&#x652F;&#x6301;console.log&#x65B9;&#x5F0F;&#x6253;&#x65E5;&#x5FD7;&#x5B9A;&#x4F4D;&#x95EE;&#x9898;&#xFF0C;&#x6CE8;&#x610F;&#x8FDE;&#x7EED;&#x7684;&#x91CD;&#x590D;&#x65E5;&#x5FD7;&#x4F1A;&#x88AB;&#x8FC7;&#x6EE4;&#x6389;&#x3002;</li>
+</ol>
+
+                            </section>
+                        </div>
+                        
+                    </div>
+                
+</body>
+</html>
