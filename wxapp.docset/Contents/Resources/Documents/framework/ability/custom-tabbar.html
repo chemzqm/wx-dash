@@ -23,13 +23,17 @@
 <p>&#x81EA;&#x5B9A;&#x4E49; tabBar &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x5730;&#x8BBE;&#x7F6E; tabBar &#x6837;&#x5F0F;&#xFF0C;&#x4EE5;&#x6EE1;&#x8DB3;&#x66F4;&#x591A;&#x4E2A;&#x6027;&#x5316;&#x7684;&#x573A;&#x666F;&#x3002;</p>
 <p>&#x5728;&#x81EA;&#x5B9A;&#x4E49; tabBar &#x6A21;&#x5F0F;&#x4E0B;</p>
 <ul>
-<li>&#x4E3A;&#x4FDD;&#x8BC1;&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;&#x53CA;&#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x9875;&#x9762;&#x662F;&#x53EF;&#x5207;&#x6362;&#x7684; tab &#x9875;&#xFF0C;tabBar &#x7684;&#x539F;&#x6709;&#x914D;&#x7F6E;&#x7684; list &#x7B49;&#x539F;&#x6709;&#x914D;&#x7F6E;&#x9879;&#x4E5F;&#x9700;&#x8981;&#x58F0;&#x660E;&#x3002;</li>
+<li>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;&#x4EE5;&#x53CA;&#x533A;&#x5206;&#x54EA;&#x4E9B;&#x9875;&#x9762;&#x662F; tab &#x9875;&#xFF0C;tabBar &#x7684;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x9879;&#x9700;&#x5B8C;&#x6574;&#x58F0;&#x660E;&#xFF0C;&#x4F46;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x4E0D;&#x4F1A;&#x4F5C;&#x7528;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49; tabBar &#x7684;&#x6E32;&#x67D3;&#x3002;</li>
 <li>&#x6B64;&#x65F6;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6765;&#x6E32;&#x67D3; tabBar&#xFF0C;&#x6240;&#x6709; tabBar &#x7684;&#x6837;&#x5F0F;&#x90FD;&#x7531;&#x8BE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x3002;&#x63A8;&#x8350;&#x7528; fixed &#x5728;&#x5E95;&#x90E8;&#x7684; <a href="../../component/cover-view.html"><code>&lt;cover-view&gt;</code></a> + <code>&lt;cover-image&gt;</code> &#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x6837;&#x5F0F;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1; tabBar &#x5C42;&#x7EA7;&#x76F8;&#x5BF9;&#x8F83;&#x9AD8;&#x3002;</li>
 <li>&#x4E0E; tabBar &#x6837;&#x5F0F;&#x76F8;&#x5173;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5982; <a href="../../api/wx.setTabBarItem.html"><code>wx.setTabBarItem</code></a> &#x7B49;&#x5C06;&#x5931;&#x6548;&#x3002;</li>
+<li>&#x6BCF;&#x4E2A; tab &#x9875;&#x4E0B;&#x7684;&#x81EA;&#x5B9A;&#x4E49; tabBar &#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E0B;&#x7684; <code>getTabBar</code> &#x63A5;&#x53E3;&#xFF0C;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x81EA;&#x5B9A;&#x4E49; tabBar &#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x3002;</li>
 </ul>
-<h2 id="&#x4F7F;&#x7528;&#x6D41;&#x7A0B;">&#x4F7F;&#x7528;&#x6D41;&#x7A0B;</h2>
-<h3 id="1-&#x914D;&#x7F6E;&#x4FE1;&#x606F;">1. &#x914D;&#x7F6E;&#x4FE1;&#x606F;</h3>
-<p>&#x5728; <code>app.json</code> &#x4E2D;&#x7684; <code>tabBar</code> &#x6307;&#x5B9A; <code>custom</code> &#x5B57;&#x6BB5;&#x3002;&#x540C;&#x65F6;&#x5176;&#x4F59;&#x5FC5;&#x586B;&#x9879;&#x4E5F;&#x9700;&#x7167;&#x5E38;&#x586B;&#x5199;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x4F4E;&#x7248;&#x672C;&#x517C;&#x5BB9;&#x53CA;&#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x662F; tab &#x9875;&#xFF0C;&#x4F46;&#x4E0E;&#x81EA;&#x5B9A;&#x4E49; tabBar &#x7684;&#x6837;&#x5F0F;&#x6E32;&#x67D3;&#x65E0;&#x5173;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x6D41;&#x7A0B;">&#x4F7F;&#x7528;&#x6D41;&#x7A0B;</h3>
+<h4 id="1-&#x914D;&#x7F6E;&#x4FE1;&#x606F;">1. &#x914D;&#x7F6E;&#x4FE1;&#x606F;</h4>
+<ul>
+<li>&#x5728; <code>app.json</code> &#x4E2D;&#x7684; <code>tabBar</code> &#x9879;&#x6307;&#x5B9A; <code>custom</code> &#x5B57;&#x6BB5;&#xFF0C;&#x540C;&#x65F6;&#x5176;&#x4F59; <code>tabBar</code> &#x76F8;&#x5173;&#x914D;&#x7F6E;&#x4E5F;&#x8865;&#x5145;&#x5B8C;&#x6574;&#x3002;</li>
+<li>&#x6240;&#x6709; tab &#x9875;&#x7684; json &#x91CC;&#x9700;&#x58F0;&#x660E; <code>usingComponents</code> &#x9879;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; <code>app.json</code> &#x5168;&#x5C40;&#x5F00;&#x542F;&#x3002;</li>
+</ul>
 <p>&#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code class="language-json">{
   <span class="hljs-attr">&quot;tabBar&quot;</span>: {
@@ -47,7 +51,8 @@
         <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;&#x63A5;&#x53E3;&quot;</span>
       }
     ]
-  }
+  },
+  <span class="hljs-attr">&quot;usingComponents&quot;</span>: {}
 }
 </code></pre>
 <h3 id="2-&#x6DFB;&#x52A0;-tabbar-&#x4EE3;&#x7801;&#x6587;&#x4EF6;">2. &#x6DFB;&#x52A0; tabBar &#x4EE3;&#x7801;&#x6587;&#x4EF6;</h3>
@@ -57,8 +62,10 @@ custom-tab-bar/index.json
 custom-tab-bar/index.wxml
 custom-tab-bar/index.wxss
 </code></pre>
-<h3 id="3-&#x7F16;&#x5199;-tabbar-&#x4EE3;&#x7801;">3. &#x7F16;&#x5199; tabBar &#x4EE3;&#x7801;</h3>
-<p>&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x7F16;&#x5199;&#x5373;&#x53EF;&#xFF0C;&#x8BE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5B8C;&#x5168;&#x63A5;&#x7BA1; tabBar &#x7684;&#x6E32;&#x67D3;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5207;&#x6362; tab &#x9875;&#x53EF;&#x901A;&#x8FC7; <a href="../../api/wx.switchTab.html"><code>wx.switchTab</code></a> &#x63A5;&#x53E3;&#x3002;</p>
+<h4 id="3-&#x7F16;&#x5199;-tabbar-&#x4EE3;&#x7801;">3. &#x7F16;&#x5199; tabBar &#x4EE3;&#x7801;</h4>
+<p>&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x7F16;&#x5199;&#x5373;&#x53EF;&#xFF0C;&#x8BE5;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5B8C;&#x5168;&#x63A5;&#x7BA1; tabBar &#x7684;&#x6E32;&#x67D3;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x65B0;&#x589E; <code>getTabBar</code> &#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0B;&#x7684;&#x81EA;&#x5B9A;&#x4E49; tabBar &#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x3002;</p>
+<h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h3>
+<p><a href="https://developers.weixin.qq.com/s/jiSARvmF7i55" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 
                             </section>
                         </div>
