@@ -35,13 +35,6 @@
 <td></td>
 </tr>
 <tr>
-<td id="video-initial-time">initial-time</td>
-<td>Number</td>
-<td></td>
-<td>&#x6307;&#x5B9A;&#x89C6;&#x9891;&#x521D;&#x59CB;&#x64AD;&#x653E;&#x4F4D;&#x7F6E;</td>
-<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.0</a></td>
-</tr>
-<tr>
 <td id="video-duration">duration</td>
 <td>Number</td>
 <td></td>
@@ -98,6 +91,13 @@
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 <tr>
+<td id="video-initial-time">initial-time</td>
+<td>Number</td>
+<td></td>
+<td>&#x6307;&#x5B9A;&#x89C6;&#x9891;&#x521D;&#x59CB;&#x64AD;&#x653E;&#x4F4D;&#x7F6E;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.0</a></td>
+</tr>
+<tr>
 <td id="video-page-gesture">page-gesture</td>
 <td>Boolean</td>
 <td>false</td>
@@ -147,7 +147,7 @@
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.9.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.9.0</a></td>
 </tr>
 <tr>
-<td id="video-objectFit">objectFit</td>
+<td id="video-object-fit">object-fit</td>
 <td>String</td>
 <td>contain</td>
 <td>&#x5F53;&#x89C6;&#x9891;&#x5927;&#x5C0F;&#x4E0E; video &#x5BB9;&#x5668;&#x5927;&#x5C0F;&#x4E0D;&#x4E00;&#x81F4;&#x65F6;&#xFF0C;&#x89C6;&#x9891;&#x7684;&#x8868;&#x73B0;&#x5F62;&#x5F0F;&#x3002;contain&#xFF1A;&#x5305;&#x542B;&#xFF0C;fill&#xFF1A;&#x586B;&#x5145;&#xFF0C;cover&#xFF1A;&#x8986;&#x76D6;</td>
@@ -157,8 +157,50 @@
 <td id="video-poster">poster</td>
 <td>String</td>
 <td></td>
-<td>&#x89C6;&#x9891;&#x5C01;&#x9762;&#x7684;&#x56FE;&#x7247;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;&#x5730;&#x5740;&#x6216;&#x4E91;&#x6587;&#x4EF6;ID&#xFF08;2.2.3&#x8D77;&#x652F;&#x6301;&#xFF09;&#x5982;&#x679C; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; poster &#x65E0;&#x6548;</td>
+<td>&#x89C6;&#x9891;&#x5C01;&#x9762;&#x7684;&#x56FE;&#x7247;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;&#x5730;&#x5740;&#x6216;&#x4E91;&#x6587;&#x4EF6;ID&#xFF08;2.2.3&#x8D77;&#x652F;&#x6301;&#xFF09;&#x3002;&#x82E5; controls &#x5C5E;&#x6027;&#x503C;&#x4E3A; false &#x5219;&#x8BBE;&#x7F6E; poster &#x65E0;&#x6548;</td>
 <td></td>
+</tr>
+<tr>
+<td id="video-show-mute-btn">show-mute-btn</td>
+<td>Boolean</td>
+<td>false</td>
+<td>&#x662F;&#x5426;&#x663E;&#x793A;&#x9759;&#x97F3;&#x6309;&#x94AE;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
+</tr>
+<tr>
+<td id="video-title">title</td>
+<td>String</td>
+<td></td>
+<td>&#x89C6;&#x9891;&#x7684;&#x6807;&#x9898;&#xFF0C;&#x5168;&#x5C4F;&#x65F6;&#x5728;&#x9876;&#x90E8;&#x5C55;&#x793A;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
+</tr>
+<tr>
+<td id="video-play-btn-position">play-btn-position</td>
+<td>String</td>
+<td>bottom</td>
+<td>&#x64AD;&#x653E;&#x6309;&#x94AE;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6709;&#x6548;&#x503C;&#x4E3A;&#xFF1A;bottom&#xFF08;controls bar &#x4E0A;&#xFF09;&#x3001;center&#xFF08;&#x89C6;&#x9891;&#x4E2D;&#x95F4;&#xFF09;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
+</tr>
+<tr>
+<td id="video-enable-play-gesture">enable-play-gesture</td>
+<td>Boolean</td>
+<td>false</td>
+<td>&#x662F;&#x5426;&#x5F00;&#x542F;&#x64AD;&#x653E;&#x624B;&#x52BF;&#xFF0C;&#x5373;&#x53CC;&#x51FB;&#x5207;&#x6362;&#x64AD;&#x653E;/&#x6682;&#x505C;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.4.0</a></td>
+</tr>
+<tr>
+<td id="video-auto-pause-if-navigate">auto-pause-if-navigate</td>
+<td>Boolean</td>
+<td>true</td>
+<td>&#x5F53;&#x8DF3;&#x8F6C;&#x5230;&#x5176;&#x5B83;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x6682;&#x505C;&#x672C;&#x9875;&#x9762;&#x7684;&#x89C6;&#x9891;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.5.0</a></td>
+</tr>
+<tr>
+<td id="video-auto-pause-if-open-native">auto-pause-if-open-native</td>
+<td>Boolean</td>
+<td>true</td>
+<td>&#x5F53;&#x8DF3;&#x8F6C;&#x5230;&#x5176;&#x5B83;&#x5FAE;&#x4FE1;&#x539F;&#x751F;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x6682;&#x505C;&#x672C;&#x9875;&#x9762;&#x7684;&#x89C6;&#x9891;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.5.0</a></td>
 </tr>
 <tr>
 <td id="video-bindplay">bindplay</td>
@@ -192,7 +234,7 @@
 <td id="video-bindfullscreenchange">bindfullscreenchange</td>
 <td>EventHandle</td>
 <td></td>
-<td>&#x89C6;&#x9891;&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x5168;&#x5C4F;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = {fullScreen, direction}&#xFF0C;direction&#x53D6;&#x4E3A; vertical &#x6216; horizontal</td>
+<td>&#x89C6;&#x9891;&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x5168;&#x5C4F;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;event.detail = {fullScreen, direction}&#xFF0C;direction &#x6709;&#x6548;&#x503C;&#x4E3A; vertical &#x6216; horizontal</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.4.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.4.0</a></td>
 </tr>
 <tr>
@@ -297,7 +339,7 @@ Page({
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/video.png?t=19012322" alt="video" onerror="this.src !== &apos;../image/pic/video.png?t=19012322&apos; &amp;&amp; (this.src = &apos;../image/pic/video.png?t=19012322&apos;)"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/video.png?t=19012522" alt="video" onerror="this.src !== &apos;../image/pic/video.png?t=19012522&apos; &amp;&amp; (this.src = &apos;../image/pic/video.png?t=19012522&apos;)"></p>
 <p>&#x76F8;&#x5173;api&#xFF1A;<a href="../api/wx.createVideoContext.html">wx.createVideoContext</a></p>
 <h5 id="bug--tip">Bug &amp; Tip</h5>
 <ol>
