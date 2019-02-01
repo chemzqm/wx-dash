@@ -37,6 +37,7 @@
 ./view/wxs/07basiclibrary.html|视图层 WXS 基础类库
 ./view/selector.html|视图层 获取界面上的节点信息
 ./view/resizable.html|视图层 响应显示区域变化
+./view/animation.html|视图层 动画
 ./custom-component/index.html|自定义组件
 ./custom-component/wxml-wxss.html|自定义组件 组件模板和样式
 ./custom-component/component.html|自定义组件 Component 构造器
