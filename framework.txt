@@ -45,6 +45,7 @@
 ./custom-component/lifetimes.html|自定义组件 组件生命周期
 ./custom-component/behaviors.html|自定义组件 behaviors
 ./custom-component/relations.html|自定义组件 组件间关系
+./custom-component/observer.html|自定义组件 数据监听器
 ./custom-component/generics.html|自定义组件 抽象节点
 ./custom-component/extend.html|自定义组件 自定义组件扩展
 ./custom-component/trdparty.html|自定义组件 开发第三方自定义组件
