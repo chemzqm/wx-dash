@@ -101,7 +101,7 @@
 <td id="video-page-gesture">page-gesture</td>
 <td>Boolean</td>
 <td>false</td>
-<td>&#x5728;&#x975E;&#x5168;&#x5C4F;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4EAE;&#x5EA6;&#x4E0E;&#x97F3;&#x91CF;&#x8C03;&#x8282;&#x624B;&#x52BF;</td>
+<td>&#x5728;&#x975E;&#x5168;&#x5C4F;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4EAE;&#x5EA6;&#x4E0E;&#x97F3;&#x91CF;&#x8C03;&#x8282;&#x624B;&#x52BF;&#xFF08;&#x5E9F;&#x5F03;&#xFF0C;&#x89C1; vslide-gesture&#xFF09;</td>
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 1.6.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">1.6.0</a></td>
 </tr>
 <tr>
@@ -203,6 +203,20 @@
 <td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.5.0 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.5.0</a></td>
 </tr>
 <tr>
+<td id="video-vslide-gesture">vslide-gesture</td>
+<td>Boolean</td>
+<td>false</td>
+<td>&#x5728;&#x975E;&#x5168;&#x5C4F;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4EAE;&#x5EA6;&#x4E0E;&#x97F3;&#x91CF;&#x8C03;&#x8282;&#x624B;&#x52BF;&#xFF08;&#x540C; page-gesture&#xFF09;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.6.2 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.6.2</a></td>
+</tr>
+<tr>
+<td id="video-vslide-gesture-in-fullscreen">vslide-gesture-in-fullscreen</td>
+<td>Boolean</td>
+<td>true</td>
+<td>&#x5728;&#x5168;&#x5C4F;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4EAE;&#x5EA6;&#x4E0E;&#x97F3;&#x91CF;&#x8C03;&#x8282;&#x624B;&#x52BF;</td>
+<td><a href="../framework/compatibility.html" title="&#x57FA;&#x7840;&#x5E93; 2.6.2 &#x5F00;&#x59CB;&#x652F;&#x6301;&#xFF0C;&#x4F4E;&#x7248;&#x672C;&#x9700;&#x505A;&#x517C;&#x5BB9;&#x5904;&#x7406;&#x3002;">2.6.2</a></td>
+</tr>
+<tr>
 <td id="video-bindplay">bindplay</td>
 <td>EventHandle</td>
 <td></td>
@@ -261,6 +275,85 @@
 </tbody>
 </table>
 <p><a href="video.html"><code>&lt;video&gt;</code></a> &#x9ED8;&#x8BA4;&#x5BBD;&#x5EA6;300px&#x3001;&#x9AD8;&#x5EA6;225px&#xFF0C;&#x53EF;&#x901A;&#x8FC7;wxss&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#x3002;</p>
+<h4 id="&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;">&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x683C;&#x5F0F;</th>
+<th>iOS</th>
+<th>Android</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mp4</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+</tr>
+<tr>
+<td>mov</td>
+<td>&#x221A;</td>
+<td>x</td>
+</tr>
+<tr>
+<td>m4v</td>
+<td>&#x221A;</td>
+<td>x</td>
+</tr>
+<tr>
+<td>3gp</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+</tr>
+<tr>
+<td>avi</td>
+<td>&#x221A;</td>
+<td>x</td>
+</tr>
+<tr>
+<td>m3u8</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+</tr>
+<tr>
+<td>webm</td>
+<td>x</td>
+<td>&#x221A;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x652F;&#x6301;&#x7684;&#x7F16;&#x7801;&#x683C;&#x5F0F;">&#x652F;&#x6301;&#x7684;&#x7F16;&#x7801;&#x683C;&#x5F0F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x683C;&#x5F0F;</th>
+<th>iOS</th>
+<th>Android</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H.264</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+</tr>
+<tr>
+<td>HEVC</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+</tr>
+<tr>
+<td>MPEG-4</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+</tr>
+<tr>
+<td>VP9</td>
+<td>x</td>
+<td>&#x221A;</td>
+</tr>
+</tbody>
+</table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</strong></p>
 <p><a href="https://developers.weixin.qq.com/s/X5V6Xmmk6xYB" title="&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;" target="_blank">&#x5728;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E2D;&#x9884;&#x89C8;&#x6548;&#x679C;</a></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;section tc&quot;</span>&gt;</span>
@@ -339,7 +432,7 @@ Page({
   }
 })
 </code></pre>
-<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/video.png?t=19022220" alt="video" onerror="this.src !== &apos;../image/pic/video.png?t=19022220&apos; &amp;&amp; (this.src = &apos;../image/pic/video.png?t=19022220&apos;)"></p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/pic/video.png?t=19030416" alt="video" onerror="this.src !== &apos;../image/pic/video.png?t=19030416&apos; &amp;&amp; (this.src = &apos;../image/pic/video.png?t=19030416&apos;)"></p>
 <p>&#x76F8;&#x5173;api&#xFF1A;<a href="../api/wx.createVideoContext.html">wx.createVideoContext</a></p>
 <h5 id="bug--tip">Bug &amp; Tip</h5>
 <ol>

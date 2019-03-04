@@ -104,7 +104,7 @@
 ./open-ability/card/card.html|开放能力 卡券
 ./open-ability/card/card.html|开放能力 卡券 概述
 ./open-ability/card/membership-card.html|开放能力 卡券 会员卡组件
-./open-ability/qr-code.html|开放能力 获取二维码
+./open-ability/qr-code.html|开放能力 获取小程序码
 ./open-ability/data-analysis.html|开放能力 数据分析
 ./open-ability/nearby.html|开放能力 附近的小程序
 ./open-ability/express.html|开放能力 物流助手

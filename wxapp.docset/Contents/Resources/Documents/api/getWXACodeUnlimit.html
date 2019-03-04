@@ -150,7 +150,12 @@
 })
 </code></pre>
 <p><strong>&#x5C0F;&#x6E38;&#x620F;</strong></p>
-<pre><code class="language-js">wx.onShow(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">{query}</span>) </span>{
+<pre><code class="language-js"><span class="hljs-comment">// &#x5728;&#x9996;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x901A;&#x8FC7; wx.getLaunchOptionsSync &#x63A5;&#x53E3;&#x83B7;&#x53D6;</span>
+<span class="hljs-keyword">const</span> {query} = wx.getLaunchOptionsSync()
+<span class="hljs-keyword">const</span> scene = <span class="hljs-built_in">decodeURIComponent</span>(query.scene)
+
+<span class="hljs-comment">// &#x6216;&#x8005;&#x5728; wx.onShow &#x4E8B;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;</span>
+wx.onShow(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">{query}</span>) </span>{
   <span class="hljs-comment">// scene &#x9700;&#x8981;&#x4F7F;&#x7528; decodeURIComponent &#x624D;&#x80FD;&#x83B7;&#x53D6;&#x5230;&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#x65F6;&#x4F20;&#x5165;&#x7684; scene</span>
   <span class="hljs-keyword">const</span> scene = <span class="hljs-built_in">decodeURIComponent</span>(query.scene)
 })
